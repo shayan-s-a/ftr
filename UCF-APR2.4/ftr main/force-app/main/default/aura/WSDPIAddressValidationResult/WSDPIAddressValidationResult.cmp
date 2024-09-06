@@ -1,0 +1,203 @@
+<aura:component
+  controller="FTRWSAddressController"
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+  access="global"
+>
+  <aura:html tag="style">
+    .slds-modal__container { width : 80% !important; max-width : 80% !important;
+    }
+  </aura:html>
+
+  <aura:registerEvent name="WSDPISaved" type="c:WSDPISaved" />
+  <aura:handler event="c:WSAddressEvent" action="{!c.handleAddressEvent}" />
+
+  <!-- stores FTRWSAddress id -->
+  <aura:attribute name="recordId" type="Id" />
+  <!-- Use this when calling from the FTRWSAddress screen tab-->
+  <aura:attribute name="addressId" type="Id" />
+  <!-- Use this when calling from the address validation screen popup-->
+
+  <aura:attribute name="streetNo" type="string" default="" />
+  <aura:attribute name="streetName" type="string" default="" />
+  <aura:attribute name="unit" type="string" default="" />
+  <aura:attribute name="city" type="string" default="" />
+  <aura:attribute name="country" type="string" default="" />
+  <aura:attribute name="state" type="string" default="" />
+  <aura:attribute name="street" type="string" default="" />
+  <aura:attribute name="zip" type="string" default="" />
+
+  <aura:attribute name="isDPIValidated" type="boolean" default="false" />
+  <aura:attribute name="isDPIValFailed" type="boolean" default="false" />
+  <aura:attribute name="dpiAddressUpdated" type="boolean" default="false" />
+  <aura:attribute name="dpiAddressUpdatedRec" type="Object" />
+  <aura:attribute name="disableDisplayField" type = "boolean" default = "true"/>
+  <aura:attribute name="dpiData" type="List" />
+  <aura:attribute name="col" type="List" />
+  <aura:attribute name="selectedRow" type="Object" />
+  <aura:attribute name="disableSaveDPIBTN" type="boolean" default="true" />
+  <aura:attribute name="disableValDPITBTN" type="boolean" default="true" />
+
+  <aura:attribute name="showMultipleDPIResults" type="boolean" default="true" />
+
+  <aura:attribute name="backupDPIdata" type="List" />
+  <!--filter input -->
+  <aura:attribute name="filter" type="String" />
+
+  <aura:attribute name="Spinner" type="boolean" default="false" />
+
+  <!--create a component attributes -->
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <!--<aura:handler event="aura:waiting" action="{!c.showSpinner}" />
+  <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}" /> -->
+
+  <aura:method
+    name="validateInDPI"
+    action="{!c.validateInDPIClicked}"
+    access="PUBLIC"
+  />
+
+  <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+      <div
+        class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative"
+        role="alert">
+        <span class="slds-assistive-text">Loading</span>
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+      </div>
+    </div>
+  </aura:if>
+
+  <article class="slds-card">
+    <lightning:layout multipleRows="true" class="border">
+      <!-- <div class="slds-scrollable_y" style="height:50rem;width:100rem"> -->
+      <aura:if isTrue="{!v.isDPIValidated}">
+        <aura:if isTrue="{!v.showMultipleDPIResults}">
+          <lightning:layoutItem padding="around-small">
+            <lightning:input
+              type="text"
+              onchange="{!c.filterDPIData}"
+              value="{!v.filter}"
+              placeholder="Filter"
+              variant="label-hidden"
+            />
+          </lightning:layoutItem>
+
+          <lightning:layoutItem padding="around-small" size="12">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="javascript:void(0);"
+                  class="slds-card__header-link slds-truncate"
+                  title="Address Validation"
+                >
+                  <span class="strong-text">DPI Validation Results</span>
+                </a>
+              </h2>
+            </div>
+
+           <!-- <lightning:datatable
+              keyField="Id"
+              data="{!v.dpiData }"
+              columns="{!v.col }"
+              maxRowSelection="1"
+              onrowselection="{! c.getSelectedDPIRecord}"
+              onrowaction="{! c.handleDPIRowAction}"
+            /> -->
+            
+            <lightning:datatable
+              keyField="Id"
+              data="{!v.dpiData }"
+              columns="{!v.col }"
+              maxRowSelection="1"
+              onrowselection="{! c.getSelectedDPIRecord}"
+            />
+          </lightning:layoutItem>
+          
+            <!--  <lightning:layoutItem padding="around-small" size="12">
+            <div class="slds-text-align_right">
+              <lightning:button
+                variant="brand"
+                label="Save"
+                onclick="{!c.saveDPIData}"
+                disabled="{!v.disableSaveDPIBTN}"
+              />
+            </div>
+            </lightning:layoutItem> -->
+           <!--
+            <aura:set attribute="else">
+                <c:WSDSATAddressValidationResult aura:id="dsatComponent" addressId="{!v.addressId}"/>
+            </aura:set>
+-->
+        </aura:if>
+        <!--<aura:set attribute="else">
+        </aura:set> -->
+      </aura:if>
+        <aura:if isTrue="{!v.isDPIValFailed}">
+          <lightning:layoutItem padding="around-small" size="12">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="javascript:void(0);"
+                  class="slds-card__header-link slds-truncate"
+                  title="Address Validation"
+                >
+                  <span class="strong-text"
+                    >Not a Valid DPI Address. Please try another address</span
+                  >
+                </a>
+              </h2>
+            </div>
+          </lightning:layoutItem>
+        </aura:if>
+        <aura:if isTrue="{!v.dpiAddressUpdated}">
+        	<lightning:layoutItem padding="around-small" size="12">                        
+            <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                    <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Address Validation">
+                        <span class="strong-text">DPI Validation Results</span>
+                    </a>
+                </h2>
+            </div>
+            </lightning:layoutItem>
+            
+        <lightning:layoutItem size="12">
+            
+        		<div class="slds-card__body slds-card__body_inner">
+            		<div class="slds-text-align_left">
+                        <!--<p class="font">DSAT Validation Results</p> -->
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem padding="around-small" size="6">
+                            	<lightning:input label="CLLI Code" name="clliCode" value="{!v.dpiAddressUpdatedRec.CLLI_Code__c}" disabled="{!v.disableDisplayField}"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem padding="around-small" size="6">
+                            	<lightning:input label="Service Control Number" value="{!v.dpiAddressUpdatedRec.Service_Control_Number__c}" disabled="{!v.disableDisplayField}"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem padding="around-small" size="6">
+                            	<lightning:input label="Wire Center" value="{!v.dpiAddressUpdatedRec.Wire_Center__c}" disabled="{!v.disableDisplayField}"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem padding="around-small" size="6">
+                            	<lightning:input label="Latitude" value="{!v.dpiAddressUpdatedRec.Latitude__c}" disabled="{!v.disableDisplayField}"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem padding="around-small" size="6">
+                            	<lightning:input label="Longitude" value="{!v.dpiAddressUpdatedRec.Longitude__c}" disabled="{!v.disableDisplayField}"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        
+                        
+                        
+                        
+                        
+            		         
+            		</div>
+        		</div>
+            </lightning:layoutItem>
+        </aura:if>
+    </lightning:layout>
+      <div class="slds-text-align_right">
+      	<lightning:button variant="brand" label="Close" onclick="{!c.closeModal}" /> 
+      </div>
+      
+  </article>
+</aura:component>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LDR_Leads</fullName>
+    <booleanFilter>1 or 2 or 3 or 4 or 5 or 6</booleanFilter>
+    <columns>mkto_si__Urgency__c</columns>
+    <columns>mkto_si__Relative_Score__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Lead_Stage__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LDR_Assigned__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.CONVERTED</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <columns>Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LDR_Assigned__c</field>
+        <operation>greaterThan</operation>
+        <value>a</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>hlang</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>rhunt</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>lchap</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>cleah</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>Lead Development Reps</value>
+    </filters>
+    <label>LDR Leads</label>
+</ListView>

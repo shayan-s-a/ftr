@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_item_end_date_fuure_vali</fullName>
+    <active>true</active>
+    <description>End date cannot be a future date</description>
+    <errorConditionFormula>if ( RecordType.Name = &quot;Voice Traffic&quot; &amp;&amp;  End_Date__c &gt;   NOW() ,true , false)</errorConditionFormula>
+    <errorDisplayField>End_Date__c</errorDisplayField>
+    <errorMessage>End Date cannot be a future date</errorMessage>
+</ValidationRule>

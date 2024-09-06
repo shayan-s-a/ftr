@@ -1,0 +1,27 @@
+{
+    "%vlocity_namespace%__CustomJavaScript__c": "Order_SaveUNIDetails_SampleInput.json",
+    "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "%vlocity_namespace%__Element__c": [
+        "Order_SaveUNIDetails_Element_SetValues.json",
+        "Order_SaveUNIDetails_Element_findUNI.json",
+        "Order_SaveUNIDetails_Element_TransformUNIDetails.json",
+        "Order_SaveUNIDetails_Element_LoopThroughUNIDetails.json",
+        "Order_SaveUNIDetails_Element_AddUNI.json",
+        "Order_SaveUNIDetails_Element_UpdateNewUNI.json",
+        "Order_SaveUNIDetails_Element_UpdateExistingUNI.json",
+        "Order_SaveUNIDetails_Element_RollupUNIBitRate.json",
+        "Order_SaveUNIDetails_Element_UpdateVlanTagConfig.json",
+        "Order_SaveUNIDetails_Element_ResponseAction3.json"
+    ],
+    "%vlocity_namespace%__IsProcedure__c": true,
+    "%vlocity_namespace%__IsReusable__c": false,
+    "%vlocity_namespace%__Language__c": "Procedure",
+    "%vlocity_namespace%__ProcedureKey__c": "Order_SaveUNIDetails",
+    "%vlocity_namespace%__PropertySet__c": "Order_SaveUNIDetails_PropertySet.json",
+    "%vlocity_namespace%__SubType__c": "SaveUNIDetails",
+    "%vlocity_namespace%__Type__c": "Order",
+    "Name": "Save UNI Details",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/SaveUNIDetails/Procedure"
+}

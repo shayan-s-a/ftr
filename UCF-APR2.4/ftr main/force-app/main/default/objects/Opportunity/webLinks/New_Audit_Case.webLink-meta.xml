@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Audit_Case</fullName>
+    <availability>online</availability>
+    <description>Used by the compensation teams to audit opportunities.  Only used on the auditor opportunity page layout.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Audit Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/lightning/o/Case/new?recordTypeId=0120L000000RdA2&amp;
+defaultFieldValues=
+AccountId={!Opportunity.AccountId},
+Opportunity__c={!Opportunity.Id}</url>
+</WebLink>

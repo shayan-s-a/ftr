@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPE_COE_Representative_v2__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Account.BillingStateCode ,
+&quot;AL&quot;, &quot;Jennifer McGahey&quot;,
+&quot;AZ&quot;, &quot;Tonya Burroughs&quot;,
+&quot;CA&quot;, &quot;Candy Adair&quot;,
+&quot;CT&quot;, &quot;Candy Adair&quot;,
+&quot;FL&quot;, &quot;Cathy Harmon&quot;,
+&quot;GA&quot;, &quot;Cathy Harmon&quot;,
+&quot;IA&quot;, &quot;Beverly Sanqunetti&quot;,
+&quot;ID&quot;, &quot;Tonya Burroughs&quot;,
+&quot;IL&quot;, &quot;Jennifer McGahey&quot;,
+&quot;IN&quot;, &quot;Kathy Reynolds&quot;,
+&quot;KS&quot;, &quot;Beverly Sanqunetti&quot;,
+&quot;MI&quot;, &quot;Cathy Harmon&quot;,
+&quot;MN&quot;, &quot;Beverly Sanqunetti&quot;,
+&quot;MS&quot;, &quot;Cathy Harmon&quot;,
+&quot;MT&quot;, &quot;Kevin Richardson&quot;,
+&quot;NC&quot;, &quot;Cathy Harmon&quot;,
+&quot;ND&quot;, &quot;Beverly Sanqunetti&quot;,
+&quot;NE&quot;, &quot;Beverly Sanqunetti&quot;,
+&quot;NM&quot;, &quot;Kevin Richardson&quot;,
+&quot;NV&quot;, &quot;Kevin Richardson&quot;,
+&quot;NY&quot;, &quot;John Koziarz&quot;,
+&quot;OH&quot;, &quot;Bridgit Moore&quot;,
+&quot;OR&quot;, &quot;Kevin Richardson&quot;,
+&quot;PA&quot;, &quot;Jennifer McGahey&quot;,
+&quot;SC&quot;, &quot;Cathy Harmon&quot;,
+&quot;SD&quot;, &quot;Beverly Sanqunetti&quot;,
+&quot;TN&quot;, &quot;Jennifer McGahey&quot;,
+&quot;UT&quot;, &quot;Kevin Richardson&quot;,
+&quot;WA&quot;, &quot;Tonya Burroughs&quot;,
+&quot;WI&quot;, &quot;Bridgit Moore&quot;,
+&quot;WV&quot;, &quot;John Koziarz&quot;,
+&quot;Undefinied&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CPE COE Representative</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

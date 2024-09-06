@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>kris.rohde@ibm.com</contactEmail>
+    <label>GitLab</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDVTCCAj0CFD26oGS2xmw0GX1QmtKoWZ1UCphFMA0GCSqGSIb3DQEBCwUAMGcxCzAJBgNVBAYTAlVTMQ4wDAYDVQQIDAVUZXhhczEPMA0GA1UEBwwGRGFsbGFzMSAwHgYDVQQKDBdGcm9udGllciBDb21tdW5pY2F0aW9uczEVMBMGA1UEAwwMZnJvbnRpZXIuY29tMB4XDTIwMDIyMzEwMDExOVoXDTIxMDIyMjEwMDExOVowZzELMAkGA1UEBhMCVVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZEYWxsYXMxIDAeBgNVBAoMF0Zyb250aWVyIENvbW11bmljYXRpb25zMRUwEwYDVQQDDAxmcm9udGllci5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDeqQY/IRCJUdLwS2AhjM8PwG2GhdkoT39mhWTMTitd92/BnO/+LSA9J/0epp2iZgU5i2DDErIOhbtbnultGJTFJntIu0ePD4ri/bNY7vOIlb8AAGQClB1yMS5qq4T6cbXpBFe7w5gTdBr9kddWgRnJrZkA4knWurmVyLJPkMV9jHAKnuFpa9EF3ftt5ji54YbCD5mKzKrYdDtlvBJjLDeFppAL7YoEHSPm/xcCiDMHLKE27dGAK6szI98fSGvs/I3LAB2qbM/mPOhfune7lVboljZaUnNETezKiZgbvaSm2xh+ovPJ+yoq3Yb4hVlbaBRwA3HUhikx4CEpbJALL1ytAgMBAAEwDQYJKoZIhvcNAQELBQADggEBANA0QGaT/9MVUSF6k5fHN8Uard0jQ7RY4EEfhvbSSyHyiljnCh8qpBO79h/IXGXJtYYVZ0PTLgCsEthkS/fabQo2OonXhiV6ohr9Zu9FTk8SfmaLH1D0CjsfyIaLM5lxxSF+7Vcv60Hh/hKAAz1qc2iJY0xb3s13G37ofFDoHnWm4mH5yToysQbKCAKRceTqkqkBEczUKrtnu6qKV1EYbsS7XlQoSioYYZcUxGLKl7hJ+hXtS/nARkvHSqGSbzIoBp8wJr+3KKTTT+vwB9Hv8Pg15Xi8VuXcoQR+WoTuHkyyikFwhzP4/W+gDBeUGXK+N5Lt7XXOSDC9Ean/UGKInkM=</certificate>
+        <consumerKey>3MVG9iTxZANhwHQs4acWs3dNVmRpZHohf1Qeji3WTuZLcDIpNSmnA3rOdXJCRksmo512w5nYlmtjH9JnlcWzp</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>GitLab Runners</permissionSetName>
+</ConnectedApp>

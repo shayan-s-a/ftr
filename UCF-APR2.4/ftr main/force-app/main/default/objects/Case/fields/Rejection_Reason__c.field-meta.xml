@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Rejection Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Engineering Redesign</fullName>
+                <default>false</default>
+                <label>Engineering Redesign</label>
+            </value>
+            <value>
+                <fullName>Incorrect Number for TG</fullName>
+                <default>false</default>
+                <label>Incorrect Number for TG</label>
+            </value>
+            <value>
+                <fullName>No Facilities</fullName>
+                <default>false</default>
+                <label>No Facilities</label>
+            </value>
+            <value>
+                <fullName>No Port Available</fullName>
+                <default>false</default>
+                <label>No Port Available</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

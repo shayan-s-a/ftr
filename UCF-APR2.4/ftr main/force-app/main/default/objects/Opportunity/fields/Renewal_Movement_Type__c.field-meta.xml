@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Movement_Type__c</fullName>
+    <description>For Comm conn</description>
+    <externalId>false</externalId>
+    <label>Renewal Movement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EMA to NEMA</fullName>
+                <default>false</default>
+                <label>EMA to NEMA</label>
+            </value>
+            <value>
+                <fullName>NEMA to EMA</fullName>
+                <default>false</default>
+                <label>NEMA to EMA</label>
+            </value>
+            <value>
+                <fullName>Bulk to EMA</fullName>
+                <default>false</default>
+                <label>Bulk to EMA</label>
+            </value>
+            <value>
+                <fullName>Bulk to NEMA</fullName>
+                <default>false</default>
+                <label>Bulk to NEMA</label>
+            </value>
+            <value>
+                <fullName>NEMA to NEMA</fullName>
+                <default>false</default>
+                <label>NEMA to NEMA</label>
+            </value>
+            <value>
+                <fullName>Bulk to Bulk</fullName>
+                <default>false</default>
+                <label>Bulk to Bulk</label>
+            </value>
+            <value>
+                <fullName>EMA to Bulk</fullName>
+                <default>false</default>
+                <label>EMA to Bulk</label>
+            </value>
+            <value>
+                <fullName>NEMA to Bulk</fullName>
+                <default>false</default>
+                <label>NEMA to Bulk</label>
+            </value>
+            <value>
+                <fullName>EMA to EMA</fullName>
+                <default>false</default>
+                <label>EMA to EMA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

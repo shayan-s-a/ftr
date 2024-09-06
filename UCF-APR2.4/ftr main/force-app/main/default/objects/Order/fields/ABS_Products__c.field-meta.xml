@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ABS_Products__c</fullName>
+    <externalId>false</externalId>
+    <label>ABS Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Continuity/Disaster Recovery</fullName>
+                <default>false</default>
+                <label>Business Continuity/Disaster Recovery</label>
+            </value>
+            <value>
+                <fullName>Collaboration</fullName>
+                <default>false</default>
+                <label>Collaboration</label>
+            </value>
+            <value>
+                <fullName>Data Center Licensing</fullName>
+                <default>false</default>
+                <label>Data Center Licensing</label>
+            </value>
+            <value>
+                <fullName>Data Center Servers</fullName>
+                <default>false</default>
+                <label>Data Center Servers</label>
+            </value>
+            <value>
+                <fullName>Data Center Storage</fullName>
+                <default>false</default>
+                <label>Data Center Storage</label>
+            </value>
+            <value>
+                <fullName>Data Center Switching</fullName>
+                <default>false</default>
+                <label>Data Center Switching</label>
+            </value>
+            <value>
+                <fullName>Emergency Notification</fullName>
+                <default>false</default>
+                <label>Emergency Notification</label>
+            </value>
+            <value>
+                <fullName>Enterprise Networking</fullName>
+                <default>false</default>
+                <label>Enterprise Networking</label>
+            </value>
+            <value>
+                <fullName>Licensing</fullName>
+                <default>false</default>
+                <label>Licensing</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Temperature Sensors</fullName>
+                <default>false</default>
+                <label>Temperature Sensors</label>
+            </value>
+            <value>
+                <fullName>E911</fullName>
+                <default>false</default>
+                <label>E911</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

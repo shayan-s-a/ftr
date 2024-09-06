@@ -1,0 +1,23 @@
+<b>Case Number</b> - {!Case.CaseNumber}<BR>
+<b>Status</b> - {!Case.Status}<BR>
+<b>Account BTN</b> - {!Case.Account_BTN__c}<BR>
+<b>Requester Email</b> - {!Case.Rep_Email__c}<BR>
+<b>Requester Name</b> - {!Case.Rep_Name__c}<BR>
+<b>Customer Name</b> - {!Account.Company_Name__c}<BR>
+<b>Customer Phone</b> - {!Case.Account}<BR>
+<b>Environment</b> - {!Case.00NE0000005zgmF}<BR>
+<b>System</b> - {!Case.System__c}<BR>
+<b>Customer Requestor Name</b> - {!Case.Customer_Requester_Name__c}<BR>
+<b>Customer Requestor #</b> - {!Case.Customer_Requester_Phone__c}<BR>
+<b>Customer Requestor Email</b> - {!Case.Customer_Requester_Email__c}<BR>
+<b>Order #</b> - {!Case.Orderz__c}<BR>
+<b>Due Date</b> - {!Case.Due_Date__c}<BR>
+<b>Toll Free #</b> - {!Case.Toll_Free__c}<BR>
+<b>Activity</b> - {!Case.Activity__c}<BR>
+<b>Old Terminating #</b> - {!Case.OLD_Terminating__c}<BR>
+<b>New Terminating #</b> - {!Case.NEW_Terminating__c}<BR>
+<b>Intrastate?</b> - {!Case.Intrastate__c}<BR>
+<b>National?</b> - {!Case.National__c}<BR>
+<b>Canada?</b> - {!Case.Canada__c}<BR>
+<b>809?</b> - {!Case.X809__c}<BR>
+<b>Comments</b> - {!Case.Comments__c}

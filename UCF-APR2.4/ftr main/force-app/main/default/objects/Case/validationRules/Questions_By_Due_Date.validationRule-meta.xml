@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Questions_By_Due_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ISPICKVAL(Questions_By_Due_Date__c, &quot;Yes&quot;),
+
+ISBLANK(Questions_By_Due_Date_Time__c))</errorConditionFormula>
+    <errorMessage>Please fill out the Questions By Due Date &amp; Time</errorMessage>
+</ValidationRule>

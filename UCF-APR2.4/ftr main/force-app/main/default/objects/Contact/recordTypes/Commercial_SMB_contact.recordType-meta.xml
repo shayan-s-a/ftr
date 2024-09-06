@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_SMB_contact</fullName>
+    <active>true</active>
+    <label>Commercial SMB contact</label>
+    <picklistValues>
+        <picklist>Contact_Position__c</picklist>
+        <values>
+            <fullName>C Level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Day to Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Role__c</picklist>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk Billing Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%2FReference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Notice Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement Mgr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement Mgr Coach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasing Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Notice Person 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Notice Person 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Site Technical Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Status__c</picklist>
+        <values>
+            <fullName>Current</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Employment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey - Resend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey - Resent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey - Responded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey - Selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey - Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Type__c</picklist>
+        <values>
+            <fullName>Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorized Buyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D %26 B Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruit - Employee Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DOZISF__ZoomInfo_Enrich_Status__c</picklist>
+        <values>
+            <fullName>Company Enrich Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enriched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Match</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Campaign_Response__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinars</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry__c</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colleges %26 Universities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lodging %26 Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media %26 Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metals %26 Mining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceuticals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel %26 Transportation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Last_Campaign_Response__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinars</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>2018 Lit Building Promotion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BidNet - CPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branded Paid Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CJIS - CPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNL Disconnect Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE %E2%80%93 Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE %E2%80%93 BidNet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE %E2%80%93 Maintenance Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE %E2%80%93 MarketSource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE %E2%80%93 Phone %2F Hotline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE %E2%80%93 Warranty Expiration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE - CJIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Maintenance Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ChoiceConvention2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold_Call_Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold_Calling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Aggregator%2FList Upload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content_Syndication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer - Alt Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo Examples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dun %26 Bradstreet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IDG Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound_Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound_Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Customer Database %28DPI%2FDynamics%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketo - Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netline Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Search Paid Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoor Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay_Per_Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect - Alt Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral_Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Generated Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SnapApp Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Take the Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer_from_Small_Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unbranded Paid Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vidyard Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoominfo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eRate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Product_List__c</picklist>
+        <values>
+            <fullName>Cloud IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise WiFi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAW UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS or BHSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD-WAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simply WiFi Secure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice %28TDM%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Reliability__c</picklist>
+        <values>
+            <fullName>Not reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very reliable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Security__c</picklist>
+        <values>
+            <fullName>Not reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very reliable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Speed__c</picklist>
+        <values>
+            <fullName>Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting needs but no growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not meeting needs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Phone_System__c</picklist>
+        <values>
+            <fullName>Good system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Old system</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_Zone__c</picklist>
+        <values>
+            <fullName>%28GMT%29 Casablanca%2C Monrovia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%29 Greenwich Mean Time%3A Dublin%2C Edinburgh%2C Lisban%2C London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B01%3A00%29 Amsterdam%2C Berlin%2C Bern%2C Rome%2C Stockholm%2C Vienna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B01%3A00%29 Belgrade%2C Bratislava%2C Budapest%2C Ljubljana%2C Prague</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B01%3A00%29 Brussels%2C Copenhagen%2C Madrid%2C Paris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B01%3A00%29 Sarajevo%2C Skopje%2C Sofija%2C Vilnius%2C Warsaw%2C Zagreb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B01%3A00%29 West Central Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B02%3A00%29 Athens%2C Istanbul%2C Minsk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B02%3A00%29 Bucharest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B02%3A00%29 Cairo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B02%3A00%29 Harare%2C Pretoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B02%3A00%29 Helsinki%2C Riga%2C Tallinn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B02%3A00%29 Jerusalem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B03%3A00%29 Baghdad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B03%3A00%29 Kuwait%2C Riyadh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B03%3A00%29 Moscow%2C St%2E Petersburg%2C Volgograd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B03%3A00%29 Nairobi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B03%3A30%29 Tehran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B04%3A00%29 Abu Dhabi%2C Muscat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B04%3A00%29 Baku%2C Tbilisi%2C Yerevan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B04%3A30%29 Kabul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B05%3A00%29 Ekaterinburg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B05%3A00%29 Islamabad%2C Karachi%2C Tashkent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B05%3A30%29 Calcutta%2C Chennai%2C Mumbai%2C New Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B05%3A45%29 Kathmandu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B06%3A00%29 Almaty%2C Novosibirsk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B06%3A00%29 Astana%2C Dhaka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B06%3A00%29 Sri Jayawardenepura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B06%3A30%29 Rengoon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B07%3A00%29 Bangkok%2C Hanoi%2C Jakarta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B07%3A00%29 Krasnoyarsk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B08%3A00%29 Beijing%2C Chongqing%2C Hong Kong%2C Urumqi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B08%3A00%29 Irkutsk%2C Ulaan Bataar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B08%3A00%29 Kuala Lumpur%2C Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B08%3A00%29 Perth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B08%3A00%29 Taipei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B09%3A00%29 Osaka%2C Sapporo%2C Tokyo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B09%3A00%29 Seoul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B09%3A00%29 Yakutsk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B09%3A30%29 Adelaide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B09%3A30%29 Darwin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B10%3A00%29 Brisbane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B10%3A00%29 Canberra%2C Melbourne%2C Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B10%3A00%29 Guam%2C Port Moresby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B10%3A00%29 Hobart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B10%3A00%29 Vladivostok</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B11%3A00%29 Magadan%2C Solomon Is%2E%2C New Caledonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B12%3A00%29 Auckland%2C Wellington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B12%3A00%29 Fiji%2C Kamchatka%2C Marshall Is%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT%2B13%3A00%29 Nuku%27alofa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-01%3A00%29 Azores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-01%3A00%29 Cape Verde Is%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-02%3A00%29 Mid-Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-03%3A00%29 Brasilia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-03%3A00%29 Buenos Aires%2C Georgetown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-03%3A00%29 Greenland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-03%3A30%29 Newfoundland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-04%3A00%29 Atlantic Time %28Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-04%3A00%29 Caracas%2C La Paz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-04%3A00%29 Santiago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-05%3A00%29 Bogota%2C Lima%2C Quito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-05%3A00%29 Eastern Time %28US %26 Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-05%3A00%29 Indiana %28East%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-06%3A00%29 Central America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-06%3A00%29 Central Time %28US %26 Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-06%3A00%29 Mexico City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-06%3A00%29 Saskatchewan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-07%3A00%29 Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-07%3A00%29 Chihuahua%2C La Paz%2C Mazatlan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-07%3A00%29 Mountain Time %28US %26 Canada%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-08%3A00%29 Pacific Time %28US %26 Canada%29%3B Tijuana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-09%3A00%29 Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-10%3A00%29 Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-11%3A00%29 Midway Island%2C Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28GMT-12%3A00%29 Eniwetok%2C Kwajalein</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VPN_Connection__c</picklist>
+        <values>
+            <fullName>Not reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very reliable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__CustomerSentiment__c</picklist>
+        <values>
+            <fullName>Disgruntled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__EmploymentStatus__c</picklist>
+        <values>
+            <fullName>Employed Full-Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employed Part-Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Employed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unemployed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__StateOfIssuance__c</picklist>
+        <values>
+            <fullName>AK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__Type__c</picklist>
+        <values>
+            <fullName>Associate Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensed Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managing Agent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UCaaS_All_Orders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>ORDER.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>Frontier AnyWare UCaaS</value>
+    </filters>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.UCaaS_Disconnect_Order</value>
+    </filters>
+    <label>UCaaS All Orders</label>
+    <sharedTo>
+        <group>Project_Management_Group_SF_Ordering</group>
+    </sharedTo>
+</ListView>

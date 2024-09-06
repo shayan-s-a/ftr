@@ -1,0 +1,12 @@
+<template>
+       
+        <lightning-card title="" class="slds-scrollable_none">
+            <div lwc:if={recordsData.length}  sclass="slds-scrollable_none">
+                <lightning-datatable class="slds-scrollable_none" data ={recordsData} columns={columns} key-field="id" onrowselection={handleRowSelection} selected-rows={selectedRecords} row-number-offset={rowNumberOffset}
+                onsave={OnSaveQuantity} draft-values={draftValues} errors={errors}>
+                </lightning-datatable>
+            </div>
+            <h4 style="color:red; margin-top:5px">{errors}</h4>
+        </lightning-card>
+    
+</template>

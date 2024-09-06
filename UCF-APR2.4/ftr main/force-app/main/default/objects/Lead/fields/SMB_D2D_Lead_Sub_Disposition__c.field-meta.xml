@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMB_D2D_Lead_Sub_Disposition__c</fullName>
+    <description>SMB D2D Lead-Sub Disposition picklist value</description>
+    <externalId>false</externalId>
+    <label>SMB D2D Lead-Sub Disposition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Copper</fullName>
+                <default>false</default>
+                <label>Copper</label>
+            </value>
+            <value>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+                <label>Current Customer</label>
+            </value>
+            <value>
+                <fullName>DM Reached - Appointment Set</fullName>
+                <default>false</default>
+                <label>DM Reached - Appointment Set</label>
+            </value>
+            <value>
+                <fullName>Do Not Knock</fullName>
+                <default>false</default>
+                <label>Do Not Knock</label>
+            </value>
+            <value>
+                <fullName>Duplicate DUPL</fullName>
+                <default>false</default>
+                <label>Duplicate DUPL</label>
+            </value>
+            <value>
+                <fullName>Knocked 1 - Follow Up</fullName>
+                <default>false</default>
+                <label>Knocked 1 - Follow Up</label>
+            </value>
+            <value>
+                <fullName>Knocked 2 - Follow Up</fullName>
+                <default>false</default>
+                <label>Knocked 2 - Follow Up</label>
+            </value>
+            <value>
+                <fullName>Knocked 3 - No Follow Up</fullName>
+                <default>false</default>
+                <label>Knocked 3 - No Follow Up</label>
+            </value>
+            <value>
+                <fullName>Locked</fullName>
+                <default>false</default>
+                <label>Locked</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Residential</fullName>
+                <default>false</default>
+                <label>Residential</label>
+            </value>
+            <value>
+                <fullName>Sale</fullName>
+                <default>false</default>
+                <label>Sale</label>
+            </value>
+            <value>
+                <fullName>Untouched</fullName>
+                <default>false</default>
+                <label>Untouched</label>
+            </value>
+            <value>
+                <fullName>Vacant - Out of Business</fullName>
+                <default>false</default>
+                <label>Vacant - Out of Business</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

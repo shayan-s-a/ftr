@@ -1,0 +1,103 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "UCF Enrichment OS",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "UCF Enrichment OS",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "DIDLocationDetails",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English/DIDLocationDetails",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "DIDLocationDetails",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "SelectableItem-DataTable-DIDNumbers",
+        "accessibleInFutureSteps": false,
+        "columns": [
+            {
+                "apiName": "DIDNumber",
+                "label": "DID #",
+                "required": true,
+                "type": "phone"
+            },
+            {
+                "apiName": "Ucf_Current_Carrier",
+                "label": "Current Carrier",
+                "required": true,
+                "type": "text"
+            },
+            {
+                "apiName": "Ucf_Install_Type",
+                "default": "New DID Range",
+                "label": "Install Type",
+                "options": [
+                    "New DID Range",
+                    "Port-In",
+                    "Winback",
+                    "Existing # (Regrade)"
+                ],
+                "type": "dropdown"
+            },
+            {
+                "apiName": "ThirdParty",
+                "default": "No",
+                "label": "3rd Party?",
+                "type": "checkbox"
+            },
+            {
+                "apiName": "RateCenter",
+                "label": "Rate Center",
+                "required": true,
+                "type": "text"
+            }
+        ],
+        "data": "DIDNumbers",
+        "dataJSON": false,
+        "disOnTplt": false,
+        "donwloadTemplate": true,
+        "itemsKey": "recSet",
+        "label": "Please provide a detailed list of all Direct Inward Dial (DID) telephone numbers to be used by this customer.",
+        "maxCompareSize": 4,
+        "modalConfigurationSetting": {
+            "modalController": "ModalProductCtrl",
+            "modalHTMLTemplateId": "vlcProductConfig.html",
+            "modalSize": "lg"
+        },
+        "modalController": "ModalInstanceCtrl",
+        "modalHTMLTemplateId": "vlcModalContent.html",
+        "modalSize": "",
+        "osName": "UCF Enrichment",
+        "postTransformBundle": "",
+        "preTransformBundle": "",
+        "remoteClass": "",
+        "remoteMethod": "",
+        "remoteOptions": {
+            "postTransformBundle": "",
+            "preTransformBundle": ""
+        },
+        "remoteTimeout": 30000,
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "selectMode": "Single",
+        "selectable": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Selectable Items",
+    "Name": "DIDNumberTable",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English/DIDNumberTable"
+}

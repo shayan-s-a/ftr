@@ -1,0 +1,47 @@
+<aura:component controller="ServiceOrderCtrl" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="serviceOrders" type="LIST" access="private"/>
+    
+    <aura:attribute name="so" type="Service_Order__c[]"/>
+    <aura:attribute name="columns" type="List"/> 
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="hideCheckboxColumn" type="Boolean" default="false"/>
+    
+    <aura:attribute name="showError" type="Boolean" default="false"/>
+    
+    <aura:attribute name="ErrorType" type="String" />
+    <aura:attribute name="ErrorMessage" type="String" />
+    
+    <aura:if isTrue="{!v.showSpinner}">
+    	<lightning:spinner alternativeText="Loading" size="medium" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showError}">
+        <lightning:card title="{!v.ErrorType}">
+            <p class="slds-p-horizontal_small" style="color:red">
+                {!v.ErrorMessage}
+            </p>
+        </lightning:card>
+        
+    	<img src="{!$Resource.StandardErrorImage}"/>
+       
+    </aura:if>
+    
+    <aura:if isTrue="{!and(or(v.serviceOrders,v.hideCheckboxColumn),!v.showError)}">
+    	<!--<aura:iteration items="{!v.serviceOrders}" var="item">
+            
+        </aura:iteration>-->
+        <lightning:input aura:id="cb" type="checkbox" checked="false" label="Sync All" name="input1" onchange="{!c.handleCheckBoxChange}"/>
+        <br></br>
+        <lightning:datatable
+            columns="{!v.columns}"
+            data="{!v.serviceOrders}"
+            keyField="id"
+            onrowselection="{!c.updateSelectedText }"
+			hideCheckboxColumn = "{!!v.hideCheckboxColumn}"
+			onrowaction="{!c.handleRowAction}"
+			/>
+        <br></br>
+        <lightning:button aura:id="btn" class="slds-hide" variant="brand" label="Sync selected service orders" title="Sync All" onclick="{!c.syncMultiple}" />
+    </aura:if>
+</aura:component>

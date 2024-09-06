@@ -1,0 +1,51 @@
+{
+    "%vlocity_namespace%__Active__c": false,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "GuidedQuote",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/Guided/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "GuidedQuote",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/Guided/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "DisplayServiceLocations",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/Guided/English/DisplayServiceLocations",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "DisplayServiceLocations",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "disOnTplt": false,
+        "label": null,
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "",
+                        "field": "DSATAddressValidationSuccessResponse:QualifiedAddress"
+                    }
+                ]
+            }
+        },
+        "text": "<table style=\"height: 197px; width: 900px; margin-left: auto; margin-right: auto;\">\n<tbody>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Ticket</strong></td>\n<td style=\"width: 420px; height: 16px;\">%DSATAddressValidationSuccessResponse:Id%</td>\n<td style=\"width: 104px; height: 16px;\"><strong>WC CLLI</strong></td>\n<td style=\"width: 178px; height: 16px;\">%DSATAddressValidationSuccessResponse:WireCenterCLLI%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Partner Name</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|1:ProviderName%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Address</strong></td>\n<td style=\"width: 420px; height: 16px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:Address%</td>\n<td style=\"width: 104px; height: 16px;\"><strong>Lit?</strong></td>\n<td style=\"width: 178px; height: 16px;\">%DSATAddressValidationSuccessResponse:LitBuilding%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Speed</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|1:Speed%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 19px;\"><strong>City</strong></td>\n<td style=\"width: 420px; height: 19px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:City%</td>\n<td style=\"width: 104px; height: 19px;\"><strong>Fiber Tier</strong></td>\n<td style=\"width: 178px; height: 19px;\">%NewFiberTier%&nbsp;</td>\n<td style=\"width: 89px; height: 19px;\"><strong>QOS</strong></td>\n<td style=\"width: 89px; height: 19px;\">%DSATAddressValidationSuccessResponse:EReachProviders|1:QoS%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>State</strong></td>\n<td style=\"width: 420px; height: 16px;\">&nbsp;%DSATAddressValidationSuccessResponse:QualifiedAddress:State%</td>\n<td style=\"width: 104px; height: 16px;\"><strong>Fiber Distance</strong></td>\n<td style=\"width: 178px; height: 16px;\">%DSATAddressValidationSuccessResponse:FiberDistance%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Tier</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|1:Tier%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Zip Code</strong></td>\n<td style=\"width: 420px; height: 16px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:ZipCode%</td>\n<td style=\"width: 104px; height: 16px;\"><strong>Copper Tier</strong></td>\n<td style=\"width: 178px; height: 16px;\">%DSATAddressValidationSuccessResponse:CopperTier%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Partner Name</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|2:ProviderName%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Lat/Long</strong></td>\n<td style=\"width: 420px; height: 16px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:Latitude% ,&nbsp;%DSATAddressValidationSuccessResponse:QualifiedAddress:Longitude%</td>\n<td style=\"width: 104px; height: 16px; text-align: left;\"><strong>Copper Distance</strong></td>\n<td style=\"width: 178px; height: 16px;\">%DSATAddressValidationSuccessResponse:CopperDistance%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Speed</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|2:Speed%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Product</strong></td>\n<td style=\"width: 420px; height: 16px;\">&nbsp;%DSATAddressValidationSuccessResponse:ProductsPretty%</td>\n<td style=\"width: 104px; height: 16px;\"><strong>WC QoS</strong></td>\n<td style=\"width: 178px; height: 16px;\">%DSATAddressValidationSuccessResponse:WireCenterQoS%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>QOS</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|2:QoS%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>PERRouter</strong></td>\n<td style=\"width: 420px; height: 16px;\">%DSATAddressValidationSuccessResponse:PERRouter%</td>\n<td style=\"width: 104px; height: 16px;\"><strong>WC Speed</strong></td>\n<td style=\"width: 178px; height: 16px;\">%DSATAddressValidationSuccessResponse:WireCenterSpeed%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Tier</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|2:Tier%</td>\n</tr>\n<tr style=\"height: 18px;\">\n<td style=\"width: 62px; height: 18px;\"><strong>LinkStatus</strong></td>\n<td style=\"width: 420px; height: 18px;\">&nbsp;%DSATAddressValidationSuccessResponse:LinkStatus%</td>\n<td style=\"width: 104px; height: 18px;\"><strong>FiberCost</strong></td>\n<td style=\"width: 178px; height: 18px;\">$%DSATAddressValidationSuccessResponse:FiberCost%</td>\n<td style=\"width: 89px; height: 18px;\"><strong>Partner Name</strong></td>\n<td style=\"width: 89px; height: 18px;\">%DSATAddressValidationSuccessResponse:EReachProviders|3:ProviderName%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>LengthFeet</strong></td>\n<td style=\"width: 420px; height: 16px;\">%DSATAddressValidationSuccessResponse:LengthFeet%</td>\n<td style=\"width: 104px; height: 16px;\"><strong>EquipmentCost</strong></td>\n<td style=\"width: 178px; height: 16px;\">$%DSATAddressValidationSuccessResponse:EquipmentCost%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Speed</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|3:Speed%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\">&nbsp;</td>\n<td style=\"width: 420px; height: 16px;\">&nbsp;</td>\n<td style=\"width: 104px; height: 16px;\"><strong>TotalCost</strong></td>\n<td style=\"width: 178px; height: 16px;\">$%DSATAddressValidationSuccessResponse:TotalCost%</td>\n<td style=\"width: 89px; height: 16px;\"><strong>QOS</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|3:QoS%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\">&nbsp;</td>\n<td style=\"width: 420px; height: 16px;\">&nbsp;</td>\n<td style=\"width: 104px; height: 16px;\">&nbsp;</td>\n<td style=\"width: 178px; height: 16px;\">&nbsp;</td>\n<td style=\"width: 89px; height: 16px;\"><strong>Tier</strong></td>\n<td style=\"width: 89px; height: 16px;\">%DSATAddressValidationSuccessResponse:EReachProviders|3:Tier%</td>\n</tr>\n</tbody>\n</table>\n<p></p>",
+        "textKey": ""
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "DSATInformation",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/Guided/English/DSATInformation"
+}

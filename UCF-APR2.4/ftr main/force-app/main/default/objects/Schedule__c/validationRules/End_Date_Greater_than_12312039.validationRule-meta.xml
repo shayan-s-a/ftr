@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date_Greater_than_12312039</fullName>
+    <active>true</active>
+    <description>Verify end date less than 12/31/2039. DPI has a built in limit on the date for that date.</description>
+    <errorConditionFormula>Year(Schedule_End_Date__c) &gt; 2039</errorConditionFormula>
+    <errorDisplayField>Schedule_End_Date__c</errorDisplayField>
+    <errorMessage>Check your end year. To far in the future</errorMessage>
+</ValidationRule>

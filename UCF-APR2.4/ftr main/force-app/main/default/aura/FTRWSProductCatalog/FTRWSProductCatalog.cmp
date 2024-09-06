@@ -1,0 +1,58 @@
+<aura:component
+  implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+  controller="WSProductCatalogController"
+>
+  <aura:handler name="init" value="{!this}" action="{!c.init}" />
+  <aura:attribute name="gridColumns" type="List" access="PRIVATE" />
+  <aura:attribute name="gridData" type="Object" access="PRIVATE" />
+  <aura:attribute name="gridExpandedRows" type="List" access="PRIVATE" />
+  <aura:attribute name="currentExpandedRows" type="String" />
+  <aura:attribute name="isLoaded" type="Boolean" default="false" />
+  <aura:attribute name="addressId" type="Id" />
+  <aura:attribute name="quoteId" type="Id" />
+  <aura:attribute name="cvdError" type="String" />
+  <aura:attribute name="showGrid" type="Boolean" default="true" />
+  <aura:attribute name="cvdsource" type="String" />
+  <aura:attribute name="cvdPriceTier" type="String" />
+
+  <section
+    role="dialog"
+    tabindex="-1"
+    aria-labelledby="header43"
+    aura:id="Modalbox"
+    aria-modal="true"       
+    class="slds-modal slds-fade-in-open"
+  >
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <h2 id="header43" class="slds-text-heading--medium">Product Catalog</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around--medium">
+        <aura:if isTrue="{! v.isLoaded }">
+          <aura:if isTrue="{! v.showGrid }">
+            <lightning:treeGrid
+              aura:id="treeGrid"
+              columns="{! v.gridColumns }"
+              data="{! v.gridData }"
+              expandedRows="{! v.gridExpandedRows }"
+              keyField="name"
+              hideCheckboxColumn="true"                  
+              onrowaction="{!c.onrowaction}"
+            />
+            <aura:set attribute="else"> <div>{!v.cvdError}</div> </aura:set>
+          </aura:if>
+          <aura:set attribute="else">
+            <lightning:spinner alternativeText="Loading" />
+          </aura:set>
+        </aura:if>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_brand" onclick="{!c.closeModal}"
+          >Close</button
+        >
+      </footer>
+    </div>
+  </section>
+     <div class="slds-backdrop slds-backdrop_open"></div>
+</aura:component>

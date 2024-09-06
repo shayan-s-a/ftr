@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COVID19_Order_Cancellation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created to track orders given COVID19 issue.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to identify orders cancelled as a result of COVID19.</inlineHelpText>
+    <label>COVID19 - Order Cancellation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

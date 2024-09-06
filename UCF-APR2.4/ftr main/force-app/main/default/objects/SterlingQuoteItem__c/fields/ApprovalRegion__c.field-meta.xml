@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalRegion__c</fullName>
+    <externalId>false</externalId>
+    <label>Approval Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ApprovalTerritory__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>East</fullName>
+                <default>false</default>
+                <label>East</label>
+            </value>
+            <value>
+                <fullName>National</fullName>
+                <default>false</default>
+                <label>National</label>
+            </value>
+            <value>
+                <fullName>West</fullName>
+                <default>false</default>
+                <label>West</label>
+            </value>
+            <value>
+                <fullName>Mid-Atlantic</fullName>
+                <default>false</default>
+                <label>Mid-Atlantic</label>
+            </value>
+            <value>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+                <label>Midwest</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <controllingFieldValue>Rochester- New York</controllingFieldValue>
+            <controllingFieldValue>Connecticut</controllingFieldValue>
+            <controllingFieldValue>New York North</controllingFieldValue>
+            <controllingFieldValue>New York South</controllingFieldValue>
+            <controllingFieldValue>New York West</controllingFieldValue>
+            <valueName>East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <controllingFieldValue>Utah</controllingFieldValue>
+            <controllingFieldValue>Iowa</controllingFieldValue>
+            <controllingFieldValue>Iowa-czn</controllingFieldValue>
+            <controllingFieldValue>Arizona</controllingFieldValue>
+            <controllingFieldValue>Minnesota</controllingFieldValue>
+            <controllingFieldValue>Nebraska</controllingFieldValue>
+            <controllingFieldValue>Nevada</controllingFieldValue>
+            <controllingFieldValue>New Mexico</controllingFieldValue>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>National</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <controllingFieldValue>Georgia</controllingFieldValue>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <controllingFieldValue>Alabama</controllingFieldValue>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <controllingFieldValue>Mississippi</controllingFieldValue>
+            <valueName>Midwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Washington</controllingFieldValue>
+            <controllingFieldValue>Washington-Inland</controllingFieldValue>
+            <controllingFieldValue>Idaho</controllingFieldValue>
+            <controllingFieldValue>California</controllingFieldValue>
+            <controllingFieldValue>Montana</controllingFieldValue>
+            <controllingFieldValue>Oregon</controllingFieldValue>
+            <controllingFieldValue>Oregon-Inland</controllingFieldValue>
+            <valueName>West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <controllingFieldValue>Illinois-czn</controllingFieldValue>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Mid-Atlantic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Central</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

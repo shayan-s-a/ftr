@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Credit_Check</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send for Collections Screening</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var State = &quot;{!JSENCODE(Account.Tax_ID_Number__c)}&quot;;
+
+if(State == &apos;&apos;){
+alert(&quot;Please ensure you have sent the Agent Profile Form and try again&quot;);
+} else {
+window.open (&quot;https://na39.salesforce.com/_ui/core/email/author/EmailAuthor?rtype=003&amp;p3_lkid={!Account.Id}&amp;retURL=%2F{!Account.Id}&amp;&amp;template_id=00XE000000169JPMAY&amp;p5=&amp;p24=kimberly.sheridan@ftr.com&quot;)
+}</url>
+</WebLink>

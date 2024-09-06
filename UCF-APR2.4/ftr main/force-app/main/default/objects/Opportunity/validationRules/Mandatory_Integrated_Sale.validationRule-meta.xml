@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Integrated_Sale</fullName>
+    <active>true</active>
+    <description>When a User qualifies an Opportunity as an Integrated Sale, they must select an agent from the Master Agent lookup.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Integrated_Sale__c , &quot;Yes&quot;),
+ISBLANK(Master_Agent__c))</errorConditionFormula>
+    <errorDisplayField>Master_Agent__c</errorDisplayField>
+    <errorMessage>For integrated sales, you must select a Master Agent.</errorMessage>
+</ValidationRule>

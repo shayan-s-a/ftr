@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRR_Revenue_affected_by_CPE</fullName>
+    <active>false</active>
+    <description>If a CPE product is selected than a value must be entered for how it affected the MRR for the Opportunity. This can be a + or - value. If a negative value than value must be preceeded by a minus (-) sign.</description>
+    <errorConditionFormula>AND ( 
+ ISPICKVAL(CPE_Product__c 
+, &quot;yes&quot;), 
+ISBLANK(MRC_Impact_Field__c
+) 
+)</errorConditionFormula>
+    <errorDisplayField>MRC_Impact_Field__c</errorDisplayField>
+    <errorMessage>This is a CPE related opportunity. The affected MRR must be entered. It can be either a + or - value. If negative than preceed the Value by a minus (-) sign.</errorMessage>
+</ValidationRule>

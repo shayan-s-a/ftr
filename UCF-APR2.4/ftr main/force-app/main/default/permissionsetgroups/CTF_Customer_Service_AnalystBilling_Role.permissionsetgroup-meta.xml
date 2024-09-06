@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used for #CTF Customer Service Analyst profile and Billing Role. Used for Flesher&apos;s team.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>#CTF Customer Service Analyst-Billing Role</label>
+    <permissionSets>CSA_Case</permissionSets>
+    <permissionSets>Case_Sales_Ops_Sales_Enablement</permissionSets>
+    <permissionSets>E_Rate_Cases</permissionSets>
+    <permissionSets>E_Reach</permissionSets>
+    <permissionSets>Enable_Lightning</permissionSets>
+    <permissionSets>Network_Discovery_Access</permissionSets>
+    <permissionSets>SF_lightning_only</permissionSets>
+    <permissionSets>Salesforce_Ordering</permissionSets>
+    <permissionSets>Vlocity_CPQ_AE_RSM</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

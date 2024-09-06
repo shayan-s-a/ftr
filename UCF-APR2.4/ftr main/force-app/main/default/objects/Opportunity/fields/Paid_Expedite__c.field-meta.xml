@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paid_Expedite__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created for the Order Creation case process to note when a paid expedite is requested.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Paid Expedites are not guaranteed.  FTR will make the best effort to expedite the order, if applicable.</inlineHelpText>
+    <label>Paid Expedite</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

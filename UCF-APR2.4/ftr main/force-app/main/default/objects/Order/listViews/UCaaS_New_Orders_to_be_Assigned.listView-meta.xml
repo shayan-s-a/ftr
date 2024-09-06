@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UCaaS_New_Orders_to_be_Assigned</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Implementor_PM__c</columns>
+    <columns>CPE_COE_Stage__c</columns>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>ORDERS.TOTAL_AMOUNT</columns>
+    <columns>Product_Type__c</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>ORDERS.TYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>Frontier AnyWare UCaaS</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <label>UCaaS New Orders to be Assigned</label>
+    <sharedTo>
+        <group>Project_Management_Group_SF_Ordering</group>
+    </sharedTo>
+</ListView>

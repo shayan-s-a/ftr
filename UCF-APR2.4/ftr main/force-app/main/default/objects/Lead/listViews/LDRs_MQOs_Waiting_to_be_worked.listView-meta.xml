@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LDRs_MQOs_Waiting_to_be_worked</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 and 5</booleanFilter>
+    <columns>OwnersManager__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Lead_Stage__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LDR_Assigned__c</columns>
+    <columns>Notes__c</columns>
+    <columns>RVP__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LDR_Assigned__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.UNREAD</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Rejected - Return to Nurture Stream,Rejected - Disqualify</value>
+    </filters>
+    <filters>
+        <field>OwnersManager__c</field>
+        <operation>notContain</operation>
+        <value>ciric</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FIRST_NAME</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>LDRs_MQOs Waiting to be worked</label>
+</ListView>

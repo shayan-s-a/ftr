@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DIDLocationDetailsId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>DID Location Details</label>
+    <referenceTo>ftr_DID_Location_Details__c</referenceTo>
+    <relationshipLabel>DID Number Details</relationshipLabel>
+    <relationshipName>DID_Number_Details</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

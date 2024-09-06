@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Toll Free VCCOR</name>
+    <style>none</style>
+    <subject>Toll Free Request- {!Case.00NE0000005zgmF}</subject>
+    <textOnly>Case Number - {!Case.CaseNumber}
+Account BTN - {!Case.Account_BTN__c}
+Requester Email - {!Case.Rep_Email__c}
+Requester Name - {!Case.Rep_Name__c}
+Customer Name - {!Account.Company_Name__c}
+Customer Phone - {!Case.Account}
+Environment - {!Case.00NE0000005zgmF}
+System - {!Case.System__c}
+Customer Requestor Name - {!Case.Customer_Requester_Name__c}
+Customer Requestor # - {!Case.Customer_Requester_Phone__c}
+Customer Requestor Email - {!Case.Customer_Requester_Email__c}
+Order # - {!Case.Orderz__c}
+Due Date - {!Case.Due_Date__c}
+Toll Free # - {!Case.Toll_Free__c}
+Activity - {!Case.Activity__c}
+Old Terminating # - {!Case.OLD_Terminating__c}
+New Terminating # - {!Case.NEW_Terminating__c}
+Intrastate? - {!Case.Intrastate__c}
+National? - {!Case.National__c}
+Canada? - {!Case.Canada__c}
+809? - {!Case.X809__c}
+Comments - {!Case.Comments__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

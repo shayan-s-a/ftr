@@ -1,0 +1,2718 @@
+{
+    "%vlocity_namespace%__ApprovedBy__c": "",
+    "%vlocity_namespace%__ApprovedOn__c": "",
+    "%vlocity_namespace%__AttributeAssignment__c": "SIP-Direct-Inward-Dialing_AttributeAssignments.json",
+    "%vlocity_namespace%__AttributeDefaultValues__c": {
+        "ATTR_CONTRACT_TERM": null,
+        "ATTR_DECOMP_ENVIRONMENT": null,
+        "ATTR_DID_ISDIDNumberInfo": null,
+        "ATTR_DID_IsMDN": null,
+        "ATTR_DID_NEW": false,
+        "ATTR_DID_PORT_IN": false,
+        "ATTR_DID_REGRADE": false,
+        "ATTR_DID_WINBACK": false,
+        "ATTR_DPIROUTERTER": null,
+        "ATTR_DSAT_ID": null,
+        "ATTR_DueDate": null,
+        "ATTR_ErrorCode": null,
+        "ATTR_ErrorMessage": null,
+        "ATTR_HostUNIRefId": null,
+        "ATTR_IsBillingComplete": null,
+        "ATTR_IsSubmitOrderToDPI": null,
+        "ATTR_SHARED_UNI": "False",
+        "AccountServiceType": null,
+        "Action": null,
+        "BillCycle": null,
+        "BillDetailLevel": null,
+        "BillHandlingCode": null,
+        "BillingTelephoneNumber": null,
+        "BusinessOwnerName": null,
+        "BusinessOwnerTelephone": null,
+        "CKT_SNE_CODE": null,
+        "CircuitId": null,
+        "ControlNumber": null,
+        "CorrelationId": null,
+        "CreditRating": null,
+        "CustomerOrderType": null,
+        "CustomerType": null,
+        "EVPL_OneTimeTotal": null,
+        "EVPL_Quantity": null,
+        "EVPL_RecurringCharge": null,
+        "EVPL_SNE_Code_MRC": null,
+        "EVPL_SNE_Code_OTC": null,
+        "EVPL_SNE_Code_TERM": null,
+        "Environment": null,
+        "GroupMemberOrderId": null,
+        "GroupOrderTransactionCount": null,
+        "HOST_TO_EVPL": "False",
+        "IP_OneTimeTotal": null,
+        "IP_Quantity": null,
+        "IP_RecurringCharge": null,
+        "IP_SNE_Code_MRC": null,
+        "IP_SNE_Code_OTC": null,
+        "IP_SNE_Code_TERM": null,
+        "InstallationType": null,
+        "InterLocCityName": null,
+        "InterLocCountry": null,
+        "InterLocPostalCode": null,
+        "InterLocStateAbbreviation": null,
+        "InterLocStreetAddress": null,
+        "IsFederalTaxExempt": null,
+        "IsLeadOrder": null,
+        "IsOrderCreated": null,
+        "LeadOrderId": null,
+        "MR_Quantity": null,
+        "MR_RecurringCharge": null,
+        "MR_SNE_Code_MRC": null,
+        "OneTimeTotal": null,
+        "OrderNumber": null,
+        "OrgLocCityName": null,
+        "OrgLocLocStateAbbreviation": null,
+        "OrgLocStreetAddress": null,
+        "OrgLocZipCode": null,
+        "OrganizationType": null,
+        "PONNumber": null,
+        "Quantity": null,
+        "RecurringCharge": null,
+        "SNE_Code_MRC": null,
+        "SNE_Code_OTC": null,
+        "SNE_Code_TERM": null,
+        "ServLocCityName": null,
+        "ServLocStateAbbreviation": null,
+        "ServLocStreetAddress": null,
+        "ServLocZipCode": null,
+        "TollLimitCode": null,
+        "TradingName": null,
+        "UNI_SNE_CODE": null,
+        "WorkingTelephoneNumber": null,
+        "cityAbbreviation": null
+    },
+    "%vlocity_namespace%__AttributeMetadata__c": {
+        "messages": [
+        ],
+        "records": [
+            {
+                "Code__c": "FTR_ENT_TECH_ATTCAT",
+                "Name": "Technical Attributes",
+                "displaySequence": 20,
+                "id": "a7a8G0000002SniQAE",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8G000000CrLwQAK",
+                            "cloneable": true,
+                            "code": "ATTR_DPIROUTERTER",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI/PE Router Termination CLLI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrNfQAK",
+                            "cloneable": true,
+                            "code": "GroupOrderTransactionCount",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_groupOrderTransactionCount",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrM6QAK",
+                            "cloneable": true,
+                            "code": "ATTR_HostUNIRefId",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 530,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Host UNI Reference Id",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrNgQAK",
+                            "cloneable": true,
+                            "code": "IsLeadOrder",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 580,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IsLeadOrder",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrNhQAK",
+                            "cloneable": true,
+                            "code": "IsOrderCreated",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 590,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IsOrderCreated",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrNmQAK",
+                            "cloneable": true,
+                            "code": "OrderNumber",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 600,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_OrderNumber",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrNaQAK",
+                            "cloneable": true,
+                            "code": "CorrelationId",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 610,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_CorrelationId",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrNkQAK",
+                            "cloneable": true,
+                            "code": "LeadOrderId",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 620,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_LeadOrderId",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrNeQAK",
+                            "cloneable": true,
+                            "code": "GroupMemberOrderId",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 630,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_GroupMemberOrderId",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrMEQA0",
+                            "cloneable": true,
+                            "code": "ATTR_IsBillingComplete",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 640,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "IsBillingComplete",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrMFQA0",
+                            "cloneable": true,
+                            "code": "ATTR_IsSubmitOrderToDPI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 650,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "IsSubmitOrderToDPI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrLzQAK",
+                            "cloneable": true,
+                            "code": "ATTR_ErrorCode",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 660,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "errorCode",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrM0QAK",
+                            "cloneable": true,
+                            "code": "ATTR_ErrorMessage",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 670,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "errorMessage",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 13
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_CUSTOMERACCOUNT_ATTCAT",
+                "Name": "CustomerAccount Attributes",
+                "displaySequence": 110,
+                "id": "a7a8G0000002SnEQAU",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8G000000CrGyQAK",
+                            "cloneable": true,
+                            "code": "BillingTelephoneNumber",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_BTN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrGtQAK",
+                            "cloneable": true,
+                            "code": "AccountServiceType",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_accountServiceType",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrGxQAK",
+                            "cloneable": true,
+                            "code": "BillHandlingCode",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_billHandlingCode",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHDQA0",
+                            "cloneable": true,
+                            "code": "TollLimitCode",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 40,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_tollLimitCode",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrGwQAK",
+                            "cloneable": true,
+                            "code": "BillDetailLevel",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 50,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_billDetailLevel",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH6QAK",
+                            "cloneable": true,
+                            "code": "IsFederalTaxExempt",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 60,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_isFederalTaxExempt",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH0QAK",
+                            "cloneable": true,
+                            "code": "Environment",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 70,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_Environment",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrGzQAK",
+                            "cloneable": true,
+                            "code": "ControlNumber",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 80,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_ControlNumber",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHBQA0",
+                            "cloneable": true,
+                            "code": "ServLocStreetAddress",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 90,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_ServLocStreetAddress",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH1QAK",
+                            "cloneable": true,
+                            "code": "InterLocCityName",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 100,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_InterLocCityName",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH4QAK",
+                            "cloneable": true,
+                            "code": "InterLocStateAbbreviation",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 110,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_InterLocStateAbbreviation",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH9QAK",
+                            "cloneable": true,
+                            "code": "ServLocCityName",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 120,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_ServLocCityName",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHCQA0",
+                            "cloneable": true,
+                            "code": "ServLocZipCode",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 130,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_ServLocZipCode",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHAQA0",
+                            "cloneable": true,
+                            "code": "ServLocStateAbbreviation",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 140,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_ServLocStateAbbreviation",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHEQA0",
+                            "cloneable": true,
+                            "code": "TradingName",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 150,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_tradingName",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH5QAK",
+                            "cloneable": true,
+                            "code": "InterLocStreetAddress",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 160,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_InterLocStreetAddress",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH3QAK",
+                            "cloneable": true,
+                            "code": "InterLocPostalCode",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 170,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_InterLocPostalCode",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHFQA0",
+                            "cloneable": true,
+                            "code": "WorkingTelephoneNumber",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 180,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_WTN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHGQA0",
+                            "cloneable": true,
+                            "code": "cityAbbreviation",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 190,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_cityAbbreviation",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrH2QAK",
+                            "cloneable": true,
+                            "code": "InterLocCountry",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 890,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_InterLocCountry",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrGvQAK",
+                            "cloneable": true,
+                            "code": "BillCycle",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 895,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_BillCycle",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 21
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_CUSTOMERORDER_ATTCAT",
+                "Name": "CustomerOrder Attributes",
+                "displaySequence": 100,
+                "id": "a7a8G0000002SnFQAU",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8G000000CrHNQA0",
+                            "cloneable": true,
+                            "code": "CustomerOrderType",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_customerOrderType",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIKQA0",
+                            "cloneable": true,
+                            "code": "InstallationType",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_installationType",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHKQA0",
+                            "cloneable": true,
+                            "code": "Action",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_action",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHMQA0",
+                            "cloneable": true,
+                            "code": "CircuitId",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 40,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_CIRCUITID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIhQAK",
+                            "cloneable": true,
+                            "code": "SNE_Code_MRC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 50,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_SNE_Code_MRC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIiQAK",
+                            "cloneable": true,
+                            "code": "SNE_Code_OTC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 60,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_SNE_Code_OTC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIjQAK",
+                            "cloneable": true,
+                            "code": "SNE_Code_TERM",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 70,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_SNE_Code_TERM",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIAQA0",
+                            "cloneable": true,
+                            "code": "EVPL_SNE_Code_MRC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 80,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_EVPL_SNE_Code_MRC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIBQA0",
+                            "cloneable": true,
+                            "code": "EVPL_SNE_Code_OTC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 90,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_EVPL_SNE_Code_OTC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrICQA0",
+                            "cloneable": true,
+                            "code": "EVPL_SNE_Code_TERM",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 100,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_EVPL_SNE_Code_TERM",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIUQA0",
+                            "cloneable": true,
+                            "code": "Quantity",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 110,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_Quantity",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIVQA0",
+                            "cloneable": true,
+                            "code": "RecurringCharge",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 120,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_RecurringCharge",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIOQA0",
+                            "cloneable": true,
+                            "code": "OneTimeTotal",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 130,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_OneTimeTotal",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIHQA0",
+                            "cloneable": true,
+                            "code": "IP_SNE_Code_MRC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 140,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IP_SNE_Code_MRC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIIQA0",
+                            "cloneable": true,
+                            "code": "IP_SNE_Code_OTC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 150,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IP_SNE_Code_OTC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIJQA0",
+                            "cloneable": true,
+                            "code": "IP_SNE_Code_TERM",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 160,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IP_SNE_Code_TERM",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIkQAK",
+                            "cloneable": true,
+                            "code": "UNI_SNE_CODE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 170,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_UNI_SNE_CODE",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHJQA0",
+                            "cloneable": true,
+                            "code": "ATTR_SHARED_UNI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 485,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_SHARED_UNI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHHQA0",
+                            "cloneable": true,
+                            "code": "ATTR_DueDate",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 810,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DueDate",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrHLQA0",
+                            "cloneable": true,
+                            "code": "CKT_SNE_CODE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 820,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_CKT_SNE_Code",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIEQA0",
+                            "cloneable": true,
+                            "code": "IP_OneTimeTotal",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 835,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IP_OneTimeTotal",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIGQA0",
+                            "cloneable": true,
+                            "code": "IP_RecurringCharge",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 845,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IP_RecurringCharge",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIFQA0",
+                            "cloneable": true,
+                            "code": "IP_Quantity",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 855,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_IP_Quantity",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrI7QAK",
+                            "cloneable": true,
+                            "code": "EVPL_OneTimeTotal",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 865,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_EVPL_OneTimeTotal",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrI9QAK",
+                            "cloneable": true,
+                            "code": "EVPL_RecurringCharge",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 875,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_EVPL_RecurringCharge",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIDQA0",
+                            "cloneable": true,
+                            "code": "HOST_TO_EVPL",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 880,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_HOST_TO_EVPL",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrI8QAK",
+                            "cloneable": true,
+                            "code": "EVPL_Quantity",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 885,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_EVPL_Quantity",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIPQA0",
+                            "cloneable": true,
+                            "code": "OrgLocCityName",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 935,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_OrgLocCityName",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrISQA0",
+                            "cloneable": true,
+                            "code": "OrgLocZipCode",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 945,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_OrgLocZipCode",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIQQA0",
+                            "cloneable": true,
+                            "code": "OrgLocLocStateAbbreviation",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 955,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_OrgLocStateAbbreviation",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIRQA0",
+                            "cloneable": true,
+                            "code": "OrgLocStreetAddress",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 965,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_OrgLocStreetAddress",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrITQA0",
+                            "cloneable": true,
+                            "code": "PONNumber",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 985,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_PONNumber",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrINQA0",
+                            "cloneable": true,
+                            "code": "MR_SNE_Code_MRC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 990,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_MR_SNE_Code_MRC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIMQA0",
+                            "cloneable": true,
+                            "code": "MR_RecurringCharge",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1000,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_MR_RecurringCharge",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrILQA0",
+                            "cloneable": true,
+                            "code": "MR_Quantity",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1010,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_MR_Quantity",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 35
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_DECOMP_ATTCAT",
+                "Name": "Decomposition Attributes",
+                "displaySequence": 40,
+                "id": "a7a8G0000002SnTQAU",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8G000000CrKDQA0",
+                            "cloneable": true,
+                            "code": "ATTR_DID_WINBACK",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "checkbox",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DID Winback",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrK9QAK",
+                            "cloneable": true,
+                            "code": "ATTR_DID_IsMDN",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI IsMDN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrK8QAK",
+                            "cloneable": true,
+                            "code": "ATTR_DID_ISDIDNumberInfo",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI ISDIDNumber Info",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrKCQA0",
+                            "cloneable": true,
+                            "code": "ATTR_DID_REGRADE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 2,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "checkbox",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DID Regrade",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrKBQA0",
+                            "cloneable": true,
+                            "code": "ATTR_DID_PORT_IN",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 3,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "checkbox",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DID PortIn",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrKAQA0",
+                            "cloneable": true,
+                            "code": "ATTR_DID_NEW",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 4,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "checkbox",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DID New",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrJpQAK",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_ENVIRONMENT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 130,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Environment",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 7
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_CUSTOMER_ATTCAT",
+                "Name": "CustomerAttributes",
+                "displaySequence": 120,
+                "id": "a7a8G0000002SnJQAU",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8G000000CrIqQAK",
+                            "cloneable": true,
+                            "code": "OrganizationType",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_organizationType",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrImQAK",
+                            "cloneable": true,
+                            "code": "BusinessOwnerName",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_businessOwnerName",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIpQAK",
+                            "cloneable": true,
+                            "code": "CustomerType",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_CustomerType",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrIoQAK",
+                            "cloneable": true,
+                            "code": "CreditRating",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 40,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_CreditRating",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8G000000CrInQAK",
+                            "cloneable": true,
+                            "code": "BusinessOwnerTelephone",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 50,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_businessOwnerTelephone",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 5
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_ELIG_ATTCAT",
+                "Name": "Eligibility Attributes",
+                "displaySequence": 50,
+                "id": "a7a8G0000002SndQAE",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8G000000CrKgQAK",
+                            "cloneable": true,
+                            "code": "ATTR_DSAT_ID",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 600,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DSAT ID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_PRI_ATTCAT",
+                "Name": "Pricing Attributes",
+                "displaySequence": 10,
+                "id": "a7a8G0000002SneQAE",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8G000000CrKvQAK",
+                            "cloneable": true,
+                            "code": "ATTR_CONTRACT_TERM",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Term",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                                    "label": "12 Months",
+                                    "readonly": false,
+                                    "value": "12 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                                    "label": "24 Months",
+                                    "readonly": false,
+                                    "value": "24 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                                    "label": "36 Months",
+                                    "readonly": false,
+                                    "value": "36 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                                    "label": "60 Months",
+                                    "readonly": false,
+                                    "value": "60 Months"
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            }
+        ],
+        "totalSize": 7
+    },
+    "%vlocity_namespace%__AttributeRules__c": "",
+    "%vlocity_namespace%__AttributesMarkupConfig__c": "",
+    "%vlocity_namespace%__CategoryData__c": "",
+    "%vlocity_namespace%__ChangeDetectorImplementation__c": "",
+    "%vlocity_namespace%__ClassId__c": "",
+    "%vlocity_namespace%__DecompositionRelationship__c": "SIP-Direct-Inward-Dialing_DecompositionRelationships.json",
+    "%vlocity_namespace%__DefaultImageId__c": "",
+    "%vlocity_namespace%__EffectiveDate__c": "",
+    "%vlocity_namespace%__EndDate__c": "",
+    "%vlocity_namespace%__EndOfLifeDate__c": "",
+    "%vlocity_namespace%__FulfilmentStartDate__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "6336682b-c4a1-63bd-9231-6c7dccf1c611",
+    "%vlocity_namespace%__GlobalKey__c": "92b611af-d8a2-2b9f-571c-8d39bb74b85f",
+    "%vlocity_namespace%__HeaderData__c": "",
+    "%vlocity_namespace%__HelpText__c": "",
+    "%vlocity_namespace%__IsConfigurable__c": true,
+    "%vlocity_namespace%__IsCustomerSubscription__c": false,
+    "%vlocity_namespace%__IsLocationDependent__c": false,
+    "%vlocity_namespace%__IsNotAssetizable__c": false,
+    "%vlocity_namespace%__IsOrderable__c": false,
+    "%vlocity_namespace%__JeopardySafetyIntervalUnit__c": "Seconds",
+    "%vlocity_namespace%__JeopardySafetyInterval__c": "",
+    "%vlocity_namespace%__LifecycleStatus__c": "",
+    "%vlocity_namespace%__MainFeatureQuantityUom__c": "",
+    "%vlocity_namespace%__MainFeatureQuantity__c": "",
+    "%vlocity_namespace%__MainFeatureTermInDays__c": "",
+    "%vlocity_namespace%__Modification__c": "",
+    "%vlocity_namespace%__ObjectFieldAttribute__c": "SIP-Direct-Inward-Dialing_ObjectFieldAttributes.json",
+    "%vlocity_namespace%__ObjectTypeId__c": {
+        "%vlocity_namespace%__GlobalKey__c": "019be4d8384098d0d48276b5898efdc8",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/019be4d8384098d0d48276b5898efdc8",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
+    },
+    "%vlocity_namespace%__ObjectTypeName__c": "SIP Product Specification",
+    "%vlocity_namespace%__ParentClassId__c": "",
+    "%vlocity_namespace%__PriceListEntry__c": "SIP-Direct-Inward-Dialing_PriceListEntries.json",
+    "%vlocity_namespace%__ProductChildItem__c": "SIP-Direct-Inward-Dialing_ProductChildItems.json",
+    "%vlocity_namespace%__ProductSpecId__c": "",
+    "%vlocity_namespace%__ProductTemplateProductId__c": "",
+    "%vlocity_namespace%__Scope__c": "Order Item",
+    "%vlocity_namespace%__SellingEndDate__c": "",
+    "%vlocity_namespace%__SellingStartDate__c": "",
+    "%vlocity_namespace%__SpecificationSubType__c": "",
+    "%vlocity_namespace%__SpecificationType__c": "Offer",
+    "%vlocity_namespace%__StandardPremium__c": "",
+    "%vlocity_namespace%__Status__c": "Active",
+    "%vlocity_namespace%__SubType__c": "None",
+    "%vlocity_namespace%__TimeToLive__c": "",
+    "%vlocity_namespace%__TrackAsAgreement__c": false,
+    "%vlocity_namespace%__Type__c": "None",
+    "%vlocity_namespace%__VendorAccountId__c": "",
+    "%vlocity_namespace%__VersionEndDateTime__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionStartDateTime__c": "",
+    "Accessories1__c": false,
+    "Accessories__c": true,
+    "BroadbandIpOption13Ips__c": false,
+    "BroadbandIpOption5Ips__c": false,
+    "BroadbandIpOptionEach__c": false,
+    "CanUseQuantitySchedule": false,
+    "CanUseRevenueSchedule": false,
+    "Child__c": false,
+    "Description": "",
+    "DisplayUrl": "",
+    "Equipment__c": false,
+    "ExternalDataSourceId": "",
+    "ExternalId": "",
+    "FSecure_Distribution__c": 0,
+    "Family": "",
+    "Grandfathered_Product__c": "",
+    "IpPhoneRule1__c": false,
+    "IpPhoneRule2__c": false,
+    "IpPhone__c": false,
+    "IsActive": true,
+    "IsArchived": false,
+    "Is_LegacyVlocityProduct__c": false,
+    "Item_Code__c": "",
+    "Item_Rate__c": "",
+    "Item_Type__c": "",
+    "License_Order__c": "",
+    "Maintenance_Universal__c": false,
+    "MajorProduct__c": false,
+    "Name": "SIP Direct Inward Dialing",
+    "NoICB__c": false,
+    "NumberOfQuantityInstallments": "",
+    "NumberOfRevenueInstallments": "",
+    "POE_Switch_Rule__c": false,
+    "POE__c": false,
+    "Parent_Child__c": false,
+    "Parent__c": false,
+    "Part_Number_of_Product__c": "",
+    "Part__c": "",
+    "PoE_provided_by_Frontier__c": "",
+    "PoE_provided_by_customer__c": "",
+    "PowerPhone_provided_by_Frontier__c": "",
+    "PremiumPlusRule__c": false,
+    "PremiumRule__c": false,
+    "PricebookEntry": "SIP-Direct-Inward-Dialing_PricebookEntries.json",
+    "ProductCode": "SIP_DIRECT_INWARD_DIALING",
+    "Product_Name_80_Char__c": "SIP Direct Inward Dialing",
+    "Product_Part_Number__c": "",
+    "Product_Subcategory__c": "",
+    "Product_Type__c": "",
+    "QuantityInstallmentPeriod": "",
+    "QuantityScheduleType": "",
+    "QuantityUnitOfMeasure": "",
+    "Quantity__c": "",
+    "RPT_PrimaryCategory__c": "",
+    "RPT_ProductType__c": "Salesforce",
+    "RPT_SecondaryCategory__c": "",
+    "RecordTypeId": {
+        "DeveloperName": "Product",
+        "SobjectType": "Product2",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "RecordType/Product2/Product",
+        "VlocityRecordSObjectType": "RecordType"
+    },
+    "RevenueInstallmentPeriod": "",
+    "RevenueScheduleType": "",
+    "SKU__c": "",
+    "ST_CategoryID__c": "",
+    "ST_CategoryPath__c": "",
+    "ST_ConfigurationModelName__c": "",
+    "ST_Description__c": "",
+    "ST_DisplayItemDescription__c": "",
+    "ST_ExtnCrmProductType__c": "",
+    "ST_IsConfigurable__c": "",
+    "ST_ShortDescription__c": "",
+    "S_E_LOOP__c": "",
+    "S_E_PORT__c": "",
+    "Service__c": false,
+    "SetUp_Order__c": "",
+    "Setup__c": false,
+    "Show_in_PDF__c": false,
+    "SiebelRowID__c": "",
+    "SmartVoice_Broadband_115__c": false,
+    "SmartVoice_Broadband_12__c": false,
+    "SmartVoice_Broadband_18__c": false,
+    "SmartVoice_Broadband_25__c": false,
+    "SmartVoice_Broadband_35__c": false,
+    "SmartVoice_Broadband_45__c": false,
+    "SmartVoice_Broadband_70__c": false,
+    "SmartVoice_Broadband_90__c": false,
+    "SmartVoice_FiOS_100_100_Broadband__c": false,
+    "SmartVoice_FiOS_1G_1G_Broadband__c": false,
+    "SmartVoice_FiOS_500_500_Broadband__c": false,
+    "SmartVoice_Fiber_100_100_Broadband__c": false,
+    "SmartVoice_Fiber_1G_1G_Broadband__c": false,
+    "SmartVoice_Fiber_500_500_Broadband__c": false,
+    "StandardPricebookEntry": [
+        {
+            "%vlocity_namespace%__FloorPrice__c": "",
+            "%vlocity_namespace%__OverageCharge__c": "",
+            "%vlocity_namespace%__OverageUOM__c": "",
+            "%vlocity_namespace%__RecurringPrice__c": 0,
+            "%vlocity_namespace%__RecurringUOM__c": "Monthly",
+            "DISCOUNT_Price__c": "",
+            "GPM__c": "",
+            "IsActive": true,
+            "IsArchived": false,
+            "NRC_Unit_Price__c": "",
+            "Name": "SIP Direct Inward Dialing",
+            "Pricebook2.Name": "Standard Price Book",
+            "Pricebook2Id": {
+                "Name": "Standard Price Book",
+                "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+                "VlocityLookupRecordSourceKey": "Pricebook2/Standard Price Book",
+                "VlocityRecordSObjectType": "Pricebook2"
+            },
+            "Product2.%vlocity_namespace%__GlobalKey__c": "92b611af-d8a2-2b9f-571c-8d39bb74b85f",
+            "Product2Id": {
+                "%vlocity_namespace%__GlobalKey__c": "92b611af-d8a2-2b9f-571c-8d39bb74b85f",
+                "VlocityDataPackType": "VlocityMatchingKeyObject",
+                "VlocityMatchingRecordSourceKey": "Product2/92b611af-d8a2-2b9f-571c-8d39bb74b85f",
+                "VlocityRecordSObjectType": "Product2"
+            },
+            "ProductCode": "SIP_DIRECT_INWARD_DIALING",
+            "Type_of_Billing__c": "",
+            "UNITCOST__c": "",
+            "UnitPrice": 0,
+            "UseStandardPrice": false,
+            "VENDORPRICELISTTOFTR__c": "",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "PricebookEntry",
+            "VlocityRecordSourceKey": "PricebookEntry/Pricebook2/Standard Price Book/Product2/92b611af-d8a2-2b9f-571c-8d39bb74b85f",
+            "multiply__c": ""
+        }
+    ],
+    "StockKeepingUnit": "",
+    "Strategic_Alignment__c": "",
+    "Term1yr__c": "",
+    "Term2yr__c": "",
+    "Term__c": "",
+    "TollFreeRule__c": false,
+    "Type_of_Billing__c": "",
+    "UnitPrice__c": "",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "Product2",
+    "VlocityRecordSourceKey": "Product2/92b611af-d8a2-2b9f-571c-8d39bb74b85f",
+    "Year__c": "",
+    "aService__c": false,
+    "ftr_IsComboOrderEnabled__c": false,
+    "ftr_ProductDisplaySequence__c": "",
+    "isATArule__c": false,
+    "isAdditionalDID__c": false,
+    "isAdditionalDirectory__c": false,
+    "isAdditionalManaged__c": false,
+    "isAnalogRule__c": false,
+    "isBusinessAnalytic__c": false,
+    "isCallerId__c": false,
+    "isConferenceRumSeatRule__c": false,
+    "isDPIEnabled__c": false,
+    "isE911__c": false,
+    "isElite__c": false,
+    "isEssential__c": false,
+    "isExtendedMarket__c": false,
+    "isIpSoundStationRule__c": false,
+    "isNETGEAR__c": false,
+    "isOutbound__c": false,
+    "isPolycomATA__c": false,
+    "isPremier__c": false,
+    "isSmartAdditionalDID__c": false,
+    "isSmartAdditionalManagedAutoAttendant__c": false,
+    "isSmartDirectoryListing__c": false,
+    "isSmartE911__c": false,
+    "isSmartExtendedNum__c": false,
+    "isSmartIpPhoneRule__c": false,
+    "isSmartMonthlyAdminCharge__c": false,
+    "isSmartMultiLineHunt__c": false,
+    "isSmartPremiumAttendant__c": false,
+    "isSmartTollFreeDomesticUS__c": false,
+    "isSmartTollFreeDomestic__c": false,
+    "isSmartTollFreeNum__c": false,
+    "isSoundStationIp5000__c": false,
+    "isSoundStationIp6000__c": false,
+    "isSoundStationIp7000__c": false,
+    "isTechInstallFeeBHSI__c": false,
+    "isTechInstallFeeFIOS__c": false,
+    "isTechInstallFeeFiber__c": false,
+    "isTollFreeNum__c": false,
+    "isVVX311__c": false,
+    "isVVX501__c": false,
+    "isVVX601__c": false,
+    "isWebFax__c": false,
+    "is_show_on_ux__c": false,
+    "multiply__c": false
+}

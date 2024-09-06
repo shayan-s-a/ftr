@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Problem_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Problem Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Address Incorrect</fullName>
+                <default>false</default>
+                <label>Address Incorrect</label>
+            </value>
+            <value>
+                <fullName>Address Not Suppressed</fullName>
+                <default>false</default>
+                <label>Address Not Suppressed</label>
+            </value>
+            <value>
+                <fullName>Area Code Incorrect</fullName>
+                <default>false</default>
+                <label>Area Code Incorrect</label>
+            </value>
+            <value>
+                <fullName>Dead Listing</fullName>
+                <default>false</default>
+                <label>Dead Listing</label>
+            </value>
+            <value>
+                <fullName>Duplicate Listing</fullName>
+                <default>false</default>
+                <label>Duplicate Listing</label>
+            </value>
+            <value>
+                <fullName>File Incorrect</fullName>
+                <default>false</default>
+                <label>File Incorrect</label>
+            </value>
+            <value>
+                <fullName>Locality Error</fullName>
+                <default>false</default>
+                <label>Locality Error</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Name Incorrect</fullName>
+                <default>false</default>
+                <label>Name Incorrect</label>
+            </value>
+            <value>
+                <fullName>Omission</fullName>
+                <default>false</default>
+                <label>Omission</label>
+            </value>
+            <value>
+                <fullName>Operator Retrieval Knowledge</fullName>
+                <default>false</default>
+                <label>Operator Retrieval Knowledge</label>
+            </value>
+            <value>
+                <fullName>Spelling Error</fullName>
+                <default>false</default>
+                <label>Spelling Error</label>
+            </value>
+            <value>
+                <fullName>Telephone Number Incorrect</fullName>
+                <default>false</default>
+                <label>Telephone Number Incorrect</label>
+            </value>
+            <value>
+                <fullName>Voice/Fax Line</fullName>
+                <default>false</default>
+                <label>Voice/Fax Line</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

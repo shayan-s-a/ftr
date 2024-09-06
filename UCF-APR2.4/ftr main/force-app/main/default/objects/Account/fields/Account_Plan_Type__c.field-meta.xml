@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Plan_Type__c</fullName>
+    <description>Used for the Account Optimizer object added by Hernan</description>
+    <externalId>false</externalId>
+    <label>Account Plan Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Comprehensive</fullName>
+                <default>false</default>
+                <label>Comprehensive</label>
+            </value>
+            <value>
+                <fullName>Enhanced</fullName>
+                <default>false</default>
+                <label>Enhanced</label>
+            </value>
+            <value>
+                <fullName>Essentials</fullName>
+                <default>false</default>
+                <label>Essentials</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

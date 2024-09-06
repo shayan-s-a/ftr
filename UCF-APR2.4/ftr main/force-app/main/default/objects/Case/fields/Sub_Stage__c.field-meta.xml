@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Stage__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>24 Hour Escalation to RSM Y/N</fullName>
+                <default>false</default>
+                <label>24 Hour Escalation to RSM Y/N</label>
+            </value>
+            <value>
+                <fullName>24 Hour Escalation to sales VP and Keith B - Y/N</fullName>
+                <default>false</default>
+                <label>24 Hour Escalation to sales VP and Keith B - Y/N</label>
+            </value>
+            <value>
+                <fullName>24 hour post TTL referral Customer contact completed to valid contact Y/N</fullName>
+                <default>false</default>
+                <label>24 hour post TTL referral Customer contact completed to valid contact Y/N</label>
+            </value>
+            <value>
+                <fullName>A/E</fullName>
+                <default>false</default>
+                <label>A/E</label>
+            </value>
+            <value>
+                <fullName>A/E Closed Opportunity</fullName>
+                <default>false</default>
+                <label>A/E Closed Opportunity</label>
+            </value>
+            <value>
+                <fullName>added to WIP</fullName>
+                <default>false</default>
+                <label>added to WIP</label>
+            </value>
+            <value>
+                <fullName>Billed</fullName>
+                <default>false</default>
+                <label>Billed</label>
+            </value>
+            <value>
+                <fullName>Budgetary Proposal Provided to Customer</fullName>
+                <default>false</default>
+                <label>Budgetary Proposal Provided to Customer</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Contract Provided to Client</fullName>
+                <default>false</default>
+                <label>Contract Provided to Client</label>
+            </value>
+            <value>
+                <fullName>CPE DSC Contacted Client</fullName>
+                <default>false</default>
+                <label>CPE DSC Contacted Client</label>
+            </value>
+            <value>
+                <fullName>Credit Application Approved TAMCO Agreement Provided</fullName>
+                <default>false</default>
+                <label>Credit Application Approved TAMCO Agreement Provided</label>
+            </value>
+            <value>
+                <fullName>Credit Application Denied</fullName>
+                <default>false</default>
+                <label>Credit Application Denied</label>
+            </value>
+            <value>
+                <fullName>Credit Application provided to TAMCO</fullName>
+                <default>false</default>
+                <label>Credit Application provided to TAMCO</label>
+            </value>
+            <value>
+                <fullName>Customer returned Amendment to TAMCO</fullName>
+                <default>false</default>
+                <label>Customer returned Amendment to TAMCO</label>
+            </value>
+            <value>
+                <fullName>DRN Received</fullName>
+                <default>false</default>
+                <label>DRN Received</label>
+            </value>
+            <value>
+                <fullName>Quote Generated</fullName>
+                <default>false</default>
+                <label>Quote Generated</label>
+            </value>
+            <value>
+                <fullName>S/E Contacted via SERF Request if Applicable</fullName>
+                <default>false</default>
+                <label>S/E Contacted via SERF Request if Applicable</label>
+            </value>
+            <value>
+                <fullName>Service Order dropped in STATS</fullName>
+                <default>false</default>
+                <label>Service Order dropped in STATS</label>
+            </value>
+            <value>
+                <fullName>Signed Contract Received</fullName>
+                <default>false</default>
+                <label>Signed Contract Received</label>
+            </value>
+            <value>
+                <fullName>TAMCO Agreement Provided</fullName>
+                <default>false</default>
+                <label>TAMCO Agreement Provided</label>
+            </value>
+            <value>
+                <fullName>Tech to verify scope of work</fullName>
+                <default>false</default>
+                <label>Tech to verify scope of work</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Discovery</controllingFieldValue>
+            <valueName>CPE DSC Contacted Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discovery</controllingFieldValue>
+            <valueName>S/E Contacted via SERF Request if Applicable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referred</controllingFieldValue>
+            <valueName>24 Hour Escalation to RSM Y/N</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referred</controllingFieldValue>
+            <valueName>24 Hour Escalation to sales VP and Keith B - Y/N</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referred</controllingFieldValue>
+            <valueName>24 hour post TTL referral Customer contact completed to valid contact Y/N</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referred</controllingFieldValue>
+            <valueName>A/E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prefield</controllingFieldValue>
+            <valueName>Tech to verify scope of work</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proposal</controllingFieldValue>
+            <valueName>Quote Generated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Budgetary Proposal Provided to Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Contract Provided to Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract</controllingFieldValue>
+            <valueName>Signed Contract Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leaseco</controllingFieldValue>
+            <valueName>Credit Application Approved TAMCO Agreement Provided</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leaseco</controllingFieldValue>
+            <valueName>Credit Application Denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leaseco</controllingFieldValue>
+            <valueName>Credit Application provided to TAMCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leaseco</controllingFieldValue>
+            <valueName>Customer returned Amendment to TAMCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leaseco</controllingFieldValue>
+            <valueName>DRN Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leaseco</controllingFieldValue>
+            <valueName>TAMCO Agreement Provided</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sold</controllingFieldValue>
+            <valueName>A/E Closed Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sold</controllingFieldValue>
+            <valueName>Service Order dropped in STATS</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

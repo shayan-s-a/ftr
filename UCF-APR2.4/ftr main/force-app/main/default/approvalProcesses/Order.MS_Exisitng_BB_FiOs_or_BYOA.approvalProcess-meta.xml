@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>OrderNumber</field>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Order_Stage__c</field>
+        <field>Order_Created_Date__c</field>
+        <field>Reject_Reason__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Owner_to_Network_COE_MS</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Stage_to_Network_COE_DPI_Billing</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>CPM</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Move to CPM queue and QA Review stage</description>
+        <label>CPM QA</label>
+        <name>CPM_QA</name>
+        <rejectionActions>
+            <action>
+                <name>Reject_to_AE</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Network_COE_Managed_Services</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Move to Network COE for billing in DPI</description>
+        <label>Network COE DPI Billing</label>
+        <name>Network_COE_DPI_Billing</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Managed Enterprise WiFi</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>New Order,Move Order,Change Order,Upgrade/Downgrade Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product_Type__c</field>
+            <operation>equals</operation>
+            <value>Managed Enterprise WiFi</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product__c</field>
+            <operation>equals</operation>
+            <value>Managed Enterprise WiFi - Existing BB/FiOS or BYOA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.CreatedDate</field>
+            <operation>lessThan</operation>
+            <value>11/5/2021</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>DPI_Billing_Activated</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Stage_to_Complete</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Reject_to_AE</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Approve_to_CPM_QA_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Owner_to_CPM_Queue</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>MS - Exisitng BB/FiOs or BYOA</label>
+    <processOrder>24</processOrder>
+    <recallActions>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

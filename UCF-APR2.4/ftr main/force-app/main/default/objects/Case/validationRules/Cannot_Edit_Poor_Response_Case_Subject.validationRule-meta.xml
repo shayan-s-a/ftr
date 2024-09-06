@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_Poor_Response_Case_Subject</fullName>
+    <active>true</active>
+    <description>You cannot edit the subject for &quot;Poor response on a survey&quot;. Contact your SF Admin if the subject needs to be changed.</description>
+    <errorConditionFormula>AND (
+	ISCHANGED(Subject),
+	BEGINS(PRIORVALUE(Subject), &apos;Poor response on a survey&apos;),
+	/*Allow the following two profiles to make this change*/
+	$Profile.Id &lt;&gt; &apos;00e40000000nYck&apos;, /*Frontier System Administrator*/
+	$Profile.Id &lt;&gt; &apos;00e40000000nTsD&apos; /*System Administrator*/
+)</errorConditionFormula>
+    <errorDisplayField>Subject</errorDisplayField>
+    <errorMessage>You cannot edit the subject for &quot;Poor response on a survey&quot;. Contact your SF Admin if the subject needs to be changed.</errorMessage>
+</ValidationRule>

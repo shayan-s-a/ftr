@@ -1,0 +1,155 @@
+{
+    "%vlocity_namespace%__Active__c": false,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Quick Quote",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "AddressQualification": {
+                "Address-Block": null,
+                "AddressQualificationResult": {
+                    "AQRecordId": null,
+                    "BusinessName": "",
+                    "CPQId": "",
+                    "CopperDistance": "6850",
+                    "CopperQualification": "Qualified (up to 50MB)",
+                    "CopperTier": "Tier 2",
+                    "CreatedBy": "VFO user Vlocity and company ABCDE",
+                    "CreatedById": 30267,
+                    "CreatorEmail": "SIFT.App.Support@ftr.com",
+                    "EReachProviders": [
+                    ],
+                    "FiberDistance": "111",
+                    "FiberQualification": "Qualified (max WC speed)",
+                    "FiberTier": "Tier 1",
+                    "Id": 1659024,
+                    "InFootprint": true,
+                    "Level": "b",
+                    "LitBuilding": true,
+                    "M6OrderNumber": null,
+                    "Market": "D",
+                    "Opened": "2021-11-03T18:28:20.7939181-04:00",
+                    "OpportunityId": "",
+                    "PERRouter": null,
+                    "Products": "DIA, EVPL, ELAN, IPVPN, Jumbo Frames, EPL, Connect Cloud, EPath, EReach",
+                    "QualifiedAddress": {
+                        "Address": "123 W Main St",
+                        "City": "Lewisville",
+                        "Latitude": 33.0465621,
+                        "Longitude": -96.9947912,
+                        "State": "TX",
+                        "ZipCode": "750573964"
+                    },
+                    "SiteName": null,
+                    "VFORecordId": null,
+                    "WireCenterCLLI": "LWVLTXXA",
+                    "WireCenterQoS": "Platinum",
+                    "WireCenterSpeed": "2GB",
+                    "qualifiedBy": null
+                },
+                "DSATTicket": null,
+                "Latitude": null,
+                "Longitude": null,
+                "QualifyBy": null
+            },
+            "CreateServiceAccountResponse": {
+                "ServiceAccountId": "0017h00000eVQSaAAO",
+                "ServiceAccounts": "",
+                "ServiceAccountsUpdated": true
+            },
+            "OrphanServiceAccounts": {
+                "SelectedServiceAccount": {
+                    "City": "Lewisville",
+                    "DSATTicket": "1659024",
+                    "Id": "0017h00000eVQSaAAO",
+                    "Latitude": 33.0465621,
+                    "Longitude": -96.9947912,
+                    "State": "TX",
+                    "StreetAddress": "123 W Main St",
+                    "WireCenterSpeed": "2GB",
+                    "Zip": "75057-3964"
+                }
+            },
+            "SelectedProducts": [
+                {
+                    "%vlocity_namespace%__JSONAttribute__c": null,
+                    "%vlocity_namespace%__OneTimeCharge__c": 0,
+                    "%vlocity_namespace%__RecurringCharge__c": 78.82,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0017h00000eVQSaAAO",
+                    "Description": "DIA (Dedicated Internet Access)",
+                    "Id": 21,
+                    "PricebookEntryId": null,
+                    "Speed__c": "10 Mbps",
+                    "Term__c": "36 Months",
+                    "attributes": {
+                        "type": "QuoteLineItem"
+                    }
+                },
+                {
+                    "%vlocity_namespace%__JSONAttribute__c": null,
+                    "%vlocity_namespace%__OneTimeCharge__c": 0,
+                    "%vlocity_namespace%__RecurringCharge__c": 78.42,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0017h00000eVQSaAAO",
+                    "Description": "DIA (Dedicated Internet Access)",
+                    "Id": 22,
+                    "PricebookEntryId": null,
+                    "Speed__c": "5 Mbps",
+                    "Term__c": "36 Months",
+                    "attributes": {
+                        "type": "QuoteLineItem"
+                    }
+                },
+                {
+                    "%vlocity_namespace%__JSONAttribute__c": null,
+                    "%vlocity_namespace%__OneTimeCharge__c": 250,
+                    "%vlocity_namespace%__RecurringCharge__c": 126.83,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0017h00000eVQSaAAO",
+                    "Description": "DIA (Dedicated Internet Access)",
+                    "Id": 23,
+                    "PricebookEntryId": null,
+                    "Speed__c": "2 Gbps",
+                    "Term__c": "24 Months",
+                    "attributes": {
+                        "type": "QuoteLineItem"
+                    }
+                }
+            ],
+            "ServiceAccounts": [
+                {
+                    "City": "Lewisville",
+                    "DSATTicket": "1659024",
+                    "Id": "0017h00000eVQSaAAO",
+                    "Latitude": 33.0465621,
+                    "Longitude": -96.9947912,
+                    "State": "TX",
+                    "StreetAddress": "123 W Main St",
+                    "WireCenterSpeed": "2GB",
+                    "Zip": "75057-3964"
+                }
+            ]
+        },
+        "label": "SetValues1",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            false,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SetValuesForTesting",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English/SetValuesForTesting"
+}

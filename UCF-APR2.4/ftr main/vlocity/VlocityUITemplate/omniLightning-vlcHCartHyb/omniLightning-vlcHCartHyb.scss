@@ -1,0 +1,92 @@
+.via-slds.via-omni .vlc-slds-cart .vlc-slds-cart-container.slds-size--1-of-1 {
+
+    .vlc-slds-cart-container-bottom-panel {
+        .vlc-slds-line-item {
+            &.child-item {
+                .vlc-slds-item--name {
+                    .vlc-slds-cart--button__settings {
+                        padding: 0 0 0 20px !important;
+                        position: relative !important;
+                        top: 24px !important;
+                    }
+                    .vlc-slds-item--details__product_name.vlc-slds-cart-hier-level-2 {
+                            padding: 0px !important;
+                            position: relative !important;
+                            top: 24px !important;
+                    }
+                    .vlc-slds-cart--quantity-box {
+                        position: unset !important;
+                        padding: 1rem !important;
+                        float: right !important;
+                        top: unset !important;
+                    }
+                }
+            }
+            .vlc-slds-item--name {
+                .vlc-slds-item--details__errors {
+                    margin-top: 10px;     
+                    width: 100%;
+                }
+                .slds-form-element__label {
+                    text-overflow: unset !important;
+                    &.slds-form-element__label_no_child {
+                        max-width: 100%;
+                    }
+                }
+                .vlc-slds-cart--button__settings {
+                    display: inline-block;
+                    position: unset !important; 
+                    top: unset !important; 
+                    left: unset !important; 
+                    width: 25px !important; 
+                    height: 25px !important;
+                    padding: 1rem 0 0 1rem;
+                }
+                .vlc-slds-item--details__product_name {
+                    padding: 1rem !important;
+                    position: unset !important;  
+                    top: unset !important; 
+                    width: 50% !important; 
+                    .vlc-slds-item--details__child_number {
+                        font-size: inherit !important;
+                        color: inherit !important;
+                        top: 1px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .vlc-slds-cart-container-top-panel {
+        cursor: pointer !important;
+    }
+
+    .selected-attribute-display {
+        padding-left: 1.3rem;
+        b { 
+            padding-right: 5px;
+        }
+        .att-container {
+            padding-right: 1rem;
+            padding-bottom: 10px;
+        }
+    }
+    .location-cart-display {
+        display: inline-block;
+        top: 5px;
+        position: relative;
+    }
+    .vlc-slds-item--details__product_name.customized-cart {
+        width: 68% !important;
+    }
+}
+
+
+// .vlc-slds-item--details__product_name {
+//     top: 20px !important;
+// }
+
+// .vlc-slds-cart-hier-level-2.vlc-slds-item--details__product_name {
+//     top: 30px !important;
+// }

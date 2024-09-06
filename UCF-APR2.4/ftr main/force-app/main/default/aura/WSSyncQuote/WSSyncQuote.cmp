@@ -1,0 +1,73 @@
+<aura:component
+  controller="WSQuoteController"
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+  access="global">
+  <aura:attribute name="recordId" type="Id" />
+  <!-- quote Id is passed -->
+
+  <aura:attribute name="Spinner" type="boolean" default="false" />
+  <aura:attribute name="syncSuccess" type="boolean" />
+  <aura:attribute name="syncFailed" type="boolean" />
+  <aura:attribute name="showModal" type="boolean" default="false" />
+  <!--create a component attributes -->
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <aura:handler event="aura:waiting" action="{!c.showSpinner}" />
+  <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}" />
+
+  <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+      <div
+        class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative"
+        role="alert"
+      >
+        <span class="slds-assistive-text">Loading</span>
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+      </div>
+    </div>
+  </aura:if>
+
+  <aura:if isTrue="{!v.showModal}">
+    <article class="slds-card">
+      <div>
+        <aura:if isTrue="{!v.syncSuccess}">
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-1"
+          >
+            <p><b>Quote Synced Successfully!</b></p>
+          </div>
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-2"
+          ></div>
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-3"
+          ></div>
+        </aura:if>
+        <aura:if isTrue="{!v.syncFailed}">
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-1"
+          >
+            <p><b>Quote Sync Failed!</b></p>
+          </div>
+        </aura:if>
+
+        <footer class="slds-card__footer">
+          <div class="slds-text-align_right">
+            <lightning:button
+              variant="brand"
+              label="Close"
+              title="Close"
+              onclick="{! c.hideModel }"
+            />
+          </div>
+        </footer>
+      </div>
+    </article>
+    <!-- <div class="slds-backdrop slds-backdrop_open"></div> -->
+  </aura:if>
+</aura:component>

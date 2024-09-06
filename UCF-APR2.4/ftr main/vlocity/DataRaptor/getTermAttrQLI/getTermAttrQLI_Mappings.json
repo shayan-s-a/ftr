@@ -1,0 +1,49 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "QuoteLineItem",
+        "%vlocity_namespace%__FilterGroup__c": 0,
+        "%vlocity_namespace%__FilterOperator__c": "=",
+        "%vlocity_namespace%__FilterValue__c": "Id",
+        "%vlocity_namespace%__GlobalKey__c": "17aa15c7-2da9-6356-1a3e-24c48086973c",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "Id",
+        "%vlocity_namespace%__InterfaceObjectLookupOrder__c": 1,
+        "%vlocity_namespace%__InterfaceObjectName__c": "QuoteLineItem",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getTermAttrQLICustom8759",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getTermAttrQLI",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "QuoteId",
+        "%vlocity_namespace%__GlobalKey__c": "35496855-c2a3-adc5-227a-0197326f124b",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "QuoteLineItem:QuoteId",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getTermAttrQLICustom7205",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getTermAttrQLI",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "ServiceTerm",
+        "%vlocity_namespace%__GlobalKey__c": "9b4935a4-3b08-f1c8-ddf2-a1b6aa13906e",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "QuoteLineItem:@ATTR_CONTRACT_TERM",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getTermAttrQLICustom6134",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getTermAttrQLI",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

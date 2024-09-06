@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Due_Date_is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;RFP&quot;,
+ISPICKVAL( RFP_Status__c ,&quot;Response Development&quot;),
+ISBLANK( Internal_Due_Date__c ))</errorConditionFormula>
+    <errorMessage>If RFP Status = Response Development, the Internal Due Date Field is required.</errorMessage>
+</ValidationRule>

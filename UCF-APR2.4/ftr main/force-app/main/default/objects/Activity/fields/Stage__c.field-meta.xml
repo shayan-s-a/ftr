@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>360 Proposals Delivered</fullName>
+                <default>false</default>
+                <label>360 Proposals Delivered</label>
+            </value>
+            <value>
+                <fullName>Appointment Attended</fullName>
+                <default>false</default>
+                <label>Appointment Attended</label>
+            </value>
+            <value>
+                <fullName>Appointment Set</fullName>
+                <default>false</default>
+                <label>Appointment Set</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Deal Closed</fullName>
+                <default>false</default>
+                <label>Deal Closed</label>
+            </value>
+            <value>
+                <fullName>Deal Lost</fullName>
+                <default>false</default>
+                <label>Deal Lost</label>
+            </value>
+            <value>
+                <fullName>Demos</fullName>
+                <default>false</default>
+                <label>Demos</label>
+            </value>
+            <value>
+                <fullName>Door Knocks</fullName>
+                <default>false</default>
+                <label>Door Knocks</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>New Opportunities</fullName>
+                <default>false</default>
+                <label>New Opportunities</label>
+            </value>
+            <value>
+                <fullName>Pending approval from Frontier</fullName>
+                <default>false</default>
+                <label>Pending approval from Frontier</label>
+            </value>
+            <value>
+                <fullName>Pending approval from Property</fullName>
+                <default>false</default>
+                <label>Pending approval from Property</label>
+            </value>
+            <value>
+                <fullName>Proposal Delivered</fullName>
+                <default>false</default>
+                <label>Proposal Delivered</label>
+            </value>
+            <value>
+                <fullName>Prospect Contacted</fullName>
+                <default>false</default>
+                <label>Prospect Contacted</label>
+            </value>
+            <value>
+                <fullName>Rescheduled</fullName>
+                <default>false</default>
+                <label>Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Revenue of Proposals Delivered</fullName>
+                <default>false</default>
+                <label>Revenue of Proposals Delivered</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

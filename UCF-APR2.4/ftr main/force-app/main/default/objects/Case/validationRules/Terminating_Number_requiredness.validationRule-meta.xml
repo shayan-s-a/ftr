@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terminating_Number_requiredness</fullName>
+    <active>true</active>
+    <description>If Activity-&gt;Change Term is selected, Require Term. OLD #, Term. NEW #</description>
+    <errorConditionFormula>AND(ISPICKVAL(Activity__c , &quot;Change Term&quot;),
+OR( OLD_Terminating__c = &quot;&quot;,  NEW_Terminating__c = &quot;&quot;),
+RecordType.Name = &quot;Toll Free&quot;
+)</errorConditionFormula>
+    <errorMessage>If the activity is &quot;Change Term&quot;, you must enter an OLD and NEW Terminating Number</errorMessage>
+</ValidationRule>

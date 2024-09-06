@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Addresses_with_BDT_Required__c</fullName>
+    <description>This field needs to count how many unique addresses have the 
+BDT Required checkbox populated and 
+the Address Lost checkbox is NOT populated.</description>
+    <externalId>false</externalId>
+    <label>Addresses with  BDT Required</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ftr_IsMultiLocation__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Quote.ftr_NumberOfLocations__c &gt; 1, TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Multi Location</label>
+    <type>Checkbox</type>
+</CustomField>

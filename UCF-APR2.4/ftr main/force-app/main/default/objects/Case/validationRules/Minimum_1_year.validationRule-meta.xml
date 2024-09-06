@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Minimum_1_year</fullName>
+    <active>false</active>
+    <errorConditionFormula>Contract_Expiration_Date__c &lt; today()+400</errorConditionFormula>
+    <errorDisplayField>Contract_Expiration_Date__c</errorDisplayField>
+    <errorMessage>Please Enter the Expiration as Minimum 13 months from today</errorMessage>
+</ValidationRule>

@@ -1,0 +1,27 @@
+.dummy{
+	color : black;
+}
+.my-combobox-container .slds-dropdown {
+    z-index: 9999; /* Arbitrary high value; adjust as needed */
+}
+
+.button-group {
+    text-align: center; /* Center align the button group */
+    padding: 1rem; /* Add some padding around the buttons */
+}
+
+/* If additional spacing is needed, you can add margin to individual buttons as well */
+.slds-button {
+    margin: 0 0.5rem; /* Add horizontal margin */
+}
+.custom-table-overflow{
+    overflow: auto;
+    min-height: 400px;
+}
+.exampleHolder{
+     position: center;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    color: blue;
+}

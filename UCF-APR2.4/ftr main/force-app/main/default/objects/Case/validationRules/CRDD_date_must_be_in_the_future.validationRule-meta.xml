@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRDD_date_must_be_in_the_future</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+CRDD__c  &lt;= Today(),
+!ISBLANK(CRDD__c) 
+)</errorConditionFormula>
+    <errorDisplayField>CRDD__c</errorDisplayField>
+    <errorMessage>The CRDD date must be in the future</errorMessage>
+</ValidationRule>

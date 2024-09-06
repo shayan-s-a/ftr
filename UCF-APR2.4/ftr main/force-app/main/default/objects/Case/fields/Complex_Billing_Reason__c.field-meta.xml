@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complex_Billing_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Complex Billing Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Billing_Issue_Cause__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing – Multiple Cycles/Accounts</fullName>
+                <default>false</default>
+                <label>Billing – Multiple Cycles/Accounts</label>
+            </value>
+            <value>
+                <fullName>LD Rerates- Multiple Cycles/Accounts</fullName>
+                <default>false</default>
+                <label>LD Rerates- Multiple Cycles/Accounts</label>
+            </value>
+            <value>
+                <fullName>Tariff Research</fullName>
+                <default>false</default>
+                <label>Tariff Research</label>
+            </value>
+            <value>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+                <label>Equipment</label>
+            </value>
+            <value>
+                <fullName>ETF</fullName>
+                <default>false</default>
+                <label>ETF</label>
+            </value>
+            <value>
+                <fullName>Misquoted</fullName>
+                <default>false</default>
+                <label>Misquoted</label>
+            </value>
+            <value>
+                <fullName>Missed Commitment</fullName>
+                <default>false</default>
+                <label>Missed Commitment</label>
+            </value>
+            <value>
+                <fullName>NRC</fullName>
+                <default>false</default>
+                <label>NRC</label>
+            </value>
+            <value>
+                <fullName>Order Error</fullName>
+                <default>false</default>
+                <label>Order Error</label>
+            </value>
+            <value>
+                <fullName>Service Affecting Outage</fullName>
+                <default>false</default>
+                <label>Service Affecting Outage</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>Unhappy with Product/Service</fullName>
+                <default>false</default>
+                <label>Unhappy with Product/Service</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Billing – Multiple Cycles/Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>LD Rerates- Multiple Cycles/Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Tariff Research</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>ETF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Misquoted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Missed Commitment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>NRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Order Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Service Affecting Outage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Unhappy with Product/Service</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Entry_CRIS_Required</fullName>
+    <active>true</active>
+    <description>CRIS ID required if DPI order # is entered?</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &apos;Order Entry Errors&apos;,
+OrderManagement_DPIOrderNumber__c != &apos;&apos;,
+OR(
+CRIS_ID_Manual__c = &apos;&apos;,
+ISPICKVAL(DPI_Environment__c , &apos;&apos;) 
+)
+)</errorConditionFormula>
+    <errorMessage>If you enter a DPI order number, you must enter the corresponding CRIS ID and DPI Environment.</errorMessage>
+</ValidationRule>

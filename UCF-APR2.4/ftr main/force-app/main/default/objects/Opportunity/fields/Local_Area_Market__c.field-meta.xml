@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Local_Area_Market__c</fullName>
+    <externalId>false</externalId>
+    <label>Local Area Market</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Local_Area_Market_State__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>605 Region</fullName>
+                <default>false</default>
+                <label>605 Region</label>
+            </value>
+            <value>
+                <fullName>Adrian</fullName>
+                <default>false</default>
+                <label>Adrian</label>
+            </value>
+            <value>
+                <fullName>Alpena</fullName>
+                <default>false</default>
+                <label>Alpena</label>
+            </value>
+            <value>
+                <fullName>Altamont</fullName>
+                <default>false</default>
+                <label>Altamont</label>
+            </value>
+            <value>
+                <fullName>Atmore</fullName>
+                <default>false</default>
+                <label>Atmore</label>
+            </value>
+            <value>
+                <fullName>Beach Cities</fullName>
+                <default>false</default>
+                <label>Beach Cities</label>
+            </value>
+            <value>
+                <fullName>Beaverton</fullName>
+                <default>false</default>
+                <label>Beaverton</label>
+            </value>
+            <value>
+                <fullName>Beckley</fullName>
+                <default>false</default>
+                <label>Beckley</label>
+            </value>
+            <value>
+                <fullName>Bloomington</fullName>
+                <default>false</default>
+                <label>Bloomington</label>
+            </value>
+            <value>
+                <fullName>Bothell WA</fullName>
+                <default>false</default>
+                <label>Bothell WA</label>
+            </value>
+            <value>
+                <fullName>Buckhannon</fullName>
+                <default>false</default>
+                <label>Buckhannon</label>
+            </value>
+            <value>
+                <fullName>Bullhead City/Kingman</fullName>
+                <default>false</default>
+                <label>Bullhead City/Kingman</label>
+            </value>
+            <value>
+                <fullName>CA Central</fullName>
+                <default>false</default>
+                <label>CA Central</label>
+            </value>
+            <value>
+                <fullName>CA North</fullName>
+                <default>false</default>
+                <label>CA North</label>
+            </value>
+            <value>
+                <fullName>Carbondale</fullName>
+                <default>false</default>
+                <label>Carbondale</label>
+            </value>
+            <value>
+                <fullName>Carlinville/Jacksonville</fullName>
+                <default>false</default>
+                <label>Carlinville/Jacksonville</label>
+            </value>
+            <value>
+                <fullName>Central/Northern WI</fullName>
+                <default>false</default>
+                <label>Central/Northern WI</label>
+            </value>
+            <value>
+                <fullName>Central Coast</fullName>
+                <default>false</default>
+                <label>Central Coast</label>
+            </value>
+            <value>
+                <fullName>Central Ohio</fullName>
+                <default>false</default>
+                <label>Central Ohio</label>
+            </value>
+            <value>
+                <fullName>Central Valley</fullName>
+                <default>false</default>
+                <label>Central Valley</label>
+            </value>
+            <value>
+                <fullName>Charleston</fullName>
+                <default>false</default>
+                <label>Charleston</label>
+            </value>
+            <value>
+                <fullName>Chenango</fullName>
+                <default>false</default>
+                <label>Chenango</label>
+            </value>
+            <value>
+                <fullName>Clarksburg</fullName>
+                <default>false</default>
+                <label>Clarksburg</label>
+            </value>
+            <value>
+                <fullName>Clarks Summit/Tunkhannock/Montrose</fullName>
+                <default>false</default>
+                <label>Clarks Summit/Tunkhannock/Montrose</label>
+            </value>
+            <value>
+                <fullName>Coastal North</fullName>
+                <default>false</default>
+                <label>Coastal North</label>
+            </value>
+            <value>
+                <fullName>Coastal South</fullName>
+                <default>false</default>
+                <label>Coastal South</label>
+            </value>
+            <value>
+                <fullName>Coeur D&apos;Alene</fullName>
+                <default>false</default>
+                <label>Coeur D&apos;Alene</label>
+            </value>
+            <value>
+                <fullName>Columbus</fullName>
+                <default>false</default>
+                <label>Columbus</label>
+            </value>
+            <value>
+                <fullName>Cookeville</fullName>
+                <default>false</default>
+                <label>Cookeville</label>
+            </value>
+            <value>
+                <fullName>Coos Bay</fullName>
+                <default>false</default>
+                <label>Coos Bay</label>
+            </value>
+            <value>
+                <fullName>Crossville</fullName>
+                <default>false</default>
+                <label>Crossville</label>
+            </value>
+            <value>
+                <fullName>Dallas/Shickshinny</fullName>
+                <default>false</default>
+                <label>Dallas/Shickshinny</label>
+            </value>
+            <value>
+                <fullName>Denison</fullName>
+                <default>false</default>
+                <label>Denison</label>
+            </value>
+            <value>
+                <fullName>DFW EAST</fullName>
+                <default>false</default>
+                <label>DFW EAST</label>
+            </value>
+            <value>
+                <fullName>DFW WEST</fullName>
+                <default>false</default>
+                <label>DFW WEST</label>
+            </value>
+            <value>
+                <fullName>Durham</fullName>
+                <default>false</default>
+                <label>Durham</label>
+            </value>
+            <value>
+                <fullName>Eastern Ohio</fullName>
+                <default>false</default>
+                <label>Eastern Ohio</label>
+            </value>
+            <value>
+                <fullName>Eastern WI</fullName>
+                <default>false</default>
+                <label>Eastern WI</label>
+            </value>
+            <value>
+                <fullName>Elkhart</fullName>
+                <default>false</default>
+                <label>Elkhart</label>
+            </value>
+            <value>
+                <fullName>Elkins</fullName>
+                <default>false</default>
+                <label>Elkins</label>
+            </value>
+            <value>
+                <fullName>Everett</fullName>
+                <default>false</default>
+                <label>Everett</label>
+            </value>
+            <value>
+                <fullName>Fort Dodge</fullName>
+                <default>false</default>
+                <label>Fort Dodge</label>
+            </value>
+            <value>
+                <fullName>Ft. Wayne</fullName>
+                <default>false</default>
+                <label>Ft. Wayne</label>
+            </value>
+            <value>
+                <fullName>Georgetown</fullName>
+                <default>false</default>
+                <label>Georgetown</label>
+            </value>
+            <value>
+                <fullName>Gloversville</fullName>
+                <default>false</default>
+                <label>Gloversville</label>
+            </value>
+            <value>
+                <fullName>Gresham</fullName>
+                <default>false</default>
+                <label>Gresham</label>
+            </value>
+            <value>
+                <fullName>High Desert</fullName>
+                <default>false</default>
+                <label>High Desert</label>
+            </value>
+            <value>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+                <label>Idaho</label>
+            </value>
+            <value>
+                <fullName>Imlay City</fullName>
+                <default>false</default>
+                <label>Imlay City</label>
+            </value>
+            <value>
+                <fullName>Inland</fullName>
+                <default>false</default>
+                <label>Inland</label>
+            </value>
+            <value>
+                <fullName>Inland East</fullName>
+                <default>false</default>
+                <label>Inland East</label>
+            </value>
+            <value>
+                <fullName>Inland Metro</fullName>
+                <default>false</default>
+                <label>Inland Metro</label>
+            </value>
+            <value>
+                <fullName>Kearney</fullName>
+                <default>false</default>
+                <label>Kearney</label>
+            </value>
+            <value>
+                <fullName>Kirkland/Redmond WA</fullName>
+                <default>false</default>
+                <label>Kirkland/Redmond WA</label>
+            </value>
+            <value>
+                <fullName>Lake Havasu City</fullName>
+                <default>false</default>
+                <label>Lake Havasu City</label>
+            </value>
+            <value>
+                <fullName>LeMars</fullName>
+                <default>false</default>
+                <label>LeMars</label>
+            </value>
+            <value>
+                <fullName>Logan</fullName>
+                <default>false</default>
+                <label>Logan</label>
+            </value>
+            <value>
+                <fullName>Low Desert</fullName>
+                <default>false</default>
+                <label>Low Desert</label>
+            </value>
+            <value>
+                <fullName>Martin</fullName>
+                <default>false</default>
+                <label>Martin</label>
+            </value>
+            <value>
+                <fullName>Martinsburg</fullName>
+                <default>false</default>
+                <label>Martinsburg</label>
+            </value>
+            <value>
+                <fullName>Mississippi</fullName>
+                <default>false</default>
+                <label>Mississippi</label>
+            </value>
+            <value>
+                <fullName>Moab</fullName>
+                <default>false</default>
+                <label>Moab</label>
+            </value>
+            <value>
+                <fullName>Monmouth</fullName>
+                <default>false</default>
+                <label>Monmouth</label>
+            </value>
+            <value>
+                <fullName>Monroe</fullName>
+                <default>false</default>
+                <label>Monroe</label>
+            </value>
+            <value>
+                <fullName>Montana/Sandpoint ID</fullName>
+                <default>false</default>
+                <label>Montana/Sandpoint ID</label>
+            </value>
+            <value>
+                <fullName>Morrison</fullName>
+                <default>false</default>
+                <label>Morrison</label>
+            </value>
+            <value>
+                <fullName>Moscow</fullName>
+                <default>false</default>
+                <label>Moscow</label>
+            </value>
+            <value>
+                <fullName>Mount Pleasent</fullName>
+                <default>false</default>
+                <label>Mount Pleasent</label>
+            </value>
+            <value>
+                <fullName>Mt. Vernon WA</fullName>
+                <default>false</default>
+                <label>Mt. Vernon WA</label>
+            </value>
+            <value>
+                <fullName>Muskegon</fullName>
+                <default>false</default>
+                <label>Muskegon</label>
+            </value>
+            <value>
+                <fullName>Myrtle Beach</fullName>
+                <default>false</default>
+                <label>Myrtle Beach</label>
+            </value>
+            <value>
+                <fullName>Myrtle Creek</fullName>
+                <default>false</default>
+                <label>Myrtle Creek</label>
+            </value>
+            <value>
+                <fullName>Navajo Nation</fullName>
+                <default>false</default>
+                <label>Navajo Nation</label>
+            </value>
+            <value>
+                <fullName>Nevada</fullName>
+                <default>false</default>
+                <label>Nevada</label>
+            </value>
+            <value>
+                <fullName>North Central Ohio</fullName>
+                <default>false</default>
+                <label>North Central Ohio</label>
+            </value>
+            <value>
+                <fullName>Northeast Ohio</fullName>
+                <default>false</default>
+                <label>Northeast Ohio</label>
+            </value>
+            <value>
+                <fullName>Northeast PA</fullName>
+                <default>false</default>
+                <label>Northeast PA</label>
+            </value>
+            <value>
+                <fullName>Northeast PA/Conyngham</fullName>
+                <default>false</default>
+                <label>Northeast PA/Conyngham</label>
+            </value>
+            <value>
+                <fullName>Northern MN</fullName>
+                <default>false</default>
+                <label>Northern MN</label>
+            </value>
+            <value>
+                <fullName>Northern PA</fullName>
+                <default>false</default>
+                <label>Northern PA</label>
+            </value>
+            <value>
+                <fullName>Northern WI</fullName>
+                <default>false</default>
+                <label>Northern WI</label>
+            </value>
+            <value>
+                <fullName>North Idaho/Montana</fullName>
+                <default>false</default>
+                <label>North Idaho/Montana</label>
+            </value>
+            <value>
+                <fullName>Northwest Ohio</fullName>
+                <default>false</default>
+                <label>Northwest Ohio</label>
+            </value>
+            <value>
+                <fullName>Northwest PA</fullName>
+                <default>false</default>
+                <label>Northwest PA</label>
+            </value>
+            <value>
+                <fullName>NY South</fullName>
+                <default>false</default>
+                <label>NY South</label>
+            </value>
+            <value>
+                <fullName>Parkersburg</fullName>
+                <default>false</default>
+                <label>Parkersburg</label>
+            </value>
+            <value>
+                <fullName>PA South CLEC</fullName>
+                <default>false</default>
+                <label>PA South CLEC</label>
+            </value>
+            <value>
+                <fullName>PA South ILEC</fullName>
+                <default>false</default>
+                <label>PA South ILEC</label>
+            </value>
+            <value>
+                <fullName>Powell/Fairmont</fullName>
+                <default>false</default>
+                <label>Powell/Fairmont</label>
+            </value>
+            <value>
+                <fullName>Pulaski</fullName>
+                <default>false</default>
+                <label>Pulaski</label>
+            </value>
+            <value>
+                <fullName>Rantoul</fullName>
+                <default>false</default>
+                <label>Rantoul</label>
+            </value>
+            <value>
+                <fullName>Rochester</fullName>
+                <default>false</default>
+                <label>Rochester</label>
+            </value>
+            <value>
+                <fullName>Rochester Metro</fullName>
+                <default>false</default>
+                <label>Rochester Metro</label>
+            </value>
+            <value>
+                <fullName>Rochester West</fullName>
+                <default>false</default>
+                <label>Rochester West</label>
+            </value>
+            <value>
+                <fullName>Seymour</fullName>
+                <default>false</default>
+                <label>Seymour</label>
+            </value>
+            <value>
+                <fullName>Show Low</fullName>
+                <default>false</default>
+                <label>Show Low</label>
+            </value>
+            <value>
+                <fullName>Simpsonville</fullName>
+                <default>false</default>
+                <label>Simpsonville</label>
+            </value>
+            <value>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+                <label>Southeast</label>
+            </value>
+            <value>
+                <fullName>Southeast MN</fullName>
+                <default>false</default>
+                <label>Southeast MN</label>
+            </value>
+            <value>
+                <fullName>Southern ID</fullName>
+                <default>false</default>
+                <label>Southern ID</label>
+            </value>
+            <value>
+                <fullName>Southern Ohio</fullName>
+                <default>false</default>
+                <label>Southern Ohio</label>
+            </value>
+            <value>
+                <fullName>Southern PA</fullName>
+                <default>false</default>
+                <label>Southern PA</label>
+            </value>
+            <value>
+                <fullName>Southern PA/Breezewood/Elizabethville/Lewisberry</fullName>
+                <default>false</default>
+                <label>Southern PA/Breezewood/Elizabethville/Lewisberry</label>
+            </value>
+            <value>
+                <fullName>Southern WI</fullName>
+                <default>false</default>
+                <label>Southern WI</label>
+            </value>
+            <value>
+                <fullName>Southwest MN</fullName>
+                <default>false</default>
+                <label>Southwest MN</label>
+            </value>
+            <value>
+                <fullName>Southwest Ohio</fullName>
+                <default>false</default>
+                <label>Southwest Ohio</label>
+            </value>
+            <value>
+                <fullName>Statesboro</fullName>
+                <default>false</default>
+                <label>Statesboro</label>
+            </value>
+            <value>
+                <fullName>Sycamore</fullName>
+                <default>false</default>
+                <label>Sycamore</label>
+            </value>
+            <value>
+                <fullName>Terra Haute</fullName>
+                <default>false</default>
+                <label>Terra Haute</label>
+            </value>
+            <value>
+                <fullName>TEXAS SOUTH</fullName>
+                <default>false</default>
+                <label>TEXAS SOUTH</label>
+            </value>
+            <value>
+                <fullName>Three Rivers</fullName>
+                <default>false</default>
+                <label>Three Rivers</label>
+            </value>
+            <value>
+                <fullName>Tigard</fullName>
+                <default>false</default>
+                <label>Tigard</label>
+            </value>
+            <value>
+                <fullName>Tri Cities WA/La Grande OR</fullName>
+                <default>false</default>
+                <label>Tri Cities WA/La Grande OR</label>
+            </value>
+            <value>
+                <fullName>Utah</fullName>
+                <default>false</default>
+                <label>Utah</label>
+            </value>
+            <value>
+                <fullName>Valparaiso</fullName>
+                <default>false</default>
+                <label>Valparaiso</label>
+            </value>
+            <value>
+                <fullName>Wenatchee</fullName>
+                <default>false</default>
+                <label>Wenatchee</label>
+            </value>
+            <value>
+                <fullName>Western NC</fullName>
+                <default>false</default>
+                <label>Western NC</label>
+            </value>
+            <value>
+                <fullName>Westfield</fullName>
+                <default>false</default>
+                <label>Westfield</label>
+            </value>
+            <value>
+                <fullName>West Lafayette</fullName>
+                <default>false</default>
+                <label>West Lafayette</label>
+            </value>
+            <value>
+                <fullName>West Metro</fullName>
+                <default>false</default>
+                <label>West Metro</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Iowa</controllingFieldValue>
+            <valueName>Denison</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iowa</controllingFieldValue>
+            <valueName>Fort Dodge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iowa</controllingFieldValue>
+            <valueName>LeMars</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <valueName>Georgetown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <valueName>Myrtle Beach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Carolina</controllingFieldValue>
+            <valueName>Simpsonville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utah</controllingFieldValue>
+            <valueName>Moab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utah</controllingFieldValue>
+            <controllingFieldValue>Arizona</controllingFieldValue>
+            <valueName>Navajo Nation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utah</controllingFieldValue>
+            <valueName>Utah</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nevada</controllingFieldValue>
+            <valueName>Nevada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas</controllingFieldValue>
+            <valueName>DFW EAST</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas</controllingFieldValue>
+            <valueName>DFW WEST</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Texas</controllingFieldValue>
+            <valueName>TEXAS SOUTH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona</controllingFieldValue>
+            <valueName>Bullhead City/Kingman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona</controllingFieldValue>
+            <valueName>Lake Havasu City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arizona</controllingFieldValue>
+            <valueName>Show Low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>Northeast PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>Northwest PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>PA South CLEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>PA South ILEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pennsylvania</controllingFieldValue>
+            <valueName>Southern PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Beckley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Buckhannon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Charleston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Clarksburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Elkins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Logan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Martinsburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Virginia</controllingFieldValue>
+            <valueName>Parkersburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Central/Northern WI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Eastern WI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Northern WI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wisconsin</controllingFieldValue>
+            <valueName>Southern WI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Georgia</controllingFieldValue>
+            <valueName>Statesboro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Coastal North</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Coastal South</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Inland East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Inland Metro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mississippi</controllingFieldValue>
+            <valueName>Mississippi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <valueName>Cookeville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <valueName>Crossville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <valueName>Martin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tennessee</controllingFieldValue>
+            <valueName>Powell/Fairmont</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alabama</controllingFieldValue>
+            <valueName>Atmore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>605 Region</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Beach Cities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>CA Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>CA North</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Central Coast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Central Valley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>High Desert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Inland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>California</controllingFieldValue>
+            <valueName>Low Desert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Bloomington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Carbondale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Carlinville/Jacksonville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Monmouth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Morrison</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Rantoul</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Illinois</controllingFieldValue>
+            <valueName>Sycamore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>Elkhart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>Ft. Wayne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>Seymour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>Terra Haute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>Valparaiso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>Westfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Indiana</controllingFieldValue>
+            <valueName>West Lafayette</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota</controllingFieldValue>
+            <valueName>Northern MN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota</controllingFieldValue>
+            <valueName>Southeast MN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota</controllingFieldValue>
+            <valueName>Southwest MN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minnesota</controllingFieldValue>
+            <valueName>West Metro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Chenango</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Gloversville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>NY South</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Pulaski</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New York</controllingFieldValue>
+            <valueName>Rochester</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>Durham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>Monroe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Carolina</controllingFieldValue>
+            <valueName>Western NC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Central Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Eastern Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>North Central Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Northeast Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Northwest Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Southern Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ohio</controllingFieldValue>
+            <valueName>Southwest Ohio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nebraska</controllingFieldValue>
+            <valueName>Columbus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nebraska</controllingFieldValue>
+            <valueName>Kearney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Adrian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Alpena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Imlay City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Mount Pleasent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Muskegon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Michigan</controllingFieldValue>
+            <valueName>Three Rivers</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

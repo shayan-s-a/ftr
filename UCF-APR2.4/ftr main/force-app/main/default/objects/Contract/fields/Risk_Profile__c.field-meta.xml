@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Profile__c</fullName>
+    <externalId>false</externalId>
+    <label>Risk Profile</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Expired - Mth-to-Mth</fullName>
+                <default>false</default>
+                <label>Expired - Mth-to-Mth</label>
+            </value>
+            <value>
+                <fullName>End of Life Product</fullName>
+                <default>false</default>
+                <label>End of Life Product</label>
+            </value>
+            <value>
+                <fullName>In 12-Mth Auto-Renew</fullName>
+                <default>false</default>
+                <label>In 12-Mth Auto-Renew</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

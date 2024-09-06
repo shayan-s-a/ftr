@@ -1,0 +1,1285 @@
+<template>
+       <div if:true={showLoader}>
+          <div class="exampleHolder">
+        		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+			 </div>
+    </div>    
+    <!--<template if:false={isTranslation}>-->
+  <div if:false={showLoader} class="slds-m-around_medium"> 
+      
+      <div class="slds-col slds-size_1-of-4 slds-m-left_x-small slds-m-top_large"> 
+      Select View  
+                      
+      <lightning-combobox
+      name=""
+      label=""
+      value={value}
+      placeholder="Select an Option"
+      options={options3}
+      onchange={handleComboboxChange}
+      class="slds-m-left_x-small" ></lightning-combobox>
+          <br><br>
+     </div>
+            <div class="slds-button-group slds-float_right" role="group">        
+        <!-- <template if:false={isOrderInProgressOrCompleted}>    -->
+        <template if:false={isnetworktranslation}>
+
+                <lightning-file-upload accept={acceptedFormats} label="Attach CSV File" onuploadfinished={uploadFileHandler}></lightning-file-upload>
+        <!-- </template> -->
+        </template>
+
+                <!-- <template if:true={isTranslation}> -->
+                      <!--  <lightning-button variant="brand" label="Export Template" onclick={exportTemplate} class="slds-m-left_x-small slds-m-top_large"></lightning-button>-->
+                <!-- </template> -->
+                <lightning-button variant="brand" label="Export CSV" onclick={exportCSV} class="slds-m-left_x-small slds-m-top_large"></lightning-button>
+            </div>
+      <br><br><br><br>
+       <div class="custom-table-overflow">
+            <template if:true={employeeinfo}>
+              <template if:true={ftrDIDNumberDetailsEmployeeInfo}>
+                  <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                      <thead>
+                          <tr class="slds-line-height_reset">
+                              
+                            <th class="" data-field-name="DIDNumber__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer"> 
+                              <!--<div class="slds-truncate" title="Phone Number">-->Phone Numbers<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                              <th class="" data-field-name="Ucf_Extension__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Current Carrier">-->Extension<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_User_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="Voip Qualifications">-->User Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Email__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Email<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                           <th class="" data-field-name="Ucf_User_Admin__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Department">-->User Admin<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Department__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Outbound Caller ID">-->Department<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+
+                            <th class="" data-field-name="Outbound_Caller_ID__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Outbound Caller ID">-->Outbound Caller ID<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+
+                            <th class="" data-field-name="Ucf_Other_Outbound_Caller_ID__c" scope="col" style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Outbound Caller ID">-->Other Outbound Caller IDs<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                         
+                          <template if:true={showCallRecording}>
+                       
+                      </template>
+                          </tr>
+                        </thead>
+                       <tbody>
+                          <template for:each={ftrDIDNumberDetailsEmployeeInfo} for:item ='obj'>
+                          <tr class="" key = {obj.key} >
+          
+                                  <td >
+                                      
+                                      <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                  </td>
+                                  <td data-label="object label">
+                                     
+                                   
+                                          <input type="text" 
+                                          pattern="\d*"
+                                              maxlength={obj.Ucf_Extension_Lenght__c}
+                                              class="slds-input" style="width:100px"
+                                          value={obj.Ucf_Extension__c}
+                                          oninput={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          onkeypress={validateInputForNumber}
+                                              data-field-name="Ucf_Extension__c" name="inputvalidate" required/>
+                                        
+                                  </td>
+                                  <td data-label="object label">
+                                      
+                                      <template if:true={obj.editMode}>
+                                          <input type="text" maxlength="32" class="slds-input" style="width:100px"  value={obj.Ucf_User_Name__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_User_Name__c" name="inputvalidate" required/>
+                                      </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_User_Name__c}
+                                      </template>
+                                  </td>  
+                                   <td data-label="object label">
+                                <template if:true={obj.editMode}> 
+                                    <input type="text" class="slds-input"  style="width:100px"  value={obj.Ucf_Email__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Email__c" />
+                                </template>
+                                <template if:false={obj.editMode}>
+                                    {obj.Ucf_Email__c}
+                                </template>
+                            </td>   
+                                  <td>
+                <lightning-combobox
+                                        variant="label-hidden"
+                                        value={obj.Ucf_User_Admin__c}
+                                        options={options}
+                                        onchange={handleInputChange}
+                                        data-record-id={obj.Id}
+                                        selected={obj.Ucf_User_Admin__c}
+                                        data-field-name="Ucf_User_Admin__c">
+                                </lightning-combobox>
+                               </td>
+                                <td data-label="object label" value={obj.Ucf_Department__c}>
+                                <input type="text" class="slds-input" style="width:100px" 
+                                    value={obj.Ucf_Department__c} onchange={handleInputChange} 
+                                    data-record-id={obj.Id} data-field-name="Ucf_Department__c" /> 
+                            </td>  
+
+                            <td>
+                                <lightning-combobox  
+                                    variant="label-hidden"
+                                    name={obj.mdnPicklistId} label="Select Caller ID"
+                                    options={obj.mdnPicklistOptions}
+                                    value={obj.Outbound_Caller_ID__c} onchange={handleInputChange} 
+                                    data-record-id={obj.Id}   selected={obj.Outbound_Caller_ID__c}
+                                    data-field-name="Outbound_Caller_ID__c">
+                                </lightning-combobox>
+                            </td>  
+
+                              <template if:true={obj.showOtherCallerId}>
+                                <td>
+                                    <input type="text" maxlength="10" minlength="10" class="slds-input"  style="width:100px"  value={obj.Ucf_Other_Outbound_Caller_ID__c} onchange={handleInputChange}  onkeypress={validateInputForNumber} data-record-id={obj.Id} data-field-name="Ucf_Other_Outbound_Caller_ID__c" />
+                                </td>
+                            </template>        
+                               
+                     <!-- from here  -->
+                           <template if:true={showCallRecording}>
+
+      
+                           </template>  
+                           <template if:false={obj.showOtherCallerId}>
+                                <td colspan="1"></td>
+                            </template>                                
+         
+                          </tr>
+                      
+                          </template>
+                      </tbody>
+                  </table>
+              </template>
+          </template>
+        
+          
+           <template if:true={deviceinfo}>
+              <template if:true={ftrDIDNumberDetailsEmployeeInfo}>
+                  <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                      <thead>
+                          <tr class="slds-line-height_reset">
+                              
+                            <th class="" data-field-name="DIDNumber__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer"> 
+                              <!--<div class="slds-truncate" title="Phone Number">-->Phone Numbers<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                              <th class="" data-field-name="Ucf_Extension__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Current Carrier">-->Extension<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_User_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="Voip Qualifications">-->User Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                              <th class="" data-field-name="Ucf_License_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->License Type<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                             <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->Device Type<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Device_Accessories__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Device Accessories<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                         
+                          <template if:true={showCallRecording}>
+                       
+                      </template>
+                          </tr>
+                        </thead>
+                       <tbody>
+                          <template for:each={ftrDIDNumberDetailsEmployeeInfo} for:item ='obj'>
+                          <tr class="" key = {obj.key} >
+          
+                                  <td >
+                                      
+                                      <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                  </td>
+                                  <td data-label="object label">
+                                     
+                                   
+                                          <input type="text" 
+                                          pattern="\d*"
+                                          class="slds-input" style="width:100px"
+                                              maxlength={obj.Ucf_Extension_Lenght__c}
+                                          value={obj.Ucf_Extension__c}
+                                          oninput={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          onkeypress={validateInputForNumber}
+                                              data-field-name="Ucf_Extension__c" name="inputvalidate" required/>
+                                        
+                                  </td>
+                                  <td data-label="object label">
+                                      
+                                      <template if:true={obj.editMode}>
+                                          <input type="text" maxlength="32" class="slds-input" style="width:100px"  value={obj.Ucf_User_Name__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_User_Name__c" name="inputvalidate" required/>
+                                      </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_User_Name__c}
+                                      </template>
+                                  </td>  
+                                   <td>
+                                        <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_License_Type__c}
+                                          options={licenseOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          selected={obj.Ucf_License_Type__c}
+                                          data-field-name="Ucf_License_Type__c" data-name="validate" required>
+                                      </lightning-combobox>
+                                  </td>    
+                              <td data-label="object label">
+                                        <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Device_Type__c}
+                                          options={deviceOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} 
+                                          selected={obj.Ucf_Device_Type__c}
+                                          data-field-name="Ucf_Device_Type__c" >
+                                      </lightning-combobox>
+
+                                  </td>    
+                                  <td data-label="object label">
+                                       <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Device_Accessories__c}
+                                          options={accessoriesOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} 
+                                          selected={obj.Ucf_Device_Accessories__c}
+                                          data-field-name="Ucf_Device_Accessories__c">
+                                      </lightning-combobox> 
+                                  </td>
+                                  
+                               
+                     <!-- from here  -->
+                           <template if:true={showCallRecording}>
+
+      
+                           </template>  
+                           <template if:false={obj.showOtherCallerId}>
+                                <td colspan="1"></td>
+                            </template>                                
+         
+                          </tr>
+                      
+                          </template>
+                      </tbody>
+                  </table>
+              </template>
+          </template>
+        
+          <template if:true={licenseinfo}>
+              <template if:true={ftrDIDNumberDetailsEmployeeInfo}>
+                  <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                      <thead>
+                          <tr class="slds-line-height_reset">
+                              
+                            <th class="" data-field-name="DIDNumber__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer"> 
+                              <!--<div class="slds-truncate" title="Phone Number">-->Phone Numbers<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                              <th class="" data-field-name="Ucf_Extension__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Current Carrier">-->Extension<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_User_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="Voip Qualifications">-->User Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_License_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->License Type<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Dial_Plan_Information__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Dial Plan Information<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Collaboration__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->Collaboration<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Webinar__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Webinar<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <template if:true={showCallRecording}>
+                          <th class="" data-field-name="Ucf_Call_Recording__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Call Recording<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Audio_Mining__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Audio Mining<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th> 
+                          <th class="" data-field-name="Ucf_Screen_Recording__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Screen Recording<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Storage__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Storage<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                      </template>
+                          </tr>
+                        </thead>
+                       <tbody>
+                          <template for:each={ftrDIDNumberDetailsEmployeeInfo} for:item ='obj'>
+                          <tr class="" key = {obj.key} >
+          
+                                  <td >
+                                      
+                                      <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                  </td>
+                                  <td data-label="object label">
+                                     
+                                   
+                                          <input type="text" 
+                                          pattern="\d*"
+                                          class="slds-input" style="width:100px"
+                                              maxlength={obj.Ucf_Extension_Lenght__c}
+                                          value={obj.Ucf_Extension__c}
+                                          oninput={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          onkeypress={validateInputForNumber}
+                                              data-field-name="Ucf_Extension__c" name="inputvalidate" required/>
+                                        
+                                  </td>
+                                  <td data-label="object label">
+                                      
+                                      <template if:true={obj.editMode}>
+                                          <input type="text" maxlength="32" class="slds-input" style="width:100px"  value={obj.Ucf_User_Name__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_User_Name__c" name="inputvalidate" required/>
+                                      </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_User_Name__c}
+                                      </template>
+                                  </td>  
+                                  <td>
+                                        <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_License_Type__c}
+                                          options={licenseOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          selected={obj.Ucf_License_Type__c}
+                                          data-field-name="Ucf_License_Type__c" data-name="validate" required>
+                                      </lightning-combobox>
+                                  </td>    
+                                  <td>
+                <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Dial_Plan_Information__c}
+                                          options={dailPlanOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Dial_Plan_Information__c}
+                                          data-field-name="Ucf_Dial_Plan_Information__c" >
+                                      </lightning-combobox> 
+                               </td>
+                               <template if:true={obj.showCollabWebinar}>
+                                                   <td>
+                                    <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Collaboration__c}
+                                          options={collabProducts}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Collaboration__c}
+                                          data-field-name="Ucf_Collaboration__c" data-name="validate" required>
+                                      </lightning-combobox> 
+
+                        
+                           </td>    
+                              <td>
+
+                             <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Webinar__c}
+                                          options={webinarProducts}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Webinar__c}
+                                          data-field-name="Ucf_Webinar__c" data-name="validate" required>
+                                      </lightning-combobox> 
+                          </td> 
+                             </template>
+                              <template if:false={obj.showCollabWebinar}>
+                                  <td></td>
+                                  <td></td>
+                              </template>
+                           <template if:true={showCallRecording}>
+                              <td>
+                  
+
+                                  
+                                   <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Call_Recording__c}
+                                          options={comboValues}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Call_Recording__c}
+                                          data-field-name="Ucf_Call_Recording__c" data-name="validate" required>
+                                      </lightning-combobox> 
+                                  
+                          </td>
+                          <template if:true={obj.showAdditionalColumns}>
+
+                              <td>
+                                   <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Audio_Mining__c}
+                                          options={audioMiningOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} 
+                                          selected={obj.Ucf_Audio_Mining__c}
+                                          data-field-name="Ucf_Audio_Mining__c" data-name="validate" required>
+                                      </lightning-combobox> 
+                          </td>
+                              <td>
+                                    <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Screen_Recording__c}
+                                          options={screenRecordingOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Screen_Recording__c}
+                                          data-field-name="Ucf_Screen_Recording__c" data-name="validate" required>
+                                      </lightning-combobox> 
+                          </td>
+
+                         <td>
+                                    <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Storage__c}
+                                          options={storageProductsOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Storage__c}
+                                          data-field-name="Ucf_Storage__c" data-name="validate" required>
+                                      </lightning-combobox>
+                          </td> 
+</template>
+
+<template if:false={obj.showAdditionalColumns}>
+       <td>
+         
+       </td>
+        <td>
+            
+       </td>
+        <td>
+            
+       </td>
+      </template>
+      
+                           </template>
+
+
+                      <!--      <td>
+                              <select class="slds-select" onchange={handleInputChange}  data-record-id={obj.Id}
+                              value={obj.Ucf_Storage__c}>
+                                    <option value=""> Select</option>
+                                  <option value="30">30 Days (free)</option>
+                                  <option value="100">180 Days</option>
+                                  <option value="365">1 Year</option>
+                                  <option value="730">2 Years</option>
+                                  <option value="1095">3 Year</option>
+                              
+                              </select>
+                      </td> -->
+                                  
+                          </tr>
+                      
+                          </template>
+                      </tbody>
+                  </table>
+              </template>
+          </template>
+            
+           <template if:true={nine11info}>
+              <template if:true={ftrDIDNumberDetailsEmployeeInfo}>
+                  <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                      <thead>
+                          <tr class="slds-line-height_reset">
+                             <th class="" data-field-name="DIDNumber__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer"> 
+                              <!--<div class="slds-truncate" title="Phone Number">-->Phone Number<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_User_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Current Carrier">-->User Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Company_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Voip Qualifications">-->Company Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Address_Number__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->Address Number<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Street_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Street Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_City__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->City<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_State__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->State<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Zip_Code__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Zip Code<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Identifying_Location__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="User Admin">-->Identifying Location<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                         
+                          <template if:true={showCallRecording}>
+                       
+                      </template>
+                          </tr>
+                        </thead>
+                       <tbody>
+                          <template for:each={ftrDIDNumberDetailsEmployeeInfo} for:item ='obj'>
+                          <tr class="" key = {obj.key} >
+          
+                                  <td >
+                                      
+                                      <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                  </td>
+                                  <td data-label="object label">
+                                      
+                                      <template if:true={obj.editMode}>
+                                          <input type="text" maxlength="32" class="slds-input" style="width:100px"  value={obj.Ucf_User_Name__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_User_Name__c" name="inputvalidate" required/>
+                                      </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_User_Name__c}
+                                      </template>
+                                  </td>  
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" class="slds-input" style="width:100px"  value={obj.Ucf_Company_Name__c}
+                                       onchange={handleInputChange} data-record-id={obj.Id}
+                                        data-field-name="Ucf_Company_Name__c" name="inputvalidate" required/>
+                                       </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Company_Name__c}
+                                      </template>
+                                  </td>
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" value={obj.Ucf_Address_Number__c} class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Address_Number__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Address_Number__c}
+                                      </template>
+                                  </td>    
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text"  value={obj.Ucf_Street_Name__c} class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Street_Name__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Street_Name__c}
+                                      </template>
+                                  </td>
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" value={obj.Ucf_City__c} class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_City__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_City__c}
+                                      </template> 
+                                      </td>
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text"  value={obj.Ucf_State__c} maxlength="2" class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_State__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_State__c}
+                                      </template>
+                                  </td>    
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" class="slds-input" style="width:100px"   value={obj.Ucf_Zip_Code__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Zip_Code__c" name="inputvalidate" required/>
+                                 </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Zip_Code__c}
+                                      </template>
+                                  </td>
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" class="slds-input class-taxtbox-width" 
+                                      value={obj.Ucf_Identifying_Location__c}  style="width:100px" 
+                                      onchange={handleInputChange} 
+                                      maxlength="20"
+                                      data-record-id={obj.Id} 
+                                      data-field-name="Ucf_Identifying_Location__c" />
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Identifying_Location__c}
+                                      </template>
+                                  </td>
+                     <!-- from here  -->
+                           <template if:true={showCallRecording}>
+
+      
+                           </template>  
+                                                     
+         
+                          </tr>
+                      
+                          </template>
+                      </tbody>
+                  </table>
+              </template>
+          </template>
+          <template if:true={Translation}>
+              <template if:true={ftrDIDNumberDetailsEmployeeInfo}>
+                  <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                      <thead>
+                          <tr class="slds-line-height_reset">
+                              
+                            <th class="" data-field-name="DIDNumber__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer"> 
+                              <!--<div class="slds-truncate" title="Phone Number">-->Phone Number<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Extension__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Current Carrier">-->Extension<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_User_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer" >
+                              <!--<div class="slds-truncate" title="Voip Qualifications">-->User Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                                EAS Pin
+                                <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                              </th>
+                              <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                                    MAC Address
+                                    <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                              </th>
+                            <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->Device Type<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Device_Accessories__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Device Accessories<!--</div>--> 
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                         
+                          <template if:true={showCallRecording}>
+                       
+                      </template>
+                          </tr>
+                        </thead>
+                       <tbody>
+                          <template for:each={ftrDIDNumberDetailsEmployeeInfo} for:item ='obj'>
+                          <tr class="" key = {obj.key} >
+          
+                                  <td >
+                                        
+                                        <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                    </td>
+                                    <td>
+                                    <input type="text" 
+                                          pattern="\d*"
+                                          class="slds-input" style="width:100px"
+                                              maxlength={obj.Ucf_Extension_Lenght__c}
+                                          value={obj.Ucf_Extension__c}
+                                          oninput={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          onkeypress={validateInputForNumber}
+                                              data-field-name="Ucf_Extension__c"/>
+                                        
+                                  </td>
+                                    <td data-label="object label">
+                                        
+                                            <input type="text" 
+                                            pattern="\d*" 
+                                            
+                                            value={obj.Ucf_User_Name__c} 
+                                            onchange={handleInputChange} 
+                                            data-record-id={obj.Id} 
+                                            data-field-name="Ucf_User_Name__c" />
+                                    
+                                    </td>    
+                                    <td data-label="object label">
+                                       
+                                            <input type="text" class="slds-input" 
+                                            value={obj.EAS_Pin__c} onchange={handleInputChange} 
+                                            onkeypress={validateInputForNumber}
+                                             maxlength="6"
+                                            data-record-id={obj.Id} 
+                                            data-field-name="EAS_Pin__c" 
+                                            required />
+                                      
+                                    </td>
+                                    <td>
+              
+                                            <input type="text" 
+                                            class="slds-input" 
+                                            maxlength="16" 
+                                            value={obj.Ucf_MAC_Address__c} 
+                                            onchange={handleInputChange} 
+                                            data-record-id={obj.Id} 
+                                            data-field-name="Ucf_MAC_Address__c"/>
+                                 </td>
+                                  <td data-label="object label">
+                                        <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Device_Type__c}
+                                          options={deviceOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Device_Type__c}
+                                          data-field-name="Ucf_Device_Type__c">
+                                      </lightning-combobox>
+
+                                  </td>    
+                                  <td data-label="object label">
+                                       <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Device_Accessories__c}
+                                          options={accessoriesOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Device_Accessories__c}
+                                          data-field-name="Ucf_Device_Accessories__c">
+                                      </lightning-combobox> 
+                                  </td>
+                                  
+                               
+                     <!-- from here  -->
+                           <template if:true={showCallRecording}>
+
+      
+                           </template>  
+                           <template if:false={obj.showOtherCallerId}>
+                                <td colspan="1"></td>
+                            </template>                                
+         
+                          </tr>
+                      
+                          </template>
+                      </tbody>
+                  </table>
+              </template>
+          </template>
+          <template if:true={isShowReadOnlyTable}>
+            <template if:true={ftrDIDNumberDetailsEmployeeInfo}>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            
+                          <th class="" data-field-name="DIDNumber__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer"> 
+                            <!--<div class="slds-truncate" title="Phone Number">-->Phone Number<!--</div>-->
+                            <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Extension__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                            <!--<div class="slds-truncate" title="Current Carrier">-->Extension<!--</div>-->
+                            <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_User_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer" >
+                            <!--<div class="slds-truncate" title="Voip Qualifications">-->User Name<!--</div>-->
+                            <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              EAS Pin
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                                  MAC Address
+                                  <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                          <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                            <!--<div class="slds-truncate" title="Email">-->Device Type<!--</div>-->
+                            <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Device_Accessories__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                            <!--<div class="slds-truncate" title="User Admin">-->Device Accessories<!--</div>--> 
+                            <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                        </th>
+                       
+                        <template if:true={showCallRecording}>
+                     
+                    </template>
+                        </tr>
+                      </thead>
+                     <tbody>
+                        <template for:each={ftrDIDNumberDetailsEmployeeInfo} for:item ='obj'>
+                        <tr class="" key = {obj.key} >
+        
+                                <td >
+                                      
+                                      <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                  </td>
+                                  <td>
+                                
+                                            <div class="slds-cell-wrap">{obj.Ucf_Extension__c}</div>
+                                      
+                                </td>
+                                  <td data-label="object label">
+                                    <div class="slds-cell-wrap">{obj.Ucf_User_Name__c}</div>
+                                  
+                                  </td>    
+                                  <td data-label="object label">
+                                    <div class="slds-cell-wrap">{obj.EAS_Pin__c}</div>
+                                         
+                                    
+                                  </td>
+                                  <td>
+                                    <div class="slds-cell-wrap">{obj.Ucf_MAC_Address__c}</div>
+                                          
+                               </td>
+                                <td data-label="object label">
+                                    <div class="slds-cell-wrap">{obj.Ucf_Device_Type__c}</div>
+                                     
+
+                                </td>    
+                                <td data-label="object label">
+                                    <div class="slds-cell-wrap">{obj.Ucf_Device_Accessories__c}</div>
+                                      
+                                </td>
+                                
+                             
+                   <!-- from here  -->
+                         <template if:true={showCallRecording}>
+
+    
+                         </template>  
+                         <template if:false={obj.showOtherCallerId}>
+                              <td colspan="1"></td>
+                          </template>                                
+       
+                        </tr>
+                    
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+        </template>
+          <template if:true={fulltable}>
+              <template if:true={ftrDIDNumberDetailsEmployeeInfo}>
+                  <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                      <thead>
+                          <tr class="slds-line-height_reset">
+                              
+                            <th class="" data-field-name="DIDNumber__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer"> 
+                             <!-- <div class="slds-truncate" title="Phone Number">-->Phone Number<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Extension__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Current Carrier">-->Extension<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_User_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Voip Qualifications">-->User Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                          <th class="" data-field-name="Ucf_Company_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Voip Qualifications">-->Company Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Address_Number__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="Email">-->Address Number<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Street_Name__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="User Admin">-->Street Name<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_City__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->City<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_State__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->State<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Zip_Code__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Zip Code<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Identifying_Location__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin"> -->Identifying Location<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                             <th class="" data-field-name="Ucf_Department__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Outbound Caller ID">-->Department<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_User_Admin__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Department">-->User Admin<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                           <th class="" data-field-name="Ucf_Email__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Email<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Outbound_Caller_ID__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Outbound Caller ID">-->Outbound Caller ID<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Other_Outbound_Caller_ID__c" scope="col" style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Outbound Caller ID">-->Other Outbound Caller ID<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_License_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->License Type<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Device_Type__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="Email">-->Device Type<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Device_Accessories__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Device Accessories<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                            <th class="" data-field-name="Ucf_Dial_Plan_Information__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Dial Plan Information<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Collaboration__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="Email">-->Collaboration<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                            </th>
+                            <th class="" data-field-name="Ucf_Webinar__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Webinar<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <template if:true={showCallRecording}>
+                          <th class="" data-field-name="Ucf_Call_Recording__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Call Recording<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Audio_Mining__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Audio Mining<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Screen_Recording__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                              <!--<div class="slds-truncate" title="User Admin">-->Screen Recording<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                          <th class="" data-field-name="Ucf_Storage__c" scope="col" onclick={sortEmployeeInfo} style="cursor: pointer">
+                             <!-- <div class="slds-truncate" title="User Admin">-->Storage<!--</div>-->
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                          </th>
+                      </template>
+                          </tr>
+                        </thead>
+                       <tbody>
+                        <template for:each={ftrDIDNumberDetailsEmployeeInfo} for:item ='obj'>
+                          <tr class="" key = {obj.key} >
+          
+                                  <td >
+                                      
+                                      <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                  </td>
+                                  <td data-label="object label">
+                                         
+                                      
+                                          <input type="text" 
+                                          pattern="\d*"
+                                          class="slds-input" 
+                                              maxlength={obj.Ucf_Extension_Lenght__c}
+                                          value={obj.Ucf_Extension__c} style="width:80px"
+                                          oninput={handleInputChange}
+                                          data-record-id={obj.Id} onkeypress={validateInputForNumber}
+                                              data-field-name="Ucf_Extension__c"/>
+                                    </td>
+                                  <td data-label="object label">
+                                      
+                                      <template if:true={obj.editMode}>
+                                          <input type="text" maxlength="32" class="slds-input"  style="width:100px" value={obj.Ucf_User_Name__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_User_Name__c" />
+                                      </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_User_Name__c}
+                                      </template>
+                                  </td>  
+                                   <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" class="slds-input" style="width:100px"  value={obj.Ucf_Company_Name__c}
+                                       onchange={handleInputChange} data-record-id={obj.Id}
+                                        data-field-name="Ucf_Company_Name__c" name="inputvalidate" required/>
+                                       </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Company_Name__c}
+                                      </template>
+                                  </td>
+                                   <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" value={obj.Ucf_Address_Number__c} class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Address_Number__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Address_Number__c}
+                                      </template>
+                                  </td>       
+                                    <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text"  value={obj.Ucf_Street_Name__c} class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Street_Name__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Street_Name__c}
+                                      </template>
+                                  </td>
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" value={obj.Ucf_City__c} class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_City__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_City__c}
+                                      </template> 
+                                      </td>
+                                    <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text"  value={obj.Ucf_State__c} maxlength="2" class="slds-input" style="width:100px"  onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_State__c" name="inputvalidate" required/>
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_State__c}
+                                      </template>
+                                  </td>  
+								     
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" class="slds-input" style="width:100px"   value={obj.Ucf_Zip_Code__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Zip_Code__c" name="inputvalidate" required/>
+                                 </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Zip_Code__c}
+                                      </template>
+                                  </td>
+                                  <td data-label="object label">
+                                      <template if:true={obj.editMode}>
+                                      <input type="text" class="slds-input class-taxtbox-width" 
+                                      value={obj.Ucf_Identifying_Location__c}  style="width:100px" 
+                                      onchange={handleInputChange} 
+                                      maxlength="20"
+                                      data-record-id={obj.Id} 
+                                      data-field-name="Ucf_Identifying_Location__c" />
+                                  </template>
+                                      <template if:false={obj.editMode}>
+                                          {obj.Ucf_Identifying_Location__c}
+                                      </template>
+                                  </td>
+                                <td data-label="object label" value={obj.Ucf_Department__c}>
+                                <input type="text" class="slds-input" style="width:100px" 
+                                    value={obj.Ucf_Department__c} onchange={handleInputChange} 
+                                    data-record-id={obj.Id} data-field-name="Ucf_Department__c" /> 
+                            </td>  
+                                  <td>
+            
+
+                                      
+                                      <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_User_Admin__c}
+                                          options={options}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          selected={obj.Ucf_User_Admin__c}
+                                          data-field-name="Ucf_User_Admin__c">
+                                      </lightning-combobox>
+            
+                               </td>
+                                  <td data-label="object label">
+                                <template if:true={obj.editMode}> 
+                                    <input type="text" class="slds-input"  style="width:100px"  value={obj.Ucf_Email__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Email__c" />
+                                </template>
+                                <template if:false={obj.editMode}>
+                                    {obj.Ucf_Email__c}
+                                </template>
+                            </td>   
+                                  
+                                  <td>
+
+
+                                <lightning-combobox  variant="label-hidden"
+                                name={obj.mdnPicklistId} label="Select MDN"
+                                                    options={obj.mdnPicklistOptions}
+                                                        value={obj.Outbound_Caller_ID__c} onchange={handleInputChange} 
+                                                        data-record-id={obj.Id}   selected={obj.Outbound_Caller_ID__c}
+                                                        data-field-name="Outbound_Caller_ID__c">
+                                </lightning-combobox>
+
+            
+                                      
+                               </td>
+                                
+                               <td>
+                                <template if:true={obj.showOtherCallerId}>
+                                     <input type="text" maxlength="10" minlength="10" class="slds-input"  style="width:100px"  
+                                     value={obj.Ucf_Other_Outbound_Caller_ID__c}  onkeypress={validateInputForNumber}
+                                      onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Other_Outbound_Caller_ID__c" />
+                                </template>    
+                                </td>
+                                 
+                                   <td data-label="object label">
+                                        <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_License_Type__c}
+                                          options={licenseOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id}
+                                          selected={obj.Ucf_License_Type__c}
+                                          data-field-name="Ucf_License_Type__c" data-name="validate" required>
+                                      </lightning-combobox>
+                                  </td>    
+                                  <td data-label="object label">
+                                      <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Device_Type__c}
+                                          options={deviceOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Device_Type__c}
+                                          data-field-name="Ucf_Device_Type__c">
+                                      </lightning-combobox>
+                                  </td>    
+                                  <td data-label="object label">
+                                     <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Device_Accessories__c}
+                                          options={accessoriesOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Device_Accessories__c}
+                                          data-field-name="Ucf_Device_Accessories__c">
+                                      </lightning-combobox> 
+                                  </td>
+                                  <td>
+                                      <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Dial_Plan_Information__c}
+                                          options={dailPlanOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Dial_Plan_Information__c}
+                                          data-field-name="Ucf_Dial_Plan_Information__c">
+                                      </lightning-combobox> 
+            
+                                    
+                               </td>
+                                <template if:true={obj.showCollabWebinar}>
+                                 <td>
+     
+                                     <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Collaboration__c}
+                                          options={collabProducts}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Collaboration__c}
+                                          data-field-name="Ucf_Collaboration__c">
+                                      </lightning-combobox> 
+                        
+                           </td> 
+                           
+                              <td>
+                <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Webinar__c}
+                                          options={webinarProducts}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Webinar__c}
+                                          data-field-name="Ucf_Webinar__c">
+                                      </lightning-combobox> 
+                          </td> 
+                            </template>
+                              <template if:false={obj.showCollabWebinar}>
+                                  <td> </td>
+                                  
+                                  <td>  </td>
+
+                              </template>
+                         <template if:true={showCallRecording}>
+                              <td> 
+
+
+                                   <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Call_Recording__c}
+                                          options={comboValues}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Call_Recording__c}
+                                          data-field-name="Ucf_Call_Recording__c">
+                                      </lightning-combobox> 
+                          </td> 
+                          <template if:true={obj.showAdditionalColumns}>
+                              <td>
+                                   <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Audio_Mining__c}
+                                          options={audioMiningOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Audio_Mining__c}
+                                          data-field-name="Ucf_Audio_Mining__c">
+                                      </lightning-combobox> 
+                          </td>
+                              <td>
+                                    <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Screen_Recording__c}
+                                          options={screenRecordingOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Screen_Recording__c}
+                                          data-field-name="Ucf_Screen_Recording__c">
+                                      </lightning-combobox> 
+                          </td>
+                        
+
+                                                   <td>
+                                    <lightning-combobox
+                                       variant="label-hidden"
+                                          value={obj.Ucf_Storage__c}
+                                          options={storageProductsOptions}
+                                          onchange={handleInputChange}
+                                          data-record-id={obj.Id} selected={obj.Ucf_Storage__c}
+                                          data-field-name="Ucf_Storage__c">
+                                      </lightning-combobox>
+                          </td> 
+</template>
+<template if:false={obj.showAdditionalColumns}>
+    <td></td>
+     <td></td>
+      <td></td>
+</template>
+                       </template> 
+
+                          </tr>
+                      
+                          </template>
+                      </tbody>
+                  </table>
+              </template>
+          </template>
+          </div>
+      
+<br><br>
+<!-- <template if:false={isOrderInProgressOrCompleted}> -->
+    <template if:false={isnetworktranslation}>
+        <div class="slds-align_absolute-center">
+            <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    <!-- </template> -->
+</template>
+  </div>
+  
+</template>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_risks_competitor_offer</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( Nature_of_the_Risk__c , &quot;Competitor Offer&quot;),
+OR(
+
+ISBLANK(  Competitor_s_Name__c ),
+ISBLANK(  Description_of_Offer__c )))</errorConditionFormula>
+    <errorMessage>Competitor&apos;s Name and Description of Offer fields are required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,1180 @@
+{
+    "%vlocity_namespace%__ApprovedBy__c": "",
+    "%vlocity_namespace%__ApprovedOn__c": "",
+    "%vlocity_namespace%__AttributeAssignment__c": "SIP-Trunking_AttributeAssignments.json",
+    "%vlocity_namespace%__AttributeDefaultValues__c": {
+        "ATTR_CCS": null,
+        "ATTR_CONTRACT_TERM": null,
+        "ATTR_CPE_MF_NAME": null,
+        "ATTR_CPE_MODEL": null,
+        "ATTR_CPE_SOFT_REL": null,
+        "ATTR_CoS": null,
+        "ATTR_DIA_BUNDLE_SPEED": "NA",
+        "ATTR_FTR_ETHERNET_REQUIRED": "No",
+        "ATTR_IS_DISCOUNT": "No",
+        "ATTR_NPA_NXX": null,
+        "ATTR_PBX_HAND_OFF": null,
+        "ATTR_ROUTER_WAIVED": "No",
+        "ATTR_SERV_ACCT": null,
+        "ATTR_VLAN_TAG": null,
+        "Class of Service": null,
+        "endUserLocationName": null
+    },
+    "%vlocity_namespace%__AttributeMetadata__c": {
+        "messages": [
+        ],
+        "records": [
+            {
+                "Code__c": "FTR_ENT_PRI_ATTCAT",
+                "Name": "Pricing Attributes",
+                "displaySequence": 10,
+                "id": "a7a7b0000004kmlAAA",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b7b0000005kiPAAQ",
+                            "cloneable": true,
+                            "code": "ATTR_CCS",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Concurrent Call Session",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "69873f91-162b-45d2-4cd3-043b9ae33cfb",
+                                    "label": "8-16",
+                                    "readonly": false,
+                                    "value": "8-16"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "2a50a393-389f-b7a4-88c1-6ccdf2994f38",
+                                    "label": "17-22",
+                                    "readonly": false,
+                                    "value": "17-22"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "7f269dfe-cfb5-0a2d-f59c-8ad992463d42",
+                                    "label": "23-46",
+                                    "readonly": false,
+                                    "value": "23-46"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "2b055636-f9b8-fc24-b236-497441ee7e7c",
+                                    "label": "47-70",
+                                    "readonly": false,
+                                    "value": "47-70"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 50,
+                                    "id": "8eb42b3d-aedd-122f-b011-1514fe5214ce",
+                                    "label": "71-100",
+                                    "readonly": false,
+                                    "value": "71-100"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 60,
+                                    "id": "e548cb5c-bad2-daa2-db78-ff2bfe13bb37",
+                                    "label": "101-200",
+                                    "readonly": false,
+                                    "value": "101-200"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 70,
+                                    "id": "93e7d225-11b3-f3b8-f0c4-0ae62ddb0ad8",
+                                    "label": "201-400",
+                                    "readonly": false,
+                                    "value": "201-400"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 80,
+                                    "id": "2af9d15f-6c72-e42d-399b-d7db29eff10f",
+                                    "label": "401-1000",
+                                    "readonly": false,
+                                    "value": "401-1000"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 90,
+                                    "id": "4d21731d-f076-0b3a-89ce-11b21611f6fe",
+                                    "label": "1001-2000",
+                                    "readonly": false,
+                                    "value": "1001-2000"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 100,
+                                    "id": "3776d4d6-2d58-2e91-2208-b717a374eb0a",
+                                    "label": "2001-3000",
+                                    "readonly": false,
+                                    "value": "2001-3000"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 110,
+                                    "id": "9990185b-ef04-4ac9-9a8d-01d27d52f359",
+                                    "label": "3001-5000",
+                                    "readonly": false,
+                                    "value": "3001-5000"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kigAAA",
+                            "cloneable": true,
+                            "code": "ATTR_IS_DISCOUNT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Is Discount Flag",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "d830fdde-6767-bf12-ce2f-faad54710321",
+                                    "label": "Yes",
+                                    "readonly": false,
+                                    "value": "Yes"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "d6f9f1aa-d102-5be3-e907-5aff00b2b92a",
+                                    "label": "No",
+                                    "readonly": false,
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kiYAAQ",
+                            "cloneable": true,
+                            "code": "ATTR_FTR_ETHERNET_REQUIRED",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "FTR Ethernet Required",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "d830fdde-6767-bf12-ce2f-faad54710321",
+                                    "label": "Yes",
+                                    "readonly": false,
+                                    "value": "Yes"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "d6f9f1aa-d102-5be3-e907-5aff00b2b92a",
+                                    "label": "No",
+                                    "readonly": false,
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kipAAA",
+                            "cloneable": true,
+                            "code": "ATTR_PBX_HAND_OFF",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 2,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "PBX Hand Off",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "9f5090a3-a162-0815-9990-8a7dc54d0d5d",
+                                    "label": "SIP",
+                                    "readonly": false,
+                                    "value": "SIP"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "a45b492f-586f-0870-ccf7-b849f7709701",
+                                    "label": "PRI",
+                                    "readonly": false,
+                                    "value": "PRI"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "97335c24-b741-a53b-0303-598a61e2a4bd",
+                                    "label": "Analog",
+                                    "readonly": false,
+                                    "value": "Analog"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kiVAAQ",
+                            "cloneable": true,
+                            "code": "ATTR_DIA_BUNDLE_SPEED",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DIA Bundle Speed",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 1,
+                                    "id": "b0966bd9-fd8a-64e8-c734-491d83f778f4",
+                                    "label": "NA",
+                                    "readonly": false,
+                                    "value": "NA"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 5,
+                                    "id": "4aba2306-23a9-9d57-df5e-6845e3943828",
+                                    "label": "5 Mbps",
+                                    "readonly": false,
+                                    "value": "5 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "1a208fd2-ccf1-e3ad-2f16-3009f90cb522",
+                                    "label": "10 Mbps",
+                                    "readonly": false,
+                                    "value": "10 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "8b45b7bf-7984-df2e-7378-108ef35bc8a5",
+                                    "label": "20 Mbps",
+                                    "readonly": false,
+                                    "value": "20 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 23,
+                                    "id": "8e3195a8-38f9-7b18-d78b-87ef50d43f48",
+                                    "label": "30 Mbps",
+                                    "readonly": false,
+                                    "value": "30 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 26,
+                                    "id": "8628d5bb-244e-41e2-db08-85d3cb246e8f",
+                                    "label": "40 Mbps",
+                                    "readonly": false,
+                                    "value": "40 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "f7bc4c42-ca8b-bd24-832f-a4a106b8173b",
+                                    "label": "50 Mbps",
+                                    "readonly": false,
+                                    "value": "50 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "ed22cdc9-eb1e-cd69-15a9-f5669740afb5",
+                                    "label": "100 Mbps",
+                                    "readonly": false,
+                                    "value": "100 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 50,
+                                    "id": "3c2416ab-8c99-5331-c40b-ba36ca84bf72",
+                                    "label": "200 Mbps",
+                                    "readonly": false,
+                                    "value": "200 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 60,
+                                    "id": "c096a1f5-cbdc-5e41-1bde-6bf9a4aedee9",
+                                    "label": "300 Mbps",
+                                    "readonly": false,
+                                    "value": "300 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 70,
+                                    "id": "fdebc972-b9ec-e456-1d6e-5d03c284ca67",
+                                    "label": "400 Mbps",
+                                    "readonly": false,
+                                    "value": "400 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 80,
+                                    "id": "5b421e64-e57e-6aa5-fc1a-55c926e9e3dc",
+                                    "label": "500 Mbps",
+                                    "readonly": false,
+                                    "value": "500 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 90,
+                                    "id": "f2af83f9-ab01-4700-0fe5-b02afe290f69",
+                                    "label": "600 Mbps",
+                                    "readonly": false,
+                                    "value": "600 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 100,
+                                    "id": "0501fb70-8e20-540d-d4d5-2330d003a939",
+                                    "label": "700 Mbps",
+                                    "readonly": false,
+                                    "value": "700 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 110,
+                                    "id": "e049798b-2162-1f86-1bdc-508c3e58a89d",
+                                    "label": "800 Mbps",
+                                    "readonly": false,
+                                    "value": "800 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 120,
+                                    "id": "9e713b50-7ac2-2053-0aad-eeb42c9db47f",
+                                    "label": "900 Mbps",
+                                    "readonly": false,
+                                    "value": "900 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 130,
+                                    "id": "3aa261dc-29ca-d36d-2a72-5e253b8937f3",
+                                    "label": "1 Gbps",
+                                    "readonly": false,
+                                    "value": "1 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 140,
+                                    "id": "092b8106-a0bd-1ba4-8844-b8b5cbc0d9c4",
+                                    "label": "2 Gbps",
+                                    "readonly": false,
+                                    "value": "2 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 170,
+                                    "id": "ecd9008f-9dd8-2415-6574-a52930dc128f",
+                                    "label": "5 Gbps",
+                                    "readonly": false,
+                                    "value": "5 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 180,
+                                    "id": "e2fd022e-25c7-1ca8-2a6a-d1a9aa9265cf",
+                                    "label": "10 Gbps",
+                                    "readonly": false,
+                                    "value": "10 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 190,
+                                    "id": "291b37ee-8820-e618-82d7-395058e277b4",
+                                    "label": "25 Gbps",
+                                    "readonly": false,
+                                    "value": "25 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 200,
+                                    "id": "a3798b89-c507-1de0-868e-ba8e65de36b9",
+                                    "label": "50 Gbps",
+                                    "readonly": false,
+                                    "value": "50 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 210,
+                                    "id": "89374c32-f0b1-3dce-4e51-e49728896d29",
+                                    "label": "100 Gbps",
+                                    "readonly": false,
+                                    "value": "100 Gbps"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kiQAAQ",
+                            "cloneable": true,
+                            "code": "ATTR_CONTRACT_TERM",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Term",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                                    "label": "12 Months",
+                                    "readonly": false,
+                                    "value": "12 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                                    "label": "24 Months",
+                                    "readonly": false,
+                                    "value": "24 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                                    "label": "36 Months",
+                                    "readonly": false,
+                                    "value": "36 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                                    "label": "60 Months",
+                                    "readonly": false,
+                                    "value": "60 Months"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kiSAAQ",
+                            "cloneable": true,
+                            "code": "ATTR_CoS",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Class of Service",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "4bd906e9-f059-2a1a-c588-ad08beb5d1e1",
+                                    "label": "Silver",
+                                    "readonly": false,
+                                    "value": "Silver"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "da9c5b03-49f5-5d55-b41c-b068aa1f2031",
+                                    "label": "Gold",
+                                    "readonly": false,
+                                    "value": "Gold"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "f8d5b838-0867-537e-83a0-a7b710916357",
+                                    "label": "Platinum",
+                                    "readonly": false,
+                                    "value": "Platinum"
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 7
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_TECH_ATTCAT",
+                "Name": "Technical Attributes",
+                "displaySequence": 20,
+                "id": "a7a7b0000004kmgAAA",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b7b0000005khlAAA",
+                            "cloneable": true,
+                            "code": "ATTR_CPE_SOFT_REL",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "CPE/PBX Software Release",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005khjAAA",
+                            "cloneable": true,
+                            "code": "ATTR_CPE_MF_NAME",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "CPE/PBX Manufacturer Name",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005khkAAA",
+                            "cloneable": true,
+                            "code": "ATTR_CPE_MODEL",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "CPE/PBX Model",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kjWAAQ",
+                            "cloneable": true,
+                            "code": "ATTR_ROUTER_WAIVED",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Router Waived",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "d830fdde-6767-bf12-ce2f-faad54710321",
+                                    "label": "Yes",
+                                    "readonly": false,
+                                    "value": "Yes"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "d6f9f1aa-d102-5be3-e907-5aff00b2b92a",
+                                    "label": "No",
+                                    "readonly": false,
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kkKAAQ",
+                            "cloneable": true,
+                            "code": "endUserLocationName",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "PSR_End User Location Name",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kk0AAA",
+                            "cloneable": true,
+                            "code": "ATTR_VLAN_TAG",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 40,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "VLAN Tag Config",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "5617aa92-ef1f-e9eb-48b0-7d2b53a8afab",
+                                    "label": "Service Multiplexing",
+                                    "readonly": false,
+                                    "value": "Service Multiplexing"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "ac6ee353-a706-bf12-b0f4-05e771f656c2",
+                                    "label": "All-to-one Bundling",
+                                    "readonly": false,
+                                    "value": "All-to-one Bundling"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "eb86808f-1b45-623b-b7f2-a266b16db51d",
+                                    "label": "Untagged",
+                                    "readonly": false,
+                                    "value": "Untagged"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b7b0000005kjkAAA",
+                            "cloneable": true,
+                            "code": "ATTR_SERV_ACCT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1060,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Service Account",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 7
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_USERDATA_ATTCAT",
+                "Name": "UserData Attributes",
+                "displaySequence": 70,
+                "id": "a7a7b0000004kmZAAQ",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b7b0000005kgjAAA",
+                            "cloneable": true,
+                            "code": "ATTR_NPA_NXX",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 510,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "NPA NXX",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_CUSTOM_ATTRIBUTES_ATTCAT",
+                "Name": "Custom Attributes",
+                "displaySequence": 60,
+                "id": "a7a7b0000004kmbAAA",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b7b0000005kh3AAA",
+                            "cloneable": true,
+                            "code": "Class of Service",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 150,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "PSR_Class of Service",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "4bd906e9-f059-2a1a-c588-ad08beb5d1e1",
+                                    "label": "Silver",
+                                    "readonly": false,
+                                    "value": "Silver"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "da9c5b03-49f5-5d55-b41c-b068aa1f2031",
+                                    "label": "Gold",
+                                    "readonly": false,
+                                    "value": "Gold"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "f8d5b838-0867-537e-83a0-a7b710916357",
+                                    "label": "Platinum",
+                                    "readonly": false,
+                                    "value": "Platinum"
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            }
+        ],
+        "totalSize": 4
+    },
+    "%vlocity_namespace%__AttributeRules__c": "{}",
+    "%vlocity_namespace%__AttributesMarkupConfig__c": "",
+    "%vlocity_namespace%__CategoryData__c": "",
+    "%vlocity_namespace%__ChangeDetectorImplementation__c": "",
+    "%vlocity_namespace%__ClassId__c": "",
+    "%vlocity_namespace%__CompiledAttributeOverride__c": "SIP-Trunking_CompiledAttributeOverrides.json",
+    "%vlocity_namespace%__DecompositionRelationship__c": "SIP-Trunking_DecompositionRelationships.json",
+    "%vlocity_namespace%__DefaultImageId__c": "",
+    "%vlocity_namespace%__EffectiveDate__c": "",
+    "%vlocity_namespace%__EndDate__c": "",
+    "%vlocity_namespace%__EndOfLifeDate__c": "",
+    "%vlocity_namespace%__FulfilmentStartDate__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "f9da327e-cba5-08f1-35c2-9fb0e5b3e151",
+    "%vlocity_namespace%__GlobalKey__c": "f4357fda-a197-8a37-1914-6ed0727c27bf",
+    "%vlocity_namespace%__HeaderData__c": "",
+    "%vlocity_namespace%__HelpText__c": "",
+    "%vlocity_namespace%__IsConfigurable__c": true,
+    "%vlocity_namespace%__IsCustomerSubscription__c": false,
+    "%vlocity_namespace%__IsLocationDependent__c": false,
+    "%vlocity_namespace%__IsNotAssetizable__c": false,
+    "%vlocity_namespace%__IsOrderable__c": true,
+    "%vlocity_namespace%__JeopardySafetyIntervalUnit__c": "Seconds",
+    "%vlocity_namespace%__JeopardySafetyInterval__c": "",
+    "%vlocity_namespace%__LifecycleStatus__c": "",
+    "%vlocity_namespace%__MainFeatureQuantityUom__c": "",
+    "%vlocity_namespace%__MainFeatureQuantity__c": "",
+    "%vlocity_namespace%__MainFeatureTermInDays__c": "",
+    "%vlocity_namespace%__Modification__c": "",
+    "%vlocity_namespace%__ObjectFieldAttribute__c": "SIP-Trunking_ObjectFieldAttributes.json",
+    "%vlocity_namespace%__ObjectTypeId__c": {
+        "%vlocity_namespace%__GlobalKey__c": "019be4d8384098d0d48276b5898efdc8",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/019be4d8384098d0d48276b5898efdc8",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
+    },
+    "%vlocity_namespace%__ObjectTypeName__c": "SIP Product Specification",
+    "%vlocity_namespace%__OrchestrationScenario__c": "SIP-Trunking_OrchestrationScenarios.json",
+    "%vlocity_namespace%__ParentClassId__c": "",
+    "%vlocity_namespace%__PriceListEntry__c": "SIP-Trunking_PriceListEntries.json",
+    "%vlocity_namespace%__ProductChildItem__c": "SIP-Trunking_ProductChildItems.json",
+    "%vlocity_namespace%__ProductRelationship__c": "SIP-Trunking_ProductRelationships.json",
+    "%vlocity_namespace%__ProductSpecId__c": "",
+    "%vlocity_namespace%__ProductTemplateProductId__c": "",
+    "%vlocity_namespace%__Scope__c": "Order Item",
+    "%vlocity_namespace%__SellingEndDate__c": "",
+    "%vlocity_namespace%__SellingStartDate__c": "",
+    "%vlocity_namespace%__SpecificationSubType__c": "",
+    "%vlocity_namespace%__SpecificationType__c": "Offer",
+    "%vlocity_namespace%__StandardPremium__c": "",
+    "%vlocity_namespace%__Status__c": "Active",
+    "%vlocity_namespace%__SubType__c": "None",
+    "%vlocity_namespace%__TimeToLive__c": "",
+    "%vlocity_namespace%__TrackAsAgreement__c": false,
+    "%vlocity_namespace%__Type__c": "None",
+    "%vlocity_namespace%__VendorAccountId__c": "",
+    "%vlocity_namespace%__VersionEndDateTime__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionStartDateTime__c": "",
+    "Accessories1__c": false,
+    "Accessories__c": true,
+    "BroadbandIpOption13Ips__c": false,
+    "BroadbandIpOption5Ips__c": false,
+    "BroadbandIpOptionEach__c": false,
+    "CanUseQuantitySchedule": true,
+    "CanUseRevenueSchedule": true,
+    "Child__c": false,
+    "Description": "",
+    "DisplayUrl": "",
+    "Equipment__c": false,
+    "ExternalDataSourceId": "",
+    "ExternalId": "",
+    "FSecure_Distribution__c": 0,
+    "Family": "SIP",
+    "Grandfathered_Product__c": "",
+    "IpPhoneRule1__c": false,
+    "IpPhoneRule2__c": false,
+    "IpPhone__c": false,
+    "IsActive": true,
+    "IsArchived": false,
+    "Is_LegacyVlocityProduct__c": false,
+    "Item_Code__c": "",
+    "Item_Rate__c": "",
+    "Item_Type__c": "",
+    "License_Order__c": "",
+    "Maintenance_Universal__c": false,
+    "MajorProduct__c": false,
+    "Name": "SIP Trunking",
+    "NoICB__c": false,
+    "NumberOfQuantityInstallments": "",
+    "NumberOfRevenueInstallments": "",
+    "POE_Switch_Rule__c": false,
+    "POE__c": false,
+    "Parent_Child__c": false,
+    "Parent__c": false,
+    "Part_Number_of_Product__c": "",
+    "Part__c": "",
+    "PoE_provided_by_Frontier__c": "",
+    "PoE_provided_by_customer__c": "",
+    "PowerPhone_provided_by_Frontier__c": "",
+    "PremiumPlusRule__c": false,
+    "PremiumRule__c": false,
+    "PricebookEntry": "SIP-Trunking_PricebookEntries.json",
+    "ProductCode": "SIP_TRUNKING_0010",
+    "Product_Name_80_Char__c": "SIP Trunking",
+    "Product_Part_Number__c": "",
+    "Product_Subcategory__c": "",
+    "Product_Type__c": "",
+    "QuantityInstallmentPeriod": "",
+    "QuantityScheduleType": "",
+    "QuantityUnitOfMeasure": "",
+    "Quantity__c": "",
+    "RPT_PrimaryCategory__c": "",
+    "RPT_ProductType__c": "Salesforce",
+    "RPT_SecondaryCategory__c": "",
+    "RecordTypeId": {
+        "DeveloperName": "Product",
+        "SobjectType": "Product2",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "RecordType/Product2/Product",
+        "VlocityRecordSObjectType": "RecordType"
+    },
+    "RevenueInstallmentPeriod": "",
+    "RevenueScheduleType": "",
+    "SKU__c": "",
+    "ST_CategoryID__c": "",
+    "ST_CategoryPath__c": "",
+    "ST_ConfigurationModelName__c": "",
+    "ST_Description__c": "",
+    "ST_DisplayItemDescription__c": "",
+    "ST_ExtnCrmProductType__c": "",
+    "ST_IsConfigurable__c": "",
+    "ST_ShortDescription__c": "",
+    "S_E_LOOP__c": "",
+    "S_E_PORT__c": "",
+    "Service__c": false,
+    "SetUp_Order__c": "",
+    "Setup__c": false,
+    "Show_in_PDF__c": false,
+    "SiebelRowID__c": "",
+    "SmartVoice_Broadband_115__c": false,
+    "SmartVoice_Broadband_12__c": false,
+    "SmartVoice_Broadband_18__c": false,
+    "SmartVoice_Broadband_25__c": false,
+    "SmartVoice_Broadband_35__c": false,
+    "SmartVoice_Broadband_45__c": false,
+    "SmartVoice_Broadband_70__c": false,
+    "SmartVoice_Broadband_90__c": false,
+    "SmartVoice_FiOS_100_100_Broadband__c": false,
+    "SmartVoice_FiOS_1G_1G_Broadband__c": false,
+    "SmartVoice_FiOS_500_500_Broadband__c": false,
+    "SmartVoice_Fiber_100_100_Broadband__c": false,
+    "SmartVoice_Fiber_1G_1G_Broadband__c": false,
+    "SmartVoice_Fiber_500_500_Broadband__c": false,
+    "StandardPricebookEntry": [
+        {
+            "%vlocity_namespace%__FloorPrice__c": "",
+            "%vlocity_namespace%__OverageCharge__c": "",
+            "%vlocity_namespace%__OverageUOM__c": "",
+            "%vlocity_namespace%__RecurringPrice__c": 0,
+            "%vlocity_namespace%__RecurringUOM__c": "Monthly",
+            "DISCOUNT_Price__c": "",
+            "GPM__c": "",
+            "IsActive": true,
+            "IsArchived": false,
+            "NRC_Unit_Price__c": "",
+            "Name": "SIP Trunking",
+            "Pricebook2.Name": "Standard Price Book",
+            "Pricebook2Id": {
+                "Name": "Standard Price Book",
+                "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+                "VlocityLookupRecordSourceKey": "Pricebook2/Standard Price Book",
+                "VlocityRecordSObjectType": "Pricebook2"
+            },
+            "Product2.%vlocity_namespace%__GlobalKey__c": "f4357fda-a197-8a37-1914-6ed0727c27bf",
+            "Product2Id": {
+                "%vlocity_namespace%__GlobalKey__c": "f4357fda-a197-8a37-1914-6ed0727c27bf",
+                "VlocityDataPackType": "VlocityMatchingKeyObject",
+                "VlocityMatchingRecordSourceKey": "Product2/f4357fda-a197-8a37-1914-6ed0727c27bf",
+                "VlocityRecordSObjectType": "Product2"
+            },
+            "ProductCode": "SIP_TRUNKING_0010",
+            "Type_of_Billing__c": "",
+            "UNITCOST__c": "",
+            "UnitPrice": 0,
+            "UseStandardPrice": false,
+            "VENDORPRICELISTTOFTR__c": "",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "PricebookEntry",
+            "VlocityRecordSourceKey": "PricebookEntry/Pricebook2/Standard Price Book/Product2/f4357fda-a197-8a37-1914-6ed0727c27bf",
+            "multiply__c": ""
+        }
+    ],
+    "StockKeepingUnit": "",
+    "Strategic_Alignment__c": "Strategic",
+    "Term1yr__c": "",
+    "Term2yr__c": "",
+    "Term__c": "",
+    "TollFreeRule__c": false,
+    "Type_of_Billing__c": "",
+    "UnitPrice__c": "",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "Product2",
+    "VlocityRecordSourceKey": "Product2/f4357fda-a197-8a37-1914-6ed0727c27bf",
+    "Year__c": "",
+    "aService__c": false,
+    "ftr_IsComboOrderEnabled__c": false,
+    "ftr_ProductDisplaySequence__c": "",
+    "isATArule__c": false,
+    "isAdditionalDID__c": false,
+    "isAdditionalDirectory__c": false,
+    "isAdditionalManaged__c": false,
+    "isAnalogRule__c": false,
+    "isBusinessAnalytic__c": false,
+    "isCallerId__c": false,
+    "isConferenceRumSeatRule__c": false,
+    "isDPIEnabled__c": false,
+    "isE911__c": false,
+    "isElite__c": false,
+    "isEssential__c": false,
+    "isExtendedMarket__c": false,
+    "isIpSoundStationRule__c": false,
+    "isNETGEAR__c": false,
+    "isOutbound__c": false,
+    "isPolycomATA__c": false,
+    "isPremier__c": false,
+    "isSmartAdditionalDID__c": false,
+    "isSmartAdditionalManagedAutoAttendant__c": false,
+    "isSmartDirectoryListing__c": false,
+    "isSmartE911__c": false,
+    "isSmartExtendedNum__c": false,
+    "isSmartIpPhoneRule__c": false,
+    "isSmartMonthlyAdminCharge__c": false,
+    "isSmartMultiLineHunt__c": false,
+    "isSmartPremiumAttendant__c": false,
+    "isSmartTollFreeDomesticUS__c": false,
+    "isSmartTollFreeDomestic__c": false,
+    "isSmartTollFreeNum__c": false,
+    "isSoundStationIp5000__c": false,
+    "isSoundStationIp6000__c": false,
+    "isSoundStationIp7000__c": false,
+    "isTechInstallFeeBHSI__c": false,
+    "isTechInstallFeeFIOS__c": false,
+    "isTechInstallFeeFiber__c": false,
+    "isTollFreeNum__c": false,
+    "isVVX311__c": false,
+    "isVVX501__c": false,
+    "isVVX601__c": false,
+    "isWebFax__c": false,
+    "is_show_on_ux__c": false,
+    "multiply__c": false
+}

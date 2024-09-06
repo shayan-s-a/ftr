@@ -1,0 +1,74 @@
+<aura:component controller="FTRWSMultipleFileUploader" >
+    <aura:attribute name="oppId" type="Id" />
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+    <aura:attribute name="data" type="FTRWSAddress__c[]"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="showTable" type="Boolean" default="False"/>
+    <aura:attribute name="hideTable" type="Boolean" default="False"/>
+    <aura:attribute name="addressId" type="ID"/>
+    <aura:attribute name="streetNo" type="String"/>
+    <aura:attribute name="streetName" type="String"/>
+    <aura:attribute name="city" type="String"/>
+    <aura:attribute name="state" type="String"/>    
+    <aura:attribute name="zip" type="String"/>
+    <aura:attribute name="PNUM" type="String"/>
+    <aura:attribute name="Product" type="String"/>
+    <aura:attribute name="Configuration" type="String"/>
+    <aura:attribute name="EVCBandwidth" type="String"/>
+    <aura:attribute name="LevelOfService" type="String"/>
+    <aura:attribute name="TermAggrement" type="String"/>
+    <aura:attribute name="isDPIValidated" type="boolean"/>
+    <aura:attribute name="isDPIValFailed" type="boolean"/>
+    <aura:attribute name="Comments" type="String"/>
+    <aura:attribute name="DPISingleAddress" type="FTRWSDPIAddressResponse"/>
+    <aura:attribute name="DSATSingleAddress" type="FTRWSDSATAddressResponse"/>
+    <aura:attribute name="isDSATValidated" type="boolean"/>
+    <aura:attribute name="isDSATValFailed" type="boolean"/>
+    <aura:attribute name="Spinner" type="boolean" default="false" />
+    <aura:attribute name="showUpload" type="boolean" default="true"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:input aura:id="fileId" onchange="{!c.handleFilesChange}" type="file" name="file" label="Upload Attachment" multiple="false"/>
+    <div class="slds-text-body_small slds-text-color_error">{!v.fileName} </div>
+    <aura:if isTrue="{!v.showLoadingSpinner}">
+        <div class="slds-text-body_small slds-text-color_error">Uploading... 
+            <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+        </div>
+    </aura:if>
+    
+    <br/>
+    <div class="slds-p-bottom_medium">
+        <lightning:button class="slds-button slds-button_brand" onclick="{!c.doSave}" disabled="{!v.showUpload}">Upload Attachment</lightning:button>
+    </div>
+    
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div
+                 class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative"
+                 role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showTable}">
+        
+        <div class="container" style="width:950px">
+            <div style="height: 300px">
+                <lightning:datatable
+                                     keyField="id"
+                                     data="{! v.data }"
+                                     columns="{! v.columns }"
+                                     hideCheckboxColumn="true"
+                                     minColumnWidth="80"                                         
+                                     />
+            </div>
+        </div>
+        
+    </aura:if>
+    
+    
+</aura:component>

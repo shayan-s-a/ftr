@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_Info_Exists__c</fullName>
+    <description>Number of Location Information Records for this order</description>
+    <externalId>false</externalId>
+    <label>Location Info Exists</label>
+    <summaryForeignKey>Location_Information__c.Order__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,57 @@
+{
+    "30dayPromotionFL": [
+        "TX",
+        false
+    ],
+    "ClientDate": "{{Dte1_es_:signer1:date}}",
+    "ClientPrintedName": "{{Name1_es_:signer1:fullname}}",
+    "ClientSignature": "{{Sig1_es_:signer1:signature}}",
+    "ClientTitle": "{{Ttl1_es_:signer1:title}}",
+    "Contract": {
+        "Line": [
+            {
+                "CTerm": "36 Months",
+                "IF_isBundle": false,
+                "OneTime": "$500.00",
+                "ProductName": "Managed SD-WAN",
+                "Quantity": 1,
+                "Recurring": "$300.00",
+                "SDWANSpeed": "<=500M"
+            },
+            {
+                "CoS": "Silver",
+                "IF_isBundle": false,
+                "OneTime": "$250.00",
+                "ProductName": "EIA  (Ethernet Internet Access)",
+                "Quantity": 1,
+                "Recurring": "$660.00",
+                "SPEED": "50 Mbps"
+            },
+            {
+                "IF_isBundle": false,
+                "IPBLOCK": "/29 = 5 IPs",
+                "OneTime": "$0.00",
+                "ProductName": "IP",
+                "Quantity": 1,
+                "Recurring": "$0.00"
+            }
+        ],
+        "ServiceLocation": "2701 High Point Oaks Drive, Lewisville, TX  75067"
+    },
+    "CustomerName": "Go Company",
+    "FSADate": "01/12/2021",
+    "FrontierDate": "{{Dte2_es_:signer2:date}}",
+    "FrontierPrintedName": "Rich Hutchins",
+    "FrontierSignature": "{{Sig2_es_:signer2:signature}}",
+    "FrontierTitle": "{{Ttl2_es_:signer2:title}}",
+    "IF_ProductName_isEIA": true,
+    "IF_ProductName_isEVPL": false,
+    "IF_SD-WAN_Exists": true,
+    "If_SD-WAN_privateNetwork": false,
+    "OneTimeTotal": "$1,000.00",
+    "RecurringTotal": "$1,620.00",
+    "ScheduleDate": "01/22/2021",
+    "ScheduleNumber": "S-5550000540",
+    "ScheduleTypePurpose": "EIA",
+    "ServiceTerm": "24 Months"
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_For_Call__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason For Call</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bill Inquiry/Payment</fullName>
+                <default>false</default>
+                <label>Bill Inquiry/Payment</label>
+            </value>
+            <value>
+                <fullName>Cancel/Disconnect Svc</fullName>
+                <default>false</default>
+                <label>Cancel/Disconnect Svc</label>
+            </value>
+            <value>
+                <fullName>Dead Air / Test Call</fullName>
+                <default>false</default>
+                <label>Dead Air / Test Call</label>
+            </value>
+            <value>
+                <fullName>Misdirect - Mid Mkt/Enterprise</fullName>
+                <default>false</default>
+                <label>Misdirect - Mid Mkt/Enterprise</label>
+            </value>
+            <value>
+                <fullName>Misdirect - Resi</fullName>
+                <default>false</default>
+                <label>Misdirect - Resi</label>
+            </value>
+            <value>
+                <fullName>Misdirect - Repair/TSO</fullName>
+                <default>false</default>
+                <label>Misdirect - Repair/TSO</label>
+            </value>
+            <value>
+                <fullName>Misdirect - All Other</fullName>
+                <default>false</default>
+                <label>Misdirect - All Other</label>
+            </value>
+            <value>
+                <fullName>Move Existing Svc</fullName>
+                <default>false</default>
+                <label>Move Existing Svc</label>
+            </value>
+            <value>
+                <fullName>Order New Service</fullName>
+                <default>false</default>
+                <label>Order New Service</label>
+            </value>
+            <value>
+                <fullName>Pending Order Change/Inquiry</fullName>
+                <default>false</default>
+                <label>Pending Order Change/Inquiry</label>
+            </value>
+            <value>
+                <fullName>Remove Existing Products</fullName>
+                <default>false</default>
+                <label>Remove Existing Products</label>
+            </value>
+            <value>
+                <fullName>Suspend/Restore Svc</fullName>
+                <default>false</default>
+                <label>Suspend/Restore Svc</label>
+            </value>
+            <value>
+                <fullName>Where&apos;s My Tech</fullName>
+                <default>false</default>
+                <label>Where&apos;s My Tech</label>
+            </value>
+            <value>
+                <fullName>Add Products to Existing Acct</fullName>
+                <default>false</default>
+                <label>Add Products to Existing Acct</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

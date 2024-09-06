@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Temperature__c</fullName>
+    <description>Created for Tanya Duck for Product Migration Task on Case 00739154 01/19/2021</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Hot = Happy, Warm = Neutral, or Cold = Not Happy</inlineHelpText>
+    <label>Customer Temperature</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hot</fullName>
+                <default>false</default>
+                <label>Hot</label>
+            </value>
+            <value>
+                <fullName>Warm</fullName>
+                <default>false</default>
+                <label>Warm</label>
+            </value>
+            <value>
+                <fullName>Cold</fullName>
+                <default>false</default>
+                <label>Cold</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

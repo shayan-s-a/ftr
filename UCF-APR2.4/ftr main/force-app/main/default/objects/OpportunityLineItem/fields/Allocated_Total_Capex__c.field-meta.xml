@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allocated_Total_Capex__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( QuoteItem__c  &lt;&gt; null,  QuoteItem__r.Allocated_Total_Capex__c , 0.00)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Allocated Total Capex</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Type_Flag__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(
+ OR(
+  Customer_Number__c &lt;&gt; &quot;&quot;, 
+  if(TEXT(Type) = &quot;Customer&quot;, True, False)
+ ), 
+&quot;Customer&quot;, &quot;Prospect&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Customer Type Flag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

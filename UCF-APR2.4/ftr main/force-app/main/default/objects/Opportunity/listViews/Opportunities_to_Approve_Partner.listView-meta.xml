@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_to_Approve_Partner</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mrg_Approved__c</field>
+        <operation>equals</operation>
+        <value>Closed (Ink),Pending</value>
+    </filters>
+    <label>Opportunities to Approve - Partner</label>
+    <sharedTo>
+        <portalRoleAndSubordinates>TotalCommunicationsIncPartnerExecutive</portalRoleAndSubordinates>
+    </sharedTo>
+</ListView>

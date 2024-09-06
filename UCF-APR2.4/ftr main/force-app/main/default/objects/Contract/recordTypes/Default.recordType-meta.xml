@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default</fullName>
+    <active>true</active>
+    <label>Default</label>
+    <picklistValues>
+        <picklist>ATT_DocumentType__c</picklist>
+        <values>
+            <fullName>Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ATT_VendorType__c</picklist>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreement_Auto_Renew_Y_N__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreement_Type__c</picklist>
+        <values>
+            <fullName>Ethernet%2FData Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VoIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Assessment_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discussions with Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy Development</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Buildout_Plan__c</picklist>
+        <values>
+            <fullName>Services Delivered All At Once</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services Delivered in Stages</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLM_Signing_Order__c</picklist>
+        <values>
+            <fullName>Customer 1st%2C Frontier 2nd</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Customer Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier 1st%2C Customer 2nd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CLM_Wholesale_FTR_AppA__c</picklist>
+        <values>
+            <fullName>AL FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ CTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ F13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ Navajo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA CTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA CTF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA F13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL CTF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL CTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL F13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN F13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MI F13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MI FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN CTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV CTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV F13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA CTC FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA CW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UT CTC Navajo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI CTC FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI F13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV CTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV F13</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CRT_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Channel_Affiliation__c</picklist>
+        <values>
+            <fullName>Aggregators</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big Box</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Agents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Connections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door to Door - Residential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premier Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Agent - Residential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Commission_Exception__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Status__c</picklist>
+        <values>
+            <fullName>Customer Signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined%2FCancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Team_Status__c</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drafting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drafting-OUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Redlining-IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Redlining-OUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent for Signature</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Term__c</picklist>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Email_Notification_Permitted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Flex_Plan__c</picklist>
+        <values>
+            <fullName>Flex Plan 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flex plan 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HOA__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ICB_Flag__c</picklist>
+        <values>
+            <fullName>N</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Y</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Lost_Primary_Reason__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service or Repair issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services No Longer Needed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_List_of_Unit_Addresses_Included__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_list_of_Living_Unit_Home_Addresse__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MDU_ContractType__c</picklist>
+        <values>
+            <fullName>Bulk Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PPI__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Products__c</picklist>
+        <values>
+            <fullName>CCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDWAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCaaS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Promo_Contract_Status__c</picklist>
+        <values>
+            <fullName>Contract Has Been Opened and Pending Customer Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Signed %E2%80%93 Ready for Offline Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract has been Sent to the Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined%2FCancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Offline action required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promo Item Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promo Item Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Promotional_Contract__c</picklist>
+        <values>
+            <fullName>Non-Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Redlines_Submitted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region_Partner_Will_Operate__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-Shore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Shore</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Renewal_Approach__c</picklist>
+        <values>
+            <fullName>Connectivity Upgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extend Term %28Contracting Event%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legacy Product Migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Action - Auto-Renew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Renewal_Led_By__c</picklist>
+        <values>
+            <fullName>CSA%2FCSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Renewal_Outcomes__c</picklist>
+        <values>
+            <fullName>Auto Renewed - 12 Mos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired - Month-to-Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extend Term w%2FNew Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extend Term w%2FSame Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Risk_Profile__c</picklist>
+        <values>
+            <fullName>End of Life Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired - Mth-to-Mth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In 12-Mth Auto-Renew</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Schedule_Type_Purpose__c</picklist>
+        <values>
+            <fullName>Order for new Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revision to upgrade existing Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Schedule_Type__c</picklist>
+        <values>
+            <fullName>BHSI and OneVoice - Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup and Recovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband Service - CA-FL-TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and FSUV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and OneVoice - CT Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and OneVoice Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and Onevoice - CT</fullName>
+            <default>false</default>
+        </values>
+       <!--  <values>
+            <fullName>Business Internet %28Copper%29 Enterprise Only</fullName>
+            <default>false</default>
+        </values> -->
+        <values>
+            <fullName>Business Local-LD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cabling Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Critical Customer Notification E-911</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CyberCenter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIA Schedule_02012021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LAN Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise Managed WLAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and FBV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and OneVoice - Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and OneVoice Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS TV Locals Plus Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS TV Locals Plus Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber and OneVoice Nationwide - Legacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOffice and OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiberoffice and Onevoice - Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Business Xtreme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Connect Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Tandem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Tandem-for-Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MetroE LAN-WAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical Transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ring Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ring Central SMB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice Internet Service - CA-FL-TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice Internet Service - CTF Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi Anchor Tenant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi Anchor Tenant - Govt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi Hot Spot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_for_External_Review__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State_of_Entity__c</picklist>
+        <values>
+            <fullName>Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyoming</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State_of_Formation__c</picklist>
+        <values>
+            <fullName>Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyoming</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Approval Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Terminated_Contract__c</picklist>
+        <values>
+            <fullName>Terminated Contract by Frontier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminated Contract by Property</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Entity__c</picklist>
+        <values>
+            <fullName>Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limited Liability Company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sole Proprietorship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__AutoRenewObjectCreation__c</picklist>
+        <values>
+            <fullName>Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__ExpirationReason__c</picklist>
+        <values>
+            <fullName>Does not want to renew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moving to M2M</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__LastDocuSignEnvelopeStatus__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voided</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__LocaleCode__c</picklist>
+        <values>
+            <fullName>de</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>en_US</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>fi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>fr</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__RenewalNotificationTerm__c</picklist>
+        <values>
+            <fullName>Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Months</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__TerminationReason__c</picklist>
+        <values>
+            <fullName>Customer Not Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Termination without Cause</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__TerminationType__c</picklist>
+        <values>
+            <fullName>With Cause</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Without Cause</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

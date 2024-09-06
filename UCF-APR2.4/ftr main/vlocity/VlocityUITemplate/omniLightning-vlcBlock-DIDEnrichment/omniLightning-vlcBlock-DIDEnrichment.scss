@@ -1,0 +1,30 @@
+.custom-block {
+    .toggle-label {
+        background: whitesmoke;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        cursor: pointer !important;
+    }
+    .add-delete-buttons {
+        font-size: 1rem;
+        font-weight: 400;
+        padding-right: 1rem;
+        &:hover {
+            font-weight: 800;
+        }
+    }
+    .vlc-slds-expand, .vlc-slds-collapse {
+        background: none !important;
+        fill: #49739c !important;
+    }
+    .slds-form-element__label--toggleText  {
+        font-weight: 800 !important;
+        line-height: 28px;
+    }
+    .noTopPadding {
+        padding-top: 0 !important;
+    }
+    .no-click-toggle {
+        pointer-events: none;
+    }
+}

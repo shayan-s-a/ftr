@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products_Sold_Requried</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+
+(OR(
+AND(
+Data__c = True,
+ISNULL(Data_QTY__c)
+)
+,
+
+AND(
+Voice__c = True,  
+ISNULL(Voice_QTY__c)
+)
+,
+
+AND(
+Frontier_Secure__c = True, 
+ISNULL(Frontier_Secure_QTY__c)
+)
+,
+
+AND(
+Other__c = True, 
+ISNULL(Other_QTY__c)
+))
+),
+
+(AND(
+
+ ISPICKVAL(Q4_Outcome_with_DM__c , &quot;Sale&quot;),
+
+AND(Data__c = False,
+ISNULL(Data_QTY__c)
+)
+,
+
+AND(
+Voice__c = False,  
+ISNULL(Voice_QTY__c)
+)
+,
+
+AND(
+Frontier_Secure__c = False, 
+ISNULL(Frontier_Secure_QTY__c)
+)
+,
+
+AND(
+Other__c = False, 
+ISNULL(Other_QTY__c)
+))
+))</errorConditionFormula>
+    <errorMessage>Please select the type(s) of product sold and quantity.</errorMessage>
+</ValidationRule>

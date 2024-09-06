@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TTL_is_Required_when_Sales_Channel_202</fullName>
+    <active>true</active>
+    <description>If Sales Channel value is 202-Take the Lead, then TTL# is required</description>
+    <errorConditionFormula>AND(ISPICKVAL(Sales_Channel__c , &apos;202 - Take the Lead&apos;),
+ISBLANK( TTL__c), 
+OR(DATEVALUE(CreatedDate) &gt; DATEVALUE(&quot;2017-10-11&quot;), ISNEW()))</errorConditionFormula>
+    <errorDisplayField>TTL__c</errorDisplayField>
+    <errorMessage>If Sales Channel value is 202-Take the Lead, then TTL# is required</errorMessage>
+</ValidationRule>

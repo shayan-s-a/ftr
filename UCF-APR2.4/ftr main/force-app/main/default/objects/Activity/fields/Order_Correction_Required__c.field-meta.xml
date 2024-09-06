@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Correction_Required__c</fullName>
+    <description>Created for Order Correction(Rejection)Task case #00738654 4/2021 (all teams working orders).</description>
+    <externalId>false</externalId>
+    <label>Order Correction Required</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BDT/CPQ issues</fullName>
+                <default>false</default>
+                <label>BDT/CPQ issues</label>
+            </value>
+            <value>
+                <fullName>Billing Account Number Missing for Upgrade/Disconnect</fullName>
+                <default>false</default>
+                <label>Billing Account Number Missing for Upgrade/Disconnect</label>
+            </value>
+            <value>
+                <fullName>Circuit ID missing for upgrades/disconnects</fullName>
+                <default>false</default>
+                <label>Circuit ID missing for upgrades/disconnects</label>
+            </value>
+            <value>
+                <fullName>Contact missing/incorrect</fullName>
+                <default>false</default>
+                <label>Contact missing/incorrect</label>
+            </value>
+            <value>
+                <fullName>Contract missing/incorrect</fullName>
+                <default>false</default>
+                <label>Contract missing/incorrect</label>
+            </value>
+            <value>
+                <fullName>DGF Handoff/Topology Change Required</fullName>
+                <default>false</default>
+                <label>DGF Handoff/Topology Change Required</label>
+            </value>
+            <value>
+                <fullName>DGF Incorrect Information</fullName>
+                <default>false</default>
+                <label>DGF Missing or Incorrect Information</label>
+            </value>
+            <value>
+                <fullName>DID Enrichment not complete</fullName>
+                <default>false</default>
+                <label>DID Enrichment not complete</label>
+            </value>
+            <value>
+                <fullName>DID Update</fullName>
+                <default>false</default>
+                <label>DID Update</label>
+            </value>
+            <value>
+                <fullName>Disconnect ETL awareness/authorization</fullName>
+                <default>false</default>
+                <label>Disconnect ETL/ETF awareness/authorization</label>
+            </value>
+            <value>
+                <fullName>E-Reach/Off-Net address Qualification</fullName>
+                <default>false</default>
+                <label>E-Reach/Off-Net address Qualification</label>
+            </value>
+            <value>
+                <fullName>Expired Quote need Refreshed</fullName>
+                <default>false</default>
+                <label>Expired Quote need Refreshed</label>
+            </value>
+            <value>
+                <fullName>MAC Form Ready for Signature</fullName>
+                <default>false</default>
+                <label>MAC Form Ready for Signature</label>
+            </value>
+            <value>
+                <fullName>Missing/Invalid Quick Quote</fullName>
+                <default>false</default>
+                <label>Missing/Invalid Quick Quote</label>
+            </value>
+            <value>
+                <fullName>Need Countersigned Signatures</fullName>
+                <default>false</default>
+                <label>Need Countersigned Signatures</label>
+            </value>
+            <value>
+                <fullName>New Vlocity order required</fullName>
+                <default>false</default>
+                <label>New Vlocity order required</label>
+            </value>
+            <value>
+                <fullName>Opportunity not complete</fullName>
+                <default>false</default>
+                <label>Opportunity not complete</label>
+            </value>
+            <value>
+                <fullName>Order Not Clear/Conflicting</fullName>
+                <default>false</default>
+                <label>Order Not Clear/Conflicting</label>
+            </value>
+            <value>
+                <fullName>Redesign Required</fullName>
+                <default>false</default>
+                <label>Redesign Required</label>
+            </value>
+            <value>
+                <fullName>SO - Cancel Request</fullName>
+                <default>false</default>
+                <label>SO - Cancel Request</label>
+            </value>
+            <value>
+                <fullName>SO - DID/SEAT Changes Needed</fullName>
+                <default>false</default>
+                <label>SO - DID/SEAT Changes Needed</label>
+            </value>
+            <value>
+                <fullName>SO - Due Date Change Needed</fullName>
+                <default>false</default>
+                <label>SO - Due Date Change Needed</label>
+            </value>
+            <value>
+                <fullName>SO - Handoff Changes Needed</fullName>
+                <default>false</default>
+                <label>SO - Handoff Changes Needed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

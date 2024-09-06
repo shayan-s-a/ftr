@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrier_Service</fullName>
+    <active>true</active>
+    <label>Carrier Service</label>
+    <picklistValues>
+        <picklist>Family</picklist>
+        <values>
+            <fullName>AIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Managed Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enhanced Managed Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Secure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long Distance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manage Enterprise WiFi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None Specified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peace of Mind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surcharges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UC by FTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VOIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice%2FData</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WiFi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wireless</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grandfathered_Product__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PoE_provided_by_Frontier__c</picklist>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FALSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRUE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PoE_provided_by_customer__c</picklist>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FALSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRUE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PowerPhone_provided_by_Frontier__c</picklist>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FALSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRUE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Subcategory__c</picklist>
+        <values>
+            <fullName>Accessories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activation Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activation Fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Add-On</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ancillaty BB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asymetric Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cable Runs%28maximum of 20 with QQ%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cordless Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desk Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment Delivery Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscelaneous Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitel Streamline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optional Add-ons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Accessories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PoE Customer Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PoE Switches</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Warranty Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-Warranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Adapter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pwr Supply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rack Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switches and PoE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecomm Svc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toll Free Bundle Minutes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Write In Part</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>uninterrupted Power Supply%28UPS%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>FAW UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Voice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityUnitOfMeasure</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RPT_PrimaryCategory__c</picklist>
+        <values>
+            <fullName>Access Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer-Premises Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Secure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grandfathered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T-carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice over IP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RPT_SecondaryCategory__c</picklist>
+        <values>
+            <fullName>Adtran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Analog Trunk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio Conferencing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup %26 Recovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Calling Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centrex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computer Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connected Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Anywhere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contracted Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DID Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISH Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Device Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E911</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet Local Area Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet Virtual Private Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet Virtual Private Line %28E-Reach%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOffice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Optical Transport Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier TV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hewlett-Packard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP VPN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISDN BRI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISDN PRI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identity Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long Distance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MultiConnect Broadband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MultiConnect Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneVoice Bundles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRI Bundles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phybridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plantronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking %26 IP Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Server Hosting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Order Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Static IP Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structured Cabling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tandem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U-verse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Conferencing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI-FI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI-FI Anchor Tenant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI-FI Hotspot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Hosting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Billing__c</picklist>
+        <values>
+            <fullName>MRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Year__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__JeopardySafetyIntervalUnit__c</picklist>
+        <values>
+            <fullName>Business Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Calendar Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Calendar Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seconds</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__Scope__c</picklist>
+        <values>
+            <fullName>Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Downstream Order Item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Item</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Top Order Item</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__SpecificationType__c</picklist>
+        <values>
+            <fullName>Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__SubType__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__Type__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

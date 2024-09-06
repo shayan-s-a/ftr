@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_Prof_Comp_Bulk_Int_Fee</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.Name = &quot;Community Connections&quot;, 
+				ISPICKVAL(StageName ,&quot;Proforma Completed&quot;),
+
+ISBLANK(Bulk_Internet_Fee_MRC__c),
+ISPICKVAL(Agreement_Type__c, &apos;Bulk&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Bulk_Internet_Fee_MRC__c</errorDisplayField>
+    <errorMessage>Bulk - Internet Fee(MRC) is missing.</errorMessage>
+</ValidationRule>

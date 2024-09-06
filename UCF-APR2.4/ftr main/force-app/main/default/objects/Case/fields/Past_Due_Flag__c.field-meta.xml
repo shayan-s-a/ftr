@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Past_Due_Flag__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(
+ OR(
+   AND(
+   Due_Date__c &lt; Today(),
+   IsClosed = False),
+
+   AND(
+   Due_Date__c &lt;  DateValue(ClosedDate),
+   IsClosed = True)
+ ), 
+True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Past Due Flag</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

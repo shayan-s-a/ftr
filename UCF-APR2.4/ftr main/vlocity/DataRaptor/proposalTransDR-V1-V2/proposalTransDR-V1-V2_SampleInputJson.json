@@ -1,0 +1,306 @@
+{
+    "CustomerName": "Dietzgen Corporation",
+    "Designation": "Enterprise Business Acquisition Executive",
+    "Email": "tricia.covini@ftr.com",
+    "FrontierSignature": "Scott Crouch",
+    "Line": [
+        {
+            "LineNumber": "0001",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_EIA_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "EIA  (Ethernet Internet Access)",
+            "ProductObjectType": "a9c0h000000k9hrAAA",
+            "Quantity": 1,
+            "RecurringTotal": "$198.00",
+            "SLA": "Silver",
+            "ServiceAccountId": "0010h00001dqEeEAAU",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0001.0001",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_EVC_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "EVC",
+            "ProductObjectType": "a9c0h000000k9hrAAA",
+            "Quantity": 1,
+            "RecurringTotal": "$66.00",
+            "SLA": "Silver",
+            "ServiceAccountId": "0010h00001dqEeEAAU",
+            "Speed": "10 Mbps",
+            "Tier": "Tier 1"
+        },
+        {
+            "IPBlocks": "Static IP /30",
+            "LineNumber": "0001.0002",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_IP_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "IP",
+            "ProductObjectType": "a9c0h000000k9hmAAA",
+            "Quantity": 1,
+            "RecurringTotal": "$0.00",
+            "ServiceAccountId": "0010h00001dqEeEAAU",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0001.0003",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_PORT_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "Port Charge",
+            "ProductObjectType": "a9c0h000000k9hrAAA",
+            "Quantity": 1,
+            "RecurringTotal": "$132.00",
+            "SLA": "Silver",
+            "ServiceAccountId": "0010h00001dqEeEAAU",
+            "Speed": "10 Mbps",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0002.0001",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_ACCESS_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "Access",
+            "ProductObjectType": "a9c0h000000k9hrAAA",
+            "Quantity": 1,
+            "RecurringTotal": "$270.00",
+            "ServiceAccountId": "0010h00001dqEeEAAU",
+            "Speed": "10 Mbps",
+            "Tier": "Tier 1"
+        }
+    ],
+    "Mobile": "+1 8133098905",
+    "OneTimeTotal": "$0.00",
+    "OwnerName": "Tricia Covini",
+    "ProductExists": {
+        "ProductName_isEIA": true,
+        "ProductName_isEVC": true,
+        "ProductName_isIP": true,
+        "ProductName_isPort": true
+    },
+    "QuoteNumber": "00000176",
+    "RecurringTotal": "$468.00",
+    "SA": {
+        "Premise_Detail__c": "351 Morgan Lane West Haven, CT  06516",
+        "ServiceAccountId": "0010h00001dqEeEAAU"
+    },
+    "SALines": {
+        "Line": [
+            {
+                "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                "%vlocity_namespace%__EffectiveRecurringTotal__c": 198,
+                "%vlocity_namespace%__LineNumber__c": "0001",
+                "%vlocity_namespace%__OneTimeTotal__c": 0,
+                "%vlocity_namespace%__Product2Id__c": "01t0h0000063RFUAA2",
+                "%vlocity_namespace%__Product2Id__r.Id": "01t0h0000063RFUAA2",
+                "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_EIA_0001",
+                "%vlocity_namespace%__Product2Id__r.RecordTypeId": "0120h000000cc4TAAQ",
+                "%vlocity_namespace%__RecurringTotal__c": 198,
+                "%vlocity_namespace%__ServiceAccountId__c": "0010h00001dqEeEAAU",
+                "@ATTR_BANDWIDTH": null,
+                "@ATTR_CONTRACT_TERM": "36 Months",
+                "@ATTR_SLA": "Silver",
+                "@ATTR_TIER": "Tier 1",
+                "Id": "0QL0h000000aV8xGAE",
+                "LineNumber": "00001150",
+                "Premise_Detail__c": "351 Morgan Lane West Haven, CT  06516",
+                "Product": [
+                    {
+                        "%vlocity_namespace%__ObjectTypeId__c": "a9c0h000000k9hrAAA",
+                        "Family": "Ethernet",
+                        "Id": "01t0h0000063RFUAA2",
+                        "Name": "EIA  (Ethernet Internet Access)",
+                        "Object": [
+                            {
+                                "Id": "a9c0h000000k9hrAAA",
+                                "Name": "Ethernet Product Specification",
+                                "OwnerId": "0050h00000GZAR3AAP",
+                                "RecordTypeId": "0120h000000cc4AAAQ"
+                            }
+                        ],
+                        "ProductCode": "ENT_ETH_EIA_0001",
+                        "RecordTypeId": "0120h000000cc4TAAQ"
+                    }
+                ],
+                "Quantity": 1,
+                "QuoteId": "0Q00h000000ZXGSCA4"
+            },
+            {
+                "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                "%vlocity_namespace%__LineNumber__c": "0001.0001",
+                "%vlocity_namespace%__OneTimeTotal__c": 0,
+                "%vlocity_namespace%__Product2Id__c": "01t0h0000063RFoAAM",
+                "%vlocity_namespace%__Product2Id__r.Id": "01t0h0000063RFoAAM",
+                "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_EVC_0001",
+                "%vlocity_namespace%__Product2Id__r.RecordTypeId": "0120h000000cc4TAAQ",
+                "%vlocity_namespace%__RecurringTotal__c": 66,
+                "%vlocity_namespace%__ServiceAccountId__c": "0010h00001dqEeEAAU",
+                "@ATTR_BANDWIDTH": "10 Mbps",
+                "@ATTR_CEVLANCOSPRESERV": false,
+                "@ATTR_CEVLANIDSITE1": null,
+                "@ATTR_CEVLANIDSITE2": null,
+                "@ATTR_CEVLANPRESERVIDSITE1": false,
+                "@ATTR_CEVLANPRESERVIDSITE2": false,
+                "@ATTR_CONTRACT_TERM": "36 Months",
+                "@ATTR_DPIROUTERTER": "NEWINNICLLI",
+                "@ATTR_EVCSubType": "Internet",
+                "@ATTR_EVCType": "EIA",
+                "@ATTR_INTRA_INTER": "Interstate",
+                "@ATTR_SLA": "Silver",
+                "@ATTR_TIER": "Tier 1",
+                "Id": "0QL0h000000aV8yGAE",
+                "LineNumber": "00001151",
+                "Premise_Detail__c": "351 Morgan Lane West Haven, CT  06516",
+                "Product": [
+                    {
+                        "%vlocity_namespace%__ObjectTypeId__c": "a9c0h000000k9hrAAA",
+                        "Family": "Ethernet",
+                        "Id": "01t0h0000063RFoAAM",
+                        "Name": "EVC",
+                        "Object": [
+                            {
+                                "Id": "a9c0h000000k9hrAAA",
+                                "Name": "Ethernet Product Specification",
+                                "OwnerId": "0050h00000GZAR3AAP",
+                                "RecordTypeId": "0120h000000cc4AAAQ"
+                            }
+                        ],
+                        "ProductCode": "ENT_ETH_EVC_0001",
+                        "RecordTypeId": "0120h000000cc4TAAQ"
+                    }
+                ],
+                "Quantity": 1,
+                "QuoteId": "0Q00h000000ZXGSCA4"
+            },
+            {
+                "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                "%vlocity_namespace%__LineNumber__c": "0001.0002",
+                "%vlocity_namespace%__OneTimeTotal__c": 0,
+                "%vlocity_namespace%__Product2Id__c": "01t0h0000063RFKAA2",
+                "%vlocity_namespace%__Product2Id__r.Id": "01t0h0000063RFKAA2",
+                "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_IP_0001",
+                "%vlocity_namespace%__Product2Id__r.RecordTypeId": "0120h000000cc4TAAQ",
+                "%vlocity_namespace%__RecurringTotal__c": 0,
+                "%vlocity_namespace%__ServiceAccountId__c": "0010h00001dqEeEAAU",
+                "@ATTR_CONTRACT_TERM": "36 Months",
+                "@ATTR_IPADD": null,
+                "@ATTR_IPREQTR": null,
+                "@ATTR_IP_BLOCKS": "Static IP /30",
+                "@ATTR_TIER": "Tier 1",
+                "@ATTR_TOPO": null,
+                "Id": "0QL0h000000aV8zGAE",
+                "LineNumber": "00001152",
+                "Premise_Detail__c": "351 Morgan Lane West Haven, CT  06516",
+                "Product": [
+                    {
+                        "%vlocity_namespace%__ObjectTypeId__c": "a9c0h000000k9hmAAA",
+                        "Family": "Ethernet",
+                        "Id": "01t0h0000063RFKAA2",
+                        "Name": "IP",
+                        "Object": [
+                            {
+                                "Id": "a9c0h000000k9hmAAA",
+                                "Name": "Base Product Specification",
+                                "OwnerId": "0050h00000GZAR3AAP",
+                                "RecordTypeId": "0120h000000cc4AAAQ"
+                            }
+                        ],
+                        "ProductCode": "ENT_ETH_IP_0001",
+                        "RecordTypeId": "0120h000000cc4TAAQ"
+                    }
+                ],
+                "Quantity": 1,
+                "QuoteId": "0Q00h000000ZXGSCA4"
+            },
+            {
+                "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                "%vlocity_namespace%__LineNumber__c": "0001.0003",
+                "%vlocity_namespace%__OneTimeTotal__c": 0,
+                "%vlocity_namespace%__Product2Id__c": "01t0h0000063RFPAA2",
+                "%vlocity_namespace%__Product2Id__r.Id": "01t0h0000063RFPAA2",
+                "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_PORT_0001",
+                "%vlocity_namespace%__Product2Id__r.RecordTypeId": "0120h000000cc4TAAQ",
+                "%vlocity_namespace%__RecurringTotal__c": 132,
+                "%vlocity_namespace%__ServiceAccountId__c": "0010h00001dqEeEAAU",
+                "@ATTR_BANDWIDTH": "10 Mbps",
+                "@ATTR_CONTRACT_TERM": "36 Months",
+                "@ATTR_SLA": "Silver",
+                "@ATTR_TIER": "Tier 1",
+                "Id": "0QL0h000000aV90GAE",
+                "LineNumber": "00001153",
+                "Premise_Detail__c": "351 Morgan Lane West Haven, CT  06516",
+                "Product": [
+                    {
+                        "%vlocity_namespace%__ObjectTypeId__c": "a9c0h000000k9hrAAA",
+                        "Family": "Ethernet",
+                        "Id": "01t0h0000063RFPAA2",
+                        "Name": "Port Charge",
+                        "Object": [
+                            {
+                                "Id": "a9c0h000000k9hrAAA",
+                                "Name": "Ethernet Product Specification",
+                                "OwnerId": "0050h00000GZAR3AAP",
+                                "RecordTypeId": "0120h000000cc4AAAQ"
+                            }
+                        ],
+                        "ProductCode": "ENT_ETH_PORT_0001",
+                        "RecordTypeId": "0120h000000cc4TAAQ"
+                    }
+                ],
+                "Quantity": 1,
+                "QuoteId": "0Q00h000000ZXGSCA4"
+            },
+            {
+                "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                "%vlocity_namespace%__LineNumber__c": "0002.0001",
+                "%vlocity_namespace%__OneTimeTotal__c": 0,
+                "%vlocity_namespace%__Product2Id__c": "01t0h0000063RFFAA2",
+                "%vlocity_namespace%__Product2Id__r.Id": "01t0h0000063RFFAA2",
+                "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_ACCESS_0001",
+                "%vlocity_namespace%__Product2Id__r.RecordTypeId": "0120h000000cc4TAAQ",
+                "%vlocity_namespace%__RecurringTotal__c": 270,
+                "%vlocity_namespace%__ServiceAccountId__c": "0010h00001dqEeEAAU",
+                "@ATTR_BANDWIDTH": "10 Mbps",
+                "@ATTR_CONTRACT_TERM": "36 Months",
+                "@ATTR_INTRA_INTER": "Interstate",
+                "@ATTR_ROLLUP_BANDWIDTH": null,
+                "@ATTR_SLA": null,
+                "@ATTR_TIER": "Tier 1",
+                "Id": "0QL0h000000aV92GAE",
+                "LineNumber": "00001155",
+                "Premise_Detail__c": "351 Morgan Lane West Haven, CT  06516",
+                "Product": [
+                    {
+                        "%vlocity_namespace%__ObjectTypeId__c": "a9c0h000000k9hrAAA",
+                        "Family": "Ethernet",
+                        "Id": "01t0h0000063RFFAA2",
+                        "Name": "Access",
+                        "Object": [
+                            {
+                                "Id": "a9c0h000000k9hrAAA",
+                                "Name": "Ethernet Product Specification",
+                                "OwnerId": "0050h00000GZAR3AAP",
+                                "RecordTypeId": "0120h000000cc4AAAQ"
+                            }
+                        ],
+                        "ProductCode": "ENT_ETH_ACCESS_0001",
+                        "RecordTypeId": "0120h000000cc4TAAQ"
+                    }
+                ],
+                "Quantity": 1,
+                "QuoteId": "0Q00h000000ZXGSCA4"
+            }
+        ],
+        "Premise_Detail__c": "351 Morgan Lane West Haven, CT  06516"
+    },
+    "ScheduleNumber": "S-5555000136",
+    "ScheduleTypePurpose": "Order for New Services",
+    "curtdate": "01/27/2020"
+}

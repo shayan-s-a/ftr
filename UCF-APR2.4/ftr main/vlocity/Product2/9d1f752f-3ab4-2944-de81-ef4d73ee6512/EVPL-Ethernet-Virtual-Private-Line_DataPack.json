@@ -1,0 +1,740 @@
+{
+    "%vlocity_namespace%__ApprovedBy__c": "",
+    "%vlocity_namespace%__ApprovedOn__c": "",
+    "%vlocity_namespace%__AttributeAssignment__c": "EVPL-Ethernet-Virtual-Private-Line_AttributeAssignments.json",
+    "%vlocity_namespace%__AttributeDefaultValues__c": {
+        "ATTR_BANDWIDTH": null,
+        "ATTR_CONTRACT_TERM": null,
+        "ATTR_CoS": null,
+        "ATTR_DSAT_ID": null,
+        "ATTR_GAN_CODE": null,
+        "ATTR_LEVEL": "a",
+        "ATTR_MARKET": "B",
+        "ATTR_MSTR_SUMMARY_TN": null,
+        "ATTR_TIER1": null,
+        "ATTR_TIER2": null
+    },
+    "%vlocity_namespace%__AttributeMetadata__c": {
+        "messages": [
+        ],
+        "records": [
+            {
+                "Code__c": "FTR_ENT_DECOMP_ATTCAT",
+                "Name": "Decomposition Attributes",
+                "displaySequence": 40,
+                "id": "a7a750000004OM2AAM",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b6C000000L3r3QAC",
+                            "cloneable": true,
+                            "code": "ATTR_MSTR_SUMMARY_TN",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotTranslatable": false,
+                            "label": "Master Summary TN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b6C000000L3qyQAC",
+                            "cloneable": true,
+                            "code": "ATTR_GAN_CODE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1820,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotTranslatable": false,
+                            "label": "GAN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 2
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_ELIG_ATTCAT",
+                "Name": "Eligibility Attributes",
+                "displaySequence": 50,
+                "id": "a7a750000004OM3AAM",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b750000008OdMAAU",
+                            "cloneable": true,
+                            "code": "ATTR_TIER1",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 5,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotTranslatable": false,
+                            "label": "Copper Tier",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "f6166d0b-d8f2-dce8-6c30-d1f0a68b5725",
+                                    "label": "Tier 1",
+                                    "readonly": false,
+                                    "value": "Tier 1"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "270589b4-c7b0-0573-f048-23f44a2c6431",
+                                    "label": "Tier 2",
+                                    "readonly": false,
+                                    "value": "Tier 2"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b750000008OdNAAU",
+                            "cloneable": true,
+                            "code": "ATTR_TIER2",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotTranslatable": false,
+                            "label": "Fiber Tier",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "f6166d0b-d8f2-dce8-6c30-d1f0a68b5725",
+                                    "label": "Tier 1",
+                                    "readonly": false,
+                                    "value": "Tier 1"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "270589b4-c7b0-0573-f048-23f44a2c6431",
+                                    "label": "Tier 2",
+                                    "readonly": false,
+                                    "value": "Tier 2"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b750000008OdGAAU",
+                            "cloneable": true,
+                            "code": "ATTR_DSAT_ID",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 600,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotTranslatable": false,
+                            "label": "DSAT ID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 3
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_PRI_ATTCAT",
+                "Name": "Pricing Attributes",
+                "displaySequence": 10,
+                "id": "a7a750000004OMAAA2",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b750000008OfXAAU",
+                            "cloneable": true,
+                            "code": "ATTR_MARKET",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotTranslatable": false,
+                            "label": "Market",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b750000008OfAAAU",
+                            "cloneable": true,
+                            "code": "ATTR_BANDWIDTH",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotTranslatable": false,
+                            "label": "Speed",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 5,
+                                    "id": "a1f88383-489b-617b-796b-db618d5841c6",
+                                    "label": "5 Mbps",
+                                    "readonly": false,
+                                    "value": "5 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "6af9a9e5-dff5-0f51-223e-f149d256851c",
+                                    "label": "10 Mbps",
+                                    "readonly": false,
+                                    "value": "10 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "8d9a9bd8-a090-0531-c54b-be76521934dc",
+                                    "label": "20 Mbps",
+                                    "readonly": false,
+                                    "value": "20 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 23,
+                                    "id": "14414b0c-98a4-9c39-1a98-ba04a2e7dcd9",
+                                    "label": "30 Mbps",
+                                    "readonly": false,
+                                    "value": "30 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 26,
+                                    "id": "8178d30d-0ad0-b5af-f206-bc7c6ac80128",
+                                    "label": "40 Mbps",
+                                    "readonly": false,
+                                    "value": "40 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "71166878-186e-3b66-49ae-dcd659204939",
+                                    "label": "50 Mbps",
+                                    "readonly": false,
+                                    "value": "50 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "4c03d782-90e7-d359-0c4c-b847a4d13547",
+                                    "label": "100 Mbps",
+                                    "readonly": false,
+                                    "value": "100 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 50,
+                                    "id": "250ff27d-186d-262e-6604-ccb548815ce5",
+                                    "label": "200 Mbps",
+                                    "readonly": false,
+                                    "value": "200 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 60,
+                                    "id": "cbb255c2-9001-4471-a18b-8fadf853c33b",
+                                    "label": "500 Mbps",
+                                    "readonly": false,
+                                    "value": "500 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 70,
+                                    "id": "bfd7e3ad-26a4-26d7-3c04-499855b76c53",
+                                    "label": "1 Gbps",
+                                    "readonly": false,
+                                    "value": "1 Gbps"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b750000008OfEAAU",
+                            "cloneable": true,
+                            "code": "ATTR_CONTRACT_TERM",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotTranslatable": false,
+                            "label": "Term",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                                    "label": "12 Months",
+                                    "readonly": false,
+                                    "value": "12 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                                    "label": "24 Months",
+                                    "readonly": false,
+                                    "value": "24 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                                    "label": "36 Months",
+                                    "readonly": false,
+                                    "value": "36 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                                    "label": "60 Months",
+                                    "readonly": false,
+                                    "value": "60 Months"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b750000008OfVAAU",
+                            "cloneable": true,
+                            "code": "ATTR_LEVEL",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotTranslatable": false,
+                            "label": "Level",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b750000008OfGAAU",
+                            "cloneable": true,
+                            "code": "ATTR_CoS",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotTranslatable": false,
+                            "label": "Class of Service",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "4bd906e9-f059-2a1a-c588-ad08beb5d1e1",
+                                    "label": "Silver",
+                                    "readonly": false,
+                                    "value": "Silver"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "da9c5b03-49f5-5d55-b41c-b068aa1f2031",
+                                    "label": "Gold",
+                                    "readonly": false,
+                                    "value": "Gold"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "f8d5b838-0867-537e-83a0-a7b710916357",
+                                    "label": "Platinum",
+                                    "readonly": false,
+                                    "value": "Platinum"
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 5
+                }
+            }
+        ],
+        "totalSize": 3
+    },
+    "%vlocity_namespace%__AttributeRules__c": "{}",
+    "%vlocity_namespace%__CategoryData__c": [
+        {
+            "actions": {
+            },
+            "childCategories": [
+            ],
+            "displaySequence": -1,
+            "fields": {
+            },
+            "id": "a81g00000005o5GAAQ",
+            "messages": [
+            ],
+            "name": "Connectivity",
+            "nameResult": {
+            },
+            "uiStates": {
+            }
+        }
+    ],
+    "%vlocity_namespace%__ChangeDetectorImplementation__c": "",
+    "%vlocity_namespace%__ClassId__c": "",
+    "%vlocity_namespace%__DefaultImageId__c": "",
+    "%vlocity_namespace%__EffectiveDate__c": "",
+    "%vlocity_namespace%__EndDate__c": "",
+    "%vlocity_namespace%__EndOfLifeDate__c": "",
+    "%vlocity_namespace%__FulfilmentStartDate__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "afede394-4da2-85cf-1bcc-b56b00e1b569",
+    "%vlocity_namespace%__GlobalKey__c": "9d1f752f-3ab4-2944-de81-ef4d73ee6512",
+    "%vlocity_namespace%__HeaderData__c": "",
+    "%vlocity_namespace%__HelpText__c": "",
+    "%vlocity_namespace%__IsConfigurable__c": true,
+    "%vlocity_namespace%__IsCustomerSubscription__c": false,
+    "%vlocity_namespace%__IsLocationDependent__c": false,
+    "%vlocity_namespace%__IsNotAssetizable__c": false,
+    "%vlocity_namespace%__IsOrderable__c": false,
+    "%vlocity_namespace%__JeopardySafetyIntervalUnit__c": "Seconds",
+    "%vlocity_namespace%__JeopardySafetyInterval__c": "",
+    "%vlocity_namespace%__LifecycleStatus__c": "",
+    "%vlocity_namespace%__Modification__c": "",
+    "%vlocity_namespace%__ObjectFieldAttribute__c": "EVPL-Ethernet-Virtual-Private-Line_ObjectFieldAttributes.json",
+    "%vlocity_namespace%__ObjectTypeId__c": {
+        "%vlocity_namespace%__GlobalKey__c": "c32de3-48245f-a25548-6824f2-001f3e796",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/c32de3-48245f-a25548-6824f2-001f3e796",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
+    },
+    "%vlocity_namespace%__ObjectTypeName__c": "Ethernet Product Specification",
+    "%vlocity_namespace%__ParentClassId__c": "",
+    "%vlocity_namespace%__ProductChildItem__c": "EVPL-Ethernet-Virtual-Private-Line_ProductChildItems.json",
+    "%vlocity_namespace%__ProductSpecId__c": "",
+    "%vlocity_namespace%__ProductTemplateProductId__c": "",
+    "%vlocity_namespace%__Scope__c": "Order Item",
+    "%vlocity_namespace%__SellingEndDate__c": "",
+    "%vlocity_namespace%__SellingStartDate__c": "",
+    "%vlocity_namespace%__SpecificationSubType__c": "",
+    "%vlocity_namespace%__SpecificationType__c": "Offer",
+    "%vlocity_namespace%__StandardPremium__c": "",
+    "%vlocity_namespace%__Status__c": "Active",
+    "%vlocity_namespace%__SubType__c": "None",
+    "%vlocity_namespace%__TimeToLive__c": "",
+    "%vlocity_namespace%__TrackAsAgreement__c": false,
+    "%vlocity_namespace%__Type__c": "None",
+    "%vlocity_namespace%__VendorAccountId__c": "",
+    "%vlocity_namespace%__VersionEndDateTime__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
+    "%vlocity_namespace%__VersionStartDateTime__c": "",
+    "Accessories1__c": false,
+    "Accessories__c": false,
+    "BroadbandIpOption13Ips__c": false,
+    "BroadbandIpOption5Ips__c": false,
+    "BroadbandIpOptionEach__c": false,
+    "CanUseQuantitySchedule": true,
+    "CanUseRevenueSchedule": true,
+    "Child__c": false,
+    "Description": "Three or more locations in a hub-and-spoke configuration with communication only between a hub and spoke, never between two spokes. Available in Silver, Gold or Platinum CoS.",
+    "DisplayUrl": "",
+    "Equipment__c": false,
+    "ExternalDataSourceId": "",
+    "ExternalId": "",
+    "FSecure_Distribution__c": 0,
+    "Family": "Ethernet",
+    "Grandfathered_Product__c": "",
+    "IpPhoneRule1__c": false,
+    "IpPhoneRule2__c": false,
+    "IpPhone__c": false,
+    "IsActive": true,
+    "IsArchived": false,
+    "Is_LegacyVlocityProduct__c": false,
+    "Item_Code__c": "",
+    "Item_Rate__c": "",
+    "Item_Type__c": "",
+    "License_Order__c": "",
+    "Maintenance_Universal__c": false,
+    "MajorProduct__c": false,
+    "Name": "EVPL (Ethernet Virtual Private Line)",
+    "NoICB__c": false,
+    "NumberOfQuantityInstallments": "",
+    "NumberOfRevenueInstallments": "",
+    "POE_Switch_Rule__c": false,
+    "POE__c": false,
+    "Parent_Child__c": false,
+    "Parent__c": false,
+    "Part_Number_of_Product__c": "",
+    "Part__c": "",
+    "PoE_provided_by_Frontier__c": "",
+    "PoE_provided_by_customer__c": "",
+    "PowerPhone_provided_by_Frontier__c": "",
+    "PremiumPlusRule__c": false,
+    "PremiumRule__c": false,
+    "PricebookEntry": "EVPL-Ethernet-Virtual-Private-Line_PricebookEntries.json",
+    "ProductCode": "ENT_ETH_EVPL_0001",
+    "Product_Name_80_Char__c": "EVPL (Ethernet Virtual Private Line)",
+    "Product_Part_Number__c": "",
+    "Product_Subcategory__c": "",
+    "Product_Type__c": "",
+    "QuantityInstallmentPeriod": "",
+    "QuantityScheduleType": "",
+    "QuantityUnitOfMeasure": "",
+    "Quantity__c": "",
+    "RPT_PrimaryCategory__c": "",
+    "RPT_ProductType__c": "Sterling9",
+    "RPT_SecondaryCategory__c": "",
+    "RecordTypeId": {
+        "DeveloperName": "Product",
+        "SobjectType": "Product2",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "RecordType/Product2/Product",
+        "VlocityRecordSObjectType": "RecordType"
+    },
+    "Recurring_Type__c": "",
+    "RevenueInstallmentPeriod": "",
+    "RevenueScheduleType": "",
+    "SKU__c": "NOTSFA9",
+    "ST_CategoryID__c": "",
+    "ST_CategoryPath__c": "",
+    "ST_ConfigurationModelName__c": "",
+    "ST_Description__c": "",
+    "ST_DisplayItemDescription__c": "",
+    "ST_ExtnCrmProductType__c": "",
+    "ST_IsConfigurable__c": "",
+    "ST_ShortDescription__c": "",
+    "S_E_LOOP__c": "",
+    "S_E_PORT__c": "",
+    "Service__c": false,
+    "SetUp_Order__c": "",
+    "Setup__c": false,
+    "Show_in_PDF__c": false,
+    "SiebelRowID__c": "",
+    "SmartVoice_Broadband_115__c": false,
+    "SmartVoice_Broadband_12__c": false,
+    "SmartVoice_Broadband_18__c": false,
+    "SmartVoice_Broadband_25__c": false,
+    "SmartVoice_Broadband_35__c": false,
+    "SmartVoice_Broadband_45__c": false,
+    "SmartVoice_Broadband_70__c": false,
+    "SmartVoice_Broadband_90__c": false,
+    "SmartVoice_FiOS_100_100_Broadband__c": false,
+    "SmartVoice_FiOS_1G_1G_Broadband__c": false,
+    "SmartVoice_FiOS_500_500_Broadband__c": false,
+    "SmartVoice_Fiber_100_100_Broadband__c": false,
+    "SmartVoice_Fiber_1G_1G_Broadband__c": false,
+    "SmartVoice_Fiber_500_500_Broadband__c": false,
+    "StandardPricebookEntry": [
+        {
+            "%vlocity_namespace%__FloorPrice__c": "",
+            "%vlocity_namespace%__OverageCharge__c": "",
+            "%vlocity_namespace%__OverageUOM__c": "",
+            "%vlocity_namespace%__RecurringPrice__c": "",
+            "%vlocity_namespace%__RecurringUOM__c": "Monthly",
+            "DISCOUNT_Price__c": "",
+            "GPM__c": "",
+            "IsActive": true,
+            "IsArchived": false,
+            "NRC_Unit_Price__c": "",
+            "Name": "EVPL (Ethernet Virtual Private Line)",
+            "Pricebook2.Name": "Standard Price Book",
+            "Pricebook2Id": {
+                "Name": "Standard Price Book",
+                "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+                "VlocityLookupRecordSourceKey": "Pricebook2/Standard Price Book",
+                "VlocityRecordSObjectType": "Pricebook2"
+            },
+            "Product2.%vlocity_namespace%__GlobalKey__c": "9d1f752f-3ab4-2944-de81-ef4d73ee6512",
+            "Product2Id": {
+                "%vlocity_namespace%__GlobalKey__c": "9d1f752f-3ab4-2944-de81-ef4d73ee6512",
+                "VlocityDataPackType": "VlocityMatchingKeyObject",
+                "VlocityMatchingRecordSourceKey": "Product2/9d1f752f-3ab4-2944-de81-ef4d73ee6512",
+                "VlocityRecordSObjectType": "Product2"
+            },
+            "ProductCode": "ENT_ETH_EVPL_0001",
+            "Type_of_Billing__c": "",
+            "UNITCOST__c": "",
+            "UnitPrice": 0,
+            "UseStandardPrice": false,
+            "VENDORPRICELISTTOFTR__c": "",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "PricebookEntry",
+            "VlocityRecordSourceKey": "PricebookEntry/Pricebook2/Standard Price Book/Product2/9d1f752f-3ab4-2944-de81-ef4d73ee6512",
+            "multiply__c": ""
+        }
+    ],
+    "StockKeepingUnit": "",
+    "Term1yr__c": "",
+    "Term2yr__c": "",
+    "Term__c": "",
+    "TollFreeRule__c": false,
+    "Type_of_Billing__c": "",
+    "UnitPrice__c": "",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "Product2",
+    "VlocityRecordSourceKey": "Product2/9d1f752f-3ab4-2944-de81-ef4d73ee6512",
+    "Year__c": "",
+    "aService__c": false,
+    "evcspeed__c": "",
+    "ftr_IsComboOrderEnabled__c": false,
+    "isATArule__c": false,
+    "isAdditionalDID__c": false,
+    "isAdditionalDirectory__c": false,
+    "isAdditionalManaged__c": false,
+    "isAnalogRule__c": false,
+    "isBusinessAnalytic__c": false,
+    "isCallerId__c": false,
+    "isConferenceRumSeatRule__c": false,
+    "isDPIEnabled__c": false,
+    "isE911__c": false,
+    "isElite__c": false,
+    "isEssential__c": false,
+    "isExtendedMarket__c": false,
+    "isIpSoundStationRule__c": false,
+    "isNETGEAR__c": false,
+    "isOutbound__c": false,
+    "isPolycomATA__c": false,
+    "isPremier__c": false,
+    "isSmartAdditionalDID__c": false,
+    "isSmartAdditionalManagedAutoAttendant__c": false,
+    "isSmartDirectoryListing__c": false,
+    "isSmartE911__c": false,
+    "isSmartExtendedNum__c": false,
+    "isSmartIpPhoneRule__c": false,
+    "isSmartMonthlyAdminCharge__c": false,
+    "isSmartMultiLineHunt__c": false,
+    "isSmartPremiumAttendant__c": false,
+    "isSmartTollFreeDomesticUS__c": false,
+    "isSmartTollFreeDomestic__c": false,
+    "isSmartTollFreeNum__c": false,
+    "isSoundStationIp5000__c": false,
+    "isSoundStationIp6000__c": false,
+    "isSoundStationIp7000__c": false,
+    "isTechInstallFeeBHSI__c": false,
+    "isTechInstallFeeFIOS__c": false,
+    "isTechInstallFeeFiber__c": false,
+    "isTollFreeNum__c": false,
+    "isVVX311__c": false,
+    "isVVX501__c": false,
+    "isVVX601__c": false,
+    "isWebFax__c": false,
+    "is_show_on_ux__c": false,
+    "mrcusoc__c": "",
+    "multiply__c": false,
+    "nrcusoc__c": "",
+    "spec__c": "",
+    "unispeed__c": ""
+}

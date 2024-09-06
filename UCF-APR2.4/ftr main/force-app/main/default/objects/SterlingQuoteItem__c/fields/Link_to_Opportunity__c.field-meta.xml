@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_to_Opportunity__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(
+ISPICKVAL($User.UserType, &quot;PowerPartner&quot;),
+HYPERLINK(&quot;/PartnerPortal/&quot; &amp; SterlingQuote__r.OpportunityId__c, &quot;Opportunity Link&quot;),
+HYPERLINK(&quot;/&quot; &amp; SterlingQuote__r.OpportunityId__c, &quot;Opportunity Link&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Link to Opportunity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

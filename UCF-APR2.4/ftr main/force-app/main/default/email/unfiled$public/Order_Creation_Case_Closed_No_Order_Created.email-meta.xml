@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to notify AE when Order Creation Case is closed as No Response. 10/21 Teresa Miles</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Order Creation Case - Closed- No Response</name>
+    <style>none</style>
+    <subject>Order Creation Case {!Case.CaseNumber} is Closed as {!Case.Reason} for {!Case.Account}</subject>
+    <textOnly>{!Case.CreatedBy},
+
+An order was not created.
+
+
+Order Creation Case Details.
+
+Account Name: {!Case.Account}
+
+Opportunity Name: {!Case.Opportunity__c}
+
+Missing/Incorrect Information: {!Case.Missing_Incorrect__c}
+
+Please see the case for additional information.
+
+To view the full details of the Case, please click the link: {!Case.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

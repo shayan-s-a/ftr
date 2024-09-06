@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Ind_New__c</fullName>
+    <description>New field based on Go To Market Strategy with Branch Indentifers - New Field per Randy Gromlich</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Branch location In and Out of Footprint</inlineHelpText>
+    <label>Branch_Ind_New</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branch</fullName>
+                <default>false</default>
+                <label>Branch</label>
+            </value>
+            <value>
+                <fullName>HQ</fullName>
+                <default>false</default>
+                <label>HQ</label>
+            </value>
+            <value>
+                <fullName>OOF-Branch</fullName>
+                <default>false</default>
+                <label>OOF-Branch</label>
+            </value>
+            <value>
+                <fullName>OOF-HQ</fullName>
+                <default>false</default>
+                <label>OOF-HQ</label>
+            </value>
+            <value>
+                <fullName>OOF-Single</fullName>
+                <default>false</default>
+                <label>OOF-Single</label>
+            </value>
+            <value>
+                <fullName>Single</fullName>
+                <default>false</default>
+                <label>Single</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

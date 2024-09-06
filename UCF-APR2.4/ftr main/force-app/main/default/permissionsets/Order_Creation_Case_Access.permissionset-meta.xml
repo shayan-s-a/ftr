@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For administrators and support people who need to convert to this case type.  Not for end users as the case is auto generated.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Order Creation Case Access</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Case</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Case.Order_Creation</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Type_is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Renewal_Type__c ,&quot;&quot;),
+RecordType.Name = &apos;Community Connection&apos;,
+ISPICKVAL(  Contract_Category__c , &quot;Renewal&quot;))</errorConditionFormula>
+    <errorDisplayField>Renewal_Type__c</errorDisplayField>
+    <errorMessage>Please provide the Renewal Type</errorMessage>
+</ValidationRule>

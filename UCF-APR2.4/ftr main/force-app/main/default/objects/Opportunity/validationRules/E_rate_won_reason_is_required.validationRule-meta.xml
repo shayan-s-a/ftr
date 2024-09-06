@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_rate_won_reason_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL(E_Rate_Won_Reason__c ,&quot;&quot;),
+RecordType.Name = &apos;Opportunity Lightning&apos;,
+ISPICKVAL( StageName , &quot;Closed/Won&quot;),
+ISPICKVAL(Reason_Won_Lost__c, &quot;E-Rate Evaluation&quot;)	)</errorConditionFormula>
+    <errorMessage>When E-Rate Evaluation is selected E-Rate Won Evaluation is required.</errorMessage>
+</ValidationRule>

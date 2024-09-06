@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vlocity_Tier_2_Case</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Comments__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Jira__c</columns>
+    <columns>Related_To2__c</columns>
+    <columns>Vlocity_Actions__c</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>Dev_Defect_Category__c</columns>
+    <columns>Targeted_Date__c</columns>
+    <columns>Create_By_Name__c</columns>
+    <columns>Team_Impacted__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Approved,Awaiting – Business Response,Escalated,In Progress,IT Review,New,On Hold,Pending - Case Closure,Pending User Feedback,Submit a Jira,Waiting for Release</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>lakshmi,Arunkumar,Vlocity Tier 2,Rosalina,Veena,Dileep,Sreeni,raju,abhinav,madhavi,timothy dean,hemantha,tachana,vose,Deana,christine foss,charito go,Harikrishna Jadda</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Sales_Operations_Support,Case.Sales_Operations_Support_Opportunity,Case.Salesforce_Admin</value>
+    </filters>
+    <label>Vlocity - Tier 2 Open</label>
+    <sharedTo>
+        <group>Admin_Users</group>
+        <group>FrontierAdministrators</group>
+        <group>SFDC_Admins</group>
+        <group>Vlocity</group>
+    </sharedTo>
+</ListView>

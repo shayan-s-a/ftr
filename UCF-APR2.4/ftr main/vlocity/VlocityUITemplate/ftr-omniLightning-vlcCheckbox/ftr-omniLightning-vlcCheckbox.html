@@ -1,0 +1,62 @@
+<div class='slds-col--padded slds-size--1-of-1'>
+
+	<ng-form name='loopform' class='slds-form-element vlc-flex vlc-slds-checkbox' ng-repeat='control in child.eleArray'>
+
+		<div class="slds-form-element__control vlc-slds-checkbox">
+            <!-- <label class="slds-checkbox_toggle slds-grid">
+                <span class="slds-form-element__label slds-m-bottom_none">Toggle Label</span>
+                <input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16" aria-describedby="checkbox-toggle-16" />
+                <span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                    <span class="slds-checkbox_on">Enabled</span>
+                    <span class="slds-checkbox_off">Disabled</span>
+                </span>
+            </label> -->
+			<!-- <label class="slds-checkbox"> -->
+			<label class="slds-checkbox_toggle slds-grid">
+                
+                <!-- bubble canceller prevents bubbling of the click events to the checkbox -->
+                <span class="slds-form-element__label vlc-slds-inline-control__label"
+                       vlc-bubble-canceller="test">
+
+                     <!-- OMNI-1963 -->
+                    <span for="{{::control.name}}" class="slds-form-element__label">
+                        {{::control.propSetMap.checkLabel}}
+                    </span>
+
+                    <!-- tooltip template -->
+                    <a vlc-slds-tool-tip="test" nubbin-direction="auto top-left" ng-show="{{control.propSetMap.help}}"> i </a>
+
+                    <div vlc-slds-include="vlcLabelController.html" ng-init="size='responsive'"></div>
+
+                    <span class='vlc-asterix icon-v-asterix'
+                          ng-if='control.req'>
+                    </span>
+
+                </span>
+
+                <!-- <span class="slds-form-element__label"></span> -->
+                
+                <input id='{{::control.name}}'
+                       type='checkbox'
+                       name='loopname'
+                       ng-disabled='control.ro'
+                       ng-model='control.response'
+                       ng-init='init(this, control)'
+                       vlc-slds-check-val-checker="response"
+                       ng-change='aggregate(this, control.index, control.indexInParent, true, -1)' />
+
+                <span id='{{::control.name}}' class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                    <span class="slds-checkbox_on">Enabled</span>
+                    <span class="slds-checkbox_off">Disabled</span>
+                </span>
+
+			</label>
+
+			<div ng-include="::errHTMLId"></div>
+
+		</div>
+
+	</ng-form>
+</div>

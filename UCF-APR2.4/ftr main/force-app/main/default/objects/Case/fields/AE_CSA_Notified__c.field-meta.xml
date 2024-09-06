@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AE_CSA_Notified__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created for First Bill Review case COE and CNP on case 
+00738230 for Jim Power. Replacing AE Notified on COE FBR case due to Order Management uses that field ina process builder.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if the AE or CSA has been notified.</inlineHelpText>
+    <label>AE/CSA Notified</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

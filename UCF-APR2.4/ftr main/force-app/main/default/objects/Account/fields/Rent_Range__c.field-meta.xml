@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rent_Range__c</fullName>
+    <externalId>false</externalId>
+    <label>Rent Range</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 - $1000</fullName>
+                <default>false</default>
+                <label>0 - $1000</label>
+            </value>
+            <value>
+                <fullName>$1000 - $2000</fullName>
+                <default>false</default>
+                <label>$1000 - $2000</label>
+            </value>
+            <value>
+                <fullName>$2000 - $3000</fullName>
+                <default>false</default>
+                <label>$2000 - $3000</label>
+            </value>
+            <value>
+                <fullName>$3000 - $4000</fullName>
+                <default>false</default>
+                <label>$3000 - $4000</label>
+            </value>
+            <value>
+                <fullName>$4000 - $5000</fullName>
+                <default>false</default>
+                <label>$4000 - $5000</label>
+            </value>
+            <value>
+                <fullName>$5000  to higher</fullName>
+                <default>false</default>
+                <label>$5000  to higher</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

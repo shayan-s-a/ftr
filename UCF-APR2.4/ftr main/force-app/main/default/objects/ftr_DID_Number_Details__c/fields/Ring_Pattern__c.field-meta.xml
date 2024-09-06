@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ring_Pattern__c</fullName>
+    <externalId>false</externalId>
+    <label>Ring Pattern</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ring all</fullName>
+                <default>true</default>
+                <label>Ring all</label>
+            </value>
+            <value>
+                <fullName>Ring One at a Time</fullName>
+                <default>false</default>
+                <label>Ring One at a Time</label>
+            </value>
+            <value>
+                <fullName>Round Robin</fullName>
+                <default>false</default>
+                <label>Round Robin</label>
+            </value>
+            <value>
+                <fullName>Longest Idle</fullName>
+                <default>false</default>
+                <label>Longest Idle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

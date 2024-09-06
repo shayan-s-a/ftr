@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Lost_to__c</fullName>
+    <externalId>false</externalId>
+    <label>Competitor Lost to</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Altice</fullName>
+                <default>false</default>
+                <label>Altice</label>
+            </value>
+            <value>
+                <fullName>Atlantic Broadband</fullName>
+                <default>false</default>
+                <label>Atlantic Broadband</label>
+            </value>
+            <value>
+                <fullName>Bel Aire Internet</fullName>
+                <default>false</default>
+                <label>Bel Aire Internet</label>
+            </value>
+            <value>
+                <fullName>Charter</fullName>
+                <default>false</default>
+                <label>Charter</label>
+            </value>
+            <value>
+                <fullName>Comcast</fullName>
+                <default>false</default>
+                <label>Comcast</label>
+            </value>
+            <value>
+                <fullName>Cox</fullName>
+                <default>false</default>
+                <label>Cox</label>
+            </value>
+            <value>
+                <fullName>DIRECTV</fullName>
+                <default>false</default>
+                <label>DIRECTV</label>
+            </value>
+            <value>
+                <fullName>Dish</fullName>
+                <default>false</default>
+                <label>Dish</label>
+            </value>
+            <value>
+                <fullName>Gigamonster</fullName>
+                <default>false</default>
+                <label>Gigamonster</label>
+            </value>
+            <value>
+                <fullName>Hotwire Comm</fullName>
+                <default>false</default>
+                <label>Hotwire Comm</label>
+            </value>
+            <value>
+                <fullName>One Source</fullName>
+                <default>false</default>
+                <label>One Source</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Starry</fullName>
+                <default>false</default>
+                <label>Starry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

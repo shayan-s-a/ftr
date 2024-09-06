@@ -1,0 +1,261 @@
+{
+    "%vlocity_namespace%__Active__c": false,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "CLM CreateContractfromAccount",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/clm/CreateContractfromAccount/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "CLM CreateContractfromAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/clm/CreateContractfromAccount/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "ContractTermStep",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/clm/CreateContractfromAccount/English/ContractTermStep",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "ContractTermStep",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "help": false,
+        "helpText": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "FTR AppA - Options",
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "options": [
+            {
+                "autoAdv": null,
+                "name": "AL FC",
+                "value": "AL FC"
+            },
+            {
+                "autoAdv": null,
+                "name": "AZ CTC",
+                "value": "AZ CTC"
+            },
+            {
+                "autoAdv": null,
+                "name": "AZ F13",
+                "value": "AZ F13"
+            },
+            {
+                "autoAdv": null,
+                "name": "AZ Navajo",
+                "value": "AZ Navajo"
+            },
+            {
+                "autoAdv": null,
+                "name": "CA CTC",
+                "value": "CA CTC"
+            },
+            {
+                "autoAdv": null,
+                "name": "CA CTF",
+                "value": "CA CTF"
+            },
+            {
+                "autoAdv": null,
+                "name": "CA F13",
+                "value": "CA F13"
+            },
+            {
+                "autoAdv": null,
+                "name": "CT ",
+                "value": "CT "
+            },
+            {
+                "autoAdv": null,
+                "name": "FL CTF",
+                "value": "FL CTF"
+            },
+            {
+                "autoAdv": null,
+                "name": "FL FC",
+                "value": "FL FC"
+            },
+            {
+                "autoAdv": null,
+                "name": "GA ",
+                "value": "GA "
+            },
+            {
+                "autoAdv": null,
+                "name": "IA ",
+                "value": "IA "
+            },
+            {
+                "autoAdv": null,
+                "name": "IL CTC",
+                "value": "IL CTC"
+            },
+            {
+                "autoAdv": null,
+                "name": "IL F13",
+                "value": "IL F13"
+            },
+            {
+                "autoAdv": null,
+                "name": "IN F13",
+                "value": "IN F13"
+            },
+            {
+                "autoAdv": null,
+                "name": "IN FC",
+                "value": "IN FC"
+            },
+            {
+                "autoAdv": null,
+                "name": "MI F13",
+                "value": "MI F13"
+            },
+            {
+                "autoAdv": null,
+                "name": "MI FC",
+                "value": "MI FC"
+            },
+            {
+                "autoAdv": null,
+                "name": "MN CTC",
+                "value": "MN CTC"
+            },
+            {
+                "autoAdv": null,
+                "name": "MN FC",
+                "value": "MN FC"
+            },
+            {
+                "autoAdv": null,
+                "name": "MS ",
+                "value": "MS "
+            },
+            {
+                "autoAdv": null,
+                "name": "NC ",
+                "value": "NC "
+            },
+            {
+                "autoAdv": null,
+                "name": "NE ",
+                "value": "NE "
+            },
+            {
+                "autoAdv": null,
+                "name": "NM ",
+                "value": "NM "
+            },
+            {
+                "autoAdv": null,
+                "name": "NV CTC",
+                "value": "NV CTC"
+            },
+            {
+                "autoAdv": null,
+                "name": "NV F13",
+                "value": "NV F13"
+            },
+            {
+                "autoAdv": null,
+                "name": "NY ",
+                "value": "NY "
+            },
+            {
+                "autoAdv": null,
+                "name": "OH ",
+                "value": "OH "
+            },
+            {
+                "autoAdv": null,
+                "name": "PA CTC FC",
+                "value": "PA CTC FC"
+            },
+            {
+                "autoAdv": null,
+                "name": "PA CW",
+                "value": "PA CW"
+            },
+            {
+                "autoAdv": null,
+                "name": "SC ",
+                "value": "SC "
+            },
+            {
+                "autoAdv": null,
+                "name": "TN ",
+                "value": "TN "
+            },
+            {
+                "autoAdv": null,
+                "name": "TX ",
+                "value": "TX "
+            },
+            {
+                "autoAdv": null,
+                "name": "UT CTC Navajo",
+                "value": "UT CTC Navajo"
+            },
+            {
+                "autoAdv": null,
+                "name": "WI CTC FC",
+                "value": "WI CTC FC"
+            },
+            {
+                "autoAdv": null,
+                "name": "WI F13",
+                "value": "WI F13"
+            },
+            {
+                "autoAdv": null,
+                "name": "WV CTC",
+                "value": "WV CTC"
+            },
+            {
+                "autoAdv": null,
+                "name": "WV F13",
+                "value": "WV F13"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "FTR AppA",
+                        "field": "WholesaleTemplateNames"
+                    }
+                ]
+            }
+        },
+        "showInputWidth": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Select",
+    "Name": "FTRAppAOptions",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/clm/CreateContractfromAccount/English/FTRAppAOptions"
+}

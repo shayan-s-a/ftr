@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Progress_Order_2</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Progress Order</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/flow/Order_Flow_test2?vOrdID={!Order.Id}&amp;vStatus={!TEXT(Order.Order_Stage__c)}&amp;vAccountEcec={!Order.Order_Point_of_ContactId__c}&amp;retURL=/{!Order.Id}</url>
+</WebLink>

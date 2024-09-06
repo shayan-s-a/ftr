@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CRIS ID</label>
+    <protected>false</protected>
+    <values>
+        <field>ApplicableProducts__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ErrorMessage__c</field>
+        <value xsi:type="xsd:string">AE CRIS # must be a 6 digit number</value>
+    </values>
+    <values>
+        <field>ExcludeProducts__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field__c</field>
+        <value xsi:type="xsd:string">Selling_Representative_CRIS__c</value>
+    </values>
+    <values>
+        <field>IsEnabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>IsRequired__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Object__c</field>
+        <value xsi:type="xsd:string">Order</value>
+    </values>
+    <values>
+        <field>Operator__c</field>
+        <value xsi:type="xsd:string">regex</value>
+    </values>
+    <values>
+        <field>ValidateOn__c</field>
+        <value xsi:type="xsd:string">Request SE Review</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">^\d{1,6}$</value>
+    </values>
+</CustomMetadata>

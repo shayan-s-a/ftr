@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FTR_DisconnectDte__c</fullName>
+    <description>Most recent disconnect date of the address, sourced from DPI WTN Master. Date format YYYY-MM-DD. ADDRESS ONLY JOIN.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Record the last date services were disconnected at this address.</inlineHelpText>
+    <label>Last Disconnect Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

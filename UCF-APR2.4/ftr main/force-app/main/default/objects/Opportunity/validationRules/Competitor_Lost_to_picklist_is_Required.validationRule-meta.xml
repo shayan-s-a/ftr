@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Lost_to_picklist_is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+RecordType.Name = &apos;Community Connections&apos;, 
+ISBLANK(TEXT(Competitor_Lost_to_picklist__c)),
+OR(
+ISPICKVAL(Closed_Lost_Reason__c, &quot;Price&quot;),
+ISPICKVAL(Closed_Lost_Reason__c, &quot;Lack of FTR video installs&quot;),
+ISPICKVAL(Closed_Lost_Reason__c, &quot;No fiber availability&quot;),
+ISPICKVAL(Closed_Lost_Reason__c, &quot;Low data speeds&quot;),
+ISPICKVAL(Closed_Lost_Reason__c, &quot;No video bulk&quot;),
+ISPICKVAL(Closed_Lost_Reason__c, &quot;Delay in providing proposal&quot;),
+ISPICKVAL(Closed_Lost_Reason__c, &quot;Other&quot;)))</errorConditionFormula>
+    <errorMessage>&quot;Competitor Lost to&quot; field is required if &quot;Closed/Lost Reason&quot; is entered.</errorMessage>
+</ValidationRule>

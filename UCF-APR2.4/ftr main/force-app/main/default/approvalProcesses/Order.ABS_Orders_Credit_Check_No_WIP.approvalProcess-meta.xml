@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>OrderNumber</field>
+        <field>Owner</field>
+        <field>Total_ABS_Revenue__c</field>
+        <field>ABS_Order_Request_Type__c</field>
+        <field>Leased__c</field>
+        <field>ABS_Downpayment__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_QA_Review</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>ABS</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Order is waiting to be assigned</description>
+        <label>Pending ABS Assingment</label>
+        <name>Pending_ABS_Assingment</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_Credit_Check</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Review the order and documenation</description>
+        <label>Quality Assurance Review</label>
+        <name>Quality_Assurance_Review</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_Waiting_on_Downpayment</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Orders that require a credit check</description>
+        <label>Credit Check</label>
+        <name>Credit_Check</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_Ordering</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Verify if Down Payment is required</description>
+        <label>Verify Down Payment</label>
+        <name>Verify_Down_Payment</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Orders being placed during this stage</description>
+        <label>Order Writing</label>
+        <name>Order_Writing</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_Complete</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Order Complete</label>
+        <name>Order_Complete</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Used for Record Type ABS Orders that need a credit check and not added to the WIP</description>
+    <emailTemplate>unfiled$public/Order_Approval_Notification</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>ABS Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.ABS_Order_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Maintenance: New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.ABS_Order_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Maintenance: Auto-Renew</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Total_ABS_Revenue__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>15000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Leased__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Stage_to_Complete</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Order_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Reject_to_AE</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Lock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Owner_to_ABS</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Stage_to_Pending_Assignment</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>ABS Orders - Credit Check No WIP</label>
+    <processOrder>16</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>OrderNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Owner_to_Network_COE_UCaas</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Stage_to_In_Progress</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Project_Management</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Project Management team will review all necessary documents before progressing the order.</description>
+        <label>Project Management QA Review</label>
+        <name>Project_Management_QA_Review</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Network_COE_UCaas</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Network COE/CPE team will monitor all cases for completion and move order to complete status</description>
+        <label>Network COE Approval</label>
+        <name>Network_COE_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Used for Ucaas Disconnect Orders created after 12/15/2020</description>
+    <emailTemplate>unfiled$public/FAW_UcaaS_Order_Notification</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>UCaaS Disconnect Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.CreatedDate</field>
+            <operation>greaterThan</operation>
+            <value>12/14/2020 5:00 PM</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Stage_to_Complete</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Reject_to_AE</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Lock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Owner_to_Project_Management</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Stage_to_In_Progress</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>UCF Orders for Disconnect</label>
+    <processOrder>20</processOrder>
+    <recallActions>
+        <action>
+            <name>Reject_to_AE</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

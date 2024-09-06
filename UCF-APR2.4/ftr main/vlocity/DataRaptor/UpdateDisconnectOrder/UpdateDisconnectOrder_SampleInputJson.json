@@ -1,0 +1,248 @@
+{
+    "CheckOrderItemsStatus": true,
+    "Contacts": [
+        {
+            "ContactEmail": "eric.marcondes@ftr.com",
+            "ContactId": "0036C00000mdbtXQAQ",
+            "ContactName": "Eric Marcondes",
+            "ContactPhone": "5555551234",
+            "SelectContact": "Eric Marcondes"
+        },
+        {
+            "ContactEmail": "johntest@test.com",
+            "ContactId": "0036C00000mdc4XQAQ",
+            "ContactName": "John Test",
+            "ContactPhone": "5555551234",
+            "SelectContact": "John Test"
+        },
+        {
+            "ContactEmail": "test@contacttest.com",
+            "ContactId": "0036C00000mdc8HQAQ",
+            "ContactName": "Test Contact",
+            "ContactPhone": "5555555555",
+            "SelectContact": "Test Contact"
+        },
+        {
+            "ContactEmail": "hemantha.gujjar@ftr.com",
+            "ContactId": "0036C00000ltmryQAA",
+            "ContactName": "Hemantha Gujjar",
+            "ContactPhone": "4081231234",
+            "SelectContact": "Hemantha Gujjar"
+        }
+    ],
+    "ContextId": "02i6C00000A3a8bQAB+02i6C00000A3a7sQAB",
+    "FormattedRequestedDate": "7/1/2022",
+    "GetOrderDetails": {
+        "OrderProducts": "EIA",
+        "OrderStage": "New",
+        "ParentAccountId": "0016C00000i4gJDQAY"
+    },
+    "GetOrderDetailsStatus": true,
+    "GetOrderProductFieldsStatus": true,
+    "LineItems": [
+        {
+            "Attributes": {
+                "All To One Bundling": null,
+                "BTN": null,
+                "Broadband Service Category": null,
+                "CKTID SNE": null,
+                "COMPANY INDICATOR": "374",
+                "CityAbbreviation": null,
+                "Class of Service": "Silver",
+                "Control Number": null,
+                "Copper Tier": "Tier 2",
+                "CorrelationId": null,
+                "DSAT ID": "1666632",
+                "ENTERPRISE  DOMAIN ID": null,
+                "EVC Type": null,
+                "Environment": null,
+                "Fiber Tier": "Tier 1",
+                "GroupOrderTransactionCount": null,
+                "High Availability": false,
+                "IP_OneTimeTotal": null,
+                "IP_Quantity": null,
+                "IP_RecurringCharge": null,
+                "IP_SNE_Code_MRC": null,
+                "IP_SNE_Code_OTC": null,
+                "IP_SNE_Code_TERM": null,
+                "InFootprint": "No",
+                "Is Discount Flag": "No",
+                "Jurisdiction": null,
+                "Level": "b",
+                "LitBuilding": "No",
+                "MRC SNE": null,
+                "Managed Firewall": null,
+                "Market": "D",
+                "NPA NXX": "727522",
+                "NSG TYPE": null,
+                "RUID #1 Originating CE-VLAN ID": null,
+                "Rate Code": null,
+                "SDWAN Flag": "N",
+                "Speed": "1 Gbps",
+                "TERM SNE": null,
+                "Term": "36 Months",
+                "Transport": null,
+                "WC CLLI": "LLMNFLXA",
+                "WC QoS": "Platinum",
+                "WC Speed": "1000MB",
+                "WTN": null
+            },
+            "ItemId": "8026C000001L61aQAC",
+            "PremiseDetail": "4111 16th Street North, St. Petersburg, FL  33703",
+            "Product": "DIA (Dedicated Internet Access)",
+            "ServiceAccount": {
+                "City": "St. Petersburg",
+                "Id": "0016C00000i4gLJQAY",
+                "PostalCode": "33703",
+                "StateCode": "FL",
+                "Street": "4111 16th Street North"
+            }
+        },
+        {
+            "Attributes": {
+                "Class of Service": null,
+                "Copper Tier": null,
+                "DSAT ID": null,
+                "Fiber Tier": null,
+                "IP Address": null,
+                "IP Blocks": "/27 = 29 IPs",
+                "IP Request Tracking Number": null,
+                "Level": "a",
+                "MRC SNE": null,
+                "Market": "B",
+                "NRC SNE": null,
+                "Speed": null,
+                "Term": "36 Months",
+                "Topology": "Flat"
+            },
+            "ItemId": "8026C000001L61bQAC",
+            "PremiseDetail": "4111 16th Street North, St. Petersburg, FL  33703",
+            "Product": "IP",
+            "ServiceAccount": {
+                "City": "St. Petersburg",
+                "Id": "0016C00000i4gLJQAY",
+                "PostalCode": "33703",
+                "StateCode": "FL",
+                "Street": "4111 16th Street North"
+            }
+        },
+        {
+            "Attributes": {
+                "BTN": null,
+                "COMPANY INDICATOR": "374",
+                "CityAbbreviation": null,
+                "Comments": null,
+                "Control Number": null,
+                "CorrelationId": null,
+                "DIA Managed Router Model": null,
+                "DSAT ID": null,
+                "EVPL_OneTimeTotal": null,
+                "EVPL_Quantity": null,
+                "EVPL_RecurringCharge": null,
+                "EVPL_SNE_Code_MRC": null,
+                "EVPL_SNE_Code_OTC": null,
+                "EVPL_SNE_Code_TERM": null,
+                "Environment": null,
+                "Frame Size": "<=1600",
+                "GroupOrderTransactionCount": null,
+                "HostToEVPL": null,
+                "Jurisdiction": "Interstate",
+                "M6 Circuit ID": null,
+                "Mounting Spec": null,
+                "NPA NXX": "727522",
+                "Negotiation": "Auto",
+                "PSR_Managed_Device_UNI": null,
+                "Physical Medium": "Fiber Single Mode 1310nm",
+                "Port Speed": "1G",
+                "Rate Code": null,
+                "Rollup Bandwidth": null,
+                "Service Multiplexed": null,
+                "Speed": "1 Gbps",
+                "UNI Mode": "Full Duplex",
+                "VLAN Tag Config": "Untagged",
+                "WC CLLI": null,
+                "WC QoS": null,
+                "WTN": "0000000000"
+            },
+            "ItemId": "8026C000001L61cQAC",
+            "PremiseDetail": "4111 16th Street North, St. Petersburg, FL  33703",
+            "Product": "User to Network Interface (UNI) Port",
+            "ServiceAccount": {
+                "City": "St. Petersburg",
+                "Id": "0016C00000i4gLJQAY",
+                "PostalCode": "33703",
+                "StateCode": "FL",
+                "Street": "4111 16th Street North"
+            }
+        }
+    ],
+    "Request DateTime": {
+        "CalculatedDaysBetween": 1,
+        "CompanyInfo": {
+            "BillingTelephoneNumber": "4084803071",
+            "CompanyId": "0016C00000i4gJDQAY",
+            "CompanyName": "Target Corp",
+            "NewContact": false,
+            "OwnerId": "005E00000066qfxIAA",
+            "SelectContact-Block": {
+                "ContactEmail": "eric.marcondes@ftr.com",
+                "ContactId": "0036C00000mdbtXQAQ",
+                "ContactName": "Eric Marcondes",
+                "ContactPhone": "5555551234",
+                "SelectContact": "Eric Marcondes"
+            }
+        },
+        "DisconnectComment": "test",
+        "DisconnectReason": "Downgrade",
+        "DisconnectType": "Product Availability",
+        "NumberOfDaysLimit": 30,
+        "RequestDateTime": "2022-07-02",
+        "RequestedEffectiveDate": "2022-07-03",
+        "RequestedEffectiveDateValidationMessage": true
+    },
+    "RetentionWorkflow": {
+        "OtherProviderName": null,
+        "WentToAnotherProvider": null,
+        "WillingToSpeakWithAccountManager": null
+    },
+    "SetProductsFieldOnOrder": {
+        "error": "OK",
+        "errorCode": "INVOKE-200"
+    },
+    "SetProductsFieldOnOrderStatus": true,
+    "accountId": "0016C00000i4gJDQAY",
+    "assetIdList": [
+        "02i6C00000A3a7sQAB",
+        "02i6C00000A3a7tQAB",
+        "02i6C00000A3a8bQAB"
+    ],
+    "canCreateFDO": true,
+    "disconnectedAssets": false,
+    "error": "OK",
+    "fdoId": "8016C000000V0QKQA0",
+    "id": "02i6C00000A3a8bQAB+02i6C00000A3a7sQAB",
+    "inputFields": {
+        "Product_Type__c": "Ethernet",
+        "Product__c": "EIA",
+        "Router_s__c": "No Router"
+    },
+    "isdtp": "p1",
+    "layout": "lightning",
+    "options": {
+        "chainable": false,
+        "ignoreCache": true,
+        "queueableChainable": false,
+        "resetCache": false,
+        "useQueueableApexRemoting": false
+    },
+    "sfdcIFrameHost": "web",
+    "sfdcIFrameOrigin": "https://ftr--devmacd--vlocity-cmt.visualforce.com",
+    "timeStamp": "2022-02-25T21:38:44.312Z",
+    "userCurrencyCode": "USD",
+    "userId": "0050h00000IQYfgAAH",
+    "userName": "eric.marcondes@ftr.com.devmacd",
+    "userProfile": "Frontier System Administrator",
+    "userTimeZone": -480,
+    "vlcPersistentComponent": {
+    }
+}

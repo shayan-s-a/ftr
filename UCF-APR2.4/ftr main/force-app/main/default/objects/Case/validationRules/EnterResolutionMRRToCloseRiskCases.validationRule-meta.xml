@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EnterResolutionMRRToCloseRiskCases</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;Risk&quot;, 
+ISPICKVAL(Status, &quot;Closed&quot;),
+OR(
+ISBLANK(TEXT(Resolution__c)),
+ISNULL(MRR__c)
+)
+)</errorConditionFormula>
+    <errorMessage>Please enter Resolution and MRR to close Risk Case</errorMessage>
+</ValidationRule>

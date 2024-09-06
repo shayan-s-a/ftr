@@ -1,0 +1,26 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"ATTR_ELIGBL_PARTNRD\",\"left-side-name\":\"Partnered\",\"left-side-type\":\"attribute\",\"left-side-category\":\"Eligibility Attributes\",\"left-side-datatype\":\"Checkbox\",\"op\":\"=\",\"right-side\":\"true\"}",
+        "%vlocity_namespace%__GlobalKey__c": "779fdc68-220a-bc61-7db0-6147e827c2ce",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "Ereach",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/Ereach",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9fdbbb88-6d20-7b21-be34-ae08fe26cd7f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/9fdbbb88-6d20-7b21-be34-ae08fe26cd7f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "9fdbbb88-6d20-7b21-be34-ae08fe26cd7f",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "EVPL Z Ereach Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/EVPL Z Ereach Scenario/779fdc68-220a-bc61-7db0-6147e827c2ce/Product2/9fdbbb88-6d20-7b21-be34-ae08fe26cd7f"
+    }
+]

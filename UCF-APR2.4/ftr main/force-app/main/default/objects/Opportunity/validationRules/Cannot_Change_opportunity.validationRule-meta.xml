@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_opportunity</fullName>
+    <active>true</active>
+    <description>Cannont change any fileds in an opportuntiy after 3 days.</description>
+    <errorConditionFormula>AND( OR(ISPICKVAL(Mrg_Approved__c, &quot;Closed (Ink)&quot;), ISPICKVAL(PRIORVALUE(Mrg_Approved__c), &quot;Closed (Ink)&quot;)), OR((($Profile.Name = &quot;RegionalSalesMgr&quot;)), ($Profile.Name = &quot;AccountExec&quot;), ( $Profile.Name = &quot;VicePres&quot;)), ( TODAY() - Approved_Date__c &gt; 3))</errorConditionFormula>
+    <errorMessage>You cannot make any changes to an opportunity after 3 days of Manager Approval Date</errorMessage>
+</ValidationRule>

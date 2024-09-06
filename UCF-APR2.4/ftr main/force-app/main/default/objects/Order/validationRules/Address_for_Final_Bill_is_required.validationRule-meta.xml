@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_for_Final_Bill_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Send_Final_Bill_to_Current_Bill_Address__c ,&quot;No&quot;),
+ISBLANK(Address_for_Final_Bill__c ))</errorConditionFormula>
+    <errorMessage>If Send Final Bill to Current Bill Address? is No then Address for Final Bill? is required.</errorMessage>
+</ValidationRule>

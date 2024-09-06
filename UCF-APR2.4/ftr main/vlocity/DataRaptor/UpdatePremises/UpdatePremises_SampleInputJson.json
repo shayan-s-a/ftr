@@ -1,0 +1,87 @@
+{
+    "ContextId": "",
+    "DSATAddressValidationSuccessResponse": {
+        "AQRecordId": null,
+        "BusinessName": "",
+        "CPQId": "",
+        "CopperDistance": "7332",
+        "CopperQualification": "Qualified (up to 50MB)",
+        "CopperTier": "Tier 2",
+        "CreatedBy": "VFO user Vlocity and company ABCDE",
+        "CreatedById": 30267,
+        "CreatorEmail": "SIFT.App.Support@ftr.com",
+        "EReachProviders": [
+        ],
+        "FiberDistance": "613",
+        "FiberQualification": "Qualified (max WC speed)",
+        "FiberTier": "Tier 1",
+        "FullStateName": "Connecticut",
+        "Id": 1643753,
+        "InFootprint": true,
+        "Level": "b",
+        "LitBuilding": true,
+        "M6OrderNumber": null,
+        "Market": "E",
+        "Opened": "2020-09-24T15:35:57.8306273-04:00",
+        "OpportunityId": "",
+        "Products": [
+            "EIA",
+            "EVPL",
+            "ELAN",
+            "IPVPN",
+            "Jumbo Frames",
+            "EPL",
+            "Connect Cloud",
+            "EPath",
+            "EReach"
+        ],
+        "ProductsPretty": "EIA,EVPL,ELAN,IPVPN,Jumbo Frames,EPL,Connect Cloud,EPath,EReach",
+        "QualifiedAddress": {
+            "Address": "1 Blachley Road",
+            "City": "Stamford",
+            "Latitude": 41.0514561,
+            "Longitude": -73.51597439999999,
+            "State": "CT",
+            "ZipCode": "06902"
+        },
+        "SiteName": null,
+        "VFORecordId": null,
+        "WireCenterCLLI": "SMFRCT01",
+        "WireCenterQoS": "Platinum",
+        "WireCenterSpeed": "1000MB"
+    },
+    "DisplayServiceLocation": "",
+    "FetchStateCode": {
+        "StateLabel": "CT",
+        "StateName": "Connecticut"
+    },
+    "FetchStateCodeStatus": true,
+    "MoveStateNameStatus": true,
+    "ParentAccountId": "",
+    "QueryPremise": {
+        "error": "OK",
+        "errorCode": "INVOKE-200",
+        "premises": {
+            "%vlocity_namespace%__City__c": "Stamford",
+            "%vlocity_namespace%__PostalCode__c": "06902",
+            "%vlocity_namespace%__State__c": "CT",
+            "%vlocity_namespace%__StreetAddress__c": "1 Blachley Road",
+            "Id": "aAcK00000008UsRKAU",
+            "Key__c": "fd7tUk8cTh+wi+KfbNysZmjgQUE0bp6gK6GvdQaqt20=",
+            "attributes": {
+                "type": "%vlocity_namespace%__Premises__c",
+                "url": "/services/data/v50.0/sobjects/%vlocity_namespace%__Premises__c/aAcK00000008UsRKAU"
+            }
+        }
+    },
+    "QueryPremiseStatus": true,
+    "QuoteId": "",
+    "checkQualifiedAddress": {
+        "isQualifiedAddress": false,
+        "isQuoteIdNull": true
+    },
+    "checkQualifiedAddressStatus": true,
+    "options": {
+        "chainable": false
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDT_is_Required_1__c</fullName>
+    <externalId>false</externalId>
+    <formula>Opportunity__r.BDT_is_Required__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field auto-populates from the Opportunity record and applies only to E-Rate</inlineHelpText>
+    <label>BDT is Required (E-Rate)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

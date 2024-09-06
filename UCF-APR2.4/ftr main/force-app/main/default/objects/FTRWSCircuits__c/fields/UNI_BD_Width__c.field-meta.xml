@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UNI_BD_Width__c</fullName>
+    <description>Uni bandwidth value derived based on the UNI_NNI_NC mapping</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(UNI_NNI_NC__c)) ,  IF(CONTAINS(UNI_NNI_NC__c, &quot;KQ&quot;) , &quot;100Mbps&quot;,  IF(CONTAINS(UNI_NNI_NC__c, &quot;KR&quot;), &quot;1Gbps&quot;,IF(CONTAINS(UNI_NNI_NC__c, &quot;KS&quot;), &quot;10Gbps&quot;,  IF(CONTAINS(UNI_NNI_NC__c, &quot;KU&quot;),&quot;100Gbps&quot;,  &quot;&quot;) ) ) ), &quot;&quot;)</formula>
+    <label>UNI BDW</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

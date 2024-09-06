@@ -1,0 +1,50 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"Order.Ring_Central_Product_Count__c\",\"left-side-type\":\"field-OrderItem\",\"left-side-datatype\":\"string\",\"op\":\"<=\",\"right-side\":\"10\"}",
+        "%vlocity_namespace%__GlobalKey__c": "298af8c1-145d-a819-55d2-8f1456681746",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "E2E Master Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/E2E Master Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e2e80e32-1ece-d461-ed5a-ae271e08ba79",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e2e80e32-1ece-d461-ed5a-ae271e08ba79",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "e2e80e32-1ece-d461-ed5a-ae271e08ba79",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "RingCentral Basic Seat Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/RingCentral Basic Seat Scenario/298af8c1-145d-a819-55d2-8f1456681746/Product2/e2e80e32-1ece-d461-ed5a-ae271e08ba79"
+    },
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"Order.Ring_Central_Product_Count__c\",\"left-side-type\":\"field-OrderItem\",\"left-side-datatype\":\"string\",\"op\":\"<=\",\"right-side\":\"9\"}",
+        "%vlocity_namespace%__GlobalKey__c": "be6ac843-9dd2-ddb1-eb71-b004111eecc6",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "E2E Master Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/E2E Master Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e2e80e32-1ece-d461-ed5a-ae271e08ba79",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e2e80e32-1ece-d461-ed5a-ae271e08ba79",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "e2e80e32-1ece-d461-ed5a-ae271e08ba79",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "RingCentral Basic Seat Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/RingCentral Basic Seat Scenario/be6ac843-9dd2-ddb1-eb71-b004111eecc6/Product2/e2e80e32-1ece-d461-ed5a-ae271e08ba79"
+    }
+]

@@ -1,0 +1,819 @@
+<template>
+  <template if:true={showTable}>
+   <!--For User Selection DropDown-->
+   <div if:true={showLoader}>
+          <div class="exampleHolder">
+        		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+			 </div>
+    </div>    
+
+   <div if:false={showLoader} class="slds-box slds-theme_default">
+        <div class="slds-tabs_default slds-tabs_default__item  custom-tab_buttons">
+            <div class="slds-button-group" role="group">
+                <button class={tab1Class} onclick={handleSelectTab} data-name="tab1">MLHG Schedules</button>
+                <button class={tab2Class} onclick={handleSelectTab} data-name="tab2">MLHG Set Up</button>
+                 
+            </div>
+        </div>
+        <div>
+            <template if:true={isTab1Selected}>
+                <br>
+               <h6>Schedules</h6>
+               <br>
+         <template if:true={schedules}>
+            <lightning-card title="">
+               <table class="slds-table slds-table_bordered slds-table_cell-buffer" style="height:100%">
+                  <thead>
+                     <tr>
+                        <th scope="col" data-field-name="UCF_Name__c" onclick={handleSorting} style="cursor: pointer">Schedule Name
+                           <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                        </th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <template for:each={schedules} for:item="item" for:index="index">
+                        <tr key={item.Id}>
+                           <td>{item.UCF_Name__c}</td>
+                           <td>
+                              <template if:false={isnetworktranslation}>
+                              <div >
+                                 <lightning-button-icon
+                                    icon-name="utility:edit"
+                                    alternative-text="Edit"
+                                    title="Edit"
+                                    variant="bare"
+                                    onclick={toggleEditMode}
+                                    data-item-id={item.Id}
+                                    data-item-index={index}
+                                    >
+                                 </lightning-button-icon>
+                              </div>
+                              </template>
+                           </td>
+                           <td>
+                              <template if:false={isnetworktranslation}>
+                              <lightning-button-icon
+                                 icon-name="utility:delete"
+                                 alternative-text="Delete"
+                                 title="Delete"
+                                 variant="bare"
+                                 onclick={deleteItem}
+                                 data-item-id={item.Id}
+                                 data-item-index={index}>
+                              </lightning-button-icon>
+                              </template>
+                           </td>
+                        </tr>
+                     </template>
+                  </tbody>
+               </table>
+               <div class="slds-grid slds-wrap">
+                  <!-- Text Input with half width -->
+                  <div class="bg-color slds-col slds-size_1-of-2" >
+                     <input 
+                        type="text" 
+                        id="scheduleName" 
+                        class="slds-input" 
+                        value={scheduleName} 
+                        onchange={handleScheduleNameChange} 
+                        data-field-name="Ucf_Name__c"
+                        maxlength="32"
+                        placeholder="New Schedule Name..." />
+                  </div>
+                  <!-- Add Button with icon -->
+
+                  <div class="slds-col slds-size_1-of-2 slds-text-align_right">
+                     <template if:false={isnetworktranslation}>
+                     <lightning-button-icon 
+                        icon-name="utility:add"  
+                        size="large" 
+                        variant="bare" 
+                        alternative-text="Add" 
+                        onclick={addScheduleRow} 
+                        class="slds-float_right">
+                     </lightning-button-icon>
+                     </template>
+                  </div>
+               </div>
+            </lightning-card>
+            <!-- modal --->
+            <!-- Modal Popup -->
+            <lightning-card>
+               <template if:true={isModalOpen}>
+                              <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+                                     <div class="slds-modal__container" style="max-width: 50%; width: auto;">
+                        <header class="slds-modal__header">
+                           <h2 class="slds-modal__title">Schedules</h2>
+                        </header>
+                        <div class="slds-modal__content">
+                           <div class="">
+                              <!-- 24/7 Section -->
+                              <div class="slds-m-bottom_small section-style slds-m-around_small slds-m-right_large" onclick={toggleSection} data-id="24/7">
+                                 <!--<button label="> 24/7" variant="base" onclick={toggleSection} data-id="24/7"></button>-->
+                                 <h3 class="button-text">> 24/7</h3>
+                              </div>
+                              <template if:true={is247Expanded}>
+                                    <div class="slds-grid slds-wrap slds-gutters">
+                           
+                              <div class="slds-col slds-size_1-of-3 slds-m-left_medium">
+                                 <lightning-input 
+                                    type="text" 
+                                    label="Overflow Timer (0-60 sec)" 
+                                    name="OFT" 
+                                    onkeypress={validateInputForNumber}  maxlength="2"
+                                    value={overflowT24}
+                                    onchange={handleInputChangeModal} 
+                                    >
+                                 </lightning-input>
+                              </div>
+                             <!-- <div class="slds-col slds-size_1-of-3">
+                              </div>-->
+                              <div class="slds-col slds-size_1-of-3 slds-col_bump-left slds-m-right_large">
+                                 <lightning-input 
+                                    type="text" 
+                                    onkeypress={validateInputForNumber2}
+                                    label="Overflow Destination" 
+                                    name="OFD" 
+                                    
+                                    onchange={handleInputChangeModal} 
+                                    value={overflowD24}
+                                    >
+                                 </lightning-input>
+                              </div>
+                           </div>
+                            
+                              </template>
+                           </div>
+                           
+                           <div class="slds-m-bottom_small section-style  slds-m-around_small " onclick={toggleSection} data-id="Open">
+                              <!--<lightning-button label="> Open" variant="base" onclick={toggleSection} data-id="Open"></lightning-button>-->
+                              <h3 class="button-text">> Open</h3>
+                           </div>
+                           <template if:true={isOpenExpanded}>
+                              <div class="slds-m-around_small">
+                                 <div class="slds-m-around_small">
+                                    <div class="slds-box slds-theme_default">
+                                       <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                                          <thead>
+                                             <tr class="slds-line-height_reset">
+                                                <th class="" scope="col">
+                                                   <div class="slds-truncate" title="Day">Day</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                   <div class="slds-truncate" title="Start Time">Start</div>
+                                                </th>
+                                                <th class="" scope="col">
+                                                   <div class="slds-truncate" title="End Time">Stop</div>
+                                                </th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr class="slds-hint-parent">
+                                                <td>
+                                                   <input type="text" class="slds-input" value="Monday" name="monDay" readonly />
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="mondayStartTime" 
+                                                      variant="label-hidden" 
+                                                      value={mondayStartTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={mondayStartTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="mondayEndTime" 
+                                                      variant="label-hidden" 
+                                                      value={mondayEndTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={mondayEndTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                             </tr>
+                                             <tr class="slds-hint-parent">
+                                                <td>
+                                                   <input type="text" class="slds-input"  value="Tuesday" name="tueDay" readonly />
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="tuesdayStartTime" 
+                                                      variant="label-hidden" 
+                                                      value={tuesdayStartTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={tuesdayStartTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="tuesdayEndTime" 
+                                                      variant="label-hidden" 
+                                                      value={tuesdayEndTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={tuesdayEndTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                             </tr>
+                                             <tr class="slds-hint-parent">
+                                                <td>
+                                                   <input type="text" class="slds-input" value="Wednesday" name="wedDay" readonly />
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="wednesdayStartTime" 
+                                                      variant="label-hidden" 
+                                                      value={wednesdayStartTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={wednesdayStartTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="wednesdayEndTime" 
+                                                      variant="label-hidden" 
+                                                      value={wednesdayEndTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={wednesdayEndTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                             </tr>
+                                             <tr class="slds-hint-parent">
+                                                <td>
+                                                   <input type="text" class="slds-input" value="Thursday" name="thuDay" readonly />
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="thursdayStartTime" 
+                                                      variant="label-hidden" 
+                                                      value={thursdayStartTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={thursdayStartTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="thursdayEndTime" 
+                                                      variant="label-hidden" 
+                                                      value={thursdayEndTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={thursdayEndTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                             </tr>
+                                             <tr class="slds-hint-parent">
+                                                <td>
+                                                   <input type="text" class="slds-input" value="Friday" name="friDay" readonly />
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="fridayStartTime" 
+                                                      variant="label-hidden" 
+                                                      value={fridayStartTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={fridayStartTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="fridayEndTime" 
+                                                      variant="label-hidden" 
+                                                      value={fridayEndTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={fridayEndTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                             </tr>
+                                             <tr class="slds-hint-parent">
+                                                <td>
+                                                   <input type="text" class="slds-input" value="Saturday" name="satDay" readonly />
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="saturdayStartTime" 
+                                                      variant="label-hidden" 
+                                                      value={saturdayStartTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={saturdayStartTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="saturdayEndTime" 
+                                                      variant="label-hidden" 
+                                                      value={saturdayEndTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={saturdayEndTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                             </tr>
+                                             <tr class="slds-hint-parent">
+                                                <td>
+                                                   <input type="text" class="slds-input" value="Sunday" name="sunDay" readonly />
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="sundayStartTime" 
+                                                      variant="label-hidden" 
+                                                      value={sundayStartTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={sundayStartTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                                <td>
+                                                   <lightning-combobox name="sundayEndTime" 
+                                                      variant="label-hidden" 
+                                                      value={sundayEndTime}
+                                                      options={timeOptions}
+                                                      onchange={handleInputChangeModal} 
+                                                      selected={sundayEndTime}>
+                                                   </lightning-combobox>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div> 
+                                 <br/>
+
+                                 <div class="slds-grid slds-wrap slds-gutters">
+                                    <div class="slds-col slds-size_1-of-3 slds-m-left_medium">
+                                       <lightning-input 
+                                          type="text" 
+                                          label="Overflow Timer (0-60 sec)" 
+                                          name="openOFT" 
+                                          onkeypress={validateInputForNumber}  maxlength="2"
+                                          value={overflowTOpen}
+                                          onchange={handleInputChangeModal} 
+                                          >
+                                       </lightning-input>
+                                    </div>
+                                    <!-- <div class="slds-col slds-size_1-of-3">
+                              </div>-->
+                                    <div class="slds-col slds-size_1-of-3 slds-col_bump-left slds-m-right_large">
+                                       <lightning-input 
+                                          type="text" 
+                                          onkeypress={validateInputForNumber2}
+                                          label="Overflow Destination" 
+                                          name="openOFD" 
+                                          
+                                          onchange={handleInputChangeModal} 
+                                          value={overflowDOpen}
+                                          >
+                                       </lightning-input>
+                                    </div>
+                                 </div>
+                                
+                              </div>
+                           </template>
+                           <div class="slds-m-bottom_small section-style slds-m-around_small " onclick={toggleSection} data-id="Closed">
+                              <!--<lightning-button label="> Closed" variant="base"  onclick={toggleSection} data-id="Closed"></lightning-button>-->
+                              <h3 class="button-text">> Closed</h3>
+                           </div>
+                           <template if:true={isClosedExpanded}>
+                                   
+
+
+
+                                          <div class="slds-grid slds-wrap slds-gutters" style="margin-left:3px">
+                                            <div class="slds-col slds-size_1-of-3 slds-m-left_medium">
+                                                  <lightning-input 
+                                       type="text" 
+                                       label="Overflow Timer (0-60 sec)" 
+                                       name="ClosedOFT" 
+                                       onkeypress={validateInputForNumber}  maxlength="2"
+                                       value={overflowTClose}
+                                       onchange={handleInputChangeModal} 
+                                       >
+                                    </lightning-input>
+                                            </div>
+                                           <!-- <div class="slds-col slds-size_1-of-3">
+                                            </div>-->
+                                             <div class="slds-col slds-size_1-of-3 slds-col_bump-left slds-m-right_large">
+                                                  <lightning-input 
+                                    type="text" 
+                                    onkeypress={validateInputForNumber2}
+                                    label="Overflow Destination" 
+                                    name="ClosedOFD" 
+                                    
+                                    onchange={handleInputChangeModal} 
+                                    value={overflowDClose}
+                                    >
+                                 </lightning-input>
+                                            </div>
+
+                                            </div>
+                             
+                             <br/>
+                              <div class="slds-form-element">
+                                
+                              </div>
+                             
+                           </template>
+                           <!-- Holiday Section -->
+                           <div class="slds-m-bottom_small section-style  slds-m-around_small " onclick={toggleSection} data-id="Holiday">
+                              <!--<lightning-button label="> Holiday" variant="base" onclick={toggleSection} data-id="Holiday" ></lightning-button>-->
+                              <h3 class="button-text">> Holiday</h3>
+                           </div>
+                              <template if:true={isHolidayExpanded}>
+                                 <div class="slds-m-around_medium">
+                                    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                          <thead>
+                                                <tr class="slds-line-height_reset">
+                                                   <th class="" scope="col">
+                                                      <div class="slds-truncate" title="Name">Holiday Name</div>
+                                                   </th>
+                                                   <th class="" scope="col">
+                                                      <div class="slds-truncate" title="Date">Holiday Date</div>
+                                                   </th>
+                                                <!--   <th class="" scope="col">
+                                                      <div class="slds-truncate" title="Action">Actions</div>
+                                                   </th> -->
+                                                </tr>
+                                          </thead>
+                                          <tbody>
+                                                <template for:each={holidaysGet} for:item="holiday">
+                                                   <tr key={holiday.Id} class="slds-hint-parent">
+                                                      <td data-label="Name">
+                                                            <div class="slds-truncate" title={holiday.Name}>
+                                                               {holiday.Name}
+                                                            </div>
+                                                      </td>
+                                                      <td data-label="Date">
+                                                            <div class="slds-truncate" title={holiday.Date__c} style="width:50%">
+                                                               <!--{holiday.Date__c} -->
+
+                                                               <lightning-input type="date" 
+                                    value={holiday.Date__c} 
+                                    data-id={holiday.Id} placeholder="MM/DD/YYYY" onchange={handleHolidayDateChange} 
+                                    > 
+                  </lightning-input>
+                                                            </div>
+                                                      </td>
+                                               
+                                                   </tr>
+                                                </template>
+                                          </tbody>
+                                       </table>
+                                 </div>
+                                 <div class="slds-m-around_medium">
+
+                              
+
+                                          <div class="slds-grid slds-wrap">
+                     <!-- Text Input with half width -->
+                     <div class="bg-color slds-col slds-size_1-of-2" >
+                        <input 
+                           type="text" 
+                           id="HolidayName" 
+                           class="slds-input" 
+                           value={newHolidayName} 
+                           onchange={handleHolidayNameChange} 
+                           data-field-name="Name"
+                           maxlength="32"
+                           placeholder="New Holiday" />
+                     </div>
+                     <!-- Add Button with icon -->
+                     <div class="slds-col slds-size_1-of-2 slds-text-align_right">
+                        <lightning-button-icon 
+                           icon-name="utility:add"  
+                           size="large" 
+                           variant="bare" 
+                           alternative-text="Add" 
+                           onclick={addHolidayRow} 
+                           class="slds-float_right">
+                        </lightning-button-icon>
+                     </div>
+                  </div>
+                                 </div>
+                              </template>
+                            </br>
+                                </br>
+                              <template for:each={schedulesCustomTime} for:item="schedule" for:index="scheduleIndex">
+                                       <div key={schedule.id} class="slds-box slds-theme_default slds-m-bottom_large">
+                                        <!--  <div class="schedule-row slds-p-around_medium" key={timePeriod.day}> -->
+                                             <div class="slds-grid slds-wrap slds-gutters">
+                                                <div class="slds-col slds-size_1-of-2">
+                                                   <lightning-input type="text" label="Time Period Name" name="name"
+                                                      placeholder="Enter Schedule Name" value={schedule.name}
+                                                      onchange={handleScheduleNameChangeForTp} data-schedule-index={scheduleIndex}>
+                                                   </lightning-input>
+
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-2">
+                                                </div>
+                                               
+                                             </div>
+
+                                             <div class="slds-grid slds-wrap slds-gutters">
+                                                <div class="slds-col slds-size_1-of-3 slds-m-left_medium">
+                                                     <lightning-input  type="text" name="overflowTimer" label="overflow Timer"
+                                                     onkeypress={validateInputForNumber}  maxlength="2"
+                                                      placeholder="Enter Overflow Timer" value={schedule.Overflow_Timer__c}
+                                                      data-schedule-index={scheduleIndex} onchange={handleOverflowTimeChange} >
+                                                         </lightning-input>
+                                                </div>
+                                                <!-- <div class="slds-col slds-size_1-of-3">
+                                                </div>-->
+                                                 <div class="slds-col slds-size_1-of-3 slds-col_bump-left slds-m-right_large">
+                                                   <lightning-input type="text" name="overflowDestination"   label="overflow Destination"
+                                                   onkeypress={validateInputForNumber2} 
+                                                   
+                                                   placeholder="Enter Overflow Destination" value={schedule.Overflow_Destination__c}
+                                                   data-schedule-index={scheduleIndex} onchange={handleOverDestinationChange} >
+                                                   </lightning-input>
+                                                </div>
+                                             </div>
+                                        
+                                          <div class="slds-box slds-theme_default slds-m-around_medium">
+                                             <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                                                   <thead>
+                                                      <tr class="slds-line-height_reset">
+                                                         <th class="" scope="col">
+                                                               <div class="slds-truncate" title="Day">Day</div>
+                                                         </th>
+                                                         <th class="" scope="col">
+                                                               <div class="slds-truncate" title="Start Time">Start Time</div>
+                                                         </th>
+                                                         <th class="" scope="col">
+                                                               <div class="slds-truncate" title="End Time">Stop Time</div>
+                                                         </th>
+                                                      </tr>
+                                                   </thead>
+                                                   <tbody>
+                                             <template for:each={schedule.timePeriods} for:item="timePeriod" for:index="index">
+                                                            <tr key={timePeriod.day} class="slds-hint-parent">
+                                                               <td>
+                                                                  <input type="text" class="slds-input" value={timePeriod.day} readonly />
+                                                               </td>
+                                                               <td>
+                                                                  <lightning-combobox name="StartTime" data-schedule-index={scheduleIndex}
+                                                                                 placeholder="Select Start Time" options={timeOptions}
+                                                                                 value={timePeriod.Start} data-schedule-id={schedule.id}
+                                                                                 data-period-index={index} onchange={handleTimeChange}>
+                                                                  </lightning-combobox>
+                                                               </td>
+                                                               <td>
+                                                                  <lightning-combobox name="StopTime" data-schedule-index={scheduleIndex}
+                                                                                 placeholder="Select Stop Time" options={timeOptions}
+                                                                                 value={timePeriod.Stop} data-schedule-id={schedule.id}
+                                                                                 data-period-index={index} onchange={handleTimeChange}>
+                                                                  </lightning-combobox>
+                                                               </td>
+                                                         </tr>
+                                                      </template>
+                                                   </tbody>
+                                             </table>
+                                          </div>
+
+
+                                       </div>
+                                 </template>
+
+                                  <div class="slds-grid slds-wrap slds-gutters">
+                                    <div class="slds-col slds-size_1-of-3">
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                       
+                                          <button class="slds-button slds-button_brand" onclick={handleAddSchedule}>Add</button>
+
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                    </div>
+                                 </div>
+
+                        </div>
+                        <footer class="slds-modal__footer">
+                           <lightning-button label="Save" onclick={handleModalSave} variant="brand" class="slds-m-around_small"></lightning-button>
+                           <lightning-button label="Cancel" onclick={closeModal} variant="neutral" class="slds-m-around_small"></lightning-button>
+                        </footer>
+                     </div>
+                  </section>
+               </template>
+               <!--Modal End --->
+            </lightning-card>
+            <!-- Expandable Buttons with sections (visible only in edit mode) -->
+            <template if:true={isEditMode}>
+               <!-- Additional sections for "Open" and "Closed" can be similarly wrapped in <div> elements -->
+            </template>
+         </template>
+            </template>
+            <template if:true={isTab2Selected}>
+                <div class="custom-table-overflow slds-scrollable">
+            <template if:true={ftrDIDNumberDetailsMLHG}>
+               <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-scrollable">
+                  <thead>
+                     <tr class="slds-line-height_reset">
+                        <th class="" scope="col" data-field-name="DIDNumber__c" onclick={handleSorting}>
+                           <div class="slds-truncate" title="Phone Number" style="cursor: pointer">Phone Number
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                           </div>
+                        </th>
+                        <th class="" scope="col" data-field-name="Ucf_Extension__c" onclick={handleSorting}>
+                           <div class="slds-truncate" title="Current Carrier" style="cursor: pointer">Extension
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                           </div>
+                        </th>
+                        <th class="" scope="col" data-field-name="MLHG_Name__c" onclick={handleSorting}>
+                           <div class="slds-truncate" title="Email" style="cursor: pointer">MLHG Name
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                           </div>
+                        </th>
+                        <th class="" scope="col" data-field-name="Ring_Pattern__c" onclick={handleSorting}>
+                           <div class="slds-truncate" title="Voip Qualifications" style="cursor: pointer">Ring Pattern
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                           </div>
+                        </th>
+                        <th class="" scope="col" data-field-name="Schedule__c" onclick={handleSorting}>
+                           <div class="slds-truncate" title="User Admin" style="cursor: pointer">Schedule
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                           </div>
+                        </th>
+                        <th class="" scope="col" data-field-name="Member__c" onclick={handleSorting}>
+                           <div class="slds-truncate" title="Department" style="cursor: pointer">Members
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                           </div>
+                        </th>
+                        <template if:true={isTranslation}>
+                           <th class="" scope="col" data-field-name="EAS_Pin__c" onclick={handleSorting}>EAS Pin</th>
+                        </template>
+                        <template if:true={isReadOnly}>
+                           <th class="" scope="col" data-field-name="EAS_Pin__c" onclick={handleSorting}>EAS Pin</th>
+                        </template>
+                        <th class="" scope="col">
+                           <template if:false={isnetworktranslation}>
+                           <div class="slds-truncate" title="Department">Action</div>
+                           </template>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <template for:each={ftrDIDNumberDetailsMLHG} for:item ='obj' for:index='index'>
+                        <tr class="" key = {obj.key} data-row-index={index}>
+                           <td >
+                              <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                           </td>
+                           <td data-label="object label">
+                            
+                                 <input type="text" 
+                                          pattern="\d*" 
+                                          class="slds-input" style="width:100px"
+                                          maxlength={obj.Ucf_Extension_Lenght__c}
+                                          value={obj.Ucf_Extension__c}
+                                          onchange={handleInputChange}
+                                          onkeypress={validateInputForNumber}
+                                          data-record-id={obj.Id}
+                                          data-field-name="Ucf_Extension__c"/>
+                                   
+                           </td>
+                           <td data-label="object label">
+                              <template if:true={obj.editMode}>
+                                 <input type="text" class="slds-input" maxlength="32" value={obj.MLHG_Name__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="MLHG_Name__c" />
+                              </template>
+                              <template if:false={obj.editMode}>
+                                 {obj.MLHG_Name__c}
+                              </template>
+                           </td>
+                           <td>
+                                
+                              <lightning-combobox name="ringPattern"
+                                                   variant="label-hidden"
+                                                   label="Ring Pattern"
+                                                   value={obj.Ring_Pattern__c}
+                                                   options={ringPatternOptions}
+                                                   onchange={handleInputChange}
+                                                   data-record-id={obj.Id}
+                                                    selected={obj.Ring_Pattern__c}
+                                                   data-field-name="Ring_Pattern__c">
+                              </lightning-combobox>
+                           
+                           </td>
+                           <td data-label="object label">
+                              <!--<select class="slds-select" value={selectedValueSchedule} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Schedule__c" >
+                                 <template for:each={schedule} for:item="option">
+                                    <option key={option.value} value={option.value} >{option.label}</option>
+                                 </template>
+                              </select>-->
+
+                              <lightning-combobox name="Schedule"
+                                                   variant="label-hidden"
+                                                   label="Schedule"
+                                                   value={obj.Schedule__c}
+                                                   options={schedule}
+                                                   onchange={handleInputChange}
+                                                   data-record-id={obj.Id}
+                                                    selected={obj.Schedule__c}
+                                                   data-field-name="Schedule__c"
+                                                    data-name="validate" required>
+                              </lightning-combobox>
+                           </td>
+                           <td data-label="object label">
+                              <div class="slds-cell-wrap" data-field-name="Member__c">{obj.selectedItemsCount} Members</div>
+                           </td>
+                           <template if:true={isTranslation}>
+                              <td>
+                                 <div class="slds-form-element__control">
+                                    <input data-record-id={obj.Id} data-field-name="EAS_Pin__c" type="text" id="bgName" maxlength="6" class="slds-input" value={obj.EAS_Pin__c} onkeypress={validateInputForNumber} onchange={handleInputChange} />
+                                 </div>
+                              </td>
+                           </template>
+                           <template if:true={isReadOnly}>
+                              <td>
+                                 <div class="slds-form-element__control">
+                                    <input data-record-id={obj.Id} 
+                                    data-field-name="EAS_Pin__c" 
+                                    type="text" id="rbgName" maxlength="6" class="slds-input" value={obj.EAS_Pin__c} onkeypress={validateInputForNumber} onchange={handleInputChange} disabled/>
+                                 </div>
+                              </td>
+                           </template>
+                           
+                           <td>
+                              <template if:false={isnetworktranslation}>
+                              <lightning-button-icon
+                                 icon-name="utility:edit"
+                                 alternative-text="Edit"
+                                 title="Edit"
+                                 variant="bare"
+                                 data-row-index={index}
+                                 onclick={openDualListbox}>
+                              </lightning-button-icon>
+                              </template>
+                           </td>
+                        </tr>
+                     </template>
+                  </tbody>
+               </table>
+            </template>
+         </div>
+         
+         <br><br>
+         <template if:false={isnetworktranslation}>
+         <div class="slds-align_absolute-center">
+            <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+         </div>
+         </template>
+            </template>
+        </div>
+    </div>
+
+    <template if:true={isModalOpenMLHGSetup}>
+      <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_medium">
+         <div class="slds-modal__container">
+            <div class="slds-modal__header">
+               <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Select Members  </h1>
+            </div> 
+            <!--added by ussama-->
+                 <template if:true={isRingOne}>
+                              <div class="slds-m-top_medium">
+                                 <div class="slds-notify slds-notify_alert slds-theme_info slds-theme_alert-texture" role="alert">
+                                    <span class="slds-assistive-text">Info</span>
+                                    <h2>
+                                       <svg class="slds-icon slds-icon_small slds-icon-standard-info slds-m-right_small" aria-hidden="true">
+                                          <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#info"></use>
+                                       </svg>
+                                       <p>Remember that for the Ring members one at a time option, if there's more than 4 members, to avoid overflow issues is best to select "Ring all"</p>
+                                    </h2>
+                                 </div>
+                              </div>
+                           </template>
+                           <!--added by ussama-->
+            <div class="slds-modal__content" id="modal-content-id-1">
+               <div if:true={showLoaderModal}>
+                  <div class="demo-only" style="height:6rem;position:relative;">
+                     <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                        <span class="slds-assistive-text">Loading </span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                     </div>
+                  </div>
+               </div>
+               <div if:false={showLoaderModal}>
+                  <lightning-dual-listbox name="languages"
+                     class="slds-m-around_large"
+                     label="Select Members"
+                     source-label="Available"
+                     selected-label="Selected"
+                     options={members}
+                     value={tempDIDIds}
+                     data-row-index={index}
+                     onchange={handleChangeDualListboxModal}>
+                     <!--<p>Remember that for the Ring members one at a time option, if there's more tha 4 members, to avoid overflow issues is best to select "Ring all</p> -->
+                  </lightning-dual-listbox>
+               </div>
+               <div class="slds-align_absolute-center slds-p-bottom_medium" >
+               <lightning-button variant="brand" label="Save" title="Save" onclick={saveDualListbox} class="slds-m-left_x-small"></lightning-button>
+               <lightning-button label="Cancel" title="Cancel" onclick={closeDualListbox} class="slds-m-left_x-small"></lightning-button>
+            </div>
+            </div>
+            
+         </div>
+         
+            
+
+      </section>
+      <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+   </template>
+   </template>
+</template>

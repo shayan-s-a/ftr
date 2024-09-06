@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_up_Date_formulae__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+MOD(Case__r.Contract_Expiration_Date__c - DATE(1900, 1, 7), 7),
+0, (Case__r.Contract_Expiration_Date__c) - 90 + FLOOR((-90-1)/5)*2,
+1, (Case__r.Contract_Expiration_Date__c) - 90 + FLOOR((-90)/5)*2,
+2, (Case__r.Contract_Expiration_Date__c) - 90 + FLOOR((-90+1)/5)*2,
+3, (Case__r.Contract_Expiration_Date__c) - 90 + FLOOR((-90+2)/5)*2,
+4, (Case__r.Contract_Expiration_Date__c) - 90 + FLOOR((-90+3)/5)*2,
+5, (Case__r.Contract_Expiration_Date__c) - 90 + CEILING((-90)/5)*2,
+6, (Case__r.Contract_Expiration_Date__c) - IF(-90&gt;0,1,0) - 90 + CEILING((-90)/5)*2,
+null)</formula>
+    <label>Follow up Date-CR</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

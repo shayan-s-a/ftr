@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Carrier__c</fullName>
+    <description>Created for Britt for Lit Building</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the current carrier or ISP.</inlineHelpText>
+    <label>Current Carrier</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AT&amp;T</fullName>
+                <default>false</default>
+                <label>AT&amp;T</label>
+            </value>
+            <value>
+                <fullName>Centurylink</fullName>
+                <default>false</default>
+                <label>Centurylink</label>
+            </value>
+            <value>
+                <fullName>Comcast</fullName>
+                <default>false</default>
+                <label>Comcast</label>
+            </value>
+            <value>
+                <fullName>Cox</fullName>
+                <default>false</default>
+                <label>Cox</label>
+            </value>
+            <value>
+                <fullName>Crown Castle</fullName>
+                <default>false</default>
+                <label>Crown Castle</label>
+            </value>
+            <value>
+                <fullName>Spectrum</fullName>
+                <default>false</default>
+                <label>Spectrum</label>
+            </value>
+            <value>
+                <fullName>WOW</fullName>
+                <default>false</default>
+                <label>WOW</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DesignerEngineer_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Case_Cause__c,&apos;Design Plan&apos;),
+ISPICKVAL(Case_Cause__c,&apos;Engineering&apos;)
+),
+ISBLANK(Designer_Engineer__c)
+)</errorConditionFormula>
+    <errorDisplayField>Designer_Engineer__c</errorDisplayField>
+    <errorMessage>If &quot;Design Plan&quot; or &quot;Engineering&quot; are selected for &quot;Case Cause&quot;, the Designer/Engineer is required.</errorMessage>
+</ValidationRule>

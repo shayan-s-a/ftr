@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Finding__c</fullName>
+    <externalId>false</externalId>
+    <label>Other Finding</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Audit_Finding_Summary__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Duplicate Entry</fullName>
+                <default>false</default>
+                <label>Duplicate Entry</label>
+            </value>
+            <value>
+                <fullName>Record Update/No Sale</fullName>
+                <default>false</default>
+                <label>Record Update/No Sale</label>
+            </value>
+            <value>
+                <fullName>Product Entered Not on Order</fullName>
+                <default>false</default>
+                <label>Product Entered Not on Order</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Duplicate Entry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Record Update/No Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Product Entered Not on Order</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

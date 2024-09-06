@@ -1,0 +1,69 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "AddUNIProductPartnerPortal",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/AddUNIProduct/Procedure",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "AddUNIProductPartnerPortal",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/AddUNIProduct/Procedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "FetchProductWithPBE",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/AddUNIProduct/Procedure/FetchProductWithPBE",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "FetchProductWithPBE",
+    "%vlocity_namespace%__ParentElementType__c": "Loop Block",
+    "%vlocity_namespace%__PropertySet__c": {
+        "actionMessage": "",
+        "additionalInput": {
+        },
+        "additionalOutput": {
+            "ChildProductCode": "%LWCProductNode:LWCChildProduct:ChildProductCode%",
+            "MRC": "=%LWCProductNode:LWCChildProduct:MRC% / %LWCProductNode:LWCChildProduct:Quantity%",
+            "NRC": "%LWCProductNode:LWCChildProduct:NRC%",
+            "Quantity": "%LWCProductNode:LWCChildProduct:Quantity%",
+            "QuoteId": "%QuoteId%",
+            "ServiceAccountId": "%ServiceAccountId%",
+            "ServiceTerm": "%ServiceTerm%",
+            "Speed": "=IF(%LWCProductNode:LWCChildProduct:ChildProductCode% == 'ENT_ETH_STD_01' OR %LWCProductNode:LWCChildProduct:ChildProductCode% == 'ENT_ETH_ADV_01', %Speed%,'')"
+        },
+        "bundle": "FindProductInfoAddOnsPBE",
+        "chainOnStep": false,
+        "dataRaptor Input Parameters": [
+            {
+                "element": "LWCProductNode:LWCChildProduct:ChildProductCode",
+                "inputParam": "ProductCode"
+            }
+        ],
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorExtractAction3",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "DataRaptor Extract Action",
+    "Name": "FetchFindProductInfo",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/AddUNIProduct/Procedure/FetchFindProductInfo"
+}

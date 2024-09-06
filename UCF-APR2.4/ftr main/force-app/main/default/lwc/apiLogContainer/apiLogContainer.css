@@ -1,0 +1,42 @@
+.log-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.log-table td, .log-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.log-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.log-table tr:hover {
+  background-color: rgb(235, 235, 235); 
+  cursor: default;
+}
+
+.log-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #c41230;
+  color: white;
+}
+
+.log-table .active-table-row {
+  border: 2px solid black;
+  background-color: rgb(235, 235, 235);
+}
+
+.table-error {
+  width: 100%;
+  background: white;
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
+lightning-input,
+.slds-select_container {
+  margin-bottom: 0.5rem !important;
+}

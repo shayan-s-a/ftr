@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RestrictCreateforDirectAndAltCh</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+OR($User.RVP__c = &quot;RVP West&quot;, $User.RVP__c = &quot;RVP East&quot;, $User.RVP__c = &quot;RVP Central&quot;, $User.RVP__c = &quot;RVP Federal&quot;, $User.RVP__c = &quot;RVP National&quot;),
+RecordType.DeveloperName = &quot;Alternate_Channel_Contact&quot;
+),
+AND(
+$User.RVP__c = &quot;RVP Alt Channel&quot;, RecordType.DeveloperName = &quot;default&quot;
+)
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t create or update a contact with this RecordType!</errorMessage>
+</ValidationRule>

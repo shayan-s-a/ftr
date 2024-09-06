@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_RFP_Total_Oppo_Amount</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordTypeId = &apos;012E0000000fJUD&apos; &amp;&amp;
+Opportunity__r.Opportunity_Amount__c = 0</errorConditionFormula>
+    <errorMessage>Total Opportunity Amount cannot be zero, please update it on Opportunity.</errorMessage>
+</ValidationRule>

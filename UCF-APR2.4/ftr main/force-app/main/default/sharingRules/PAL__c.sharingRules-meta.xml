@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>MDU_PAL_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MDU PAL RW</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Alternate_Channel_Community_Connections_Sales_Leadership</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MDU_PAL_R_W</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MDU PAL R/W</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

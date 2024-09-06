@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuoteLineItem__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>This field is used for the hybird opportunity initiative. Relating the opportunity product to its synced quote line item.</description>
+    <externalId>false</externalId>
+    <label>Quote Line Item</label>
+    <referenceTo>QuoteLineItem</referenceTo>
+    <relationshipLabel>Opportunity Product</relationshipLabel>
+    <relationshipName>Opportunity_Product</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

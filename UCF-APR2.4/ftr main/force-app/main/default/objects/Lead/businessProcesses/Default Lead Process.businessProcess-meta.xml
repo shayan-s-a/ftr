@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default Lead Process</fullName>
+    <description>Default Lead Process.</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Account Creation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contacted</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Open</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Rejected - Disqualify</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Rejected - Return to Nurture Stream</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Transfer to Small Business</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Transferred from Small Business</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_item_Receipt_date_future_vali</fullName>
+    <active>true</active>
+    <description>Receipt date cannot be a future date</description>
+    <errorConditionFormula>if ( RecordType.Name  = &quot;Fraud Credit&quot; &amp;&amp;  Receipt_Date__c  &gt;  TODAY() , true, false)</errorConditionFormula>
+    <errorDisplayField>Receipt_Date__c</errorDisplayField>
+    <errorMessage>Receipt date cannot be a future date</errorMessage>
+</ValidationRule>

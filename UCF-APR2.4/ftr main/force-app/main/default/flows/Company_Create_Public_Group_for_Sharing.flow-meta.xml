@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <description>Determines if a Public Group with the same Developer Name as what would be created already exists.</description>
+        <name>Group_Already_Exists</name>
+        <label>Group Already Exists?</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <defaultConnector>
+            <targetReference>Create_Public_Group</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>GroupAlreadyExists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Group.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if the Company (Account) is a Sitetracker Vendor</description>
+        <name>Sitetracker_Vendor</name>
+        <label>Sitetracker Vendor?</label>
+        <locationX>248</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sitetracker_Vendor</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Group</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>When a Sitetracker Vendor is created, an associated public group is also created to facilitate sharing of Projects with vendors.</description>
+    <formulas>
+        <description>&quot;ST&quot; concatenated with the Account Record ID. &quot;ST&quot; must be a prefix since the Group Developer Name must begin with a letter.</description>
+        <name>GroupDeveloperName</name>
+        <dataType>String</dataType>
+        <expression>&quot;ST&quot;&amp;{!$Record.Id}</expression>
+    </formulas>
+    <formulas>
+        <description>The label for the Public Group</description>
+        <name>GroupLabel</name>
+        <dataType>String</dataType>
+        <expression>LEFT(&quot;ST Vendor Sharing: &quot;&amp;{!$Record.Name}, 40)</expression>
+    </formulas>
+    <interviewLabel>Company: Create Public Group for Sharing {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Company: Create Public Group for Sharing</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create a public group for the new Company (Account)</description>
+        <name>Create_Public_Group</name>
+        <label>Create Public Group</label>
+        <locationX>182</locationX>
+        <locationY>695</locationY>
+        <inputAssignments>
+            <field>DeveloperName</field>
+            <value>
+                <elementReference>GroupDeveloperName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>GroupLabel</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Regular</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Checks to see if a Public Group already exists with the same Developer Name as what would be created for this Account.</description>
+        <name>Get_Group</name>
+        <label>Get Group</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Group_Already_Exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GroupDeveloperName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>122</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Sitetracker_Vendor</targetReference>
+        </connector>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

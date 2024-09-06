@@ -1,0 +1,144 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:true={loading}>
+        <div class="demo-only">
+            <div class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner_medium">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <div class="slds-grid slds-wrap slds-p-vertical_medium">
+        <div class="slds-text-heading_small">
+            <span>Pricing Tables: </span>
+        </div>
+        <ul class="slds-list_horizontal slds-has-dividers_right slds-has-block-links">
+            <template for:each={links} for:item="link">
+                <li key={link.label} class="slds-item">
+                    <a onclick={link.open}>{link.label}</a>
+                </li>
+            </template>
+        </ul>
+        <div class="slds-button-group-row" role="group" style="margin-left: auto;">
+            <button class="slds-button slds-button_brand" onclick={openEditFormula}>Formula Editor</button>
+            <button class="slds-button slds-button_brand" onclick={clearABPCache}>Clear ABP Cache</button>
+        </div>
+    </div>
+    <div class="slds-grid slds-gutters slds-wrap">
+        <div class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">
+            <div class="custom-box slds-box slds-p-around_medium">
+                <div class="slds-form">
+                    <div class="slds-form-element">
+                        <lightning-combobox name="formulas" label="Formula" placeholder="Select Formula"
+                            value={currentFormula} options={formulas} onchange={handleFormulaChange}>
+                        </lightning-combobox>
+                    </div>
+                    <template if:true={currentFormula}>
+                        <div class="slds-form-element">
+                            <c-ftr-lookup-element obj-name="Account" icon-name="standard:account"
+                                label-name="Service Account" placeholder="Search Service Account"
+                                search-field={accountFields} filter={accountFilter}
+                                display-fields={accountDisplayFields} onlookup={handleLookup}> </c-ftr-lookup-element>
+                        </div>
+                        <template if:true={serviceAccountId}>
+                            <div class="slds-form-element slds-p-vertical_x-small">
+                                AccountId: <lightning-formatted-text value={serviceAccountId}>
+                                </lightning-formatted-text>
+                            </div>
+                        </template>
+                        <div class="slds-form-element">
+                            <lightning-combobox name="product" label="Product Code" placeholder="Select Product"
+                                value={currentProduct} options={products} onchange={handleProductChange}>
+                            </lightning-combobox>
+                        </div>
+                        <div>
+                            <template if:true={attributes}>
+                                <template for:each={attributes} for:item="attribute">
+                                    <lightning-combobox if:true={attribute.isPicklist} key={attribute.key}
+                                        data-item={attribute.code} label={attribute.label} value={attribute.value}
+                                        placeholder="Select an option" options={attribute.options}
+                                        onchange={handleAttributeChange}>
+                                    </lightning-combobox>
+                                    <lightning-input key={attribute.code} data-item={attribute.code}
+                                        onchange={handleAttributeChange} type="text" label={attribute.label}
+                                        placeholder="type here..." if:false={attribute.isPicklist}></lightning-input>
+                                </template>
+
+                                <div class="slds-p-vertical_medium slds-text-align_right">
+                                    <button disabled={disableTestButton} class="slds-button slds-button_brand"
+                                        onclick={testFormula}>Test</button>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                    <!--
+                    <div class="slds-form-element">
+                        <lightning-combobox
+                            name="term"
+                            label="Service Term"
+                            placeholder="Select Term"
+                            value={currentTerm}
+                            options={terms}
+                            onchange={handleTermChange}>
+                        </lightning-combobox>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+        <div class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">
+            <div class="custom-box slds-box slds-p-around_medium">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-2 slds-text-heading_small">
+                        <div class="slds-p-around_medium">
+                            <span>MRC: </span>
+                            <lightning-formatted-number value={prices.MRC} format-style="currency" currency-code="USD"
+                                class="slds-text-title_bold" if:true={prices}></lightning-formatted-number>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-text-heading_small">
+                        <div class="slds-p-around_medium">
+                            <span>NRC: </span>
+                            <lightning-formatted-number value={prices.NRC} format-style="currency" currency-code="USD"
+                                class="slds-text-title_bold" if:true={prices}></lightning-formatted-number>
+                        </div>
+                    </div>
+                </div>
+                <lightning-datatable key-field="name" data={pricingVars} columns={columns} hide-checkbox-column
+                    if:true={pricingVars}>
+                </lightning-datatable>
+            </div>
+
+        </div>
+    </div>
+
+    <template if:true={editMode}>
+        <!-- Modal/Popup Box LWC starts here -->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" style="min-width:75%;">
+                <!-- Modal/Popup Box LWC header here -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={closeEditFormula}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                            size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Formula Editor:</h2>
+                </header>
+                <!-- Modal/Popup Box LWC body starts here -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="min-height: 80%;">
+                    <iframe style="border:none;" height="100%" width="100%"
+                        src="/apex/PricingFormulaDefinitionPage"></iframe>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+
+</template>

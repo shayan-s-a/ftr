@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MOM_Speed_Increase_Range__c</fullName>
+    <externalId>false</externalId>
+    <label>MOM Speed Increase Range</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0</fullName>
+                <default>false</default>
+                <label>0</label>
+            </value>
+            <value>
+                <fullName>&lt;1M</fullName>
+                <default>false</default>
+                <label>&lt;1M</label>
+            </value>
+            <value>
+                <fullName>&gt;=10M to &lt;20M</fullName>
+                <default>false</default>
+                <label>&gt;=10M to &lt;20M</label>
+            </value>
+            <value>
+                <fullName>&gt;=1M to &lt;5M</fullName>
+                <default>false</default>
+                <label>&gt;=1M to &lt;5M</label>
+            </value>
+            <value>
+                <fullName>&gt;=20M</fullName>
+                <default>false</default>
+                <label>&gt;=20M</label>
+            </value>
+            <value>
+                <fullName>&gt;=5M to &lt;10M</fullName>
+                <default>false</default>
+                <label>&gt;=5M to &lt;10M</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

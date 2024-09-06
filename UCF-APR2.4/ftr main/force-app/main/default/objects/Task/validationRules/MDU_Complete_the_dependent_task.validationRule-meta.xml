@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_Complete_the_dependent_task</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Task_Related_was_updated__c=false, TEXT(Status) = &quot;Completed&quot;, Subject=&quot;AP Vendor ID/ACH&quot;)</errorConditionFormula>
+    <errorMessage>Please complete the related Task &quot;Xactly Setup&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disconnect_reason_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordTypeId = &quot;012E0000000kLob&quot;,
+ISBLANK( TEXT(Disconnect_Reason__c )) )</errorConditionFormula>
+    <errorDisplayField>Disconnect_Reason__c</errorDisplayField>
+    <errorMessage>Disconnect Reason is required if Order record type is Disconnect Order</errorMessage>
+</ValidationRule>

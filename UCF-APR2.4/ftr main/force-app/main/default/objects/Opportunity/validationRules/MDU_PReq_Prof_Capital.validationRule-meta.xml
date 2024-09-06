@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_PReq_Prof_Capital</fullName>
+    <active>false</active>
+    <description>Controls that this field don´t be empty when changing to Proforma
+Requested Status</description>
+    <errorConditionFormula>AND(RecordType.Name = &quot;Community Connections&quot;, 
+				ISPICKVAL(StageName ,&quot;Proforma Requested&quot;),
+ISBLANK(Capital_Review_Notes__c)
+)</errorConditionFormula>
+    <errorDisplayField>Capital_Review_Notes__c</errorDisplayField>
+    <errorMessage>Proforma/Capital Review Notes missing.</errorMessage>
+</ValidationRule>

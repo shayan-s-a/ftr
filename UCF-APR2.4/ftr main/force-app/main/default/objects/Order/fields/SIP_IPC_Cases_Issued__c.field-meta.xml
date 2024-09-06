@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_IPC_Cases_Issued__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for a process builder process to automatically generate cases if this is unchecked.  It will be checked once the cases are issued.  Visability only to System Admin on page layout.</description>
+    <externalId>false</externalId>
+    <label>SIP_IPC Cases Issued</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

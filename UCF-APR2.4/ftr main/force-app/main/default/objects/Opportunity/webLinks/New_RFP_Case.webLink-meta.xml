@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_RFP_Case</fullName>
+    <availability>online</availability>
+    <description>Used by AEs in Lightning to issue an RFP-RFI case from the opportunity</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New RFP Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/lightning/o/Case/new?recordTypeId=012E0000000fJUD&amp;
+defaultFieldValues=
+AccountId={!Opportunity.AccountId},
+Opportunity__c={!Opportunity.Id}</url>
+</WebLink>

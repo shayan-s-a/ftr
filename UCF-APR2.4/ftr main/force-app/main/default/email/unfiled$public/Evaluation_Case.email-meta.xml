@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Generated when an Evaluation Case is closed.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Case_letterhead</letterhead>
+    <name>Evaluation Case</name>
+    <style>formalLetter</style>
+    <subject>Evaluation Results</subject>
+    <textOnly>{!Case.Related_To_Case_Owner__c}, The following are the results of an evaluation done on a prior closed case.
+
+Evaluated Case Information
+Case Number:  {!Case.Related_To_Case_Number__c}
+Case Type:        {!Case.Related_To_Case_Type__c}
+Account Name: {!Case.Account}
+Case Opened:  {!Case.Related_To_Open_Date__c}
+Case Closed:    {!Case.Related_To_Close_Date__c}
+Case Summary: {!Case.Description_Order_Entry_Errors__c}
+
+Evaluator&apos;s Responses
+Was the appropriate case type selected?  {!Case.Was_appropriate_case_type_selected__c}
+Did the information included in the case meet expectations? {!Case.Were_Expections_Met__c}
+Was the case completed within the expected timeframe?
+Did the team member display full ownership of the issue throughout the life of the case?  Case.Was_Full_Case_Ownership_Displayed__c
+Did an escalation occur as a result of the underlying issue? Case.Was_the_Case_Escalated__c
+
+You were evaluated by {!Case.Case_Owner__c}.
+
+If you have any questions/concerns, please reach out to me.
+
+Thank you,
+
+{!Case.Case_Owner__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

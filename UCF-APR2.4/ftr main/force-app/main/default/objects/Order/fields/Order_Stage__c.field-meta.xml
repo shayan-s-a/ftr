@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Order Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+                <label>Assignment</label>
+            </value>
+            <value>
+                <fullName>Awaiting Clean Order</fullName>
+                <default>false</default>
+                <label>Awaiting Clean Order</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Clean Order</fullName>
+                <default>false</default>
+                <label>Clean Order</label>
+            </value>
+            <value>
+                <fullName>CNP Quality Assurance</fullName>
+                <default>false</default>
+                <label>CNP Quality Assurance</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>CPM In Progress</fullName>
+                <default>false</default>
+                <label>CPM In Progress</label>
+            </value>
+            <value>
+                <fullName>Credit Check</fullName>
+                <default>false</default>
+                <label>Credit Check</label>
+            </value>
+            <value>
+                <fullName>Customer Network Provisioning</fullName>
+                <default>false</default>
+                <label>Customer Network Provisioning</label>
+            </value>
+            <value>
+                <fullName>DPI/CMS Provisioning</fullName>
+                <default>false</default>
+                <label>DPI/CMS Provisioning</label>
+            </value>
+            <value>
+                <fullName>DPI Billing</fullName>
+                <default>false</default>
+                <label>DPI Billing</label>
+            </value>
+            <value>
+                <fullName>DPI Provisioning</fullName>
+                <default>false</default>
+                <label>DPI Provisioning</label>
+            </value>
+            <value>
+                <fullName>ECR/EWO In Progress</fullName>
+                <default>false</default>
+                <label>ECR/PSR In Progress</label>
+            </value>
+            <value>
+                <fullName>EWO In Progress</fullName>
+                <default>false</default>
+                <label>EWO In Progress</label>
+            </value>
+            <value>
+                <fullName>Hot Cuts</fullName>
+                <default>false</default>
+                <label>Hot Cuts</label>
+            </value>
+            <value>
+                <fullName>IMPM</fullName>
+                <default>false</default>
+                <label>IMPM</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>ISP Engineering</fullName>
+                <default>false</default>
+                <label>ISP Engineering</label>
+            </value>
+            <value>
+                <fullName>Issuing Orders</fullName>
+                <default>false</default>
+                <label>Issuing Orders</label>
+            </value>
+            <value>
+                <fullName>MSA Review</fullName>
+                <default>false</default>
+                <label>MSA Review</label>
+            </value>
+            <value>
+                <fullName>NCM Pending Billing</fullName>
+                <default>false</default>
+                <label>NCM Pending Billing</label>
+            </value>
+            <value>
+                <fullName>Needs more information</fullName>
+                <default>false</default>
+                <label>Needs more information</label>
+            </value>
+            <value>
+                <fullName>Network COE</fullName>
+                <default>false</default>
+                <label>Network COE</label>
+            </value>
+            <value>
+                <fullName>Network Cost Management</fullName>
+                <default>false</default>
+                <label>Network Cost Management</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Order Engineering Desk</fullName>
+                <default>false</default>
+                <label>Order Engineering Desk</label>
+            </value>
+            <value>
+                <fullName>Ordering</fullName>
+                <default>false</default>
+                <label>Ordering</label>
+            </value>
+            <value>
+                <fullName>OSP Engineering</fullName>
+                <default>false</default>
+                <label>OSP Engineering</label>
+            </value>
+            <value>
+                <fullName>Pending Assignment</fullName>
+                <default>false</default>
+                <label>Pending Assignment</label>
+            </value>
+            <value>
+                <fullName>Pending Billing</fullName>
+                <default>false</default>
+                <label>Pending Billing</label>
+            </value>
+            <value>
+                <fullName>Pending Billing Order</fullName>
+                <default>false</default>
+                <label>Pending Billing Order</label>
+            </value>
+            <value>
+                <fullName>Pending Carrier</fullName>
+                <default>false</default>
+                <label>Pending Carrier</label>
+            </value>
+            <value>
+                <fullName>Pending EWO</fullName>
+                <default>false</default>
+                <label>Pending EWO</label>
+            </value>
+            <value>
+                <fullName>Pending Order Entry</fullName>
+                <default>false</default>
+                <label>Pending Order Entry</label>
+            </value>
+            <value>
+                <fullName>Pending PO</fullName>
+                <default>false</default>
+                <label>Pending PO</label>
+            </value>
+            <value>
+                <fullName>Pending QA Review</fullName>
+                <default>false</default>
+                <label>Pending QA Review</label>
+            </value>
+            <value>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+                <label>Project Manager</label>
+            </value>
+            <value>
+                <fullName>PSR In Progress</fullName>
+                <default>false</default>
+                <label>PSR In Progress</label>
+            </value>
+            <value>
+                <fullName>QA Review</fullName>
+                <default>false</default>
+                <label>QA Review</label>
+            </value>
+            <value>
+                <fullName>Regional Engineering</fullName>
+                <default>false</default>
+                <label>Regional Engineering</label>
+            </value>
+            <value>
+                <fullName>Rejected to Account Executive</fullName>
+                <default>false</default>
+                <label>Rejected to Account Executive</label>
+            </value>
+            <value>
+                <fullName>Rejected to AE</fullName>
+                <default>false</default>
+                <label>Rejected to AE</label>
+            </value>
+            <value>
+                <fullName>Rejected to OED</fullName>
+                <default>false</default>
+                <label>Rejected to OED</label>
+            </value>
+            <value>
+                <fullName>Rejected to OSP</fullName>
+                <default>false</default>
+                <label>Rejected to OSP</label>
+            </value>
+            <value>
+                <fullName>Rejected to Sales Engineer</fullName>
+                <default>false</default>
+                <label>Rejected to Sales Engineer</label>
+            </value>
+            <value>
+                <fullName>Rejected to SE</fullName>
+                <default>false</default>
+                <label>Rejected to SE</label>
+            </value>
+            <value>
+                <fullName>Send to WIP</fullName>
+                <default>false</default>
+                <label>Sent to WIP</label>
+            </value>
+            <value>
+                <fullName>Sales Engineering</fullName>
+                <default>false</default>
+                <label>Solutions Engineering</label>
+            </value>
+            <value>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+                <label>Submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>Waiting on Down Payment</fullName>
+                <default>false</default>
+                <label>Waiting on Down Payment</label>
+            </value>
+            <value>
+                <fullName>PM Enrichment</fullName>
+                <default>false</default>
+                <label>PM Enrichment</label>
+            </value>
+            <value>
+                <fullName>Network Translations</fullName>
+                <default>false</default>
+                <label>Network Translations</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

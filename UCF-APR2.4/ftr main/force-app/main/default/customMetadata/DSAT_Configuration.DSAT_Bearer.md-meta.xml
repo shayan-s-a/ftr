@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>DSAT Bearer</label>
+    <protected>false</protected>
+    <values>
+        <field>ApiKey_Header__c</field>
+        <value xsi:type="xsd:string">r3MUlqybToeRGmBgw1YSW7FnDUTTwWV7</value>
+    </values>
+    <values>
+        <field>Bearer_Expiry__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Bearer__c</field>
+        <value xsi:type="xsd:string">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJDcmVhdGVkIjoiMjAxOS0xMS0xOFQxNzo1NjoxNS45NzQ2ODM4LTA1OjAwIiwiTmlja25hbWUiOiIsIFZGTyBBcHBsaWNhdGlvbiIsIkZpcnN0TmFtZSI6IlZGTyBBcHBsaWNhdGlvbiIsIkxhc3ROYW1lIjoiIiwiRW1haWxBZGRyZXNzIjoiU0lGVC5BcHAuU3VwcG9ydEBmdHIuY29tIiwiTGFuSWQiOiJhcHA6IHZmbyBhcHBsaWNhdGlvbiIsIkdyb3VwSWRzIjpbMTcsMjNdLCJHcm91cE5hbWVzIjpbIkFwcGxpY2F0aW9ucyIsIlZGTyBBcHBsaWNhdGlvbiJdLCJSaWdodHMiOlszM10sIklkIjoyODM3NCwiVG9rZW5JZCI6NDcyNjV9.TxiVorwCdi7BC1QjK4ZmngFm-rVeHWlEqcVXiRytW9o</value>
+    </values>
+    <values>
+        <field>ContentType_Header__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Endpoint__c</field>
+        <value xsi:type="xsd:string">callout:GetDSATAuthirize</value>
+    </values>
+    <values>
+        <field>Method__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Production__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>SandBox__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Timeout__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

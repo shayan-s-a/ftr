@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Share__c</fullName>
+    <externalId>false</externalId>
+    <label>Revenue Share</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Broadband Only Plan A</fullName>
+                <default>false</default>
+                <label>Broadband Only Plan A</label>
+            </value>
+            <value>
+                <fullName>Broadband Only Plan B</fullName>
+                <default>false</default>
+                <label>Broadband Only Plan B</label>
+            </value>
+            <value>
+                <fullName>Flex Plan 2</fullName>
+                <default>false</default>
+                <label>Flex Plan 2</label>
+            </value>
+            <value>
+                <fullName>Flex plan 3</fullName>
+                <default>false</default>
+                <label>Flex plan 3</label>
+            </value>
+            <value>
+                <fullName>Prev Company Monthly Payment</fullName>
+                <default>false</default>
+                <label>Prev Company Monthly Payment</label>
+            </value>
+            <value>
+                <fullName>Flat Rate Percentage</fullName>
+                <default>false</default>
+                <label>Flat Rate Percentage</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

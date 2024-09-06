@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Approval_Email</fullName>
+        <description>Approval Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kayla.southworth@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.tullos@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Test</template>
+    </alerts>
+    <alerts>
+        <fullName>Contract_expiration_notice</fullName>
+        <description>Contract Expiration Notice</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/Contract_expiration_notice</template>
+    </alerts>
+    <alerts>
+        <fullName>Notification_of_Contract_Signed</fullName>
+        <ccEmails>teresa.miles@ftr.com</ccEmails>
+        <description>Notification of Contract Signed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Contract_Complete_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Reject_Email</fullName>
+        <description>Reject Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kayla.southworth@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.tullos@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Test</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Contract_Mgr_Review_Decision</fullName>
+        <description>Send Contract Mgr Review Decision</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Alternate_Channels_Commercial/Contract_Manager_Approval_Decision</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approved</fullName>
+        <field>Status</field>
+        <literalValue>Negotiating</literalValue>
+        <name>Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Await_Action</fullName>
+        <field>Status</field>
+        <literalValue>Awaiting Approval</literalValue>
+        <name>Await Action</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contract_Manager_Approve_Date</fullName>
+        <field>Contract_Manager_Approval_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Populate Manager Approve Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contract_Manager_Approved</fullName>
+        <field>Contract_Manager_Approval_Status__c</field>
+        <formula>&quot;Approved&quot;</formula>
+        <name>Contract Manager Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contract_Manager_Rejected</fullName>
+        <field>Contract_Manager_Approval_Status__c</field>
+        <formula>&quot;Denied&quot;</formula>
+        <name>Contract Manager Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Empty_contract_sent_date</fullName>
+        <field>Contract_Sent_Date__c</field>
+        <name>Empty contract sent date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Enter_Contract_sent_date</fullName>
+        <field>Contract_Sent_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Enter Contract sent date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Manager_Approved_Request_Date</fullName>
+        <field>Contract_Manager_Approval_Requested_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Manager Approve Request Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Marketing_Agreement_Send</fullName>
+        <description>This updates the record type to Marketing Agreement - Send</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Marketing_Agreement_Send</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Marketing Agreement - Send</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Manager_Decision</fullName>
+        <field>Contract_Manager_Approval_Status__c</field>
+        <formula>&quot;Approved&quot;</formula>
+        <name>Populate Manager Decision</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Manager_Reject_Date</fullName>
+        <field>Contract_Manager_Approval_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Populate Manager Reject Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected</fullName>
+        <field>Status</field>
+        <literalValue>Rejected Internally</literalValue>
+        <name>Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Manager_Approval_Status</fullName>
+        <field>Contract_Manager_Approval_Status__c</field>
+        <formula>&quot;Rejected&quot;</formula>
+        <name>Populate Manager Decision</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Owner_Expiration_Notice</fullName>
+        <field>OwnerExpirationNotice</field>
+        <literalValue>90</literalValue>
+        <name>Update Owner Expiration Notice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>test</fullName>
+        <field>Promo_Contract_Status__c</field>
+        <literalValue>No Offline action required</literalValue>
+        <name>Non Promo Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Contract - Contract Manager Approval %3D Approved</fullName>
+        <actions>
+            <name>Marketing_Agreement_Send</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Contract_Manager_Approval__c</field>
+            <operation>equals</operation>
+            <value>Approve</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contract.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Marketing Agreement</value>
+        </criteriaItems>
+        <description>Workflow fires to change Contract Record Type when Contract Manager Approval field is populated with Approved.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Complete Notification</fullName>
+        <actions>
+            <name>Notification_of_Contract_Signed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Document_Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>equals</operation>
+            <value>#CTF Customer Service Analyst</value>
+        </criteriaItems>
+        <description>When a contract is e-signed a notification email will be sent to the contract owner if they are in the CSA profile #CTF Customer Service Analyst</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Price Roll Off</fullName>
+        <active>false</active>
+        <description>This is created by Kushal in demo sandbox and I&apos;m not sure what&apos;s the purpose of workflow  but I was informed not to delete this.</description>
+        <formula>EndDate &lt; today ()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Sent date</fullName>
+        <actions>
+            <name>Enter_Contract_sent_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Contract_Status__c</field>
+            <operation>equals</operation>
+            <value>Sent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contract.Contract_Sent_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Will End</fullName>
+        <actions>
+            <name>Contract_expiration_notice</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Contract_Ends_in_60_days</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <formula>( EndDate - 60) == TODAY()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Contract_Ends_in_30_days</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Contract sent date remove</fullName>
+        <actions>
+            <name>Empty_contract_sent_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Contract_Sent_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contract.Contract_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Sent</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Default Owner Expiration notice</fullName>
+        <actions>
+            <name>Update_Owner_Expiration_Notice</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.OwnerExpirationNotice</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contract.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Product Schedule</value>
+        </criteriaItems>
+        <description>Default Owner Expiration notice to 90 days when not selected for the record type product schedule only.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Non Promo</fullName>
+        <actions>
+            <name>test</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Promotional_Contract__c</field>
+            <operation>equals</operation>
+            <value>Non-Promo</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Support Documents upon MAA Full Execution</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contract.Marketing_Agreement_Date_Received__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Contract_Ends_in_30_days</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Contract Expires within 30 days. Please refer to &quot;Related to&quot; in Task to see the related Contract</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Deferred</status>
+        <subject>Contract Ends in 30 days</subject>
+    </tasks>
+    <tasks>
+        <fullName>Contract_Ends_in_60_days</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Contract Expires within 60 days. Please refer to &quot;Related to&quot; in Task  to see the related Contract</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Deferred</status>
+        <subject>Contract Ends in 60 days</subject>
+    </tasks>
+</Workflow>

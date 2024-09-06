@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Memo_Required</fullName>
+    <active>true</active>
+    <description>Field used to add history records.</description>
+    <errorConditionFormula>$User.ProfileId ==&apos;00eE000000104CdIAI&apos;  &amp;&amp;  Memo__c==&apos;-&apos;</errorConditionFormula>
+    <errorDisplayField>Memo__c</errorDisplayField>
+    <errorMessage>Please enter memo before any operation on this record.</errorMessage>
+</ValidationRule>

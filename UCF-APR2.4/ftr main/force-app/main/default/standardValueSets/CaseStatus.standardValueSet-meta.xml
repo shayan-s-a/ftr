@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>01-New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>10-In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>10-Not Verified</fullName>
+        <default>false</default>
+        <label>10-Not Verified</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>10-Quote Working</fullName>
+        <default>false</default>
+        <label>10-Quote Working</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>12-Quote On Hold</fullName>
+        <default>false</default>
+        <label>12-Quote On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>14-Quote Question From Submitter</fullName>
+        <default>false</default>
+        <label>14-Quote Question from Submitter</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>16-Quote Question to Submitter</fullName>
+        <default>false</default>
+        <label>16-Quote Question to Submitter</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>18-Quote Move to Contracting</fullName>
+        <default>false</default>
+        <label>18-Quote Move to Contracting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>19-Quote Completed; Waiting on Contract</fullName>
+        <default>false</default>
+        <label>19-Quote Completed; Waiting on Contract</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>20-Contract Working</fullName>
+        <default>false</default>
+        <label>20-Contract Working</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>20-Pending Response to Customer</fullName>
+        <default>false</default>
+        <label>20-Pending Response to Customer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>22-Contract On Hold</fullName>
+        <default>false</default>
+        <label>22-Contract On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>24-Contract Question From Submitter</fullName>
+        <default>false</default>
+        <label>24-Contract Question From Submitter</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>26-Contract Question to Submitter</fullName>
+        <default>false</default>
+        <label>26-Contract Question to Submitter</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>28-Contract Moved to Ordering</fullName>
+        <default>false</default>
+        <label>28-Contract Moved to Ordering</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>29-Contract Completed; Waiting on Order</fullName>
+        <default>false</default>
+        <label>29-Contract Completed; Waiting on Order</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>30-Order Working</fullName>
+        <default>false</default>
+        <label>30-Order Working</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for Customer</fullName>
+        <default>false</default>
+        <label>30-Waiting for Customer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>AE Action Required</fullName>
+        <default>false</default>
+        <label>31-AE Action Required</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>32-Order On Hold</fullName>
+        <default>false</default>
+        <label>32-Order On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>34-Order Question from Submitter</fullName>
+        <default>false</default>
+        <label>34-Order Question from Submitter</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending User Feedback</fullName>
+        <default>false</default>
+        <label>35-Pending User Feedback</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>36-Order Question to Submitter</fullName>
+        <default>false</default>
+        <label>36-Order Question to Submitter</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>40-Reopen</fullName>
+        <default>false</default>
+        <label>40-Reopen</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>50-Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>60-Rejected</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>70-Approved</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Released</fullName>
+        <default>false</default>
+        <label>70-Released</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>80-On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>85-Cancelled</fullName>
+        <default>false</default>
+        <label>85-Cancelled</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In progress – Appointment set</fullName>
+        <default>false</default>
+        <label>In progress – Appointment set</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In progress – Escalated to Manager</fullName>
+        <default>false</default>
+        <label>In progress – Escalated to Manager</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In progress – Waiting for customer</fullName>
+        <default>false</default>
+        <label>In progress – Waiting for customer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>90-Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>91-Closed Fraud</fullName>
+        <default>false</default>
+        <label>91-Closed Fraud</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>92-Closed Legitimate</fullName>
+        <default>false</default>
+        <label>92-Closed Legitimate</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Adjusted</fullName>
+        <default>false</default>
+        <label>Adjusted</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Assigned</fullName>
+        <default>false</default>
+        <label>Assigned</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Assigned / RFP Coordinator (Name)</fullName>
+        <default>false</default>
+        <label>Assigned / RFP Coordinator (Name)</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting – Business Response</fullName>
+        <default>false</default>
+        <label>Awaiting – Business Response</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bid/No Bid/Partial Bid</fullName>
+        <default>false</default>
+        <label>Bid/No Bid/Partial Bid</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bid Delivered to Sales</fullName>
+        <default>false</default>
+        <label>Bid Delivered to Sales</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bid Review / Stakeholder Meeting</fullName>
+        <default>false</default>
+        <label>Bid Review / Stakeholder Meeting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bid Submitted to Customer/Proposal</fullName>
+        <default>false</default>
+        <label>Bid Submitted to Customer/Proposal</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled/Withdrawn</fullName>
+        <default>false</default>
+        <label>Cancelled/Withdrawn</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Case Assigned to be Worked</fullName>
+        <default>false</default>
+        <label>Case Assigned to be Worked</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Duplicate Case</fullName>
+        <default>false</default>
+        <label>Closed - Duplicate Case</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+        <label>Closed Lost</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Won/Contract Execution</fullName>
+        <default>false</default>
+        <label>Closed Won/Contract Execution</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Complete</fullName>
+        <default>false</default>
+        <label>Complete</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Complete - Updating Documentation</fullName>
+        <default>false</default>
+        <label>Complete - Updating Documentation</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined</fullName>
+        <default>false</default>
+        <label>Declined</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Development</fullName>
+        <default>false</default>
+        <label>Development</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>DPI Posting</fullName>
+        <default>false</default>
+        <label>DPI Posting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Order Cancelled</fullName>
+        <default>false</default>
+        <label>Duplicate Order</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Final Preparation</fullName>
+        <default>false</default>
+        <label>Final Preparation</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Review</fullName>
+        <default>false</default>
+        <label>IT Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Next Bill Review</fullName>
+        <default>false</default>
+        <label>Next Bill Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>No Bid / Business Decision</fullName>
+        <default>false</default>
+        <label>No Bid / Business Decision</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>No Bid / No Solution</fullName>
+        <default>false</default>
+        <label>No Bid / No Solution</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>No CAP Credit</fullName>
+        <default>false</default>
+        <label>No CAP Credit</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>No Response</fullName>
+        <default>false</default>
+        <label>No Response</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>No Work Needed</fullName>
+        <default>false</default>
+        <label>No Work Needed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold - User not in SF</fullName>
+        <default>false</default>
+        <label>On Hold - User not in SF</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Order Created</fullName>
+        <default>false</default>
+        <label>Order Created</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ordering</fullName>
+        <default>false</default>
+        <label>Ordering</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pass</fullName>
+        <default>false</default>
+        <label>Pass</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending</fullName>
+        <default>false</default>
+        <label>Pending</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Award</fullName>
+        <default>false</default>
+        <label>Pending Award</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending CAP Approval</fullName>
+        <default>false</default>
+        <label>Pending CAP Approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending - Case Closure</fullName>
+        <default>false</default>
+        <label>Pending - Case Closure</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Dispute</fullName>
+        <default>false</default>
+        <label>Pending Dispute</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Payment</fullName>
+        <default>false</default>
+        <label>Pending Payment</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending System Issue Resolution</fullName>
+        <default>false</default>
+        <label>Pending System Issue Resolution</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>PR-AE</fullName>
+        <default>false</default>
+        <label>PR-AE</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>PR-AU</fullName>
+        <default>false</default>
+        <label>PR-AU</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>PR-ID</fullName>
+        <default>false</default>
+        <label>PR-ID</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>PR-JC</fullName>
+        <default>false</default>
+        <label>PR-JC</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>PR-OE</fullName>
+        <default>false</default>
+        <label>PR-OE</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>PR-ST</fullName>
+        <default>false</default>
+        <label>PR-ST</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>QA Review</fullName>
+        <default>false</default>
+        <label>QA Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ready for Testing</fullName>
+        <default>false</default>
+        <label>Ready for Testing</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ready for UAT Testing</fullName>
+        <default>false</default>
+        <label>Ready for UAT Testing</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Received/Unassigned</fullName>
+        <default>false</default>
+        <label>Received/Unassigned</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Requirements Gathering</fullName>
+        <default>false</default>
+        <label>Requirements Gathering</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Submit a Jira</fullName>
+        <default>false</default>
+        <label>Submit a Jira</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Under Review</fullName>
+        <default>false</default>
+        <label>Under Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>User Response Requested - 1</fullName>
+        <default>false</default>
+        <label>User Response Requested - 1</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>User Response Requested - 2</fullName>
+        <default>false</default>
+        <label>User Response Requested - 2</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>User Response Requested - 3</fullName>
+        <default>false</default>
+        <label>User Response Requested - 3</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for Release</fullName>
+        <default>false</default>
+        <label>Waiting for Release</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Walk Away / Jeopardy Handover to AE</fullName>
+        <default>false</default>
+        <label>Walk Away / Jeopardy Handover to AE</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>88-Ready to be deployed</fullName>
+        <default>false</default>
+        <label>88-Ready to be deployed</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

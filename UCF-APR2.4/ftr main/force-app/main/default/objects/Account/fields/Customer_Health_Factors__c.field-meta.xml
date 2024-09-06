@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Health_Factors__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Health Factors</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Customer_Health_Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Generally Pleased</fullName>
+                <default>false</default>
+                <label>Generally Pleased</label>
+            </value>
+            <value>
+                <fullName>Billing Question</fullName>
+                <default>false</default>
+                <label>Billing Question</label>
+            </value>
+            <value>
+                <fullName>Product/Feature Question</fullName>
+                <default>false</default>
+                <label>Product/Feature Question</label>
+            </value>
+            <value>
+                <fullName>Pricing Issue</fullName>
+                <default>false</default>
+                <label>Pricing Issue</label>
+            </value>
+            <value>
+                <fullName>Product Issue</fullName>
+                <default>false</default>
+                <label>Product Issue</label>
+            </value>
+            <value>
+                <fullName>Responsiveness Issue</fullName>
+                <default>false</default>
+                <label>Responsiveness Issue</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Good Standing</controllingFieldValue>
+            <valueName>Generally Pleased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Good Standing</controllingFieldValue>
+            <controllingFieldValue>Requires Attention</controllingFieldValue>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Requires Attention</controllingFieldValue>
+            <valueName>Billing Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Requires Attention</controllingFieldValue>
+            <valueName>Product/Feature Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Pricing Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Product Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>At Risk</controllingFieldValue>
+            <valueName>Responsiveness Issue</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

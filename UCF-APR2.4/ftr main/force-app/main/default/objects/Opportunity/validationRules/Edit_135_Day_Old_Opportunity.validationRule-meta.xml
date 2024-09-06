@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_135_Day_Old_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$User.Edit_135_Day_Old_Oppty__c = False, 
+Today() &gt;= Mgr_Signed_Date__c + 135
+)</errorConditionFormula>
+    <errorDisplayField>of_replaced_Units__c</errorDisplayField>
+    <errorMessage>You cannot edit opportunities after they have been approved for 135 days.  Please notify the Salesforce Team so that they can make the changes.</errorMessage>
+</ValidationRule>

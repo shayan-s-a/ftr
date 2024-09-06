@@ -1,0 +1,48 @@
+{
+    "ProductData": {
+        "CCSData": {
+            "CCS__c": "201-400",
+            "DID_Number__c": "500",
+            "HandOff__c": "SIP",
+            "Id": "aH06u00000001VBCAY",
+            "LD_Overage_Rate__c": 0.25,
+            "LongDistance_BOT__c": "40000 Minutes",
+            "Router_Model__c": "Cisco 4331",
+            "Speed__c": "50 Mbps",
+            "attributes": {
+                "type": "ftr_SIP_ElementRulesConfig__c",
+                "url": "/services/data/v51.0/sobjects/ftr_SIP_ElementRulesConfig__c/aH06u00000001VBCAY"
+            }
+        },
+        "CustomerVOIPRequirements": {
+            "CPEPBXManufacturerName": "test Name",
+            "CPEPBXModel": "test Model",
+            "CPEPBXSoftwareRel": "test Software rel.",
+            "ConcurrentCallSession": 243,
+            "PBXHandOff": "SIP",
+            "RackMountBracket": null,
+            "TransportLayer": "EVPL",
+            "WaiveRouter": "Yes"
+        },
+        "EthernetRequired": "No",
+        "QLI": [
+            {
+                "itemId": "0QL6u0000004DaBGAU"
+            },
+            {
+                "itemId": "0QL6u0000004DaCGAU"
+            },
+            {
+                "itemId": "0QL6u0000004DaDGAU"
+            },
+            {
+                "itemId": "0QL6u0000004DaEGAU"
+            }
+        ],
+        "SIP": {
+            "itemId": "0QL6u0000004DaBGAU"
+        },
+        "ServiceAccountId": "0016u000001wLqRAAU",
+        "ServiceTerm": "36 Months"
+    }
+}

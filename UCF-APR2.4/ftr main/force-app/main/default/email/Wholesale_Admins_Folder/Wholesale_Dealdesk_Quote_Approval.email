@@ -1,0 +1,16 @@
+A Quote has been submitted for approval. Please review Quote Line Item pricing prior to approving the quote.
+
+Please click the link below to navigate to the quote:
+
+Quote Link: {!SterlingQuote__c.Link}
+Approval Request Link: {!ApprovalRequest.Internal_URL}
+
+Below are the Quote related fields:
+
+Quote Name:  {!SterlingQuote__c.Name}
+Quote Number: {!SterlingQuote__c.WS_Quote_Number__c}
+Quote Owner: {!SterlingQuote__c.OwnerFullName}
+Quote Approval Status: {!SterlingQuote__c.Status__c}
+Effective Recurring Total: {!SterlingQuote__c.Net_New_MRR__c}
+Effective One Time Total: {!SterlingQuote__c.NRC__c}
+Quote Company Name: {!SterlingQuote__c.Company_Name__c}

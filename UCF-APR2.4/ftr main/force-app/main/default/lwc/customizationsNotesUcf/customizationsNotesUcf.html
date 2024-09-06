@@ -1,0 +1,257 @@
+<template>
+<h6>Customization Notes</h6>
+	<br/>
+	<div if:true={showLoader}>
+	   <!--<div class="demo-only" style="height:6rem;position:relative;">
+		  <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+			 <span class="slds-assistive-text">Loading </span>
+			 <div class="slds-spinner__dot-a"></div>
+			 <div class="slds-spinner__dot-b"></div>
+		  </div>
+	   </div>-->
+	   <div class="exampleHolder">
+        		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+		</div>
+	</div>
+	<div if:false={showLoader}>
+	   <lightning-layout pull-to-boundary="small" multiple-rows class="kc-full-stretch slds-p-horizontal_x-small">
+		  <lightning-layout-item class="slds-p-left_xx-large slds-p-bottom_xx-large slds-p-right_medium" size="6" >
+			 <lightning-input  type="checkbox" label="Park Keys" name="parkKeys" checked={result.orderRecord.Park_Keys__c} onchange={handleChange}></lightning-input>
+			 <div if:true={showParkKeyFields}>
+			 <lightning-input  type="number" label="How many Park Keys" name="howManyParkKeys" value={result.orderRecord.How_many_park_keys__c} onchange={handleChange}></lightning-input>
+			 <lightning-combobox label="Is it shared or location/department" name="isItSharedLocation" value={result.orderRecord.Is_it_shared_or_location_department__c} options={shareLocationOptions} onchange={handleChange}></lightning-combobox>
+			</div>
+		  </lightning-layout-item>
+		  <lightning-layout-item class="slds-p-left_xx-large slds-p-bottom_xx-large slds-p-right_medium" size="6">
+			 <lightning-input  type="checkbox" label="Group Page" name="groupPage" checked={result.orderRecord.Group_Page__c} onchange={handleChange}></lightning-input>
+			 <div if:true={showGroupPage}>
+			 <p class="alertText">All users in the Page group must be on the same Internet connection</p>
+			</div>
+		  </lightning-layout-item>
+		  <lightning-layout-item class="slds-p-left_xx-large slds-p-bottom_xx-large slds-p-right_medium" size="6">
+			 <lightning-input  type="checkbox" label="Group Pickup" name="groupPickup" checked={result.orderRecord.Group_Pickup__c} onchange={handleChange}></lightning-input>
+		  </lightning-layout-item>
+		  <lightning-layout-item class="slds-p-left_xx-large slds-p-bottom_xx-large slds-p-right_medium" size="6" >
+			 <lightning-input type="checkbox" label="DSS/BLF Enhanced Monitor Extensions Buttons" name="emeb" checked={result.orderRecord.DSS_BLF_Enhanced_Monitor_Extensions_Btns__c} onchange={handleChange}></lightning-input>
+			 <div if:true={showEmeb}>
+			 <p class="alertText">Remember to be conscious of phone button limitations</p>
+			</div>
+		  </lightning-layout-item>
+		  <lightning-layout-item class="slds-p-left_xx-large slds-p-bottom_xx-large slds-p-right_medium" size="6" >
+			 <lightning-input  type="checkbox" label="Direct Page" name="directPage" checked={result.orderRecord.Direct_Page__c} onchange={handleChange}></lightning-input>
+		  </lightning-layout-item>
+		  <lightning-layout-item class="slds-p-left_xx-large slds-p-bottom_xx-large slds-p-right_medium" size="6" >
+			 <lightning-input type="checkbox" label="Speed Calls" name="speedCalls" checked={result.orderRecord.Speed_Calls__c} onchange={handleChange}></lightning-input>
+			 <div if:true={showSpeedCall}>
+			 <p class="alertText">Remember to be conscious of phone button limitations</p>
+			</div>
+		  </lightning-layout-item>
+		  <lightning-layout-item class="slds-p-horizontal_xx-large slds-p-bottom_xx-large " size="12" padding="horizontal-small">
+			 <lightning-textarea  label="Additional UCF Information" name="additionalInfo" value={result.orderRecord.Additional_UCF_Information__c} onchange={handleChange}></lightning-textarea>
+		  </lightning-layout-item>
+	   </lightning-layout>
+
+       <lightning-accordion class="RecordDetailX" allow-multiple-sections-open
+		  onsectiontoggle={handleSectionToggle}
+		  active-section-name={activeSections}>
+		  <lightning-accordion-section name="buttonProgCap" label="911 Notification Information" class="slds-p-top_x-small">
+			<div if:false={showLoader} class="custom-table-overflow">
+			<template if:true={result.NotificationList}>
+
+				<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+				   <thead>
+					  <tr class="slds-line-height_reset">
+						
+						 <th scope="col" data-field-name="Name" onclick={sortPhoneNumInfo} style="cursor: pointer">
+							Name
+						 </th>
+						 <th scope="col" data-field-name="Department_System__c" onclick={sortPhoneNumInfo}
+							style="cursor: pointer">
+							Department/System
+						 </th>
+						 <th scope="col" data-field-name="Department_Name__c" onclick={sortPhoneNumInfo}
+							style="cursor: pointer">
+							Department Name
+						 </th>
+						 <th scope="col" data-field-name="Method__c" onclick={sortPhoneNumInfo}
+							style="cursor: pointer">
+							Method
+						 </th>
+						 <th scope="col" data-field-name="Phone_Number__c" onclick={sortPhoneNumInfo}
+							style="cursor: pointer">
+							Phone Number
+						 </th>
+	
+						 <th scope="col" data-field-name="Email_Address__c" onclick={sortPhoneNumInfo}
+							style="cursor: pointer">
+							Email Address
+						 </th>
+	
+					  </tr>
+				   </thead>
+				   <tbody>
+					  <template for:each={notificationList} for:item='obj'>
+						 <tr class="" key={obj.Id}>
+							<td data-label="object label">
+								<lightning-input onchange={handle911Notification} data-record-id={obj.Id}
+								data-field-name="Name" value={obj.Name} max-length="64" onkeypress={validateInputForName}
+								variant="label-hidden">
+							 </lightning-input>
+							</td>
+	
+							<td data-label="object label">
+								<lightning-combobox variant="label-hidden" value={obj.Department_System__c} options={departmentSystem}
+								onchange={handle911Notification} data-record-id={obj.Id}
+								data-field-name="Department_System__c">
+							 </lightning-combobox>
+							   
+							</td>
+							<td data-label="object label">
+	
+							
+							   <lightning-combobox 
+							   if:true={obj.isDepartmentNameEditable}
+                                                   variant="label-hidden"
+                                                   value={obj.Department_Name__c}
+                                                   options={departmentnames}
+                                                   onchange={handle911Notification}
+                                                   data-record-id={obj.Id}
+                                                    selected={obj.Department_Name__c}
+                                                   data-field-name="Department_Name__c"
+                                                    data-name="validate" required>
+                              </lightning-combobox>
+							</td>
+							<td data-label="object label">
+								<lightning-combobox variant="label-hidden" value={obj.Method__c} options={method}
+								  onchange={handle911Notification} data-record-id={obj.Id} 
+								  data-field-name="Method__c">
+							   </lightning-combobox>
+							</td>
+
+							
+							<td data-label="object label">
+								<lightning-input
+								if:true={obj.isPhoneNumberEditable}
+								type="tel" 
+								maxlength="10"
+                                onkeypress={validateInputForNumber}
+								onchange={handle911Notification} 
+								data-record-id={obj.Id} 
+								data-field-name="Phone_Number__c" 
+								value={obj.Phone_Number__c}
+								variant="label-hidden">
+							</lightning-input>
+							</td>
+	                    
+	
+							<td data-label="object label">
+								<lightning-input 
+								if:true={obj.isEmailAddressEditable}
+								type="email" 
+								onchange={handle911Notification} 
+								data-record-id={obj.Id} 
+								data-field-name="Email_Address__c" 
+								value={obj.Email_Address__c}
+								variant="label-hidden">
+							</lightning-input>
+							</td>
+	
+						 </tr>
+					  </template>
+				   </tbody>
+				</table>
+				
+				<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_large"
+               style="height: 20%; margin-bottom: 5%">
+               <tr class="slds-line-height_reset" style="height: 30%;">
+                  
+                  <td class="custom-input-align">
+                     <lightning-input onkeypress={validateInputForName} max-length="64" value={nameAdd}
+                        onchange={handleName} placeholder="Add Name"
+                        variant="label-hidden"></lightning-input>
+                  </td>
+
+                  <td class="custom-combobox-width">
+					<lightning-combobox variant="label-hidden" value={departmentsystemAdd} options={departmentSystem}
+					onchange={handleDepartmentSystem} placeholder="Select Department/System"
+					class="full-width-combobox">
+				 </lightning-combobox>
+                  </td>
+
+                  <td data-label="object label">
+
+                     <lightning-combobox
+					 if:true={isDepartmentNameAddEditable}
+					  variant="label-hidden" value={departmentnameAdd} options={departmentnames}
+                        onchange={handleDepartmentName} placeholder="Select Department Name"
+                        >
+                     </lightning-combobox>
+                  </td>
+
+                  <td class="custom-combobox-width">
+                     <div class="slds-form-element slds-m-bottom_small">
+
+                        <div><!---class="slds-form-element__control"-->
+                           <lightning-combobox name="progress" value={methodAdd} options={method}
+                              onchange={handleMethod} label="" placeholder="Select Method"
+                              id="progress" class="full-width-combobox">
+                           </lightning-combobox>
+                        </div>
+                     </div>
+
+                  </td>
+
+				  <td>
+					<lightning-input
+					if:true={isPhoneNumberAddEditable}
+					 onkeypress={validateInputForNumber} max-length="10" value={phoneAdd}
+					   onchange={handlePhone} placeholder="Add Phone Number"
+					   variant="label-hidden"></lightning-input>
+				 </td>
+
+				 <td>
+					<lightning-input 
+					if:true={isEmailAddressAddEditable}
+					onkeypress={validateInputForEmail}  value={emailAdd}
+					   onchange={handleEmail} placeholder="Add Email Address"
+					   variant="label-hidden"></lightning-input>
+				 </td>
+
+                 <template if:false={isnetworktranslation}>
+                     <!-- <template if:false={isOrderInProgressOrCompleted}> -->
+                     <td>
+                        <lightning-button label="Add" variant="brand" onclick={handleAdd}></lightning-button>
+                     </td>
+                     <!-- </template> -->
+                  </template>
+               </tr>
+            </table>
+		
+			 </template>
+			</div>
+			
+		  </lightning-accordion-section>
+	   </lightning-accordion>
+
+	   <lightning-accordion class="RecordDetailX" allow-multiple-sections-open
+		  onsectiontoggle={handleSectionToggle}
+		  active-section-name={activeSections}>
+		  <lightning-accordion-section name="buttonProgCap" label="Button Programming Capabilities" class="slds-p-top_x-small">
+			 <lightning-datatable
+				key-field="id"
+				data={result.lineItemsList}
+				columns={columns}
+				hide-checkbox-column>
+			 </lightning-datatable>
+		  </lightning-accordion-section>
+	   </lightning-accordion>
+	   <br/>
+	   <br/>
+	    <template if:false={isnetworktranslation}>      
+	   	   <div class="slds-align_absolute-center">
+		  <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+		  <lightning-button label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+	   </div>
+	    </template>
+	</div>
+ </template>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ABS_Add_On_Products__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Business Continuity/Disaster Recovery - BC/DR,
+Collaboration - Collab,
+Data Center - D.C,
+Enterprise Networking - EntNet,
+Licensing - Lic,
+Security - Sec,
+Security - Srvs,
+Temperature Sensors - TempSnsr</inlineHelpText>
+    <label>ABS Add-On Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BC/DR - Datto</fullName>
+                <default>false</default>
+                <label>BC/DR - Datto</label>
+            </value>
+            <value>
+                <fullName>BC/DR - Total360</fullName>
+                <default>false</default>
+                <label>BC/DR - Total360</label>
+            </value>
+            <value>
+                <fullName>Collab - Avaya Communications Manager</fullName>
+                <default>false</default>
+                <label>Collab - Avaya Communications Manager</label>
+            </value>
+            <value>
+                <fullName>Collab - Avaya CS1000</fullName>
+                <default>false</default>
+                <label>Collab - Avaya CS1000</label>
+            </value>
+            <value>
+                <fullName>Collab - Avaya IP Office</fullName>
+                <default>false</default>
+                <label>Collab - Avaya IP Office</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco BE4K / BE6K / BE7K</fullName>
+                <default>false</default>
+                <label>Collab - Cisco BE4K / BE6K / BE7K</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Cloud Contact Center</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Cloud Contact Center</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Contact Center Enterprise</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Contact Center Enterprise</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Contact Center Express</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Contact Center Express</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Telepresence Endpoints (All)</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Telepresence Endpoints (All)</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Webex Calling</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Webex Calling</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Webex Endpoints (All)</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Webex Endpoints (All)</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Webex Meetings</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Webex Meetings</label>
+            </value>
+            <value>
+                <fullName>Collab - Cisco Webex Teams</fullName>
+                <default>false</default>
+                <label>Collab - Cisco Webex Teams</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel Access</fullName>
+                <default>false</default>
+                <label>Collab - Mitel Access</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel Live Business Gateway</fullName>
+                <default>false</default>
+                <label>Collab - Mitel Live Business Gateway</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiCollab</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiCollab</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiCollab Advanced Messaging</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiCollab Advanced Messaging</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiContact Center Business</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiContact Center Business</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiContact Center Enterprise</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiContact Center Enterprise</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiContact Center Office</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiContact Center Office</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Audio Web Conference</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Audio Web Conference</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Border Gateway</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Border Gateway</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Business (MCD / 3300)</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Business (MCD / 3300)</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Call Recording</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Call Recording</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice MX One</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice MX One</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Office 250</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Office 250</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Office 400</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Office 400</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Office App Suite</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Office App Suite</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel MiVoice Unified Messaging</fullName>
+                <default>false</default>
+                <label>Collab - Mitel MiVoice Unified Messaging</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel Phone Manager</fullName>
+                <default>false</default>
+                <label>Collab - Mitel Phone Manager</label>
+            </value>
+            <value>
+                <fullName>Collab - Mitel SX-200 ICP Hospitality</fullName>
+                <default>false</default>
+                <label>Collab - Mitel SX-200 ICP Hospitality</label>
+            </value>
+            <value>
+                <fullName>D.C. - Cisco Hyperflex</fullName>
+                <default>false</default>
+                <label>D.C. - Cisco Hyperflex</label>
+            </value>
+            <value>
+                <fullName>D.C. - Cisco Nexus Switching</fullName>
+                <default>false</default>
+                <label>D.C. - Cisco Nexus Switching</label>
+            </value>
+            <value>
+                <fullName>D.C. - Cisco UCS Servers</fullName>
+                <default>false</default>
+                <label>D.C. - Cisco UCS Servers</label>
+            </value>
+            <value>
+                <fullName>D.C. - Cohesity Storage Appliance</fullName>
+                <default>false</default>
+                <label>D.C. - Cohesity Storage Appliance</label>
+            </value>
+            <value>
+                <fullName>D.C. - Cohesity Storage Software-Only</fullName>
+                <default>false</default>
+                <label>D.C. - Cohesity Storage Software-Only</label>
+            </value>
+            <value>
+                <fullName>D.C. - Datto NAS</fullName>
+                <default>false</default>
+                <label>D.C. - Datto NAS</label>
+            </value>
+            <value>
+                <fullName>D.C. - Dell Poweredge</fullName>
+                <default>false</default>
+                <label>D.C. - Dell Poweredge</label>
+            </value>
+            <value>
+                <fullName>D.C. - HPe Proliant</fullName>
+                <default>false</default>
+                <label>D.C. - HPe Proliant</label>
+            </value>
+            <value>
+                <fullName>D.C. - Pure Flash Array</fullName>
+                <default>false</default>
+                <label>D.C. - Pure Flash Array</label>
+            </value>
+            <value>
+                <fullName>D.C. - Pure Flash Blade</fullName>
+                <default>false</default>
+                <label>D.C. - Pure Flash Blade</label>
+            </value>
+            <value>
+                <fullName>D.C. - Vmware Cloud Foundation</fullName>
+                <default>false</default>
+                <label>D.C. - Vmware Cloud Foundation</label>
+            </value>
+            <value>
+                <fullName>D.C. - VMware NSX</fullName>
+                <default>false</default>
+                <label>D.C. - VMware NSX</label>
+            </value>
+            <value>
+                <fullName>D.C. - VMware Vrealize suite</fullName>
+                <default>false</default>
+                <label>D.C. - VMware Vrealize suite</label>
+            </value>
+            <value>
+                <fullName>D.C. - VMware Vsphere</fullName>
+                <default>false</default>
+                <label>D.C. - VMware Vsphere</label>
+            </value>
+            <value>
+                <fullName>E911 - Alpine Furniture</fullName>
+                <default>false</default>
+                <label>E911 - Alpine Furniture</label>
+            </value>
+            <value>
+                <fullName>E911 - IIC Call Recording</fullName>
+                <default>false</default>
+                <label>E911 - IIC Call Recording</label>
+            </value>
+            <value>
+                <fullName>E911 - INDigital</fullName>
+                <default>false</default>
+                <label>E911 - INDigital</label>
+            </value>
+            <value>
+                <fullName>E911 - Motorola</fullName>
+                <default>false</default>
+                <label>E911 - Motorola</label>
+            </value>
+            <value>
+                <fullName>E911 - Solacom</fullName>
+                <default>false</default>
+                <label>E911 - Solacom</label>
+            </value>
+            <value>
+                <fullName>E911 - Synergem</fullName>
+                <default>false</default>
+                <label>E911 - Synergem</label>
+            </value>
+            <value>
+                <fullName>E911 - Zuercher</fullName>
+                <default>false</default>
+                <label>E911 - Zuercher</label>
+            </value>
+            <value>
+                <fullName>EntNet - Adtran</fullName>
+                <default>false</default>
+                <label>EntNet - Adtran</label>
+            </value>
+            <value>
+                <fullName>EntNet - Aruba WiFi</fullName>
+                <default>false</default>
+                <label>EntNet - Aruba WiFi</label>
+            </value>
+            <value>
+                <fullName>EntNet - Cisco Catalyst Switches</fullName>
+                <default>false</default>
+                <label>EntNet - Cisco Catalyst Switches</label>
+            </value>
+            <value>
+                <fullName>EntNet - Cisco DNA</fullName>
+                <default>false</default>
+                <label>EntNet - Cisco DNA</label>
+            </value>
+            <value>
+                <fullName>EntNet - Cisco Router(s)</fullName>
+                <default>false</default>
+                <label>EntNet - Cisco Router(s)</label>
+            </value>
+            <value>
+                <fullName>EntNet - Cisco SD-WAN</fullName>
+                <default>false</default>
+                <label>EntNet - Cisco SD-WAN</label>
+            </value>
+            <value>
+                <fullName>EntNet - Cisco WiFi</fullName>
+                <default>false</default>
+                <label>EntNet - Cisco WiFi</label>
+            </value>
+            <value>
+                <fullName>EntNet - Meraki Switching</fullName>
+                <default>false</default>
+                <label>EntNet - Meraki Switching</label>
+            </value>
+            <value>
+                <fullName>EntNet - Meraki Wireless APs</fullName>
+                <default>false</default>
+                <label>EntNet - Meraki Wireless APs</label>
+            </value>
+            <value>
+                <fullName>EntNet - Ruckus Cloud Controller</fullName>
+                <default>false</default>
+                <label>EntNet - Ruckus Cloud Controller</label>
+            </value>
+            <value>
+                <fullName>EntNet - Ruckus Zone Director  Controllers</fullName>
+                <default>false</default>
+                <label>EntNet - Ruckus Zone Director  Controllers</label>
+            </value>
+            <value>
+                <fullName>LBR - Labor Only</fullName>
+                <default>false</default>
+                <label>LBR - Labor Only</label>
+            </value>
+            <value>
+                <fullName>Lic - Cisco Enterprise Agreements</fullName>
+                <default>false</default>
+                <label>Lic - Cisco Enterprise Agreements</label>
+            </value>
+            <value>
+                <fullName>Lic - Meraki Licensing</fullName>
+                <default>false</default>
+                <label>Lic - Meraki Licensing</label>
+            </value>
+            <value>
+                <fullName>Lic - Microsoft</fullName>
+                <default>false</default>
+                <label>Lic - Microsoft</label>
+            </value>
+            <value>
+                <fullName>Lic - Microsoft Office365</fullName>
+                <default>false</default>
+                <label>Lic - Microsoft Office365</label>
+            </value>
+            <value>
+                <fullName>Lic - Vmware</fullName>
+                <default>false</default>
+                <label>Lic - Vmware</label>
+            </value>
+            <value>
+                <fullName>Sec - Cisco AMP for Endpoints</fullName>
+                <default>false</default>
+                <label>Sec - Cisco AMP for Endpoints</label>
+            </value>
+            <value>
+                <fullName>Sec - Cisco IPS</fullName>
+                <default>false</default>
+                <label>Sec - Cisco IPS</label>
+            </value>
+            <value>
+                <fullName>Sec - Cisco ISE</fullName>
+                <default>false</default>
+                <label>Sec - Cisco ISE</label>
+            </value>
+            <value>
+                <fullName>Sec - Cisco Multi Factor Authentication (Duo)</fullName>
+                <default>false</default>
+                <label>Sec - Cisco Multi Factor Authentication (Duo)</label>
+            </value>
+            <value>
+                <fullName>Sec - Cisco Stealthwatch</fullName>
+                <default>false</default>
+                <label>Sec - Cisco Stealthwatch</label>
+            </value>
+            <value>
+                <fullName>Sec - Cisco Umbrella</fullName>
+                <default>false</default>
+                <label>Sec - Cisco Umbrella</label>
+            </value>
+            <value>
+                <fullName>Sec - Cisco Web Filter (Ironport)</fullName>
+                <default>false</default>
+                <label>Sec - Cisco Web Filter (Ironport)</label>
+            </value>
+            <value>
+                <fullName>Sec - Email Filter (Ironport)</fullName>
+                <default>false</default>
+                <label>Sec - Email Filter (Ironport)</label>
+            </value>
+            <value>
+                <fullName>Sec - Meraki Cameras</fullName>
+                <default>false</default>
+                <label>Sec - Meraki Cameras</label>
+            </value>
+            <value>
+                <fullName>Sec - Meraki MX Security Appliance</fullName>
+                <default>false</default>
+                <label>Sec - Meraki MX Security Appliance</label>
+            </value>
+            <value>
+                <fullName>Sec - Meraki Security Appliances / NGFW</fullName>
+                <default>false</default>
+                <label>Sec - Meraki Security Appliances / NGFW</label>
+            </value>
+            <value>
+                <fullName>Srvs - Cisco SMARTNet</fullName>
+                <default>false</default>
+                <label>Srvs - Cisco SMARTNet</label>
+            </value>
+            <value>
+                <fullName>Srvs - Maintenance Agreements</fullName>
+                <default>false</default>
+                <label>Srvs - Maintenance Agreements</label>
+            </value>
+            <value>
+                <fullName>Srvs - Mitel support Agreements</fullName>
+                <default>false</default>
+                <label>Srvs - Mitel support Agreements</label>
+            </value>
+            <value>
+                <fullName>Srvs - Network Monitoring</fullName>
+                <default>false</default>
+                <label>Srvs - Network Monitoring</label>
+            </value>
+            <value>
+                <fullName>Srvs - Total Care Agreements</fullName>
+                <default>false</default>
+                <label>Srvs - Total Care Agreements</label>
+            </value>
+            <value>
+                <fullName>TempSnsr - Clear2There Zero Touch Fever Detection Solution</fullName>
+                <default>false</default>
+                <label>TempSnsr - Clear2There Zero Touch Fever Detection Solution</label>
+            </value>
+            <value>
+                <fullName>Sec - Mitel Mass Notification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sec - Mitel Mass Notification</label>
+            </value>
+            <value>
+                <fullName>Sec - Mitel Revolution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sec - Mitel Revolution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

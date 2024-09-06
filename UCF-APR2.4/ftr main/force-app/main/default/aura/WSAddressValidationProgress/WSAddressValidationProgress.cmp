@@ -1,0 +1,80 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,lightning:actionOverride"
+                access="global">
+
+<aura:handler event="c:WSAddressEvent"
+        action="{!c.handleAddressEvent}"/>
+
+    <aura:handler event="c:WSDPISaved" action="{!c.handleDPISavedEvent}" />
+    <aura:attribute name="progressIndicatorFlag" type="String" />
+    <aura:attribute name="disableNextBTN" type="boolean" default="true"/>
+    
+    <aura:attribute name="disableNextDPIBTN" type="boolean" default="true"/>
+    <!-- Opp id-->
+  <aura:attribute name="recordId" type="Id" />
+  
+  <!-- Use this when calling from the address validation screen popup-->
+    <aura:attribute name="addressId" type="Id" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    
+    
+    <lightning:recordEditForm aura:id="oppRecordCreator" 
+                              onsuccess="{!c.handleSuccess}"
+                              objectApiName="Opportunity">
+        <lightning:messages />
+        
+ 
+
+        
+        <div class="demo-only">
+            <section>
+                <div>
+                    <header>
+                       <!-- <button title="Close">
+                            <lightning:icon iconName="utility:close" alternativeText="Account" />
+                            <span class="slds-assistive-text">Close</span>
+                        </button> 
+	                   <h4 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Address Validation</h4> -->
+                    </header>
+                    <div>
+                        <lightning:progressIndicator type="path" currentStep="{!v.progressIndicatorFlag}">
+                            <lightning:progressStep label="Address Lookup" value="step1" />
+                            <lightning:progressStep label="DSAT Validation" value="step2" />
+                            <lightning:progressStep label="DPI Validation" value="step3" />
+                            
+                        </lightning:progressIndicator>
+                        
+                       <div aura:id="stepOne">
+                           <!--<c:WSSingleAddressValidation oppId="{!v.recordId}"/> -->
+                           <c:WSSingleAddressVal oppId="{!v.recordId}"/>
+                        </div>
+                        <div aura:id="stepTwo">
+							<c:WSDSATAddressValidationResult aura:id="dsatComponent" addressId="{!v.addressId}"/>
+                            
+                            
+<footer class="slds-card__footer">
+      
+     <div class="slds-text-align_right">
+ <lightning:button label="Back" variant="neutral" onclick="{!c.goBackToStepOne}" />
+     </div>
+  </footer>                              
+                            <!-- 
+                            <lightning:button label="Back22" onclick="{!c.goBackToStepOne}" />
+                            <lightning:button label="Next" onclick="{!c.goToValidateInDSATStep}" variant="neutral" disabled= "{!v.disableNextDPIBTN}"/> -->
+                        </div>
+                        <div aura:id="stepThree">
+
+                            <c:WSDPIAddressValidationResult aura:id="dpiComponent" addressId="{!v.addressId}"/>
+                          
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            <div ></div>
+        </div>
+        
+    </lightning:recordEditForm>
+</aura:component>

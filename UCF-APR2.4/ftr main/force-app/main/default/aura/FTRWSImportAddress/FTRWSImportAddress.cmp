@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global"  controller="FTRWSImportAddressController">
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+    <aura:attribute name="showUpload" type="boolean" default="true"/>
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false"/>
+    <aura:attribute name="disableUpload" type="boolean" default="true"/>
+    <!-- Opp Id -->
+    <aura:attribute name="recordId" type="Id" />
+    
+	<lightning:input aura:id="fileId" onchange="{!c.handleFilesChange}" type="file" name="file" label="Upload Attachment" multiple="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init }"/>
+    <div class="slds-text-body_small slds-text-color_error">{!v.fileName} </div>
+    <aura:if isTrue="{!v.showLoadingSpinner}">
+        <div class="slds-text-body_small slds-text-color_error">Uploading... 
+            <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+        </div>
+    </aura:if>
+    
+    <br/>
+    <div class="slds-p-bottom_medium">
+        <lightning:button class="slds-button slds-button_brand" onclick="{!c.doSave}" disabled="{!or(v.showUpload, v.disableUpload)}">Upload Attachment</lightning:button>
+    </div>
+</aura:component>

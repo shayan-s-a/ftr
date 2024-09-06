@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WS_Acna__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(LOWER(ACNA__c) =   LOWER(Opportunity__r.Wholesale_ACNA__r.Name) , true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>WS Acna</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VoIP_Translations_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>VoIP Translations Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>UCaaS_Cutover_Picklist__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Review</fullName>
+                <default>false</default>
+                <label>Review</label>
+            </value>
+            <value>
+                <fullName>Translations In Progress</fullName>
+                <default>false</default>
+                <label>Translations In Progress</label>
+            </value>
+            <value>
+                <fullName>VTRANS Completed</fullName>
+                <default>false</default>
+                <label>VTRANS Completed</label>
+            </value>
+            <value>
+                <fullName>Review Order</fullName>
+                <default>false</default>
+                <label>Review Order</label>
+            </value>
+            <value>
+                <fullName>Translation Complete</fullName>
+                <default>false</default>
+                <label>Translation Complete</label>
+            </value>
+            <value>
+                <fullName>Final CDC Uploaded</fullName>
+                <default>false</default>
+                <label>Final CDC Uploaded</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Translations In Progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>VTRANS Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Review Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Translation Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Final CDC Uploaded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Review</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

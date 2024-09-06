@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_Partner_Stages</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+ispickval(CreatedBy.UserRole.PortalType, &quot;Partner&quot;),
+  OR( 
+    ispickval( StageName , &quot;Investigating&quot;),
+    ispickval( StageName , &quot;Defining&quot;),
+    ispickval( StageName , &quot;Validating&quot;)
+  )
+)</errorConditionFormula>
+    <errorMessage>This stage is not available.</errorMessage>
+</ValidationRule>

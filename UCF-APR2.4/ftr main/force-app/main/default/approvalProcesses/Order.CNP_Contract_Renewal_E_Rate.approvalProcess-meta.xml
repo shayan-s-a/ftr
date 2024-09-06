@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>OrderNumber</field>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Order_Stage__c</field>
+        <field>Order_Created_Date__c</field>
+        <field>Reject_Reason__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_Erate</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Customer_Network_Provisioning</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>CNP Quality Assurance Review</label>
+        <name>CNP_Quality_Assurance_Review</name>
+        <rejectionActions>
+            <action>
+                <name>Order_Rejected</name>
+                <type>Alert</type>
+            </action>
+            <action>
+                <name>Reject_to_AE</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_PSR</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Customer_Network_Provisioning</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Holding Stage for E-Rate Contract Renewal Orders</description>
+        <label>E-Rate</label>
+        <name>ERate</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Customer_Network_Provisioning</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>PSR in Progress</label>
+        <name>PSR_in_Progress</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Order Record Type = Contract Renewal, Erate Customer = Yes AND
+
+Product = EVPL,E-LAN,EIA,E-LAN + EIA 
+or 
+Product Type = SDWAN</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>Contract Renewal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.ERATE_Customer__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SDWAN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product__c</field>
+            <operation>equals</operation>
+            <value>EIA,E-LAN,E-LAN + EIA,EVPL</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Stage_to_Complete</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Order_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Reject_to_AE</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Lock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Owner_to_CNP</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Stage_to_CNP_Quality_Assurance</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>CNP - Contract Renewal -E-Rate</label>
+    <processOrder>21</processOrder>
+    <recallActions>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

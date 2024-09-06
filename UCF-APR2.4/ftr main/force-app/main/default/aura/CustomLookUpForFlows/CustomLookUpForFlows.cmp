@@ -1,0 +1,38 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global" controller="GetDataForCustomLookup">
+    <aura:attribute name="location" type="string" default=""/>
+    <aura:attribute name="searchKey" type="string" default=""/>
+    <aura:attribute name="con" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="targetR" type="String" />
+    <aura:attribute name="IsSelectedFromList" type="boolean"/>
+    <aura:attribute name="DisplayList" type="List" default="[]"/>
+	<aura:attribute name="predictions" type="List" default="[]"/>
+    <lightning:input label="SPOC Contact:" 
+                     name="location"
+                     aura:id="location" 
+                     value="{!v.location}"
+                     onchange="{!c.getCities}"
+                     class="{!IsSelectedFromList ? '':'error-display'}"
+                     placeholder="Search Contacts..."
+     />
+	<lightning:icon
+            iconName="utility:search"
+            size="x-small"
+            class="iconposition">
+    </lightning:icon>
+    <aura:if isTrue="{!v.predictions.length > 0}">		 
+        <ul class="Options-List slds-has-block-links_space">
+            <aura:iteration items="{!v.predictions}" var="prediction">
+                <li class="slds-listbox__item" onclick="{!c.getCityDetails}" data-placeid="{!prediction.Id}">
+                    <lightning:icon
+                        iconName="standard:contact"
+                        size="small"
+                        class="iconposition">
+                	</lightning:icon>
+                    <span>{!prediction.Name}</span>
+                </li>
+            </aura:iteration>
+        </ul> 	 
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Physical_Medium_Fiber_Speed_Match</fullName>
+    <active>false</active>
+    <description>When Physical Medium = Copper RJ45
+And Speed &gt; 100
+Then I will not be able to save the UNI
+
+When Physical Medium != Copper RJ45
+And Speed &lt; 1000
+Then I will not be able to save the UNI</description>
+    <errorConditionFormula>AND(NOT(ISPICKVAL(Physical_Medium__c, &apos;Copper RJ45&apos;)),
+Physical_Site__r.EIA_automation__c = false,  NOT(OR(ISPICKVAL(Speed__c, &apos;1000&apos;),ISPICKVAL(Speed__c, &apos;10000&apos;))))</errorConditionFormula>
+    <errorMessage>When Physical Medium is Fiber, Speed must be 1000 or above.</errorMessage>
+</ValidationRule>

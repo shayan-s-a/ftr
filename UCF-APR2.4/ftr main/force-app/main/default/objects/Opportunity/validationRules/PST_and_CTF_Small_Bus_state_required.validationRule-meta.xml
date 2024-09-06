@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PST_and_CTF_Small_Bus_state_required</fullName>
+    <active>true</active>
+    <description>Profiles: Partner Support Team and #CTF Small Business User are the only two profiles required to update the State field.</description>
+    <errorConditionFormula>AND(
+ISNEW(), ISBLANK(TEXT( Local_Area_Market_State__c )),
+OR (
+$Profile.Id = &apos;00eE0000001A84o&apos;,
+$Profile.Id = &apos;2F00e0h000001WfYf&apos;,
+$Profile.Id = &apos;00e0L000000Qtux&apos; ))</errorConditionFormula>
+    <errorDisplayField>Local_Area_Market_State__c</errorDisplayField>
+    <errorMessage>Local Area Market (State) is required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_CPE_Product</fullName>
+    <active>false</active>
+    <description>Mandatory requirement that a CPE Product is selected.</description>
+    <errorConditionFormula>AND ( 
+ISPICKVAL(CPE_Product__c
+, &quot;&quot;), 
+ RecordType.Name !=&apos;Community Connection&apos; )</errorConditionFormula>
+    <errorDisplayField>CPE_Product__c</errorDisplayField>
+    <errorMessage>CPE is a Mandatory field and must be completed &quot;Yes&quot; or &quot;No&quot; for the Opportunity as it pertains to having a CPE Product associated with the Sale.</errorMessage>
+</ValidationRule>

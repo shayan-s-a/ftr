@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LBI__LatticeScore__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Value of Score field from associated Recommendation record.</description>
+    <externalId>false</externalId>
+    <formula>LBI__Recommendation__r.LBI__Likelihood__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Value of Score field from associated Recommendation record.</inlineHelpText>
+    <label>Lattice Recommendation Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

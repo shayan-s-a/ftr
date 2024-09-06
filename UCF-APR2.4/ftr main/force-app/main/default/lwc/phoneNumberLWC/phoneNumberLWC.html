@@ -1,0 +1,314 @@
+<template>
+   <div if:true={showLoader}>
+      <div class="exampleHolder">
+         <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+      </div>
+   </div>
+   <div class="custom-table-overflow">
+
+
+
+      <div if:false={showLoader} class="slds-col slds-size_2-of-4 slds-m-left_x-small slds-m-top_large"
+         style="display: flex; flex-direction: row; align-items: center;">
+         <p style="margin: 0; flex: 1;">Do you need customized extensions? <span style="color: red">*</span></p>
+         <div class="radio-group" style="display: flex; align-items: center;">
+            <label id="one-label" for="one" style="margin: 0;">
+               <input id="one" type="radio" name="rating" value="true" checked={extFlag} class="input-radio-rating"
+                  required onchange={handleRadioChange}> Yes</label>
+            <label id="two-label" for="two" style="margin: 0; margin-left: 10px;">
+               <input id="two" type="radio" name="rating" value="false" checked={notExtFlag} class="input-radio-rating"
+                  required onchange={handleRadioChange}> No</label>
+         </div>
+      </div>
+
+      <div if:false={showLoader} class="slds-col slds-size_1-of-4 slds-m-left_x-small slds-m-top_large">
+
+         <lightning-combobox name="digits" label="" value={custExt} placeholder="Select an extension length"
+            options={options2} selected={custExt} onchange={handleChange} sele id="myCombobox"
+            class="slds-m-left_x-small"></lightning-combobox>
+         <br><br>
+      </div>
+
+      <template if:true={isTranslation}>
+         <!--<lightning-card title="Local Routing Number">-->
+         <div if:false={showLoader} class="custom-table-overflow">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" border="1" style="width: 50%;">
+               <thead>
+                  <tr class="slds-line-height_reset">
+                     <th scope="col">
+                        <div class="slds-truncate" title="NPA">NPA</div>
+                     </th>
+                     <th scope="col">
+                        <div class="slds-truncate" title="NXX">NXX</div>
+                     </th>
+                     <th scope="col">
+                        <div class="slds-truncate" title="Local Routing Number">Local Routing Number</div>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <template for:each={VoipQualifications} for:item="obj">
+                     <tr class="slds-hint-parent" key={obj.id}>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">{obj.NPA__c}</div>
+                        </td>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">{obj.NXX__c}</div>
+                        </td>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">
+                              <input type="text" formatter="decimal" maxlength="65" class="slds-input"
+                                 onchange={handleInputChangeMXX} value={obj.Local_Routing_Number__c}
+                                 data-record-id={obj.Id} data-field-name="Local_Routing_Number__c" />
+                           </div>
+                        </td>
+
+                     </tr>
+                  </template>
+               </tbody>
+            </table>
+         </div>
+         <!--</lightning-card>-->
+      </template>
+
+      <template if:true={isReadOnly}>
+         <!--<lightning-card title="Local Routing Number">-->
+         <div if:false={showLoader} class="custom-table-overflow">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" border="1" style="width: 50%;">
+               <thead>
+                  <tr class="slds-line-height_reset">
+                     <th scope="col">
+                        <div class="slds-truncate" title="NPA">NPA</div>
+                     </th>
+                     <th scope="col">
+                        <div class="slds-truncate" title="NXX">NXX</div>
+                     </th>
+                     <th scope="col">
+                        <div class="slds-truncate" title="Local Routing Number">Local Routing Number</div>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <template for:each={VoipQualifications} for:item="obj">
+                     <tr class="slds-hint-parent" key={obj.id}>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">{obj.NPA__c}</div>
+                        </td>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">{obj.NXX__c}</div>
+                        </td>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">
+                              <input type="text" formatter="decimal" maxlength="65" class="slds-input"
+                                 onchange={handleInputChangeMXX} value={obj.Local_Routing_Number__c}
+                                 data-record-id={obj.Id} data-field-name="Local_Routing_Number__c" disabled />
+                           </div>
+                        </td>
+
+                     </tr>
+                  </template>
+               </tbody>
+            </table>
+         </div>
+         <!--</lightning-card>-->
+      </template>
+
+      <!-- <template if:false={isnetworktranslation}> -->
+      <div if:false={showLoader} class="slds-button-group slds-float_right slds-header" role="group">
+         <template if:false={isnetworktranslation}>
+            <lightning-button variant="destructive" label="Delete Records" onclick={handleDeleteRecords}
+               class="slds-m-left_x-small slds-m-top_large"></lightning-button>
+            <lightning-file-upload accept={acceptedFormats} label="Attach CSV File"
+               onuploadfinished={uploadFileHandler}>
+            </lightning-file-upload>
+         </template>
+         <lightning-button variant="brand" label="Export Template" onclick={exportTemplate}
+            class="slds-m-left_x-small slds-m-top_large"></lightning-button>
+         <lightning-button variant="brand" label="Export CSV" onclick={exportCSV}
+            class="slds-m-left_x-small slds-m-top_large"></lightning-button>
+         <br><br>
+      </div>
+      <!-- </template> -->
+
+      <br><br><br><br>
+      <div if:false={showLoader} class="custom-table-overflow">
+         <template if:true={ftrDIDNumberDetails}>
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+               <thead>
+                  <tr class="slds-line-height_reset">
+                     <th class="" scope="col">
+                        <lightning-input class="slds-p-left_xx-large" type="checkbox" onchange={handleSelectAll}
+                           label="">
+                        </lightning-input>
+                     </th>
+                     <th scope="col" data-field-name="DIDNumber__c" onclick={sortPhoneNumInfo} style="cursor: pointer">
+                        Phone Number
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                     </th>
+                     <th scope="col" data-field-name="Ucf_Current_Carrier__c" onclick={sortPhoneNumInfo}
+                        style="cursor: pointer">
+                        Current Carrier
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                     </th>
+                     <th scope="col" data-field-name="Ucf_Install_Type__c" onclick={sortPhoneNumInfo}
+                        style="cursor: pointer">
+                        Install Type
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                     </th>
+                     <th scope="col" data-field-name="Ucf_Voip_Qualification__c" onclick={sortPhoneNumInfo}
+                        style="cursor: pointer">
+                        Voip Qualification
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                     </th>
+                     <th scope="col" data-field-name="Ucf_Number_Use__c" onclick={sortPhoneNumInfo}
+                        style="cursor: pointer">
+                        Number Use
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                     </th>
+
+                     <th scope="col" data-field-name="DIDLocationDetailsId__c" onclick={sortPhoneNumInfo}
+                        style="cursor: pointer">
+                        Service Location
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                     </th>
+
+                  </tr>
+               </thead>
+               <tbody>
+                  <template for:each={ftrDIDNumberDetails} for:item='obj'>
+                     <tr class="" key={obj.Id}>
+                        <td data-label="">
+                           <lightning-input class="slds-p-left_xx-large" type="checkbox" checked={obj.isSelected}
+                              onchange={handleIndividualCheckboxChange} data-id={obj.Id} label="">
+                           </lightning-input>
+
+                        </td>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                        </td>
+
+                        <td data-label="object label">
+
+                           <lightning-input onchange={handleInputChange} data-record-id={obj.Id}
+                              data-field-name="Ucf_Current_Carrier__c" value={obj.Ucf_Current_Carrier__c}
+                              variant="label-hidden">
+                           </lightning-input>
+                        </td>
+                        <td data-label="object label">
+
+                           <lightning-combobox variant="label-hidden" value={obj.InstallType} options={Install_Type}
+                              onchange={handleInputChange} data-record-id={obj.Id}
+                              data-field-name="Ucf_Install_Type__c">
+                           </lightning-combobox>
+                        </td>
+                        <td data-label="object label">
+                           <div class="slds-cell-wrap">{obj.Ucf_Voip_Qualification__c}</div>
+                        </td>
+                        <td data-label="object label">
+
+                           <lightning-combobox variant="label-hidden" value={obj.SelectedNumberUse} options={Number_Use}
+                              onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_Number_Use__c">
+                           </lightning-combobox>
+                        </td>
+
+
+                        <td>
+
+
+                           <lightning-combobox variant="label-hidden" value={obj.comboBoxValue}
+                              options={serviceAccounts} onchange={handleInputChange} data-record-id={obj.Id}
+                              data-field-name="DIDLocationDetailsId__c">
+                           </lightning-combobox>
+                        </td>
+
+                     </tr>
+                  </template>
+               </tbody>
+            </table>
+
+
+
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_large"
+               style="height: 20%; margin-bottom: 5%">
+               <tr class="slds-line-height_reset" style="height: 30%;">
+                  <td>
+                  </td>
+                  <td>
+                     <lightning-input onkeypress={validateInputForNumber} max-length="10" value={didNumber}
+                        onchange={handleDidChange} placeholder="Add Phone Number"
+                        variant="label-hidden"></lightning-input>
+                  </td>
+                  <td>
+                     <lightning-input value={CurrentCarrier} placeholder="Add Current Carrier" variant="label-hidden"
+                        onchange={handleCCChange}></lightning-input>
+                  </td>
+                  <td data-label="object label">
+
+                     <lightning-combobox variant="label-hidden" value={SelectedInstallType} options={Install_Type}
+                        onchange={handleInstallTypeSelect} placeholder="Select Install Type"
+                        data-field-name="Ucf_Install_type__c">
+                     </lightning-combobox>
+                  </td>
+                  <td>
+
+
+                     <div class="slds-form-element slds-m-bottom_small">
+
+                        <div><!---class="slds-form-element__control"-->
+                           <lightning-combobox name="progress" value={ucfVoipQualification} options={Number_Use}
+                              onchange={handleQualificationChange} label="" placeholder="Select Number Use"
+                              id="progress">
+                           </lightning-combobox>
+                        </div>
+                     </div>
+
+                  </td>
+
+
+                  <td>
+                     <div class="slds-form-element__control">
+                        <div class="slds-select_container">
+                           <select class="slds-select" data-recid="locationOptions" id="select-01" required=""
+                              onchange={handleDIDAddLocationChange}>
+                              <option value="">Select…</option>
+                              <template for:each={LocationOptions} for:item="op">
+                                 <option key={op.value}>{op.label}</option>
+                              </template>
+                           </select>
+                        </div>
+                     </div>
+
+                  </td>
+
+                  <template if:false={isnetworktranslation}>
+                     <!-- <template if:false={isOrderInProgressOrCompleted}> -->
+                     <td>
+                        <lightning-button label="Add" variant="brand" onclick={handleAdd}></lightning-button>
+                     </td>
+                     <!-- </template> -->
+                  </template>
+               </tr>
+            </table>
+
+
+            <br><br>
+            <template if:false={isnetworktranslation}>
+               <!-- <template if:false={isOrderInProgressOrCompleted}> -->
+               <div if:false={showLoader} class="slds-align_absolute-center">
+                  <lightning-button variant="brand" label=" Save " title="Save" onclick={handleSave}
+                     class="slds-m-left_x-small"></lightning-button>
+                  <lightning-button label="Cancel" title="Cancel" onclick={handleCancel}
+                     class="slds-m-left_x-small"></lightning-button>
+               </div>
+               <!-- </template> -->
+            </template>
+         </template>
+
+      </div>
+      <!--<template if:true={error}>
+         <p>{error}</p>
+      </template>-->
+   </div>
+</template>

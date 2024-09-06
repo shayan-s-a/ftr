@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Schedule</fullName>
+    <active>true</active>
+    <description>For Commercial Product Schedules</description>
+    <label>Product Schedule</label>
+    <picklistValues>
+        <picklist>Agreement_Type__c</picklist>
+        <values>
+            <fullName>Broadband%2C FiOS %26 Voice Bundles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband%2C FiOS %26 Voice Bundles - New Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Broadband Offers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet%2FData Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VoIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Document_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Signed %2F Awaiting Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined by Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Document Generated</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Document Sent to Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Schedule_Type__c</picklist>
+        <values>
+            <fullName>BHSI and OneVoice - Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup and Recovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and FSUV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and OneVoice - CT Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and OneVoice Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband and Onevoice - CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Internet Copper Enterprise Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Local-LD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Purchase Install</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Purchase install Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Voice Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cabling Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Converged Voice Bundle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Critical Customer Notification E-911</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CyberCenter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIA Schedule_02012021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LAN Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise Managed WLAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and FBV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and FBV%28IN-OR-WA Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and OneVoice - Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS Broadband and OneVoice Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS TV Locals Plus Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS TV Locals Plus Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber First Offer ENTERPRISE ONLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber and OneVoice Nationwide - Legacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOffice and OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOffice and OneVoice - CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOffice and OneVoice - Legacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiberoffice and Onevoice - Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Business Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Business Xtreme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Calling Cloud Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Connect Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Tandem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Tandem-for-Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Firewall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Network Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Service - Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MetroE LAN-WAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical Transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ring Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satellite Broadband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCF - CCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCF - UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice Internet Service - CA-FL-TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice Internet Service - CTF Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi Anchor Tenant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi Anchor Tenant - Govt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wi-Fi Hot Spot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Approval Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

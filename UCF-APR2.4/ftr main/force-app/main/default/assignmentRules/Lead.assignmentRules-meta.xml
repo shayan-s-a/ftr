@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Frontier%2Ecom Lead Routing</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>clearlink_lead_testing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Email</field>
+                <operation>equals</operation>
+                <value>test@clearlink.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Email</field>
+                <operation>equals</operation>
+                <value>test@testing.com</value>
+            </criteriaItems>
+            <template>Lead_Notifications/Notify_Lead_Owner</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>OR_Sales_Leads</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2 AND 3) OR (2 AND 4) OR (2 AND 5) OR (2 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web Site</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.StateCode</field>
+                <operation>equals</operation>
+                <value>OR</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Frontier.com/Enterprise Leads</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Assisted Living - Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Think Big (Website)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Web2Lead__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <template>SampleTemplates/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Jigsaw</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>notEqual</operation>
+                <value>Frontier.com/Enterprise Leads</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Frontier%2Ecom Lead Routing2</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.Jigsaw</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>nicole.r.danz@ftr.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>contains</operation>
+                <value>Frontier.com</value>
+            </criteriaItems>
+            <template>Lead_Notifications/Notify_Lead_Owner</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>nicole.r.danz@ftr.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Assisted Living - Email,Think Big (Website)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Web2Lead__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <template>Lead_Notifications/Notify_Lead_Owner</template>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Lead Development Rep</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Lead_Development_Reps</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Default Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>B2BMA Integration</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Form_Fills</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Form fill</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>B2BMA Integration</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Call</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Chat_Rep__c</field>
+                <operation>equals</operation>
+                <value>deborah.hilts@ftr.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Chat_Rep__c</field>
+                <operation>equals</operation>
+                <value>deborah.delavega@ftr.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Chat_Rep__c</field>
+                <operation>equals</operation>
+                <value>lakeycia.gilbert@ftr.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Chat_Rep__c</field>
+                <operation>equals</operation>
+                <value>lalita.green@ftr.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Chat_Rep__c</field>
+                <operation>equals</operation>
+                <value>frances.landon@ftr.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Chat_Rep__c</field>
+                <operation>equals</operation>
+                <value>michele.vanfossen@ftr.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Inbound_Calls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Chat_Rep__c</field>
+                <operation>equals</operation>
+                <value>susan.bishop@ftr.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Chat</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Inbound Chat</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MDU/MTU Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Costar_MDU,CoStar - MDU – Expansion,MDU to MDU,MTU to MDU</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Status</field>
+                <operation>equals</operation>
+                <value>New,Open</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MDU Lead</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MTU</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MTU Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>startsWith</operation>
+                <value>CA</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MTU</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MTU Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>startsWith</operation>
+                <value>FL</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MTU</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MTU Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.State</field>
+                <operation>equals</operation>
+                <value>Texas</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Default Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Zoominfo</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_SMB_Referrals</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>B2BMA Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Referral</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Lead_Source_Detail__c</field>
+                <operation>equals</operation>
+                <value>SMB Referral Program</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_D2D_Referrals</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>B2BMA Integration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Conversion_Type__c</field>
+                <operation>equals</operation>
+                <value>Referral</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Lead_Source_Detail__c</field>
+                <operation>equals</operation>
+                <value>SMB Referral Program - D2D</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial SMB Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>notEqual</operation>
+                <value>Frontier Marketing</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Lead to LDR Queue</fullName>
+        <active>false</active>
+    </assignmentRule>
+</AssignmentRules>

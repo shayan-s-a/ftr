@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Order Provisioner</label>
+    <protected>false</protected>
+    <values>
+        <field>ExcludedOrderStages__c</field>
+        <value xsi:type="xsd:string">Complete;New;Cancelled;Completed</value>
+    </values>
+    <values>
+        <field>ExcludedRecordTypes__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>IncludedProductTypes__c</field>
+        <value xsi:type="xsd:string">Ethernet;EIA;E-LAN;E-LAN &amp; EIA;EVPL;IP/VPN;Managed Router;Managed Services;Managed Enterprise WiFi;SDWAN;Frontier AnyWare UCaaS;UCaaS/UCF</value>
+    </values>
+    <values>
+        <field>IncludedRecordTypes__c</field>
+        <value xsi:type="xsd:string">Contract Renewal;Records Only Order;Transfer Ownership Order;New Order;Vlocity OM Order;Manual Vlocity Order;DID Order Request;Disconnect Order;Ethernet New Order (Partner);Ethernet Upgrade/Downgrade - Order (Partner);Move Order;Upgrade/Downgrade Order;UCaaS New Order</value>
+    </values>
+    <values>
+        <field>IsAutomationEnabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>QueueName__c</field>
+        <value xsi:type="xsd:string">CNP_Assignment_Notice</value>
+    </values>
+    <values>
+        <field>ShouldCreateTask__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

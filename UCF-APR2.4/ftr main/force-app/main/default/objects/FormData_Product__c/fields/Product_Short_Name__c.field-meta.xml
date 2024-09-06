@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Short_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Product_Selection__c , &apos;DIA - Dedicated Internet Access&apos;) , &apos;DIA&apos;,
+	IF( ISPICKVAL( Product_Selection__c , &apos;MNS - Managed Network Service&apos;) , &apos;MNS&apos;,
+		IF( ISPICKVAL( Product_Selection__c , &apos;SIP - Trunking Voice Service&apos;) , &apos;SIP&apos;,
+			IF( ISPICKVAL( Product_Selection__c , &apos;EPL - Ethernet Private Line / WAVE / FOTS - Private Network Connectivity (2 Sites)&apos;) , &apos;EPL&apos;,
+				IF( ISPICKVAL( Product_Selection__c , &apos;EVPL - Ethernet Virtual Private Line / Ethernet LAN - Private Network Connectivity (Multi-Site)&apos;) , &apos;EVPL&apos;, 
+					IF( ISPICKVAL( Product_Selection__c , &apos;RING - Ring Central&apos;) , &apos;RING&apos;, &apos;&apos;)
+				)
+			)
+		)
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product Short Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

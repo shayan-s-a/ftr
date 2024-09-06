@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numbers_Porting__c</fullName>
+    <description>Created for Lorraine Joiner&apos;s porting case.  The case is auto generated 100% of the time and sometimes there is no porting numbers.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select a value; Yes if there are numbers porting and No if there are no numbers porting.</inlineHelpText>
+    <label>Numbers Porting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

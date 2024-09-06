@@ -1,0 +1,106 @@
+<div class='nds-col_padded nds-size_1-of-1' ng-controller="ProductListController">
+
+	<div style="display:flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin: 1rem 0;">
+		<h1 class="nds-text-heading_medium" ng-show="bpTree.response.ConfiguredOptions.length != 0">Choose your Bundle</h1>
+	</div>
+	<div style="margin-bottom: 2rem;" ng-show="bpTree.response.ConfiguredOptions.length != 0">
+	<table  class="nds-table nds-table_bordered nds-table_cell-buffer" ng-class="[compareWindowWidth(1024,'vlc-nds-table_stacked'),compareWindowWidth(375,'vertical')]">
+		<thead>
+			<tr class="nds-text-heading_small product-list-row" style="line-height: 2rem;">
+				<!-- <th width="20px"/> -->
+				<th>
+				</th>
+				<th scope="col" ng-click='sortColumn("Name")'>
+					<div>Name</div>
+				</th>
+				<th scope="col" ng-click='sortColumn("Term")'>
+					<div class="nds-truncate">Term</div>
+				</th>
+				<th scope="col" ng-click='sortColumn("Speed")'>
+					<div class="nds-truncate">Speed</div>
+				</th>
+				<!-- <th scope="col" ng-click='sortColumn("Bundle_Type__c")'>
+					<div class="nds-truncate">BundleType</div>
+				</th> -->
+				<th scope="col" ng-if='bpTree.response.BuildYourProduct.BundleType=="DIA + SIP"' ng-click='sortColumn("CallPaths")'>
+					<div class="nds-truncate">Call Paths</div>
+				</th>				
+				<th scope="col" ng-if='bpTree.response.BuildYourProduct.BundleType=="DIA + UCF"' ng-click='sortColumn("UCFExecLic")'>
+					<div class="nds-truncate">UCF Executive Seats</div>
+				</th>	
+				<th scope="col" ng-click='sortColumn("BundlePrice")' class="nds-text-align_right" >
+					<div class="nds-truncate" >Recurring Charge</div>
+				</th>
+				<th scope="col" class="nds-text-align_right"  >
+					<div class="nds-truncate">One Time Charge</div>
+				</th>
+				
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat='option in bpTree.response.ConfiguredOptions | orderBy:sort.column:sort.descending' class="product-list-row" ng-class="{ 'selected-row' : selectedItem.row == $index }">
+				<td class="nds-cell-shrink" data-label='Select' >
+					<span class="nds-radio">
+						<input
+							ng-click="optionChanged(selectedItem, $index)"
+							ng-model="selectedItem"
+							value="{{option}}"
+							type="radio"
+							id="{{option.Id}}"
+							name="required"
+						/>
+						<label
+							class="nds-radio__label"
+							for="{{option.Id}}"
+						>
+							<span class="nds-radio_faux"></span>
+						</label>
+					</span>
+				</td>
+				<td >
+					<label for="{{option.Id}}" class="nds-truncate">{{option.Name}}</label>
+				</td>
+				<td >
+					<label for="{{option.Id}}" class="nds-truncate">{{option.Term}}</label>
+				</td>
+				<td >
+					<label for="{{option.Id}}" class="nds-truncate">{{option.Speed}}</label>
+				</td>
+				<!-- <td >
+					<label for="{{option.Id}}" class="nds-truncate">{{option.BundleType}}</label>
+				</td> -->
+				<td ng-if='bpTree.response.BuildYourProduct.BundleType=="DIA + SIP"'>
+					<label for="{{option.Id}}" class="nds-truncate">{{option.CallPaths}}</label>
+				</td>
+				<td ng-if='bpTree.response.BuildYourProduct.BundleType=="DIA + UCF"'>
+					<label for="{{option.Id}}" class="nds-truncate">{{option.UCFExecLic}}</label>
+				</td>
+				<td class="nds-text-align_right" >
+					<label for="{{option.Id}}" class="nds-truncate" >{{option.BundlePrice}}</label>
+				</td>
+				<!-- <td class="nds-text-align_right">
+					<label for="{{option.Id}}" class="nds-truncate">{{option.%vlocity_namespace%__OneTimeCharge__c | currency: bpTree.cpqCurrencySymbol }}</label>
+				</td> -->
+				<td class="nds-text-align_right">
+					<label for="{{option.Id}}" class="nds-truncate">{{bpTree.cpqCurrencySymbol}}0.00</label>
+				</td>
+				
+			</tr>
+		</tbody>
+	</table>
+	<div class="empty-table nds-text-color_error" ng-if="">
+		No pricing data found.
+	</div>
+	</div>
+
+	<!-- <div style="display:flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin: 1rem 0;">
+		<h1 class="nds-element_text-font">
+
+		</h1>
+		<button class="nds-button nds-button--brand" 
+			ng-show="bpTree.response.ConfiguredOptions.length != 0" 
+			ng-click="addProduct();" >Add To Cart</button> 
+	</div> -->
+
+</div>

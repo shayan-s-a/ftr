@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vlocity_All_Cases_Kanban</fullName>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Related_To2__c</columns>
+    <columns>Team_Impacted__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Jira__c</columns>
+    <columns>Targeted_Date__c</columns>
+    <columns>Create_By_Name__c</columns>
+    <columns>CASES.CLOSED_DATE</columns>
+    <columns>Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Vlocity</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,PR-AE,PR-AU,PR-ID,PR-JC,PR-OE,PR-ST</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Vlocity - All Cases-Kanban</label>
+    <sharedTo>
+        <group>Lybarger</group>
+    </sharedTo>
+</ListView>

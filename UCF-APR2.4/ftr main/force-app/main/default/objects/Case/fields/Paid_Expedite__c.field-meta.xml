@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paid_Expedite__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for the Order Creation case process to request a paid expedite.  This is populated by a flow from the opportunity to the Order Creation case.</description>
+    <externalId>false</externalId>
+    <label>Paid Expedite</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

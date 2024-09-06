@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vlocity</fullName>
+    <booleanFilter>1 AND 2 AND 3 and 4</booleanFilter>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Team_Impacted__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Related_To2__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Description_Order_Entry_Errors__c</columns>
+    <columns>Jira__c</columns>
+    <columns>Targeted_Date__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Create_By_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Vlocity</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>notContain</operation>
+        <value>,Vlocity Tier 2,Raju,Veena,Abhinav,Lakshmi,Rosalina,Hemantha,Kalyan,Tim,Tier 3 IT,Tirupati,Alwin,Arunkumar,Jadda</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>notContain</operation>
+        <value>gatta,koganti,rosalina,gowder,dileep,Sreenivasulu,Tim,charito,McGowan,mithu</value>
+    </filters>
+    <label>Vlocity - Tier 1</label>
+    <sharedTo>
+        <group>Admin_Users</group>
+        <group>FrontierAdministrators</group>
+        <group>SFDC_Admins</group>
+        <group>Vlocity</group>
+    </sharedTo>
+</ListView>

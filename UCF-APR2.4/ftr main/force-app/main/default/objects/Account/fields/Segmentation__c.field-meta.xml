@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segmentation__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>RED: Definition of Red __________
+AMBER: Definition of Amber __________    
+GREEN: Definition of Green __________</inlineHelpText>
+    <label>Segmentation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Small - Simple</fullName>
+                <default>false</default>
+                <label>Small - Simple</label>
+            </value>
+            <value>
+                <fullName>Small - Complex</fullName>
+                <default>false</default>
+                <label>Small - Complex</label>
+            </value>
+            <value>
+                <fullName>Emergent - Simple</fullName>
+                <default>false</default>
+                <label>Emergent - Simple</label>
+            </value>
+            <value>
+                <fullName>Emergent - Complex</fullName>
+                <default>false</default>
+                <label>Emergent - Complex</label>
+            </value>
+            <value>
+                <fullName>Advanced</fullName>
+                <default>false</default>
+                <label>Advanced</label>
+            </value>
+            <value>
+                <fullName>Enterprise</fullName>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+            <value>
+                <fullName>RED</fullName>
+                <default>false</default>
+                <label>RED 🟥</label>
+            </value>
+            <value>
+                <fullName>AMBER</fullName>
+                <default>false</default>
+                <label>AMBER 🟨</label>
+            </value>
+            <value>
+                <fullName>GREEN</fullName>
+                <default>false</default>
+                <label>GREEN 🟩</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

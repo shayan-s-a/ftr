@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OTM_Xsell_CtfFiberBB_OTM_Campaign</fullName>
+    <columns>OTM_Campaign__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OTM_Campaign__c</field>
+        <operation>equals</operation>
+        <value>OTM_Xsell CtfFiberBB</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Alt_Channel_OTM</value>
+    </filters>
+    <label>OTM_Xsell CtfFiberBB - OTM Campaign</label>
+    <sharedTo>
+        <group>OTM</group>
+    </sharedTo>
+</ListView>

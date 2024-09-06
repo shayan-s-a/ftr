@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Two_option_for_the_customer_to_leave_FTR__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all applicable reasons customer is or may leave FTR.</inlineHelpText>
+    <label>Applicable reasons customer is leaving</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto-renewal / contract confusion</fullName>
+                <default>false</default>
+                <label>Auto-renewal / contract confusion</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Breadth of product offerings</fullName>
+                <default>false</default>
+                <label>Breadth of product offerings</label>
+            </value>
+            <value>
+                <fullName>Competitor offerings</fullName>
+                <default>false</default>
+                <label>Competitor offerings</label>
+            </value>
+            <value>
+                <fullName>Competitor pricing</fullName>
+                <default>false</default>
+                <label>Competitor pricing</label>
+            </value>
+            <value>
+                <fullName>Customer service</fullName>
+                <default>false</default>
+                <label>Customer service</label>
+            </value>
+            <value>
+                <fullName>Ethernet availability</fullName>
+                <default>false</default>
+                <label>Ethernet availability</label>
+            </value>
+            <value>
+                <fullName>Fiber availability</fullName>
+                <default>false</default>
+                <label>Fiber availability</label>
+            </value>
+            <value>
+                <fullName>Loss of offer / discount / promotion</fullName>
+                <default>false</default>
+                <label>Loss of offer / discount / promotion</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Price increase</fullName>
+                <default>false</default>
+                <label>Price increase</label>
+            </value>
+            <value>
+                <fullName>Service issues or concerns</fullName>
+                <default>false</default>
+                <label>Service issues or concerns</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

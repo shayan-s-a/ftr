@@ -1,0 +1,108 @@
+<!--  
+/* SDDD-4706 - TNAC Number Assignment process 
+ * Author - Swetha
+ * Purpose - when Generate case button is clicked on DIDenrichment vlocity page navigated to this VF page.
+   Used for Case creation for TNAC Cases.
+*/ 
+-->
+<apex:page showHeader="true" sidebar="false" controller="DIDCaseInfoController" lightningStylesheets="true" action="{!page_load}" docType="html-5.0">
+    <apex:slds />
+    <style>
+        .header {
+            margin: 1rem 0;
+            margin-right: 1rem;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        body .bPageBlock .pbSubheader,
+        .slds-vf-scope .bPageBlock .pbSubheader {
+            margin-top: 1rem;
+        }
+
+        .header .details {
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header .details .fields {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header .details .fields div:first-child {
+            margin-right: 1rem;
+        }
+
+        .header .buttons {
+            margin-left: auto;
+        }
+
+        body .bPageBlock .pbSubheader h3,
+        .slds-vf-scope .bPageBlock .pbSubheader h3 {
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            padding: 0.2rem 0;
+        }
+
+        .slds-scope *,
+        .slds-scope *:before,
+        .slds-scope *:after {
+            font-family: "Salesforce Sans", Arial, sans-serif !important;
+            color: rgb(84, 105, 141) !important;
+        }
+
+        body .slds-vf-data-table thead th,
+        body .slds-vf-data-table thead td,
+        .slds-vf-scope .slds-vf-data-table thead th,
+        .slds-vf-scope .slds-vf-data-table thead td {
+            background: white !important;
+            font-weight: 900 !important;
+        }
+
+        .footer {
+            margin: 1rem 0;
+        }
+
+        :disabled {
+            background: lightgrey !important;
+        }
+        .slds-form-element_readonly {
+            margin: 1rem;
+        }
+        .messageText{
+            color:green;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript">
+        function closeWindow() {
+            // window.open('','_parent','');
+            //  alert('close');
+        window.close();
+    }
+    </script>
+    <div class="slds-scope">
+  <apex:form >
+  <apex:pageBlock >
+        <apex:pageBlockSection title="Case" columns="1">
+              <apex:inputText label="BTN" Value="{!Case_BTN}" required="true"/>
+              <apex:inputText label="NPA/NXX" Value="{!Case_NPA}" required="true"/>
+              <apex:inputText label="# of numbers needed" Value="{!Case_of_numbers}" required="true"/>
+              <apex:inputText label="Restriction Notes" Value="{!Case_Restriction}" required="true"/>
+              <apex:outputText label="Salesforce order # for SIP orders" value="{!Case_Order}"/>
+              <apex:outputText label="Customer Name" value="{!Cust_Name}"/>
+              <apex:outputText label="Customer Service Location" value="{!Cust_Srvloc}"/>
+          </apex:pageBlockSection>
+          <br/><br/>
+            <center>
+             <apex:commandButton action="{!Save}" value="Create Case" oncomplete="closeWindow();"/>
+             <apex:commandButton onclick="closeWindow();" value="Cancel" immediate="true"/>
+            </center>
+      <br/>
+      <apex:Messages style="font-size:15px;color:green;">{!strMsg}</apex:Messages>
+  </apex:pageBlock>
+  </apex:form>
+ </div>
+</apex:page>

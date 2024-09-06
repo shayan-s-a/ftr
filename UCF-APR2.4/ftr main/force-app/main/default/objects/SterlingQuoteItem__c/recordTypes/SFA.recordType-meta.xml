@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFA</fullName>
+    <active>true</active>
+    <label>SFA</label>
+    <picklistValues>
+        <picklist>Agreement_Type__c</picklist>
+        <values>
+            <fullName>Broadband FiberOptic %26 Voice Bundles - Existing%2FUpgrades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband FiberOptic %26 Voice Bundles - New Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E911</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment %28CPE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet%2FData Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Service %28Core products%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VoIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wireless</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovalPriority__c</picklist>
+        <values>
+            <fullName>Normal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovalRegion__c</picklist>
+        <values>
+            <fullName>Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid-Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovalRouting__c</picklist>
+        <values>
+            <fullName>Customer Build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Build - SMB Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Build - Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal %2F Special Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal %2F Special Pricing - SMB Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovalStatus__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovalTerritory__c</picklist>
+        <values>
+            <fullName>Alabama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alaska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connecticut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delaware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idaho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois-czn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iowa-czn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kentucky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Louisiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maryland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massachusetts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michigan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mississippi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missouri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hampshire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New York West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oklahoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oregon-Inland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennsylvania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rhode Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rochester- New York</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Carolina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennessee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washington-Inland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Virginia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wisconsin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wyoming</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Directory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware%2FMaterials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long Distance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance %28Post Warr%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surcharge</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CurrentStatus__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Business Decision Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Engineering Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Engineering Wireless Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - INA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - INA Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Completion Audit Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Completion Audit Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Engineering Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Engineering Originator Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - RSM Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Regional President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - SVP Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Sales Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Sales Engineering Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Site Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - State VP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Wireless Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Ready for Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DiscountType__c</picklist>
+        <values>
+            <fullName>BDT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MRC_Discount_Type__c</picklist>
+        <values>
+            <fullName>Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Override</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Percentage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MetroEQualificationType__c</picklist>
+        <values>
+            <fullName>Exchange Match</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Match</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminal Match</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NOICB_Flag__c</picklist>
+        <values>
+            <fullName>False</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>True</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NRC_Discount_Type__c</picklist>
+        <values>
+            <fullName>Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Override</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Percentage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OverallStatus__c</picklist>
+        <values>
+            <fullName>Abandoned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INA Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INA Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Business Decision Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Engineering Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Engineering Wireless Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - INA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Completion Audit Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Completion Audit Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Engineering Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Engineering originator Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Regional President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Sales Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Site Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - State VP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Wireless Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending SIFT Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending SIFT Status-ON HOLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Package_Type_Field__c</picklist>
+        <values>
+            <fullName>Closeout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Package_Type__c</picklist>
+        <values>
+            <fullName>Bundled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PriorStatus__c</picklist>
+        <values>
+            <fullName>Approved - Business Decision Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Engineering Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Engineering Wireless Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - INA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - INA Renewals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Post Completion Audit Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Post Completion Audit Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Post Engineering Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Post Engineering Originator Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Regional President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Sales Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Site Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - State VP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Wireless Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Wireless Management Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assigned - Sales Engineer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Schedule_Type__c</picklist>
+        <values>
+            <fullName>Broadband %26 OneVoice - AFTER Nov 19 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadband %26OneVoice - BEFORE Nov 19 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Local-LD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Purchase - Drop Ship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Purchase - Install</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Purchase Install - Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Voice Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cabling Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Critical Customer Notification - E911</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber Center %28Rochester NY%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIA Schedule_02012021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E911 - CPE Equipment Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E911 - Network Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EREACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise Managed Wireless LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOptic %26 OneVoice Nationwide %28copper%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOptic %26 OneVoice Nationwide %28fiber%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOptic Broadband %26 FBV - IN Only - AFTER Nov 19 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOptic Broadband %26 FBV - IN Only - BEFORE Nov 19 2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOptic Broadband %26 OneVoice  - AFTER Nov 19 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiberOptic Broadband %26 OneVoice  - BEFORE Nov 19 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Connect Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier FAW - UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier SmartVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier TV - Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier TV - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier TV - Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP VPN - 10 Locations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP VPN - 20 Locations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet for Business and OneVoice Nationwide %28copper%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Firewall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical Transport %28FOTS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD-WAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCF %28CCaaS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCF %28Unified Communications by Frontier%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ServiceType__c</picklist>
+        <values>
+            <fullName>OOF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Abandoned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INA Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INA Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Business Decision Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Engineering Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Engineering Wireless Final</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - INA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Completion Audit Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Completion Audit Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Engineering Originator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Post Engineering originator Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Regional President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Sales Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Site Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - State VP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending - Wireless Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Use_Collector_Allocation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

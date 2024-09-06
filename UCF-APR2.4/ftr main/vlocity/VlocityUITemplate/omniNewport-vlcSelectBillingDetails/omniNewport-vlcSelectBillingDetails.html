@@ -1,0 +1,38 @@
+<div class='nds-size_1-of-1 billing-details'>
+    <ng-form name='loopform'
+             class='nds-form-element nds-m-bottom_large nds-p-around_small'
+             ng-repeat='control in child.eleArray'
+             ng-controller="selectBillingDetailsCtrl">
+            <div class="nds-grid nds-cont-wrapper nds-select-wrapper"  >
+            <div class='nds-form-element__control nds-select_container nds-form-element__control-animated-label' >
+
+                <i ng-if="control.rootIndex == activeIndex"></i>
+
+                <!-- this select control should not be visible to the user -->
+                <select name='loopname'
+                    id='{{::control.name}}'
+                    ng-disabled='control.ro'
+                    ng-required='control.req'
+                    chainup="test"
+                    ng-model='selectedItem'
+                    class='nds-select'
+                    ng-class="{  'ng-valid ng-valid-required ng-not-empty ng-touched ng-dirty ng-valid-parse' : selectedItem.name != null && selectedItem.name != '' }"
+                    ng-init="init(this, control);"
+                    ng-options="item as item.name for item in options track by item.value"
+                    ng-change="itemSelected(selectedItem); $scope.aggregate(ele, control.index, control.indexInParent, true, -1);"> 
+                </select>
+
+                <label for="{{::control.name}}" class='nds-form-element__label'>
+                    {{::control.propSetMap.label}}
+                    <span class='nds-required'
+                        ng-if='control.req'>*
+                    </span>
+                </label>
+            </div>
+            <a class="nds-tooltip_container" vlc-slds-tool-tip="test" ng-if="control.propSetMap.help" ng-include="'vlcHelptextInfoIcon.html'"></a>
+            <div vlc-slds-include="vlcLabelController.html"></div>
+        </div>
+
+        <div ng-include="::errHTMLId"></div>
+    </ng-form>
+</div>

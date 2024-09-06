@@ -1,0 +1,45 @@
+{
+    "%vlocity_namespace%__Active__c": false,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "CPQ Create Order",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateOrder/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "disOnTplt": false,
+        "iconName": "",
+        "iconPosition": "left",
+        "iconVariant": "",
+        "label": "NavigateToAEEnrichmentPortal",
+        "loginAction": "login",
+        "message": {
+        },
+        "objectAction": "home",
+        "pubsub": false,
+        "recordAction": "view",
+        "replace": false,
+        "show": null,
+        "ssm": false,
+        "targetFilter": "Recent",
+        "targetId": "%ContextId%",
+        "targetLWC": "c:OrderCaptureEnglish",
+        "targetLWCLayout": "lightning",
+        "targetLWCParams": "ContextId=%OrderId%",
+        "targetName": "OmniWrapper",
+        "targetParams": "c__target=c:CPQCreateOrderEnglish&c__layout=lightning&c__ContextId={0}",
+        "targetType": "Web Page",
+        "targetUrl": "../../../apex/%vlocity_namespace%__OmniScriptUniversalPage?id=%OrderId%&layout=newport&OmniScriptType=Order&OmniScriptSubType=Capture&OmniScriptLang=English&ContextId=%OrderId%&PrefillDataRaptorBundle//true",
+        "validationRequired": null,
+        "variant": "link",
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Navigate Action",
+    "Name": "NavigateAction3",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateOrder/English/NavigateAction3"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employees_at_this_Sites_Below__c</fullName>
+    <description>Added by Randy Gromlich for D&amp;B data 2-25-2020</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total Employees at the Site (DUNS) and all sites in the tree below it</inlineHelpText>
+    <label>Employees at this Site &amp; Below</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

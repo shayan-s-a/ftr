@@ -1,0 +1,202 @@
+{
+    "ABSProfileFlag": false,
+    "AccessOSFlg": true,
+    "AccountId": "0010100000JZufjAAD",
+    "ActiveContractsCheck": true,
+    "AdminProfileFlag": false,
+    "AltChannelProfileFlag": false,
+    "CallCenterProfileFlag": false,
+    "ContextId": "00601000009NrEyAAK",
+    "Contract": [
+        {
+            "ContractStatus": "Draft",
+            "EndDate": "2023-08-22",
+            "Id": "800010000004IW6AAM",
+            "StartDate": "Direct Sales",
+            "Status": "Draft",
+            "StatusCheck": 1
+        },
+        {
+            "ContractStatus": "Draft",
+            "EndDate": "2023-08-22",
+            "Id": "800010000004IWAAA2",
+            "StartDate": "Direct Sales",
+            "Status": "Draft",
+            "StatusCheck": 1
+        },
+        {
+            "ContractStatus": "Draft",
+            "EndDate": "2023-08-23",
+            "Id": "800010000004IWKAA2",
+            "StartDate": "Direct Sales",
+            "Status": "Draft",
+            "StatusCheck": 1
+        }
+    ],
+    "ContractId1": "800010000004IWUAA2",
+    "ContractId2": null,
+    "ContractId3": null,
+    "ContractId4": null,
+    "ContractId5": null,
+    "ContractTermStep": {
+        "ChildContractTemplate": null,
+        "ContractStartDate": "2021-08-24",
+        "ContractTerm": "24",
+        "FSATemplateType": null,
+        "FTRAppAOptions": null,
+        "MDUTemplates": "EMA Initial Fee and Rev Share",
+        "MDUTemplatesflag": true,
+        "WholeSaleTeamFlag": false,
+        "WholesaleFSATemplate": null,
+        "WholesaleTemplateNames": null,
+        "pnumText": null
+    },
+    "ContractVersionId1": "a8Q01000000GwdxEAC",
+    "CustomerServiceProfileFlag": false,
+    "DisplayTemplateInformation": {
+        "FSACreate": null,
+        "TemplateResult": {
+            "TemplateFound": {
+                "Message": "Template Found",
+                "Product": ""
+            },
+            "TemplateNotFound": {
+                "Message": "Template not found in the rule engine. Contact CLM System Administrator",
+                "Product": ""
+            },
+            "TemplateNotFoundBlk": null,
+            "TemplatesFoundBlock": null,
+            "UpdateAgreeSchedule": "",
+            "UpdateAgreeScheduleBlk": null
+        },
+        "TemplateType": "Microsoft Word .DOCX Template",
+        "TemplatesFoundVisible": false,
+        "TemplatesNotFoundVisible": false,
+        "UpdateAgreeScheduleVisible": false,
+        "ValidTemplate": true
+    },
+    "ESSubType": "null",
+    "ESType": "AllowDuplicate",
+    "EnterContractFreeFormData1": {
+        "FreeFormDataBlock1": [
+            {
+                "DataType1": "Text",
+                "DisplayLabel1": "Initial Marketing Fee",
+                "FreeFormTemplate1": "EMA Initial Fee and Rev Share",
+                "FreeFormTokenText1": "21",
+                "HelpText1": "Enter Initial Marketing Fee",
+                "Scope1": "Contract",
+                "TokenName1": "EMA_INITIAL_MARKETINGFEE",
+                "TokenRecordId1": "aII01000000GoVCGA0"
+            },
+            {
+                "DataType1": "Text",
+                "DisplayLabel1": "Marketing Fee Max",
+                "FreeFormTemplate1": "EMA Initial Fee and Rev Share",
+                "HelpText1": "Enter Marketing Fee",
+                "Scope1": "Contract",
+                "TokenName1": "EMA_MARKETING_FEE_MAX",
+                "TokenRecordId1": "aII01000000GoVDGA0"
+            },
+            {
+                "DataType1": "Text",
+                "DisplayLabel1": "Marketing Fee Per Unit",
+                "FreeFormTemplate1": "EMA Initial Fee and Rev Share",
+                "HelpText1": "Enter Marketing Fee per Unit",
+                "Scope1": "Contract",
+                "TokenName1": "EMA_MARKETING_FEE__UNIT",
+                "TokenRecordId1": "aII01000000GoVEGA0"
+            },
+            {
+                "DataType1": "Text",
+                "DisplayLabel1": "Marketing Fee for 25",
+                "FreeFormTemplate1": "EMA Initial Fee and Rev Share",
+                "HelpText1": "Enter Marketing Fee for 25%",
+                "Scope1": "Contract",
+                "TokenName1": "MARKETING_FEE_25",
+                "TokenRecordId1": "aII01000000GoVFGA0"
+            },
+            {
+                "DataType1": "Text",
+                "DisplayLabel1": "Marketing Fee for 30%",
+                "FreeFormTemplate1": "EMA Initial Fee and Rev Share",
+                "HelpText1": "Enter Marketing Fee for 30%",
+                "Scope1": "Contract",
+                "TokenName1": "MARKETING_FEE_30",
+                "TokenRecordId1": "aII01000000GoVGGA0"
+            },
+            {
+                "DataType1": "Text",
+                "DisplayLabel1": "Marketing Fee for 35%",
+                "FreeFormTemplate1": "EMA Initial Fee and Rev Share",
+                "HelpText1": "Enter Marketing Fee for 35%",
+                "Scope1": "Contract",
+                "TokenName1": "MARKETING_FEE_35",
+                "TokenRecordId1": "aII01000000GoVHGA0"
+            },
+            {
+                "DataType1": "Text",
+                "DisplayLabel1": "Marketing Fee for 40%",
+                "FreeFormTemplate1": "EMA Initial Fee and Rev Share",
+                "HelpText1": "Enter Marketing Fee for 40%",
+                "Scope1": "Contract",
+                "TokenName1": "MARKETING_FEE_40",
+                "TokenRecordId1": "aII01000000GoVIGA0"
+            }
+        ]
+    },
+    "EnterContractFreeFormData2": {
+    },
+    "FSAPresent": true,
+    "GenerateDocument01": {
+    },
+    "GenerateDocument02": null,
+    "GenerateDocument03": null,
+    "GenerateDocument04": null,
+    "GenerateDocument05": null,
+    "InvalidUse": null,
+    "IsAdminUser": false,
+    "IsCLMUser": true,
+    "MDUProfileFlag": true,
+    "MDUTemplatesflag": true,
+    "NoQuoteFlg": true,
+    "NoScheduleQIcheck": false,
+    "NoScheduleStep": null,
+    "NonCLMUser": null,
+    "ProceedFlag": true,
+    "SFAQuoteItemCheck": false,
+    "ServiceAccount": [
+        {
+            "ServAcctAddress": "Main Street, San Francisco, California 94105",
+            "ServAcctCity": "San Francisco",
+            "ServAcctId": "0010100000JZufjAAD",
+            "ServAcctName": "eResidential Complex Test",
+            "ServAcctPostalCode": "94105",
+            "ServAcctState": "California",
+            "ServAcctStreet": "Main Street"
+        }
+    ],
+    "TemplateId1": {
+        "Id": "a8q01000000D4PXAA0"
+    },
+    "TemplateId2": null,
+    "TemplateId3": null,
+    "TemplateId4": null,
+    "TemplateId5": null,
+    "TemplateName1": "EMA Initial Fee and Rev Share",
+    "TemplateName2": null,
+    "TemplateName3": null,
+    "TemplateName4": null,
+    "TemplateName5": null,
+    "UpdateServiceAddress": null,
+    "WholesaletemplateFlag": false,
+    "contextId": "00601000009NrEyAAK",
+    "isContractId": false,
+    "omnidesignerChannelId": "omni-designer-channel-id-1629691396222",
+    "timeStamp": "2021-08-23T04:03:43.231Z",
+    "userCurrencyCode": "USD",
+    "userId": "00501000001X1g4AAC",
+    "userName": "jcamp@atos.net.ftr.devclmec21",
+    "userProfile": "#Alternate Channel - Community Connections Sales",
+    "userTimeZone": "-240"
+}

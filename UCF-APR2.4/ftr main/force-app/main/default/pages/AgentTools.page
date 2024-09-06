@@ -1,0 +1,484 @@
+<apex:page controller="AgentTools" id="AgentTools">
+    
+    <style>
+    table, table.detailList tr{
+        border-collapse: separate;
+        border-spacing: 0px;
+        border-color: gray;
+    }
+        ul.noStyle {
+        	list-style: none;
+        }
+        a.search {
+        	color : rgba(1, 118, 211, 1);
+        	cursor : pointer;
+        }
+    </style>
+            
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, '/js/jquery/jquery-1.9.1.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, '/js/jquery/jquery-ui-1.10.3.custom.js')}"/>
+     
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, '/js/salesforce/agent-tools-1.0.js')}"/>
+    <!-- 
+    <apex:includeScript value="{!URLFOR($Resource.jAgentTools)}"/>
+    -->
+    <apex:stylesheet value="{!URLFOR($Resource.jQuery, '/css/frontier-theme/jquery-ui-1.10.3.custom.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQuery, '/css/salesforce/agent-tools-1.0.css')}"/>
+    
+    <apex:variable var="SelectedRecord" value="{!AddressValidation.SelectedRecord}"/>
+    
+    <div id="processing_background"/>
+    <div id="processing_content">
+        <apex:image id="loadingLogo" value="{!$Resource.ajax_logo}"/>                           
+        <br/><br/>
+        <apex:image id="loadingAnimation" value="{!$Resource.ajax_loader}"/>
+    </div>
+        
+    <div align="center" id="button_header">
+        <form>
+          <div id="radio_buttons">
+            <input type="radio" id="radio_address_validation" checked="checked" name="radio" onclick="tool_toggle('#address_validation');"/><label for="radio_address_validation">Address Validation</label>
+            <!--<input type="radio" id="radio_duedate_calc" name="radio" onclick="tool_toggle('#duedate_calc');"/><label for="radio_duedate_calc">Due Date Calculator</label>-->
+            <!--<input type="radio" id="radio_provisioning_status" name="radio" onclick="tool_toggle('#provisioning_status');"/><label for="radio_provisioning_status">Provisioning Status</label>-->
+          </div>
+        </form> 
+    </div>
+    
+    <div id="duedate_calc">
+        <apex:form id="ddc_form">
+            <apex:outputpanel id="ddc_op_messages">
+                <apex:pagemessages />
+            </apex:outputpanel> 
+            <apex:pageblock mode="maindetail">
+                <apex:pageblockbuttons location="bottom">
+                    <apex:commandbutton action="{!DueDateCalculation.CalculateDate}" value="Submit" onclick="ddc_submit_click();" oncomplete="ddc_submit_complete();" rerender="ddc_op_messages,ddc_op_calcdate"/>
+                    <apex:commandbutton action="{!NULL}" value="Edit Due Date Matrix" rendered="{!DueDateCalculation.DueDateAdmin}"/>
+                </apex:pageblockbuttons>
+
+                <apex:pageblocksection columns="1">
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel value="Product"/>
+                        <apex:selectlist value="{!DueDateCalculation.SelectedProduct}" size="1">
+                            <apex:selectoptions value="{!DueDateCalculation.Products}" />
+                            <!-- <apex:actionSupport event="onchange" reRender="FeciItem"/> -->
+                        </apex:selectlist>
+                    </apex:pageblocksectionitem>
+                    
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel value="Facility Status"></apex:outputLabel>
+                        <apex:selectlist value="{!DueDateCalculation.SelectedFacilityStatus}" size="1">
+                            <apex:selectoptions value="{!DueDateCalculation.FacilityStatus}" ></apex:selectOptions>
+                        </apex:selectlist>
+                    </apex:pageblocksectionitem>
+
+                    <apex:pageblocksectionitem >
+                        <apex:outputlabel value="Calculated Date"/>
+                        <apex:outputpanel id="ddc_op_calcdate">
+                            <apex:outputlabel escape="false" value="This date is tentative<br/>" rendered="{!ISNULL(DueDateCalculation.CalculatedDate)}"/>
+                            <apex:outputtext value="{0,date,MM'/'dd'/'yyyy}">
+                                <apex:param value="{!DueDateCalculation.CalculatedDate}" /> 
+                            </apex:outputtext>
+                        </apex:outputpanel>
+                    </apex:pageblocksectionitem>
+                </apex:pageblocksection>
+            </apex:pageblock>
+        </apex:form>
+    </div>
+    
+    <div id="provisioning_status">
+        <apex:form id="ps_form">
+            <apex:outputpanel id="ps_op_messages">
+                <apex:pagemessages />
+            </apex:outputpanel>
+            <apex:pageblock id="ps_pb_entry" mode="maindetail">
+                <apex:outputpanel >
+                    <apex:outputtext value="Search Criteria: "/>
+                    <apex:selectlist size="1" value="{!ProvisioningStatus.SelectedOption}">
+                        <apex:selectoptions value="{!ProvisioningStatus.Options}"/>
+                    </apex:selectlist>
+                    <apex:inputtext size="20" value="{!ProvisioningStatus.SearchCriteria}"/>
+                    <apex:commandbutton value="Search" action="{!ProvisioningStatus.RetrieveOrderData}" onclick="ps_submit_click();" oncomplete="ps_submit_complete();" rerender="ps_pb_order_results,ps_pb_ticket_results"/>
+                    <apex:commandbutton value="Reset" action="{!ProvisioningStatus.ResetOrderData}" onclick="ps_submit_click();" oncomplete="ps_submit_complete();" rerender="ps_pb_order_results,ps_pb_ticket_results"/>
+                </apex:outputpanel>
+            </apex:pageblock>
+        </apex:form>
+        
+        <apex:pageblock id="ps_pb_order_results" title="Orders">
+            <apex:outputpanel rendered="{!IF(ProvisioningStatus.ProductOrders.size == 0,TRUE,FALSE)}">
+                <table class="list" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr class="headerRow">
+                            <th class="noRowsHeader">No records to display</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </apex:outputpanel>
+            
+            <apex:pageblocktable value="{!ProvisioningStatus.ProductOrders}" var="Order" rendered="{!IF(ProvisioningStatus.ProductOrders.size != 0,TRUE,FALSE)}">
+                <apex:column headervalue="Order #" value="{!Order.OrderId}"/>               
+                <apex:column headervalue="Customer Name" value="{!Order.CustomerName}"/>
+                <apex:column headervalue="Order Type" value="{!Order.Type}"/>
+                <apex:column headervalue="Status" value="{!Order.Status}"/>
+                <apex:column headervalue="Stage Code" value="{!Order.Stage}"/>
+                <apex:column headervalue="Current Due Date" value="{!Order.DueDate}"/>
+                <apex:column headervalue="Service Location">
+                    <apex:outputtext escape="false" value="{!Order.Location}"/>
+                </apex:column>
+                <apex:column headervalue="Service TN" value="{!Order.TelephoneNumber}"/>
+                <apex:column headervalue="Data Source" value="{!Order.DataSource}"/>
+            </apex:pageblocktable>
+        </apex:pageblock>       
+        
+        <apex:pageblock id="ps_pb_ticket_results" title="Trouble Tickets">
+        
+        </apex:pageblock>
+    </div>
+    
+    <div id="address_validation">
+        <apex:tabPanel switchType="client" selectedTab="av_tab_single" id="av_tabPanel">
+        <apex:tab label="Single" name="av_tab_single" id="av_tab_single" style="background-color:white;border-color:white;">
+            <apex:form id="av_form_single">
+                <apex:outputpanel id="av_op_messages">
+                    <apex:pagemessages />
+                </apex:outputpanel>
+                <apex:pageblock id="av_pb_entry" mode="maindetail">
+                    <apex:actionFunction name="af_selectCriteria" action="{!NULL}" rerender="av_pbs,searchRerender"/>  
+                    <apex:actionFunction name="af_predictiveSearch" action="{!doPredictiveSearch}" reRender="searchRerender">
+                        <apex:param name="searchAddressText" assignTo="{!searchAddressText}" value=""></apex:param>
+                    </apex:actionFunction>
+                    <apex:actionFunction name="af_processAddressSelected" action="{!processAddressSelected}" oncomplete="av_search_complete();" reRender="searchRerender,av_pbs">
+                        <apex:param name="selectedAddress" assignTo="{!selectedAddress}" value=""></apex:param>
+                    </apex:actionFunction>
+                    <apex:pageblockbuttons id="av_pbuttons" location="bottom">              
+                        <apex:commandbutton id="av_submit" action="{!AddressValidation_Submit}" value="Submit" onclick="av_submit_click();" oncomplete="av_submit_complete();" rerender="av_op_messages, av_pb_results"/>
+                        <apex:commandbutton id="av_reset" action="{!AddressValidation_Reset}" value="Reset" rerender="av_op_messages,av_pbs,av_pb_results"/>                
+                    </apex:pageblockbuttons>
+                    <apex:selectRadio value="{!SelectedCriteria}" onclick="af_selectCriteria();">
+                        <apex:selectoptions value="{!SearchCriteria}"/>
+                    </apex:selectRadio>
+                        
+                    <!--apex:pageblocksection columns="1">
+                        <apex:inputText styleclass="av_form_input" id="av_form_street_search" value="{!searchAddressText}" label="Address Search" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}" onkeyup="av_predictive_search(event);"/>
+                        <apex:outputPanel rendered="{!showAddressSelection}">
+                            <div style="padding-left: 17.1rem;">
+                                <ul class="noStyle">
+                                    <apex:repeat value="{!objAddressWrapper.addresses}" var="address">
+                                        <li class="slds-listbox__item">
+                                            <a onclick="av_search_click(event);" class="search" data-placeid="{!address.addressKey}" data-address="{!address.strAddress}">
+                                                {!address.strAddressDisplay}
+                                            </a>
+                                        </li>
+                                    </apex:repeat>
+                            	</ul>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:pageblocksection-->
+                    
+                    <apex:pageblocksection id="av_pbs" columns="1">
+                        <apex:pageblocksection columns="1" id="searchRerender" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}">
+                            <label for="av_form_street_search1">Address Search</label>
+                            <input id="av_form_street_search1" type="text" value="{!searchAddressText}" class="av_form_input" onkeyup="av_predictive_search(event);"/>
+                            <apex:outputPanel rendered="{!showAddressSelection}">
+                                <div>
+                                    <ul class="noStyle">
+                                        <apex:repeat value="{!objAddressWrapper.addresses}" var="address">
+                                            <li class="slds-listbox__item">
+                                                <a onclick="av_search_click(event);" class="search" data-placeid="{!address.addressKey}" data-address="{!address.strAddress}">
+                                                    {!address.strAddressDisplay}
+                                                </a>
+                                            </li>
+                                        </apex:repeat>
+                                    </ul>
+                                </div>
+                            </apex:outputPanel>
+                    	</apex:pageblocksection>
+                        <apex:inputText styleclass="av_form_input" id="av_form_telephone" value="{!singleAddressLookup.Telephone}" label="Telephone" rendered="{!IF(SelectedCriteria == 'Telephone',TRUE,FALSE)}"/>
+                        <apex:inputTextarea styleclass="av_form_input" id="av_form_street" value="{!singleAddressLookup.Street}" label="Street" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}"/>
+                        <apex:inputText styleclass="av_form_input" id="av_form_city" value="{!singleAddressLookup.City}" label="City" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}"/>
+                        <!-- <apex:inputfield styleclass="av_form_input" id="av_form_statecode" value="{!singleAddressLookup.StateCode}" label="StateCode" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}"/> -->
+                        <apex:inputText styleclass="av_form_input" id="av_form_statecode" value="{!singleAddressLookup.State}" label="State/Province" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}"/>
+                        <apex:inputText styleclass="av_form_input" id="av_form_postalcode" value="{!singleAddressLookup.PostalCode}" label="Zip/Postal Code" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}"/>
+                        <!-- <apex:inputfield styleclass="av_form_input" id="av_form_countrycode" value="{!singleAddressLookup.CountryCode} rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}""/> -->
+                        <!-- <apex:inputfield styleclass="av_form_input" id="av_form_countrycode" value="{!singleAddressLookup.Country}" rendered="{!IF(SelectedCriteria == 'Address',TRUE,FALSE)}"/> -->
+                    </apex:pageblocksection>
+                </apex:pageblock>
+            </apex:form>
+            
+            
+            <apex:pageblock id="av_pb_results" title="Address Results">
+            <apex:outputpanel rendered="{!(ISNULL(AddressValidation))}">
+                <table class="list">
+                    <tbody>
+                        <tr class="headerRow">
+                            <th style="background-color:grey; color:white;">No records to display</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </apex:outputpanel>
+            
+            <apex:outputpanel rendered="{!(AddressValidation.objServiceAddress.size = 0)}">
+                <table class="list" >
+                    <tbody>
+                        <tr class="headerRow">
+                            <th style="background-color:green;color:white;">No Service Records were returned to display.</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </apex:outputpanel>
+            
+            
+            <apex:pageblocktable id="av_pbt_results" value="{!AddressValidation.objServiceAddress}" var="AddressRecord" cellspacing="1" rendered="{!AND((AddressValidation.objServiceAddress.size != 0),NOT(ISNULL(AddressValidation)))}">
+                <apex:column headerValue="Action" headerClass="tableHeaderCol">
+                   
+                    <apex:form >
+                        <apex:commandlink value="View" action="{!AddressValidation.ShowPopup}" oncomplete="av_view_click();" rerender="av_op_detail">
+                            <apex:param name="RecordId" value="{!AddressRecord.RecordId}" assignTo="{!AddressValidation.SelectedRecordId}"/>
+                        </apex:commandlink>
+                    </apex:form>
+                </apex:column> 
+                
+                <!-- <apex:column headervalue="Sequence #" value="{!AddressRecord.Address.ServiceSequenceNumber}"/> -->
+                <apex:column headervalue="Street Address" value="{!AddressRecord.address.streetNumber} {!AddressRecord.address.StreetName} {!AddressRecord.Address.streetSuffix}"/>
+                <apex:column headervalue="City" value="{!AddressRecord.address.city}"/>
+                <apex:column headervalue="State" value="{!AddressRecord.address.state}"/>
+                <apex:column headervalue="Postal Code" value="{!AddressRecord.address.zipCode}"/>
+                <apex:column headervalue="HSI Capable?" style="background-color:green;color:white;" rendered="{!IF(AddressRecord.HSICapableFlag,TRUE,FALSE)}">
+                    <center>
+                        <apex:outputtext value="YES" rendered="{!IF(AddressRecord.HSICapableFlag,TRUE,FALSE)}"/>
+                    </center>       
+                </apex:column>
+                <apex:column headervalue="HSI Capable?" style="background-color:red;color:white;" rendered="{!IF(AddressRecord.HSICapableFlag,FALSE,TRUE)}">
+                    <center>
+                        <apex:outputtext value="NO" rendered="{!IF(AddressRecord.HSICapableFlag,FALSE,TRUE)}"/>
+                    </center>
+                </apex:column>
+                <apex:column headervalue="Fiber Capable?" style="background-color:green;color:white;" rendered="{!IF(AddressRecord.FiberProductCapableFlag,TRUE,FALSE)}">
+                    <center>
+                        <apex:outputtext value="YES" rendered="{!IF(AddressRecord.FiberProductCapableFlag,TRUE,FALSE)}"/>
+                    </center>       
+                </apex:column>
+                <apex:column headervalue="Fiber Capable?" style="background-color:red;color:white;" rendered="{!IF(AddressRecord.FiberProductCapableFlag,FALSE,TRUE)}">
+                    <center>
+                        <apex:outputtext value="NO" rendered="{!IF(AddressRecord.FiberProductCapableFlag,FALSE,TRUE)}"/>
+                    </center>
+                </apex:column>
+                <!--*Vyshnavi FBV Requiremnt Starts *-->
+                <apex:column headervalue="FBV Available?" style="background-color:green;color:white;" rendered="{!IF(AddressRecord.FBV_Available,TRUE,FALSE)}">
+                    <center>
+                        <apex:outputtext value="YES" rendered="{!IF(AddressRecord.FBV_Available,TRUE,FALSE)}"/>
+                    </center>       
+                </apex:column>
+                <apex:column headervalue="FBV Available?" style="background-color:red;color:white;" rendered="{!IF(AddressRecord.FBV_Available,FALSE,TRUE)}">
+                    <center>
+                        <apex:outputtext value="NO" rendered="{!IF(AddressRecord.FBV_Available,FALSE,TRUE)}"/>
+                    </center>
+                </apex:column>
+                <!--Vyshnavi FBV Requiremnt Ends-->
+                <!--apex:column headervalue="Fiber Video?" style="background-color:green;color:white;" rendered="{!IF(AddressRecord.FiberVideoAvailableFlag,TRUE,FALSE)}">
+                    <center>
+                        <apex:outputtext value="YES" rendered="{!IF(AddressRecord.FiberVideoAvailableFlag,TRUE,FALSE)}"/>
+                    </center>       
+                </apex:column>
+                <apex:column headervalue="Fiber Video?" style="background-color:red;color:white;" rendered="{!IF(AddressRecord.FiberVideoAvailableFlag,FALSE,TRUE)}">
+                    <center>
+                        <apex:outputtext value="NO" rendered="{!IF(AddressRecord.FiberVideoAvailableFlag,FALSE,TRUE)}"/>
+                    </center>
+                </apex:column>
+                <apex:column headervalue="UVerse Capable?" style="background-color:green;color:white;" rendered="{!IF(AddressRecord.UVerseCapable,TRUE,FALSE)}">
+                    <center>
+                        <apex:outputtext value="YES" rendered="{!IF(AddressRecord.UVerseCapable,TRUE,FALSE)}"/>
+                    </center>       
+                </apex:column>
+                <apex:column headervalue="UVerse Capable?" style="background-color:red;color:white;" rendered="{!IF(AddressRecord.UVerseCapable,FALSE,TRUE)}">
+                    <center>
+                        <apex:outputtext value="NO" rendered="{!IF(AddressRecord.UVerseCapable,FALSE,TRUE)}"/>
+                    </center>
+                </apex:column-->
+                <apex:column headervalue="POTS Capable?" style="background-color:green;color:white;" rendered="{!IF(AddressRecord.POTSCapable,TRUE,FALSE)}">
+                    <center>
+                        <apex:outputtext value="YES" rendered="{!IF(AddressRecord.POTSCapable,TRUE,FALSE)}"/>
+                    </center>       
+                </apex:column>
+                <apex:column headervalue="POTS Capable?" style="background-color:red;color:white;" rendered="{!IF(AddressRecord.POTSCapable,FALSE,TRUE)}">
+                    <center>
+                        <apex:outputtext value="NO" rendered="{!IF(AddressRecord.POTSCapable,FALSE,TRUE)}"/>
+                    </center>
+                </apex:column>
+                <!--apex:column headervalue="Available Max Speed (DL/UL)" value="{!AddressRecord.availableMaxProductSpeed}"/-->
+                
+            </apex:pageblocktable>
+        </apex:pageblock>
+        </apex:tab>
+        <apex:tab label="Multiple" name="av_tab_multiple" id="av_tab_multiple" style="background-color:white;border-color:white;">
+            <script>
+                function checkFile(){
+                    var x = document.getElementById('AgentTools:av_multipleForm:av_pb_multipleForm:av_input_multipleForm').files[0].name;
+                    if(x.indexOf('.csv') == -1){
+                        alert('Please select a valid CSV file');
+                        return false;
+                    }else{
+                        return true;
+                    }                   
+                }
+            </script>
+            <apex:pageMessage summary="Your request has been submitted, you will receive an email with results in 5-10 minutes" severity="info" strength="2" rendered="{!showBatchProcessMessage}"/>
+            <apex:form id="av_multipleForm">
+                <apex:sectionheader title="Upload data from CSV"/>
+                <apex:pageblock id="av_pb_multipleForm">
+                    <apex:inputfile id="av_input_multipleForm" value="{!multipleAddressFile}"/>
+                    <apex:commandbutton action="{!ReadMultiFile}" value="Upload File" onclick="return checkFile();"/>
+                </apex:pageblock>
+            </apex:form>
+        </apex:tab>
+        </apex:tabPanel>        
+    </div>
+    
+    
+    <div id="address_validation_detail">
+        <apex:outputpanel id="av_op_detail">
+            <apex:pageblock mode="detail">          
+                <br/><br/>
+                <apex:pageblocksection columns="2">                             
+                    <apex:outputText label="Street #" value="{!AddressValidation.ServiceAddressDetail.address.streetNumber}"/>
+                    <apex:outputText label="Building #" value=""/>                          
+                    
+                    <apex:outputtext label="Street Name" value="{!AddressValidation.ServiceAddressDetail.address.streetName}"/>     
+                    <apex:outputtext label="Building Name" value="{!AddressValidation.ServiceAddressDetail.buildingType}"/>
+                    
+                    <apex:outputtext label="Street Suffix" value="{!AddressValidation.ServiceAddressDetail.address.streetSuffix}"/>
+                    <apex:outputtext label="Building SubNumber" value=""/>     
+    
+                    <apex:outputtext label="City" value="{!AddressValidation.ServiceAddressDetail.address.city}"/>     
+                    <apex:outputtext label="Street Direction" value=""/>     
+    
+                    <apex:outputtext label="State" value="{!AddressValidation.ServiceAddressDetail.address.state}"/>
+                    <apex:outputtext label="Street SubDirection" value=""/>     
+    
+                    <apex:outputtext label="Zip Code" value="{!AddressValidation.ServiceAddressDetail.address.zipCode}"/>     
+                    <apex:outputtext label="SubDivision" value=""/>     
+    
+                    <apex:outputtext label="Locality ID" value=""/>     
+                    <apex:outputtext label="Tax District" value=""/>     
+    
+                    <apex:outputtext label="Wire Center" value="{!AddressValidation.ServiceAddressDetail.wireCenter}"/>     
+                    <apex:outputtext label="Exchange" value="NPA = {!AddressValidation.ServiceAddressDetail.homingExchange}" escape="false"/>     
+    
+                    <apex:outputtext label="HSI Capable" value="{!IF(AddressValidation.ServiceAddressDetail.HSICapableFlag,'YES','NO')}"/>     
+                    <apex:outputtext label="Fiber Capable" value="{!IF(AddressValidation.ServiceAddressDetail.FiberProductCapableFlag,'YES','NO')}"/>     
+                    
+                    <!--Vyshnavi FBV Requiremnt Starts-->
+                    <apex:outputtext label="FBV Available" value="{!IF(AddressValidation.ServiceAddressDetail.FBV_Available,'YES','NO')}"/>
+                	<!--Vyshnavi FBV Requiremnt Ends-->
+                    <apex:outputtext label="HSI Max Speed(Down/Up)" value="{!AddressValidation.ServiceAddressDetail.availableMaxProductSpeed}"/>     
+                    
+                    <apex:outputtext label="Fiber Speed(Down/Up)" value="{!AddressValidation.ServiceAddressDetail.AccountSpeed}"/>     
+    				<apex:outputtext label="HSI Premium Speed(Down/Up)" value="{!AddressValidation.ServiceAddressDetail.HighestAvailableSpeed}"/>     
+                    
+                    <apex:outputtext label="Transport Medium" value=""/>
+                    <!--apex:outputtext>
+                        <apex:repeat value="{!AddressValidation.ServiceAddressDetail.Address.Line}" var="Line">
+                            <apex:outputtext escape="false" value="{!Line.TransportMedium}<br/>"/>
+                        </apex:repeat>
+                    </apex:outputtext-->   
+                    <apex:outputtext label="Line Card Status" value=""/>
+    				<!--apex:outputtext label="Line Card Status">
+                        <apex:repeat value="{!AddressValidation.ServiceAddressDetail.Address.AdditionalAddressInfo}" var="AdditionalAddressInfo">
+                            <apex:outputtext escape="false" value="{!AdditionalAddressInfo.CharacteristicValue.Value}<br/>" rendered="{!IF(AdditionalAddressInfo.CharacteristicValue.Characteristic == 'LineCardStatus',TRUE,FALSE)}"/>
+                        </apex:repeat>
+                    </apex:outputtext-->    
+                        <apex:outputtext label="Data Region" value="{!AddressValidation.ServiceAddressDetail.ServiceAddressMasterId.environment}"/>
+                    <!--apex:outputtext label="Data Region" value="{!AddressValidation.ServiceAddressDetail.Address.DataSourceEnvironment.DataRegion}"/-->
+                    <apex:outputtext label="Pricing Segment" value=""/> 
+    				<!--apex:outputtext label="Pricing Segment" value="{!AddressValidation.ServiceAddressDetail.Address.PricingSegmentIndicator}"/-->     
+                    <apex:outputtext label="Home Owner Association" value="{!IF(AddressValidation.ServiceAddressDetail.isHoaRestrictedAddress,'YES','NO')}"/>
+                    <!--apex:outputtext label="Home Owner Association" value="{!IF(SelectedRecord.Address.HomeOwnerAssociationFlag,'YES','NO')}"/-->     
+    				<apex:outputtext label="Local Franchise Agreement" value="{!IF(AddressValidation.ServiceAddressDetail.hasLocalFranchiseAgreement,'YES','NO')}"/>     
+                    <apex:outputtext label="Unit SequenceNumber" value=""/>
+                    <!--apex:outputtext label="Unit SequenceNumber">
+                        <apex:repeat value="{!AddressValidation.ServiceAddressDetail.Address.Unit}" var="Unit">
+                            <apex:outputtext escape="false" value="{!Unit.SequenceNumber}<br/>"/>
+                        </apex:repeat>
+                    </apex:outputtext-->     
+    				<apex:outputtext label="Unit Designator" value=""/>
+                    <!--apex:outputtext label="Unit Designator">
+                        <apex:repeat value="{!AddressValidation.ServiceAddressDetail.Address.Unit}" var="Unit">
+                            <apex:outputtext escape="false" value="{!Unit.Designator}<br/>"/>
+                        </apex:repeat>
+                    </apex:outputtext-->  
+                        <apex:outputtext label="Unit Number" value=""/>
+                    <!--apex:outputtext label="Unit Number">
+                        <apex:repeat value="{!AddressValidation.ServiceAddressDetail.Address.Unit}" var="Unit">
+                            <apex:outputtext escape="false" value="{!Unit.Number_x}<br/>"/>
+                        </apex:repeat>
+                    </apex:outputtext--> 
+    				<apex:outputtext label="Connected Line Cards Found" value="{!IF(AddressValidation.ServiceAddressDetail.hasActiveServiceAtAddress,'YES','NO')}"/>
+                        <apex:outputtext label="Fiber Video Available" value=""/>
+                        <apex:outputtext label="Pair Count From" value=""/>
+                        <apex:outputtext label="Pair Count To" value=""/>
+                    <!--apex:outputtext label="Connected Line Cards Found" value="{!IF(SelectedRecord.Address.ConnectedLineCardsFoundFlag,'YES','NO')}"/>     
+                    <apex:outputtext label="Fiber Video Available" value="{!IF(SelectedRecord.Address.FiberVideoAvailableFlag,'YES','NO')}"/>     
+    
+                    <apex:outputtext label="Pair Count From" value="{!AddressValidation.ServiceAddressDetail.Address.LineCardInfo.PairCountFrom}"/>     
+                    <apex:outputtext label="Pair Count To" value="{!AddressValidation.ServiceAddressDetail.Address.LineCardInfo.PairCountFrom}"/-->   
+    
+                    <apex:outputtext label="Fiber Drop Status" value=""/>     
+                    <apex:outputtext label="Fiber Drop Type" value=""/>     
+    				<apex:outputtext label="Dropped Flag" value=""/> 
+                        <apex:outputtext label="Dedicated Pair" value=""/> 
+                    <!--apex:outputtext label="Dropped Flag">
+                        <apex:repeat value="{!AddressValidation.ServiceAddressDetail.Address.Line}" var="Line">
+                            <apex:outputtext escape="false" value="{!Line.DroppedFlag}<br/>"/>
+                        </apex:repeat>
+                    </apex:outputtext-->     
+                    <!--apex:outputtext label="Dedicated Pair" value=""/>    
+    
+                    <apex:outputtext label="Plant Type" value="{!AddressValidation.ServiceAddressDetail.plantType}"/>     
+                    <apex:outputtext label="Wire Center CLLI" value=""/--> 
+       				<apex:outputtext label="Plant Type" value="{!AddressValidation.ServiceAddressDetail.plantType}"/> 
+                    <apex:outputtext label="Control Number" value="{!AddressValidation.ServiceAddressDetail.ServiceAddressMasterId.controlNumber}"/>
+                </apex:pageblocksection>
+                <apex:pageblocksection id="av_pbs_business_tech" title="Business Technologies" collapsible="true" columns="1">
+                    <apex:outputpanel rendered="{!NOT(BusinessTechnologyRender)}">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <th class="noRowsHeader">No records to display</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputpanel>
+                    <apex:pageblocktable var="TechRecord" value="{!AddressValidation.ServiceAddressDetail.technology}" rendered="{!BusinessTechnologyRender}"> 
+                        <apex:column headerValue="Technology Group" value="{!TechRecord.group_Z}"/>
+                        <apex:column headerValue="Speed" value="{!TechRecord.marketingSpeed}"/>
+                        <apex:column headerValue="Technology" value="{!TechRecord.name}"/>
+                        <apex:column headerValue="Modem Item" value="{!TechRecord.medium}"/>
+                        <apex:column headerValue="Download in KBS" value="{!TechRecord.marketingSpeed}"/>
+                        <apex:column headerValue="Download in KBS" value="{!TechRecord.marketingSpeed}"/>                        
+                        <apex:column headerValue="TechFeature" value="{!TechRecord.techFeature}"/>
+                        
+                    </apex:pageBlockTable>
+                </apex:pageblocksection>
+                
+                <!--apex:pageblocksection id="av_pbs_residential_tech" title="Residential Technologies" collapsible="true" columns="1">
+                    <apex:outputpanel rendered="{!NOT(ResidentialTechnologyRender)}">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <th class="noRowsHeader">No records to display</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputpanel>
+                    <apex:pageblocktable var="TechRecord" value="{!SelectedRecord.Residential_Technologies}" rendered="{!ResidentialTechnologyRender}"> 
+                        <apex:column headerValue="Technology Group" value="{!TechRecord.TechnologyGroup}"/>
+                        <apex:column headerValue="Speed" value="{!TechRecord.AvailableSpeed}"/>
+                        <apex:column headerValue="Technology" value="{!TechRecord.Technology}"/>
+                        <apex:column headerValue="Modem Item" value="{!TechRecord.DefaultModem}"/>
+                        <apex:column headerValue="Download in KBS" value="{!TechRecord.MaxDslamSpeed}"/>
+                    </apex:pageBlockTable>
+                </apex:pageblocksection-->        
+            </apex:pageblock>       
+        </apex:outputpanel>
+    </div>      
+
+</apex:page>

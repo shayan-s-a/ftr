@@ -1,0 +1,50 @@
+[
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_BANDWIDTH\":{\"actionsList\":[{\"action\":\"CONSTRAIN\",\"value\":\"500 Mbps\",\"actionType\":\"exclude\"},{\"action\":\"CONSTRAIN\",\"value\":\"1 Gbps\",\"actionType\":\"exclude\"}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "db1a3273-f78b-97f1-373e-cfe64c410694",
+        "%vlocity_namespace%__ProductGroupKey__c": "ef6ae722-f5ee-55a8-88ce-2dbe4b4c9254",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "83ae2d5f-13e8-b06d-5ccf-c1e634dcea81",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/83ae2d5f-13e8-b06d-5ccf-c1e634dcea81",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "JSON generator",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/db1a3273-f78b-97f1-373e-cfe64c410694"
+    },
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_PARTNER\":{\"actionsList\":[{\"action\":\"CONSTRAIN\",\"value\":\"Spectrum\",\"actionType\":\"include\"}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "2043bae7-7bb9-4d6e-e57b-fd3b2b8eee5a",
+        "%vlocity_namespace%__ProductGroupKey__c": "ef6ae722-f5ee-55a8-88ce-2dbe4b4c9254",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "83ae2d5f-13e8-b06d-5ccf-c1e634dcea81",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/83ae2d5f-13e8-b06d-5ccf-c1e634dcea81",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "DIA partner attribute required",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/2043bae7-7bb9-4d6e-e57b-fd3b2b8eee5a"
+    },
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_TECH_JURIS\":{\"actionsList\":[{\"action\":\"DISABLE\",\"value\":false}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "129a2ad9-6507-254f-b124-a68c76111c55",
+        "%vlocity_namespace%__ProductGroupKey__c": "ef6ae722-f5ee-55a8-88ce-2dbe4b4c9254",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "83ae2d5f-13e8-b06d-5ccf-c1e634dcea81",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/83ae2d5f-13e8-b06d-5ccf-c1e634dcea81",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "Generate json Keerthana",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/129a2ad9-6507-254f-b124-a68c76111c55"
+    }
+]

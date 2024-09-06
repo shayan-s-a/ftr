@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_account_owners_can_create_oppty</fullName>
+    <active>false</active>
+    <description>Only account owners associated with the account can create opportunities. 
+EXCEPT
+Frontier System Administrator
+#CTF Customer Service Analyst
+#CTF Small Business User
+#CTF Small Business Manager
+#Federal &amp; E-Rate Manager
+Frontier Auditor
+&amp; Others</description>
+    <errorConditionFormula>AND(
+ISNEW() ,
+Account.RecordTypeId = &quot;012E0000000fDc3&quot;,
+Account.OwnerId &lt;&gt; OwnerId,
+
+Account.Territory_Name__c &lt;&gt; &quot;&quot;,
+
+$User.ProfileId &lt;&gt; &quot;00e40000000nYck&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A89e&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A84o&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0L000000f2Rg&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A5vO&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE000000126tW&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001267F&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A7yi&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0L000000j9TV&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0h000001WfYf&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0L000000aiCA&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0L000000Qtux&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0L000000j98B&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A8C8&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A5nM&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0L0000012AB2&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A79m&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0h000001jDJj&quot;,
+$User.ProfileId &lt;&gt; &quot;00eE0000001A7Lj&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0h000001WfvO&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0h000001WfYQ&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0h0000019Qd7&quot;,
+$User.ProfileId &lt;&gt; &quot;00e0L000000ai4B&quot;,
+$User.ProfileId &lt;&gt; &quot;00e8a000001rtkY&quot;
+
+)</errorConditionFormula>
+    <errorMessage>Only account owners associated with the account can create opportunities.</errorMessage>
+</ValidationRule>

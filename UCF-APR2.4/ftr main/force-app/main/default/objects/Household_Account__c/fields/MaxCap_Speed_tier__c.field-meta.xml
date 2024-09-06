@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MaxCap_Speed_tier__c</fullName>
+    <description>Is a custom grouping of speeds provided by the Marketing Operations team usage within their campaigns and it is based on Max Serviceable speed and assigned technology at address level using the monthly DPI Serviceability Golden Source</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The maximum capable speed tier for this address.</inlineHelpText>
+    <label>Max Speed Capability</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

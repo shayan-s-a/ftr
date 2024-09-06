@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_reason_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>INCLUDES(Two_option_for_the_customer_to_leave_FTR__c, &quot;Other&quot;)&amp;&amp;
+ISBLANK( Other_Reason__c )</errorConditionFormula>
+    <errorMessage>Other Reason is required when Other is selected for the field &quot;Applicable reasons customer is leaving&quot;</errorMessage>
+</ValidationRule>

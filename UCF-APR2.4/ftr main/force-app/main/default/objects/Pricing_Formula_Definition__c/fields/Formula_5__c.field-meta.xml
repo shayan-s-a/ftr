@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formula_5__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	AND(
+		String_2__c = &apos;Yes&apos;, 
+		Integer_0__c &gt;= 36, 
+		OR(Integer_1__c = 50, Integer_1__c = 100, Integer_1__c = 500, Integer_1__c = 1000)
+	),
+	IF(Integer_1__c = 50,
+		CASE(Integer_0__c,
+            60, 360,
+            36, 440,
+            0
+		),
+		IF(Integer_1__c = 100,
+			CASE(Integer_0__c,
+				60, 550,
+				36, 640,
+				0			
+			),
+			IF(Integer_1__c = 500,
+				CASE(Integer_0__c,
+					60, 740,
+					36, 840,
+					0			
+				),
+				IF(Integer_1__c = 1000,
+					CASE(Integer_0__c,
+						60, 840,
+						36, 990,
+						0			
+					),
+					0
+				)
+			)
+		)
+	),
+	Formula_1__c
+)</formula>
+    <label>DIA Bundle</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

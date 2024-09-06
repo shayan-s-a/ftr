@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Vendor_field_is_required</fullName>
+    <active>true</active>
+    <description>When Ambassador Rewards is set to Enrolled then Engagement Vendor field is required.</description>
+    <errorConditionFormula>AND(
+
+RecordType.Name = &quot;Community Connections - Property&quot;,
+ISPICKVAL(LARP_Leasing_Agent_Reward_Program__c, &quot;Enrolled&quot;),
+ISBLANK(TEXT(Engagement_Vendor__c ))
+
+)</errorConditionFormula>
+    <errorDisplayField>DPI_Aging_00_30__c</errorDisplayField>
+    <errorMessage>When Ambassador Rewards is set to Enrolled then Engagement Vendor field is required.</errorMessage>
+</ValidationRule>

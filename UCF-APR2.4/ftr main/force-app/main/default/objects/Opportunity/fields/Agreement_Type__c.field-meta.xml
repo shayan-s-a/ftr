@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreement_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Agreement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bulk</fullName>
+                <default>false</default>
+                <label>Bulk</label>
+            </value>
+            <value>
+                <fullName>Bulk_Res</fullName>
+                <default>true</default>
+                <label>Bulk Res</label>
+            </value>
+            <value>
+                <fullName>BULK-EMA</fullName>
+                <default>false</default>
+                <label>BULK-EMA</label>
+            </value>
+            <value>
+                <fullName>Bulk Corp</fullName>
+                <default>false</default>
+                <label>Bulk Corp</label>
+            </value>
+            <value>
+                <fullName>EMA</fullName>
+                <default>false</default>
+                <label>EMA</label>
+            </value>
+            <value>
+                <fullName>EMA-DOORFEEONLY</fullName>
+                <default>false</default>
+                <label>EMA-DOORFEEONLY</label>
+            </value>
+            <value>
+                <fullName>EMA-DOOR-REVSHARE</fullName>
+                <default>false</default>
+                <label>EMA-DOOR-REVSHARE</label>
+            </value>
+            <value>
+                <fullName>EMA-REVSHAREONLY</fullName>
+                <default>false</default>
+                <label>EMA-REVSHAREONLY</label>
+            </value>
+            <value>
+                <fullName>NEMA</fullName>
+                <default>false</default>
+                <label>NEMA</label>
+            </value>
+            <value>
+                <fullName>No Contract</fullName>
+                <default>false</default>
+                <label>No Contract</label>
+            </value>
+            <value>
+                <fullName>PAL</fullName>
+                <default>false</default>
+                <label>PAL</label>
+            </value>
+            <value>
+                <fullName>Markeing</fullName>
+                <default>false</default>
+                <label>Markeing</label>
+            </value>
+            <value>
+                <fullName>PAL-Marketing</fullName>
+                <default>false</default>
+                <label>PAL-Marketing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

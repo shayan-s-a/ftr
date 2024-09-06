@@ -1,0 +1,168 @@
+<apex:page controller="GenerateCloudManagedITProposalExtension" showHeader="false" sidebar="false" renderAs="pdf">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <style type="text/css" media="print">
+            @page {
+                size: portrait;
+                margin-left: 0.8cm;
+                margin-right: 0.8cm;
+                margin-top: 0.8cm;
+                margin-bottom: 0.8cm;
+            }
+        </style>
+    </head>
+
+    <body style="font-family: arial, verdana, sans-serif;font-size: 11pt;">
+       <!-- <div style="text-align:right;">
+            <img src="{!$Resource.ProposalLogo}" style="width:10%; padding:90px 51px 0 0;" />
+        </div>-->
+        
+            <div id="page_1" style="position: relative;">
+            <img src="{!$Resource.ProposalHeader2018}" style="position:absolute; width:100%;height:100%;border:0px;" />
+            <div style="position: absolute; width: 100%; padding: 90px 50px 0 90px;">
+                <div style="font-size:14pt;padding-top:100pt;">{!quoteName} Proposal For:</div>
+                <br/>
+                <div style="font-size:24pt;">{!act.Name}</div>
+                <br/>
+              
+                <div class="Customer" style="font-size:14pt;">
+                    <apex:outputText value="{0,date,MMMM dd yyyy}">
+                        <apex:param value="{!TODAY()}" />
+                    </apex:outputText>
+                    {!qNameStr}
+                    <b>{!quoteNumber}</b>
+                </div>
+                <br/>
+                <div>
+                    {!currentUser.Name}
+                    <br /> {!currentUser.Title}
+                    <br />
+                    <b>Phone:</b> {!currentUser.Phone}
+                    <br />
+                    <b>Mobile:</b> {!currentUser.MobilePhone}
+                    <br />
+                    <b>Email:</b> {!currentUser.Email}
+                    <br />
+                </div>
+                </div></div>
+       
+        <div style="padding:50px 50px 50px 90px;position:relative; top:6in;">
+            <div style="font-weight:bold;text-align:right; padding: 44pt 0 23pt 0;">{!qNameStr}{!quoteNumber}</div>
+           
+            <div>
+                <h1 style="color: #FF0037;font-size: 22px; font-weight:bold;">Why you should partner with Frontier</h1>
+                <p style="text-align:justify;">
+                    Frontier (NASDAQ: FYBR) is more than a technology and communications provider &mdash; we’re also your partner. We work closely with you to solve real business problems and enhance the way you operate through resources including:
+                </p>
+                <ul>
+                    <li>Flexible equipment options (premise-based, cloud, managed, or hybrid configurations)</li>
+                    <li>Dedicated enterprise support when you need it most </li>
+                    <li>Reliable state-of-the-art technology to keep the focus on productivity</li>
+                    <li>Cost-effective plans to make the most of every dollar </li>
+                    <li>Secure connections and compliant data storage to protect vital information </li>
+                    <li>Multisite solutions to seamlessly link different locations </li>
+                    <li>Strong partnerships with industry-leading equipment manufacturers and specialty solutions providers </li>
+                    <li>Financing options available to protect your investment against obsolescence, while tailoring your payment scenario to fit your budget </li>
+                </ul>
+                <p>Frontier offers end-to-end data, voice, video, Cloud and Security solutions to businesses of all sizes. We’re committed to providing next generation technology that’s flexible and reliable &mdash; ready to grow with your business. And you’ll enjoy the
+                    convenience of having one single, responsive source for all your technology needs. You can count on the strength and stability of a Fortune 500 company along with the flexibility to deliver on a personal scale. Frontier Business
+                    will keep your business connected and running strong.</p>
+                <p>Choose from our fully integrated product portfolio that includes:</p>
+                <ul style="float:left; width:45%;">
+                    <li>Ethernet Solutions</li>
+                    <li>Dedicated Internet Access</li>
+                    <li>VoIP (hosted and premise based)</li>
+                    <li>Communications &amp; Network Equipment</li>
+                    <li>Optical Transport Services</li>
+                    <li>Social Media Marketing</li>
+                    <li>Audio, Web &amp; Video Conferencing</li>
+                    <li>Business Continuity Solutions</li>
+                    <li>Business High-Speed Internet</li>
+                    <li>Local &amp; Long-Distance Service</li>
+                    <li>Managed Cloud Solutions</li>
+                    <li>Managed WLAN</li>
+                    <li>Managed Security</li>
+                </ul>
+                <div style="width:45%; float:left;background-color:#EEE; margin-top:14pt;">
+                    <h2 style="margin:0; padding:12pt; background-color:#FF0037; color:white;">Frontier Provides</h2>
+                    <ul style="margin-top:20px; margin-bottom:20px">
+                        <li>State-of-the-art Network</li>
+                        <li>24/7 expert tech support</li>
+                        <li>100% U.S.-based workforce</li>
+                        <li>Global Capabilities</li>
+                        <li>Customized Solutions</li>
+                        <li>Comprehensive Product Portfolio</li>
+                        <li>Dedicated Account Executive</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <p style="text-align:justify; clear:both;">{!$User.FirstName} {!$User.LastName} has created a custom-designed plan based on your needs and budget all backed by our 24/7 expert technical support. Plus, we monitor the Frontier network to ensure that your business communications run without
+                interruption. It's all part of our dedication to helping you succeed.</p>
+            <div style="font-weight:bold;text-align:right;">{!qNameStr}{!quoteNumber}</div>
+            <div style="font-size:8pt;border-top: solid 2px black;padding-top:10pt;">
+                <!--border-top: solid 2px black; -->
+                1  © 2022 Frontier Communications Parent, Inc. All Rights Reserved.
+    			<img src="{!$Resource.ProposalFooter}" style="width:20%;height:10%;float:right;"/>
+            </div>
+<!--
+            <h1 style="color: #990000;font-size: 22px; font-weight:bold; text-align:justify; page-break-before:always">Situation Analysis</h1>
+            <p>Your company's current communications capabilities include:
+                <br />
+                <br /> {!proposalCompany}
+                <br />
+                <br /> Based on what we learned from you, your immediate and future communications needs are:
+                <br />
+                <br /> {!proposalFuture}
+            </p>
+-->
+            <h1 style="color: #FF0037;font-size: 22px; font-weight:bold; text-align:justify;">Executive Summary</h1>
+            <p style="font-size: 17px;text-align:justify;">
+                Our team of Business Specialists is dedicated to gaining a full understanding of your capabilities and challenges. That way, we can custom-tailor a solution that meets your needs and gives you the confidence to move forward.
+            </p>
+
+            <p>Our recommendations based on the needs defined above include:</p>
+            <table style="width:100%;border: 1px solid black;align:center;font-size:small;">
+                <thead style="color:#FFFFFF; background-color:#FF0037; padding:2px;">
+                    <th style="text-align:center;width:48%;" align="center">Product Name</th>
+                    <th style="text-align:center;width:13%;" align="center">Term Length</th>
+                    <th style="text-align:center;width:13%;" align="center">NRC</th>
+                    <th style="text-align:center;width:13%;" align="center">MRC</th>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!strQuoteItemsExtensions}" var="strQuote">
+                        <tr>
+                            <td style="text-align:left;width:48%;">{!strQuote.ProductName}</td>
+                            <td style="text-align:center;width:13%;">{!strQuote.TermLength}</td>
+                            <td style="text-align:right;width:13%;">{!strQuote.NRC}</td>
+                            <td style="text-align:right;width:13%;">{!strQuote.MRC}</td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+            <p>
+                The services set forth in this proposal will be provided by Frontier Communications and its affiliates (collectively referred to herein as"Frontier"). Frontier does not consider the proposal itself to be a legally binding offer to contract. Pricing contained
+                within this document is budgetary, and a site survey may be required prior to a final quote. This quote is valid for up to thirty days from the date hereof. Taxes and surcharges are not included.
+            </p>
+            <p style="margin:auto; width: 100%; height: 50px; font-size:8px;padding:10px;width:60%;text-align:justify;">
+                This proposal is confidential and contains proprietary information. The contents contained herein are not to be shared with parties other than the customer and its employees named in this document is confidential and the property of Frontier Communications
+                Corporation.
+            </p>
+            <div style="font-size:8pt;border-top: solid 2px black;padding-top:15pt;">
+                <!--border-top: solid 2px black; -->
+                2 © 2022 Frontier Communications Parent, Inc. All Rights Reserved.
+    			<img src="{!$Resource.ProposalFooter}" style="width:20%;height:10%;float:right;padding-top:15pt;"/>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function limitLength(id, len) {
+            var element = document.getElementById(id);
+            element.innerHTML = element.innerHTML(substr(0, len));
+            element.setAttribute("style", "text-align:justify;")
+        }
+    </script>
+</apex:page>

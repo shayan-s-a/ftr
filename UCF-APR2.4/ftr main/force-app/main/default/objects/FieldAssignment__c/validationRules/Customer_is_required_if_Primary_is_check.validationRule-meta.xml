@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_is_required_if_Primary_is_check</fullName>
+    <active>true</active>
+    <description>SDDD-4526	01103949 - NCM Order Assignment Automation</description>
+    <errorConditionFormula>AND( AccountId__c = null , Primary__c  = True  )</errorConditionFormula>
+    <errorDisplayField>AccountId__c</errorDisplayField>
+    <errorMessage>Customer is required if Primary is checked</errorMessage>
+</ValidationRule>

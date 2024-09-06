@@ -1,0 +1,29 @@
+.THIS{
+    background:white;
+}
+.THIS~.iconposition{
+    position: relative;
+    float: right;
+    bottom: 1.4rem;
+    right: 10px;
+}
+.THIS~.Options-List{
+    cursor: pointer;
+    padding: 10px;
+    border-color: var(--sds-c-card-color-border, var(--lwc-cardColorBorder,rgb(221, 219, 218)));
+    box-shadow: var(--lwc-shadowDropDown,0 2px 3px 0 rgba(0, 0, 0, 0.16));
+}
+.THIS~.Options-List li:hover{
+    background-color: var(--lwc-colorBackgroundRowHover,rgb(249, 249, 250));
+}
+.THIS~.Options-List li span{
+    color:var(--lwc-colorTextDefault,rgb(22, 50, 92));
+	font-size: var(--lwc-fontSize2,0.75rem);
+    margin-left: var(--lwc-spacingXSmall,0.5rem);          
+}
+.THIS~.Options-List li{
+	margin-top: 15px;                                            
+}
+.THIS .error-display{
+	border: 1px solid red;
+}

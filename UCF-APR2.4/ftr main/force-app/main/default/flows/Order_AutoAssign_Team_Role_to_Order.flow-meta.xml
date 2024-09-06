@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>Is_CNP_Active</name>
+        <label>Is CNP Active?</label>
+        <locationX>182</locationX>
+        <locationY>1355</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CNP_is_active</name>
+            <conditionLogic>1 AND ((3 AND 5) OR (2 AND 6) OR (4 AND 7))</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_CNP_from_Acct_Team.User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_CNP_from_Acct_Team.User.PTO_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_CNP_from_Acct_Team.User.PTO_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_CNP_from_Acct_Team.User.PTO_End_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_CNP_from_Acct_Team.User.PTO_End_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>forToday</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>Get_CNP_from_Acct_Team.User.PTO_Start_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>forToday</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>Get_CNP_from_Acct_Team.User.PTO_End_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_CNP</targetReference>
+            </connector>
+            <label>CNP is active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_CNP_found</name>
+        <label>Is CNP found?</label>
+        <locationX>380</locationX>
+        <locationY>1247</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CNP_is_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_CNP_from_Acct_Team</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_CNP_Active</targetReference>
+            </connector>
+            <label>CNP is found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_CNP_update_necessary</name>
+        <label>Is CNP update necessary?</label>
+        <locationX>611</locationX>
+        <locationY>1031</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CNP_is_empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order_Provisioner__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_CNP_from_Acct_Team</targetReference>
+            </connector>
+            <label>CNP is empty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Opportunity_BDT_Number_filled</name>
+        <label>Is Opportunity BDT Number filled?</label>
+        <locationX>858</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Is_Order_BDT_Number_filled</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Oppty_BDT_Number_is_filled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.BDT_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_BDT</targetReference>
+            </connector>
+            <label>Oppty BDT Number is filled</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Order_BDT_Number_filled</name>
+        <label>Is Order BDT Number filled?</label>
+        <locationX>1056</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Is_the_IS_CNP_Auto_Assignment_Condition_Met</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Order_BDT_Number_is_filled</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BDT__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Edit_135_Day_Old_Oppty__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>forToday</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>forOpptyEditExpirationDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Oppty_Rec</targetReference>
+            </connector>
+            <label>Order BDT Number is filled</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_the_IS_CNP_Auto_Assignment_Condition_Met</name>
+        <label>Is the CNP Auto Assignment Condition Met?</label>
+        <locationX>858</locationX>
+        <locationY>815</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IS_CNP_Auto_Assignment_Condition_Met</name>
+            <conditionLogic>(1 OR 2 OR 3 OR 4) AND (5 OR 6 OR 7) AND 8</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Move Order</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Order</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Upgrade/Downgrade Order</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Vlocity OM Order</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ethernet</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Managed Enterprise WiFi</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Managed Services</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Order_Provisioner__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Order_Management_Queue</targetReference>
+            </connector>
+            <label>IS/CNP Auto Assignment Condition Met</label>
+        </rules>
+    </decisions>
+    <description>Removed IS auto assignment</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CurrentOrderURL</name>
+        <dataType>String</dataType>
+        <expression>LEFT($Api.Enterprise_Server_URL_510, FIND( &apos;/services&apos;, $Api.Enterprise_Server_URL_510)) &amp; {!$Record.Id}</expression>
+    </formulas>
+    <formulas>
+        <name>forDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()+1</expression>
+    </formulas>
+    <formulas>
+        <name>forOpptyEditExpirationDate</name>
+        <dataType>Date</dataType>
+        <expression>IF(ISBLANK({!$Record.Opportunity.Mgr_Signed_Date__c}), TODAY(), {!$Record.Opportunity.Mgr_Signed_Date__c})+135</expression>
+    </formulas>
+    <formulas>
+        <name>forToday</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Order: AutoAssign Team Role to Order {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order: AutoAssign Team Role to Order</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_CNP_from_Acct_Team</name>
+        <label>Get CNP from Acct Team</label>
+        <locationX>380</locationX>
+        <locationY>1139</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_CNP_found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>TeamMemberRole</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Circuit Network Provisioner (CNP)</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>AccountTeamMember</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Order_Management_Queue</name>
+        <label>Get Order Management Queue</label>
+        <locationX>611</locationX>
+        <locationY>923</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_CNP_update_necessary</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Order_Management_Task</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_BDT</name>
+        <label>Update BDT</label>
+        <locationX>660</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Is_the_IS_CNP_Auto_Assignment_Condition_Met</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>BDT__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BDT__c</field>
+            <value>
+                <elementReference>$Record.Opportunity.BDT_Number__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_CNP</name>
+        <label>Update CNP</label>
+        <locationX>50</locationX>
+        <locationY>1463</locationY>
+        <inputAssignments>
+            <field>Order_Provisioner__c</field>
+            <value>
+                <elementReference>Get_CNP_from_Acct_Team.UserId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Oppty_Rec</name>
+        <label>Update Oppty Rec</label>
+        <locationX>924</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Is_the_IS_CNP_Auto_Assignment_Condition_Met</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BDT_Number__c</field>
+            <value>
+                <elementReference>$Record.BDT__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>732</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Opportunity_BDT_Number_filled</targetReference>
+        </connector>
+        <object>Order</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

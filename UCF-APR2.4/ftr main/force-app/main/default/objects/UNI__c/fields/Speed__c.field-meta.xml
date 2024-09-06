@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Speed__c</fullName>
+    <externalId>false</externalId>
+    <label>Speed</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1000</fullName>
+                <default>true</default>
+                <label>1G</label>
+            </value>
+            <value>
+                <fullName>10000</fullName>
+                <default>false</default>
+                <label>10G</label>
+            </value>
+            <value>
+                <fullName>100G</fullName>
+                <default>false</default>
+                <label>100G</label>
+            </value>
+            <value>
+                <fullName>100</fullName>
+                <default>false</default>
+                <label>100M</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

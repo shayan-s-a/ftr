@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>no_of_partners__c</fullName>
+    <externalId>false</externalId>
+    <label># of partners</label>
+    <summaryForeignKey>Vendor_Connectivity__c.Premise__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

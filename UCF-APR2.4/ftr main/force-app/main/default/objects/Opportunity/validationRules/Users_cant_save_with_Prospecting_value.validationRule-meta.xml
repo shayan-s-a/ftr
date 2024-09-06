@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Users_cant_save_with_Prospecting_value</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR($Profile.Id = &apos;00e0h000001WfeA&apos;,
+$Profile.Id = &apos;00eE0000001A8C8&apos;,
+$Profile.Id = &apos;00e0L000000Qtux&apos;,
+$Profile.Id = &apos;00eE0000001A5nM&apos;),
+TEXT(StageName) = &apos;Prospecting&apos;,
+ISCHANGED(StageName),
+$RecordType.Name = &apos;Opportunity Lightning&apos;)</errorConditionFormula>
+    <errorMessage>Please select a different Sales Stage.</errorMessage>
+</ValidationRule>

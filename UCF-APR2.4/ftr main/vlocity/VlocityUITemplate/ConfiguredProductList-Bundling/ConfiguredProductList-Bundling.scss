@@ -1,0 +1,21 @@
+.bold {
+    font-weight: bold !important;
+}
+.easy-pass {
+    .product-list-row {
+        font-size: 1rem;
+        line-height: 2.5rem;
+        &.selected-row {
+            // &:selection, &:hover {
+            //     background: rgb(224,71,66) !important;
+            // }
+            // background: rgb(224,71,66) !important;
+        }
+    }
+
+    .nds-text-heading_medium {
+        font-size: 1.125rem !important;
+        font-weight: 700 !important;
+        color: #49739c !important;
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>This field is used to maintain the email ids of admins who would like to receive emails after their bulk account update job is finished</description>
+    <externalId>false</externalId>
+    <label>Email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>true</unique>
+</CustomField>

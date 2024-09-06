@@ -1,0 +1,30 @@
+<div class="nds-p-bottom_large nds-box" style="width:100%;display:flex; flex-direction:row; justify-content: space-between;">
+	<div class="nds-grid" style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Term</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.Term}}</div>
+	</div>
+	<div class="nds-grid"  style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Speed</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.Speed}}</div>
+	</div>
+	<div class="nds-grid"  style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Bundle Type</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.BundleType}}</div>
+	</div>
+	<div class="nds-grid" ng-if='bpTree.response.BuildYourProduct.BundleType=="DIA + SIP"' style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Call Paths</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.CallPaths}}</div>
+	</div>
+	<div class="nds-grid" ng-if='bpTree.response.BuildYourProduct.BundleType=="DIA + UCF"' style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >UCF Executive Seats</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.UCFExecLic}}</div>
+	</div>
+	<div class="nds-grid"  style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Recurring Charge</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.BundlePrice}}</div>
+	</div>
+	<div class="nds-grid"  style="width: 23%;flex-direction: column;"> 
+		<div class="nds-text-title" >One Time Charge</div>
+		<div class="nds-text-content">{{bpTree.cpqCurrencySymbol}}0.00</div>
+	</div>
+</div>

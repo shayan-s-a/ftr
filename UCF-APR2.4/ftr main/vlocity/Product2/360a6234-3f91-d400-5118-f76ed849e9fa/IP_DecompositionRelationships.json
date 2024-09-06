@@ -1,0 +1,33 @@
+[
+    {
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__DestinationDefaultQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMaxQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMinQuantity__c": 1,
+        "%vlocity_namespace%__DestinationProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "673464d5-2b49-3f86-3323-47b4b9610bd4",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "Product2/673464d5-2b49-3f86-3323-47b4b9610bd4",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__GlobalKey__c": "88e2b291-4b26-b73e-584b-f62d7eb92f62",
+        "%vlocity_namespace%__MappingsData__c": "[{\"transform_mappings\":[{\"source_value\":\"LAN/WAN\",\"destination_value\":\"WAN/LAN\"},{\"source_value\":\"BGP\",\"destination_value\":\"WAN/LAN\"},{\"source_value\":\"Flat\",\"destination_value\":\"FLAT LAN\"}],\"source_type\":\"Attribute\",\"source_attr_name\":\"Topology\",\"source_attr_code\":\"ATTR_TOPO\",\"mapping_type\":\"list\",\"destination_attr_name\":\"PSR_Topology\",\"destination_attr_code\":\"Topology\"},{\"source_type\":\"Attribute\",\"source_attr_name\":\"IP Request Tracking Number\",\"source_attr_code\":\"ATTR_IPREQTR\",\"mapping_type\":\"ad-verbatim\",\"destination_attr_name\":\"PSR_IP_JUST_NBR\",\"destination_attr_code\":\"IP JUST NBR\"},{\"transform_mappings\":[{\"source_value\":\"/22 = 1021 IPs\",\"destination_value\":\"/22\"},{\"source_value\":\"/23 = 509 IPs\",\"destination_value\":\"/23\"},{\"source_value\":\"/24 = 253 IPs\",\"destination_value\":\"/24\"},{\"source_value\":\"/25 = 125 IPs\",\"destination_value\":\"/25\"},{\"source_value\":\"/26 = 61 IPs\",\"destination_value\":\"/26\"},{\"source_value\":\"/27 = 29 IPs\",\"destination_value\":\"/27\"},{\"source_value\":\"/28 = 13 IPs\",\"destination_value\":\"/28\"},{\"source_value\":\"/29 = 5 IPs\",\"destination_value\":\"/29\"},{\"source_value\":\"/30 = 1 IP\",\"destination_value\":\"/30\"}],\"source_type\":\"Attribute\",\"source_attr_name\":\"IP Blocks\",\"source_attr_code\":\"ATTR_IP_BLOCKS\",\"mapping_type\":\"list\",\"destination_attr_name\":\"PSR_IP_Block_Size\",\"destination_attr_code\":\"IP Block Size\"},{\"mapping_type\":\"ad-verbatim\",\"destination_attr_name\":\"IP Fulfilment Request Line Reference Id\",\"destination_attr_code\":\"ATTR_IPFRLRefId\",\"source_field_name\":\"%vlocity_namespace%__AssetReferenceId__c\",\"source_type\":\"Field\"}]",
+        "%vlocity_namespace%__Priority__c": "",
+        "%vlocity_namespace%__RequireReservation__c": false,
+        "%vlocity_namespace%__SourceDefaultQuantity__c": 1,
+        "%vlocity_namespace%__SourceMaxQuantity__c": "",
+        "%vlocity_namespace%__SourceMinQuantity__c": 0,
+        "%vlocity_namespace%__SourceProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "360a6234-3f91-d400-5118-f76ed849e9fa",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/360a6234-3f91-d400-5118-f76ed849e9fa",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__SourceProductId__r.%vlocity_namespace%__GlobalKey__c": "360a6234-3f91-d400-5118-f76ed849e9fa",
+        "%vlocity_namespace%__XORGroup__c": "",
+        "Name": "IP --> M6 EIA EVC PSR",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DecompositionRelationship__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__DecompositionRelationship__c/IP --> M6 EIA EVC PSR/Product2/360a6234-3f91-d400-5118-f76ed849e9fa"
+    }
+]

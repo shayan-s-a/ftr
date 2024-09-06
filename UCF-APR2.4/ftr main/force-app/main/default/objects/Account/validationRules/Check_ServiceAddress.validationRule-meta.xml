@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_ServiceAddress</fullName>
+    <active>false</active>
+    <description>Service Address is required.</description>
+    <errorConditionFormula>AND( 
+  RecordType.Name != &apos;Partner&apos;,
+  RecordType.Name != &apos;Alternate Channel&apos;,
+  RecordType.Name != &apos;Community Connections - Property&apos;,
+  RecordType.Name != &apos;Global&apos;,
+  RecordType.Name != &apos;Organization&apos;,
+  RecordType.Name != &apos;Billing&apos;,
+  $Profile.Name &lt;&gt; &apos;Frontier System Administrator&apos;, 
+  $Profile.Name &lt;&gt; &apos;Frontier Auditor&apos;,
+  $Profile.Name &lt;&gt; &apos;Data Analyst - DPI&apos;,
+  $Profile.Name &lt;&gt; &apos;#Commercial SMB Sales&apos;,
+  $Profile.Name &lt;&gt; &apos;API - Integration&apos;,
+ $Profile.Name &lt;&gt; &apos;#MTU&apos;,
+  $Profile.Name &lt;&gt; &apos;Lead Development Rep (LDR)&apos;,
+
+
+  OR( 
+    ISBLANK( ShippingCity ), 
+    ISBLANK( ShippingCountry ), 
+    ISBLANK( ShippingState ), 
+    ISBLANK( ShippingStreet ), 
+    ISBLANK( ShippingPostalCode) 
+  ) 
+)</errorConditionFormula>
+    <errorDisplayField>of_Corp_Sites__c</errorDisplayField>
+    <errorMessage>Service Address is required.</errorMessage>
+</ValidationRule>

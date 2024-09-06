@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRDD_date_cannot_be_changed</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(CRDD__c)</errorConditionFormula>
+    <errorDisplayField>CRDD__c</errorDisplayField>
+    <errorMessage>The CRDD date cannot be changed after the case is saved.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,2074 @@
+[
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "06c3639a-a84d-113f-1713-bcec346dd491",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_SEC_WEBAPP_0001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/06c3639a-a84d-113f-1713-bcec346dd491"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "32f1b5d0-89e0-ed7e-9ccf-12282230b53a",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_VULN_001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/32f1b5d0-89e0-ed7e-9ccf-12282230b53a"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "5b62d36d-a958-cfa4-64c1-f6a02a44bdab",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_SRMG_001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/5b62d36d-a958-cfa4-64c1-f6a02a44bdab"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "852e0506-17bb-8656-5c2e-eb2983f2a8a9",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_SIRD_002",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/852e0506-17bb-8656-5c2e-eb2983f2a8a9"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "92e7f436-3db2-cad5-a752-83040463902f",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_SIAD_001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/92e7f436-3db2-cad5-a752-83040463902f"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "bc0fd29c-892b-0a44-e9c9-03c8d11229e3",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_VULA_001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/bc0fd29c-892b-0a44-e9c9-03c8d11229e3"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "cc3c2083-b214-b3d9-cd84-a4dabafb75d6",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_SEC_ADDON_0002",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/cc3c2083-b214-b3d9-cd84-a4dabafb75d6"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "e943a72a-4723-a915-bf2b-5b94ae6d04d7",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_SIRD_001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/e943a72a-4723-a915-bf2b-5b94ae6d04d7"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "f07c322a-ab2c-8067-7fad-15753315c690",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_AWTR_001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/f07c322a-ab2c-8067-7fad-15753315c690"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "f72b0d57-f166-0b09-5b0e-b47cc849728e",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": false,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": true,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": true,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "FIREWALL_PENT_001",
+        "Name": "NEW_ATTR_ROOT_CONTEXT Override",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/f72b0d57-f166-0b09-5b0e-b47cc849728e"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Root Context",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "90",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_ROOT_CONTEXT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_ROOT_CONTEXT",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "10",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "b158578f-ff88-23f9-5bcf-8c8dfedabee2",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": true,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": false,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "Product2",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/9697f191-d275-eee7-f2ca-26781c179c51",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "NA",
+                "id": "a7cc5bcd-5f0b-45b7-bb29-3f0530dc14d0",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "NA"
+            },
+            {
+                "displayText": "FIREWALL_VULN_001",
+                "id": "4996cfe3-93bf-ea05-77f8-3065e4066894",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "FIREWALL_VULN_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_WEBAPP_0001",
+                "id": "adc7e10f-2780-8c69-0309-eefeaac1c7e5",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "FIREWALL_SEC_WEBAPP_0001"
+            },
+            {
+                "displayText": "FIREWALL_SIAD_001",
+                "id": "451d9214-1fef-441a-7e08-5d8ba4a91fbf",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "FIREWALL_SIAD_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_001",
+                "id": "082cc77f-3965-4563-9374-c5a8fc450f3c",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 50,
+                "value": "FIREWALL_SIRD_001"
+            },
+            {
+                "displayText": "FIREWALL_SEC_ADDON_0002",
+                "id": "27f870d6-800a-a3aa-f1a5-6ad71362ad55",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 60,
+                "value": "FIREWALL_SEC_ADDON_0002"
+            },
+            {
+                "displayText": "FIREWALL_AWTR_001",
+                "id": "48add50c-4d98-c295-ac08-26c1da75d105",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 70,
+                "value": "FIREWALL_AWTR_001"
+            },
+            {
+                "displayText": "FIREWALL_SIRD_002",
+                "id": "9d903fb3-3eab-44ad-30b7-6d7124da2182",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 80,
+                "value": "FIREWALL_SIRD_002"
+            },
+            {
+                "displayText": "FIREWALL_SRMG_001",
+                "id": "fa132681-6356-3ec0-b67a-5653da0af423",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 90,
+                "value": "FIREWALL_SRMG_001"
+            },
+            {
+                "displayText": "FIREWALL_VULA_001",
+                "id": "8dad7b14-6142-3324-22d0-311bd57cdfba",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 100,
+                "value": "FIREWALL_VULA_001"
+            },
+            {
+                "displayText": "FIREWALL_PENT_001",
+                "id": "e0fcc05f-5b7a-5170-b7b4-279592bf7ad1",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 110,
+                "value": "FIREWALL_PENT_001"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "",
+        "Name": "NEW_ATTR_ROOT_CONTEXT",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/b158578f-ff88-23f9-5bcf-8c8dfedabee2"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_PRI_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_PRI_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Term",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "20",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_CONTRACT_TERM",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_CONTRACT_TERM",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_CONTRACT_TERM",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "null",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "290943e9-4b40-d42f-860a-3283c92cf660",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": true,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": true,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": false,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "Product2",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "08e64d2b-c1e7-2f50-1a88-b2170b36c7c0",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/08e64d2b-c1e7-2f50-1a88-b2170b36c7c0",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "12 Months",
+                "id": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "12 Months"
+            },
+            {
+                "displayText": "24 Months",
+                "id": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "24 Months"
+            },
+            {
+                "displayText": "36 Months",
+                "id": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "36 Months"
+            },
+            {
+                "displayText": "60 Months",
+                "id": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "60 Months"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "",
+        "Name": "TempAA-ATTR_CONTRACT_TERM",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/290943e9-4b40-d42f-860a-3283c92cf660"
+    },
+    {
+        "%vlocity_namespace%__AddDate__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentComments__c": "",
+        "%vlocity_namespace%__AttributeAdjustmentUnits__c": "",
+        "%vlocity_namespace%__AttributeCategoryId__c": {
+            "%vlocity_namespace%__Code__c": "FTR_ENT_TECH_ATTCAT",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__AttributeCategory__c/FTR_ENT_TECH_ATTCAT",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeCategory__c"
+        },
+        "%vlocity_namespace%__AttributeDisplayNameOverride__c": "Firewall Model",
+        "%vlocity_namespace%__AttributeDisplaySequence__c": "830",
+        "%vlocity_namespace%__AttributeId__c": {
+            "%vlocity_namespace%__Code__c": "ATTR_FIREWALL",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Attribute__c/ATTR_FIREWALL",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Attribute__c"
+        },
+        "%vlocity_namespace%__AttributeId__r.%vlocity_namespace%__Code__c": "ATTR_FIREWALL",
+        "%vlocity_namespace%__ConfigurationDetail__c": "",
+        "%vlocity_namespace%__ConfigurationStages__c": "",
+        "%vlocity_namespace%__CustomConfigUiTemplate__c": "",
+        "%vlocity_namespace%__Data__c": "",
+        "%vlocity_namespace%__DefaultPicklistEntryId__c": "",
+        "%vlocity_namespace%__DefaultPicklistValueId__c": "",
+        "%vlocity_namespace%__DisplaySequence__c": "20",
+        "%vlocity_namespace%__EndStory__c": "",
+        "%vlocity_namespace%__ExcludedPicklistEntryIds__c": "",
+        "%vlocity_namespace%__ExcludedPicklistValues__c": "",
+        "%vlocity_namespace%__FormatMask__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "65159c14-cf7d-34eb-e79b-bc792c5f49b3",
+        "%vlocity_namespace%__HasRule__c": false,
+        "%vlocity_namespace%__HelpText__c": "",
+        "%vlocity_namespace%__IsActiveAssignment__c": false,
+        "%vlocity_namespace%__IsConfigurable__c": true,
+        "%vlocity_namespace%__IsDynamic__c": false,
+        "%vlocity_namespace%__IsEncrypted__c": false,
+        "%vlocity_namespace%__IsHidden__c": true,
+        "%vlocity_namespace%__IsNotAssetizable__c": false,
+        "%vlocity_namespace%__IsNotTranslatable__c": false,
+        "%vlocity_namespace%__IsOverride__c": false,
+        "%vlocity_namespace%__IsQueryDriven__c": false,
+        "%vlocity_namespace%__IsReadOnly__c": true,
+        "%vlocity_namespace%__IsRequired__c": false,
+        "%vlocity_namespace%__LookupFilter__c": "",
+        "%vlocity_namespace%__LookupObjectId__c": "",
+        "%vlocity_namespace%__LookupObjectTypeId__c": "",
+        "%vlocity_namespace%__ObjectId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/e1e55ecf-d238-6b64-9c13-32fbfb07904c",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__ObjectType__c": "%vlocity_namespace%__ObjectClass__c",
+        "%vlocity_namespace%__PicklistId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "a01c37c0-adb8-01d4-ba8e-62e2d9e42321",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__Picklist__c/a01c37c0-adb8-01d4-ba8e-62e2d9e42321",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Picklist__c"
+        },
+        "%vlocity_namespace%__QueryCode__c": "",
+        "%vlocity_namespace%__QueryLabel__c": "",
+        "%vlocity_namespace%__RemoveDate__c": "",
+        "%vlocity_namespace%__RemovedFlag__c": false,
+        "%vlocity_namespace%__RuleData__c": "",
+        "%vlocity_namespace%__RuleMessage__c": "",
+        "%vlocity_namespace%__StartStory__c": "",
+        "%vlocity_namespace%__StyleClass__c": "",
+        "%vlocity_namespace%__UIDisplayType__c": "Dropdown",
+        "%vlocity_namespace%__ValidValuesData__c": [
+            {
+                "displayText": "60F",
+                "id": "1747a631-8515-7c5b-44ca-d64ba45263e7",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 10,
+                "value": "60F"
+            },
+            {
+                "displayText": "100F",
+                "id": "d5303899-97f4-f8a7-439c-9e7e5d954e49",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 20,
+                "value": "100F"
+            },
+            {
+                "displayText": "400E",
+                "id": "b74a9104-3576-a925-3977-766966919a75",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 30,
+                "value": "400E"
+            },
+            {
+                "displayText": "1000D",
+                "id": "a279c570-b8a7-d3c3-9612-441d22fbd61b",
+                "isDefault": false,
+                "isEditable": false,
+                "sequence": 40,
+                "value": "1000D"
+            }
+        ],
+        "%vlocity_namespace%__ValueDataType__c": "Picklist",
+        "%vlocity_namespace%__ValueDecoder__c": "",
+        "%vlocity_namespace%__ValueDescription__c": "",
+        "%vlocity_namespace%__Value__c": "",
+        "Name": "CLONED_01t01000001MmNRAA0_ATTR_FIREWALL",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__AttributeAssignment__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__AttributeAssignment__c/65159c14-cf7d-34eb-e79b-bc792c5f49b3"
+    }
+]

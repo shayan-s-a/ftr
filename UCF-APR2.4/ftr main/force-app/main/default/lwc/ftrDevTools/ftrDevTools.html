@@ -1,0 +1,75 @@
+<template>
+    <div class="slds-vertical-tabs" style="min-height: 100%; height: auto;">
+        <ul class="slds-vertical-tabs__nav" role="tablist" aria-orientation="vertical">
+            <li class="slds-vertical-tabs__nav-item slds-is-active" title="api-log-viewer" role="presentation"
+                onclick={handleTabClick} onfocus={handleTabFocus}>
+                <a class="slds-vertical-tabs__link" href="#" role="tab" tabindex="-1" aria-selected="false"
+                    aria-controls="api-log-viewer" id="api-log-viewer__nav">
+                    <span class="slds-vertical-tabs__left-icon">
+                        <lightning-icon size="small" icon-name="standard:action_list_component" alternative-text="API Logs" title="API Logs"></lightning-icon>
+                    </span>
+                    <span class="slds-truncate" title="api-log-viewer">API Log Viewer</span>
+                    <span class="slds-vertical-tabs__right-icon"></span>
+                </a>
+            </li>
+            <li class="slds-vertical-tabs__nav-item" title="Formula Based Pricing Tester" role="presentation"
+                onclick={handleTabClick} onfocus={handleTabFocus}>
+                <a class="slds-vertical-tabs__link" href="#" role="tab" tabindex="-1" aria-selected="false"
+                    aria-controls="formula-based-pricing-tester" id="formula-based-pricing-tester__nav">
+                    <span class="slds-vertical-tabs__left-icon">
+                        <lightning-icon size="small" icon-name="standard:formula" alternative-text="Pricing Formula Tester" title="Pricing Formula Tester"></lightning-icon>
+                    </span>
+                    <span class="slds-truncate" title="Formula Based Pricing Tester">Pricing Formula Tester</span>
+                    <span class="slds-vertical-tabs__right-icon"></span>
+                </a>
+            </li>
+            <!-- <li class="slds-vertical-tabs__nav-item" title="auto-field-assignment-settings" role="presentation"
+                onclick={handleTabClick} onfocus={handleTabFocus}>
+                <a class="slds-vertical-tabs__link" href="#" role="tab" tabindex="-1" aria-selected="false"
+                    aria-controls="auto-field-assignment-settings" id="auto-field-assignment-settings__nav">
+                    <span class="slds-vertical-tabs__left-icon">
+                        <lightning-icon size="small" icon-name="standard:settings" alternative-text="Field Assignment Settings" title="Field Assignment Settings"></lightning-icon>
+                    </span>
+                    <span class="slds-truncate" title="Automated Field Assignment Settings">Field Assignment Settings</span>
+                    <span class="slds-vertical-tabs__right-icon"></span>
+                </a>
+            </li> -->
+            <li class="slds-vertical-tabs__nav-item" title="jobs" role="presentation"
+                onclick={handleTabClick} onfocus={handleTabFocus}>
+                <a class="slds-vertical-tabs__link" href="#" role="tab" tabindex="-1" aria-selected="false"
+                    aria-controls="jobs" id="jobs__nav">
+                    <span class="slds-vertical-tabs__left-icon">
+                        <lightning-icon size="small" icon-name="standard:apex" alternative-text="Jobs" title="Jobs"></lightning-icon>
+                    </span>
+                    <span class="slds-truncate" title="Jobs">Batch Jobs</span>
+                    <span class="slds-vertical-tabs__right-icon"></span>
+                </a>
+            </li>
+        </ul>
+        <div class="slds-vertical-tabs__content slds-hide" id="formula-based-pricing-tester" role="tabpanel"
+            aria-labelledby="formula-based-pricing-tester__nav">
+            <div class="slds-text-longform">
+                <h3 class="slds-text-heading_medium">Pricing Formula Tester</h3>
+                <c-pricing-formula-tester></c-pricing-formula-tester>
+            </div>
+        </div>
+        <div class="slds-vertical-tabs__content slds-show" id="api-log-viewer" role="tabpanel"
+            aria-labelledby="api-log-viewer__nav">
+            <div >
+                <c-api-log-container></c-api-log-container>
+            </div>
+        </div>
+        <!-- <div class="slds-vertical-tabs__content slds-hide" id="auto-field-assignment-settings" role="tabpanel"
+            aria-labelledby="auto-field-assignment-settings__nav">
+            <div >
+                <c-ftr-auto-field-assignment-settings></c-ftr-auto-field-assignment-settings>
+            </div>
+        </div> -->
+        <div class="slds-vertical-tabs__content slds-hide" id="jobs" role="tabpanel"
+            aria-labelledby="jobs__nav">
+            <div >
+                <c-ftr-jobs></c-ftr-jobs>
+            </div>
+        </div>
+    </div>
+</template>

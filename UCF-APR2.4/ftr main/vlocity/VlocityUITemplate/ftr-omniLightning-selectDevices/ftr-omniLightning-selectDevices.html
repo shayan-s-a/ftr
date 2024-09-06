@@ -1,0 +1,64 @@
+<ul class="ftr-accordion-container" ng-if="control.vlcSI[control.itemsKey][0].records" ng-controller="SelectableItemFTRRCDevices" ng-init="init()">
+    <!-- <div ng-if="bpTree.response.vlcPersistentComponent.vlcCart"> -->
+        <li vlc-slds-prod-desc="{{ p.Product2.Description }}"
+            ng-repeat='p in listOfProducts'
+            class="slds-m-bottom_x-small">
+            <div class="ftr-accordion-header" ng-click="openAccordion(p.ProductCode.value)" ng-class="{active:accordionSection == p.ProductCode.value}">
+                <span class="ftr-accordion-header_chevron"><strong>></strong></span>
+                <a href><strong>{{p.Name.value}}</strong></a>
+            </div>
+            <section class="ftr-accordion-body slds-grid slds-wrap slds-grid--pull-padded ng-scope" ng-show="accordionSection == p.ProductCode.value">
+                <div class="slds-size--1-of-1 ftr-accordion-body_warningMsg" ng-show="showMessage">Can't add more Devices than Licenses</div>
+                <a  class="slds-col slds-size--1-of-12 vlc-slds-items--container ftr-selectableItems"
+                    ng-click="addProduct(cp)"
+                    vlc-slds-prod-desc="{{ cp.Product2.Description }}"
+                    ng-repeat='cp in p.childProducts.records'>
+                    
+                    <div class="vlc-slds-selectableItem" ng-init="most_popular = formatJson(cp.Product2.%vlocity_namespace%__AttributeDefaultValues__c)">
+                        <!-- <span class="most-popular-tag" ng-if="most_popular.ATTR_MOST_POPULAR">Most Popular</span> -->
+                        <label class="slds-form__element__label" id="product-name">
+                            {{cp.Name.value}}
+
+                            <div class="vlc-slds_info_icon" ng-show="cp.Product2.Description.length > 0">
+                                <button class="slds-button slds-button_icon slds-button slds-button_icon" aria-describedby="help" aria-disabled="true" title="Help">
+                                    <svg class="slds-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" id="info"><path d="M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z"></path></svg>
+                                    <span class="slds-assistive-text">Description</span>
+                                </button>
+                            </div>
+
+                            <span class="tooltip" role="tooltip" id="description-tooltip" ng-show="cp.Product2.Description.length > 0">
+                                {{cp.Product2.Description}}
+                            </span>
+                        </label>
+                        <div ng-if="control.propSetMap.showNRC" ng-if="!control.propSetMap.dontFormatPrice" class="vlc-slds-item--onecost slds-m-top_small" ng-init="UnitPrice = cp.UnitPrice.value ? cp.UnitPrice.value : 0.00">
+
+                            <span ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">
+                                NRC {{UnitPrice}}
+                                <!-- {{UnitPrice | currency:bpTree.cpqCurrencySymbol  | numFormatFilter}} -->
+                            </span>
+                            <label ng-if="control.propSetMap.dontFormatPrice" ng-hide="UnitPrice == 0.00"  class="slds-form__element__label" style="font-size:14px;">
+                                {{UnitPrice}}
+                            </label>
+                            
+
+                            <!-- <label ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">Purchase Price</label> -->
+                            
+                        </div>
+                        <div ng-if="control.propSetMap.showMRC" ng-if="!control.propSetMap.dontFormatPrice" class="vlc-slds-item--cost slds-m-top_small" ng-init="RecurringPrice__c = cp.%vlocity_namespace%__RecurringPrice__c.value ? cp.%vlocity_namespace%__RecurringPrice__c.value : 0.00">
+                            <span ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">
+                                Monthly Rental {{RecurringPrice__c}}
+                                <!-- {{RecurringPrice__c | currency:bpTree.cpqCurrencySymbol  | numFormatFilter}} -->
+                            </span>
+                            <label ng-if="control.propSetMap.dontFormatPrice" ng-hide="RecurringPrice__c== 0.00" class="slds-form__element__label" style="font-size:14px;" >
+                                {{RecurringPrice__c}}
+                            </label>
+                            <!-- <label ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">Monthly Rental</label> -->
+                            <span ng-if="showAddonIncludedMsg" class="slds-form__element__label slds-m-top_small" style="z-index: 1"><strong>Included with Premium License.</strong></span>
+                        </div>
+                    </div>
+                </a>
+
+            </section>
+        </li>
+    <!-- </div> -->
+</ul>

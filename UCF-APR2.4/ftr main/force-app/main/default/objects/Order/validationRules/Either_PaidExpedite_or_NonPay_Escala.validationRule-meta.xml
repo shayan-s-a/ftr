@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Either_PaidExpedite_or_NonPay_Escala</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED( Paid_Expedite__c ),
+    NOT(ISCHANGED( Non_Pay_Escalation__c )),
+    Paid_Expedite__c = TRUE,
+    Non_Pay_Escalation__c = TRUE
+)</errorConditionFormula>
+    <errorDisplayField>Paid_Expedite__c</errorDisplayField>
+    <errorMessage>Either Paid Expedite or Non-Pay Escalation must be checked.</errorMessage>
+</ValidationRule>

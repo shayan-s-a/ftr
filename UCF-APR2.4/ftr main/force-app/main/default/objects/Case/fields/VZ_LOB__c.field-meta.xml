@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VZ_LOB__c</fullName>
+    <externalId>false</externalId>
+    <label>VZ LOB</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01-Consumer</fullName>
+                <default>false</default>
+                <label>01-Consumer</label>
+            </value>
+            <value>
+                <fullName>02-Arbor Customer Insite</fullName>
+                <default>false</default>
+                <label>02-Arbor Customer Insite</label>
+            </value>
+            <value>
+                <fullName>03-Small Business</fullName>
+                <default>false</default>
+                <label>03-Small Business</label>
+            </value>
+            <value>
+                <fullName>04-VOIP</fullName>
+                <default>false</default>
+                <label>04-VOIP</label>
+            </value>
+            <value>
+                <fullName>04-Enterprise</fullName>
+                <default>false</default>
+                <label>04-Enterprise</label>
+            </value>
+            <value>
+                <fullName>05-Government</fullName>
+                <default>false</default>
+                <label>05-Government</label>
+            </value>
+            <value>
+                <fullName>06-Company Official</fullName>
+                <default>false</default>
+                <label>06-Company Official</label>
+            </value>
+            <value>
+                <fullName>45-Wholesale</fullName>
+                <default>false</default>
+                <label>45-Wholesale</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

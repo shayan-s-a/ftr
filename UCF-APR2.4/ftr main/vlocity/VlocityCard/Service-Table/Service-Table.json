@@ -1,0 +1,34 @@
+{
+    "dataSource": {
+        "type": null
+    },
+    "filter": {
+    },
+    "states": [
+        {
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Service Table",
+            "sObjectType": "",
+            "smartAction": {
+            },
+            "templateUrl": "multisite-service-table"
+        }
+    ],
+    "title": "multisite-service-table"
+}

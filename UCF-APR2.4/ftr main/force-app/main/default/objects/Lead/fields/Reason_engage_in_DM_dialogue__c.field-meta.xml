@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_engage_in_DM_dialogue__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason not engaged in DM dialogue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Q3_Engage_in_DM_dialogue__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DM Confirmed - Appt Set</fullName>
+                <default>false</default>
+                <label>DM Confirmed - Appt Set</label>
+            </value>
+            <value>
+                <fullName>Hang up - DM Irate</fullName>
+                <default>false</default>
+                <label>Hang up - DM Irate</label>
+            </value>
+            <value>
+                <fullName>Covid - Appointment Set</fullName>
+                <default>false</default>
+                <label>Covid - Appointment Set</label>
+            </value>
+            <value>
+                <fullName>Not Interested in Frontier</fullName>
+                <default>false</default>
+                <label>Not Interested in Frontier</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>DM Confirmed - Appt Set</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Hang up - DM Irate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Covid - Appointment Set</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Not Interested in Frontier</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

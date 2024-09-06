@@ -1,0 +1,471 @@
+<apex:page standardController="SterlingQuoteItem__c"   extensions="SterpageExt,NotesAndAttachmentControllerExtension" tabStyle="SterlingQuoteItem__c"  >
+ <head> 
+<script>
+   $j = jQuery.noConflict();
+   $j(document).ready(function(){   
+   $j("input[name='piSubmit']").hide();
+   $j("input[name='unlock']").hide();
+
+   });
+  </script>
+
+  <!--/*Raj Code Starts */ -->
+ <style>
+ .display_true{
+     display:none;
+ }
+ #close {
+   //padding:1px;
+   border:1.5px solid DarkGray ;
+   background-color:WhiteSmoke ;
+   //border-radius:1.5px;
+   font-weight: bold;
+   font-size:95%;
+   border-bottom:1px solid grey;
+   -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+   -webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+   box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+   cursor:pointer;
+   height:23.5px;      
+ }
+.approved {
+    background-color:#A1F78D !important;
+}
+
+.rejected {
+    background-color:#FB8A8C !important;
+}
+
+.pending {
+    background-color:#FFD74B !important;
+}
+
+.proposal-button {
+    margin-left: -80px !important;
+}
+
+#blanket, #proposal-blanket {
+     background-color:#111;     
+     opacity: 0.65;
+     filter:alpha(opacity=65);  //for IE8
+     position:absolute;
+     top:100px;
+     z-index: auto;
+     width:100%;
+ }
+ #popUpDiv {
+     position:absolute;
+     background-color:#eeeeee;
+     width:73%;
+     height:460px;  //the CRT form portion
+     z-index: 22; 
+ }
+ 
+ #proposalPopDiv {
+     position:absolute;
+     background-color:#eeeeee;
+     width:40%;
+     height:300px;  //the CRT form portion
+     z-index: 22; 
+ }
+ .thLeft
+     { 
+     text-align:right;
+     font-size:9pt;
+     width:25; 
+}
+.alignup { 
+    vertical-align:top ;
+}
+.alignmid {
+    vertical-align:middle; text-align:right;
+}
+
+.proposalInfo {
+    width: 190%;
+}
+
+.proposalInfo2 {
+    width: 245%;
+
+}
+
+.proposal-label {
+    width: 200%;
+}
+
+</style>
+<script type="text/javascript">
+    var __sfdcSessionId = '{!GETSESSIONID()}';
+</script>
+<script src="/soap/ajax/28.0/connection.js" type="text/javascript"></script>
+<script src="/soap/ajax/28.0/apex.js" type="text/javascript"></script>
+<script type="text/javascript">
+ //jquery$ = jQuery.noConflict();
+j$ = jQuery.noConflict();
+function toggle(div_id, id) {
+    var el = document.getElementById(div_id);
+    if ( el.style.display == 'none' ) { el.style.display = 'block';}
+    else {el.style.display = 'none';}
+}
+
+function toggle(div_id) {
+    var el = document.getElementById(div_id);
+    if ( el.style.display == 'none' ) { el.style.display = 'block';}
+    else {el.style.display = 'none';}
+}
+
+function blanket_size(popUpDivVar, id) {
+    if (typeof window.innerWidth != 'undefined') {
+        viewportheight = window.innerHeight;
+    } else {
+        viewportheight = document.documentElement.clientHeight;
+    }
+    if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
+        blanket_height = viewportheight;
+    } else {
+        if (document.body.parentNode.clientHeight > document.body.parentNode.scrollHeight) {
+            blanket_height = document.body.parentNode.clientHeight;
+        } else {
+            blanket_height = document.body.parentNode.scrollHeight;
+        }
+    }
+    var blanket = document.getElementById('blanket');
+    
+    
+    blanket.style.height =  '110%'; //the background portion  
+    //blanket.style.height = blanket_height + 'px';
+    
+    var popUpDiv = document.getElementById(popUpDivVar);
+    //popUpDiv_height=blanket_height/2-150;//150 is half popup's height
+    //popUpDiv_height='330px';
+    popUpDiv.style.top =  '400px';
+    //blanket.style.top =  '25px';
+    blanket.style.position=  'Absolute';
+    //popUpDiv.style.top = popUpDiv_height + 'px';
+}
+
+function blanket_size(popUpDivVar) {
+    if (typeof window.innerWidth != 'undefined') {
+        viewportheight = window.innerHeight;
+    } else {
+        viewportheight = document.documentElement.clientHeight;
+    }
+    if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
+        blanket_height = viewportheight;
+    } else {
+        if (document.body.parentNode.clientHeight > document.body.parentNode.scrollHeight) {
+            blanket_height = document.body.parentNode.clientHeight;
+        } else {
+            blanket_height = document.body.parentNode.scrollHeight;
+        }
+    }
+    var blanket = document.getElementById('blanket');
+    
+    
+    blanket.style.height =  '115%'; //the background portion  
+    //blanket.style.height = blanket_height + 'px';
+    
+    var popUpDiv = document.getElementById(popUpDivVar);
+    //popUpDiv_height=blanket_height/2-150;//150 is half popup's height
+    //popUpDiv_height='330px';
+    popUpDiv.style.top =  '850px';
+    //blanket.style.top =  '25px';
+    //blanket.style.left = '30%';
+    blanket.style.position=  'Absolute';
+    //popUpDiv.style.top = popUpDiv_height + 'px';
+}
+
+function window_pos(popUpDivVar, id) {
+    if (typeof window.innerWidth != 'undefined') {
+        viewportwidth = window.innerHeight;
+    } else {
+        viewportwidth = document.documentElement.clientHeight;
+    }
+    if ((viewportwidth > document.body.parentNode.scrollWidth) && (viewportwidth > document.body.parentNode.clientWidth)) {
+        window_width = viewportwidth;
+    } else {
+        if (document.body.parentNode.clientWidth > document.body.parentNode.scrollWidth) {
+            window_width = document.body.parentNode.clientWidth;
+        } else {
+            window_width = document.body.parentNode.scrollWidth;
+        }
+    }
+    var popUpDiv = document.getElementById(popUpDivVar);
+    window_width=window_width/2-150;//150 is half popup's width
+    popUpDiv.style.left = '16%';
+
+    //popUpDiv.style.left = window_width + 'px';
+}
+
+function window_pos(popUpDivVar) {
+    if (typeof window.innerWidth != 'undefined') {
+        viewportwidth = window.innerHeight;
+    } else {
+        viewportwidth = document.documentElement.clientHeight;
+    }
+    if ((viewportwidth > document.body.parentNode.scrollWidth) && (viewportwidth > document.body.parentNode.clientWidth)) {
+        window_width = viewportwidth;
+    } else {
+        if (document.body.parentNode.clientWidth > document.body.parentNode.scrollWidth) {
+            window_width = document.body.parentNode.clientWidth;
+        } else {
+            window_width = document.body.parentNode.scrollWidth;
+        }
+    }
+    var popUpDiv = document.getElementById(popUpDivVar);
+    window_width=window_width/2-150;//150 is half popup's width
+    popUpDiv.style.left = '30%';
+
+    //popUpDiv.style.left = window_width + 'px';
+}
+
+function popup(windowname, id) {
+    updateSterlingQuote(id);
+    blanket_size(windowname, id);
+    window_pos(windowname, id);
+    toggle('blanket', id);
+    toggle(windowname, id);  
+    return false;    
+}
+
+function proposalpopup(windowname) {
+    blanket_size(windowname);
+    window_pos(windowname);
+    toggle('blanket');
+    toggle(windowname);  
+    return false;    
+}  
+
+function selectSecondElement() {
+    var elem = document.getElementById("{!$Component.updatearea.popupblock.popupblocksection.popupregion}");
+    elem.selectedIndex = "0";
+}
+
+function submitForApproval(id) {
+    submitforapproval(id);
+}
+
+function checkLimit(limitField, limitCount)
+{
+    var limitNum = 150;
+    if (limitField.value.length > limitNum) {
+        limitField.value = limitField.value.substring(0, limitNum);
+    } else {
+        limitCount.value = limitNum - limitField.value.length;
+    }
+}
+
+</script>
+
+</head>
+  <!-- MGG319 2/5/2019 Added Chatter Feed to QLI Page. 
+  $User.Id shows all chatter for user.  Record.Id only show for current record-->  
+   <chatter:feed entityId="{!record.Id}" /> 
+
+  <apex:pageBlock mode="maindetail" >
+  <apex:pageBlockButtons location="top"  >
+       <apex:form rendered="{!SterlingQuoteItem__c.DiscountType__c == 'ICB'}">
+                <apex:commandButton title="mybutton"  value="Edit" action="{!Edit}" rendered="{!IF(ObjSQi.CurrentStatus__c == 'Pending - Finance' || objsqi.CurrentStatus__c == 'Pending - Business Decision Support' || ObjSQi.OverallStatus__c != 'Pending' || ObjSQi.OverallStatus__c == 'Pending - Post Completion Audit Originator',True,False)}" />                
+                <apex:CommandButton value="Back" action="{!BackCustom}" />
+                <apex:CommandButton value="Save" action="{!Save}" rendered="{!if(strOverride==null,true,false)}"/>
+                <apex:commandButton title="mybutton"  value="Delete" action="{!delmethod}" rendered="{!if(strOverride!=null && sterlingQuote.RecordType.name=='SFA' ,true,false)}"/> 
+                <apex:commandButton value="Submit For Approval"  action="{!showPopup}" rerender="tstpopup" rendered="{!NOT(isDiscountTypeEmpty) && (isEmptyStatus ||isRecalled) && (isICB)}" />
+                <!-- Added by Maxg 5/2/2014 to start INA process if zaddress has not created INA process already -->     
+                <!-- <apex:commandButton title="Send To INA"  value="Launch INA" action="{!LaunchINA}" rendered="{!if(zaddress.size != 0&& SterlingQuoteItem__c.CurrentStatus__c == 'Pending - INA',true,false)}"/> -->
+                <apex:commandButton title="Send To INA"  value="Launch INA" action="{!LaunchINA}" rendered="{!IF(objSQi.IsInFrontierFootprint__c == FALSE && SterlingQuoteItem__c.CurrentStatus__c == 'Pending - INA',TRUE,FALSE)}"/> 
+                <apex:commandButton title="Launch SIFT" value="Launch SIFT" action="{!SIFT}" oncomplete="window.open('http://sift.corp.ftr.com/Default.aspx')" rerender="tstpopup1" />
+                <!--<input type="button" class="btn display_{!ISBLANK(SterlingQuoteItem__c.DiscountType__c) || SterlingQuoteItem__c.DiscountType__c == 'None'}"  value="Submit For Approval" name="submit_for_approval_custom" onclick="popup('popUpDiv')" rendered="{!if(strOverride!=null && sterlingQuote.RecordType.name!=null,true,false)}"/>  -->
+       </apex:form>
+       <apex:form rendered="{!NOT(SterlingQuoteItem__c.DiscountType__c == 'ICB')}">
+                
+               <apex:commandButton title="mybutton"  value="Edit" action="{!Edit}" />
+             <!--   <apex:commandButton value="Edit" action="{!Edit}"/> -->
+                <apex:CommandButton value="Back" action="{!BackCustom}" />
+                <apex:CommandButton value="Save" action="{!Save}" rendered="{!if(strOverride==null,true,false)}"/>
+                <apex:commandButton title="mybutton"  value="Delete" action="{!delmethod}"/>
+                <span name="submit_for_approval_custom"><apex:commandButton value="Submit For Approval" rendered="{!NOT(isDiscountTypeEmpty) && (isEmptyStatus ||isRecalled) && NOT(isICB)}" action="{!SaveOverrideButton}"/></span>
+              <!--  <apex:commandButton title="Launch SIFT" value="SIFT" action="{!SIFT}"/>
+                <!--  <input type="button" class="btn display_{!ISBLANK(SterlingQuoteItem__c.DiscountType__c)}"  value="Submit For Approval." name="submit_for_approval_custom" onclick="popup('popUpDiv')" rendered="{!if(strOverride!=null && sterlingQuote.RecordType.name=='SFA',true,false)}"/>   -->
+      </apex:form>
+
+    </apex:pageBlockButtons>
+    <apex:pageBlock title="Quote Line Items" mode="maindetail"> 
+         <apex:form >
+            <apex:pageBlockSection >
+                <apex:outputField value="{!objSQi.Name}" ></apex:outputField>
+                <apex:outputText value="{!objSQi.OverallStatus__c}" style="color:{!statusColour};font-weight:bold"/>  
+                
+                <apex:outputField value="{!objSQi.SterlingQuote__c}" /> 
+                <!-- MMG 8/5/2014 Added Final Approval Date to screen -->   
+                <apex:outputText value="{!objSQi.Final_Approval_Date__c}"/>  
+                <apex:outputField value="{!objSQi.Quantity__c}" />
+                <!-- MMG 10/5/2014 Added CurrentStatus to screen -->   
+                 <apex:outputField value="{!objSQi.CurrentStatus__c}"/>  
+                <apex:outputField value="{!objSQi.Products__c}" />
+                <!-- MMG 10/5/2014 Added PriorStatus to screen -->   
+                 <apex:outputField value="{!objSQi.PriorStatus__c}" />   
+                <apex:outputField value="{!objSQi.ST_SKU__c}" />
+                <apex:outputField value="{!objSQi.StandardMRC__c}" />
+                <apex:outputField value="{!objSQi.AdjustedMRC__c}" />
+                <apex:outputField value="{!objSQi.TotalPrice__c}" />
+                <apex:outputField value="{!objSQi.StandardNRC__c}" />
+                <apex:outputField value="{!objSQi.AdjustedNRC__c}"/>
+                <apex:outputField value="{!objSQi.CPE_Gross_Margin__c}" rendered="{!if(sterlingQuote.RecordType.name=='SFA' ,true,false)}"/>
+                <apex:outputField value="{!objSQi.CPE_NRC_Price__c}" rendered="{!if(sterlingQuote.RecordType.name=='SFA' ,true,false)}"/>
+                <apex:outputField value="{!objSQi.ApprovalRegion__c}" />
+                <apex:outputField value="{!objSQi.Schedule__c}" />
+                <apex:outputField value="{!objSQi.ApprovalTerritory__c}" />
+                <apex:outputField value="{!objSQi.SalesEngineer__c}" />
+                <apex:outputField value="{!objSQi.ApprovalPriority__c}"/>
+                <apex:outputField value="{!objSQi.Requested_Due_Date1__c}"/>
+                                
+                <!--
+                <apex:outputText value="{0,date,dd MMM,yyyy}" > <apex:param value="{!objSQi.RequestedDueDateNew__c}" /></apex:outputText>
+                  {0,date,dd MMM,yyyy} </apex:outputLabel> -->
+                <apex:outputField value="{!objSQi.ApprovalRouting__c}" />
+                <apex:outputField value="{!objSQi.DiscountType__c}" />
+                <apex:outputField value="{!objSQi.Status_Date__c}" />
+                <apex:outputField value="{!objSQi.CircuitPriceQuoteId__c}" />
+                <apex:outputField value="{!objSQi.Jeopardy__c}" />
+                <apex:outputField value="{!objSQi.TermLength__c}" />
+                <apex:outputField value="{!objSQi.FloorPrice__c}" />
+                
+                <apex:outputField value="{!objSQi.DiscountAmount__c}" rendered="{!if((objSQi.DiscountType__c=='RSM')||(objSQi.DiscountType__c=='SVP'),true,false)}" />
+                <apex:outputField value="{!objSQi.SIFT_InquiryId__c}" />
+                <apex:outputField value="{!objSQi.SIFT_Required__c}" />
+                <apex:outputField value="{!objSQi.IsPromoProduct__c}" />
+                <apex:outputfield value="{!objSQi.promoExpDate__c}" label="Promotion Expiration Date"/>
+                <apex:outputfield value="{!objSQI.ProductInterval__c}" label="Standard Due Date Interval"/>
+                <apex:outputField value="{!objSQi.IsInFrontierFootprint__c}" />
+                <apex:outputField value="{!objSQi.ICB_Comments__c}" />
+                <apex:outputField value="{!objSQi.Renewal_MRR_Original__c}" />
+                <apex:outputField value="{!objSQi.DSAT_AddressID__c}" />
+                <apex:outputField value="{!objSQi.SIFT_Number__c}" />
+                <apex:outputField value="{!objSQi.ICB_Request__c}" />
+                <apex:outputField value="{!objSQi.AddressDescription__c}" />
+                <apex:outputField value="{!objSQi.Link_to_Opportunity__c}" />
+                
+           
+                
+            </apex:pageBlockSection>
+        </apex:form>
+        <apex:pageBlockSection title="Address Information">
+                <apex:outputField value="{!objSQi.Service_Address__c}" />
+                <apex:outputField value="{!objSQi.Postal_Address__c}" />
+                <apex:outputField value="{!objSQi.Service_Area__c}" />
+                <apex:outputField value="{!objSQi.Postal_Area__c}" />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Record Metadata">
+            <apex:outputField value="{!objSQi.createdDate}" />
+            <apex:outputField value="{!objSQi.LastModifiedDate}" />
+        </apex:pageBlockSection>
+   </apex:pageBlock>  
+   </apex:pageBlock>  
+    <apex:form >
+        <apex:outputPanel id="tstpopup">
+        <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+               <apex:pageBlock title="Individual Case Basis Request" id="popupblock"  mode="maindetail">
+                    <apex:pageblockSection columns="1" id="popupblocksection" >
+                                <apex:selectList value="{!objSQi.ApprovalPriority__c}" multiselect="false" size="1">
+                                    <apex:selectOption itemValue="Normal" itemLabel="Normal"/>
+                                    <apex:selectOption itemValue="Urgent" itemLabel="Urgent"/>
+                                </apex:selectList> 
+                                <apex:inputField id="territoryPL" value="{!objSQi.ApprovalTerritory__c}"  required="true"/> 
+                                <apex:inputField value="{!objSQi.ApprovalRegion__c}" required="true" id="popupregion"/> 
+                                <apex:inputField value="{!objSQi.ApprovalRouting__c}"  required="true"  />
+                                <apex:inputField value="{!objSQi.ICB_Comments__c}" style="width:290px; height:20px" />
+                                
+                   </apex:pageBlockSection> 
+                </apex:pageBlock><br/><br/><br/>
+                <apex:commandButton value="Submit" action="{!closePopup}" rerender="tstpopup"/>
+                <apex:commandButton value="Cancel" immediate="true" action="{!cancelPopup}" rerender="tstpopup"/>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:form>
+    
+<!-- code for shift popup  -->
+
+ <apex:form >
+        <apex:outputPanel id="tstpopup1">
+        <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPop}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPop}">
+               <apex:pageBlock id="popupblock"  mode="maindetail">
+                    <apex:pageblockSection columns="2" id="popupblocksection"  collapsible="false">
+                    <apex:outputLabel value="SIFT InquiryID :" style="font-size:14px;font-weight:bold;"></apex:outputLabel>
+                    <apex:outputPanel >
+                      <div class="requiredInput">
+                    <div class="requiredBlock"></div>
+                          <apex:inputtext value="{!strPopMsg}" required="true" />
+                    </div>              
+                  </apex:outputPanel> 
+                   </apex:pageBlockSection>             </apex:pageBlock>  
+
+                <apex:commandButton value="Submit" action="{!Submitsift}" rerender="tstpopup1" />
+                <apex:commandButton value="Cancel" immediate="true" action="{!cancelPopup}" rerender="tstpopup1"/>
+                <font color="red">  **Please Enter the InquiryID to continue the process.... </font>
+
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:form>    
+    <style type="text/css">
+        .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+    </style>
+    
+    <apex:form >
+  <!-- <apex:outputText value="{!isNotPendingQuote}"></apex:outputText> -->
+  <apex:pageBlock title="Notes & Attachments">
+ 
+         <apex:pageBlockButtons location="top">
+                <apex:commandButton value="New Note" action="{!redirectToNewNote}"/>
+                <apex:commandButton value="Attach File" action="{!redirectToNewAttachment}"/>
+         </apex:pageBlockButtons>
+                <apex:pageBlockTable value="{!attachments}" var="att" rendered="{!IF(attachments.size==0,true,false)}">
+              <apex:column headerValue="No records to display"/>
+         </apex:pageBlockTable>
+        <apex:pageBlockTable styleClass="attachment-table" value="{!attachments}" var="att" rendered="{!AND(NOT(ISNULL(attachments)),attachments.size>0)}">
+            <apex:column headerValue="Action" headerClass="headerRow"><apex:outputLink target="_top" styleClass="actionLink" value="{!att.urlRedirection}">Edit</apex:outputLink><span>&nbsp;|&nbsp;</span>
+            <apex:outputLink styleClass="actionLink" value="{!att.urlRedirection}">View</apex:outputLink><span>&nbsp;|&nbsp;</span>
+            <apex:outputLink styleClass="actionLink" value="/{!att.Id}">Del</apex:outputLink></apex:column>
+            <apex:column headerValue="Type" headerClass="headerRow"><apex:outputText value="{!att.typeOf}" /></apex:column>
+            <apex:column headerValue="Title" headerClass="headerRow"><apex:outputLink target="_top" value="{!att.urlRedirection}">{!att.Name}</apex:outputLink></apex:column>
+            <apex:column headerValue="Last Modified" headerClass="headerRow"><apex:outputText value="{!att.LastModifiedDate}" /></apex:column>
+            <apex:column headerValue="Created By" headerClass="headerRow"><apex:outputLink target="_top" value="/{!att.CreatedById}">{!att.createByName}</apex:outputLink></apex:column>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+      </apex:form> 
+         
+       <apex:relatedList list="zaddresss__r"  title="ZAddress" />
+       <apex:relatedList list="ProcessSteps"   title="Process Steps" />
+  <!--      <apex:relatedList list="promotionss__r"  title="Promotion" /> -->
+   <!--    <apex:relatedList list="OpenActivities" rendered="{!if(strOverride!=null,true,false)}" /> -->
+   
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Sales_Ops_Case</fullName>
+    <availability>online</availability>
+    <description>Create a Sales Ops case</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Sales Ops Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/lightning/o/Case/new?recordTypeId=0120h000000CFevAAG&amp;
+defaultFieldValues=
+AccountId={!Account.Id }</url>
+</WebLink>

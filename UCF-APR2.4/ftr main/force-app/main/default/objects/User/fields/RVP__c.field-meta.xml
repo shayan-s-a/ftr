@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RVP__c</fullName>
+    <description>09/2020 - To change go to Setup &lt; Custom Labels &lt; Select the RVP filter and all the RVP descriptors with the Role ID&apos;s will be listed.  Modify the correct Label and Role ID&apos;s.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ISBLANK(UserRole.Id),&quot;None&quot;,
+IF(
+CONTAINS($Label.RVP_West, UserRole.Id),&quot;RVP West&quot;,
+IF(
+CONTAINS($Label.RVP_East, UserRole.Id),&quot;RVP East&quot;,
+IF(
+CONTAINS($Label.RVP_Central, UserRole.Id),&quot;RVP Central&quot;,
+IF(
+BEGINS(UserRole.Name ,&quot;Federal&quot;),&quot;RVP Federal&quot;,
+IF(
+CONTAINS($Label.RVP_Alt_Channel, UserRole.Id),&quot;RVP Alt Channel&quot;,
+IF(
+CONTAINS($Label.RVP_National, UserRole.Id),&quot;RVP National&quot;,
+IF(
+CONTAINS($Label.RVP_Retention, UserRole.Id),&quot;RVP Retention&quot;,
+IF(
+CONTAINS(UserRole.DeveloperName,&quot;_ECS&quot;),&quot;RVP Customer Care&quot;,
+IF(
+CONTAINS(UserRole.DeveloperName,&quot;Sales_Support&quot;),&quot;RVP Customer Care&quot;,
+IF(
+CONTAINS(UserRole.DeveloperName,&quot;Customer_Service&quot;),&quot;RVP Customer Care&quot;,
+IF(
+CONTAINS(UserRole.DeveloperName,&quot;ABIS&quot;),&quot;RVP Customer Care&quot;,
+IF(
+CONTAINS(UserRole.DeveloperName,&quot;MM_CS&quot;),&quot;RVP Customer Care&quot;,
+IF(
+CONTAINS(UserRole.DeveloperName,&quot;_Billing_Supervisor&quot;),&quot;RVP Customer Care&quot;,
+IF(
+CONTAINS(&quot;00E0h0000017ZjmEAE:00E0h000001Xf9PEAS:00E0h0000017ZjrEAE:00E8a000001cfkDEAQ&quot;,UserRole.Id),&quot;RVP Customer Care&quot;,
+IF(
+CONTAINS(UserRole.DeveloperName,&quot;Collections&quot;),&quot;RVP Collections&quot;,
+IF(
+CONTAINS($Label.RVP_CPE, UserRole.Id),&quot;RVP CPE&quot;,
+IF(
+BEGINS( UserRole.Name ,&quot;Carrier&quot;),&quot;RVP Wholesale&quot;,
+IF(
+BEGINS( UserRole.Name ,&quot;Wholesale&quot;),&quot;RVP Wholesale&quot;,
+IF(
+BEGINS(UserRole.Name ,&quot;BAM&quot;),&quot;RVP BAM&quot;,&quot;None&quot;))))))))))))))))))))</formula>
+    <label>RVP</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

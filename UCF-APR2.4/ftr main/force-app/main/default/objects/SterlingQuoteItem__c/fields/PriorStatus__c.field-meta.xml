@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PriorStatus__c</fullName>
+    <externalId>false</externalId>
+    <label>PriorStatus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approved - Business Decision Support</fullName>
+                <default>false</default>
+                <label>Approved - Business Decision Support</label>
+            </value>
+            <value>
+                <fullName>Approved - Credit</fullName>
+                <default>false</default>
+                <label>Approved - Credit</label>
+            </value>
+            <value>
+                <fullName>Approved - Engineering Wireless</fullName>
+                <default>false</default>
+                <label>Approved - Engineering Wireless</label>
+            </value>
+            <value>
+                <fullName>Approved - Engineering Wireless Final</fullName>
+                <default>false</default>
+                <label>Approved - Engineering Wireless Final</label>
+            </value>
+            <value>
+                <fullName>Approved - Finance</fullName>
+                <default>false</default>
+                <label>Approved - Finance</label>
+            </value>
+            <value>
+                <fullName>Approved - INA</fullName>
+                <default>false</default>
+                <label>Approved - INA</label>
+            </value>
+            <value>
+                <fullName>Approved - INA Renewals</fullName>
+                <default>false</default>
+                <label>Approved - INA Renewals</label>
+            </value>
+            <value>
+                <fullName>Approved - Post Completion Audit Finance</fullName>
+                <default>false</default>
+                <label>Approved - Post Completion Audit Finance</label>
+            </value>
+            <value>
+                <fullName>Approved - Post Completion Audit Originator</fullName>
+                <default>false</default>
+                <label>Approved - Post Completion Audit Originator</label>
+            </value>
+            <value>
+                <fullName>Approved - Post Engineering Originator</fullName>
+                <default>false</default>
+                <label>Approved - Post Engineering Originator</label>
+            </value>
+            <value>
+                <fullName>Approved - Post Engineering Originator Wireless</fullName>
+                <default>false</default>
+                <label>Approved - Post Engineering Originator Wireless</label>
+            </value>
+            <value>
+                <fullName>Approved - Sales Engineering</fullName>
+                <default>false</default>
+                <label>Approved - Sales Engineering</label>
+            </value>
+            <value>
+                <fullName>Approved - Site Verification</fullName>
+                <default>false</default>
+                <label>Approved - Site Verification</label>
+            </value>
+            <value>
+                <fullName>Approved - State VP</fullName>
+                <default>false</default>
+                <label>Approved - State VP</label>
+            </value>
+            <value>
+                <fullName>Approved - Regional President</fullName>
+                <default>false</default>
+                <label>Approved - Regional President</label>
+            </value>
+            <value>
+                <fullName>Approved - Wireless Management</fullName>
+                <default>false</default>
+                <label>Approved - Wireless Management</label>
+            </value>
+            <value>
+                <fullName>Approved - Wireless Management Manager</fullName>
+                <default>false</default>
+                <label>Approved - Wireless Management Manager</label>
+            </value>
+            <value>
+                <fullName>Assigned - Sales Engineer</fullName>
+                <default>false</default>
+                <label>Assigned - Sales Engineer</label>
+            </value>
+            <value>
+                <fullName>Approved - Engineering</fullName>
+                <default>false</default>
+                <label>Approved - Engineering</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

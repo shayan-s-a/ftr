@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Replacement__c</fullName>
+    <description>Reasons for why their is a need for a replacement</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select an option other than &quot;None&quot;</inlineHelpText>
+    <label>Hire Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Hire</fullName>
+                <default>false</default>
+                <label>New Hire</label>
+            </value>
+            <value>
+                <fullName>Over Hire</fullName>
+                <default>false</default>
+                <label>Over Hire</label>
+            </value>
+            <value>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+                <label>Replacement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

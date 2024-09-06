@@ -1,0 +1,30 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:hasRecordId" controller = "ServiceOrderStage_Ctrl" >
+      
+    <aura:handler name="init" value="{!this}" action="{!c.updateStatus}"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="showError" type="Boolean" default="false"/>
+    
+    <aura:attribute name="ErrorType" type="String" />
+    <aura:attribute name="ErrorMessage" type="String" />
+
+    <aura:if isTrue="{!v.showSpinner}">
+    	<lightning:spinner alternativeText="Loading" size="medium" />
+       
+    </aura:if>
+    <aura:if isTrue="{!v.showError}">
+        <lightning:card title="{!v.ErrorType}">
+            <p class="slds-p-horizontal_small" style="color:red">
+                {!v.ErrorMessage}
+            </p>
+        </lightning:card>
+        
+    	<img src="{!$Resource.StandardErrorImage}"/>
+       
+    </aura:if>
+    <force:recordData aura:id="recordHandler"
+          recordId="{!v.recordId}"
+          fields="Name"
+          recordUpdated="{!c.handleRecordUpdated}"
+     />
+    
+</aura:component>

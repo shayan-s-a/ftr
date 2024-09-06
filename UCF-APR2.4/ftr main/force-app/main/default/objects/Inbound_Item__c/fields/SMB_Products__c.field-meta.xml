@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMB_Products__c</fullName>
+    <externalId>false</externalId>
+    <label>SMB Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Voice Product - Ring Central</fullName>
+                <default>false</default>
+                <label>Voice Product - Ring Central</label>
+            </value>
+            <value>
+                <fullName>Voice Product - Business Voice</fullName>
+                <default>false</default>
+                <label>Voice Product - Business Voice</label>
+            </value>
+            <value>
+                <fullName>Voice Product - SmartVoice</fullName>
+                <default>false</default>
+                <label>Voice Product - SmartVoice</label>
+            </value>
+            <value>
+                <fullName>Voice Product - OneVoice</fullName>
+                <default>false</default>
+                <label>Voice Product - OneVoice</label>
+            </value>
+            <value>
+                <fullName>Premium Tech Pro</fullName>
+                <default>false</default>
+                <label>Premium Tech Pro</label>
+            </value>
+            <value>
+                <fullName>Secure Pro</fullName>
+                <default>false</default>
+                <label>Secure Pro</label>
+            </value>
+            <value>
+                <fullName>Wireless Internet Backup</fullName>
+                <default>false</default>
+                <label>Wireless Internet Backup</label>
+            </value>
+            <value>
+                <fullName>Fiber 500mb</fullName>
+                <default>false</default>
+                <label>Fiber 500mb</label>
+            </value>
+            <value>
+                <fullName>Fiber 700mmb</fullName>
+                <default>false</default>
+                <label>Fiber 700mmb</label>
+            </value>
+            <value>
+                <fullName>Fiber 1gb</fullName>
+                <default>false</default>
+                <label>Fiber 1gb</label>
+            </value>
+            <value>
+                <fullName>Fiber 2gb</fullName>
+                <default>false</default>
+                <label>Fiber 2gb</label>
+            </value>
+            <value>
+                <fullName>HSI 3m</fullName>
+                <default>false</default>
+                <label>HSI 3m</label>
+            </value>
+            <value>
+                <fullName>HSI 12m</fullName>
+                <default>false</default>
+                <label>HSI 12m</label>
+            </value>
+            <value>
+                <fullName>HSI 45m</fullName>
+                <default>false</default>
+                <label>HSI 45m</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

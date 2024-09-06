@@ -1,0 +1,16 @@
+[
+    {
+        "%vlocity_namespace%__Description__c": "Holds One Time Charge Before Adjustments",
+        "%vlocity_namespace%__DestinationFieldApiName__c": "BaseOneTimeCharge__c",
+        "%vlocity_namespace%__DestinationSObjectType__c": "QuoteLineItem",
+        "%vlocity_namespace%__PricingVariableId__c": {
+            "%vlocity_namespace%__Code__c": "CUSTOM_BASE_ONE_TIME_CHRG",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__PricingVariable__c/CUSTOM_BASE_ONE_TIME_CHRG",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__PricingVariable__c"
+        },
+        "Name": "Base One Time Charge - QuoteLineItem",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__PricingVariableBinding__c"
+    }
+]

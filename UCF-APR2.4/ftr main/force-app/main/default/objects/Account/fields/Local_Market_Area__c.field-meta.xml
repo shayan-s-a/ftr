@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Local_Market_Area__c</fullName>
+    <externalId>false</externalId>
+    <label>Local Market Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CA - LA</fullName>
+                <default>false</default>
+                <label>CA - LA</label>
+            </value>
+            <value>
+                <fullName>CA - Palm Springs</fullName>
+                <default>false</default>
+                <label>CA - Palm Springs</label>
+            </value>
+            <value>
+                <fullName>CT - Fairfield County</fullName>
+                <default>false</default>
+                <label>CT - Fairfield County</label>
+            </value>
+            <value>
+                <fullName>CT - Hartford County</fullName>
+                <default>false</default>
+                <label>CT - Hartford County</label>
+            </value>
+            <value>
+                <fullName>CT - Litchfield County (Northern)</fullName>
+                <default>false</default>
+                <label>CT - Litchfield County (Northern)</label>
+            </value>
+            <value>
+                <fullName>CT - Litchfield County (Southern)</fullName>
+                <default>false</default>
+                <label>CT - Litchfield County (Southern)</label>
+            </value>
+            <value>
+                <fullName>CT - Middlesex County</fullName>
+                <default>false</default>
+                <label>CT - Middlesex County</label>
+            </value>
+            <value>
+                <fullName>CT - New Haven County</fullName>
+                <default>false</default>
+                <label>CT - New Haven County</label>
+            </value>
+            <value>
+                <fullName>FL - Polk</fullName>
+                <default>false</default>
+                <label>FL - Polk</label>
+            </value>
+            <value>
+                <fullName>FL - Sarasota</fullName>
+                <default>false</default>
+                <label>FL - Sarasota</label>
+            </value>
+            <value>
+                <fullName>FL - Temple Terrace</fullName>
+                <default>false</default>
+                <label>FL - Temple Terrace</label>
+            </value>
+            <value>
+                <fullName>IN</fullName>
+                <default>false</default>
+                <label>IN</label>
+            </value>
+            <value>
+                <fullName>NC</fullName>
+                <default>false</default>
+                <label>NC</label>
+            </value>
+            <value>
+                <fullName>TX</fullName>
+                <default>false</default>
+                <label>TX</label>
+            </value>
+            <value>
+                <fullName>CA</fullName>
+                <default>false</default>
+                <label>CA</label>
+            </value>
+            <value>
+                <fullName>FL</fullName>
+                <default>false</default>
+                <label>FL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMB_OTM_Lead_Sub_Disposition__c</fullName>
+    <description>SMB D2D Lead-Sub Disposition picklist values</description>
+    <externalId>false</externalId>
+    <label>SMB OTM Lead-Sub Disposition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disqualified - Do Not Call</fullName>
+                <default>false</default>
+                <label>Disqualified - Do Not Call</label>
+            </value>
+            <value>
+                <fullName>No Contact - Follow Up</fullName>
+                <default>false</default>
+                <label>No Contact - Follow Up</label>
+            </value>
+            <value>
+                <fullName>Untouched</fullName>
+                <default>false</default>
+                <label>Untouched</label>
+            </value>
+            <value>
+                <fullName>DM Unavailable - Follow Up</fullName>
+                <default>false</default>
+                <label>DM Unavailable - Follow Up</label>
+            </value>
+            <value>
+                <fullName>DM Reached - Appointment Set</fullName>
+                <default>false</default>
+                <label>DM Reached - Appointment Set</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Sale</fullName>
+                <default>false</default>
+                <label>Sale</label>
+            </value>
+            <value>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+                <label>Current Customer</label>
+            </value>
+            <value>
+                <fullName>Disconnected Line</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Disconnected Line</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

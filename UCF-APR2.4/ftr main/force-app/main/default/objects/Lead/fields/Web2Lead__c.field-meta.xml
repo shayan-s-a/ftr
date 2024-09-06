@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Web2Lead__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Make this true on all web 2 lead forms that need to go through the routing rules.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Add to Web-to-Lead Form:
+
+&lt;input type=hidden id=&quot;00NE000000603bp&quot; name=&quot;00NE000000603bp&quot; type=&quot;checkbox&quot; value=&quot;1&quot; /&gt;&lt;br&gt;</inlineHelpText>
+    <label>Use Lead Routing?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

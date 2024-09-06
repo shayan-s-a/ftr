@@ -1,0 +1,259 @@
+<apex:page standardController="OpportunityLineItem" extensions="Addproductcontroller" id="pgProductOverride">
+    <style type="text/css">
+        .custPopup{
+            background-color: white;
+            z-index: 9999;
+            left: 50%;                             
+            padding:10px;      
+            position: fixed;
+            display:inline-block;
+            /* These are the 3 css properties you will need to change so the popup
+            displays in the center of the screen. First set the width. Then set
+            margin-left to negative half of what the width is. You can add
+            the height property for a fixed size pop up if you want.*/
+            width: 50%;
+            margin-left: -25%;
+            top:35%;
+            -webkit-border-radius:3px; 
+            -moz-border-radius:3px;
+            
+        }       
+        .popupBackground{
+            background-color:black;
+            opacity: 0.70;
+            filter: alpha(opacity = 70);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+        #datePicker {
+            z-index: 10000;
+        }
+    </style>                                                                          
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //page:inputForm:popupblock:popupblocksection:popupexpirationdate
+        $j = jQuery.noConflict();
+        $j(document).ready(function(){
+            var elem = document.getElementById("{!$Component.inputForm.popupblock.popupblocksection.popupexpirationdate}");
+            $j(elem).next().hide();
+        });  
+           
+        function fixEnterIssue(){
+         $j(document.getElementById('{!$Component.inputForm.pbProductOverride.txtSearchProduct}')).keypress(function(event){
+          var keycode = event.keyCode ? event.keyCode : event.which;
+          if(keycode == '13'){
+           document.getElementById('{!$Component.inputForm.pbProductOverride.cmdSearch}').click();
+           return false;
+          }
+          else{
+           return true;
+          }
+         });
+        }
+         
+    </script>
+     <apex:sectionHeader title="Opportunity" subtitle="Products"/>
+     <apex:form id="inputForm">
+         <apex:pageblock id="pbProductOverride" title="Filter Criteria">
+             <!--<apex:outputText value="Please enter the NPA/NXX"/><br/>-->
+             <apex:outputText value="Please enter the Search Product"/><br/>
+             <apex:inputText id="txtSearchProduct" value="{!strSearchProduct}"/>
+             <apex:outputText value="            "/>
+             <!--<apex:commandButton value="Search NPA/NXX" action="{!fetchOnlySearchProducts}"/><br/>-->
+             <apex:commandButton id="cmdSearch" value="Search" action="{!fetchOnlySearchProducts}" rerender="msgs,pbProduct" status="prdSearchStatus"/>
+             <span style="padding-left:4px;color:red;">
+             <apex:actionStatus id="prdSearchStatus" startText="Searching..." stopText=""/>
+             </span>
+             
+         </apex:pageblock>
+         
+         <apex:PageMessages id="msgs"/>
+         <!-- to display all and all products  -->
+         <apex:pageblock id="pbProduct" title="Products" rendered="{!IF(bolShowRecords=false,true,false)}">
+             <apex:pageblockButtons >
+                 <apex:commandButton value="Select" action="{!getOnlySelectedProducts}"/>
+                 <apex:commandButton value="Cancel" action="{!cancelProducts}"/>
+             </apex:pageblockButtons>
+             <apex:pageblockTable value="{!Products}" var="allProducts">
+                  <apex:column >
+                    <apex:inputCheckbox value="{!allProducts.bolIsSelected}"/>
+                 </apex:column>
+                 <apex:column value="{!allProducts.strProductName}" headerValue="Product Name"/>
+                 <apex:column value="{!allProducts.RecordTypeName}" headerValue="Record Type"/>
+                 <apex:column value="{!allProducts.strProductCategory}" headerValue="Product Catlog"/>
+           <!--       <apex:column value="{!allProducts.strProductCode}" headerValue="Product Code"/>
+                     <apex:column value="{!allProducts.strIsActive}" headerValue="IsActive"/> -->
+                 <apex:column value="{!allProducts.strGrandfatheredProduct}" headerValue="GrandfatheredProduct "/>
+
+             </apex:pageblockTable>     
+              <apex:outputPanel layout="block" styleClass="pSearchShowMore">
+                <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(prdHasPrevious)}"/>
+                <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!prdHasPrevious}"/>
+                <apex:commandLink status="prdFetchStatus" reRender="pbProduct" action="{!prdPrevious}" title="Previous Page" value="Previous Page" rendered="{!prdHasPrevious}"/>
+                <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(prdHasPrevious)}">Previous Page</apex:outputPanel>         
+                &nbsp;({!(prdPageNumber * prdPageSize)+1-prdPageSize}-{!IF((prdPageNumber * prdPageSize)>prdNoOfRecords, prdNoOfRecords,(prdPageNumber * prdPageSize))} of {!prdNoOfRecords})&nbsp;
+                <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(prdHasNext)}">Next Page</apex:outputPanel>         
+                <apex:commandLink status="prdFetchStatus" reRender="pbProduct" title="Next Page" value="Next Page" rendered="{!prdHasNext}" action="{!prdNext}"/>&nbsp;
+                <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!prdHasNext}"/>
+                <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(prdHasNext)}"/>          
+            </apex:outputPanel>
+             <apex:outputPanel layout="block" styleClass="pSearchShowMore" style="color:#4AA02C;font-weight:bold;">
+                   <apex:actionStatus id="prdFetchStatus" startText="Fetching..." stopText=""/>
+               </apex:outputPanel>            
+         </apex:pageblock> 
+         <!-- to display all and selected products -->
+         <apex:pageblock title="Selected Products" rendered="{!IF(bolShowRecords=false,false,true)}">
+              <apex:pageblockButtons >
+                 <apex:commandButton value="Save" action="{!saveProducts}"/>
+                  <apex:commandButton value="Cancel" action="{!cancelProducts}" immediate="true"/>
+              </apex:pageblockButtons>
+               <apex:pageblockTable value="{!lstClsSelectedProductsToDB}" var="selProducts" width="75%"  >
+                 <apex:column value="{!selProducts.strProductName}" headerValue="Product Name" />
+                     <apex:column headerValue="Quanitity" >
+                    <apex:facet name="header">
+                        <apex:OutputText value="Quantity" escape="false"/> 
+                    </apex:facet>
+                    <apex:outputPanel >
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strQuantity}" maxlength="10" size="10" /><br/>
+                        </div>
+                    </apex:outputPanel>    
+                </apex:column>     
+                <apex:column headerValue="Term" >
+                    <apex:facet name="header">
+                        <apex:OutputText value="Term(Months)" escape="false"/> 
+                    </apex:facet> 
+                    <apex:outputPanel >    
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strTerm}" maxlength="10" size="10"/>
+                        </div>
+                    </apex:outputPanel>
+                            <!--<apex:inputtext value="{!selProducts.strQuantity}"/>-->
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:OutputText value="Net New MRR" escape="false"/> 
+                    </apex:facet>                        
+                    <apex:outputPanel >
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strRenewalMRC}" maxlength="10" size="10"/> <br/>
+                        </div>
+                </apex:outputPanel>
+                </apex:column>        
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:OutputText value="Renewal MRR" escape="false"/> 
+                    </apex:facet>
+                    <apex:outputPanel >         
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strUnitPrice}" maxlength="9" size="10" />
+                        </div> 
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:OutputText value="NRC" escape="false"/> 
+                    </apex:facet>
+                    <apex:outputPanel >
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strNRC}" maxlength="10" size="10" />
+                        </div>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:OutputText value="CPE" escape="false"/> 
+                    </apex:facet>
+                    <apex:inputtext value="{!selProducts.strCPENRC}" maxlength="10" size="10"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:OutputText value="CPE Gross Margin%" escape="false"/> 
+                    </apex:facet>    
+                    <apex:inputtext value="{!selProducts.strCPEGross}" maxlength="10" size="10"/> 
+                </apex:column>
+                <apex:column headerValue="Discount Type" >
+                     <apex:inputfield value="{!selProducts.objSQI.DiscountType__c}" />
+                 </apex:column>
+
+              <!--    <apex:column headerValue="Quanitity" >
+                    <apex:facet name="header">
+                       <apex:OutputText value="Quantity <br/> Term" escape="false"/> 
+                       </apex:facet>
+                    <apex:outputPanel >
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strQuantity}" maxlength="5" size="5" /><br/>
+                        </div>
+                         <div class="requiredInput">
+                           <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strTerm}" maxlength="5" size="5"/>
+                        </div>
+                    </apex:outputPanel>
+                        <!--<apex:inputtext value="{!selProducts.strQuantity}"/>
+                 </apex:column>
+                   <apex:column >
+                    <apex:facet name="header">
+                       <apex:OutputText value="Net New MRR <br/> Renewal MRR" escape="false"/> 
+                       </apex:facet>                        
+                  <apex:outputPanel >
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strRenewalMRC}" maxlength="9" size="10"/> <br/>
+                        </div>
+                        <div class="requiredInput">
+                       <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strUnitPrice}" maxlength="9" size="10" />
+                        </div> 
+                    </apex:outputPanel>
+                 </apex:column>
+                    <apex:column >
+                   <apex:facet name="header">
+                   <apex:OutputText value="CPE NRC <br/> CPE Gross Margin%" escape="false"/> 
+                   </apex:facet>
+                    <apex:inputtext value="{!selProducts.strCPENRC}" disabled="{!selProducts.enabled}" maxlength="9" size="10"/> <br/>
+                    <apex:inputtext value="{!selProducts.strCPEGross}" disabled="{!selProducts.enabled}" maxlength="5" size="10"/> 
+                 </apex:column>                 
+                  <apex:column headerValue="NRC" >
+                   <apex:outputPanel >
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputtext value="{!selProducts.strNRC}" maxlength="9" size="10" />
+                        </div>
+                    </apex:outputPanel>
+                 </apex:column>
+                           -->
+              </apex:pageblockTable>
+
+         </apex:pageblock>
+             <apex:outputPanel id="tstpopup">
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel id="popupformpanel" styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+                <apex:pageBlock title="Quote" id="popupblock" mode="maindetail">
+                    <apex:pageblocksection id="popupblocksection">
+                        <apex:inputfield id="popupexpirationdate" value="{!objSteQuote.ExpirationDate__c}" required="true"/>
+                        <apex:inputfield label="Quote Name" value="{!objSteQuote.Name}"  required="true" />
+                    </apex:pageblocksection>
+                </apex:pageBlock>
+            <apex:outputpanel >
+                    <center>
+                        <apex:commandButton value="Save" action="{!saveQuoteAndItem}" rerender="tstpopup"/>
+                        <apex:commandButton value="Close" action="{!closePopup}" immediate="true" rerender="tstpopup"/>
+                    </center>
+            </apex:outputpanel>    
+            </apex:outputPanel>
+        </apex:outputPanel>
+     </apex:form>
+     <script>       
+      fixEnterIssue();
+     </script>
+</apex:page>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Directory VCCOR</name>
+    <style>none</style>
+    <subject>Directory Update - {!Case.00NE0000005zgmF}</subject>
+    <textOnly>Case Number - {!Case.CaseNumber}
+Account BTN - {!Case.Account_BTN__c}
+Requester Email - {!Case.Rep_Email__c}
+Requester Name - {!Case.Rep_Name__c}
+Customer Name - {!Account.Company_Name__c}
+Customer Phone - {!Case.Account}
+Environment - {!Case.00NE0000005zgmF}
+Request Type - {!Case.Directory_Request_Type__c}
+Directory Affected - {!Case.Directory_Affected__c}
+Control Date - {!Case.Control_Date__c}
+Order Number - {!Case.Orderz__c}
+Correct Listing - {!Case.Correct_Listing__c}
+Comments - {!Case.Comments__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

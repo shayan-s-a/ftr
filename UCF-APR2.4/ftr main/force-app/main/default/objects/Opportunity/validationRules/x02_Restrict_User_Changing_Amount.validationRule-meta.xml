@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x02_Restrict_User_Changing_Amount</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(
+        OR(
+            AND(
+                OR(
+                    PRIORVALUE(of_legacy_Vlocity_Products__c) &gt;= 1,
+                    PRIORVALUE(of_non_legacy_Vlocity_Products__c) &gt;= 1
+                ),
+                of_legacy_Vlocity_Products__c = 0,
+                of_non_legacy_Vlocity_Products__c = 0
+            ),
+            AND(
+                OR(
+                    of_legacy_Vlocity_Products__c &gt;= 1,
+                    of_non_legacy_Vlocity_Products__c &gt;= 1
+                ),
+                PRIORVALUE(of_legacy_Vlocity_Products__c) = 0,
+                PRIORVALUE(of_non_legacy_Vlocity_Products__c) = 0
+            ),
+            AND(
+                OR(
+                    of_legacy_Vlocity_Products__c &gt;= 1,
+                    of_non_legacy_Vlocity_Products__c &gt;= 1
+                ),
+                OR(
+                    PRIORVALUE(of_legacy_Vlocity_Products__c) &gt;= 1,
+                    PRIORVALUE(of_non_legacy_Vlocity_Products__c) &gt;= 1
+                )
+            )
+        )
+    ),
+    ISCHANGED(Amount),
+    RecordType.DeveloperName = &quot;Opportunity_Lightning&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Amount</errorDisplayField>
+    <errorMessage>Total Opportunity Amount on Opportunity Lightning cannot be changed manually. 
+Opportunity Error: x02.</errorMessage>
+</ValidationRule>

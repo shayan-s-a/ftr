@@ -1,0 +1,42 @@
+<aura:component access="global" implements="lightning:availableForFlowScreens">    
+     
+     <!-- Determine which actions are available -->
+   <aura:attribute name="canPause" type="Boolean" default="false"/>
+   <aura:attribute name="pauseButtonLabel" type="String" default="Pause"/>
+   <aura:attribute name="canBack" type="Boolean" default="false"/>
+   <aura:attribute name="previousButtonLabel" type="String" default = "Previous"/> 
+   <aura:attribute name="canNext" type="Boolean" default="true"/>
+   <aura:attribute name="nextButtonLabel" type="String" default="Next"/>
+   <aura:attribute name="canCancel" type="Boolean" default="true"/>
+   <aura:attribute name="cancelButtonLabel" type="String" default = "Cancel"/>
+   <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+	
+        <div aura:id="actionButtonBar" class="slds-clearfix slds-p-top_medium">
+      <!-- If Previous is available, display to the left -->
+      <div class="slds-float_left">
+         <aura:if isTrue="{!v.canBack}">
+            <lightning:button aura:id="BACK" label="{!v.previousButtonLabel}"
+               variant="neutral" onclick="{!c.onButtonPressed}" />
+         </aura:if>
+      </div>
+      <div class="slds-float_right">
+         <!-- If Pause, Next, or Finish are available, display to the right -->
+         <aura:if isTrue="{!v.canPause}">
+            <lightning:button aura:id="PAUSE" label="{!v.pauseButtonLabel}"
+               variant="neutral" onclick="{!c.onButtonPressed}" />
+         </aura:if>
+          <aura:if isTrue="{!v.canCancel}">
+            <lightning:button aura:id="CANCEL" label="{!v.cancelButtonLabel}"
+               variant="neutral" onclick="{!c.onButtonPressed}" />
+         </aura:if>
+         <aura:if isTrue="{!v.canNext}">
+            <lightning:button aura:id="NEXT" label="{!v.nextButtonLabel}" 
+               variant="brand" onclick="{!c.onButtonPressed}" />
+         </aura:if>
+         
+      </div>
+   </div>
+         
+
+</aura:component>

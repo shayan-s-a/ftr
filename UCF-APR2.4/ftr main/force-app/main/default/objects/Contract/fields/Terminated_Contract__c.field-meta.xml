@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terminated_Contract__c</fullName>
+    <externalId>false</externalId>
+    <label>Terminated Contract</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Terminated Contract by Frontier</fullName>
+                <default>false</default>
+                <label>Terminated Contract by Frontier</label>
+            </value>
+            <value>
+                <fullName>Terminated Contract by Property</fullName>
+                <default>false</default>
+                <label>Terminated Contract by Property</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_number_10_Digits</fullName>
+    <active>true</active>
+    <description>Phone number must be 10 digits</description>
+    <errorConditionFormula>OR(
+(NOT(REGEX(CAP_Customer_BTN__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; CAP_Customer_BTN__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Account_BTN__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Account_BTN__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Account_BTN_From__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Account_BTN_From__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Account_BTN_To__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Account_BTN_To__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Customer_Requester_Phone__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Customer_Requester_Phone__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Transfer_From_Phone__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Transfer_From_Phone__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Transfer_To_Phone__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Transfer_To_Phone__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Fictitious_Number__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Fictitious_Number__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Toll_Free__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Toll_Free__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(OLD_Terminating__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; OLD_Terminating__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(NEW_Terminating__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; NEW_Terminating__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Current_Tax_Exempt_BTN__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Current_Tax_Exempt_BTN__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(OPX_Telephone__c, &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; OPX_Telephone__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX( Telephone_Number__c , &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp;  Telephone_Number__c  &lt;&gt; &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Phone numbers must be 10 digits with no special characters.</errorMessage>
+</ValidationRule>

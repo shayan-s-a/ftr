@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Date_Validation</fullName>
+    <active>false</active>
+    <description>Checks follow up date for: Today &lt; Followup Date &lt;= 30 days
+
+only fires if the field is not null, or if it is changed after the initial save.</description>
+    <errorConditionFormula>OR(
+AND(
+NOT(ISPICKVAL(Origin,&quot;Automatically Created&quot;)),
+ISNEW(),
+NOT(RecordType.DeveloperName = &apos;Manual_Invoice&apos;),
+OR(
+Follow_Up_Date__c &gt; today()+30,
+Follow_Up_Date__c &lt;= today()
+)
+),
+
+AND(
+NOT(ISPICKVAL(Origin,&quot;Automatically Created&quot;)),
+ISChanged(Follow_Up_Date__c),
+NOT(RecordType.DeveloperName = &apos;Manual_Invoice&apos;),
+OR(
+Follow_Up_Date__c &gt; today()+30,
+Follow_Up_Date__c &lt;= today()
+)
+),
+
+AND(
+NOT(ISPICKVAL(Origin,&quot;Automatically Created&quot;)),
+ISNEW(),
+RecordType.DeveloperName = &apos;Manual_Invoice&apos;,
+OR(
+Follow_Up_Date__c &gt; today()+60,
+Follow_Up_Date__c &lt;= today()
+)
+),
+
+AND(
+NOT(ISPICKVAL(Origin,&quot;Automatically Created&quot;)),
+ISChanged(Follow_Up_Date__c),
+RecordType.DeveloperName = &apos;Manual_Invoice&apos;,
+OR(
+Follow_Up_Date__c &gt; today()+60,
+Follow_Up_Date__c &lt;= today()
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Follow_Up_Date__c</errorDisplayField>
+    <errorMessage>Follow up date cannot be set as today, a past date. or beyond 30 days in the future. There are a few exceptions that will allow a 60 day follow up date.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Support SLED</name>
+    <queueMembers>
+        <users>
+            <user>brittany.campbell@ftr.com</user>
+            <user>charita.williams@ftr.com</user>
+            <user>emily.mcclam@ftr.com</user>
+            <user>shontalette.r.sullivan@ftr.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

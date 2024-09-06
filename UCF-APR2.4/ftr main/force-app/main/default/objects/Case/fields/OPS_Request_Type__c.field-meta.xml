@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPS_Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing Review</fullName>
+                <default>false</default>
+                <label>Billing Review</label>
+            </value>
+            <value>
+                <fullName>CSR Processing</fullName>
+                <default>false</default>
+                <label>CSR Processing</label>
+            </value>
+            <value>
+                <fullName>Establish Master Summary Billing</fullName>
+                <default>false</default>
+                <label>Establish Master Summary Billing</label>
+            </value>
+            <value>
+                <fullName>Remove DISH Billing</fullName>
+                <default>false</default>
+                <label>Remove DISH Billing</label>
+            </value>
+            <value>
+                <fullName>Request for Buried Drop/Cable Pickup</fullName>
+                <default>false</default>
+                <label>Request for Buried Drop/Cable Pickup</label>
+            </value>
+            <value>
+                <fullName>Temporary Service Request</fullName>
+                <default>false</default>
+                <label>Temporary Service Request</label>
+            </value>
+            <value>
+                <fullName>Vendor Request Form</fullName>
+                <default>false</default>
+                <label>Vendor Request Form</label>
+            </value>
+            <value>
+                <fullName>W9 Request</fullName>
+                <default>false</default>
+                <label>W9 Request</label>
+            </value>
+            <value>
+                <fullName>WAH Fax/Mail Request</fullName>
+                <default>false</default>
+                <label>WAH Fax/Mail Request</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>CPE</fullName>
+                <default>false</default>
+                <label>CPE</label>
+            </value>
+            <value>
+                <fullName>SALES VISIT</fullName>
+                <default>false</default>
+                <label>SALES VISIT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

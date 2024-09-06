@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Floor_Prices</fullName>
+    <active>true</active>
+    <description>This validation rule ensures that both the &quot;Floor Price One Time&quot; and &quot;Floor Price Recurring&quot; fields must have values entered before a record can be saved.</description>
+    <errorConditionFormula>AND(
+  OR(
+    ISBLANK(Floor_Price_One_Time__c),
+    ISBLANK(Floor_Price_Recurring__c)
+  ),
+  OR(
+    ISCHANGED(Floor_Price_One_Time__c),
+    ISCHANGED(Floor_Price_Recurring__c)
+  )
+)</errorConditionFormula>
+    <errorDisplayField>vlocity_cmt__Action__c</errorDisplayField>
+    <errorMessage>Approval requires values for both the Floor Price (One Time) and Floor Price (Recurring) fields. Please provide values for both floor prices to proceed.</errorMessage>
+</ValidationRule>

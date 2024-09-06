@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Need_By_Date</fullName>
+    <active>true</active>
+    <description>Requested date should be future date.</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;MFU Request&quot;,
+Requested_Need_By__c &lt; TODAY()+1,
+OR(
+ISNEW(),
+ISCHANGED(Requested_Need_By__c)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Requested_Need_By__c</errorDisplayField>
+    <errorMessage>Requested date should be future date</errorMessage>
+</ValidationRule>

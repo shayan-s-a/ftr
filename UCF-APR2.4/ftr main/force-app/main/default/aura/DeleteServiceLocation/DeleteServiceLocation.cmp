@@ -1,0 +1,82 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="RecordListWithDeleteController">
+    
+	<!--Used to load the data-->
+    <aura:attribute name="recordId" type="Id" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <!--Force:refreshView is an event that can be used to refresh the view.-->
+    <aura:handler event="force:refreshView" action="{!c.init}" />
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="data" type="List" default="[]"/>
+    <aura:attribute name="selectedDidLocations" type="List" default="[]"/>
+    <aura:attribute name="selectedRowsCount" type="Integer" default="0"/>
+    <aura:attribute name="showDeleteBox" type="boolean" default="false"/>
+    <aura:attribute name="ButtonShow" type="boolean" default="false"/>
+    <aura:attribute name="defaultRows" type="List" default="[]" description="reset selected rows..." />
+	<aura:attribute name="selectedRow" type="Object" default="[]"/>
+	<!--Custom Styles for Modal Header and Footer--> 
+    <aura:html tag="style">
+        .slds-p-around--medium {
+            padding: 0rem !important;
+        }   
+        .slds-modal__content{
+            overflow-y:hidden !important;
+            height:unset !important;
+            max-height:unset !important;
+        }
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+    </aura:html>
+    <!--Modal Header-->  
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h4 class="title slds-text-heading--medium">Service DID Locations</h4>
+    </div>
+    <!--End Modal Header--> 
+    
+    <!--Modal Body-->   
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative">
+        <lightning:card>
+        <div class="slds-clearfix">
+            <div class="slds-m-left_medium"> Selected DID Locations: {! v.selectedRowsCount }</div>
+         </div>
+        <div>
+            <lightning:datatable
+                                 columns="{! v.columns }"
+                                 data="{! v.data }"
+                                 keyField="id"
+                                 onrowselection="{! c.updateSelectedText}"
+                                 selectedRows="{!v.defaultRows}"
+                                 />
+        </div>
+    </lightning:card>
+    
+    </div>
+     <!--Added if to render the modal for confirmation.-->
+    <aura:if isTrue="{!v.showDeleteBox}">
+        <div role="dialog" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h1 class="slds-text-heading--medium">Confirmation to Delete Selected Records.</h1>
+                </header>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <center><b>If you click Delete records will be deleted or Cancel to stay on this page.</b></center>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button name='Cancel' label='Cancel' onclick='{!c.handleConfirmDialogCancel}'/>
+                    <lightning:button variant="brand" name='Delete' label='Delete' onclick='{!c.handleClick}'/>
+                </footer>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div> 
+    </aura:if>
+    <!--End of Modal Body--> 
+     
+    <!--Modal Footer-->
+    <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <aura:if isTrue="{!v.ButtonShow}">
+            <lightning:button variant="brand" label="Delete" title="Brand action" onclick="{!c.handleConfirmDialog }" class="slds-m-bottom_large"/>
+        </aura:if>
+        <lightning:button variant="Neutral" class="slds-button" label="Cancel" onclick="{!c.handleExit}"/>
+    </div>
+    <!--End of Modal Footer-->
+</aura:component>

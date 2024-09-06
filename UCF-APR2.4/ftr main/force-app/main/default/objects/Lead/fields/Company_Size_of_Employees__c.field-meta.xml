@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Size_of_Employees__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Company size can be determined by number of employees or by MRR.  
+Small = &lt; 20 employees and/or &lt; $400 MRR
+Medium = 20-499 employees and/or $400 - $2k MRR
+Large = 500-999 employees and/or $2k - $4k MRR
+Enterprise = 1,000+ employees and/or $4k + MRR</inlineHelpText>
+    <label>Company Size (# of Employees)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-19</fullName>
+                <default>false</default>
+                <label>1-19</label>
+            </value>
+            <value>
+                <fullName>20-49</fullName>
+                <default>false</default>
+                <label>20-49</label>
+            </value>
+            <value>
+                <fullName>50-99</fullName>
+                <default>false</default>
+                <label>50-99</label>
+            </value>
+            <value>
+                <fullName>100+</fullName>
+                <default>false</default>
+                <label>100+</label>
+            </value>
+            <value>
+                <fullName>100-499</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>100-499</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

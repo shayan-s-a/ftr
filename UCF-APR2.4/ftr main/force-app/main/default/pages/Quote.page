@@ -1,0 +1,333 @@
+<apex:page standardController="SterlingQuote__c" extensions="Quote_Extension" showHeader="true" sidebar="true" lightningStylesheets="true">
+    <script>
+        var j$ = jQuery.noConflict();
+        j$(document).ready(function(){
+        var recordtype = '{!sterlingQuote.RecordType.Name}';            
+            j$.each( j$(".pbButton .btn"), function(i,x) {                  
+            if(x.value == 'Delete' && recordtype == 'Sterling'){ j$(x).hide(); }else{ j$(x).show(); }
+            });
+            j$.each( j$(".pbButtonb .btn"), function(i,x) {
+                    if(x.value == 'Delete' && recordtype == 'Sterling'){ j$(x).hide(); }else{ j$(x).show(); }
+            });
+            j$('.relatedListIcon').hide();
+            j$('.pageTitleIcon').hide();
+            j$('[id*="img_Minor_"]').parent().parent().click();        
+        });
+            function QuoteLineNumberStyle(n){           
+                var style;
+                var ns = n.split(".");
+                console.log(ns);
+                if(ns[1] == '0'){ style="left"; }else{ style="right"; }
+                return style;
+            }
+            function ToggleMinorLines(className){
+                j$('.' + className).toggle();
+                
+                var src = document.getElementById('img_'+className).src;
+                if(src.indexOf('{!$Resource.Plus_Image}') > -1) {                    
+                    document.getElementById('img_'+className).src = '{!$Resource.Minus_Image}';
+                } else {
+                    document.getElementById('img_'+className).src = '{!$Resource.Plus_Image}';
+                }                
+            }
+            
+                        
+    </script>  
+    
+    <style type="text/css">
+        .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .custPopup1{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 25%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: 30px;
+            top:130px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+        
+        .popupBackground1{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+        
+        .createorderbuttoncss {
+            margin-left: 35% !important;
+        }
+
+    </style>
+        
+    <apex:form > 
+    <apex:pageblock mode="maindetail" >
+    <apex:pageBlockButtons >
+              <apex:commandButton value="Edit" action="{!editAction}" rendered="{!ShowEditButton}"/>                
+              <apex:commandButton value="Save" action="{!SaveCustom}"  rendered="{!if(strQuote !=null,false,true)}" />
+              <apex:commandButton value="Back" action="{!BackCustom}"/>
+              <apex:commandButton value="ProductSync" action="{!productSyncClick}" rendered="{!NOT(syncButton) && (sterlingQuote.Sync_Allowed_by_Admin__c || sterlingQuote.Is_Sync_Allowed__c)}"/> 
+              <!--Giridhar Product Unsync -->
+              <apex:commandButton value="Product UnSync" action="{!productUnSyncClick}" rendered="{!syncButton}"/>
+              <apex:commandButton value="Delete" onclick="return confirm('Are you sure?');"  action="{!deleteCustom}" /> 
+              <apex:commandButton Status="fetchStatus" value="Quote to Order" action="{!CreateOrder}" rendered="{!ShowCreateOrderButton}" rerender="fetchStatus"/>
+         <!-- <apex:commandButton status="fetchStatus" value="Create Order" action="{!CreateOrder}" rendered="{!ShowCreateOrderButton}"/> -->
+              <apex:actionStatus id="fetchStatus" startText="Creating....." stopText=""/>
+          <!--      <apex:actionStatus id="fetchStatus" startText="Creating....." stopText="" onstop="showCreateOrderPopUpDisplay();"/>
+              <apex:actionFunction name="showCreateOrderPopUpDisplay" action="{!ShowCreateOrderPopUpAction}" rerender="tstpopupCreateOrder"/> -->
+              <apex:commandButton value="Launch EON" action="{!LaunchEON}" rendered="{!ShowLaunchEONButton}"/>
+    </apex:pageBlockButtons>
+    <apex:detail relatedList="False"/>
+          
+    </apex:pageblock>
+    </apex:form>
+    <!-- Code for the Products-->
+    <apex:form rendered="{!RecordType}" >
+    <!-- <apex:pageBlock title="SFA Products" rendered="{!if(strQuote !=null,true,false)}">
+        <apex:pageblockButtons location="top">
+             <apex:commandButton value="Add SFA Product" action="{!redirectToNewSfaProduct}"/> 
+             <apex:commandButton value="Add SFA Product" action="{!showPopup}" rerender="tstpopup"/>
+        </apex:pageblockButtons> 
+        <apex:pageBlockTable styleClass="attachment-table" value="{!SterlingQuoteItems}" var="att" rendered="{!AND(NOT(ISNULL(SterlingQuoteItems)),SterlingQuoteItems.size>0)}">
+           <apex:column headerValue="Action" headerClass="headerRow" target="_top" styleClass="actionLink" ><apex:outputLink value="/{!att.Id}/e?retURL=https%3A%2F%2Fc.{!SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(LEFT($Api.Partner_Server_URL_210, FIND( '/services', $Api.Partner_Server_URL_260)), 'visual.force', 'visual.force'), 'c.', ''),'https://',''),'/','')}%2Fapex%2FQuoteLineItem%3Fid%3D{!att.Id}%26sfdc.override%3D1%26core.apexpages.devmode.url%3D1">Edit</apex:outputLink><span>&nbsp;|&nbsp;</span> 
+            <apex:outputLink target="_top" styleClass="actionLink"  value="/{!att.Id}">Del</apex:outputLink></apex:column>
+            <apex:column headerValue="SFA Product Name" headerClass="headerRow"><apex:outputLink target="_top" value="/apex/QuoteLineItem?id={!att.Id}&sfdc.override=1">{!att.Name}</apex:outputLink></apex:column>   <!-- VJ -->
+       <!--     <apex:column headerValue="Current status" headerClass="headerRow">{!att.CurrentStatus__c}</apex:column>   <!-- VJ -->
+       <!--     <apex:column headerValue="SKU" headerClass="headerRow">{!att.ST_SKU__c}</apex:column>   <!-- VJ -->
+       <!-- </apex:pageBlockTable>
+     </apex:pageBlock> -->
+     
+    <!--<apex:commandButton value="Show Pop up" action="{!showPopup}" rerender="tstpopup"/>
+        <apex:pageBlock >
+             
+        </apex:pageBlock> -->
+ 
+    <apex:outputPanel id="tstpopup"> 
+    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+    <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+                         
+    <apex:pageBlock >
+    <apex:pageBlockSection title="List of SFA Addresses" id="custinfo" columns="1" rendered="{!displayAddressGrid}">
+        <tr><apex:pageblockTable value="{!addressinfo}" var="varVal">
+        <apex:column value="{!varVal.strColumnOne}" headerValue="Address Info" headerClass="TableTitle" style="font-weight: bold;" Width="200px"/>
+        <apex:column value="{!varVal.strColumnTwo}" headerValue="" headerClass="TableTitle" Width="250px"/>            
+        </apex:pageblocktable></tr>
+    </apex:pageBlockSection>
+    </apex:pageBlock>  
+                 <center>
+                    <span>Select an address from below dropdown</span><br/><br/>
+                    <apex:selectList value="{!defaultAddress}" size="1">
+                    <apex:selectOptions value="{!dynamicOptions}" />   
+                    </apex:selectList><br/><br/>
+                    <apex:commandButton value="SUBMIT" action="{!reDirectToSFAQuote}"/>
+                    <apex:commandButton value="Cancel" action="{!closePopup}" rerender="tstpopup"/>
+                    <!--<input id="close" type="button" class="btn" value="Cancel" onclick="popupSterling('popUpDivSFAQuote', null)"/>--> 
+                </center>
+                <!--<apex:commandButton value="Hide Pop up" action="{!closePopup}" rerender="tstpopup"/>-->
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:form>
+ <!-- <apex:Form rendered="{!NOT(RecordType)}"> 
+         <apex:pageBlock title="Sterling Quote Items" rendered="{!NOT(RecordType)}">
+         <apex:pageblockButtons location="top">
+             <apex:commandButton value="New Sterling Quote Item" action="{!redirectToNewSfaProduct}"/>
+         </apex:pageblockButtons>
+          <apex:pageBlockTable styleClass="attachment-table" value="{!SterlingQuoteItems}" var="att" rendered="{!AND(NOT(ISNULL(SterlingQuoteItems)),SterlingQuoteItems.size>0)}">
+          <apex:column headerValue="Action" headerClass="headerRow">
+          <apex:commandLink value="Edit" action="{!editQuoteItemMethod}">
+             <apex:param value="{!att.id}" name="strQuoteItemValue" assignTo="{!strQuoteItemValue}"/>
+          </apex:commandLink>
+          <span>&nbsp;|&nbsp;</span>           
+            <apex:outputLink styleClass="actionLink" value="/{!att.Id}">Del</apex:outputLink></apex:column>
+            <apex:column headerValue="Sterling Quote Item Name" headerClass="headerRow"><apex:outputLink target="_top" value="/apex/QuoteLineItem?id={!att.Name}&sfdc.override=1">{!att.Name}</apex:outputLink></apex:column>
+            <apex:column headerValue="Current status" headerClass="headerRow">{!att.CurrentStatus__c}</apex:column>   <!-- VJ -->
+        <!--    <apex:column headerValue="Discount Type" headerClass="headerRow">{!att.DiscountType__c}</apex:column>   <!-- VJ -->   
+        <!--    <apex:column headerValue="SKU" headerClass="headerRow">{!att.ST_SKU__c}</apex:column>   <!-- VJ -->
+ 
+        <!--    <apex:column headerValue="Product name" headerClass="headerRow">{!att.Products__r.name}</apex:column>   <!-- VJ  -->   
+            
+    <!--    </apex:pageBlockTable>
+     </apex:pageBlock>
+     
+     
+</apex:Form>   -->
+     
+    
+    
+    
+    <apex:form >
+    <apex:pageblock title="Quote Line Items">
+    
+    <apex:pageblockButtons location="top">
+             <apex:commandButton value="Add SFA Product" action="{!showPopup}" rerender="tstpopup" rendered="{!(RecordType)}" />
+             <apex:commandButton value="New Sterling Quote Item" action="{!editAction}" rendered="{!NOT(RecordType) && ShowEditButton}" />
+             <!-- Following was added by Kartez 10/10/14 -->
+             <!-- <apex:commandButton value="Sterling Quote Add Quantity" action="{!addQuantity}" rendered="{!NOT(RecordType)}" /> -->
+    </apex:pageblockButtons>
+        <apex:repeat value="{!QuoteItems}" var="qi">
+            <apex:pageBlockSection columns="1" title="{!qi.Address}">
+                <apex:pageBlockTable value="{!qi.Items}" var="i" >
+                    <apex:column headerValue="Action" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}" >
+                    <!--    <apex:commandLink action="{!editQuoteItemMethod}" value="Edit"/>
+                       <apex:param value="{!i.id}" name="strQuoteItemValue" assignTo="{!strQuoteItemValue}"/> -->
+                        <apex:outputLink target="_top" styleClass="actionLink" value="/{!i.Id}/e?retURL={!URLENCODE($CurrentPage.URL)}" rendered="{!(RecordType)}">Edit</apex:outputLink>
+                     <!-- MGG319 1/4/2019 Only show edit when Showedit Button -->
+                     <!--   <apex:commandLink action="{!editAction}" value="Edit" rendered="{!IF(i.MinorLine__c == 0,'true','false')}"  /> -->                     
+                       <apex:commandLink action="{!editAction}" value="Edit" rendered="{!ShowEditButton}"/>  
+                        <apex:outputtext value=" | " /> 
+                        <apex:commandLink action="{!deleteAction}" value="Delete"  >
+                            <apex:param name="Product Id" value="{!i.id}" assignTo="{!strQuoteItemValue}"/>
+                        </apex:commandLink>                        
+                    </apex:column>
+                    <apex:column headervalue="" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}" rendered="{!IF(sterlingQuote.RecordType.Name == 'Sterling',TRUE,FALSE)}">
+                        <div id="qli_{!i.CPQLineNumber__c}" onclick="ToggleMinorLines('Minor_{!i.MajorLine__c}');">
+                        <apex:outputpanel id="plusimage" rendered="{!IF(i.MinorLine__c == 0,'true','false')}"  >
+                            <image src="{!$Resource.Minus_Image}"  title="Expand" id="img_Minor_{!i.MajorLine__c}"/> 
+                        </apex:outputpanel> 
+                          <!--      <apex:outputpanel id="minusimage" rendered="{!IF(i.MinorLine__c != 0,'true','false')}">        
+                        <apex:image url="{!$Resource.Minus_Image}" onclick="switchMenu('{!$Component.inlinetablesec}','{!$Component.plusimage}','{!$Component.minusimage}')" title="Collapse"/>
+                        </apex:outputpanel>  -->
+                        <!--     <apex:commandButton value="+" reRender="none"  />                       
+                        <apex:commandButton value="-" reRender="none" rendered="{!IF(i.MajorLine__c != 0,'true','false')}"  />  -->
+                        <script>
+                            var item = document.getElementById('qli_{!i.CPQLineNumber__c}');
+                            item.style.textAlign = QuoteLineNumberStyle('{!i.CPQLineNumber__c}');                                                                                                
+                        </script>
+                        </div>
+                    </apex:column>
+        <!--<apex:column value="{!!i.Product2__c}"/>-->
+                    <apex:column rendered="{!(RecordType)}" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}"> <apex:outputLink value="/{!i.Id}" id="theLink">{!i.Products__r.Name}</apex:outputLink> </apex:column>
+                    <apex:column headerValue="Description" style="{!IF(i.MinorLine__c == 0,'padding-left:0em','padding-left:3em')}" rendered="{!NOT(RecordType)}" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}">
+                        <apex:outputLink target="_top" styleClass="actionLink"  value="/apex/QuoteLineItem?id={!i.id}" >{!i.Description__c}</apex:outputLink>
+                        
+                    </apex:column>
+                    <apex:column value="{!i.Quantity__c}" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}"/>
+                    <apex:column headervalue="Term / Installment" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}" > 
+                    <apex:outputtext escape="false" value="{!i.TermLength__c}" rendered="{!IF(i.TermLength__c != 0, true, false  )}" /> 
+                    <apex:outputtext escape="false" value="{!i.NumInstallments__c}"  rendered="{!IF(i.NumInstallments__c != 0, true, false )}" />
+                    </apex:column> 
+                    
+                    <apex:column headervalue="S & E" value="{!i.ItemCode__c}" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}"/>
+                    <!-- MMG 7/21/2014 Replaced StandardMRC with UnitPrice to reflect calculated List price [  -->
+                    <!-- RRB 7/25/2014 Replaced UnitPrice with StandardMRC [  -->
+                    <apex:column styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}">
+                        <apex:facet name="header">List Price <br/>
+                        <font color="blue">MRC <br/></font>
+                        NRC <br/>
+                        </apex:facet>
+                        <apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value="{!i.StandardMRC__c}"/> </apex:outputtext> 
+                        <!-- <apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value="{!i.Products__r.UnitPrice}"/> </apex:outputtext> -->
+                        <apex:outputtext escape="false" value="<br/>"/>
+                        <apex:outputtext value="{0, number, ###,##0.00}"> <apex:param value="{!i.StandardNRC__c}"/>  </apex:outputtext>                     
+                     <!--  <apex:outputtext value="0.00"/>   -->
+                    </apex:column>
+                    
+                    
+                    <apex:column styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}">
+                        <apex:facet name="header">CPE <br/>
+                        <br/>
+                        NRC <br/>
+                        </apex:facet>
+                        <apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value=""/> </apex:outputtext> 
+                        <apex:outputtext escape="false" value="<br/>"/>
+                        <apex:outputtext value="{0, number, ###,##0.00}"> <apex:param value="{!i.CPE_NRC_Price__c}"/>  </apex:outputtext>                     
+                     <!--  <apex:outputtext value="0.00"/>   -->
+                    </apex:column>
+                    
+                                        
+                    <apex:column headervalue="Discount" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}" >
+                        <apex:outputtext escape="false" value="{0,number,###,##0.00} ({1,number,0}%)">
+                            <apex:param value="{!(i.DiscountAmount__c + i.promoDiscountAmount__c)}" />
+                            <apex:param value="{!i.PercentageDiscountAmount__c}"/>
+                            
+                            
+                        </apex:outputtext>                                   
+                    </apex:column>
+                                       
+                    <apex:column headervalue="Renewal MRR" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}" >
+                        <apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value="{!i.Renewal_MRR_Original__c}"/> </apex:outputtext>                                  
+                    </apex:column>
+                    
+                    <apex:column headervalue="Selling Price" styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}">
+                        <apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value="{!i.AdjustedMRC__c}"/> </apex:outputtext>
+                        <apex:outputtext escape="false" value="<br/>"/>
+                        <apex:outputtext value="{0, number, ###,##0.00}"> <apex:param value="{!i.AdjustedNRC__c}"/> </apex:outputtext>                      
+                    </apex:column>
+                    <apex:column styleclass="{!IF(i.MinorLine__c == 0,'Major_' + TEXT(i.MajorLine__c),'Minor_' + TEXT(i.MajorLine__c))}">
+                    <apex:facet name="header">Total List Price <br/>
+                        <font color="blue">MRC <br/></font>
+                        NRC <br/>
+                        </apex:facet>
+                        <apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value="{!i.AdjustedMRC__c * i.Quantity__c }"/> </apex:outputtext>
+                        <!--<apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value="{!i.AdjustedMRC__c + i.Renewal_MRR__c}"/> </apex:outputtext>-->
+                        <apex:outputtext escape="false" value="<br/>"/>
+                        <apex:outputtext value="{0, number, ###,##0.00}"> <apex:param value="{!i.AdjustedNRC__c}"/> </apex:outputtext>
+                        <script>
+                            //j$('.Minor_{!i.MajorLine__c}').hide();                            
+                        </script>                      
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:repeat>
+        <div align="right">
+            <apex:outputtext escape="false" value="<br/>"/>
+            <apex:outputtext style="font-weight:bold;" value="Total MRC: "/>
+            <apex:outputtext style="color:#2200CC;" value="{0, number, ###,##0.00}"> <apex:param value="{!TotalMRC}"/> </apex:outputtext>
+            <apex:outputtext escape="false" value="&#x9;&#x9;"/>
+            <apex:outputtext style="font-weight:bold;" value="Total NRC: "/>
+            <apex:outputtext value="{0, number, ###,##0.00}"> <apex:param value="{!TotalNRC}"/> </apex:outputtext>
+        </div>
+    </apex:pageblock>
+    </apex:form>
+    <apex:form >
+        <apex:OutputPanel id="tstpopupcreateorder">
+            <apex:outputPanel styleClass="popupBackground1" layout="block" rendered="{!ShowCreateOrderResponsePopUp}"/>
+            <apex:outputPanel id="popupGenerateformpanel" styleClass="custPopup1" layout="block" rendered="{!ShowCreateOrderResponsePopUp}"><!-- rendered="{!displayPopUp}" -->
+                <apex:pageBlock title="Order Info" id="popupblockk">
+                    <apex:pageblocksection id="popupblocksection1">
+                        <apex:outputField value="{!SterlingQuote.OrderId__c}"/>
+                    </apex:pageblocksection>
+                </apex:pageBlock>      
+                <apex:commandButton styleClass="createorderbuttoncss" value="Lauch WCS" action="{!LaunchEON}"/>
+                <apex:commandButton styleClass="createorderbuttoncss" value="Close" action="{!ClosePopUpCreateOrder}" rerender="tstpopupcreateorder"/>      
+            </apex:outputPanel>
+         </apex:OutputPanel>
+    </apex:form>
+</apex:page>

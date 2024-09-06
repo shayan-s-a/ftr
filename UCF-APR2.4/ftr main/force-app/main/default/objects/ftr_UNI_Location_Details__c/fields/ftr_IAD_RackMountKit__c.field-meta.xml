@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ftr_IAD_RackMountKit__c</fullName>
+    <externalId>false</externalId>
+    <label>IAD Rack Mount Kit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TA 900 19&quot; RM BRKT</fullName>
+                <default>false</default>
+                <label>TA 900 19&quot; RM BRKT</label>
+            </value>
+            <value>
+                <fullName>TA 900 23&quot; RM BRKT</fullName>
+                <default>false</default>
+                <label>TA 900 23&quot; RM BRKT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

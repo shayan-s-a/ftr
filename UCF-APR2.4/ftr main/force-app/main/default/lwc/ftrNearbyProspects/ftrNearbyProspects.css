@@ -1,0 +1,49 @@
+.table-container {
+    border: 1px solid lightgrey;
+    box-shadow: 1px 2px 3px lightgrey;
+}
+.ftr-datatable {
+    min-height: 600px;
+}
+
+/* .table-filters {
+    justify-content: flex-end;
+} */
+.ftr-push-left {
+    margin-right: auto;
+}
+
+.ftr-push-right {
+    margin-left: auto;
+}
+
+.ftr-card-container {
+    border: 1px solid lightgrey;
+    box-shadow: 1px 2px 3px lightgrey;
+    border-radius: 0.25rem;
+}
+
+.ftr-spread-out {
+    justify-content: space-between;
+    line-height: 1.7;
+    display: flex;
+}
+
+.ftr-card-header {
+    background: lightgrey;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid lightgrey;
+}
+
+.ftr-card-title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ftr-card-title {
+    font-size: 1rem;
+}
+
+.ftr-card-subtitle {
+    font-style: oblique;
+}

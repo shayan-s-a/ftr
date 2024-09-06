@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Order Management - Notify AE</name>
+    <style>none</style>
+    <subject>{!Case.Customer_Number__c} – {!Case.Account} – {!Case.OrderManagement_Type__c} – STATS#: {!Case.Orderz__c} - Notification</subject>
+    <textOnly>{!Case.Account_Executive_Formula__c},
+
+Please be aware of the following account changes/modifications.
+
+If you are not the correct AE please forward to the correct AE and advise to have Salesforce updated with the correct AE assignment.
+
+Contact Name: {!Case.Contact}
+Monthly Recurring Charges: {!Case.OrderManagement_MonthlyRecurringCharges__c}
+Non Recurring Charges: {!Case.OrderManagement_NonRecurringCharges__c}
+Case Origin: {!Case.Origin}
+Description: {!Case.Description}
+
+Follow the link below to access the Salesforce case.
+{!Case.CaseNumber}
+
+Thank You,
+{!Case.CreatedBy}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

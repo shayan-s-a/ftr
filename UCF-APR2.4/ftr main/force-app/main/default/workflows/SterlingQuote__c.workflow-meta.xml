@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Wholesale_Dealdesk_Quote_Approved</fullName>
+        <description>Wholesale - Dealdesk Quote Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Wholesale_Dealdesk_Quote_Approved_HTML</template>
+    </alerts>
+    <alerts>
+        <fullName>Wholesale_Dealdesk_Quote_Rejected</fullName>
+        <description>Wholesale - Dealdesk Quote Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Wholesale_Dealdesk_Quote_Rejected_HTML</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Sterling_Quote_Approval_Status_Approve</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Sterling Quote Approval Status - Approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_Quote_Approval_Status_Need_Re</fullName>
+        <field>Status__c</field>
+        <literalValue>Needs Review</literalValue>
+        <name>Sterling Quote Approval Status - Need Re</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_Quote_Approval_Status_Rejecte</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sterling Quote Approval Status - Rejecte</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_Quote_Approval_Status_Review</fullName>
+        <field>Status__c</field>
+        <literalValue>In Review</literalValue>
+        <name>Sterling Quote Approval Status - Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>WS_Quote_Status_In_Review</fullName>
+        <description>Wholesale Quote status set to &quot;In Review&quot;</description>
+        <field>Status__c</field>
+        <literalValue>In Review</literalValue>
+        <name>WS Quote Status-In Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

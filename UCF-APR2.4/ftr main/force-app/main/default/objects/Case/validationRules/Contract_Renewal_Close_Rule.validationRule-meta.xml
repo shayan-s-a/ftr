@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Renewal_Close_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &apos;Contract_Renewal&apos;,
+ ispickval(Status, &apos;Closed&apos;),
+ OR(
+  ispickval( Resolution__c , &apos;&apos;),
+  ispickval( Resolution__c , &apos;None&apos;)
+  )
+ )</errorConditionFormula>
+    <errorMessage>A Contract Renewal Case cannot be closed without a Resolution.</errorMessage>
+</ValidationRule>

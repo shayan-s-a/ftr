@@ -1,0 +1,210 @@
+<apex:page controller="GenerateProposalExtension" 
+           sidebar="false" 
+           showheader="false" 
+           standardStylesheets="false" 
+           cache="false" 
+           readonly="true"
+           renderAs="pdf" >  
+           <!-- renderAs="pdf" -->
+<html>
+        <head>
+          <!--  <style>
+                body {
+                    font-family:"Arial";
+                }
+                .check {
+                   content: 'Heavy check mark';
+                }
+            </style> -->
+   <style type="text/css" media="print">
+
+                       @page {
+
+                                 @top-center {
+
+                                       content: element(header);
+
+                               }
+
+                               @bottom-left {
+
+                                     content: element(footer);
+
+                               }
+
+                            }
+
+                                     div.header {
+
+                                      padding: 10px;
+
+                                      position: running(header);
+
+                           }
+                       div.footer {
+                                    display: block;
+                                   padding: 5px;
+                                   position: running(footer);
+
+                      }
+                                     .pagenumber:before {
+                                        content: counter(page);
+                       }
+                                   .pagecount:before {
+                             content: counter(pages);
+                        }
+                    </style>
+        </head>
+        
+        <body style="font-family:Arial; font-weight:small;">
+            <div class="header" style="width:100%;height:60px;">
+                <img style="float:right;" src="{!$Resource.Frontierbusinessedgelogo}" height="60" width="180"/>
+            </div>
+            <div style="height:960px;">  
+                <div style="float:left;z-index:10;"> 
+                    <h4>{!quoteName} Proposal For:</h4>
+                    <h1 style="color:#555aa8">{!act.Name}</h1>
+                     <p><b>{!currentDate}</b><br/>
+                        <b>Quote Number(s) :</b><br/> 
+                     <apex:repeat value="{!lSyncedQuote}" var="squote">
+                        <b>{!squote.Quote_Number__c}</b><br/>
+                     </apex:repeat></p>
+                     <div style="width:100%;">
+                    <div style="float:left; margin-top:440px;">
+                            <p>{!currentUser.Name}<br/>
+                                {!currentUser.Title}<br/>
+                                <b>Phone : {!currentUser.Phone}</b> <br/>
+                                <b>Mobile: {!currentUser.MobilePhone}</b> <br/>
+                                <b>Email : {!currentUser.Email}</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div style="margin-top:575px;width:100%;">
+                        <h3 align="left" style="float:left;margin-left:20px;color:white;margin-bottom:5px;">Frontier Communications Corporation</h3>
+                        <div style="clear:both;margin-left:20px;color:white;"><span>3 High Ridge Park</span><span style="margin-left:6px;margin-right:6px;">|</span><span>Stamford, CT 06905</span><span style="margin-left:6px;margin-right:6px;">|</span><span>frontier.com</span></div>
+                    </div>
+                </div>             
+                <img class="proposal-logo" style="float:right;position:absolute;left:0px;top:0px;z-index:-1;margin-top:-10px;margin-left:-60px;" src="{!$Resource.ProposalLogo}" height="1000" width="850"/>
+            </div>
+            <div style="900px;">
+                <div style="width:65%;height:750px; float:left; ">
+                    <h1 style="color:#555aa8;">Partner With Frontier. </h1>
+                    <div>
+                        Frontier offers end-to-end data, voice and video solutions to business of all sizes.
+                        We're committed to providing next-generation technology that's flexible, reliable and
+                        ready to grow with your business. And you'll enjoy the convenience of having one 
+                        single, responsive source for all your communication needs. Choose from our fully 
+                        integrated product portfolio, including:
+                    </div><br/>
+            &nbsp;&nbsp;&nbsp;     •  Business High-Speed Internet<br/>
+            &nbsp;&nbsp;&nbsp;     •  Wi-Fi Mobility<br/>
+            &nbsp;&nbsp;&nbsp;     •  Managed IT Services<br/>
+            &nbsp;&nbsp;&nbsp;     •  Business High-Speed Internet<br/>
+            &nbsp;&nbsp;&nbsp;     •  Wi-Fi Mobility<br/>
+            &nbsp;&nbsp;&nbsp;     •  Managed IT Services<br/>
+            &nbsp;&nbsp;&nbsp;     •  Ethernet<br/>
+            &nbsp;&nbsp;&nbsp;     •  Dedicated Internet Access<br/>
+            &nbsp;&nbsp;&nbsp;     •  Data Backup and Recovery<br/>
+            &nbsp;&nbsp;&nbsp;     •  Managed IP VPN<br/>
+            &nbsp;&nbsp;&nbsp;     •  VoIP(hosted and premise based)<br/>
+            &nbsp;&nbsp;&nbsp;     •  Optical Transport Services<br/>
+            &nbsp;&nbsp;&nbsp;     •  Conferencing<br/>
+            &nbsp;&nbsp;&nbsp;     •  Local and Long-Distance Service<br/>
+            &nbsp;&nbsp;&nbsp;     •  Communications and Network Equipment<br/><br/>
+                   
+                       Your Business Edge Specialist created a custom-designed plan based on your 
+                       needs and budget-- all backed by our 24/7 expert tech support. Plus, we monitor the 
+                       Frontier network to ensure that your business communications run without interruption.
+                       It's all part of our dedication to helping you be successful.          
+                </div>
+                                                
+
+                <div style="width:33%; height:750px; float:right;background-color:#555aa8">
+                     <h3 style="color:white;text-align:center;font-size:85%;"> Quote Number(s) :</h3>
+                     <apex:repeat value="{!lSyncedQuote}" var="squote">
+                     <h4 style="color:white;text-align:center;font-size:85%;">{!squote.Quote_Number__c}</h4>
+                    </apex:repeat> 
+                     <hr style="color:white;text-align:left;"/>
+                     <div style="color:white;width:100%;text-align:left;font-size:85%;font-weight:bold;margin-bottom:5%;"><span style="width:10%;"><img src="{!$Resource.tick}" style="width:5%;margin-left:5%;margin-right:3%;" height="12" width="12"/></span><span style="width:80%;">&nbsp;&nbsp;State-of-the-art network</span></div>
+                     <div style="color:white;width:100%;text-align:left;font-size:85%;font-weight:bold;margin-bottom:5%;"><span style="width:10%;"><img src="{!$Resource.tick}" style="width:5%;margin-left:5%;margin-right:3%;" height="12" width="12"/></span><span style="width:80%;">&nbsp;&nbsp;24/7 expert tech support</span></div>
+                     <div style="color:white;width:100%;text-align:left;font-size:85%;font-weight:bold;margin-bottom:5%;"><span style="width:10%;"><img src="{!$Resource.tick}" style="width:5%;margin-left:5%;margin-right:3%;" height="12" width="12"/></span><span style="width:80%;">&nbsp;&nbsp;100% U.S.-based workforce</span></div>
+                     <div style="color:white;width:100%;text-align:left;font-size:85%;font-weight:bold;margin-bottom:5%;"><span style="width:10%;"><img src="{!$Resource.tick}" style="width:5%;margin-left:5%;margin-right:3%;" height="12" width="12"/></span><span style="width:80%;">&nbsp;&nbsp;Global capabilities</span></div>
+                     <div style="color:white;width:100%;text-align:left;font-size:85%;font-weight:bold;margin-bottom:5%;"><span style="width:10%;"><img src="{!$Resource.tick}" style="width:5%;margin-left:5%;margin-right:3%;" height="12" width="12"/></span><span style="width:80%;">&nbsp;&nbsp;Customized solutions</span></div>
+                     <div style="color:white;width:100%;text-align:left;font-size:85%;font-weight:bold;margin-bottom:5%;"><span style="width:10%;"><img src="{!$Resource.tick}" style="width:5%;margin-left:5%;margin-right:3%;" height="12" width="12"/></span><span style="width:80%;text-align:center;">&nbsp;&nbsp;Comprehensive product portfolio</span></div>     
+
+                </div> 
+            </div>                               
+
+            <div style="clear:both;height:140px;">
+                <p style="width:65%;float:left;font-size:x-small;margin-top:5%;">This proposal is confidential and contains proprietary information. 
+                The contents contained herein are not to be shared with parties other 
+                than the customer and its employees named in this document.
+                This document is confidential and the property of Frontier Communications Corporation.
+                </p> 
+                <img style="margin-top:3%;margin-left:6%;" src="{!$Resource.Frontierbusinessedgelogo}" height="60" width="180"/>
+            </div>
+            <div style="height:800px;">
+                <div style="width:65%;height:800px; float:left; ">
+                    <h1 style="color:#555aa8">Executive Summary.</h1>
+                    <div>
+                        <p>The Frontier team of Business Edge Specialists is dedicated to gaining a full understanding of your capabilities and challenges. That way, we can custom-tailor a solution that meets your needs and gives you the confidence to move forward. To summarize:</p> <div/> 
+                        <p>Your company�s current communications capabilities include: </p>
+                        {!proposalCompany}
+                        <p> Your immediate and future communications needs are: </p>
+                        {!proposalFuture}
+                        <div>
+                            <p>Our recommendations based on the needs defined above include: </p> 
+                            <table style="width:100%;border: 1px solid black;border-collapse: collapse;align:center;font-size:small;" class="product-table">
+                                <thead>
+                                    <th style="text-align:center;width:48%;" align="center">Product Name</th>
+                                    <th style="text-align:center;width:13%;" align="center">Quantity</th>
+                                    <th style="text-align:center;width:13%;" align="center">Term Length</th>
+                                    <th style="text-align:center;width:13%;" align="center">NRC</th>
+                                    <th style="text-align:center;width:13%;" align="center">MRC</th>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!strQuoteItemsExtensions}" var="strQuote"> 
+                                        <tr>
+                                            <td style="text-align:center;width:48%;border: 1px solid black;">{!strQuote.ProductName}</td>
+                                            <td style="text-align:center;width:13%;border: 1px solid black;">{!strQuote.Quantity}</td>
+                                            <td style="text-align:center;width:13%;border: 1px solid black;">{!strQuote.TermLength}</td>
+                                            <td style="text-align:center;width:13%;border: 1px solid black;">{!strQuote.StandardNRC}</td>
+                                            <td style="text-align:center;width:13%;border: 1px solid black;">{!strQuote.StandardMRC}</td>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--<p style="font-size:normal; bottom: 150px;left:0px; width:65%;">aaaaaa     Frontier is pleased to present this proposal to {!act.Name}. The services set forth in this proposal will be provided by Frontier Communications and its affiliates (collectively referred to herein as �Frontier�). Frontier does not consider the proposal itself to be a legally binding offer to contract. Pricing contained within this document is budgetary, and a site survey may be required prior to final quote. This quote is valid for up to thirty days from the date hereof. Taxes and surcharges are not included. </p>-->
+                        <!--<div>
+                            <p style="font-size:normal; position:absolute; bottom: 150px;left:0px; width:65%;">xxxxxxxxFrontier is pleased to present this proposal to {!act.Name}. The services set forth in this proposal will be provided by Frontier Communications and its affiliates (collectively referred to herein as �Frontier�). Frontier does not consider the proposal itself to be a legally binding offer to contract. Pricing contained within this document is budgetary, and a site survey may be required prior to final quote. This quote is valid for up to thirty days from the date hereof. Taxes and surcharges are not included. </p>
+                        </div>-->
+  
+                        <div>
+                            <p style="font-size:normal; text-align:Justify;bottom: 135px;left:0px; width:100%;">Frontier is pleased to present this proposal to {!act.Name}. The services set forth in this proposal will be provided by Frontier Communications and its affiliates (collectively referred to herein as �Frontier�). Frontier does not consider the proposal itself to be a legally binding offer to contract. Pricing contained within this document is budgetary, and a site survey may be required prior to final quote. This quote is valid for up to thirty days from the date hereof. Taxes and surcharges are not included. </p>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div style="width:33%; height:800px; float:right;background-color:#555aa8">
+                  <h3 style="color:white;text-align:center;font-size:85%;"> Quote Number(s) :</h3>
+                     <apex:repeat value="{!lSyncedQuote}" var="squote">
+                        <h4 style="color:white;text-align:center;font-size:85%;">{!squote.Quote_Number__c}</h4>
+                     </apex:repeat> 
+                     <hr style="color:white;text-align:left;"/>
+                     <p style="margin-left:5%;color:white; font-weight:bold;line-height:150%;font-size:85%;">Frontier Communications (NASDAQ: FYBR) provides data, voice, video and equipment solutions to businesses of all sizes. We pride ourselves on our unmatched customer service, locally based tech support, customized solutions and commitment to help our customers succeed. </p>
+                </div>               
+
+            </div>
+           
+            <!--<div style="clear:both;height:140px;">
+                <p style="width:65%;float:left;font-size:x-small;margin-top:166645%;">This proposal is confidential and contains proprietary information. 
+                The contents contained herein are not to be shared with parties other 
+                than the customer and its employees named in this document.
+                This document is confidential and the property of Frontier Communications Corporation.
+                </p> 
+                <img style="margin-top:3%;margin-left:6%;" src="{!$Resource.Frontierbusinessedgelogo}" height="60" width="180"/>
+            </div>-->
+        </body>
+    </html>
+</apex:page>

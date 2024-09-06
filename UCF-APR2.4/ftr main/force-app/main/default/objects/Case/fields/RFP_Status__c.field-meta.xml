@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>RFP Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bid/No Bid/Partial Bid</fullName>
+                <default>false</default>
+                <label>Bid/No Bid/Partial Bid</label>
+            </value>
+            <value>
+                <fullName>Bid Delivered to Sales</fullName>
+                <default>false</default>
+                <label>Bid Delivered to Sales</label>
+            </value>
+            <value>
+                <fullName>Bid Review/Stakeholder Meeting</fullName>
+                <default>false</default>
+                <label>Bid Review/Stakeholder Meeting</label>
+            </value>
+            <value>
+                <fullName>Canceled/Withdrawn</fullName>
+                <default>false</default>
+                <label>Canceled/Withdrawn</label>
+            </value>
+            <value>
+                <fullName>Cancelled - No AE Response</fullName>
+                <default>false</default>
+                <label>Cancelled - No AE Response</label>
+            </value>
+            <value>
+                <fullName>Final Preparation</fullName>
+                <default>false</default>
+                <label>Final Preparation</label>
+            </value>
+            <value>
+                <fullName>No Bid/Business Decision</fullName>
+                <default>false</default>
+                <label>No Bid/Business Decision</label>
+            </value>
+            <value>
+                <fullName>No Bid/No Solution</fullName>
+                <default>false</default>
+                <label>No Bid/No Solution</label>
+            </value>
+            <value>
+                <fullName>No Bid/Proposal Completed</fullName>
+                <default>false</default>
+                <label>No Bid/Proposal Completed</label>
+            </value>
+            <value>
+                <fullName>No Bid BDT/Pricing Not Approved</fullName>
+                <default>false</default>
+                <label>No Bid BDT/Pricing Not Approved</label>
+            </value>
+            <value>
+                <fullName>No Bid Timeframe</fullName>
+                <default>false</default>
+                <label>No Bid Timeframe</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Received/Unassigned</fullName>
+                <default>false</default>
+                <label>Received/Unassigned</label>
+            </value>
+            <value>
+                <fullName>Received/Unsigned</fullName>
+                <default>false</default>
+                <label>Received/Unsigned</label>
+            </value>
+            <value>
+                <fullName>RFQ - Reject back to AE</fullName>
+                <default>false</default>
+                <label>RFQ - Reject back to AE</label>
+            </value>
+            <value>
+                <fullName>Tasks in Progress</fullName>
+                <default>false</default>
+                <label>Tasks in Progress</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

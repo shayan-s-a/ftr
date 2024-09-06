@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vlocity_Actions__c</fullName>
+    <description>Created for Kim Kortz for the Commercial Sales case for Vlocity related issues 2/20/2020</description>
+    <externalId>false</externalId>
+    <label>Vlocity Dispositions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+                <label>Accepted</label>
+            </value>
+            <value>
+                <fullName>National Roll Out Wishlist</fullName>
+                <default>false</default>
+                <label>Backlog</label>
+            </value>
+            <value>
+                <fullName>Custom Wishlist</fullName>
+                <default>false</default>
+                <label>Custom Wishlist</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Defect Verified</fullName>
+                <default>false</default>
+                <label>Defect Verified</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Lightning Wishlist</fullName>
+                <default>false</default>
+                <label>Lightning Wishlist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

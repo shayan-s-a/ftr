@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive_Account_Opp_Owner</fullName>
+    <active>false</active>
+    <description>An account with inactive owners will have only their manager create an opportunity for those accounts</description>
+    <errorConditionFormula>AND(
+Account.Owner.IsActive = False,
+$User.Id &lt;&gt; Account.Owner.ManagerId )</errorConditionFormula>
+    <errorMessage>Only Account Owner&apos;s Manager can create Opportunities for this Account.</errorMessage>
+</ValidationRule>

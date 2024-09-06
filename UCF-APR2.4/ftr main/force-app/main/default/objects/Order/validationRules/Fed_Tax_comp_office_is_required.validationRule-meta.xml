@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fed_Tax_comp_office_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;ABS Order&quot;,
+ Total_ABS_Revenue__c  &gt;= 15000,
+ISPICKVAL(Leased__c, &quot;No&quot;),
+
+OR(
+
+ISPICKVAL(ABS_Order_Request_Type__c, &quot;New&quot;),
+ ISPICKVAL(ABS_Order_Request_Type__c, &quot;Maintenance: New&quot;),
+ ISPICKVAL(ABS_Order_Request_Type__c, &quot;Maintenance: Auto-Renew&quot;)),
+
+OR(
+
+ISBLANK(Federal_Tax_ID__c),
+ ISBLANK(Company_Officer__c)))</errorConditionFormula>
+    <errorMessage>Company Officer Name and Federal Tax ID fields are required for this order.</errorMessage>
+</ValidationRule>

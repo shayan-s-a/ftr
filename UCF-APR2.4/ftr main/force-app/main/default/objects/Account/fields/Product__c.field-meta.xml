@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B1 / POTS</fullName>
+                <default>true</default>
+                <label>B1 / POTS</label>
+            </value>
+            <value>
+                <fullName>Long Distance (Switched)</fullName>
+                <default>false</default>
+                <label>Long Distance (Switched)</label>
+            </value>
+            <value>
+                <fullName>Toll Free</fullName>
+                <default>false</default>
+                <label>Toll Free</label>
+            </value>
+            <value>
+                <fullName>DSL</fullName>
+                <default>false</default>
+                <label>DSL</label>
+            </value>
+            <value>
+                <fullName>Centrex/Centranet</fullName>
+                <default>false</default>
+                <label>Centrex/Centranet</label>
+            </value>
+            <value>
+                <fullName>Winback</fullName>
+                <default>false</default>
+                <label>Winback</label>
+            </value>
+            <value>
+                <fullName>Voice Mail &amp; additional</fullName>
+                <default>false</default>
+                <label>Voice Mail &amp; additional</label>
+            </value>
+            <value>
+                <fullName>Features on existing service</fullName>
+                <default>false</default>
+                <label>Features on existing service</label>
+            </value>
+            <value>
+                <fullName>Analog Trunks</fullName>
+                <default>false</default>
+                <label>Analog Trunks</label>
+            </value>
+            <value>
+                <fullName>IP Address Changes</fullName>
+                <default>false</default>
+                <label>IP Address Changes</label>
+            </value>
+            <value>
+                <fullName>ISDN BRI</fullName>
+                <default>false</default>
+                <label>ISDN BRI</label>
+            </value>
+            <value>
+                <fullName>ISDN PRI</fullName>
+                <default>false</default>
+                <label>ISDN PRI</label>
+            </value>
+            <value>
+                <fullName>MIPT (area specific product)</fullName>
+                <default>false</default>
+                <label>MIPT (area specific product)</label>
+            </value>
+            <value>
+                <fullName>DIA T1 w/out router</fullName>
+                <default>false</default>
+                <label>DIA T1 w/out router</label>
+            </value>
+            <value>
+                <fullName>EIA Metro-E</fullName>
+                <default>false</default>
+                <label>EIA Metro-E</label>
+            </value>
+            <value>
+                <fullName>SIP Trunking</fullName>
+                <default>false</default>
+                <label>SIP Trunking</label>
+            </value>
+            <value>
+                <fullName>IP Connect</fullName>
+                <default>false</default>
+                <label>IP Connect</label>
+            </value>
+            <value>
+                <fullName>Metro-E Upgrade</fullName>
+                <default>false</default>
+                <label>Metro-E Upgrade</label>
+            </value>
+            <value>
+                <fullName>SONET</fullName>
+                <default>false</default>
+                <label>SONET</label>
+            </value>
+            <value>
+                <fullName>Frame Relay</fullName>
+                <default>false</default>
+                <label>Frame Relay</label>
+            </value>
+            <value>
+                <fullName>Private Line DS1 (On-Net)</fullName>
+                <default>false</default>
+                <label>Private Line DS1 (On-Net)</label>
+            </value>
+            <value>
+                <fullName>Dedicated PL</fullName>
+                <default>false</default>
+                <label>Dedicated PL</label>
+            </value>
+            <value>
+                <fullName>Wireless Hot Spots</fullName>
+                <default>false</default>
+                <label>Wireless Hot Spots</label>
+            </value>
+            <value>
+                <fullName>Wireless Anchor</fullName>
+                <default>false</default>
+                <label>Wireless Anchor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audit_Findings_Detail_Picklist__c</fullName>
+    <externalId>false</externalId>
+    <label>Audit Findings Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Audit_Findings__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Canceled by Sales</fullName>
+                <default>false</default>
+                <label>Canceled by Sales</label>
+            </value>
+            <value>
+                <fullName>Canceled by Customer</fullName>
+                <default>false</default>
+                <label>Canceled by Customer</label>
+            </value>
+            <value>
+                <fullName>Service is not available</fullName>
+                <default>false</default>
+                <label>Service is not available</label>
+            </value>
+            <value>
+                <fullName>Incorrect Order Type</fullName>
+                <default>false</default>
+                <label>Incorrect Order Type</label>
+            </value>
+            <value>
+                <fullName>Missing Documentation</fullName>
+                <default>false</default>
+                <label>Missing Documentation</label>
+            </value>
+            <value>
+                <fullName>Service/Speed not available</fullName>
+                <default>false</default>
+                <label>Service/Speed not available</label>
+            </value>
+            <value>
+                <fullName>Schedule not signed</fullName>
+                <default>false</default>
+                <label>Schedule not signed</label>
+            </value>
+            <value>
+                <fullName>MRR Overstated</fullName>
+                <default>false</default>
+                <label>MRR Overstated</label>
+            </value>
+            <value>
+                <fullName>MRR Understated</fullName>
+                <default>false</default>
+                <label>MRR Understated</label>
+            </value>
+            <value>
+                <fullName>Existing MRR booked as New</fullName>
+                <default>false</default>
+                <label>Existing MRR booked as New</label>
+            </value>
+            <value>
+                <fullName>Gross Margin Incorrect</fullName>
+                <default>false</default>
+                <label>Gross Margin Incorrect</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sale Value Discrepancy</controllingFieldValue>
+            <valueName>MRR Overstated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Value Discrepancy</controllingFieldValue>
+            <valueName>MRR Understated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Value Discrepancy</controllingFieldValue>
+            <valueName>Existing MRR booked as New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Value Discrepancy</controllingFieldValue>
+            <valueName>Gross Margin Incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Rejected</controllingFieldValue>
+            <controllingFieldValue>Order Cancelled</controllingFieldValue>
+            <valueName>Incorrect Order Type</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Rejected</controllingFieldValue>
+            <valueName>Missing Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Rejected</controllingFieldValue>
+            <valueName>Service/Speed not available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Rejected</controllingFieldValue>
+            <valueName>Schedule not signed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Cancelled</controllingFieldValue>
+            <valueName>Canceled by Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Cancelled</controllingFieldValue>
+            <valueName>Canceled by Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Cancelled</controllingFieldValue>
+            <valueName>Service is not available</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

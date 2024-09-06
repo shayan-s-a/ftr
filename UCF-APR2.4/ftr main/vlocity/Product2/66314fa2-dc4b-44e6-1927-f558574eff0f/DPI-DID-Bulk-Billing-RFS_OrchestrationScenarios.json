@@ -1,0 +1,26 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "37a3afe2-662c-3c86-3d3c-517f2b96bece",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "DPI DID Bulk Order Billing Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/DPI DID Bulk Order Billing Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "66314fa2-dc4b-44e6-1927-f558574eff0f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/66314fa2-dc4b-44e6-1927-f558574eff0f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "66314fa2-dc4b-44e6-1927-f558574eff0f",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "DPI Bulk Order Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/DPI Bulk Order Scenario/37a3afe2-662c-3c86-3d3c-517f2b96bece/Product2/66314fa2-dc4b-44e6-1927-f558574eff0f"
+    }
+]

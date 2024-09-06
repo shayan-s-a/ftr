@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Why_is_required_9</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Likelihood_of_the_customer_to_leave_FTR__c , &quot;9&quot;)
+&amp;&amp;ISBLANK( Why__c )</errorConditionFormula>
+    <errorMessage>&quot;Why?&quot; field is required if the Likelihood of the customer to leave FTR is 6 and above.</errorMessage>
+</ValidationRule>

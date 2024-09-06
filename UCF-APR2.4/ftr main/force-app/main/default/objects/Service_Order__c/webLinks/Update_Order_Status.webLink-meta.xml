@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Order_Status</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Update Order Status</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+var orderId = &apos;{!Service_Order__c.Id}&apos;;
+var Name = &apos;{!Service_Order__c.Name}&apos;;
+var params =  {soId:orderId,orderNum:Name};
+
+if(Name){
+    try{
+      var res = sforce.apex.execute(&quot;ServiceOrderStage_Ctrl&quot;,&quot;updateSOStage&quot;,params);
+      alert(&apos;Successfully updated status. Please refresh your screen&apos;);
+    }catch(err){
+      var errorString = err.faultstring;
+      var startIndex = errorString.indexOf(&apos;{&apos;);
+      var endIndex = errorString.lastIndexOf(&apos;}&apos;)+1;
+      var actualErrorMessage = JSON.parse(errorString.substring(startIndex,endIndex));
+
+      alert(actualErrorMessage.cause+&apos;\n&apos;+actualErrorMessage.errorMessage);
+    }
+   
+}else{
+   alert(&apos;Service Order Status Must Not Be Empty&apos;);
+
+}</url>
+</WebLink>

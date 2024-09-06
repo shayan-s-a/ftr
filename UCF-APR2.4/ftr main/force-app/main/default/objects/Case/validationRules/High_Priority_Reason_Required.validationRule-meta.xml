@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Priority_Reason_Required</fullName>
+    <active>true</active>
+    <description>If Priority = High, Priority Reason is required</description>
+    <errorConditionFormula>AND
+(RecordType.Name = &quot;JCO(Job Change Order)&quot;,
+ISPICKVAL( Priority  ,&quot;High&quot;),
+OR(
+(ISBLANK( Priority_Reason__c ))
+))</errorConditionFormula>
+    <errorDisplayField>Priority_Reason__c</errorDisplayField>
+    <errorMessage>If Priority = High, Priority Reason is required.</errorMessage>
+</ValidationRule>

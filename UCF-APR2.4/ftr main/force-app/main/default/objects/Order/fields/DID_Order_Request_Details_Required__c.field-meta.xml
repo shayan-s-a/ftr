@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DID_Order_Request_Details_Required__c</fullName>
+    <externalId>false</externalId>
+    <label>DID Order Request Details-Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Add to Existing MIPT</fullName>
+                <default>false</default>
+                <label>Add to Existing MIPT</label>
+            </value>
+            <value>
+                <fullName>Add to Existing SIP/IPC</fullName>
+                <default>false</default>
+                <label>Add to Existing SIP/IPC</label>
+            </value>
+            <value>
+                <fullName>Block of Time</fullName>
+                <default>false</default>
+                <label>Block of Time</label>
+            </value>
+            <value>
+                <fullName>Feature Change</fullName>
+                <default>false</default>
+                <label>Feature Change</label>
+            </value>
+            <value>
+                <fullName>Move PRI to SIP/IPC</fullName>
+                <default>false</default>
+                <label>Move PRI to SIP/IPC</label>
+            </value>
+            <value>
+                <fullName>Move SIP/IPC to PRI</fullName>
+                <default>false</default>
+                <label>Move SIP/IPC to PRI</label>
+            </value>
+            <value>
+                <fullName>Add PRI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Add PRI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

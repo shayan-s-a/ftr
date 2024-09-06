@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ucf_Device_Accessories__c</fullName>
+    <externalId>false</externalId>
+    <label>Device Accessories</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yealink UH36 Mono Headset</fullName>
+                <default>false</default>
+                <label>Yealink UH36 Mono Headset</label>
+            </value>
+            <value>
+                <fullName>Yealink WH62 Dual Cordless Headset</fullName>
+                <default>false</default>
+                <label>Yealink WH62 Dual Cordless Headset</label>
+            </value>
+            <value>
+                <fullName>Yealink UH36 Dual Headset</fullName>
+                <default>false</default>
+                <label>Yealink UH36 Dual Headset</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

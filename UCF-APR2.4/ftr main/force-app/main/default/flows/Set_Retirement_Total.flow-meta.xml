@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <description>Sets retirement budget line total amount</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>TotalAmount</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Quantity__c} * {!$Record.Unit_Amount__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Set Retirement Total {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Set Retirement Total</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Total_Amount</name>
+        <label>Set Total Amount</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Budget_Amount__c</field>
+            <value>
+                <elementReference>TotalAmount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Total_Amount</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Budget_Amount_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Retirement</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Budget_Amount_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Total</stringValue>
+            </value>
+        </filters>
+        <object>Budget_Line__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

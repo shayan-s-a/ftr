@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDT_Number_required_if_BDT_equals_yes</fullName>
+    <active>true</active>
+    <description>On RFP case, if BDT = Yes, then BDT # is required.</description>
+    <errorConditionFormula>AND(
+
+ISPICKVAL( BDT__c ,&quot;Yes&quot;),
+
+ISBLANK( BDT_number__c  )
+)</errorConditionFormula>
+    <errorDisplayField>BDT_number__c</errorDisplayField>
+    <errorMessage>BDT # is required if BDT = Yes.</errorMessage>
+</ValidationRule>

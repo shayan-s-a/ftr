@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCaaS_Portal_Order_Issued__c</fullName>
+    <description>Created for Jaryl Northrop for case UC Network COE CPE Tracking</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Order issued in Metaswitch portal for CCaaS programming</inlineHelpText>
+    <label>CCaaS Portal Order Issued</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No_NA</valueSetName>
+    </valueSet>
+</CustomField>

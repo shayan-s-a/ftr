@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRC_Change_Negative_Number</fullName>
+    <active>true</active>
+    <description>This is validating that the value entered is a negative number or less than 1</description>
+    <errorConditionFormula>MRC_Change__c &gt; 1</errorConditionFormula>
+    <errorDisplayField>MRC_Change__c</errorDisplayField>
+    <errorMessage>Please enter a value less than 1.  This should be a negative dollar amount.</errorMessage>
+</ValidationRule>

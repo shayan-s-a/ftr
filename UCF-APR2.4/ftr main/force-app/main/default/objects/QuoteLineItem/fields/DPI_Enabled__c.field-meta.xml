@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DPI_Enabled__c</fullName>
+    <externalId>false</externalId>
+    <formula>(vlocity_cmt__Product2Id__r.isDPIEnabled__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DPI Enabled</label>
+    <type>Checkbox</type>
+</CustomField>

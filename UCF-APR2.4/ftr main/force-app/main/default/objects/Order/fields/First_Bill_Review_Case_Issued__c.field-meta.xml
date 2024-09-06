@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Bill_Review_Case_Issued__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created to check when process builder creates FBR case upon order complete.  This avoids duplicate cases.</description>
+    <externalId>false</externalId>
+    <label>First Bill Review Case Issued</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

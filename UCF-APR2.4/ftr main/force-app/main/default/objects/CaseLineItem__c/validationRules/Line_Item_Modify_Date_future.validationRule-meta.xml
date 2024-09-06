@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_Item_Modify_Date_future</fullName>
+    <active>true</active>
+    <description>Modify date cannot be a future date</description>
+    <errorConditionFormula>if ( RecordType.Name = &quot;Voice Traffic&quot; &amp;&amp;  Modify_Date__c  &gt; TODAY() ,true , false)</errorConditionFormula>
+    <errorDisplayField>Modify_Date__c</errorDisplayField>
+    <errorMessage>Modify date cannot be a future date</errorMessage>
+</ValidationRule>

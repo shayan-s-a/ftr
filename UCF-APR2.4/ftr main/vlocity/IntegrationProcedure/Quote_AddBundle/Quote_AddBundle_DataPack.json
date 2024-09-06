@@ -1,0 +1,33 @@
+{
+    "%vlocity_namespace%__CustomJavaScript__c": "Quote_AddBundle_SampleInput.json",
+    "%vlocity_namespace%__DisableMetadataCache__c": false,
+    "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "%vlocity_namespace%__Element__c": [
+        "Quote_AddBundle_Element_CheckIfProductExists.json",
+        "Quote_AddBundle_Element_SetDataTypes.json",
+        "Quote_AddBundle_Element_AddDIABundleProduct.json",
+        "Quote_AddBundle_Element_GetManagedRouterFromDIA.json",
+        "Quote_AddBundle_Element_AddManagerRouterToDIA.json",
+        "Quote_AddBundle_Element_AddSIPBundleProduct.json",
+        "Quote_AddBundle_Element_AddUCFLicense.json",
+        "Quote_AddBundle_Element_AddUCFAddOnLicense.json",
+        "Quote_AddBundle_Element_AddPhones.json",
+        "Quote_AddBundle_Element_AddExtraPhones.json",
+        "Quote_AddBundle_Element_GetBundleFromCartMDIA1.json",
+        "Quote_AddBundle_Element_UpdateIP.json",
+        "Quote_AddBundle_Element_Response.json"
+    ],
+    "%vlocity_namespace%__IsLwcEnabled__c": false,
+    "%vlocity_namespace%__IsProcedure__c": true,
+    "%vlocity_namespace%__IsReusable__c": false,
+    "%vlocity_namespace%__IsTest__c": false,
+    "%vlocity_namespace%__Language__c": "Procedure",
+    "%vlocity_namespace%__ProcedureKey__c": "Quote_AddBundle",
+    "%vlocity_namespace%__PropertySet__c": "Quote_AddBundle_PropertySet.json",
+    "%vlocity_namespace%__SubType__c": "AddBundle",
+    "%vlocity_namespace%__Type__c": "Quote",
+    "Name": "Add Promotion to Cart for MDIA +1",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/AddBundle/Procedure"
+}

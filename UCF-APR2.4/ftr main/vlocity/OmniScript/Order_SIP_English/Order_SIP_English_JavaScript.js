@@ -1,0 +1,1 @@
+console.log('baseCtrl.prototype.$scope',baseCtrl.prototype.$scope)

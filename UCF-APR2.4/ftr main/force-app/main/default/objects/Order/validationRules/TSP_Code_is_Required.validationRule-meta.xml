@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSP_Code_is_Required</fullName>
+    <active>true</active>
+    <description>Used on Circuit New, Change and Move Orders</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Do_they_have_a_TSP_Code__c , &quot;Yes&quot;),
+ISBLANK(  TSP_Code__c )
+)</errorConditionFormula>
+    <errorDisplayField>TSP_Code__c</errorDisplayField>
+    <errorMessage>TSP Code is required if Do they have a TSP Code is Yes. If unknown, enter 0 in the TSP Code field.</errorMessage>
+</ValidationRule>

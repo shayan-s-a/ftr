@@ -1,0 +1,33 @@
+[
+    {
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"isUCFBilling__c\",\"left-side-type\":\"field-OrderItem\",\"left-side-datatype\":\"boolean\",\"op\":\"=\",\"right-side\":\"true\"}",
+        "%vlocity_namespace%__DestinationDefaultQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMaxQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMinQuantity__c": 1,
+        "%vlocity_namespace%__DestinationProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "7295e798-3a65-26fd-0650-9aadbce3032b",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "Product2/7295e798-3a65-26fd-0650-9aadbce3032b",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__GlobalKey__c": "8f6c7b47-4dee-0628-3589-7f36c0bc9e0f",
+        "%vlocity_namespace%__MappingsData__c": "",
+        "%vlocity_namespace%__Priority__c": "",
+        "%vlocity_namespace%__RequireReservation__c": false,
+        "%vlocity_namespace%__SourceDefaultQuantity__c": 1,
+        "%vlocity_namespace%__SourceMaxQuantity__c": "",
+        "%vlocity_namespace%__SourceMinQuantity__c": 0,
+        "%vlocity_namespace%__SourceProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "b7bd77c4-4a34-60d6-f929-653b9eb192b2",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/b7bd77c4-4a34-60d6-f929-653b9eb192b2",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__SourceProductId__r.%vlocity_namespace%__GlobalKey__c": "b7bd77c4-4a34-60d6-f929-653b9eb192b2",
+        "%vlocity_namespace%__XORGroup__c": "",
+        "Name": "UCF CCaaS Supervisor To DPI UCF Billing Resource",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DecompositionRelationship__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__DecompositionRelationship__c/UCF CCaaS Supervisor To DPI UCF Billing Resource/Product2/b7bd77c4-4a34-60d6-f929-653b9eb192b2"
+    }
+]

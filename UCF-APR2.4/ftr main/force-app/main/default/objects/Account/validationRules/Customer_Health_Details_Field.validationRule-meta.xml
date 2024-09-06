@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Health_Details_Field</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Customer_Health_Factors__c, &quot;Other&quot;) &amp;&amp;
+ ISBLANK( Customer_Health_Details__c )</errorConditionFormula>
+    <errorDisplayField>Customer_Health_Details__c</errorDisplayField>
+    <errorMessage>This field cannot be blank.</errorMessage>
+</ValidationRule>

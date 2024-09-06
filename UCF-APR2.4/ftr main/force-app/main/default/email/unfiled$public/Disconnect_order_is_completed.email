@@ -1,0 +1,9 @@
+Disconnect Order has been Completed.
+
+Account Name: {!Order.Account_Name__c}
+Order Number: {!Order.OrderNumber}
+Order Created Date: {!Order.CreatedDate}
+
+To view the full details of the Order, please log into Salesforce and click on the Order link provided below.
+
+{!Order.Link}

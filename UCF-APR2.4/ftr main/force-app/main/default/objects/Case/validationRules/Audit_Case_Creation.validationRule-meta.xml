@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audit_Case_Creation</fullName>
+    <active>true</active>
+    <description>The Audit/Dispute case cannot be created unless the associated Opportunity Sales Stage = Closed/Won and Approved by the Manager.</description>
+    <errorConditionFormula>NOT(ISPICKVAL( Opportunity__r.StageName, &apos;Closed/Won&apos;)) &amp;&amp;
+ISBLANK( Opportunity__r.Mgr_Signed_Date__c ) &amp;&amp;
+RecordType.Id = &apos;012c0000000DTVE&apos;</errorConditionFormula>
+    <errorMessage>Opportunity sales stage must be Closed/Won and Approved by Manager</errorMessage>
+</ValidationRule>

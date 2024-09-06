@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_till_Opp_first_Completed_Task__c</fullName>
+    <description>Number of days from date Opportunity created till the date first edited or first activity added.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Date_of_first_Completed_Task__c ) ,
+NULL ,
+
+CASE(MOD( DATEVALUE( CreatedDate ) - DATE(1985,6,24),7), 
+0 , CASE( MOD( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) ,7),1,2,2,3,3,4,4,5,5,5,6,5,1), 
+1 , CASE( MOD( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) ,7),1,2,2,3,3,4,4,4,5,4,6,5,1), 
+2 , CASE( MOD( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) ,7),1,2,2,3,3,3,4,3,5,4,6,5,1), 
+3 , CASE( MOD( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) ,7),1,2,2,2,3,2,4,3,5,4,6,5,1), 
+4 , CASE( MOD( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) ,7),1,1,2,1,3,2,4,3,5,4,6,5,1), 
+5 , CASE( MOD( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) ,7),1,0,2,1,3,2,4,3,5,4,6,5,0), 
+6 , CASE( MOD( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) ,7),1,1,2,2,3,3,4,4,5,5,6,5,0), 
+999) 
++ 
+(FLOOR(( Date_of_first_Completed_Task__c - DATEVALUE( CreatedDate ) )/7)*5)
+)
+
+
+
+/* OLD formula included weekends in the count
+
+Date_Opportunity_First_Touched__c
+-
+DATEVALUE( CreatedDate )
+... OLD formula */</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Days till Opp first Completed Task</inlineHelpText>
+    <label>Days till Opp first Completed Task</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

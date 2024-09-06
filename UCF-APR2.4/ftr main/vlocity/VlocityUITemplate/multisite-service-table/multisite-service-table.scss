@@ -1,0 +1,55 @@
+.strong {
+    font-weight: 700;
+}
+
+.icon-color {
+    fill: #006dcc !important;
+}
+.level-color {
+    fill: #706e6b !important;
+}
+
+.slds-media__figure {
+    margin-right: .25rem !important;
+}
+.slds-is-sortable {
+    cursor: pointer;
+}
+.product-card {
+    background: rgb(246, 246, 246);
+    th {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+}
+// .children-expanded {
+//     background-color: #d8edff;
+// }
+// .children {
+// background-color: #ecebea}
+.child-product td {
+    border-top: unset !important
+}
+.indented {
+    margin-left: 5%;
+}
+.parent-product {
+    cursor: pointer;
+}
+.via-slds .slds-text-heading--small, .via-slds .slds-text-heading_small {
+    font-size: .8rem;
+    line-height: 1.25;
+}
+.via-slds .slds-table td, .via-slds .slds-table th {
+    padding: 0.75rem 0.5rem;
+    white-space: nowrap;
+    position: relative;
+}
+.via-slds .slds-table td, .via-slds .slds-table {
+    border-spacing: 0 10px; 
+}
+.via-slds .slds-table thead th {
+    padding: 0.5rem;
+}

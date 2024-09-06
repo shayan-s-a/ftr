@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Indicator__c</fullName>
+    <description>M6 Activity indicator field for Wholesale orders</description>
+    <externalId>false</externalId>
+    <label>Activity Indicator</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Change</fullName>
+                <default>false</default>
+                <label>Change</label>
+            </value>
+            <value>
+                <fullName>Disconnect</fullName>
+                <default>false</default>
+                <label>Disconnect</label>
+            </value>
+            <value>
+                <fullName>In Service</fullName>
+                <default>false</default>
+                <label>In Service</label>
+            </value>
+            <value>
+                <fullName>Inside Move</fullName>
+                <default>false</default>
+                <label>Inside Move</label>
+            </value>
+            <value>
+                <fullName>Outside Move</fullName>
+                <default>false</default>
+                <label>Outside Move</label>
+            </value>
+            <value>
+                <fullName>Record Activity</fullName>
+                <default>false</default>
+                <label>Record Activity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

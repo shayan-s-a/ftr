@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDT_and_CPQ_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Product__c, &quot;Off-Net Ethernet&quot;),
+ISPICKVAL(Product__c, &quot;E-Reach&quot;)
+),
+OR(
+ISBLANK(BDT__c),
+ISBLANK(CPQ__c)
+)
+)</errorConditionFormula>
+    <errorMessage>If the product is &quot;Off-Net Ethernet&quot; or &quot;E-Reach&quot;, the BDT and CPQ are requried fields.</errorMessage>
+</ValidationRule>

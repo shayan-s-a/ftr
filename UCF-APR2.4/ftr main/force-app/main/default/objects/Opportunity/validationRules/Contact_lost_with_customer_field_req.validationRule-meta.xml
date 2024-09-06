@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_lost_with_customer_field_req</fullName>
+    <active>true</active>
+    <description>If the Reason Lost field is set to Lost Contact with Customer then the &quot;When was contact lost with customer&quot; field is required.</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &apos;Opportunity Lightning&apos;,
+
+ISPICKVAL(Reason_Lost__c ,&quot;Lost Contact with Customer&quot;),
+
+ISBLANK( TEXT(When_was_contact_lost_with_customer__c))
+)</errorConditionFormula>
+    <errorMessage>If the Reason Lost field is set to Lost Contact with Customer then the &quot;When was contact lost with customer&quot; field is required.</errorMessage>
+</ValidationRule>

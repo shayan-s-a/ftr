@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ABS_Project_Specialist__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User for ABS Sales Engineers only to assign themselves to an ABS order</description>
+    <externalId>false</externalId>
+    <label>ABS Project Specialist</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.profileName__c</field>
+            <operation>equals</operation>
+            <value>#ABS Solution Engineer Supervisor</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Orders7</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

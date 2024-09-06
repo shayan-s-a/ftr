@@ -1,0 +1,34 @@
+{
+    "Cards": [
+        "order-item-attributes-card"
+    ],
+    "bypassSave": true,
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "8014F0000011mBZ"
+            }
+        ],
+        "orderBy": {
+            "name": "Product"
+        },
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "getItemAttributes",
+            "inputMap": {
+                "OrderId": "{{params.id}}"
+            },
+            "resultVar": "['OrderItem']"
+        }
+    },
+    "previewType": "runTime",
+    "templates": {
+        "0": {
+            "templateUrl": "card-canvas-1x-slds"
+        }
+    },
+    "workspace": [
+        "order-item-attributes-card/Frontier Communications/1/1573766044420"
+    ]
+}

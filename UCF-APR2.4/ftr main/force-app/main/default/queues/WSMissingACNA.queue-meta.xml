@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>WSMissingACNA</name>
+    <queueMembers>
+        <users>
+            <user>hemantha.gujjar@ftr.com</user>
+            <user>michele.oberholtzer@ftr.com</user>
+            <user>pavani.appanagari2@ftr.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Wholesale_Service_Order__c</sobjectType>
+    </queueSobject>
+</Queue>

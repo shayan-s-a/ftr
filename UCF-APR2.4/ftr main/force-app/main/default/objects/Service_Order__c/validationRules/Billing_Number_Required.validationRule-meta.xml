@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Number_Required</fullName>
+    <active>false</active>
+    <description>if the &quot;Order&quot; record type is &quot;Move, Disconnect, or Upgrade&quot; Circuit ID is required</description>
+    <errorConditionFormula>AND(
+OR(
+Order__r.RecordType.Name = &quot;Move Order&quot;,
+Order__r.RecordType.Name = &quot;Disconnect Order&quot;,
+Order__r.RecordType.Name = &quot;Upgrade Order&quot;
+),
+RecordType.Name = &quot;DPI Service Order&quot;,
+Billing_Number__c = &quot;&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Billing_Number__c</errorDisplayField>
+    <errorMessage>For Move, Disconnect, or Upgrade orders, the Billing Number is required is required</errorMessage>
+</ValidationRule>

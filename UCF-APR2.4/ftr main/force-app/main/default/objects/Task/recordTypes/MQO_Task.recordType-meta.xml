@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQO_Task</fullName>
+    <active>true</active>
+    <description>MQO Task - Created for Tray.io integration with Marketo</description>
+    <label>MQO Task</label>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Appointment Attended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo %28CPE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door Knocks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Proposal Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Contacted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>1st Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4th Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AE Meeting Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDT Created%2FSubmit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDT Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDT review with Finance%2FCapital Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call %E2%80%93 Internal regarding Oppty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call %E2%80%93 with Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call - Left Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call - Set Appointment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Unanswered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed %E2%80%93 Unable to find contact information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed - Happy with Existing Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed - Out of Business%2FNot at this location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Sent to CSR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Call %28Post-sale%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Call %E2%80%93 Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Call %E2%80%93 Discovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Call %E2%80%93 Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Materials Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Meeting %E2%80%93 Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Meeting %E2%80%93 Discovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Meeting %E2%80%93 Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DGF Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email %E2%80%93 Internal regarding Oppty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering%2FOperations engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Held Conversation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left VM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left VM%2FSent Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lit Building 2020- Template 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lit Building 2020- Template 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lit Building 2020- Template 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lit Building 2020- Template 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network%2FSolution Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Placed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Internal Deliverables Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Management Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal%2FPresentation Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QBR or Quarterly Business Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP Case Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFQ%2FRFP Document Sent to CSR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Strategy Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Reach after Calling Cadence</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Business Lunch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outgoing Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEER</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

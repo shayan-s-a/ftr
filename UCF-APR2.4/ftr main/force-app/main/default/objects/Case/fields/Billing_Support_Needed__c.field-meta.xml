@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Support_Needed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used on the Support Team case to trigger case assignment rules to Billing</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if this is regarding a billing issue</inlineHelpText>
+    <label>Billing Support Needed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

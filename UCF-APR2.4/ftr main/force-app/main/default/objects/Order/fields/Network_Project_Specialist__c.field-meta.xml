@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Network_Project_Specialist__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Transport Project Manager</inlineHelpText>
+    <label>Implementation Specialist</label>
+    <lookupFilter>
+        <active>false</active>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <errorMessage>User profile does not match the filter criteria.</errorMessage>
+        <filterItems>
+            <field>User.profileName__c</field>
+            <operation>equals</operation>
+            <value>#Project Manager</value>
+        </filterItems>
+        <filterItems>
+            <field>User.profileName__c</field>
+            <operation>equals</operation>
+            <value>#Project Manager - Supervisor Level</value>
+        </filterItems>
+        <filterItems>
+            <field>User.profileName__c</field>
+            <operation>equals</operation>
+            <value>#Provisioning</value>
+        </filterItems>
+        <filterItems>
+            <field>User.profileName__c</field>
+            <operation>equals</operation>
+            <value>#Hot Cut Service Consultants</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Orders6</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

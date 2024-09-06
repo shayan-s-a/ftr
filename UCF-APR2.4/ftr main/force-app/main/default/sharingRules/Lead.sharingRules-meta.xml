@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ConstructConnect_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>ConstructConnect Leads</label>
+        <sharedTo>
+            <group>Enterprise_Sales_Org</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>LeadSource</field>
+            <operation>equals</operation>
+            <value>ConstructConnect</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MDU</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MDU</label>
+        <sharedTo>
+            <group>MDU_All</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MDU Lead</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MDU_Leads_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MDU Leads RW</label>
+        <sharedTo>
+            <group>MDU_Non_BDM</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MDU Lead</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MTU_Lead_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MTU Lead Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>SMB_Sales_and_Strategy</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Commercial SMB Lead,MTU Lead</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>MDU_Leads_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MDU Leads RO</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>TTL_Lead_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>TTL Lead Sharing</description>
+        <label>TTL Lead Sharing</label>
+        <sharedTo>
+            <group>TTL_Leads</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Take_the_Lead_team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Take the Lead team</label>
+        <sharedTo>
+            <group>Take_the_Lead_Call_Center</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

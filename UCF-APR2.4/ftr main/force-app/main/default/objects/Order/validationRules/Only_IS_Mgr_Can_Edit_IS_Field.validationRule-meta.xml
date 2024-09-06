@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_IS_Mgr_Can_Edit_IS_Field</fullName>
+    <active>false</active>
+    <description>Only IS Manager/Supervisor can edit the IS field in the order object.</description>
+    <errorConditionFormula>AND(
+  NOT(ISNEW()),
+  ISCHANGED(Network_Project_Specialist__c),
+  NOT(
+    (
+      ($Profile.Name = &apos;#Project Manager&apos; || $Profile.Name = &apos;#Project Manager - Supervisor Level&apos;) &amp;&amp;
+      ($User.Title = &apos;Manager, Project Management&apos;)
+    ) || ($Profile.Name = &apos;Frontier System Administrator&apos;)
+  )
+)</errorConditionFormula>
+    <errorDisplayField>No_of_location__c</errorDisplayField>
+    <errorMessage>Only IS Manager/Supervisor can edit the IS field in the order object.</errorMessage>
+</ValidationRule>

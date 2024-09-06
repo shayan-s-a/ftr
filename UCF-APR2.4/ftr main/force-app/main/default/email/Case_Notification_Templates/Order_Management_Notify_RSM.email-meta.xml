@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Order Management - Notify RSM</name>
+    <style>none</style>
+    <subject>{!Case.Customer_Number__c} – {!Case.Account} – {!Case.OrderManagement_Type__c} – STATS#: {!Case.Orderz__c} -Notification</subject>
+    <textOnly>RSM,
+
+We are unable to notify the AE assigned to this account as Salesforce is not updated with the correct AE.  Please forward this email to the correct AE and have Salesforce updated so that in the future, the email goes directly to the AE.
+
+Account Owner,
+
+Please be aware of the following account changes/modifications.
+
+Contact Name: {!Case.Contact}
+Monthly Recurring Charges: {!Case.OrderManagement_MonthlyRecurringCharges__c}
+Non Recurring Charges: {!Case.OrderManagement_NonRecurringCharges__c}
+Case Origin: {!Case.Origin}
+Description: {!Case.Description}
+
+Follow the link below to access the Salesforce case.
+{!Case.CaseNumber}
+
+Thank You,
+{!Case.CreatedBy}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

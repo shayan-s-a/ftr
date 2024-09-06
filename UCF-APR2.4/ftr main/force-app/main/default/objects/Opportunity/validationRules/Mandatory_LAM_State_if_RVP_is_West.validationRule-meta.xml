@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_LAM_State_if_RVP_is_West</fullName>
+    <active>false</active>
+    <description>The LAM field (State) becomes mandatory if the user is in the West</description>
+    <errorConditionFormula>AND(
+$User.RVP__c = &quot;RVP West&quot;,
+ISPICKVAL(Local_Area_Market_State__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Local_Area_Market_State__c</errorDisplayField>
+    <errorMessage>You must select a State and LAM if you are working an opportunity in the West Region.</errorMessage>
+</ValidationRule>

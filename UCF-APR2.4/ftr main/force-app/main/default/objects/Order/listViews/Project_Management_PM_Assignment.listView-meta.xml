@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Management_PM_Assignment</fullName>
+    <booleanFilter>(1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8 AND 9) OR 10</booleanFilter>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>Territory_Name__c</columns>
+    <columns>Sales_Channel__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>Network_Project_Specialist__c</columns>
+    <columns>ORDER.RECORDTYPE</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Product__c</columns>
+    <columns>Add_On_Products__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,Complete,New,Rejected to AE</value>
+    </filters>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>EIA,E-LAN,E-LAN &amp; EIA,Ethernet,EVPL,FOTS,Frontier AnyWare UCaaS,IP/VPN,Managed Enterprise WiFi,Managed Router,Managed Services,Ring Central,SDWAN,UCaaS/UCF</value>
+    </filters>
+    <filters>
+        <field>Network_Project_Specialist__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Implementor_PM__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Order.Circuit_Disconnect,Order.Contract_Renewal,Order.DID_Order_Request,Order.Disconnect_Order,Order.Records_Only_Order,Order.Transfer_Ownership_Order,Order.UCaaS_Contract_Renewal_Order,Order.UCaaS_Disconnect_Order,Order.UCaaS_Records_Only_Order,Order.UCaaS_Transfer_of_Ownership_Order,Order.Voice_Disconnect_Order,Order.Voice_Simple_Order</value>
+    </filters>
+    <filters>
+        <field>SALES.ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>AJ Test</value>
+    </filters>
+    <filters>
+        <field>SALES.ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>AE Test</value>
+    </filters>
+    <filters>
+        <field>SALES.ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>Test Account</value>
+    </filters>
+    <filters>
+        <field>SALES.ACCOUNT.NAME</field>
+        <operation>notEqual</operation>
+        <value>Test Creswell</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>equals</operation>
+        <value>PM Assignment</value>
+    </filters>
+    <label>Project Management - PM Assignment</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

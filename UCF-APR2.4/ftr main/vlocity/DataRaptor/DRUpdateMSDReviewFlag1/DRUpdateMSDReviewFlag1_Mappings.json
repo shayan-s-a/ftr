@@ -1,0 +1,60 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "Formula",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Formula",
+        "%vlocity_namespace%__FormulaOrder__c": 1,
+        "%vlocity_namespace%__GlobalKey__c": "e2095d91-8479-5c08-d33b-6a7465532aed",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "DRUpdateMSDReviewFlag1Custom5533",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "DRUpdateMSDReviewFlag1",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "Order",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "%vlocity_namespace%__OrderStatus__c",
+        "%vlocity_namespace%__GlobalKey__c": "62e4f343-6696-0c90-a759-4e04fdf845d6",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "CustomerAndOrderInformation:SDWANFlag",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "DRUpdateMSDReviewFlag1Custom322",
+        "%vlocity_namespace%__TransformValuesMap__c": "{\"Y\":\"Mngd Svc Review\"}",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "DRUpdateMSDReviewFlag1",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "Order",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Id",
+        "%vlocity_namespace%__GlobalKey__c": "0cb392fd-1688-05d6-f6f9-9002093387bd",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "CustomerAndOrderInformation:OrderId",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "DRUpdateMSDReviewFlag1Custom4638",
+        "%vlocity_namespace%__UpsertKey__c": true,
+        "Name": "DRUpdateMSDReviewFlag1",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__ConfigurationValue__c": "FAKEMAPPING",
+        "%vlocity_namespace%__DomainObjectAPIName__c": "Order",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Id",
+        "%vlocity_namespace%__FilterOperator__c": "=",
+        "%vlocity_namespace%__GlobalKey__c": "2a8d538e-808a-5f55-103b-4ef925ddd673",
+        "%vlocity_namespace%__IsDisabled__c": true,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "DRUpdateMSDReviewFlag1Customa8b0200000000hzAAAItem1",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "DRUpdateMSDReviewFlag1",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

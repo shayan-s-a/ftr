@@ -1,0 +1,150 @@
+<template>
+    <div if:true={showLoader}>
+          <div class="exampleHolder">
+        		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+			 </div>
+    </div>      
+    <lightning-card title="General Voice Mail">
+<div if:false={showLoader} class="button-container">
+            <template if:false={isnetworktranslation}>
+                <!-- <template if:false={isOrderInProgressOrCompleted}> -->
+                    <div class="button-div ">
+                    <!-- Add buttons here with left alignment and some space -->
+                                <lightning-file-upload accept={acceptedFormats} label="Attach CSV File" onuploadfinished={uploadFileHandler}> </lightning-file-upload>
+                    </div>
+            </template>
+
+                <!-- </template> -->
+                 <template if:true={isTranslation}>
+                     <div class="button-div slds-m-left_x-small slds-m-top_large">
+                        <lightning-button label="Export Template" onclick={exportTemplate} variant="brand"></lightning-button>
+                    </div>
+                  </template>
+                  <template if:true={isReadOnly}>
+                    <div class="button-div slds-m-left_x-small slds-m-top_large">
+                       <lightning-button label="Export Template" onclick={exportTemplate} variant="brand"></lightning-button>
+                   </div>
+                 </template>
+                 <div class="button-div slds-m-left_x-small slds-m-top_large">
+                     
+                <lightning-button label="Export CSV" onclick={exportCSV} variant="brand"></lightning-button>
+                
+                 </div>
+        </div>
+        <div if:false={showLoader} class="slds-scrollable_x">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+
+                <thead>
+            <tr>
+                <th scope="col" onclick={sortByPhoneNumber}>Phone Number
+                                  <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                </th>
+                <th scope="col" onclick={sortByExtension}>Extension
+                            <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+
+                </th>
+                <th scope="col" onclick={sortByMLHGName}>Name
+                            <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+
+                </th>
+                <th scope="col" onclick={sortByMLHGEmail}>Email
+                              <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+
+                </th>
+                <template if:true={isTranslation}>
+                    <th class="" scope="col" onclick={sortByEASPin}>EAS Pin
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                    </th>
+                </template>
+                <template if:true={isReadOnly}>
+                    <th class="" scope="col" onclick={sortByEASPin}>EAS Pin
+                        <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                    </th>
+                </template>
+            </tr>
+        </thead>
+                <tbody>
+                    <template for:each={ftrDIDNumberDetailsGeneralVoicemail} for:item="obj">
+                        <tr key={obj.Id}>
+                            <td>
+                                <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                            </td>
+                            <td data-label="object label">
+                                <input type="text" 
+                                    pattern="\d*"
+                                    class="slds-input" style="width:100px"
+                                    maxlength={obj.Ucf_Extension_Lenght__c}
+                                    value={obj.Ucf_Extension__c}
+                                    oninput={handleInputChange}
+                                    data-record-id={obj.Id}
+                                    onkeypress={validateInputForNumber}
+                                    data-field-name="Ucf_Extension__c" />
+                                
+                                
+                            </td>
+                            <td>
+                                <template if:true={obj.editMode}>
+
+                                        <input  type="text" class="slds-input" value={obj.Ucf_General_Voice_Mail_Name__c} 
+                                                onchange={handleInputChange} 
+                                                data-record-id={obj.Id} data-field-name="Ucf_General_Voice_Mail_Name__c"  />
+                                    
+                                    <template if:false={obj.editMode}>
+                                                    {obj.Ucf_General_Voice_Mail_Name__c}
+                                    </template>
+                                        
+                                </template>
+                                    
+                            </td>
+
+                             <td data-label="object label">
+                                    <template if:true={obj.editMode}>
+                                                 <input type="email" class="slds-input" value={obj.Ucf_Email__c} 
+                                                        onchange={handleInputChange} 
+                                                        data-record-id={obj.Id} data-field-name="Ucf_Email__c" ></input>
+                                    </template>
+                                <template if:false={obj.editMode}>
+                                    {obj.Ucf_Email__c}
+                                </template>
+                                    </td>
+                                <td>  
+                                <template if:true={isTranslation}>
+                                    <td>
+                                        <template if:true={obj.editMode}>
+                                                <input  data-record-id={obj.Id} data-field-name="EAS_Pin__c" 
+                                                        type="text" id="bgName" maxlength="6" 
+                                                        class="slds-input" value={obj.EAS_Pin__c} 
+                                                        onkeypress={validateInputForNumber} 
+                                                        onchange={handleInputChange} />
+                                        </template>   
+                                    </td>
+                                </template>  
+                                <template if:true={isReadOnly}>
+                                    <td>
+                                        <template if:true={obj.editMode}>
+                                                <input  data-record-id={obj.Id} data-field-name="EAS_Pin__c" 
+                                                        type="text" id="rbgName" maxlength="6" 
+                                                        class="slds-input" value={obj.EAS_Pin__c} 
+                                                        onkeypress={validateInputForNumber} 
+                                                        onchange={handleInputChange} disabled/>
+                                        </template>   
+                                    </td>
+                                </template>       
+                                </td>  
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+<br>
+<br>
+<template if:false={isnetworktranslation}>           
+    <!-- <template if:false={isOrderInProgressOrCompleted}> -->
+        <div if:false={showLoader} class="slds-align_absolute-center">
+            <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    <!-- </template>     -->
+ </template>
+    </lightning-card>
+</template>

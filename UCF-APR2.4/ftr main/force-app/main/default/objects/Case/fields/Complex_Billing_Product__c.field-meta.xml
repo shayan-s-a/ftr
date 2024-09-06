@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complex_Billing_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Complex Billing Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Billing_Issue_Cause__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Frame</fullName>
+                <default>false</default>
+                <label>Frame</label>
+            </value>
+            <value>
+                <fullName>Metro E</fullName>
+                <default>false</default>
+                <label>Metro E</label>
+            </value>
+            <value>
+                <fullName>OC 48</fullName>
+                <default>false</default>
+                <label>OC 48</label>
+            </value>
+            <value>
+                <fullName>OS 192 Ring</fullName>
+                <default>false</default>
+                <label>OS 192 Ring</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PRI</fullName>
+                <default>false</default>
+                <label>PRI</label>
+            </value>
+            <value>
+                <fullName>TLS</fullName>
+                <default>false</default>
+                <label>TLS</label>
+            </value>
+            <value>
+                <fullName>VOIP</fullName>
+                <default>false</default>
+                <label>VOIP</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Frame</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Metro E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>OC 48</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>OS 192 Ring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>PRI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>TLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complex Billing</controllingFieldValue>
+            <valueName>VOIP</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_To2__c</fullName>
+    <externalId>false</externalId>
+    <label>Related To</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Request_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Analyze tier assignment</fullName>
+                <default>false</default>
+                <label>Analyze tier assignment</label>
+            </value>
+            <value>
+                <fullName>Business Requirements</fullName>
+                <default>false</default>
+                <label>Business Requirements</label>
+            </value>
+            <value>
+                <fullName>Cancel/Change Order</fullName>
+                <default>false</default>
+                <label>Cancel/Change Order</label>
+            </value>
+            <value>
+                <fullName>Cannot convert</fullName>
+                <default>false</default>
+                <label>Cannot convert</label>
+            </value>
+            <value>
+                <fullName>Case Update</fullName>
+                <default>false</default>
+                <label>Case Update</label>
+            </value>
+            <value>
+                <fullName>Who is assigned to</fullName>
+                <default>false</default>
+                <label>Change Management</label>
+            </value>
+            <value>
+                <fullName>Change Opportunity Owner</fullName>
+                <default>false</default>
+                <label>Change Opportunity Owner</label>
+            </value>
+            <value>
+                <fullName>Change Record</fullName>
+                <default>false</default>
+                <label>Change Record</label>
+            </value>
+            <value>
+                <fullName>Clari</fullName>
+                <default>false</default>
+                <label>Clari</label>
+            </value>
+            <value>
+                <fullName>Company information incorrect</fullName>
+                <default>false</default>
+                <label>Company information incorrect</label>
+            </value>
+            <value>
+                <fullName>Company Record is correct in SF</fullName>
+                <default>false</default>
+                <label>Company Record is correct in SF</label>
+            </value>
+            <value>
+                <fullName>Company Record needs updated</fullName>
+                <default>false</default>
+                <label>Company Record needs updated</label>
+            </value>
+            <value>
+                <fullName>Company Record not found</fullName>
+                <default>false</default>
+                <label>Company Record not found</label>
+            </value>
+            <value>
+                <fullName>Connect existing opp to lead</fullName>
+                <default>false</default>
+                <label>Connect existing opp to lead</label>
+            </value>
+            <value>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+                <label>Contracts</label>
+            </value>
+            <value>
+                <fullName>CPE</fullName>
+                <default>false</default>
+                <label>CPE</label>
+            </value>
+            <value>
+                <fullName>CPQ / Sterling</fullName>
+                <default>false</default>
+                <label>CPQ / Sterling</label>
+            </value>
+            <value>
+                <fullName>Create Company</fullName>
+                <default>false</default>
+                <label>Create Company</label>
+            </value>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>DPI Billing/Schedule ID</fullName>
+                <default>false</default>
+                <label>DPI Billing/Schedule ID</label>
+            </value>
+            <value>
+                <fullName>Ethernet Order</fullName>
+                <default>false</default>
+                <label>Ethernet Order</label>
+            </value>
+            <value>
+                <fullName>FAW UCaaS</fullName>
+                <default>false</default>
+                <label>FAW UCaaS</label>
+            </value>
+            <value>
+                <fullName>Idea</fullName>
+                <default>false</default>
+                <label>Idea</label>
+            </value>
+            <value>
+                <fullName>Leads</fullName>
+                <default>false</default>
+                <label>Leads</label>
+            </value>
+            <value>
+                <fullName>Duplicates need merged</fullName>
+                <default>false</default>
+                <label>Merge Duplicates</label>
+            </value>
+            <value>
+                <fullName>Network Discovery</fullName>
+                <default>false</default>
+                <label>Network Discovery</label>
+            </value>
+            <value>
+                <fullName>Not found</fullName>
+                <default>false</default>
+                <label>Not found</label>
+            </value>
+            <value>
+                <fullName>Orders</fullName>
+                <default>false</default>
+                <label>Orders</label>
+            </value>
+            <value>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+                <label>Opportunity</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Products incorrect / etc</fullName>
+                <default>false</default>
+                <label>Products incorrect / etc</label>
+            </value>
+            <value>
+                <fullName>Question</fullName>
+                <default>false</default>
+                <label>Question</label>
+            </value>
+            <value>
+                <fullName>Quoting</fullName>
+                <default>false</default>
+                <label>Quoting</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Schedule ID Conflicts/Issues</fullName>
+                <default>false</default>
+                <label>Schedule ID Conflicts/Issues</label>
+            </value>
+            <value>
+                <fullName>Spring CM</fullName>
+                <default>false</default>
+                <label>Spring CM</label>
+            </value>
+            <value>
+                <fullName>Needs Updated</fullName>
+                <default>false</default>
+                <label>Update Record</label>
+            </value>
+            <value>
+                <fullName>Vlocity</fullName>
+                <default>false</default>
+                <label>Vlocity</label>
+            </value>
+            <value>
+                <fullName>B2B Survey</fullName>
+                <default>false</default>
+                <label>B2B Survey</label>
+            </value>
+            <value>
+                <fullName>Construct Connect</fullName>
+                <default>false</default>
+                <label>Construct Connect</label>
+            </value>
+            <value>
+                <fullName>Contract Request</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contract Request</label>
+            </value>
+            <value>
+                <fullName>Order Request</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Order Request</label>
+            </value>
+            <value>
+                <fullName>Quote Request</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Quote Request</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>General Support</controllingFieldValue>
+            <valueName>Cancel/Change Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Support</controllingFieldValue>
+            <valueName>Change Record</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Support</controllingFieldValue>
+            <controllingFieldValue>Opportunity Corrections</controllingFieldValue>
+            <valueName>DPI Billing/Schedule ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Support</controllingFieldValue>
+            <valueName>Leads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Support</controllingFieldValue>
+            <valueName>Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Support</controllingFieldValue>
+            <controllingFieldValue>Opportunity Corrections</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Support</controllingFieldValue>
+            <valueName>B2B Survey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record</controllingFieldValue>
+            <valueName>Who is assigned to</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record</controllingFieldValue>
+            <valueName>Create Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record</controllingFieldValue>
+            <valueName>Duplicates need merged</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record</controllingFieldValue>
+            <valueName>Not found</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record</controllingFieldValue>
+            <valueName>Needs Updated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record</controllingFieldValue>
+            <valueName>Construct Connect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Convert a Lead</controllingFieldValue>
+            <valueName>Cannot convert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Convert a Lead</controllingFieldValue>
+            <valueName>Company Record is correct in SF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Convert a Lead</controllingFieldValue>
+            <valueName>Company Record needs updated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Convert a Lead</controllingFieldValue>
+            <valueName>Company Record not found</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Access Issues</controllingFieldValue>
+            <valueName>Clari</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Access Issues</controllingFieldValue>
+            <valueName>CPQ / Sterling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Access Issues</controllingFieldValue>
+            <valueName>Network Discovery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Access Issues</controllingFieldValue>
+            <valueName>Salesforce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Access Issues</controllingFieldValue>
+            <valueName>Spring CM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Submit an Order</controllingFieldValue>
+            <valueName>Ethernet Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Submit an Order</controllingFieldValue>
+            <valueName>FAW UCaaS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Submit an Order</controllingFieldValue>
+            <valueName>Schedule ID Conflicts/Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updated an Opportunity</controllingFieldValue>
+            <valueName>Change Opportunity Owner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updated an Opportunity</controllingFieldValue>
+            <valueName>Company information incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updated an Opportunity</controllingFieldValue>
+            <valueName>Connect existing opp to lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Updated an Opportunity</controllingFieldValue>
+            <valueName>Products incorrect / etc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vlocity</controllingFieldValue>
+            <valueName>Business Requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vlocity</controllingFieldValue>
+            <valueName>Defect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vlocity</controllingFieldValue>
+            <valueName>Idea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vlocity</controllingFieldValue>
+            <valueName>Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Corrections</controllingFieldValue>
+            <valueName>Contracts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Corrections</controllingFieldValue>
+            <valueName>Orders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Corrections</controllingFieldValue>
+            <valueName>Quoting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Corrections</controllingFieldValue>
+            <valueName>Vlocity</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

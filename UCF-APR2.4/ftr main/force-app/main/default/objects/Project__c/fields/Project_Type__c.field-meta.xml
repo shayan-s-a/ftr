@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Project Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Brand (Naming for new Products)</fullName>
+                <default>false</default>
+                <label>Brand (Naming for new Products)</label>
+            </value>
+            <value>
+                <fullName>Campaign Development</fullName>
+                <default>false</default>
+                <label>Campaign Development</label>
+            </value>
+            <value>
+                <fullName>Communications</fullName>
+                <default>false</default>
+                <label>Communications</label>
+            </value>
+            <value>
+                <fullName>Competitive Insights</fullName>
+                <default>false</default>
+                <label>Competitive Insights</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Market Strategy</fullName>
+                <default>false</default>
+                <label>Market Strategy</label>
+            </value>
+            <value>
+                <fullName>Metrics &amp; Reporting</fullName>
+                <default>false</default>
+                <label>Metrics &amp; Reporting</label>
+            </value>
+            <value>
+                <fullName>Product (includes new, update to existing, offer (pricing), promotion,etc.)</fullName>
+                <default>false</default>
+                <label>Product (includes new, update to existing, offer (pricing), promotion,etc.)</label>
+            </value>
+            <value>
+                <fullName>Sales Support Materials (Flyers, Yard Signs, Job Aids, Scribes, etc.)</fullName>
+                <default>false</default>
+                <label>Sales Support Materials (Flyers, Yard Signs, Job Aids, Scribes, etc.)</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

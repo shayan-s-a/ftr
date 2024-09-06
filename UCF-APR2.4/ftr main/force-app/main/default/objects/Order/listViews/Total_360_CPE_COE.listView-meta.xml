@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_360_CPE_COE</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>Paid_Expedite__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.TOTAL_AMOUNT</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>CPE_COE__c</columns>
+    <columns>CPE_COE_Stage__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>CPE</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notContain</operation>
+        <value>Cancelled</value>
+    </filters>
+    <label>Total 360 - CPE COE</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

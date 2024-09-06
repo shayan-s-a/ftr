@@ -1,0 +1,93 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Bundle Quoting",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/Bundling/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "Bundle Quoting",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/Bundling/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "MFQQuestions",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/Bundling/English/MFQQuestions",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "MFQQuestions",
+    "%vlocity_namespace%__ParentElementType__c": "Block",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "disOnTplt": false,
+        "label": null,
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "Question1"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "Question2"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "Question3"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "Question4"
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "No",
+                                    "field": "Question1"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "No",
+                                    "field": "Question2"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "No",
+                                    "field": "Question3"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "No",
+                                    "field": "Question4"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "text": "<h2><strong><span style=\"color: #339966; font-weight: 400; font-size: 1rem;\">You are Qualified. Managed Firewall Add-on will be auto added to the cart.</span></strong></h2>",
+        "textKey": ""
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "MFirewallQual",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/Bundling/English/MFirewallQual"
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>Authorized Buyer</fullName>
+                <default>false</default>
+                <label>Authorized Buyer</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>D &amp; B Contact</fullName>
+                <default>false</default>
+                <label>D &amp; B Contact</label>
+            </value>
+            <value>
+                <fullName>Maintenance Contact</fullName>
+                <default>false</default>
+                <label>Maintenance Contact</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Recruit</fullName>
+                <default>false</default>
+                <label>Recruit</label>
+            </value>
+            <value>
+                <fullName>Recruit - Employee Candidate</fullName>
+                <default>false</default>
+                <label>Recruit - Employee Candidate</label>
+            </value>
+            <value>
+                <fullName>Send Communication</fullName>
+                <default>false</default>
+                <label>Send Communication</label>
+            </value>
+            <value>
+                <fullName>Site Contact</fullName>
+                <default>false</default>
+                <label>Site Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

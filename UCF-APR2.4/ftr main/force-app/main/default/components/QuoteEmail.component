@@ -1,0 +1,22 @@
+<apex:component controller="QuoteEmail" access="global">
+    <apex:attribute name="recordId" type="Id" description="Id of the account" assignTo="{!QuoteId}"/>
+    
+        <ol>
+        <apex:repeat value="{!QuoteLineItems}" var="o">
+            <li>
+                <div>Location Address : {!o.vlocity_cmt__ServiceAccountId__r.ShippingStreet}, {!o.vlocity_cmt__ServiceAccountId__r.ShippingCity}, 
+                	{!o.vlocity_cmt__ServiceAccountId__r.ShippingState}, {!o.vlocity_cmt__ServiceAccountId__r.ShippingCountry},
+                    {!o.vlocity_cmt__ServiceAccountId__r.ShippingPostalCode}
+                </div>   
+                <div>Speed: {!o.Speed__c}</div>
+                <div>Term: {!o.Term__c}</div>
+                <div>Product Type: {!o.vlocity_cmt__Product2Id__r.Name}</div>
+                <div>Standard Rate: ${!o.vlocity_cmt__BaseRecurringCharge__c}</div> 
+                <div>Requested Rate: ${!o.vlocity_cmt__RecurringCharge__c}</div> 
+                <div>Discount: {!o.ftr_MRC_Discounted__c}%</div> 
+                <!-- <div>Product Code: {!o.PricebookEntry.Product2.ProductCode}</div>-->
+            </li>
+        </apex:repeat> 
+        </ol>
+    
+</apex:component>

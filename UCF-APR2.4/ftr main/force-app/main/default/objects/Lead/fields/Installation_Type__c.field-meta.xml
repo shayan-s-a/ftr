@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Installation_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Installation Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brownfield has full/partial FTR service</fullName>
+                <default>false</default>
+                <label>Brownfield has full/partial FTR service</label>
+            </value>
+            <value>
+                <fullName>Brownfield has no FTR service</fullName>
+                <default>false</default>
+                <label>Brownfield has no FTR service</label>
+            </value>
+            <value>
+                <fullName>Greenfield</fullName>
+                <default>false</default>
+                <label>Greenfield</label>
+            </value>
+            <value>
+                <fullName>Expansion - Brownfield has full/partial FTR service</fullName>
+                <default>false</default>
+                <label>Expansion - Brownfield has full/partial FTR service</label>
+            </value>
+            <value>
+                <fullName>Expansion - Brownfield has no FTR service</fullName>
+                <default>false</default>
+                <label>Expansion - Brownfield has no FTR service</label>
+            </value>
+            <value>
+                <fullName>Expansion - TBD</fullName>
+                <default>false</default>
+                <label>Expansion - TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

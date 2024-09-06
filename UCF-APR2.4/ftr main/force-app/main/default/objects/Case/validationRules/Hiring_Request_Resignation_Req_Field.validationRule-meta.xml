@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hiring_Request_Resignation_Req_Field</fullName>
+    <active>true</active>
+    <description>If Resignation/Term Letter = No, Will current PIP lead to termination? is required.</description>
+    <errorConditionFormula>AND
+(RecordType.Name = &quot;Hiring Request&quot;,
+ISPICKVAL(Resignation_Letter_Term_Notification__c ,&quot;No&quot;),
+OR(
+(ISBLANK(TEXT(Is_it_predicted_that_current__c )))
+))</errorConditionFormula>
+    <errorDisplayField>Is_it_predicted_that_current__c</errorDisplayField>
+    <errorMessage>If Resignation/Term Letter = No, Will current PIP lead to termination? is required.</errorMessage>
+</ValidationRule>

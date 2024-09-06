@@ -1,0 +1,51 @@
+<apex:page controller="SterlingQuote_Extension" applyBodyTag="true" lightningStylesheets="true"> 
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"  /> 
+<script type="text/javascript">__sfdcSessionId = '{!$Api.Session_Id}';</script>
+<script src="/soap/ajax/29.0/connection.js" type="text/javascript"/>
+<script src="/soap/ajax/29.0/apex.js" type="text/javascript"/>
+    <script>
+                //j$ = jQuery.noConflict();
+        var j = jQuery.noConflict(); 
+        // MMG 10-16-2014 Change to Control Call for end point url
+        sforce.connection.sessionId = '{!$Api.Session_ID}';
+        var CPQURL = sforce.connection.query("Select URL_Value__c,Partner_URL__c from Control_Call__c where URL_Name__c = 'CPQQuote'");
+        j(document).ready(function(){ 
+            // j('#form_cpq').attr('action','http://10.164.66.101:9082/sfs/sfs/cpq.do'); 
+            if({!IsPartnerUser} == true) {
+                j('#form_cpq').attr('action',CPQURL.records.Partner_URL__c);
+            } else {
+                j('#form_cpq').attr('action',CPQURL.records.URL_Value__c);
+            }
+              
+            j('#form_cpq').attr('target','iframe_cpq'); 
+            if({!IsPartnerUser} == true) {
+                j('#form_cpq').attr('method','GET');
+            } else {
+                j('#form_cpq').attr('method','POST');
+            }
+            <apex:repeat value="{!FormVariables}" var="var"> 
+                var keyValuePair = '{!var}'; 
+                var key = keyValuePair.split(':')[0]; 
+                var value = keyValuePair.split(':')[1]; 
+                var input = j('<input>').attr('type','hidden').attr('name',key).val(value); 
+                j('#form_cpq').append(j(input)); 
+            </apex:repeat> 
+            j('#form_cpq').submit();  
+        }); 
+        </script> 
+        <style>
+            .back-to-opp {
+                padding: 2px 10px;
+            }    
+        </style>
+    
+    <apex:form >
+        <button class="slds-button slds-button_brand back-to-opp" onclick="return backToOpp();">Back to Opportunity</button>
+        <apex:actionfunction name="backToOpp" action="{!navigateToOpportunity}" />
+    </apex:form>
+    <form id="form_cpq" target="_blank"/>
+    <!-- <apex:iframe frameborder="true" scrolling="auto" id="iframe_cpq" height="800" width="100%" /> -->
+    <!--
+    <apex:iframe height="1000" scrolling="true" id="iframe_cpq"/>
+	-->
+</apex:page>

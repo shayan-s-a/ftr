@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Requirement</fullName>
+    <active>false</active>
+    <description>This requires either an email address or the opt out option to be checked for a contact record to be saved.</description>
+    <errorConditionFormula>AND(
+ISBLANK(Email),
+HasOptedOutOfEmail = FALSE
+)</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>Please update this contact with an email address</errorMessage>
+</ValidationRule>

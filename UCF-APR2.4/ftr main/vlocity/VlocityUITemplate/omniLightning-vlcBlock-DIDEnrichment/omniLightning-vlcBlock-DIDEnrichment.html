@@ -1,0 +1,124 @@
+<div class="slds-col--padded slds-size--1-of-1 custom-block">
+
+    <ng-form name='loopform'
+                class='slds-form-element vlc-flex slds-clearfix vlc-slds-block'
+                id ='{{::control.name}}'
+                ng-repeat='control in child.eleArray' 
+                ng-controller="customBlockController" >
+
+        <div class="slds-form-element__control" >
+
+            <!-- add block label with toggle-->
+            <label vlc-slds-toggle="toggle"
+                    class="slds-form-element__label slds-clearfix toggle-label" 
+                    ng-if="::control.propSetMap.label && !control.propSetMap.labelIsFirstElement ">
+
+                <slds-svg-icon aria-hidden="true"
+                                sprite="'utility'"
+                                icon="'chevrondown'"
+                                size="'small'"
+                                extra-classes="'vlc-slds-collapse slds-button__icon slds-button__icon--large'">
+                </slds-svg-icon>
+
+                <slds-svg-icon aria-hidden="true"
+                                sprite="'utility'"
+                                icon="'chevronup'"
+                                size="'small'"
+                                extra-classes="'vlc-slds-expand slds-button__icon slds-button__icon--large'">
+                </slds-svg-icon>
+
+
+                <div class="slds-form-element__label--toggleText">
+                    {{::control.propSetMap.label}}
+                    <span ng-if='!( $first && $last )'>{{control.index+1}}</span>
+                </div>
+                
+                <div class="vlc-slds-control-action__container" vlc-bubble-canceller="true" ng-show="bpTree.response.SelectServiceLocation.userCanEdit == true">
+
+                    <span ng-if='::control.propSetMap.repeat && !control.propSetMap.noAdd'
+                            class="add-delete-buttons"
+                            title="Add"
+                            ng-click='baseCtrl.addItem(this, child, $index);clearIdField(child, $index+1)'
+                            ng-disabled='control.propSetMap.repeatLimit !== undefined && control.propSetMap.repeatLimit !== null && child.eleArray.length >= control.propSetMap.repeatLimit+1'>
+                        <!-- {{::customLabels.OmniAdd}} -->
+                        <slds-svg-icon aria-hidden="true"
+                            sprite="'utility'"
+                            icon="'add'"
+                            size="'large'"
+                            extra-classes="'slds-button__icon slds-button__icon--large'">
+                        </slds-svg-icon>
+                    </span>
+
+                    <!-- delete button that deltes item from database -->
+                    <span ng-if='child.eleArray.length > 1  && !control.propSetMap.noAdd'
+                            class="add-delete-buttons"
+                            title="Delete"
+                            confirmed-click="deleteFromDatabase(this, child, $index); removeDomElement(this, child, $index); "
+                            ng-confirm-click="Are you sure you want to delete this item?"
+                            vlc-slds-remove-item="ng-form.vlc-slds-block">
+                        <!-- {{::customLabels.OmniDelete}} -->
+                        <slds-svg-icon aria-hidden="true"
+                            sprite="'utility'"
+                            icon="'delete'"
+                            size="'large'"
+                            extra-classes="'slds-button__icon slds-button__icon--large'">
+                        </slds-svg-icon>
+                    </span>
+
+                </div>
+
+            </label>
+
+            <!-- add block label no toggle -->
+            <label vlc-slds-toggle="toggle"
+                class="slds-form-element__label slds-clearfix no-click-toggle" 
+                   ng-if="::control.propSetMap.label && control.propSetMap.labelIsFirstElement ">
+
+                <div class="slds-form-element__label_toggleText" style="font-size: 1.5rem; font-weight: 300; padding-left: 3rem;" >
+                    {{control.children[0].response}}
+                </div>
+
+            </label>
+
+            
+            <!-- block withing the main grid  ng-hide hides hthe block by default-->
+            <div class='slds-size--1-of-1 ng-hide'
+                    vlc-slds-toggle-elem='visible' ng-class="{ 'noTopPadding' : control.propSetMap.labelIsFirstElement }">
+
+                <div class="vlc-slds-control-action__container" vlc-bubble-canceller="true" ng-if="::!control.propSetMap.label">
+
+                    <span ng-if='::control.propSetMap.repeat'
+                            ng-click='baseCtrl.addItem(this, child, $index)'
+                            class="add-delete-buttons"
+                            ng-disabled='control.propSetMap.repeatLimit !== undefined && control.propSetMap.repeatLimit !== null && child.eleArray.length >= control.propSetMap.repeatLimit+1'
+                            aria-hidden="true">
+                        {{::customLabels.OmniAdd}}
+                    </span>
+
+                    <span ng-if='child.eleArray.length > 1'
+                            ng-click='removeDomElement(this, child, $index)'
+                            class="add-delete-buttons"
+                            vlc-slds-remove-item="ng-form.vlc-slds-block"
+                            aria-hidden="true">
+                        {{::customLabels.OmniDelete}}
+                    </span>
+
+                </div>
+
+                <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                    <child vlc-slds-change-inline-templates="::child.eleArray[0].propSetMap.showInputWidth"
+                            class="slds-size--1-of-1 slds-medium-size--{{child.eleArray[0].propSetMap.controlWidth}}-of-12"
+                            ng-repeat='child in ::children = control.children'
+                            ng-init="child.blockIndex = control.index"
+                            ng-show='::!child.eleArray[0].propSetMap.hide'
+                            ng-if='(child.eleArray[0].propSetMap.hide && child.eleArray[0].type!=="Formula")||(!child.eleArray[0].propSetMap.show || evaluateShow(child.eleArray[0], this))'
+                            >
+                    </child>
+                </div>
+            </div>
+
+        </div>
+
+    </ng-form>
+
+</div>

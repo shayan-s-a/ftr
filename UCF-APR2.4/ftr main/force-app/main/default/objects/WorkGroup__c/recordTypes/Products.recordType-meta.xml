@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products</fullName>
+    <active>true</active>
+    <label>Products</label>
+    <picklistValues>
+        <picklist>Field__c</picklist>
+        <values>
+            <fullName>Implementor_PM%5F%5Fc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network_Project_Specialist%5F%5Fc</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ProductsForCheckingExistingRecords__c</picklist>
+        <values>
+            <fullName>E-LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LAN %2B EIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIAE-LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Anyware Mitel Hosted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPVPN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Enterprise WiFi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-Net</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-Net Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDWAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDWAN - E-Reach%2FOff-Net Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDWAN - New or Upgrade Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCaaS/UCF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Profiles__c</picklist>
+        <values>
+            <fullName>%23Project Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%23Project Manager - Supervisor Level</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SupportedProducts__c</picklist>
+        <values>
+            <fullName>E-LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-LAN %2B EIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIAE-LAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier AnyWare UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Anyware Mitel Hosted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPVPN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Enterprise WiFi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-Net</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-Net Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDWAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDWAN - E-Reach%2FOff-Net Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDWAN - New or Upgrade Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCaaS/UCF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

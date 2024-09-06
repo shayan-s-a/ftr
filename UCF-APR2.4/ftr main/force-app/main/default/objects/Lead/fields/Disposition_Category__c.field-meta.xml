@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Disposition Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st Attempt Call</fullName>
+                <default>false</default>
+                <label>1st Attempt Call</label>
+            </value>
+            <value>
+                <fullName>2nd Attempt Call</fullName>
+                <default>false</default>
+                <label>2nd Attempt Call</label>
+            </value>
+            <value>
+                <fullName>3rd Attempt Call</fullName>
+                <default>false</default>
+                <label>3rd Attempt Call</label>
+            </value>
+            <value>
+                <fullName>Sale Opportunity</fullName>
+                <default>false</default>
+                <label>Sale Opportunity</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Total Refusal</fullName>
+                <default>false</default>
+                <label>Total Refusal</label>
+            </value>
+            <value>
+                <fullName>Unworkable</fullName>
+                <default>false</default>
+                <label>Unworkable</label>
+            </value>
+            <value>
+                <fullName>Non-Finalized Record</fullName>
+                <default>false</default>
+                <label>Non-Finalized Record</label>
+            </value>
+            <value>
+                <fullName>Outside of FTR footprint</fullName>
+                <default>false</default>
+                <label>Outside of FTR footprint</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

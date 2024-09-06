@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CEVLAN2 Numbers Only</label>
+    <protected>false</protected>
+    <values>
+        <field>ApplicableProducts__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ErrorMessage__c</field>
+        <value xsi:type="xsd:string">CEVLAN can only be between 1 and 4095</value>
+    </values>
+    <values>
+        <field>ExcludeProducts__c</field>
+        <value xsi:type="xsd:string">ENT_ETH_UNI_0001</value>
+    </values>
+    <values>
+        <field>Field__c</field>
+        <value xsi:type="xsd:string">@ATTR_TECH_2CE_VLAN_ID</value>
+    </values>
+    <values>
+        <field>IsEnabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>IsRequired__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Object__c</field>
+        <value xsi:type="xsd:string">OrderItem</value>
+    </values>
+    <values>
+        <field>Operator__c</field>
+        <value xsi:type="xsd:string">regex</value>
+    </values>
+    <values>
+        <field>ValidateOn__c</field>
+        <value xsi:type="xsd:string">Submit Order</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">^([1-9]|[1-9][0-9]{1,2}|[1-3][0-9]{3}|40[0-8][0-9]|409[0-5])</value>
+    </values>
+</CustomMetadata>

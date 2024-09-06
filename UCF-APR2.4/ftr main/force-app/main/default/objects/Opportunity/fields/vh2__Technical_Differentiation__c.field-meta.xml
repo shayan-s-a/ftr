@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>vh2__Technical_Differentiation__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Degree to which the solution satisfies technical requirements with respect to competitors</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How good is your solution vs. the competition?</inlineHelpText>
+    <label>Technical Differentiation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Superior</fullName>
+                <default>false</default>
+                <label>Superior</label>
+            </value>
+            <value>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+                <label>Neutral</label>
+            </value>
+            <value>
+                <fullName>Inferior</fullName>
+                <default>false</default>
+                <label>Inferior</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

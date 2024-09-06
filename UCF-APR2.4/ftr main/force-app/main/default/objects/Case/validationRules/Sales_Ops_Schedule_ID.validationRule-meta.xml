@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Ops_Schedule_ID</fullName>
+    <active>true</active>
+    <description>Schedule ID is required if DPI Billing/Schedule ID is selected in the Related To</description>
+    <errorConditionFormula>AND
+(RecordType.DeveloperName= &quot;Sales_Operations_Support&quot;,
+ISPICKVAL(Related_To2__c,&quot;DPI Billing/Schedule ID&quot;),
+
+( Schedule_ID_auto__c  = &quot;S-&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Schedule_ID_auto__c</errorDisplayField>
+    <errorMessage>If DPI Billing/Schedule ID is selected, then Schedule ID is required.</errorMessage>
+</ValidationRule>

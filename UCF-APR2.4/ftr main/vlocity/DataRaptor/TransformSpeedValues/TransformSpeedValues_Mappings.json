@@ -1,0 +1,33 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "Formula",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Formula",
+        "%vlocity_namespace%__FormulaOrder__c": 1,
+        "%vlocity_namespace%__FormulaResultPath__c": "ISSpeedGreaterThan1Gbps",
+        "%vlocity_namespace%__Formula__c": "IF(FILTER(LIST(SelectedProducts), 'Speed_Mbps__c > 1000'),true,false)",
+        "%vlocity_namespace%__GlobalKey__c": "e357044d-98aa-31ff-bba9-2767e97d8380",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "TransformSpeedValuesCustom2145",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "TransformSpeedValues",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "ISSpeedGreaterThan1Gbps",
+        "%vlocity_namespace%__DomainObjectFieldType__c": "Boolean",
+        "%vlocity_namespace%__GlobalKey__c": "b13498e2-5f33-5e41-3af7-95bef9f6a331",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "ISSpeedGreaterThan1Gbps",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "TransformSpeedValuesCustom7116",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "TransformSpeedValues",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

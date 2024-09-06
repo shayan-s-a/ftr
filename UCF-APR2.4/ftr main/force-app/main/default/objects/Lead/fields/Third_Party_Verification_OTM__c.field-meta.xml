@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Third_Party_Verification_OTM__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;In the event of the products begin sold to the customer require Third Party Verification (TPV),&quot; + &quot; please fill out the on-line form at&quot; + &quot; http://frontier.calibrus.com &quot; + &quot; and obtain your Record Locator Number (RLN). Once the form is submitted and the RLN is provided to you, please put the RLN in the field below.&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Third Party Verification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

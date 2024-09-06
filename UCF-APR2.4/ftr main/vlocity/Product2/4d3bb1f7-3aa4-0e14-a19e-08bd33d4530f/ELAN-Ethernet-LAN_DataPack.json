@@ -1,0 +1,2402 @@
+{
+    "%vlocity_namespace%__ApprovedBy__c": "",
+    "%vlocity_namespace%__ApprovedOn__c": "",
+    "%vlocity_namespace%__AttributeAssignment__c": "ELAN-Ethernet-LAN_AttributeAssignments.json",
+    "%vlocity_namespace%__AttributeDefaultValues__c": {
+        "ATTR_BANDWIDTH": null,
+        "ATTR_COMPANY_INDICATOR": null,
+        "ATTR_CONTRACT_TERM": null,
+        "ATTR_CoS": "Silver",
+        "ATTR_DECOMP_BB_SVC_CAT": null,
+        "ATTR_DECOMP_BTN": null,
+        "ATTR_DECOMP_CITYABBREVIATION": null,
+        "ATTR_DECOMP_CONTROLNUMBER": null,
+        "ATTR_DECOMP_CORRELATION_ID": null,
+        "ATTR_DECOMP_ENVIRONMENT": null,
+        "ATTR_DECOMP_GRP_ORDER_TRANSCOUNT": null,
+        "ATTR_DECOMP_MRCSNE": null,
+        "ATTR_DECOMP_NRC_SNE": null,
+        "ATTR_DECOMP_TERM_SNE": null,
+        "ATTR_DECOMP_WTN": null,
+        "ATTR_DECOM_SECLOC_CILLI": null,
+        "ATTR_DSAT_ID": null,
+        "ATTR_ELIGBL_CLLI": null,
+        "ATTR_ELIGBL_FOOT_PRNT": null,
+        "ATTR_ELIGBL_PARTNRD": false,
+        "ATTR_ELIGBL_QOS": null,
+        "ATTR_ELIGBL_WCSPEED": null,
+        "ATTR_ENNI_NID_CILLI_CODE": null,
+        "ATTR_EVCType": null,
+        "ATTR_EVC_OVC_VLAN": null,
+        "ATTR_FIRSTELAN": "No",
+        "ATTR_GAN_CODE": null,
+        "ATTR_LEVEL": "a",
+        "ATTR_M6_CIR": null,
+        "ATTR_M6_Circuit": null,
+        "ATTR_MARKET": "B",
+        "ATTR_MOUNTING_SPEC": null,
+        "ATTR_MSTR_SUMMARY_TN": null,
+        "ATTR_NEG": null,
+        "ATTR_NETWORK_HBE": false,
+        "ATTR_NPA_NXX": null,
+        "ATTR_PARTNER": null,
+        "ATTR_PARTNER_TIER": null,
+        "ATTR_SDWAN_HA": false,
+        "ATTR_TECH_ALL2ONE": null,
+        "ATTR_TECH_CE_VLAN_ID": null,
+        "ATTR_TECH_JURIS": "Intrastate",
+        "ATTR_TECH_RATE_CODE": null,
+        "ATTR_TIER1": null,
+        "ATTR_TIER2": null,
+        "CircuitId": null,
+        "E-Reach ENNI CLLI": null,
+        "ELAN_Circuit_ID": null,
+        "ENNI": null,
+        "ENNI - VENDOR": null,
+        "MOUNTING SPECIFICATION": null,
+        "OEM_ATT": null,
+        "SECLOC_CLLI": null,
+        "SECNCI": null,
+        "WorkingTelephoneNumber": null,
+        "parentServiceItemId": null,
+        "serviceItemId": null
+    },
+    "%vlocity_namespace%__AttributeMetadata__c": {
+        "messages": [
+        ],
+        "records": [
+            {
+                "Code__c": "FTR_ENT_CUSTOMERACCOUNT_ATTCAT",
+                "Name": "CustomerAccount Attributes",
+                "displaySequence": 110,
+                "id": "a7a8C000000NozYQAS",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8C000000HEUgQAO",
+                            "cloneable": true,
+                            "code": "WorkingTelephoneNumber",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 180,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_WTN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_CUSTOMERORDER_ATTCAT",
+                "Name": "CustomerOrder Attributes",
+                "displaySequence": 100,
+                "id": "a7a8C000000NozZQAS",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8C000000HEUnQAO",
+                            "cloneable": true,
+                            "code": "CircuitId",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 40,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DPI_CIRCUITID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_CUSTOM_ATTRIBUTES_ATTCAT",
+                "Name": "Custom Attributes",
+                "displaySequence": 60,
+                "id": "a7a8C000000NoznQAC",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7bOt000000168DIAQ",
+                            "cloneable": true,
+                            "code": "E-Reach ENNI CLLI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "E-Reach ENNI CLLI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_DECOMP_ATTCAT",
+                "Name": "Decomposition Attributes",
+                "displaySequence": 40,
+                "id": "a7a8C000000NoziQAC",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7bOt000000169qIAA",
+                            "cloneable": true,
+                            "code": "ATTR_DECOM_SECLOC_CILLI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DECOM_SECLOC_CILLI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7bOt000000169rIAA",
+                            "cloneable": true,
+                            "code": "ATTR_ENNI_NID_CILLI_CODE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "ENNI NID CILLI CODE",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEX3QAO",
+                            "cloneable": true,
+                            "code": "ATTR_EVCType",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "EVC Type",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEX8QAO",
+                            "cloneable": true,
+                            "code": "ATTR_MSTR_SUMMARY_TN",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Master Summary TN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEX9QAO",
+                            "cloneable": true,
+                            "code": "ATTR_NEG",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Negotiation",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "d70b531d-3efe-6008-324f-285dcac217f7",
+                                    "label": "Auto",
+                                    "readonly": false,
+                                    "value": "Auto"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "9be6c3a7-aebe-8c0e-8bdd-9467314c26c3",
+                                    "label": "No-Auto",
+                                    "readonly": false,
+                                    "value": "No-Auto"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7bOt000000169sIAA",
+                            "cloneable": true,
+                            "code": "ATTR_EVC_OVC_VLAN",
+                            "dataType": "number",
+                            "disabled": false,
+                            "displaySequence": 2,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "number",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "OVC VLAN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWwQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_WTN",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "WTN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWYQA4",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_BB_SVC_CAT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Broadband Service Category",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEXBQA4",
+                            "cloneable": true,
+                            "code": "ATTR_TECH_RATE_CODE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Rate Code",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEXAQA4",
+                            "cloneable": true,
+                            "code": "ATTR_TECH_ALL2ONE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 50,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "All To One Bundling",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWtQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_MRCSNE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 60,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "MRC SNE",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWuQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_NRC_SNE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 60,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "NRC SNE",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEX7QAO",
+                            "cloneable": true,
+                            "code": "ATTR_M6_Circuit",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 60,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "M6 Circuit ID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWvQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_TERM_SNE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 90,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "TERM SNE",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEi4QAG",
+                            "cloneable": true,
+                            "code": "ELAN_Circuit_ID",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 90,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "ELAN Network #",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWZQA4",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_BTN",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 110,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "BTN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWcQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_CONTROLNUMBER",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 120,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Control Number",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWeQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_ENVIRONMENT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 130,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Environment",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWaQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_CITYABBREVIATION",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 140,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "CityAbbreviation",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWlQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_GRP_ORDER_TRANSCOUNT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 150,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "GroupOrderTransactionCount",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEWdQAO",
+                            "cloneable": true,
+                            "code": "ATTR_DECOMP_CORRELATION_ID",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 160,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "CorrelationId",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEX4QAO",
+                            "cloneable": true,
+                            "code": "ATTR_GAN_CODE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1820,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "GAN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEX6QAO",
+                            "cloneable": true,
+                            "code": "ATTR_M6_CIR",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1920,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "M6 CIR",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 23
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_ELIG_ATTCAT",
+                "Name": "Eligibility Attributes",
+                "displaySequence": 50,
+                "id": "a7a8C000000NozyQAC",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8C000000HEYBQA4",
+                            "cloneable": true,
+                            "code": "ATTR_TIER1",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 5,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Copper Tier",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 5,
+                                    "id": "fdab5218-3e91-1794-e967-a4b616809a16",
+                                    "label": "Tier 0",
+                                    "readonly": false,
+                                    "value": "Tier 0"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "f6166d0b-d8f2-dce8-6c30-d1f0a68b5725",
+                                    "label": "Tier 1",
+                                    "readonly": false,
+                                    "value": "Tier 1"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "270589b4-c7b0-0573-f048-23f44a2c6431",
+                                    "label": "Tier 2",
+                                    "readonly": false,
+                                    "value": "Tier 2"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "6b65d269-011b-0a02-5093-379ae31e314b",
+                                    "label": "BDT",
+                                    "readonly": false,
+                                    "value": "BDT"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEY5QAO",
+                            "cloneable": true,
+                            "code": "ATTR_ELIGBL_CLLI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "WC CLLI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEY8QAO",
+                            "cloneable": true,
+                            "code": "ATTR_ELIGBL_QOS",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "WC QoS",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYCQA4",
+                            "cloneable": true,
+                            "code": "ATTR_TIER2",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Fiber Tier",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 5,
+                                    "id": "fdab5218-3e91-1794-e967-a4b616809a16",
+                                    "label": "Tier 0",
+                                    "readonly": false,
+                                    "value": "Tier 0"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "f6166d0b-d8f2-dce8-6c30-d1f0a68b5725",
+                                    "label": "Tier 1",
+                                    "readonly": false,
+                                    "value": "Tier 1"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "270589b4-c7b0-0573-f048-23f44a2c6431",
+                                    "label": "Tier 2",
+                                    "readonly": false,
+                                    "value": "Tier 2"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "6b65d269-011b-0a02-5093-379ae31e314b",
+                                    "label": "BDT",
+                                    "readonly": false,
+                                    "value": "BDT"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEY6QAO",
+                            "cloneable": true,
+                            "code": "ATTR_ELIGBL_FOOT_PRNT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "InFootprint",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "d830fdde-6767-bf12-ce2f-faad54710321",
+                                    "label": "Yes",
+                                    "readonly": false,
+                                    "value": "Yes"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "d6f9f1aa-d102-5be3-e907-5aff00b2b92a",
+                                    "label": "No",
+                                    "readonly": false,
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEY9QAO",
+                            "cloneable": true,
+                            "code": "ATTR_ELIGBL_WCSPEED",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 50,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "WC Speed",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "937983b0-e54b-6298-6348-e72ca6b523d6",
+                                    "label": "200MB",
+                                    "readonly": false,
+                                    "value": "200MB"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "918c6648-39a6-de1c-87d6-f19e7453fa59",
+                                    "label": "1000MB",
+                                    "readonly": false,
+                                    "value": "1000MB"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "5609a4e8-7fdc-186b-9b99-790e13b752a2",
+                                    "label": "2000MB",
+                                    "readonly": false,
+                                    "value": "2000MB"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEY4QAO",
+                            "cloneable": true,
+                            "code": "ATTR_DSAT_ID",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 600,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "DSAT ID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEi6QAG",
+                            "cloneable": true,
+                            "code": "ATTR_ELIGBL_PARTNRD",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1930,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "checkbox",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Partnered",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 8
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_PRI_ATTCAT",
+                "Name": "Pricing Attributes",
+                "displaySequence": 10,
+                "id": "a7a8C000000NozzQAC",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7bOt00000016OLIAY",
+                            "cloneable": true,
+                            "code": "ATTR_NETWORK_HBE",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": true,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "checkbox",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "HBE",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYFQA4",
+                            "cloneable": true,
+                            "code": "ATTR_BANDWIDTH",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": true,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Speed",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": true,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 5,
+                                    "id": "a1f88383-489b-617b-796b-db618d5841c6",
+                                    "label": "5 Mbps",
+                                    "readonly": false,
+                                    "value": "5 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "6af9a9e5-dff5-0f51-223e-f149d256851c",
+                                    "label": "10 Mbps",
+                                    "readonly": false,
+                                    "value": "10 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "8d9a9bd8-a090-0531-c54b-be76521934dc",
+                                    "label": "20 Mbps",
+                                    "readonly": false,
+                                    "value": "20 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 23,
+                                    "id": "14414b0c-98a4-9c39-1a98-ba04a2e7dcd9",
+                                    "label": "30 Mbps",
+                                    "readonly": false,
+                                    "value": "30 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 26,
+                                    "id": "8178d30d-0ad0-b5af-f206-bc7c6ac80128",
+                                    "label": "40 Mbps",
+                                    "readonly": false,
+                                    "value": "40 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "71166878-186e-3b66-49ae-dcd659204939",
+                                    "label": "50 Mbps",
+                                    "readonly": false,
+                                    "value": "50 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "4c03d782-90e7-d359-0c4c-b847a4d13547",
+                                    "label": "100 Mbps",
+                                    "readonly": false,
+                                    "value": "100 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 50,
+                                    "id": "250ff27d-186d-262e-6604-ccb548815ce5",
+                                    "label": "200 Mbps",
+                                    "readonly": false,
+                                    "value": "200 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 60,
+                                    "id": "cbb255c2-9001-4471-a18b-8fadf853c33b",
+                                    "label": "500 Mbps",
+                                    "readonly": false,
+                                    "value": "500 Mbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 70,
+                                    "id": "bfd7e3ad-26a4-26d7-3c04-499855b76c53",
+                                    "label": "1 Gbps",
+                                    "readonly": false,
+                                    "value": "1 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 80,
+                                    "id": "f7fbc8ed-07cd-89e7-e7b3-81703446e4af",
+                                    "label": "2 Gbps",
+                                    "readonly": false,
+                                    "value": "2 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 90,
+                                    "id": "a76232eb-c1cf-60e7-e95b-7267bd13c5ec",
+                                    "label": "5 Gbps",
+                                    "readonly": false,
+                                    "value": "5 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 100,
+                                    "id": "8d73c46f-2012-73de-a911-49a814b5dc33",
+                                    "label": "10 Gbps",
+                                    "readonly": false,
+                                    "value": "10 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 110,
+                                    "id": "a966f4b7-4bf2-c4e5-f4ad-a460ea3470f4",
+                                    "label": "25 Gbps",
+                                    "readonly": false,
+                                    "value": "25 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 120,
+                                    "id": "ec8a7108-053b-8021-7756-f08cc7bc6c97",
+                                    "label": "50 Gbps",
+                                    "readonly": false,
+                                    "value": "50 Gbps"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 130,
+                                    "id": "9d3d6ee1-bbc6-dee6-ae3c-c1b2295e1063",
+                                    "label": "100 Gbps",
+                                    "readonly": false,
+                                    "value": "100 Gbps"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYcQAO",
+                            "cloneable": true,
+                            "code": "ATTR_MARKET",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Market",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYJQA4",
+                            "cloneable": true,
+                            "code": "ATTR_CONTRACT_TERM",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Term",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                                    "label": "12 Months",
+                                    "readonly": false,
+                                    "value": "12 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                                    "label": "24 Months",
+                                    "readonly": false,
+                                    "value": "24 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                                    "label": "36 Months",
+                                    "readonly": false,
+                                    "value": "36 Months"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                                    "label": "60 Months",
+                                    "readonly": false,
+                                    "value": "60 Months"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYaQAO",
+                            "cloneable": true,
+                            "code": "ATTR_LEVEL",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 20,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Level",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEi7QAG",
+                            "cloneable": true,
+                            "code": "ATTR_PARTNER",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": true,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Partner",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 5,
+                                    "id": "11ca8ac5-2015-a030-3654-b565c5f216d0",
+                                    "label": "AT&T",
+                                    "readonly": false,
+                                    "value": "AT&T"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 6,
+                                    "id": "2623a5b0-630a-0586-ce02-198f2dc16ab0",
+                                    "label": "Spectrum",
+                                    "readonly": false,
+                                    "value": "Spectrum"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 7,
+                                    "id": "2650cd1d-d343-207f-fa37-39445c363358",
+                                    "label": "CrownCastle",
+                                    "readonly": false,
+                                    "value": "CrownCastle"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "d16406d8-5fb5-6d15-ba96-ba2f686ccdcc",
+                                    "label": "Lumen",
+                                    "readonly": false,
+                                    "value": "Lumen"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "57b3c460-ec20-7744-2595-71772c561d36",
+                                    "label": "Verizon",
+                                    "readonly": false,
+                                    "value": "Verizon"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "59b0c41f-42b1-83cc-3fb3-b82f0feda4e8",
+                                    "label": "Windstream",
+                                    "readonly": false,
+                                    "value": "Windstream"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 40,
+                                    "id": "63952bc5-8a59-44fb-75c7-ac076fc5c392",
+                                    "label": "Zayo",
+                                    "readonly": false,
+                                    "value": "Zayo"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 50,
+                                    "id": "67b29568-f312-677e-3386-332f67e7033b",
+                                    "label": "Everstream",
+                                    "readonly": false,
+                                    "value": "Everstream"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 60,
+                                    "id": "0317cf18-9cff-a03b-4a5e-bd7d40293ed6",
+                                    "label": "Uniti",
+                                    "readonly": false,
+                                    "value": "Uniti"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYpQAO",
+                            "cloneable": true,
+                            "code": "ATTR_SDWAN_HA",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "checkbox",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "High Availability",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYLQA4",
+                            "cloneable": true,
+                            "code": "ATTR_CoS",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 30,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Class of Service",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "4bd906e9-f059-2a1a-c588-ad08beb5d1e1",
+                                    "label": "Silver",
+                                    "readonly": false,
+                                    "value": "Silver"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "da9c5b03-49f5-5d55-b41c-b068aa1f2031",
+                                    "label": "Gold",
+                                    "readonly": false,
+                                    "value": "Gold"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 30,
+                                    "id": "f8d5b838-0867-537e-83a0-a7b710916357",
+                                    "label": "Platinum",
+                                    "readonly": false,
+                                    "value": "Platinum"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEYuQAO",
+                            "cloneable": true,
+                            "code": "ATTR_TECH_JURIS",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 40,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Jurisdiction",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "41baec4f-2bd6-e788-da02-00fa0b85253b",
+                                    "label": "Interstate",
+                                    "readonly": false,
+                                    "value": "Interstate"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "a3aa8c06-69da-5379-9dea-a4c1b1d51d04",
+                                    "label": "Intrastate",
+                                    "readonly": false,
+                                    "value": "Intrastate"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7bOt00000016mYIAQ",
+                            "cloneable": true,
+                            "code": "OEM_ATT",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 100,
+                            "filterable": true,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "OEM_ID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 1,
+                                    "id": "4eeffa51-d0d8-70d4-b49b-739d75088858",
+                                    "label": "SLA HUB 1",
+                                    "readonly": false,
+                                    "value": "SLA HUB 1"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 2,
+                                    "id": "aae672ba-7750-8635-cd7f-b7026bd859e3",
+                                    "label": "SLA HUB 2",
+                                    "readonly": false,
+                                    "value": "SLA HUB 2"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 3,
+                                    "id": "aab9c936-4c8f-c1e4-0ea9-9ddd378eb608",
+                                    "label": "SLA Remote",
+                                    "readonly": false,
+                                    "value": "SLA Remote"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 4,
+                                    "id": "e46f5654-0803-eed7-89dd-abe9e91584be",
+                                    "label": "Legacy",
+                                    "readonly": false,
+                                    "value": "Legacy"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7bOt00000016BRIAY",
+                            "cloneable": true,
+                            "code": "ATTR_PARTNER_TIER",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 101,
+                            "filterable": false,
+                            "hasRules": true,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Partner Tier",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 11
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_SERVICEITEMVALUES_ATTCAT",
+                "Name": "ServiceItem Values",
+                "displaySequence": 80,
+                "id": "a7a8C000000Np02QAC",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8C000000HEZ2QAO",
+                            "cloneable": true,
+                            "code": "ATTR_MOUNTING_SPEC",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "Mounting Spec",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "a13ef8c3-1f4a-362b-36ff-023bfde9f722",
+                                    "label": "RACK MOUNT",
+                                    "readonly": false,
+                                    "value": "RACK MOUNT"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "c0c41b66-5cf6-4a94-ec83-3377a51fecc8",
+                                    "label": "WALL MOUNT",
+                                    "readonly": false,
+                                    "value": "WALL MOUNT"
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7bOt00000016D4IAI",
+                            "cloneable": true,
+                            "code": "ENNI - VENDOR",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "ENNI - VENDOR",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7bOt00000016D3IAI",
+                            "cloneable": true,
+                            "code": "ENNI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "ENNI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEZ7QAO",
+                            "cloneable": true,
+                            "code": "MOUNTING SPECIFICATION",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1060,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "PSR_MOUNTING_SPEC",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 4
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_TECH_ATTCAT",
+                "Name": "Technical Attributes",
+                "displaySequence": 20,
+                "id": "a7a8C000000Np03QAC",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7b8C000000HEbVQAW",
+                            "cloneable": true,
+                            "code": "parentServiceItemId",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "PSR_parentServiceItemId",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEaqQAG",
+                            "cloneable": true,
+                            "code": "ATTR_TECH_CE_VLAN_ID",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 10,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "RUID #1 Originating CE-VLAN ID",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEbWQAW",
+                            "cloneable": true,
+                            "code": "serviceItemId",
+                            "dataType": "text",
+                            "disabled": true,
+                            "displaySequence": 130,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "PSR_serviceItemId",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": true,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": true,
+                                    "readonly": true
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEiGQAW",
+                            "cloneable": true,
+                            "code": "ATTR_FIRSTELAN",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1940,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "dropdown",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "First ELAN",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 10,
+                                    "id": "d830fdde-6767-bf12-ce2f-faad54710321",
+                                    "label": "Yes",
+                                    "readonly": false,
+                                    "value": "Yes"
+                                },
+                                {
+                                    "disabled": false,
+                                    "displaySequence": 20,
+                                    "id": "d6f9f1aa-d102-5be3-e907-5aff00b2b92a",
+                                    "label": "No",
+                                    "readonly": false,
+                                    "value": "No"
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 4
+                }
+            },
+            {
+                "Code__c": "FTR_ENT_USERDATA_ATTCAT",
+                "Name": "UserData Attributes",
+                "displaySequence": 70,
+                "id": "a7a8C000000NozsQAC",
+                "messages": [
+                ],
+                "productAttributes": {
+                    "messages": [
+                    ],
+                    "records": [
+                        {
+                            "attributeId": "a7bOt00000018ZpIAI",
+                            "cloneable": true,
+                            "code": "SECLOC_CLLI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 1,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "EREACH SECLOC CLLI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEY0QAO",
+                            "cloneable": true,
+                            "code": "SECNCI",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 250,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": false,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "PSR_SECNCI",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEXlQAO",
+                            "cloneable": true,
+                            "code": "ATTR_COMPANY_INDICATOR",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 500,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "COMPANY INDICATOR",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        },
+                        {
+                            "attributeId": "a7b8C000000HEXnQAO",
+                            "cloneable": true,
+                            "code": "ATTR_NPA_NXX",
+                            "dataType": "text",
+                            "disabled": false,
+                            "displaySequence": 510,
+                            "filterable": false,
+                            "hasRules": false,
+                            "hidden": true,
+                            "inputType": "text",
+                            "isNotAssetizable": false,
+                            "isNotTranslatable": false,
+                            "label": "NPA NXX",
+                            "messages": [
+                            ],
+                            "multiselect": false,
+                            "readonly": false,
+                            "required": false,
+                            "userValues": null,
+                            "values": [
+                                {
+                                    "disabled": false,
+                                    "readonly": false
+                                }
+                            ]
+                        }
+                    ],
+                    "totalSize": 4
+                }
+            }
+        ],
+        "totalSize": 9
+    },
+    "%vlocity_namespace%__AttributeRules__c": "",
+    "%vlocity_namespace%__AttributesMarkupConfig__c": "",
+    "%vlocity_namespace%__CategoryData__c": "",
+    "%vlocity_namespace%__ChangeDetectorImplementation__c": "",
+    "%vlocity_namespace%__ClassId__c": "",
+    "%vlocity_namespace%__DecompositionRelationship__c": "ELAN-Ethernet-LAN_DecompositionRelationships.json",
+    "%vlocity_namespace%__DefaultImageId__c": "",
+    "%vlocity_namespace%__EffectiveDate__c": "2023-07-12",
+    "%vlocity_namespace%__EndDate__c": "",
+    "%vlocity_namespace%__EndOfLifeDate__c": "",
+    "%vlocity_namespace%__FulfilmentStartDate__c": "2023-08-01T18:30:00.000Z",
+    "%vlocity_namespace%__GlobalGroupKey__c": "f4b6b545-0520-e046-206f-56d677a6da8f",
+    "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+    "%vlocity_namespace%__HeaderData__c": "",
+    "%vlocity_namespace%__HelpText__c": "",
+    "%vlocity_namespace%__IsConfigurable__c": true,
+    "%vlocity_namespace%__IsCustomerSubscription__c": false,
+    "%vlocity_namespace%__IsLocationDependent__c": false,
+    "%vlocity_namespace%__IsNotAssetizable__c": false,
+    "%vlocity_namespace%__IsOrderable__c": true,
+    "%vlocity_namespace%__JeopardySafetyIntervalUnit__c": "Seconds",
+    "%vlocity_namespace%__JeopardySafetyInterval__c": "",
+    "%vlocity_namespace%__LifecycleStatus__c": "",
+    "%vlocity_namespace%__MainFeatureQuantityUom__c": "",
+    "%vlocity_namespace%__MainFeatureQuantity__c": "",
+    "%vlocity_namespace%__MainFeatureTermInDays__c": "",
+    "%vlocity_namespace%__Modification__c": "",
+    "%vlocity_namespace%__ObjectFieldAttribute__c": "ELAN-Ethernet-LAN_ObjectFieldAttributes.json",
+    "%vlocity_namespace%__ObjectTypeId__c": {
+        "%vlocity_namespace%__GlobalKey__c": "c32de3-48245f-a25548-6824f2-001f3e796",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/c32de3-48245f-a25548-6824f2-001f3e796",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
+    },
+    "%vlocity_namespace%__ObjectTypeName__c": "Ethernet Product Specification",
+    "%vlocity_namespace%__OrchestrationScenario__c": "ELAN-Ethernet-LAN_OrchestrationScenarios.json",
+    "%vlocity_namespace%__ParentClassId__c": "",
+    "%vlocity_namespace%__PriceListEntry__c": "ELAN-Ethernet-LAN_PriceListEntries.json",
+    "%vlocity_namespace%__ProductChildItem__c": "ELAN-Ethernet-LAN_ProductChildItems.json",
+    "%vlocity_namespace%__ProductConfigurationProcedure__c": "ELAN-Ethernet-LAN_ProductConfigurationProcedures.json",
+    "%vlocity_namespace%__ProductRelationship__c": "ELAN-Ethernet-LAN_ProductRelationships.json",
+    "%vlocity_namespace%__ProductSpecId__c": "",
+    "%vlocity_namespace%__ProductTemplateProductId__c": "",
+    "%vlocity_namespace%__Scope__c": "Order Item",
+    "%vlocity_namespace%__SellingEndDate__c": "",
+    "%vlocity_namespace%__SellingStartDate__c": "2023-07-12T18:30:00.000Z",
+    "%vlocity_namespace%__SpecificationSubType__c": "",
+    "%vlocity_namespace%__SpecificationType__c": "Offer",
+    "%vlocity_namespace%__StandardPremium__c": "",
+    "%vlocity_namespace%__Status__c": "Active",
+    "%vlocity_namespace%__SubType__c": "None",
+    "%vlocity_namespace%__TimeToLive__c": "",
+    "%vlocity_namespace%__TrackAsAgreement__c": false,
+    "%vlocity_namespace%__Type__c": "None",
+    "%vlocity_namespace%__VendorAccountId__c": "",
+    "%vlocity_namespace%__VersionEndDateTime__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionStartDateTime__c": "",
+    "Accessories1__c": false,
+    "Accessories__c": true,
+    "AvailableButtonCount__c": "",
+    "BroadbandIpOption13Ips__c": false,
+    "BroadbandIpOption5Ips__c": false,
+    "BroadbandIpOptionEach__c": false,
+    "CanUseQuantitySchedule": false,
+    "CanUseRevenueSchedule": false,
+    "Child__c": false,
+    "Description": "Private and secure connectivity between three or more locations in fully meshed (aka any-to-any) configuration. All to One Bundling allows the customer to control the data flow. Ideal for network flexibility.",
+    "DisplayUrl": "",
+    "Equipment__c": false,
+    "ExternalDataSourceId": "",
+    "ExternalId": "",
+    "FSecure_Distribution__c": 0,
+    "Family": "Ethernet",
+    "Grandfathered_Product__c": "",
+    "IpPhoneRule1__c": false,
+    "IpPhoneRule2__c": false,
+    "IpPhone__c": false,
+    "IsActive": true,
+    "IsArchived": false,
+    "Is_LegacyVlocityProduct__c": false,
+    "Item_Code__c": "",
+    "Item_Rate__c": "",
+    "Item_Type__c": "",
+    "License_Order__c": "",
+    "MRC__c": false,
+    "Maintenance_Universal__c": false,
+    "MajorProduct__c": false,
+    "NRC__c": false,
+    "Name": "ELAN (Ethernet LAN)",
+    "NoICB__c": false,
+    "NumberOfQuantityInstallments": "",
+    "NumberOfRevenueInstallments": "",
+    "POE_Switch_Rule__c": false,
+    "POE__c": false,
+    "Parent_Child__c": false,
+    "Parent__c": false,
+    "Part_Number_of_Product__c": "",
+    "Part__c": "",
+    "PoE_provided_by_Frontier__c": "",
+    "PoE_provided_by_customer__c": "",
+    "PowerPhone_provided_by_Frontier__c": "",
+    "PremiumPlusRule__c": false,
+    "PremiumRule__c": false,
+    "PricebookEntry": "ELAN-Ethernet-LAN_PricebookEntries.json",
+    "ProductCode": "ENT_ETH_ELAN_0001",
+    "Product_Name_80_Char__c": "ELAN (Ethernet LAN)",
+    "Product_Part_Number__c": "",
+    "Product_Subcategory__c": "",
+    "Product_Type__c": "",
+    "QuantityInstallmentPeriod": "",
+    "QuantityScheduleType": "",
+    "QuantityUnitOfMeasure": "",
+    "Quantity__c": "",
+    "RPT_PrimaryCategory__c": "",
+    "RPT_ProductType__c": "Salesforce",
+    "RPT_SecondaryCategory__c": "",
+    "RecordTypeId": {
+        "DeveloperName": "Product",
+        "SobjectType": "Product2",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "RecordType/Product2/Product",
+        "VlocityRecordSObjectType": "RecordType"
+    },
+    "RevenueInstallmentPeriod": "",
+    "RevenueScheduleType": "",
+    "SKU__c": "",
+    "ST_CategoryID__c": "",
+    "ST_CategoryPath__c": "",
+    "ST_ConfigurationModelName__c": "",
+    "ST_Description__c": "",
+    "ST_DisplayItemDescription__c": "",
+    "ST_ExtnCrmProductType__c": "",
+    "ST_IsConfigurable__c": "",
+    "ST_ShortDescription__c": "",
+    "S_E_LOOP__c": "",
+    "S_E_PORT__c": "",
+    "Service__c": false,
+    "SetUp_Order__c": "",
+    "Setup__c": false,
+    "Show_in_PDF__c": false,
+    "SiebelRowID__c": "",
+    "SmartVoice_Broadband_115__c": false,
+    "SmartVoice_Broadband_12__c": false,
+    "SmartVoice_Broadband_18__c": false,
+    "SmartVoice_Broadband_25__c": false,
+    "SmartVoice_Broadband_35__c": false,
+    "SmartVoice_Broadband_45__c": false,
+    "SmartVoice_Broadband_70__c": false,
+    "SmartVoice_Broadband_90__c": false,
+    "SmartVoice_FiOS_100_100_Broadband__c": false,
+    "SmartVoice_FiOS_1G_1G_Broadband__c": false,
+    "SmartVoice_FiOS_500_500_Broadband__c": false,
+    "SmartVoice_Fiber_100_100_Broadband__c": false,
+    "SmartVoice_Fiber_1G_1G_Broadband__c": false,
+    "SmartVoice_Fiber_500_500_Broadband__c": false,
+    "StandardPricebookEntry": [
+        {
+            "%vlocity_namespace%__FloorPrice__c": "",
+            "%vlocity_namespace%__OverageCharge__c": "",
+            "%vlocity_namespace%__OverageUOM__c": "",
+            "%vlocity_namespace%__RecurringPrice__c": 0,
+            "%vlocity_namespace%__RecurringUOM__c": "Monthly",
+            "DISCOUNT_Price__c": "",
+            "GPM__c": "",
+            "IsActive": true,
+            "IsArchived": false,
+            "NRC_Unit_Price__c": "",
+            "Name": "ELAN (Ethernet LAN)",
+            "Pricebook2.Name": "Standard Price Book",
+            "Pricebook2Id": {
+                "Name": "Standard Price Book",
+                "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+                "VlocityLookupRecordSourceKey": "Pricebook2/Standard Price Book",
+                "VlocityRecordSObjectType": "Pricebook2"
+            },
+            "Product2.%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "Product2Id": {
+                "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+                "VlocityDataPackType": "VlocityMatchingKeyObject",
+                "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+                "VlocityRecordSObjectType": "Product2"
+            },
+            "ProductCode": "ENT_ETH_ELAN_0001",
+            "Type_of_Billing__c": "",
+            "UNITCOST__c": "",
+            "UnitPrice": 0,
+            "UseStandardPrice": false,
+            "VENDORPRICELISTTOFTR__c": "",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "PricebookEntry",
+            "VlocityRecordSourceKey": "PricebookEntry/Pricebook2/Standard Price Book/Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "multiply__c": ""
+        }
+    ],
+    "StockKeepingUnit": "",
+    "Strategic_Alignment__c": "",
+    "Term1yr__c": "",
+    "Term2yr__c": "",
+    "Term__c": "",
+    "TollFreeRule__c": false,
+    "Type_of_Billing__c": "",
+    "UnitPrice__c": "",
+    "VendorName__c": "",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "Product2",
+    "VlocityRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+    "Year__c": "",
+    "aService__c": false,
+    "ftr_IsComboOrderEnabled__c": false,
+    "isATArule__c": false,
+    "isAdditionalDID__c": false,
+    "isAdditionalDirectory__c": false,
+    "isAdditionalManaged__c": false,
+    "isAnalogRule__c": false,
+    "isBusinessAnalytic__c": false,
+    "isCallerId__c": false,
+    "isConferenceRumSeatRule__c": false,
+    "isDPIEnabled__c": false,
+    "isE911__c": false,
+    "isElite__c": false,
+    "isEssential__c": false,
+    "isExtendedMarket__c": false,
+    "isIpSoundStationRule__c": false,
+    "isNETGEAR__c": false,
+    "isOutbound__c": false,
+    "isPolycomATA__c": false,
+    "isPremier__c": false,
+    "isSmartAdditionalDID__c": false,
+    "isSmartAdditionalManagedAutoAttendant__c": false,
+    "isSmartDirectoryListing__c": false,
+    "isSmartE911__c": false,
+    "isSmartExtendedNum__c": false,
+    "isSmartIpPhoneRule__c": false,
+    "isSmartMonthlyAdminCharge__c": false,
+    "isSmartMultiLineHunt__c": false,
+    "isSmartPremiumAttendant__c": false,
+    "isSmartTollFreeDomesticUS__c": false,
+    "isSmartTollFreeDomestic__c": false,
+    "isSmartTollFreeNum__c": false,
+    "isSoundStationIp5000__c": false,
+    "isSoundStationIp6000__c": false,
+    "isSoundStationIp7000__c": false,
+    "isTechInstallFeeBHSI__c": false,
+    "isTechInstallFeeFIOS__c": false,
+    "isTechInstallFeeFiber__c": false,
+    "isTollFreeNum__c": false,
+    "isVVX311__c": false,
+    "isVVX501__c": false,
+    "isVVX601__c": false,
+    "isWebFax__c": false,
+    "is_show_on_ux__c": false,
+    "multiply__c": false
+}

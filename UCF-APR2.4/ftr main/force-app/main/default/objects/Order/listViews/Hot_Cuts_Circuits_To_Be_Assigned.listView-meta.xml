@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hot_Cuts_Circuits_To_Be_Assigned</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDER.RECORDTYPE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Owners_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.Circuit_Change_Order,Order.Circuit_New_Order</value>
+    </filters>
+    <filters>
+        <field>SALES.ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <filters>
+        <field>Circuit_Product__c</field>
+        <operation>includes</operation>
+        <value>PRI</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>equals</operation>
+        <value>Hot Cuts,Submitted for Approval</value>
+    </filters>
+    <label>Hot Cuts - Circuits - To Be Assigned</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>SC_Manager</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vlocity_Escalated_CNP_Open_Cases</fullName>
+    <columns>CASES.ESCALATION_STATE</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Jira__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Team_Impacted__c</columns>
+    <columns>Related_To2__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Targeted_Date__c</columns>
+    <columns>Create_By_Name__c</columns>
+    <columns>CASES.CLOSED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Sales_Operations_Support</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Vlocity</value>
+    </filters>
+    <filters>
+        <field>CASES.ESCALATION_STATE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Vlocity Escalated CNP Open Cases</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Alt_Channels__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all channels partner company is actively involved</inlineHelpText>
+    <label>All Alt Channels</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cross Sell</fullName>
+                <default>false</default>
+                <label>Cross Sell</label>
+            </value>
+            <value>
+                <fullName>Door to Door - Commercial</fullName>
+                <default>false</default>
+                <label>Door to Door - Commercial</label>
+            </value>
+            <value>
+                <fullName>Paid Digital Search</fullName>
+                <default>false</default>
+                <label>Paid Digital Search</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_Sups_Denise_Francie_Order_View</fullName>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Product__c</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Owners_Name__c</columns>
+    <columns>Broadband_COE__c</columns>
+    <columns>Broadband_COE_Stage__c</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Record_Type_Ids__c</columns>
+    <columns>Order_Point_of_Contact__c</columns>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDERS.STATUS_CODE</field>
+        <operation>equals</operation>
+        <value>A,D</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Complete,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Ethernet,CPE,SDWAN</value>
+    </filters>
+    <filters>
+        <field>ORDER.SHIPPING_STATE_CODE</field>
+        <operation>equals</operation>
+        <value>CA,IN,OR,WA</value>
+    </filters>
+    <label>CA Sups - Denise &amp; Francie Order View</label>
+    <sharedTo>
+        <group>CA_Sups_Denise_Francie</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Owner_Type__c</fullName>
+    <description>Indicates the type of ownership based on Geopointe assignment.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the ownership type based on Geopointe assignment for this account.</inlineHelpText>
+    <label>Assigned Owner Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EPP D2D</fullName>
+                <default>false</default>
+                <label>EPP D2D</label>
+            </value>
+            <value>
+                <fullName>Internal D2D</fullName>
+                <default>false</default>
+                <label>Internal D2D</label>
+            </value>
+            <value>
+                <fullName>Standard D2D</fullName>
+                <default>false</default>
+                <label>Standard D2D</label>
+            </value>
+            <value>
+                <fullName>Unassigned (default)</fullName>
+                <default>false</default>
+                <label>Unassigned (default)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

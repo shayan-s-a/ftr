@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disconnected_MRR_Negative_Value</fullName>
+    <active>true</active>
+    <description>(UCaaS Disconnect/ Circuit Disconnect/ Voice Disconnect/ Disconnect Order) Record Types --&gt; Disconnect_MRR__c field value should be &lt;=0 (negative).</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Disconnected_MRR__c)),
+  OR(
+    Record_Type_Ids__c = &quot;Circuit Disconnect Order&quot;,
+    Record_Type_Ids__c = &quot;Disconnect Order&quot;,
+    Record_Type_Ids__c = &quot;UCaaS Disconnect Order&quot;,
+    Record_Type_Ids__c = &quot;Voice Disconnect Order&quot;
+  ),
+  Disconnected_MRR__c &gt; 0
+)</errorConditionFormula>
+    <errorDisplayField>Disconnected_MRR__c</errorDisplayField>
+    <errorMessage>Please enter monthly revenue as a Negative amount</errorMessage>
+</ValidationRule>

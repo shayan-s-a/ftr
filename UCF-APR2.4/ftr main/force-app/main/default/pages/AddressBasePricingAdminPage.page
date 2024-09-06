@@ -1,0 +1,31 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" tabStyle="Address_Based_Pricing_Admin__tab" controller="PricingFormulaDefinitionController">
+    <apex:sectionHeader title="Address Based Pricing Administration" subtitle="Address Based Pricing Configurations"/>
+    <apex:form >
+        <apex:pageBlock mode="detail">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!clearABPCache}" value="Clear Address Based Pricing Cache"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="3" showHeader="false"  >
+                <apex:pageBlockSection columns="1" title="Pricing Formula" showHeader="true" collapsible="false"  >
+                    <apex:outputLink value="/one/one.app#/alohaRedirect/apex/PricingFormulaDefinitionPage" >Pricing Formula Definition</apex:outputLink>
+                    <apex:outputLink value="/lightning/setup/CustomSettings/page?address=%2Fsetup%2Fui%2FlistCustomSettingsData.apexp%3Fid%3D{!PricingVarKeyPrefix}" target="_blank" >Formula Variable Definition</apex:outputLink>
+                    <apex:outputLink value="/lightning/o/Pricing_Formula_Matrix__c/list?filterName=All" >Pricing Formula Matrix</apex:outputLink>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1" title="Pricing Base Settings" showHeader="true" collapsible="false"  >
+                    <apex:outputLink value="/lightning/setup/CustomSettings/page?address=%2Fsetup%2Fui%2FlistCustomSettingsData.apexp%3Fid%3D{!PricingMultiplierKeyPrefix}" target="_blank" >Multiplier</apex:outputLink>
+                    <apex:outputLink value="/lightning/setup/CustomSettings/page?address=%2Fsetup%2Fui%2FlistCustomSettingsData.apexp%3Fid%3D{!PricingLoadingRateKeyPrefix}" target="_blank" >Loading Rate</apex:outputLink>
+                    <apex:outputLink value="/lightning/o/Pricing_CoS__c/list?filterName=All" >Class Of Service Charge</apex:outputLink>
+                    <apex:outputLink value="/lightning/o/Pricing_Other_Operating_Cost__c/list?filterName=All" >Other Operating Cost</apex:outputLink>
+                    <apex:outputLink value="/lightning/o/Group_Pricing_Matrix__c/list?filterName=All" >Competitor Group Pricing</apex:outputLink>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1" title="Configurations" showHeader="true" collapsible="false"  >
+                    <apex:outputLink value="/lightning/o/Wire_Center__c/list?filterName=All" >Wire Center</apex:outputLink>
+                    <apex:outputLink value="/lightning/o/ftr_Attribute_Based_SNE__c/list?filterName=All" >Attribute Based SNE</apex:outputLink>
+                    <apex:outputLink value="/lightning/o/DSAT_StandardInterval__c/list?filterName=All" >DSAT Standard Interval</apex:outputLink>
+                </apex:pageBlockSection>
+                
+
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

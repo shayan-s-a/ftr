@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_ContractType__c</fullName>
+    <externalId>false</externalId>
+    <label>Contract Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bulk Only</fullName>
+                <default>false</default>
+                <label>Bulk Only</label>
+            </value>
+            <value>
+                <fullName>DIRECTV</fullName>
+                <default>false</default>
+                <label>DIRECTV</label>
+            </value>
+            <value>
+                <fullName>EMA/NEMA/Bulk</fullName>
+                <default>false</default>
+                <label>EMA/NEMA/Bulk</label>
+            </value>
+            <value>
+                <fullName>FCC</fullName>
+                <default>false</default>
+                <label>FCC</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>PAL</fullName>
+                <default>false</default>
+                <label>PAL</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

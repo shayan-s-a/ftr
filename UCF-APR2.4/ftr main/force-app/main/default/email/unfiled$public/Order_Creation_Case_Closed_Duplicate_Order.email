@@ -1,0 +1,10 @@
+{!Case.CreatedBy},<br />
+
+<p>An order was previously created for this opportunity.</p><br />
+<b>Order Creation Case Details.</b><br />
+<p>Account Name: {!Case.Account}<br />
+<p>Opportunity Name: {!Case.Opportunity__c}<br />
+<b><p>Previously created order number: {!Case.Orderz__c}</b><br />
+<p>Please see the case for additional information.<br />
+</p>
+<p>To view the full details of the Case, please click the link: {!Case.Link}</p>

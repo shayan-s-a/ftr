@@ -1,0 +1,57 @@
+<html>
+       <head>
+          
+        </head>
+        <body>
+
+<p>Attached are the required documents for the upcoming UCF install</p>
+
+<p>The customer is working with CPE DCS PM {!ImplementationSpecialist} </p>
+
+<p>The hot call will be set up by {!HotCut}</p>
+
+<p>Receive in and complete an inventory as soon as equipment arrives to identify damaged, missing parts. </p>
+
+<p>Report out of box failures, missing parts or incorrect items immediately. Return/dispute policy for credit from our vendors is 30 days from Frontier</p>
+
+<p>Purchase Order date. Returns after that date will not be accepted. </p>
+
+<p>Due date of CPE order may change after the internal call held</p>
+
+<p>The following is specific order information related to the customer:</p>
+
+<p></p>
+
+<p>CPE BTN - {!DPINumber}</p>
+
+<p>Network BTN - {!BTNNumber}</p>
+
+<p>Customer Name - {!OrderAccount}</p>
+
+<p>City, State - {!ServiceAdderess}</p>
+
+<p>Total Labor $ - {!OneTimeTotal}</p>
+
+<h3>Total Equipment and Accessories </h3>
+<p>{!OrderItem}</p>
+
+<p>Date Sold - {!OrderCreatedDate}</p>
+
+<p>Due Date - {!Duedate}</p>
+
+<p>Account Executive/CSA - {Order.Sales_Order_Point_of_Contact__c}</p>
+
+<p>Territory Manager/Sales Director - {!ManagerName}</p>
+
+<p>Local Manager - {!EmailList} </p>
+
+<p>System Type UCF</p>
+
+<p>Salesforce Order Request Number (SF order # {!OrderNumber}) </p>
+
+<p>DPI CPE Service Order Number (DC order # {!DPIOrderNumber}) </p>
+
+<p>Infinium Order Number (PO # {!InfiniumOrderNumber}) </p>
+
+</body>
+ </html>

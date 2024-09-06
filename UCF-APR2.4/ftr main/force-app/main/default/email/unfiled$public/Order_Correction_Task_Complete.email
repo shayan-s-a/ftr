@@ -1,0 +1,21 @@
+An Order Correction Task has been completed.<br/><br/>
+
+<b>Order Correction Required</b><br/>
+{!Task.Order_Correction_Required__c}<br/><br/>
+
+
+<b>Comments</b><br/>
+{!Task.Description}<br/><br/>
+
+<b>Action Taken</b><br/>
+{!Task.Resolution_Action_Taken__c}<br/><br/>
+
+
+<b>Plese click the link below to access the task.</b><br/>
+<a href={!Task.Link}>Order Correction Task</a><br/><br/
+
+
+Please continue processing your order.<br/><br/>
+
+
+Thank You

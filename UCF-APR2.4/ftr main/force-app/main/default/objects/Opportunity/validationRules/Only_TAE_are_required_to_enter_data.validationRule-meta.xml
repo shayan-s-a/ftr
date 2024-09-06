@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_TAE_are_required_to_enter_data</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+Bypass_Validation__c = FALSE,
+OR(
+$User.UserRoleId = &quot;00EE00000015pdp&quot;,
+$User.UserRoleId = &quot;00E0L000000HATS&quot;,
+$User.UserRoleId = &quot;00EE00000015pCp&quot;,
+$User.UserRoleId = &quot;00EE00000015rBC&quot;,
+$User.UserRoleId = &quot;00EE00000015pB9&quot;,
+$User.UserRoleId = &quot;00E0L000000esjk&quot;,
+$User.UserRoleId = &quot;00EE00000015sHN&quot;,
+$User.UserRoleId = &quot;00EE00000015p0w&quot;,
+$User.UserRoleId = &quot;00EE00000015pBZ&quot;,
+$User.UserRoleId = &quot;00EE00000015pBn&quot;,
+$User.UserRoleId = &quot;00EE00000015pBA&quot;,
+$User.UserRoleId = &quot;00EE00000015pGI&quot;,
+$User.UserRoleId = &quot;00E0L000000esk4&quot;,
+$User.UserRoleId = &quot;00E0L000000esjz&quot; ),
+ISBLANK(TEXT(Migration__c )))</errorConditionFormula>
+    <errorMessage>Migration SPIFF Type field is required.</errorMessage>
+</ValidationRule>

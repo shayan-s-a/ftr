@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TempD2D_Ranking__c</fullName>
+    <description>This metric is designed for usage by D2D teams in cooperation with McKinsey. Meant to help stack rank specific leads for D2D execution within Sales Rabbit. Values will be &quot;Hot&quot;, &quot;Blitz&quot;, or NULL based on specific interactions/history.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This metric is designed for usage by D2D teams in cooperation with McKinsey. Meant to help stack rank specific leads for D2D execution within Sales Rabbit. Values will be &quot;Hot&quot;, &quot;Blitz&quot;, or NULL based on specific interactions/history.</inlineHelpText>
+    <label>Lead Ranking</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hot</fullName>
+                <default>false</default>
+                <label>Hot</label>
+            </value>
+            <value>
+                <fullName>Blitz</fullName>
+                <default>false</default>
+                <label>Blitz</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <label>NULL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

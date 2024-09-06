@@ -1,0 +1,69 @@
+<apex:page sidebar="false" ShowHeader="false" StandardController="Account">
+<a href="http://cfapps.ftr.com/cert/main.cfm" onClick="testOpenSubtabcert();return false">CERT</a> <br/><br/>
+<a href="http://wssnew.czncorp.com/callctr/pulse/default.aspx" onClick="testOpenSubtabpulse();return false">PULSE</a> <br/><br/>
+<a href="http://ost.corp.ftr.com/BSCOST/Login_Manual.aspx" onClick="testOpenSubtabOst();return false">OST</a> <br/><br/>
+<a target='_blank' href="https://frontier.globysonline.com/cv/scripts/B3B0/eng/log.asp?gru=437662910" >Statement in Globys</a> <br/><br/>
+<a target='_blank' href="http://inetportal.corp.ftr.com/inetportal/search-wtn.action?wtn={!Account.TNSequenceId__c}&domain=All%20%Accounts&wtnSubmit=Search">INET Portal</a> <br/><br/>
+ <a target='_blank' href="https://kb.ftr.com/"><apex:image id="theImage" value="{!$Resource.FONE_IMAGE}" width="50" height="25"/></a> <br/><br/>
+ <!--<a target='_blank' href="http://10.243.34.111/Reports/Pages/Report.aspx?ItemPath=/CSRAutoRep/CSRAutoRep" >CSR Report</a> <br/><br/> -->
+<a target='_blank' href="http://sqlinfwwrvt01/ReportServer/Pages/ReportViewer.aspx?%2fCSRAutoRep%2fCSRAutoRep&UT=3" >CSR Report</a> <br/><br/>
+<!-- <a target='_blank' href="https://www3.onlinefinancialdocs.com/tf/FANMedia?tx=Startup&cz=c060413270517141319080417&cmd=logon_&doctype=list&qta=verify">Statement in DST</a> <br/><br/> -->
+<a target='_blank' href="https://intranet.ftr.com/userquerytool">Employee Lookup</a> <br/><br/>
+<!-- <a target='_blank' href="http://nyrofcs2kslvr00.corp.pvt/CustNetProd/SilverStream/Pages/pgLogin.html">Customer Insite</a> <br/><br/> -->
+<a target='_blank' href="http://home.fcinternal.net/gloversville_residential/default.asp?id=5&action=takeit&formid=21&formname=Collections%20Order%20Form">Collection Order Form</a> <br/><br/>
+<a target='_blank' href="/resource/1432749167000/Commercial_Leader_Challenger_CVP_Calculator">Quote Calculator</a> <br/><br/>
+
+<apex:includeScript value="/support/console/22.0/integration.js"/>
+<script type="text/javascript">
+    
+        function testOpenSubtabcert() {
+           sforce.console.getEnclosingPrimaryTabId(openSubtabcert);
+        }
+        
+        function testOpenSubtabpulse() {
+           sforce.console.getEnclosingPrimaryTabId(openSubtabpulse);
+        }
+        
+        function testOpenSubtabOst() {
+           sforce.console.getEnclosingPrimaryTabId(openSubtabost);
+        }
+        
+        function testOpenSubtabglobys() {
+           sforce.console.getEnclosingPrimaryTabId(OpenSubtabglobys);
+        }
+        
+         var openSubtabcert = function openSubtab(result) {
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId , 'http://cfapps.ftr.com/cert/main.cfm', true, 
+                'CERT', null, openSuccess, 'certsubtab'); 
+        };
+        
+        var openSubtabpulse = function openSubtab(result) {
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId , 'http://wssnew.czncorp.com/callctr/pulse', true, 
+                'PULSE', null, openSuccess, 'pulsesubtab'); 
+        };
+        
+        var openSubtabost = function openSubtab(result) {
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId , 'http://ost.corp.ftr.com/BSCOST/Login_Manual.aspx', true, 
+                'OST', null, openSuccess, 'ostsubtab');
+        };
+        
+        var OpenSubtabglobys = function openSubtab(result) {
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId , 'https://frontier.globysonline.com/cv/scripts/B3B0/eng/log.asp?gru=437662910', true,'Statement in Globys', null, openSuccess, 'globyssubtab');
+            //sforce.console.openSubtab(primaryTabId , 'https://frontier.cat.globysonline.com/Login.aspx?gru=437662910', true, 
+            //    'Statement in Globys', null, openSuccess, 'globyssubtab');
+        };
+        
+        var openSuccess = function openSuccess(result) {
+            if (result.success == true) {
+                //alert('subtab successfully opened');
+            } else {
+               // alert('subtab cannot be opened');
+            }
+        };
+        
+</script>  
+</apex:page>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x01_Address_Is_Required_For_CC_Property</fullName>
+    <active>true</active>
+    <description>Both billing and shipping addresses are required. Click on &apos;Edit&apos; for a formatted view of the logic.</description>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName = &apos;CC_Property&apos;,
+    NOT( 
+        ISNEW() &amp;&amp;
+        ConvertedFromLead__c = true
+    ),
+    OR(
+        ISBLANK(ShippingCity),
+        ISBLANK(ShippingCountry),
+        ISBLANK(ShippingState),
+        ISBLANK(ShippingStreet),
+        ISBLANK(ShippingPostalCode),
+        IF(
+            NOT(Copy_Service_to_Billing_Address__c),
+            OR(
+                ISBLANK(BillingCity),
+                ISBLANK(BillingCountry),
+                ISBLANK(BillingState),
+                ISBLANK(BillingStreet),
+                ISBLANK(BillingPostalCode)
+            ),
+            FALSE
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Service and billing addresses are required for Community Connections - Property. Company Error x01</errorMessage>
+</ValidationRule>

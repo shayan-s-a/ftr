@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formula_2__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Integer_1__c,
+100, CASE(Integer_0__c, 36, 500, 60, 475, Formula_0__c),
+200, CASE(Integer_0__c, 36, 695, 60, 610, Formula_0__c),
+500, CASE(Integer_0__c, 36, 990, 60, 880, Formula_0__c),
+Formula_0__c)</formula>
+    <label>Formula 2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

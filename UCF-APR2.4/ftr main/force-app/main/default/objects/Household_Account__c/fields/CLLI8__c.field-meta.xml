@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CLLI8__c</fullName>
+    <description>Represents the most accurate end office wirecenter CLLI8 as based on DPI and/or custom geospatial analysis of the address. Logic is to use DPI CLLI8 if it matches OGM, if not, use DPI lat/long and find corresponding end office CLLI8 that point falls within (leveraging BSA source end office wirecenter polygons).  Defaults to NULL  - Master_CLLI8 renames for list consistency
+MLR Header: CLLI8</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Unique identifier for wire center associated with the service address</inlineHelpText>
+    <label>Wirecenter</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

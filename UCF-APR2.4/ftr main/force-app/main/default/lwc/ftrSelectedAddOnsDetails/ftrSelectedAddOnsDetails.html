@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  title="Addon Product Pricing"> 
+               <template for:each={datatableData} for:item="dataItem">
+                   <h3 key={dataItem.LoopKey} class="slds-p-left_small"><b>{dataItem.MainProductName}</b></h3>
+                   <div key={dataItem.LoopKey} class="slds-p-around_medium">
+                        <lightning-datatable key-field="id" data={dataItem.LWCChildProduct} columns={columns} hide-checkbox-column> </lightning-datatable>
+                   </div>
+               </template>
+    </lightning-card>
+    </template>

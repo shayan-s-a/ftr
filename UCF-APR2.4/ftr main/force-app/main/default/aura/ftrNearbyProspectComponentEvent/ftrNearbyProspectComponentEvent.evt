@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT"  description="This event is used to communicate between the nearby prospect components">
+    <aura:attribute name="errorMsg" type="String"  />   
+    <aura:attribute name="action" type="String" />  
+    <aura:attribute name="distance" type="String" />  
+</aura:event>

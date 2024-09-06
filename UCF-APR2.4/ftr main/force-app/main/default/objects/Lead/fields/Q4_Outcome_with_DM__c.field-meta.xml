@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Q4_Outcome_with_DM__c</fullName>
+    <externalId>false</externalId>
+    <label>Q4: Outcome with DM?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Q3_Engage_in_DM_dialogue__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Contract w/Current Carrier</fullName>
+                <default>false</default>
+                <label>In Contract w/Current Carrier</label>
+            </value>
+            <value>
+                <fullName>Happy w/Current Carrier</fullName>
+                <default>false</default>
+                <label>Happy w/Current Carrier</label>
+            </value>
+            <value>
+                <fullName>Unable to Match Price</fullName>
+                <default>false</default>
+                <label>Unable to Match Price</label>
+            </value>
+            <value>
+                <fullName>Requested Product Not Available</fullName>
+                <default>false</default>
+                <label>Requested Product Not Available</label>
+            </value>
+            <value>
+                <fullName>Qualification Incorrect - FIOS</fullName>
+                <default>false</default>
+                <label>Qualification Incorrect - FIOS</label>
+            </value>
+            <value>
+                <fullName>Qualification Incorrect - HSI</fullName>
+                <default>false</default>
+                <label>Qualification Incorrect - HSI</label>
+            </value>
+            <value>
+                <fullName>Cust Requested Mid-Tier Product</fullName>
+                <default>false</default>
+                <label>Cust Requested Mid-Tier Product</label>
+            </value>
+            <value>
+                <fullName>Cust Concerned with Speed</fullName>
+                <default>false</default>
+                <label>Cust Concerned with Speed</label>
+            </value>
+            <value>
+                <fullName>Cust Doesn&apos;t Want Downtime</fullName>
+                <default>false</default>
+                <label>Cust Doesn&apos;t Want Downtime</label>
+            </value>
+            <value>
+                <fullName>Cust Has Incompatible Hardware</fullName>
+                <default>false</default>
+                <label>Cust Has Incompatible Hardware</label>
+            </value>
+            <value>
+                <fullName>Cust Refuses Tax ID</fullName>
+                <default>false</default>
+                <label>Cust Refuses Tax ID</label>
+            </value>
+            <value>
+                <fullName>Cust Refuses TPV</fullName>
+                <default>false</default>
+                <label>Cust Refuses TPV</label>
+            </value>
+            <value>
+                <fullName>Account Past Due</fullName>
+                <default>false</default>
+                <label>Account Past Due</label>
+            </value>
+            <value>
+                <fullName>DM Scheduled Callback</fullName>
+                <default>false</default>
+                <label>DM Scheduled Callback</label>
+            </value>
+            <value>
+                <fullName>Waiting on Current Carrier Bill</fullName>
+                <default>false</default>
+                <label>Waiting on Current Carrier Bill</label>
+            </value>
+            <value>
+                <fullName>Request Pricing - Phone</fullName>
+                <default>false</default>
+                <label>Request Pricing - Phone</label>
+            </value>
+            <value>
+                <fullName>Request Pricing - Email</fullName>
+                <default>false</default>
+                <label>Request Pricing - Email</label>
+            </value>
+            <value>
+                <fullName>Proposal Sent</fullName>
+                <default>false</default>
+                <label>Proposal Sent</label>
+            </value>
+            <value>
+                <fullName>Sale</fullName>
+                <default>false</default>
+                <label>Sale</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>In Contract w/Current Carrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Happy w/Current Carrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Unable to Match Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Requested Product Not Available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Qualification Incorrect - FIOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Qualification Incorrect - HSI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cust Requested Mid-Tier Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cust Concerned with Speed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cust Doesn&apos;t Want Downtime</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cust Has Incompatible Hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cust Refuses Tax ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Cust Refuses TPV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Account Past Due</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>DM Scheduled Callback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Waiting on Current Carrier Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Request Pricing - Phone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Request Pricing - Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Proposal Sent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Sale</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

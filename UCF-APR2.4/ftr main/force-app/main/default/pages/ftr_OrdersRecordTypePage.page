@@ -1,0 +1,42 @@
+<!-------------------------------------------------------------------------------------------------------------------
+* Name        :  ftr_OrdersRecordTypePage
+* Developer   :  Raju M -FTR
+* Description :  This page handles the order record type navigation to respective Page Layouts based on picklist value selection for UCaaS Order
+---------------------------------------------------------------------------------------------------------------------->
+
+<apex:page standardController="Order" extensions="ftr_OrdersRecordTypePageController" lightningStylesheets="true">
+    
+    <apex:form >
+        <apex:pageblock tabStyle="Order" title="Select Order Record Type">                  
+            
+            <apex:pageBlockSection columns="1" title="Select a record type for the new order. To skip this page in the future, change your record type settings on your personal setup page." >
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Record Type of new record"></apex:outputLabel>
+                    <apex:actionRegion >
+                        <apex:selectList value="{!selectedRT}" size="1" multiselect="false" label="Record Type of new record" title="Record Type" id="recordTypes"> 
+                            <apex:actionSupport event="onchange" reRender="categoryPicList" /> 
+                            <apex:selectOptions value="{!RecordTypeList}" /> 
+                        </apex:selectList>
+                    </apex:actionRegion>
+                </apex:pageBlockSectionItem>                
+            </apex:pageBlockSection>  
+            
+            <apex:pageBlockSection id="categoryPicList">          
+                <!--apex:inputField value="{!Order.UCaaS_Order_Type__c}" rendered="{!selectedRT == '012g000000036f2AAA'}"/  -->
+                <apex:selectList value="{!selectedUCaaSRT}" size="1" multiselect="false" label="UCaaS Record Type" title="Record Type" id="recordTypes" rendered="{!selectedRT == 'UCaaS_Order'}" > 
+                    <apex:actionSupport event="onchange" reRender="categoryPicList" /> 
+                    <apex:selectOptions value="{!UCaaSRecordTypeList}" /> 
+                </apex:selectList>             
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >                   
+                <apex:commandButton value="Continue" action="{!redirect}" />
+                <apex:commandButton value="Cancel" action="{!cancel}" /> 
+            </apex:pageBlockButtons>            
+            
+        </apex:pageblock>      
+        
+    </apex:form>
+    
+</apex:page>

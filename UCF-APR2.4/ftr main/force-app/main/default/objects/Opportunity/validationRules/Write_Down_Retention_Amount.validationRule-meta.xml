@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Write_Down_Retention_Amount</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordTypeId = &apos;012E0000000dgAK&apos; &amp;&amp;
+ISPICKVAL( Renewal_Type__c, &quot;Retention Write Down&quot;) &amp;&amp;
+ISBLANK( Write_Down_Amount__c )</errorConditionFormula>
+    <errorDisplayField>Write_Down_Amount__c</errorDisplayField>
+    <errorMessage>This field cannot be blank</errorMessage>
+</ValidationRule>

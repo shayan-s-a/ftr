@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leased_with_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(  Leased__c ,&quot;Yes&quot;),
+ISBLANK(TEXT(  Leased_With__c )))</errorConditionFormula>
+    <errorDisplayField>Leased__c</errorDisplayField>
+    <errorMessage>If the Leased field is set to yes then the Leased With field is required.</errorMessage>
+</ValidationRule>

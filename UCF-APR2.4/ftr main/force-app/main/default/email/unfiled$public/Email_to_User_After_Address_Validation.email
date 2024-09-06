@@ -1,0 +1,20 @@
+<messaging:emailTemplate subject="Uploaded FTR Address Processing complete" recipientType="User" >
+<messaging:plainTextEmailBody >
+Dear User,
+
+
+The Address File you uploaded have been processed. 
+
+Please navigate through the Address and Verify.
+
+Addresses with Addr Validation Result as below
+
+Green  - DPI and DSAT Validated Successfully
+
+Red    - Invalid DPI or DSAT Address
+
+Yellow - Multiple DPI Addresses Found so validate it manually.
+
+Thanks.
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

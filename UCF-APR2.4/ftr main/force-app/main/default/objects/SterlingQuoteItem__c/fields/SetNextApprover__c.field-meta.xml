@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SetNextApprover__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Control when trigger for approval process runs. Set on by field update and set off at end of trigger.</description>
+    <externalId>false</externalId>
+    <label>SetNextApprover</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

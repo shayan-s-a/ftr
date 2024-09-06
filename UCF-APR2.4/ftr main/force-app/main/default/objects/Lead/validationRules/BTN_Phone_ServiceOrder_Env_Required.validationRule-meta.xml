@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BTN_Phone_ServiceOrder_Env_Required</fullName>
+    <active>true</active>
+    <description>For Qualified TTL Leads the following fields are required: BTN, Phone, Service Order Number, Service Order Due Date and DPI Env for &quot;Commercial SMB Sales&quot; users.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;TTL_Lead&quot;,
+ISPICKVAL(Status, &quot;Qualified&quot;),
+$UserRole.Name = &quot;Commercial SMB Sales&quot;,
+OR(
+ISBLANK(BTN_11__c),
+ISBLANK(Phone),
+ISBLANK(Service_Order_Number__c),
+ISBLANK(Service_Order_Due_Date__c),
+ISBLANK(TEXT(DPI_Env__c))
+)
+)</errorConditionFormula>
+    <errorMessage>For Qualified TTL Leads the following fields are required: BTN, Phone, Service Order Number, Service Order Due Date and DPI Env for &quot;Commercial SMB Sales&quot; users.</errorMessage>
+</ValidationRule>

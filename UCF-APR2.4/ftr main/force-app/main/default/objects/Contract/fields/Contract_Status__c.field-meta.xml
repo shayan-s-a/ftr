@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Contract Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Signed</fullName>
+                <default>false</default>
+                <label>Customer Signed</label>
+            </value>
+            <value>
+                <fullName>Sent</fullName>
+                <default>false</default>
+                <label>Sent</label>
+            </value>
+            <value>
+                <fullName>Declined/Cancelled</fullName>
+                <default>false</default>
+                <label>Declined/Cancelled</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Terminated by Frontier</fullName>
+                <default>false</default>
+                <label>Terminated by Frontier</label>
+            </value>
+            <value>
+                <fullName>Terminated by Partner</fullName>
+                <default>false</default>
+                <label>Terminated by Partner</label>
+            </value>
+            <value>
+                <fullName>Terminated by Customer</fullName>
+                <default>false</default>
+                <label>Terminated by Customer</label>
+            </value>
+            <value>
+                <fullName>Draft</fullName>
+                <default>true</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Expired</fullName>
+                <default>false</default>
+                <label>Expired</label>
+            </value>
+            <value>
+                <fullName>Redlined</fullName>
+                <default>false</default>
+                <label>Redlined</label>
+            </value>
+            <value>
+                <fullName>Sent Redline Document to Customer</fullName>
+                <default>false</default>
+                <label>Sent Redline Document to Customer</label>
+            </value>
+            <value>
+                <fullName>FTR Received Redline Document from Customer</fullName>
+                <default>false</default>
+                <label>FTR Received Redline Document from Customer</label>
+            </value>
+            <value>
+                <fullName>FTR Generated Final Clean Document</fullName>
+                <default>false</default>
+                <label>FTR Generated Final Clean Document</label>
+            </value>
+            <value>
+                <fullName>AE sent Redline to Legal</fullName>
+                <default>false</default>
+                <label>AE sent Redline to Legal</label>
+            </value>
+            <value>
+                <fullName>AE sent Redline to Risk Management</fullName>
+                <default>false</default>
+                <label>AE sent Redline to Risk Management</label>
+            </value>
+            <value>
+                <fullName>AE sent Redline to Engineering</fullName>
+                <default>false</default>
+                <label>AE sent Redline to Engineering</label>
+            </value>
+            <value>
+                <fullName>Redline Approved by Legal</fullName>
+                <default>false</default>
+                <label>Redline Approved by Legal</label>
+            </value>
+            <value>
+                <fullName>Redline Approved by Risk Management</fullName>
+                <default>false</default>
+                <label>Redline Approved by Risk Management</label>
+            </value>
+            <value>
+                <fullName>Redline Approved</fullName>
+                <default>false</default>
+                <label>Redline Approved</label>
+            </value>
+            <value>
+                <fullName>Fully Signed</fullName>
+                <default>false</default>
+                <label>Fully Signed</label>
+            </value>
+            <value>
+                <fullName>Document Generated</fullName>
+                <default>false</default>
+                <label>Document Generated</label>
+            </value>
+            <value>
+                <fullName>Document Sent to Customer</fullName>
+                <default>false</default>
+                <label>Document Sent to Customer</label>
+            </value>
+            <value>
+                <fullName>Awaiting for Customer Signature</fullName>
+                <default>false</default>
+                <label>Awaiting for Customer Signature</label>
+            </value>
+            <value>
+                <fullName>FTR Signed</fullName>
+                <default>false</default>
+                <label>FTR Signed</label>
+            </value>
+            <value>
+                <fullName>Sent Document back to Customer</fullName>
+                <default>false</default>
+                <label>Sent Document back to Customer</label>
+            </value>
+            <value>
+                <fullName>Up for Renewal</fullName>
+                <default>false</default>
+                <label>Up for Renewal</label>
+            </value>
+            <value>
+                <fullName>Retirement</fullName>
+                <default>false</default>
+                <label>Retirement</label>
+            </value>
+            <value>
+                <fullName>Customer Requests Negotiations</fullName>
+                <default>false</default>
+                <label>Customer Requests Negotiations</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

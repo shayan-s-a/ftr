@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to creator of task when task is completed.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Order Correction Task Complete</name>
+    <style>none</style>
+    <subject>Task Complete for Order Number {!Task.WhatID_Conversion__c}</subject>
+    <textOnly>An Order Correction Task has been completed.
+
+Order Correction Required
+{!Task.Order_Correction_Required__c}
+
+Comments
+{!Task.Description}
+
+Action Taken
+{!Task.Resolution_Action_Taken__c}
+
+Plese click the link below to access the task.
+Order Correction Task
+
+
+
+Thank You</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

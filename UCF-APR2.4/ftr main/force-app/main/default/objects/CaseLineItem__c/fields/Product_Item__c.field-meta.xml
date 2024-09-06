@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Item__c</fullName>
+    <description>Select a Product from a menu so that each case contains a Product. Values to include 10xxx, 800#, Collect, D1, D1 Unlimited, Nomadic VOIP, Voip</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select a Product from a menu so that each case contains a Product.</inlineHelpText>
+    <label>Product Item</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>10xxx</fullName>
+                <default>false</default>
+                <label>10xxx</label>
+            </value>
+            <value>
+                <fullName>800#</fullName>
+                <default>false</default>
+                <label>800#</label>
+            </value>
+            <value>
+                <fullName>Collect</fullName>
+                <default>false</default>
+                <label>Collect</label>
+            </value>
+            <value>
+                <fullName>D1</fullName>
+                <default>false</default>
+                <label>D1</label>
+            </value>
+            <value>
+                <fullName>D1 Business (NON PBX)</fullName>
+                <default>false</default>
+                <label>D1 Business (NON PBX)</label>
+            </value>
+            <value>
+                <fullName>D1 Residential</fullName>
+                <default>false</default>
+                <label>D1 Residential</label>
+            </value>
+            <value>
+                <fullName>D1 Unlimited</fullName>
+                <default>false</default>
+                <label>D1 Unlimited</label>
+            </value>
+            <value>
+                <fullName>Operator Services</fullName>
+                <default>false</default>
+                <label>Operator Services</label>
+            </value>
+            <value>
+                <fullName>PBX CPE</fullName>
+                <default>false</default>
+                <label>PBX CPE</label>
+            </value>
+            <value>
+                <fullName>VOIP</fullName>
+                <default>false</default>
+                <label>VOIP</label>
+            </value>
+            <value>
+                <fullName>VOIP Nomadic</fullName>
+                <default>false</default>
+                <label>VOIP Nomadic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

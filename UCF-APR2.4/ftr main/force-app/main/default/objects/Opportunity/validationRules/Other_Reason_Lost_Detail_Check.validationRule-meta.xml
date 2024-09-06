@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Reason_Lost_Detail_Check</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Detail_Lost_Reasons__c=&quot;&quot;,  ISPICKVAL( Reason_Lost__c , &quot;Other&quot;))</errorConditionFormula>
+    <errorMessage>You have selected &quot;Other&quot; as the reason lost, you must enter details in the &quot;Detail Lost Reasons&quot; field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Agent_field_for_Partner_Support</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Sub_Agent_Name__c ) &amp;&amp;
+OR(
+$User.ProfileId = &apos;00e0L000000Qtux&apos;,
+$User.ProfileId = &apos;00eE0000001A84o&apos;)</errorConditionFormula>
+    <errorDisplayField>Sub_Agent_Name__c</errorDisplayField>
+    <errorMessage>Sub-Agent field cannot be blank</errorMessage>
+</ValidationRule>

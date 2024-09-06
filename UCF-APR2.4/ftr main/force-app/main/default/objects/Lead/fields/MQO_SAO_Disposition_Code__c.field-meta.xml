@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQO_SAO_Disposition_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>SAO Disposition Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Lead_Stage__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer need disappears</fullName>
+                <default>false</default>
+                <label>Customer need disappears</label>
+            </value>
+            <value>
+                <fullName>Customer need changes</fullName>
+                <default>false</default>
+                <label>Customer need changes</label>
+            </value>
+            <value>
+                <fullName>Customer BDT changes</fullName>
+                <default>false</default>
+                <label>Customer BDT changes</label>
+            </value>
+            <value>
+                <fullName>Lack of access to decision makers</fullName>
+                <default>false</default>
+                <label>Lack of access to decision makers</label>
+            </value>
+            <value>
+                <fullName>Entrenched competitor</fullName>
+                <default>false</default>
+                <label>Entrenched competitor</label>
+            </value>
+            <value>
+                <fullName>Already engaged/duplicate</fullName>
+                <default>false</default>
+                <label>Already engaged/duplicate</label>
+            </value>
+            <value>
+                <fullName>Does not meet Sales-ready criteria</fullName>
+                <default>false</default>
+                <label>Does not meet Sales-ready criteria</label>
+            </value>
+            <value>
+                <fullName>Mis-assigned</fullName>
+                <default>false</default>
+                <label>Mis-assigned</label>
+            </value>
+            <value>
+                <fullName>Unable to reach contact</fullName>
+                <default>false</default>
+                <label>Unable to reach contact</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Not in GEO purchasing area</fullName>
+                <default>false</default>
+                <label>Not in GEO purchasing area</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Customer need disappears</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Customer need changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Customer BDT changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Lack of access to decision makers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Entrenched competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Already engaged/duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Does not meet Sales-ready criteria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Mis-assigned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Unable to reach contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recycled</controllingFieldValue>
+            <valueName>Not in GEO purchasing area</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

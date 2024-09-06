@@ -1,0 +1,20 @@
+<div ng-init="isSectionOpen = true" class="via-slds-card--simple slds-theme--{{pickedState.name}} slds-box slds-box--x-small slds-grid--vertical" data-card="{{uniqueLayoutId}}-card-{{cardIndex}}" ng-class="{selected:isSelected(cardIndex)}" data-embed-flyout=".embed-flyout" ng-click="expandCard = !expandCard">
+    <div ng-click="isSectionOpen = !isSectionOpen" class="slds-col slds-col--padded  slds-p-bottom--small via-slds-border--bottom">
+      <h3 class="slds-section__title via-slds-card--simple__title">{{data.obj.Product}}&nbsp;</h3>
+      <div class="slds-text-body--regular slds-text-title_caps">{{data.obj.PremiseDetail}}&nbsp;</div>
+    </div>
+    <div ng-show="isSectionOpen" class="slds-col slds-grid via-slds-card--simple__body slds-grid--vertical">
+        <div class="slds-grid slds-p-top--small slds-p-bottom--small " ng-repeat="(key, value) in data.obj.Attributes">
+            <div class="slds-col--padded slds-col slds-text-body--regular">{{key}}&nbsp;</div>
+            <div class="slds-col--padded slds-col slds-text-align--right slds-text-body--regular">{{value}}&nbsp;</div>
+            <!-- <div class="slds-col--padded slds-col slds-text-align--right slds-text-body--regular" ng-if="obj[field.relationshipName]">{{obj[field.relationshipName]['Name']}}&nbsp;</div> -->
+        </div>
+        <div class="slds-grid slds-p-top--small slds-p-bottom--small" ng-if="data.obj.LineDescription">
+            <div class="slds-col--padded slds-col slds-text-body--regular">Line Description &nbsp;</div>
+            <div class="slds-col--padded slds-col slds-text-align--right slds-text-body--regular">{{data.obj.LineDescription}}&nbsp;</div>
+        </div>
+
+
+    </div>
+    
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Walkthrough_Registration_Due_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ISPICKVAL(Walk_through_Registration_Due_Date__c, &quot;Yes&quot;),
+
+ISBLANK(Walk_through_Registration_Date_timezon__c))</errorConditionFormula>
+    <errorMessage>Please fill out the Walk-through Registration Date &amp; timezone</errorMessage>
+</ValidationRule>

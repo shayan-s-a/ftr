@@ -1,0 +1,147 @@
+.via-slds.via-omni .vlc-slds-cart .vlc-slds-cart-container.vlc-slds-cart-vdf-bottom-aligned {
+    bottom: -31.69rem;
+}
+.toast-icon {
+    padding-right: 0.5rem;
+    fill: white !important;
+}
+.via-slds.via-omni .vlc-slds-cart .vlc-slds-cart-container.slds-size--1-of-1 {
+    display: flex;
+    flex-direction: column;
+    .optional-add-on {
+        background: #f9f9f9 !important;
+    }
+    .vlc-slds-item--details__product_price_label.vlc-slds-item--details__product_price_label_margin {
+        margin-left: 3rem !important;
+    }
+    .slds-form-element-right_label.custom {
+        display: flex;
+        float: right;
+        position: unset;
+        width: 36%;
+        margin-top: 8px;
+    }
+
+    .top-shift {
+        margin-top: 12px !important;
+        .vlc-slds-cart--quantity-box {
+            margin-top: .4rem;
+        }
+    }
+
+    .vlc-slds-cart--quantity-box {
+        width: 42%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+
+    .vlc-slds-vdf-attribute-config {
+        height: 500px;
+        top: -500px;
+    }
+
+    .vlc-slds-cart-container-bottom-panel {
+        max-height: 450px !important;
+        .vlc-slds-line-item {
+            &.child-item {
+                .vlc-slds-item--name {
+                    // display: flex;
+                    overflow: auto;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-content: flex-start;
+                    align-items: center;
+                    .vlc-slds-cart--button__settings {
+                        padding: 0 0 0 20px !important;
+                        position: relative !important;
+                        top: 16px !important;
+                    }
+                    .vlc-slds-item--details__product_name.vlc-slds-cart-hier-level-2 {
+                            padding: 0px !important;
+                            margin-top: 1rem;
+                            margin-left: 1rem;
+                    }
+                    .vlc-slds-cart--quantity-box {
+                        position: unset !important;
+                        padding: 1rem !important;
+                        float: right !important;
+                        top: unset !important;
+                    }
+                }
+            }
+            .vlc-slds-item--name {
+                .vlc-slds-item--details__errors {
+                    margin-top: 10px;     
+                    width: 100%;
+                }
+                .slds-form-element__label {
+                    text-overflow: unset !important;
+                    &.slds-form-element__label_no_child {
+                        max-width: 100%;
+                    }
+                }
+                .vlc-slds-cart--button__settings {
+                    display: inline-block;
+                    position: unset !important; 
+                    top: unset !important; 
+                    left: unset !important; 
+                    width: 25px !important; 
+                    height: 25px !important;
+                    padding: 1rem 0 0 1rem;
+                }
+                .vlc-slds-item--details__product_name {
+                    padding: 1rem !important;
+                    position: unset !important;  
+                    top: unset !important; 
+                    width: 50% !important; 
+                    .vlc-slds-item--details__child_number {
+                        font-size: inherit !important;
+                        color: inherit !important;
+                        top: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    .vlc-slds-cart-container-top-panel {
+        cursor: pointer !important;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .selected-attribute-display {
+        padding-left: 1.3rem;
+        b { 
+            padding-right: 5px;
+        }
+        .att-container {
+            padding-right: 1rem;
+            padding-bottom: 10px;
+            white-space: nowrap;
+            line-height: 1.75rem;
+        }
+    }
+    .location-cart-display {
+        display: inline-block;
+        top: 5px;
+        position: relative;
+    }
+    .vlc-slds-item--details__product_name.customized-cart {
+        width: 66% !important;
+    }
+}
+
+
+// .vlc-slds-item--details__product_name {
+//     top: 20px !important;
+// }
+
+// .vlc-slds-cart-hier-level-2.vlc-slds-item--details__product_name {
+//     top: 30px !important;
+// }

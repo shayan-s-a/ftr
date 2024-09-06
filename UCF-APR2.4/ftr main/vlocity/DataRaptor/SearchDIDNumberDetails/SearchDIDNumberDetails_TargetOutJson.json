@@ -1,0 +1,198 @@
+{
+    "Address-Block": {
+        "Id": "0016u000001wLqRAAU",
+        "Name": "301 Leora Lane, Lewisville, TX  75056"
+    },
+    "Configure911": {
+        "FTR911Provider": null,
+        "x911Option": "null"
+    },
+    "ContextId": "8016u000000KykYAAS",
+    "CurrentDIDLocationCount": 1,
+    "CurrentServiceLocation": {
+        "$$hashKey": "object:433",
+        "Address": "301 Leora Lane, Lewisville, TX  75056",
+        "City": "Lewisville",
+        "Country": "United States",
+        "Id": "0016u000001wLqRAAU",
+        "Name": "301 Leora Lane, Lewisville, TX  75056",
+        "State": "Texas",
+        "Street": "301 Leora Lane",
+        "ZipCode": "75056"
+    },
+    "DIDLocationDetails": {
+        "Address-Block": {
+            "Address": "3500 Preston Rd, Plano, TX 75093, USA",
+            "City": "Plano",
+            "Country": "United States",
+            "Locality": null,
+            "State": "TX",
+            "Street": "3500 Preston Road",
+            "StreetLocation": "Collin County",
+            "ZipCode": "75093"
+        },
+        "AutoCallFailDestinationNumber": "1231231231",
+        "BTN": "1231231231",
+        "CallerIdPresentation": "John Stew",
+        "ConnectLineIdScreening": "ABCDEFG",
+        "DIDLocationId": "aH46u0000008OIPCA2",
+        "DIDLocationName": "Test Name",
+        "DIDTestNumber": "1231231231",
+        "DigitsSentToCustomer": "3331313131",
+        "InternationalDialing": "INTERNAL DIAL",
+        "NPA": null,
+        "NXX": null,
+        "NumberOfCallPaths": 3
+    },
+    "DIDNumbers": [
+        {
+            "$$hashKey": "object:452",
+            "DIDNumber": "1234567890",
+            "Feature": "Call Forwarding",
+            "Id": "aH76u0000004CABCA2",
+            "RateCenter": "Rate Center Value",
+            "Status": "Available",
+            "ThirdParty": "No",
+            "editMode": false
+        },
+        {
+            "$$hashKey": "object:453",
+            "DIDNumber": "4567812390",
+            "Feature": "Call Forwarding",
+            "Id": "aH76u0000004CACCA2",
+            "RateCenter": "Rate Center Value2",
+            "Status": "Available",
+            "ThirdParty": "No"
+        },
+        {
+            "$$hashKey": "object:454",
+            "DIDNumber": "0987652123",
+            "Feature": "Call Forwarding",
+            "Id": "aH76u0000004CADCA2",
+            "RateCenter": "Rate Center Value",
+            "Status": "Available",
+            "ThirdParty": "No"
+        },
+        {
+            "$$hashKey": "object:455",
+            "DIDNumber": "0123456789",
+            "Feature": "Call Forwarding",
+            "Id": "aH76u0000004CAECA2",
+            "RateCenter": "Rate Center Value2",
+            "Status": "Available",
+            "ThirdParty": "No"
+        }
+    ],
+    "Qualification": {
+        "AvailableVOIP": "Level 3",
+        "E911Type": "NOMADIC",
+        "Id": "aH26u00000000ApCAI",
+        "IsThirdParty": true,
+        "LATA": "730",
+        "NPA": 818,
+        "NXX": 331,
+        "OCN": "6006",
+        "OCNName": "CELLCO PARTNERSHIP DBA VERIZON WIRELESS - CA",
+        "RateCenter": "BURBANK:BURBANK DA",
+        "ServiceAccountId": "0016u000001wLqRAAU",
+        "ServiceAccountName": "301 Leora Lane, 75056",
+        "State": "CA"
+    },
+    "ServiceAccounts": [
+        {
+            "$$hashKey": "object:433",
+            "Address": "301 Leora Lane, Lewisville, TX  75056",
+            "City": "Lewisville",
+            "Country": "United States",
+            "Id": "0016u000001wLqRAAU",
+            "Name": "301 Leora Lane, Lewisville, TX  75056",
+            "State": "Texas",
+            "Street": "301 Leora Lane",
+            "ZipCode": "75056"
+        },
+        {
+            "$$hashKey": "object:434",
+            "Address": "100 CTE Drive, Dallas, PA  18612",
+            "City": "Dallas",
+            "Country": "United States",
+            "Id": "0016u000001wN8HAAU",
+            "Name": "100 CTE Drive, Dallas, PA  18612",
+            "State": "Pennsylvania",
+            "Street": "100 CTE Drive",
+            "ZipCode": "18612"
+        }
+    ],
+    "ServiceLocation": {
+        "CountOfLocations": 2,
+        "CurrentLocationId": "0016u000001wLqRAAU",
+        "CurrentLocationLit": false,
+        "CurrentLocationName": "301 Leora Lane, Lewisville, TX  75056",
+        "NumberOfDIDLocations": 1,
+        "PrimaryLocationId": null,
+        "ServiceLocations": null
+    },
+    "VOIPQualifications": [
+        {
+            "$$hashKey": "object:583",
+            "AvailableVOIP": "Level 3",
+            "E911Type": "NOMADIC",
+            "Id": "aH26u00000000ApCAI",
+            "IsThirdParty": true,
+            "LATA": "730",
+            "NPA": 818,
+            "NXX": 331,
+            "OCN": "6006",
+            "OCNName": "CELLCO PARTNERSHIP DBA VERIZON WIRELESS - CA",
+            "RateCenter": "BURBANK:BURBANK DA",
+            "ServiceAccountId": "0016u000001wLqRAAU",
+            "ServiceAccountName": "301 Leora Lane, 75056",
+            "State": "CA"
+        },
+        {
+            "$$hashKey": "object:584",
+            "AvailableVOIP": "FTR",
+            "E911Type": "STATIC",
+            "Id": "aH26u00000000B4CAI",
+            "IsThirdParty": false,
+            "LATA": "552",
+            "NPA": 214,
+            "NXX": 731,
+            "OCN": "4344",
+            "OCNName": "FRONTIER SOUTHWEST INC DBA FRONTIER COMM OF TEXAS",
+            "RateCenter": "CARROLLTON",
+            "ServiceAccountId": "0016u000001wLqRAAU",
+            "ServiceAccountName": "301 Leora Lane, 75056",
+            "State": "TX"
+        },
+        {
+            "$$hashKey": "object:585",
+            "AvailableVOIP": "Level 3",
+            "E911Type": "NOMADIC",
+            "Id": "aH26u000000CaRCCA0",
+            "IsThirdParty": true,
+            "LATA": "730",
+            "NPA": 818,
+            "NXX": 333,
+            "OCN": "7453",
+            "OCNName": "US TELEPACIFIC CORP. - CA",
+            "RateCenter": "BURBANK:BURBANK DA",
+            "ServiceAccountId": "0016u000001wLqRAAU",
+            "ServiceAccountName": "301 Leora Lane, 75056",
+            "State": "CA"
+        }
+    ],
+    "VoipQualUpsertResult": "",
+    "id": "a9p6u0000008OlgAAE",
+    "isdtp": "p1",
+    "layout": "lightning",
+    "sfdcIFrameHost": "web",
+    "sfdcIFrameOrigin": "https://ftr--epcsip2--vlocity-cmt.visualforce.com",
+    "timeStamp": "2021-05-14T12:53:49.098Z",
+    "userCurrencyCode": "USD",
+    "userId": "0050h00000IQYfgAAH",
+    "userName": "eric.marcondes@ftr.com.epcsip2",
+    "userProfile": "Frontier System Administrator",
+    "userTimeZone": -420,
+    "vlcPersistentComponent": {
+    }
+}

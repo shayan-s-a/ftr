@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OTC_Discount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(vlocity_cmt__BaseOneTimeCharge__c &lt;&gt;vlocity_cmt__OneTimeCharge__c,((vlocity_cmt__BaseOneTimeCharge__c -  vlocity_cmt__OneTimeCharge__c)/vlocity_cmt__BaseOneTimeCharge__c), NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>OTC Discount %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Percent</type>
+</CustomField>

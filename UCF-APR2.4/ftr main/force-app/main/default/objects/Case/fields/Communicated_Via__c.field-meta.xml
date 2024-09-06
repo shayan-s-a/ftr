@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Communicated_Via__c</fullName>
+    <description>This is used on the Commercial Sales case for the Vlocity Team Use Only section for Kim Kortz 3/5/2020</description>
+    <externalId>false</externalId>
+    <label>Communicated Via</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chatter to Case Submitter</fullName>
+                <default>false</default>
+                <label>Chatter to Case Submitter</label>
+            </value>
+            <value>
+                <fullName>Chatter to All</fullName>
+                <default>false</default>
+                <label>Chatter to All</label>
+            </value>
+            <value>
+                <fullName>Update Training Documents</fullName>
+                <default>false</default>
+                <label>Update Training Documents</label>
+            </value>
+            <value>
+                <fullName>Email to All</fullName>
+                <default>false</default>
+                <label>Email to All</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

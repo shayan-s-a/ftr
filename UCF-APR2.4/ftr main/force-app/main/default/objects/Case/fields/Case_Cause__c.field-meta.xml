@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Cause__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Cause</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Case_Reason_Other__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PROV Plan</fullName>
+                <default>false</default>
+                <label>PROV Plan</label>
+            </value>
+            <value>
+                <fullName>PRI LOC</fullName>
+                <default>false</default>
+                <label>PRI LOC</label>
+            </value>
+            <value>
+                <fullName>SEC LOC</fullName>
+                <default>false</default>
+                <label>SEC LOC</label>
+            </value>
+            <value>
+                <fullName>Hand-Off</fullName>
+                <default>false</default>
+                <label>Hand-Off</label>
+            </value>
+            <value>
+                <fullName>Completed too Early</fullName>
+                <default>false</default>
+                <label>Completed too Early</label>
+            </value>
+            <value>
+                <fullName>Work Not Complete</fullName>
+                <default>false</default>
+                <label>Work Not Complete</label>
+            </value>
+            <value>
+                <fullName>Address</fullName>
+                <default>false</default>
+                <label>Address</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Provisioning/DGF</fullName>
+                <default>false</default>
+                <label>Provisioning/DGF</label>
+            </value>
+            <value>
+                <fullName>Design Plan</fullName>
+                <default>false</default>
+                <label>Design Plan</label>
+            </value>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Remedy</fullName>
+                <default>false</default>
+                <label>Remedy</label>
+            </value>
+            <value>
+                <fullName>Circuit ID</fullName>
+                <default>false</default>
+                <label>Circuit ID</label>
+            </value>
+            <value>
+                <fullName>Contract</fullName>
+                <default>false</default>
+                <label>Contract</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SE</controllingFieldValue>
+            <controllingFieldValue>Sales Request</controllingFieldValue>
+            <valueName>Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SE</controllingFieldValue>
+            <controllingFieldValue>Sales Request</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SE</controllingFieldValue>
+            <controllingFieldValue>Sales Request</controllingFieldValue>
+            <valueName>Provisioning/DGF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Completed too Early</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Work Not Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Request</controllingFieldValue>
+            <valueName>Contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design Issues</controllingFieldValue>
+            <valueName>Design Plan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design Issues</controllingFieldValue>
+            <valueName>Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Issues</controllingFieldValue>
+            <valueName>Remedy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Issues</controllingFieldValue>
+            <valueName>Circuit ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SC</controllingFieldValue>
+            <valueName>PROV Plan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SC</controllingFieldValue>
+            <valueName>PRI LOC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SC</controllingFieldValue>
+            <valueName>SEC LOC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SC</controllingFieldValue>
+            <valueName>Hand-Off</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

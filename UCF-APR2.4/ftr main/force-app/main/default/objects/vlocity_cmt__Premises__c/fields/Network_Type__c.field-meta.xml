@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Network_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((isHBE__c =true &amp;&amp;  isLegacy__c =true),&apos;Both&apos;,
+	IF((isHBE__c =true &amp;&amp;  isLegacy__c =false),&apos;HBE&apos;,
+		IF((isHBE__c =false &amp;&amp;  isLegacy__c =true),&apos;Legacy&apos;,
+			IF((isHBE__c =false &amp;&amp;  isLegacy__c =false),null,null))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Network Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

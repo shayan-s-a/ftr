@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Number</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Customer Number</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+try{
+var url = parent.location.href;
+var accountCustNum= &quot;{!Account.Customer_Number__c}&quot;;
+var str1;
+//alert(&apos;*** &apos; +accountCustNum );
+
+	if({!ISNULL( Account.Legal_City__c )}  || {!ISNULL( Account.Legal_Zip__c )}  || {!ISNULL( Account.Legal_State__c )} || {!ISNULL( Account.Legal_Street__c)}  || {!ISNULL( Account.Phone )} ){
+            if({!ISNULL( Account.Legal_City__c )}){
+              str1=&apos;Legal_City__c&apos;;
+			}
+			if({!ISNULL( Account.Legal_Zip__c )}){
+				str1=str1 + &apos;\n&apos; + &apos;Legal_Zip__c&apos;;
+			}
+			if({!ISNULL( Account.Legal_State__c )}){
+				str1=str1 + &apos;\n&apos; + &apos;Legal_State__c&apos;;
+			}
+			if({!ISNULL( Account.Legal_Street__c)}) {
+				str1=str1 + &apos;\n&apos; + &apos;Legal_Street__c&apos;;
+			}
+			if( {!ISNULL( Account.Phone )}) {
+				str1=str1 + &apos;\n&apos; + &apos;Phone&apos;;
+			}
+		alert(&quot;Please enter the values &quot; + &apos;\n&apos; + str1);
+	}else{
+//alert(&apos;*** &apos; +accountCustNum );
+			if(accountCustNum!=&apos;&apos;){
+//alert(&apos;*** 1111 &apos; +accountCustNum );
+				if (&apos;{!User.Profile}&apos;==&apos;Frontier System Administrator&apos;){
+					var accountIdVal = &quot;{!Account.Id}&quot;;
+                                        // alert(&quot;execute apex1&quot;);
+					var resp = sforce.apex.execute(&quot;WebServiceInitializer&quot;, &quot;getResponseFromWS&quot;,{accountId: accountIdVal });
+				}else{
+					alert(&quot;You don&apos;t have sufficient privilages&quot;);
+				}
+			}else{
+//alert(&apos;*** 2222 &apos; +accountCustNum );
+				var accountIdVal = &quot;{!Account.Id}&quot;;
+ //alert(&quot;execute apex2&quot;);
+				var resp = sforce.apex.execute(&quot;WebServiceInitializer&quot;, &quot;getResponseFromWS&quot;,{accountId: accountIdVal });
+			}
+		parent.location.href = url;
+	}
+}
+catch(err){
+ alert(err);
+}
+//document.location.reload(true);</url>
+</WebLink>

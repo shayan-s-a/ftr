@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPP_Terms__c</fullName>
+    <externalId>false</externalId>
+    <label>PPP Terms</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Last Mile</fullName>
+                <default>false</default>
+                <label>Last Mile</label>
+            </value>
+            <value>
+                <fullName>Middle Mile</fullName>
+                <default>false</default>
+                <label>Middle Mile</label>
+            </value>
+            <value>
+                <fullName>IRU</fullName>
+                <default>false</default>
+                <label>IRU</label>
+            </value>
+            <value>
+                <fullName>Shared Ownership</fullName>
+                <default>false</default>
+                <label>Shared Ownership</label>
+            </value>
+            <value>
+                <fullName>Revenue Share</fullName>
+                <default>false</default>
+                <label>Revenue Share</label>
+            </value>
+            <value>
+                <fullName>Open Access</fullName>
+                <default>false</default>
+                <label>Open Access</label>
+            </value>
+            <value>
+                <fullName>Public Ownership</fullName>
+                <default>false</default>
+                <label>Public Ownership</label>
+            </value>
+            <value>
+                <fullName>In-kind Contribution-Aerial Plant</fullName>
+                <default>false</default>
+                <label>In-kind Contribution-Aerial Plant</label>
+            </value>
+            <value>
+                <fullName>In-kind Contribution-Conduit</fullName>
+                <default>false</default>
+                <label>In-kind Contribution-Conduit</label>
+            </value>
+            <value>
+                <fullName>In-kind Contribution-Right of Way</fullName>
+                <default>false</default>
+                <label>In-kind Contribution-Right of Way</label>
+            </value>
+            <value>
+                <fullName>In-kind Contribution-Permitting</fullName>
+                <default>false</default>
+                <label>In-kind Contribution-Permitting</label>
+            </value>
+            <value>
+                <fullName>Local Capital Contribution</fullName>
+                <default>false</default>
+                <label>Local Capital Contribution</label>
+            </value>
+            <value>
+                <fullName>Community Anchor Institution Coverage</fullName>
+                <default>false</default>
+                <label>Community Anchor Institution Coverage</label>
+            </value>
+            <value>
+                <fullName>Ubiquitous Coverage</fullName>
+                <default>false</default>
+                <label>Ubiquitous Coverage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

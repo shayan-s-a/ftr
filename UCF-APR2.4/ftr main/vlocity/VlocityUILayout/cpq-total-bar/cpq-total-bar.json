@@ -1,0 +1,38 @@
+{
+    "Cards": [
+        "cpq-total-bar-card"
+    ],
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "801190000003OUP"
+            }
+        ],
+        "type": "Dual",
+        "value": {
+            "apexRemoteResultVar": "records[0].details.records[0]",
+            "apexRestResultVar": "records[0].details.records[0]",
+            "endpoint": "/services/apexrest/%vlocity_namespace%/v2/cpq/carts/{{params.id}}?validate=true&price=true",
+            "inputMap": {
+                "cartId": "{{params.id}}",
+                "price": "true",
+                "validate": "true"
+            },
+            "methodType": "GET",
+            "remoteClass": "CpqAppHandler",
+            "remoteMethod": "getCarts",
+            "remoteNSPrefix": "%vlocity_namespace%",
+            "resultVar": "result.records[0]"
+        }
+    },
+    "previewType": "runTime",
+    "templates": {
+        "0": {
+            "templateUrl": "cpq-total-bar"
+        }
+    },
+    "workspace": [
+        "cpq-total-bar-card/Frontier Communications/1/1571101701111"
+    ]
+}

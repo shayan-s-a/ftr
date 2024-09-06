@@ -1,0 +1,30 @@
+<messaging:emailTemplate subject="Vlocity Quote {!relatedTo.Name} - Final Approval - {!relatedTo.Customer_Name__c}" recipientType="User" relatedToType="Quote">
+<messaging:htmlEmailBody >
+
+<html>
+   <body>
+      
+
+<br><b>The below Quote has been Approved</b></br>
+
+<br>Link: 
+<span>
+<apex:outputlink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedTo.Id}">{!relatedTo.Name}</apex:outputlink>
+</span>
+</br>
+
+<br><b>Below are the Quote related fields:</b></br>
+
+<br>Quote Name:<b> {!relatedTo.Name}</b></br>
+<br>Quote Number: <b>{!relatedTo.QuoteNumber}</b></br>
+<br>Quote Owner: <b>{!relatedTo.Owner.Name}</b></br>
+
+<br>       
+      <c:QuoteLinesRSMEmail quote_id="{!relatedTo.id}"></c:QuoteLinesRSMEmail>
+</br>
+    </body>
+   </html>
+
+</messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

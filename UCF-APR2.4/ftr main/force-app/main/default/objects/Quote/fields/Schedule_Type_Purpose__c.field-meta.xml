@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schedule_Type_Purpose__c</fullName>
+    <defaultValue>&quot;Order For New Services&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Schedule Type Purpose</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Order for New Services</fullName>
+                <default>true</default>
+                <label>Order for New Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

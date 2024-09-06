@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to alert owner of a Support Team Request Churn Alert Case assigned to them</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Churn Alert Case</name>
+    <style>none</style>
+    <subject>***Churn Alert Case - Needs Attention****  {!Case.CaseNumber}</subject>
+    <textOnly>Please follow the link below to change the ownership of this case to the CSA on the account, and send a notification email via Salesforce.
+
+Support Churn Case
+
+Thank you</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

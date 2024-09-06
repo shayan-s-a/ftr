@@ -1,0 +1,32 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForRecordHome">
+    <ltng:require styles="{! $Resource.DataTable_Plugin + '/DataTables-1.10.21/css/jquery.dataTables.min.css'}" scripts="{!join(',', 
+                           $Resource.DataTable_Plugin + '/jQuery-3.3.1/jquery-3.3.1.min.js', 
+                           $Resource.DataTable_Plugin + '/DataTables-1.10.21/js/jquery.dataTables.min.js',
+                           $Resource.DataTable_Plugin + '/DataTables-1.10.21/js/dataTables.colReorder.min.js',
+                           $Resource.DataTable_Plugin + '/DataTables-1.10.21/js/dataTables.buttons.min.js',
+                           $Resource.DataTable_Plugin + '/DataTables-1.10.21/js/buttons.colVis.min.js',
+                           $Resource.DataTable_Plugin + '/DataTables-1.10.21/js/dataTables.fixedColumns.min.js')
+                           }" afterScriptsLoaded="{!c.scriptsLoaded}" />
+    <aura:handler name="reloadComponent" event="c:ftrNearbyProspectComponentEvent" action="{!c.performAction}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="errorMsg" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="error" type="boolean" default="false" />
+
+    <aura:if isTrue="{!v.error}">
+        <div
+            style="font-size: 1rem;height: 200px;width: 100%;text-align: center;display: flex;color: rgb(194, 57, 52);flex-direction: column;justify-content: center;">
+
+            {!v.errorMsg}
+
+            <lightning:button iconName="utility:refresh" iconPosition="left"
+                class="reload-btn" variant="destructive-text" label="Reload" title="Reload"
+                onclick="{! c.doInit }" />
+
+        </div>
+    </aura:if>
+
+    {!v.body}
+
+    <!-- <c:ftrNearbyProspectTable /> -->
+</aura:component>

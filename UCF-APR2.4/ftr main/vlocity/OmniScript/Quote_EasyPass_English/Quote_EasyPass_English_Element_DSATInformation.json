@@ -1,0 +1,51 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "EasyPass Quoting",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/EasyPass/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "EasyPass Quoting",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/EasyPass/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "DisplayServiceLocations",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/EasyPass/English/DisplayServiceLocations",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "DisplayServiceLocations",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "disOnTplt": false,
+        "label": null,
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "",
+                        "field": "DSATAddressValidationSuccessResponse:QualifiedAddress"
+                    }
+                ]
+            }
+        },
+        "text": "<table style=\"height: 215px; width: 944.5px; margin-left: auto; margin-right: auto;\">\n<tbody>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Ticket</strong></td>\n<td style=\"width: 374px; height: 16px;\">%DSATAddressValidationSuccessResponse:Id%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>WC CLLI</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:WireCenterCLLI%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Address</strong></td>\n<td style=\"width: 374px; height: 16px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:Address%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>Lit?</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:LitBuilding%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>City</strong></td>\n<td style=\"width: 374px; height: 16px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:City%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>Fiber Tier</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:FiberTier%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>State</strong></td>\n<td style=\"width: 374px; height: 16px;\">&nbsp;%DSATAddressValidationSuccessResponse:QualifiedAddress:State%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>Fiber Distance</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:FiberDistance%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Zip Code</strong></td>\n<td style=\"width: 374px; height: 16px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:ZipCode%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>Copper Tier</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:CopperTier%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Lat/Long</strong></td>\n<td style=\"width: 374px; height: 16px;\">%DSATAddressValidationSuccessResponse:QualifiedAddress:Latitude% ,&nbsp;%DSATAddressValidationSuccessResponse:QualifiedAddress:Longitude%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>Copper Distance</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:CopperDistance%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>Product</strong></td>\n<td style=\"width: 374px; height: 16px;\">&nbsp;%DSATAddressValidationSuccessResponse:ProductsPretty%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>WC QoS</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:WireCenterQoS%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"width: 62px; height: 16px;\"><strong>PERRouter</strong></td>\n<td style=\"width: 374px; height: 16px;\">%DSATAddressValidationSuccessResponse:PERRouter%</td>\n<td style=\"width: 157px; height: 16px;\"><strong>WC Speed</strong></td>\n<td style=\"width: 348.5px; height: 16px;\">%DSATAddressValidationSuccessResponse:WireCenterSpeed%</td>\n</tr>\n</tbody>\n</table>",
+        "textKey": ""
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": true,
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "DSATInformation",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/EasyPass/English/DSATInformation"
+}

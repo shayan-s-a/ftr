@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <name>dp_Test_Char_Count</name>
+        <label>Test Char Count</label>
+        <locationX>274</locationX>
+        <locationY>59</locationY>
+        <defaultConnector>
+            <targetReference>Update_Order_Number_Fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Order_Char_Greater_than_240</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Order240CharTest</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Oppty</targetReference>
+            </connector>
+            <label>Order Char Less than 240</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>CombineOrders</name>
+        <dataType>String</dataType>
+        <expression>if(
+{!vPrevOrder} = &quot;&quot;,
+{!vNewOrderNum},
+{!vPrevOrder} &amp; &quot;, &quot; &amp; {!vNewOrderNum}
+)</expression>
+    </formulas>
+    <formulas>
+        <description>If the Order Number field is greater than 240 char, True.  If not, it is false.</description>
+        <name>Order240CharTest</name>
+        <dataType>Boolean</dataType>
+        <expression>if(
+len({!vPrevOrder}) &gt; 240, True, False
+)</expression>
+    </formulas>
+    <interviewLabel>Order Number update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order Number update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Oppty</name>
+        <label>Update Oppty</label>
+        <locationX>272</locationX>
+        <locationY>323</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vOpptyID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>RPON_Order__c</field>
+            <value>
+                <elementReference>CombineOrders</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Order_Number_Fields</name>
+        <label>Update Order Number Fields</label>
+        <locationX>456</locationX>
+        <locationY>320</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vOpptyID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Order_Number_Extended__c</field>
+            <value>
+                <elementReference>vPrevOrder</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RPON_Order__c</field>
+            <value>
+                <elementReference>vNewOrderNum</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>56</locationY>
+        <connector>
+            <targetReference>dp_Test_Char_Count</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>vNewOrderNum</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>vOpptyID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>vPrevOrder</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Audit_Task</fullName>
+        <description>Audit Task</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case_Notification_Templates/Sales_Audit_Team_for_Audit_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_to_Notify_MDU_Team</fullName>
+        <description>Email to Notify MDU Team</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>MDU_Email_Templates/MDU_Opportunity_Ready_For_Contract_Generation</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Correction_Task_Complete</fullName>
+        <ccEmails>teresa.miles@ftr.com</ccEmails>
+        <description>Order Correction Task Complete Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Order_Correction_Task_Complete</template>
+    </alerts>
+    <alerts>
+        <fullName>X8th_day_reminder_Audit_Case</fullName>
+        <description>8th day reminder Audit Case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Owner Manager</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/X8th_Day_Reminder_to_Task_Owner</template>
+    </alerts>
+    <rules>
+        <fullName>8th day reminder audit case</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Audit Task</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>equals</operation>
+            <value>Not Started</value>
+        </criteriaItems>
+        <description>8th Day Reminder to Task Owner if Task is untouched</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>X8th_day_reminder_Audit_Case</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>8</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Notify MDU Contract Team</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.OwnerId</field>
+            <operation>equals</operation>
+            <value>MDU Contract Team Queue</value>
+        </criteriaItems>
+        <description>Send email to notify MDU Contract Generation team about opportunity has been assigned to their queue.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Order Correction Task Complete</fullName>
+        <actions>
+            <name>Order_Correction_Task_Complete</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Order Correction</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Sends an email to Task creator when task is coompleted.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task Notification for Audit Case</fullName>
+        <actions>
+            <name>Audit_Task</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Audit Task</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

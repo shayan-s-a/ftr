@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tlx__Call_Contact</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Call Contact</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/tlx__Click_to_Dial?parentId={!Contact.Id}&amp;Work={!Contact.Phone}&amp;Home%20Phone={!Contact.HomePhone}&amp;Mobile={!Contact.MobilePhone}</url>
+</WebLink>

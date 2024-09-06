@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>MDU_Quota_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MDU Quota RO</label>
+        <sharedTo>
+            <group>MDU_Quota_RO</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MDU_Quota_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MDU Quota RW</label>
+        <sharedTo>
+            <group>MDU_Quota_RW</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

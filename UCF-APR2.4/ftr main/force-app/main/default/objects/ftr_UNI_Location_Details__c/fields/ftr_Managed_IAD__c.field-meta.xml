@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ftr_Managed_IAD__c</fullName>
+    <externalId>false</externalId>
+    <label>Managed_IAD</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adtran IAD TA908E</fullName>
+                <default>false</default>
+                <label>Adtran IAD TA908E</label>
+            </value>
+            <value>
+                <fullName>Adtran IAD TA916E</fullName>
+                <default>false</default>
+                <label>Adtran IAD TA916E</label>
+            </value>
+            <value>
+                <fullName>Adtran IAD TA924E</fullName>
+                <default>false</default>
+                <label>Adtran IAD TA924E</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

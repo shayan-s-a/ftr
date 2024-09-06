@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Sale_product_Sold_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(SMB_OTM_Lead_Sub_Disposition__c, &quot;Sale&quot;)  &amp;&amp;
+
+(AND( 
+ Data__c  = FALSE, 
+ Voice__c = FALSE,
+ Frontier_Secure__c = FALSE,
+ Other__c  = FALSE))</errorConditionFormula>
+    <errorMessage>Please select one of the Product(s) Sold: Data, Voice, Frontier Secure, Other.</errorMessage>
+</ValidationRule>

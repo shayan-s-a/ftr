@@ -1,0 +1,521 @@
+<section ng-app="app" ng-controller="MainCtrl">
+    <div class="slds-grid slds-m-bottom_small">
+        <div class="slds-form-element slds-grow-none">
+            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                <slds-svg-icon sprite="'utility'" icon="'search'" extra-classes="'slds-input__icon'"></slds-svg-icon>
+                <input type="filter" placeholder="Search" ng-model="criteria.searchtext"
+                    ng-model-options="{debounce: {'default': 200, 'blur': 0}}" class="slds-input" />
+            </div>
+            <div class="slds-m-left_xxx-small slds-p-top_small">
+                <span class="slds-var-p-around_small">Showing {{getAssets().length || 0}} of {{assets.length}}
+                    services</span><br>
+            </div>
+        </div>
+        <div class="slds-col_bump-left" ng-show="allowActions">
+            <div class="slds-button-group slds-m-left_small" role="group">
+                <button ng-click="syncSelectedAssets()" hotkey-card-action ng-disabled="(!selectedAssets().length || assetSyncInProgress)"
+                    class="slds-button slds-button_neutral">Sync Assets</button>
+                <button ng-click="changeToQuote()" hotkey-card-action ng-disabled="(!selectedAssets().length || assetSyncInProgress)"
+                    class="slds-button slds-button_neutral">Change to Quote</button>
+                <!-- <button ng-click="changeToOrder()" hotkey-card-action ng-disabled="!selectedAssets().length"
+                    class="slds-button slds-button_neutral">Change to Order</button>
+                <button ng-click="moveAsset()" hotkey-card-action ng-disabled="selectedAssets().length != 1 "
+                    class="slds-button slds-button_neutral">Move</button> -->
+            </div>
+            <div class="slds-m-right_xxx-small slds-p-top_small">
+                <span class="slds-float_right slds-var-p-around_small">
+                    {{selectedAssets().length || "0"}}
+                    <span ng-if="selectedAssets().length == 1"> service selected</span>
+                    <span ng-if="selectedAssets().length != 1"> services selected</span>
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-no-row-hover">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="slds-is-sortable" style="width:1.5rem">
+                    <label ng-if="allowActions">
+                        <input type="checkbox" ng-checked="allSelected()" ng-click="toggleAll()" />
+                    </label>
+                </th>
+                <th class="slds-is-sortable" style="width:25%;padding-left: 4%;">
+                    <span href="#" ng-click="sort('Name')">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate strong" title="Product Name"> Product Name </span>
+                            <span class="slds-m-left_xx-small" ng-show="criteria.sort == 'Name'">
+                                <span ng-show="!criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowup'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                                <span ng-show="criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowdown'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                            </span>
+                        </div>
+                    </span>
+                </th>
+                <th class="slds-is-sortable">
+                    <span href="#" ng-click="sort('Attributes.DPI_CIRCUITID')">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate strong" title="Circuit ID"> Circuit ID </span>
+                            <span class="slds-m-left_xx-small" ng-show="criteria.sort == 'Attributes.DPI_CIRCUITID'">
+                                <span ng-show="!criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowup'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                                <span ng-show="criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowdown'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                            </span>
+                        </div>
+                    </span>
+                </th>
+                <th class="slds-is-sortable" style='width: 105px;'>
+                    <span href="#" ng-click="sort('Attributes.WTN')">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate strong" title="WTN"> WTN </span>
+                            <span class="slds-m-left_xx-small" ng-show="criteria.sort == 'Attributes.WTN '">
+                                <span ng-show="!criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowup'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                                <span ng-show="criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowdown'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                            </span>
+                        </div>
+                    </span>
+                </th>
+                <th class="slds-is-sortable" style="width:20%">
+                    <span href="#" ng-click="sort('ShippingAddress.StreetAddress')">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate strong" title="Address"> Service Address </span>
+                            <span class="slds-m-left_xx-small"
+                                ng-show="criteria.sort == 'ShippingAddress.StreetAddress'">
+                                <span ng-show="!criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowup'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                                <span ng-show="criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowdown'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                            </span>
+                        </div>
+                    </span>
+                </th>
+                <th class="slds-is-sortable">
+                    <span href="#" ng-click="sort('ContractTerm')">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate strong" title="Address"> Term </span>
+                            <span class="slds-m-left_xx-small" ng-show="criteria.sort == 'ContractTerm'">
+                                <span ng-show="!criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowup'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                                <span ng-show="criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowdown'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                            </span>
+                        </div>
+                    </span>
+                </th>
+                <th class="slds-is-sortable">
+                    <span href="#" ng-click="sort('RecurringTotal')">
+                        <div style="justify-content: center;"
+                            class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate strong" title="MRC/NRC"> MRC/NRC </span>
+                            <span class="slds-m-left_xx-small" ng-show="criteria.sort == 'RecurringTotal'">
+                                <span ng-show="!criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowup'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                                <span ng-show="criteria.desc">
+                                    <slds-svg-icon sprite="'utility'" icon="'arrowdown'" extra-classes="'icon-color'"
+                                        size="'xx-small'"></slds-svg-icon></i>
+                                </span>
+                            </span>
+                        </div>
+                    </span>
+                </th>
+                <th style="width: 5%;"></th>
+            </tr>
+        </thead>
+        <tbody
+            ng-repeat-start="asset in assets | filter: criteria.searchtext | orderBy:criteria.sort:criteria.desc | startFrom:criteria.currentPage*criteria.pageSize | limitTo:criteria.pageSize"
+            ng-init="asset.showChildren = true">
+            <tr class="slds-line-height_reset">
+                <td style="width:1.5rem">
+                    <label ng-if="allowActions">
+                        <input type="checkbox" ng-checked="allSelected() || asset.assetChecked"
+                            ng-click="toggleSelection(asset)" ng-disabled="asset.preventSelection" />
+                    </label>
+                </td>
+                <td>
+                    <div class="slds-grid" ng-click="asset.showChildren = !asset.showChildren"
+                        ng-class="{ 'parent-product' : asset.child.length }">
+                        <!-- If asset.child, present a showChildren toggle-->
+                        <div class="slds-col slds-p-around_x-small slds-size_1-of-12">
+                            <span ng-show="asset.child.length">
+                                <div ng-show="!asset.showChildren">
+                                    <slds-svg-icon sprite="'utility'" icon="'chevronright'" size="'x-small'"
+                                        extra-classes="'icon-color'">
+                                    </slds-svg-icon>
+                                </div>
+                                <div ng-show="asset.showChildren">
+                                    <slds-svg-icon sprite="'utility'" icon="'chevrondown'" size="'x-small'"
+                                        extra-classes="'icon-color'">
+                                    </slds-svg-icon>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="slds-p-around_x-small slds-size_11-of-12">
+                            <!-- Asset name -->
+                            <span title="{{asset.Name}}" class="slds-text-heading_small strong"
+                                style="white-space: normal;">
+                                {{asset.Name}}
+                            </span>
+                        </div>
+
+                    </div>
+                </td>
+                <td>
+                    <div title="{{asset.Attributes.DPI_CIRCUITID}}">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-text-heading_small  slds-truncate">{{asset.Attributes.DPI_CIRCUITID}}</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-text-heading_small  slds-truncate">
+                            {{asset.Attributes.WTN}}
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <a class="slds-text-heading_small slds-truncate" title="{{asset.ServiceAccountName}}"
+                            ng-click="launchUrl('/' + asset.ServiceAccountId)">
+                            <span>{{asset.ShippingAddress.StreetAddress}}</span>
+                            <br />
+                            <span>{{asset.ShippingAddress.City}},</span>
+                            <span>{{asset.ShippingAddress.State}}</span>
+                            <span>{{asset.ShippingAddress.PostalCode}}</span>
+                        </a>
+
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-text-heading_small  slds-truncate">{{asset.ContractTerm}}</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div style='flex-direction: column;'
+                            class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-text-heading_small  slds-truncate">{{asset.RecurringTotal |
+                                currency}}</span>
+                            <span class="slds-text-heading_small  slds-truncate">{{asset.OneTimeTotal |
+                                currency}}</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid">
+                        <!-- If asset.Attributes, present a show/hide details toggle -->
+                        <!-- <div class="slds-col slds-size_1-of-3"> -->
+                        <div class="slds-media slds-media--center" ng-if="asset.Attributes">
+                            <button ng-if="asset.expanded" ng-click="asset.expanded = false"
+                                class="slds-truncate slds-button" title="Hide Details" style="padding-left: 4px;">
+                                <span class="slds-media__figure">
+                                    <vloc-card-icon data="data" sprite="'utility'" icon="'hide'" size="'x-small'"
+                                        obj="obj" size="'medium'" class="icon-color">
+                                    </vloc-card-icon>
+                                </span>
+                                <!-- <span>Hide Details</span> -->
+                            </button>
+
+                            <button ng-if="!asset.expanded" ng-click="asset.expanded = true"
+                                class="slds-truncate slds-button" title="Show Details" style="padding-left: 4px;">
+                                <span class="slds-media__figure">
+                                    <vloc-card-icon data="data" sprite="'utility'" icon="'preview'" size="'x-small'"
+                                        obj="obj" size="'medium'" class="icon-color">
+                                    </vloc-card-icon>
+                                </span>
+                                <!-- <span>Show Details</span> -->
+                            </button>
+                        </div>
+                        <!-- </div> -->
+                        <!-- Configure toggle -->
+                        <!-- <div class="slds-col slds-size_1-of-3"> -->
+                        <!-- <button class="slds-button">
+                                        <span class="slds-media__figure">
+                                            <vloc-card-icon data="data" sprite="'utility'" icon="'setup'"
+                                                size="'x-small'" obj="obj" size="'medium'" class="icon-color">
+                                            </vloc-card-icon>
+                                        </span>
+                                        <span class="slds-media__body">
+                                            <a href="#" class="via-action-link slds-truncate slds-text-link">
+                                                Configure
+                                            </a>
+                                        </span>
+                                        </button> -->
+                        <!-- </div> -->
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Asset level category wise attributes display : start-->
+            <tr ng-if="asset.expanded && asset.dpiAttributes" class="product-card">
+                <th colspan="1"><b>DPI</b></th>
+                <!-- <td style="width:1.5rem"></td> -->
+                <td colspan="7">
+                    <div class="slds-m-around_medium slds-card__body slds-p-top_x-small" style="margin-left: 4.3%;">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-p-bottom--small slds-size_3-of-12"
+                                ng-repeat="dpi in asset.dpiAttributes | orderBy: 'dpi.SortOrder'">
+                                <p class="slds-truncate slds-text-heading--label" title="{{key}}">{{dpi.Label}}</p>
+                                <div class="slds-tile__detail cl-text_muted">
+                                    <p class="slds-truncate">{{dpi.value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- <tr ng-if="asset.expanded && asset.dsatAttributes" class="product-card">
+                <th colspan="1"><b>DSAT</b></th>
+                <td colspan="7">
+                    <div class="slds-m-around_medium slds-card__body slds-p-top_x-small" style="margin-left: 4.3%;">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-p-bottom--small slds-size_3-of-12"
+                                ng-repeat="dsat in asset.dsatAttributes | orderBy: 'dsat.SortOrder'">
+                                <p class="slds-truncate slds-text-heading--label" title="{{key}}">{{dsat.Label}}</p>
+                                <div class="slds-tile__detail cl-text_muted">
+                                    <p class="slds-truncate">{{dsat.value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr> -->
+
+            <tr ng-if="asset.expanded && asset.m6Attributes" class="product-card">
+                <th colspan="1"><b>M6</b></th>
+                <td colspan="7">
+                    <div class="slds-m-around_medium slds-card__body slds-p-top_x-small" style="margin-left: 4.3%;">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-p-bottom--small slds-size_3-of-12"
+                                ng-repeat="m6 in asset.m6Attributes | orderBy: 'm6.SortOrder'">
+                                <p class="slds-truncate slds-text-heading--label" title="{{key}}">{{m6.Label}}</p>
+                                <div class="slds-tile__detail cl-text_muted">
+                                    <p class="slds-truncate">{{m6.value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- Asset level category wise attributes display : start-->
+
+
+
+        <tbody ng-if="asset.showChildren" ng-repeat-end ng-repeat="child in asset.child track by child.Id">
+            <tr ng-if="asset.showChildren" class="child-product">
+                <td style="width:1.5rem"></td>
+                <td>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-p-around_x-small slds-size_1-of-12">
+                        </div>
+                        <div class="slds-p-around_x-small slds-size_11-of-12">
+                            <!-- Child Asset name -->
+                            <span title="{{child.Name}}" class="slds-text-heading_small strong "
+                                style="white-space: normal;">
+                                {{child.Name}}
+                            </span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate" title="{{child.Attributes.DPI_CIRCUITID}}">
+                        <span class="slds-text-heading_small  slds-truncate">{{child.Attributes.DPI_CIRCUITID}}</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-text-heading_small  slds-truncate">{{child.Attributes.WTN}}</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <a title="{{child.ServiceAccountName}}" class="slds-text-heading_small slds-truncate"
+                            ng-click="launchUrl('/' + child.ServiceAccountId)">
+                            <span>{{child.ShippingAddress.StreetAddress}}</span>
+                            <br />
+                            <span>{{child.ShippingAddress.City}},</span>
+                            <span>{{child.ShippingAddress.State}}</span>
+                            <span>{{child.ShippingAddress.PostalCode}}</span>
+                        </a>
+
+                    </div>
+                </td>
+                <td>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                        <span class="slds-text-heading_small  slds-truncate">{{child.ContractTerm}}</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div style='flex-direction: column;'
+                            class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-text-heading_small  slds-truncate">{{child.RecurringTotal |
+                                currency}}</span>
+                            <span class="slds-text-heading_small  slds-truncate">{{child.OneTimeTotal |
+                                currency}}</span>
+                        </div>
+                </td>
+                <td>
+                    <div class="slds-grid">
+                        <!-- If child.Attributes, present a show/hide details toggle -->
+                        <!-- <div class="slds-col slds-size_1-of-3"> -->
+                        <div class="slds-media slds-media--center" ng-if="child.Attributes">
+                            <button ng-if="child.expanded" ng-click="child.expanded = false"
+                                class="slds-truncate slds-button" title="Hide Details" style="padding-left: 4px;">
+                                <span class="slds-media__figure">
+                                    <vloc-card-icon data="data" sprite="'utility'" icon="'hide'" size="'x-small'"
+                                        obj="obj" size="'medium'" class="icon-color">
+                                    </vloc-card-icon>
+                                </span>
+                            </button>
+                            <!-- <span>Hide Details</span> -->
+                            <button ng-if="!child.expanded" ng-click="child.expanded = true"
+                                class="slds-truncate slds-button" title="Show Details" style="padding-left: 4px;">
+                                <span class="slds-media__figure">
+                                    <vloc-card-icon data="data" sprite="'utility'" icon="'preview'" size="'x-small'"
+                                        obj="obj" size="'medium'" class="icon-color">
+                                    </vloc-card-icon>
+                                </span>
+                                <!-- <span>Show Details</span> -->
+                            </button>
+                        </div>
+                        <!-- Configure toggle -->
+                        <!-- <div class="slds-col slds-size_1-of-3"> -->
+                        <!-- <button class="slds-button">
+                                            <span class="slds-media__figure">
+                                                <vloc-card-icon data="data" sprite="'utility'" icon="'setup'"
+                                                    size="'x-small'" obj="obj" size="'medium'" class="icon-color">
+                                                </vloc-card-icon>
+                                            </span>
+                                            <span class="slds-media__body">
+                                                <a href="#" class="via-action-link slds-truncate slds-text-link">
+                                                    Configure
+                                                </a>
+                                            </span>
+                                            </button> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                </td>
+            </tr>
+            <!-- <tr ng-if="asset.showChildren && child.expanded && child.Attributes" class="product-card">
+                <td style="width:1.5rem"></td>
+                <td colspan="7">
+                    <div class="slds-m-around_medium slds-card__body slds-p-top_x-small" style="margin-left: 4.3%;">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-p-bottom--small slds-size_3-of-12"
+                                ng-repeat="(key, value) in child.Attributes">
+                                <p class="slds-truncate slds-text-heading--label" title="{{key}}">{{key}}</p>
+                                <div class="slds-tile__detail cl-text_muted">
+                                    <p class="slds-truncate">{{value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr> -->
+
+
+            <!-- child product level category wise attributes display : start -->
+            <tr ng-if="asset.showChildren && child.expanded && child.dpiAttributes" class="product-card">
+                <th colspan="1"><b>DPI</b></th>
+                <!-- <td style="width:1.5rem"></td> -->
+                <td colspan="7">
+                    <div class="slds-m-around_medium slds-card__body slds-p-top_x-small" style="margin-left: 4.3%;">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-p-bottom--small slds-size_3-of-12"
+                                ng-repeat="dpi in child.dpiAttributes | orderBy: 'dpi.SortOrder'">
+                                <p class="slds-truncate slds-text-heading--label" title="{{key}}">{{dpi.Label}}</p>
+                                <div class="slds-tile__detail cl-text_muted">
+                                    <p class="slds-truncate">{{dpi.value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <br/>
+
+            <!-- <tr ng-if="asset.showChildren && child.expanded && child.dsatAttributes" class="product-card">
+                <th colspan="1"><b>DSAT</b></th>
+                <td colspan="7">
+                    <div class="slds-m-around_medium slds-card__body slds-p-top_x-small" style="margin-left: 4.3%;">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-p-bottom--small slds-size_3-of-12"
+                                ng-repeat="dsat in child.dsatAttributes | orderBy: 'dsat.SortOrder'">
+                                <p class="slds-truncate slds-text-heading--label" title="{{key}}">{{dsatAttributes.Label}}</p>
+                                <div class="slds-tile__detail cl-text_muted">
+                                    <p class="slds-truncate">{{dsat.value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <br/> -->
+
+            <tr ng-if="asset.showChildren && child.expanded && child.m6Attributes" class="product-card">
+                <th colspan="1"><b>M6</b></th>
+                <!-- <td style="width:1.5rem"></td> -->
+                <td colspan="7">
+                    <div class="slds-m-around_medium slds-card__body slds-p-top_x-small" style="margin-left: 4.3%;">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-p-bottom--small slds-size_3-of-12"
+                                ng-repeat="m6 in child.m6Attributes| orderBy: 'm6.SortOrder'">
+                                <p class="slds-truncate slds-text-heading--label" title="{{key}}">{{m6.Label}}</p>
+                                <div class="slds-tile__detail cl-text_muted">
+                                    <p class="slds-truncate">{{m6.value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- child product level category wise attributes display : start-->
+
+        </tbody>
+        </tbody>
+    </table>
+    <div class="slds-button-group" role="group" style="margin: 1rem 0; float: right;">
+        <button class="slds-button slds-button_neutral" ng-disabled="criteria.currentPage == 0"
+            ng-click="criteria.currentPage = criteria.currentPage-1">
+            Previous
+        </button>
+        <button class="slds-button slds-button_neutral" ng-disabled="true" style="color: unset;padding: 0 2rem;font-size: 0.7rem;">
+            Page {{criteria.currentPage+1}} of {{numberOfPages()}}
+        </button>
+        <button <button class="slds-button slds-button_neutral"
+            ng-disabled="criteria.currentPage >= getAssets().length/criteria.pageSize - 1"
+            ng-click="criteria.currentPage = criteria.currentPage+1">
+            Next
+        </button>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Which_hand_off_does_the_customer_want__c</fullName>
+    <externalId>false</externalId>
+    <label>Which hand off does the customer want?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SIP Trunks-Standard RJ45 ethernet based SIP hand off(customer has an IP Enabled PBX)</fullName>
+                <default>false</default>
+                <label>SIP Trunks-Standard RJ45 ethernet based SIP hand off(customer has an IP Enabled PBX)</label>
+            </value>
+            <value>
+                <fullName>PRI - The customer receives SIP to the site, and we convert to a PRI hand off using a device(IAD) (customer has a traditional TDM PBX with a PRI interface card)</fullName>
+                <default>false</default>
+                <label>PRI - The customer receives SIP to the site, and we convert to a PRI hand off using a device(IAD) (customer has a traditional TDM PBX with a PRI interface card)</label>
+            </value>
+            <value>
+                <fullName>FXS ports - Emulated Analog ports via 66 punch down block (do not use for alam/elevator)</fullName>
+                <default>false</default>
+                <label>FXS ports - Emulated Analog ports via 66 punch down block (do not use for alam/elevator)</label>
+            </value>
+            <value>
+                <fullName>My customer does not want SIP, they just want a traditional ISDN PRI/standard B1 line(no SIP)</fullName>
+                <default>false</default>
+                <label>My customer does not want SIP, they just want a traditional ISDN PRI/standard B1 line(no SIP)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

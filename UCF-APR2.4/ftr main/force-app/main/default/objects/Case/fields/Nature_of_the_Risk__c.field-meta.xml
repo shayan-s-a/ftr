@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_the_Risk__c</fullName>
+    <description>Created for Centriam Churn Case for Skip 11/2020</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the most relevant reason for the risk.</inlineHelpText>
+    <label>Nature of the Risk</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing or invoice issue</fullName>
+                <default>false</default>
+                <label>Billing or invoice issue</label>
+            </value>
+            <value>
+                <fullName>Competitor offer</fullName>
+                <default>false</default>
+                <label>Competitor offer</label>
+            </value>
+            <value>
+                <fullName>Contract Expiration</fullName>
+                <default>false</default>
+                <label>Contract Expiration</label>
+            </value>
+            <value>
+                <fullName>Customer service – poor response time</fullName>
+                <default>false</default>
+                <label>Customer service – poor response time</label>
+            </value>
+            <value>
+                <fullName>Customer service - unresolved question / discrepancy</fullName>
+                <default>false</default>
+                <label>Customer service - unresolved question / discrepancy</label>
+            </value>
+            <value>
+                <fullName>Installation delayed</fullName>
+                <default>false</default>
+                <label>Installation delayed</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Poor or insufficient bandwidth</fullName>
+                <default>false</default>
+                <label>Poor or insufficient bandwidth</label>
+            </value>
+            <value>
+                <fullName>Technical or Network service issue</fullName>
+                <default>false</default>
+                <label>Technical or Network service issue</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

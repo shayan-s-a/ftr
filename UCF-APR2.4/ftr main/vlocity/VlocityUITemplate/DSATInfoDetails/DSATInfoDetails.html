@@ -1,0 +1,180 @@
+<div class='nds-col_padded nds-size_1-of-1 row' ng-controller="dsatInfoDetailsController">
+	<div class="column">
+		<table class="nds-table nds-table_bordered nds-table_cell-buffer" ng-class="[compareWindowWidth(1024,'vlc-slds-table_stacked'),compareWindowWidth(375,'vertical')]">
+		   <tbody>
+			   <tr>
+				   <td style="width:100px;" class="nds-text-heading_label"><strong>Frontier</strong></td>
+			   </tr>
+			   <tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Ticket</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.Id}}</td>
+					<td style="width: 104px; height: 16px;"><strong>WC CLLI</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.WireCenterCLLI}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Address</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.QualifiedAddress.Address}}</td>
+					<td style="width: 104px; height: 16px;"><strong>Lit?</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.LitBuilding}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 19px;"><strong>City</strong></td>
+					<td style="width: 420px; height: 19px;">{{dsatInfo.QualifiedAddress.City}}</td>
+					<td style="width: 104px; height: 19px;"><strong>Fiber Tier</strong></td>
+					<td style="width: 356px; height: 19px;">{{dsatInfo.FiberTier}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>State</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.QualifiedAddress.State}}</td>
+					<td style="width: 104px; height: 16px;"><strong>Fiber Distance</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.FiberDistance}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Zip Code</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.QualifiedAddress.ZipCode}}</td>
+					<td style="width: 104px; height: 16px;"><strong>Copper Tier</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.CopperTier}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Lat/Long</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.QualifiedAddress.Latitude}} ,{{dsatInfo.QualifiedAddress.Longitude}}</td>
+					<td style="width: 104px; height: 16px;"><strong>Copper Distance</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.CopperDistance}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Product</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.ProductsPretty}}</td>
+					
+					<td style="width: 104px; height: 16px;"><strong>WC QoS</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.WireCenterQoS}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>PERRouter</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.PERRouter}}</td>
+					<td style="width: 104px; height: 16px;"><strong>WC Speed</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.WireCenterSpeed}}</td>
+				</tr>
+				<tr style="height: 18px;">
+					<td style="width: 62px; height: 18px;"><strong>Planned HBE Roadmap</strong></td>
+					<td style="width: 420px; height: 18px;">{{dsatInfo.PlannedHBETimeframe}}</td>
+					<td style="width: 104px; height: 18px;"><strong>Future HBE Wc Speed</strong></td>
+					<td style="width: 356px; height: 18px;">{{dsatInfo.FutureHBEWcSpeed}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Splicing Cost</strong></td>
+					<td style="width: 420px; height: 16px;">${{dsatInfo.BSADetails.SplicingCost}}</td>
+					<td style="width: 104px; height: 16px;"><strong>Plan Id</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.BSADetails.PlanId}}</td>
+				</tr>
+				<tr style="height: 18px;">
+					<td style="width: 62px; height: 18px;"><strong>New Fiber Build Footage</strong></td>
+					<td style="width: 420px; height: 18px;">{{dsatInfo.BSADetails.TotalNewFiberFt}}</td>
+					<td style="width: 104px; height: 18px;"><strong>CO to Site Total Footage</strong></td>
+					<td style="width: 356px; height: 18px;">{{dsatInfo.BSADetails.CoToSiteFt}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Total New Fiber OSP Costs</strong></td>
+					<td style="width: 420px; height: 16px;">${{dsatInfo.BSADetails.TotalFiberCost}}</td>
+					<td style="width: 104px; height: 16px;"><strong>TR Costs 1G & below</strong></td>
+					<td style="width: 356px; height: 16px;">${{dsatInfo.BSADetails.TrCostLtEt1gb}}</td>
+				</tr>
+				<tr style="height: 18px;">
+					<td style="width: 62px; height: 18px;"><strong>NID/SFP Costs 1G & below</strong></td>
+					<td style="width: 420px; height: 18px;">${{dsatInfo.BSADetails.BbCostLtEt1gb}}</td>
+					<td style="width: 104px; height: 18px;"><strong>FTR Costs >1G & up to 10G</strong></td>
+					<td style="width: 356px; height: 18px;">${{dsatInfo.BSADetails.TrCostGt1gbLtEt10gb}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>NID/SFP Costs >1G & up to 10G</strong></td>
+					<td style="width: 420px; height: 16px;">${{dsatInfo.BSADetails.BbCostGt1gbLtEt10gb}}</td>
+					<td style="width: 104px; height: 16px;"><strong>TR Costs >10G</strong></td>
+					<td style="width: 356px; height: 16px;">${{dsatInfo.BSADetails.TrCostGt10gb}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>NID/SFP Costs >10G</strong></td>
+					<td style="width: 420px; height: 16px;">${{dsatInfo.BSADetails.BbCostGt10gb}}</td>
+					<td style="width: 104px; height: 16px;"><strong>Servable</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.BSADetails.Servable}}</td>
+				</tr>
+				<tr style="height: 18px;">
+					<td style="width: 62px; height: 16px;"><strong>Review Status</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.BSADetails.ReviewStatus}}</td>
+					<td style="width: 104px; height: 18px;"><strong>Review Reason</strong></td>
+					<td style="width: 356px; height: 18px;">{{dsatInfo.BSADetails.ReviewReason}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Route Notes</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.BSADetails.RouteNotes}}</td>
+					<td style="width: 104px; height: 16px;"><strong>Guardrail Cost</strong></td>
+					<td style="width: 356px; height: 16px;">${{dsatInfo.BSADetails.GuardrailCost}}</td>
+				</tr>
+				
+				
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;">&nbsp;</td>
+					<td style="width: 420px; height: 16px;">&nbsp;</td>
+					<td style="width: 104px; height: 16px;"><strong>TotalCost</strong></td>
+					<td style="width: 356px; height: 16px;">${{dsatInfo.TotalCost}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>HBE</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.HBEDetails.isHBE}}</td>
+					<td style="width: 104px; height: 16px;"><strong>HBE Max Speed</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.HBEDetails.HBEMaxSpeed}}</td>
+				</tr>
+				<tr style="height: 16px;">
+					<td style="width: 62px; height: 16px;"><strong>Legacy</strong></td>
+					<td style="width: 420px; height: 16px;">{{dsatInfo.HBEDetails.isLegacy}}</td>
+					<td style="width: 104px; height: 16px;"><strong>HBE Max QoS</strong></td>
+					<td style="width: 356px; height: 16px;">{{dsatInfo.HBEDetails.HBEMaxQoS}}</td>
+				</tr>
+				
+			</tbody>
+	   </table>
+	</div>
+    <div class="column">
+		<table class ="nds-table nds-table_bordered nds-table_cell-buffer">
+			<thead ng-if="dsatInfo.vendorlist.length > 0">
+				<tr class="nds-text-heading_label">
+					<th scope="col" ng-model="colm">
+						<div>Partner Name</div>
+					</th>
+					<!--<th scope="col" ng-model="colm">
+						<div>Products</div>
+					</th>-->
+					<th scope="col" ng-model="colm">
+						<div>Speed</div>
+					</th>
+					<th scope="col" ng-model="colm">
+						<div>QoS</div>
+					</th>
+					<th scope="col" ng-model="colm">
+						<div>Tier</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody ng-if="dsatInfo.vendorlist.length > 0">
+				<tr ng-repeat = 'partnr in dsatInfo.vendorlist'>
+					<td >
+						<label class="nds-truncate">{{partnr.ProviderName}}</label>
+					</td>
+					<!--<td >
+						<label class="nds-truncate">{{partnr.prodList}}</label>
+					</td>-->
+					<td >
+						<label class="nds-truncate">{{partnr.Speed}}</label>
+					</td>
+					<td >
+						<label class="nds-truncate">{{partnr.QoS}}</label>
+					</td>
+					<td >
+						<label class="nds-truncate">{{partnr.Tier}}</label>
+					</td>
+				</tr>
+			<tbody>
+	   </table>
+	</div>
+	
+
+   
+</div>

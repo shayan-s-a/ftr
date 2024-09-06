@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Stage__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Lead Stages (updated 5/24) are: Known&gt;MQL&gt;Evaluating&gt;Validating&gt;Decision&gt;Closed/Won
+Detours: Recycled, Disqualified, Lost</inlineHelpText>
+    <label>Lead Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Known</fullName>
+                <default>false</default>
+                <label>Known</label>
+            </value>
+            <value>
+                <fullName>MQL</fullName>
+                <default>false</default>
+                <label>MQL</label>
+            </value>
+            <value>
+                <fullName>Validating</fullName>
+                <default>false</default>
+                <label>Validating</label>
+            </value>
+            <value>
+                <fullName>Decision</fullName>
+                <default>false</default>
+                <label>Decision</label>
+            </value>
+            <value>
+                <fullName>Closed/Won</fullName>
+                <default>false</default>
+                <label>Closed/Won</label>
+            </value>
+            <value>
+                <fullName>Recycled</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Recycled</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+            <value>
+                <fullName>Sent To LDR</fullName>
+                <default>true</default>
+                <label>Sent To LDR</label>
+            </value>
+            <value>
+                <fullName>Evaluating</fullName>
+                <default>false</default>
+                <label>Evaluating</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Sent To LDR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>Known</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>MQL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>Validating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>Decision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>Closed/Won</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Rejected - Return to Nurture Stream</controllingFieldValue>
+            <valueName>Recycled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Rejected - Disqualify</controllingFieldValue>
+            <valueName>Disqualified</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>Lost</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

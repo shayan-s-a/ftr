@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FiberExp_ActualOFS_Dte__c</fullName>
+    <description>This is actual date provided by engineering. Represents the actual date all work will be completed and address will be OFS. Only Active OSF in D2D BAU Lists.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is actual OFS date provided by engineering. Represents the actual date all work will be (or was) completed and address is considered OFS. Only Active OSF in D2D BAU Lists.</inlineHelpText>
+    <label>Fiber Expansion OFS Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

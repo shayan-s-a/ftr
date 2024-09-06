@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_On_Products__c</fullName>
+    <description>Field is used to add other available services to current Product Type (Family) and Product selected via the orders</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Items will display based on availability of other Products that can be added to the Product selected.</inlineHelpText>
+    <label>Add-On Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BOT</fullName>
+                <default>false</default>
+                <label>BOT</label>
+            </value>
+            <value>
+                <fullName>Broadband</fullName>
+                <default>false</default>
+                <label>Broadband</label>
+            </value>
+            <value>
+                <fullName>Centrex/CustoPak/CentraLink/Versaline</fullName>
+                <default>false</default>
+                <label>Centrex/CustoPak/CentraLink/Versaline</label>
+            </value>
+            <value>
+                <fullName>Cloud Managed Solutions</fullName>
+                <default>false</default>
+                <label>Cloud Managed Solutions</label>
+            </value>
+            <value>
+                <fullName>Connect Cloud</fullName>
+                <default>false</default>
+                <label>Connect Cloud</label>
+            </value>
+            <value>
+                <fullName>Ethernet - BYOA</fullName>
+                <default>false</default>
+                <label>Ethernet - BYOA</label>
+            </value>
+            <value>
+                <fullName>Fiber Optics</fullName>
+                <default>false</default>
+                <label>Fiber Optics</label>
+            </value>
+            <value>
+                <fullName>Hunting</fullName>
+                <default>false</default>
+                <label>Hunting</label>
+            </value>
+            <value>
+                <fullName>IP Connect</fullName>
+                <default>false</default>
+                <label>IP Connect</label>
+            </value>
+            <value>
+                <fullName>IPVPN</fullName>
+                <default>false</default>
+                <label>IPVPN</label>
+            </value>
+            <value>
+                <fullName>Managed Cellular Failover</fullName>
+                <default>false</default>
+                <label>Managed Cellular Failover</label>
+            </value>
+            <value>
+                <fullName>Managed Firewall</fullName>
+                <default>false</default>
+                <label>Managed Firewall</label>
+            </value>
+            <value>
+                <fullName>Managed Security</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Managed Security</label>
+            </value>
+            <value>
+                <fullName>Managed Security - Advanced</fullName>
+                <default>false</default>
+                <label>Managed Security - Advanced</label>
+            </value>
+            <value>
+                <fullName>Managed Security - Standard</fullName>
+                <default>false</default>
+                <label>Managed Security - Standard</label>
+            </value>
+            <value>
+                <fullName>Managed Wi-Fi</fullName>
+                <default>false</default>
+                <label>Managed Wi-Fi - Indoor</label>
+            </value>
+            <value>
+                <fullName>Managed Wi-Fi - Outdoor</fullName>
+                <default>false</default>
+                <label>Managed Wi-Fi - Outdoor</label>
+            </value>
+            <value>
+                <fullName>OneVoice</fullName>
+                <default>false</default>
+                <label>OneVoice</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other (3 way calling, Call Forwarding, Frontier Texting, etc.)</fullName>
+                <default>false</default>
+                <label>Other (3 way calling, Call Forwarding, Frontier Texting, etc.)</label>
+            </value>
+            <value>
+                <fullName>POTS</fullName>
+                <default>false</default>
+                <label>POTS</label>
+            </value>
+            <value>
+                <fullName>Remote Call Forward</fullName>
+                <default>false</default>
+                <label>Remote Call Forward</label>
+            </value>
+            <value>
+                <fullName>SDWAN - BYOA</fullName>
+                <default>false</default>
+                <label>SDWAN - BYOA</label>
+            </value>
+            <value>
+                <fullName>SIP Trunking</fullName>
+                <default>false</default>
+                <label>SIP Trunking</label>
+            </value>
+            <value>
+                <fullName>Smart Voice</fullName>
+                <default>false</default>
+                <label>Smart Voice</label>
+            </value>
+            <value>
+                <fullName>Toll Free</fullName>
+                <default>false</default>
+                <label>Toll Free</label>
+            </value>
+            <value>
+                <fullName>TV</fullName>
+                <default>false</default>
+                <label>TV</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SDWAN - New or Upgrade Ethernet</controllingFieldValue>
+            <controllingFieldValue>SDWAN - New or Upgrade BB</controllingFieldValue>
+            <controllingFieldValue>SDWAN - Existing or BYOA</controllingFieldValue>
+            <controllingFieldValue>Managed Firewall</controllingFieldValue>
+            <controllingFieldValue>SDWAN - E-Reach/Off-Net Ethernet</controllingFieldValue>
+            <controllingFieldValue>SDWAN IKE</controllingFieldValue>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <controllingFieldValue>National ELAN</controllingFieldValue>
+            <controllingFieldValue>EVPL</controllingFieldValue>
+            <controllingFieldValue>E-LAN</controllingFieldValue>
+            <controllingFieldValue>EIA</controllingFieldValue>
+            <controllingFieldValue>E-LAN + EIA</controllingFieldValue>
+            <controllingFieldValue>E-Reach</controllingFieldValue>
+            <controllingFieldValue>Off-Net Ethernet</controllingFieldValue>
+            <valueName>Cloud Managed Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN - New or Upgrade Ethernet</controllingFieldValue>
+            <controllingFieldValue>SDWAN - New or Upgrade BB</controllingFieldValue>
+            <controllingFieldValue>SDWAN - Existing or BYOA</controllingFieldValue>
+            <controllingFieldValue>SDWAN - E-Reach/Off-Net Ethernet</controllingFieldValue>
+            <controllingFieldValue>SDWAN IKE</controllingFieldValue>
+            <controllingFieldValue>EVPL</controllingFieldValue>
+            <controllingFieldValue>EIA</controllingFieldValue>
+            <controllingFieldValue>E-LAN + EIA</controllingFieldValue>
+            <controllingFieldValue>E-Reach</controllingFieldValue>
+            <valueName>IP Connect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN - New or Upgrade Ethernet</controllingFieldValue>
+            <controllingFieldValue>SDWAN - New or Upgrade BB</controllingFieldValue>
+            <controllingFieldValue>SDWAN - Existing or BYOA</controllingFieldValue>
+            <controllingFieldValue>SDWAN - E-Reach/Off-Net Ethernet</controllingFieldValue>
+            <controllingFieldValue>Cloud Managed Solutions</controllingFieldValue>
+            <controllingFieldValue>SDWAN IKE</controllingFieldValue>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <controllingFieldValue>Frontier AnyWare UCaaS + Ethernet</controllingFieldValue>
+            <controllingFieldValue>EIA</controllingFieldValue>
+            <controllingFieldValue>E-LAN + EIA</controllingFieldValue>
+            <valueName>Managed Firewall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN - New or Upgrade Ethernet</controllingFieldValue>
+            <controllingFieldValue>SDWAN - New or Upgrade BB</controllingFieldValue>
+            <controllingFieldValue>SDWAN - Existing or BYOA</controllingFieldValue>
+            <controllingFieldValue>SDWAN - E-Reach/Off-Net Ethernet</controllingFieldValue>
+            <controllingFieldValue>SDWAN IKE</controllingFieldValue>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <controllingFieldValue>EVPL</controllingFieldValue>
+            <controllingFieldValue>EIA</controllingFieldValue>
+            <controllingFieldValue>E-LAN + EIA</controllingFieldValue>
+            <controllingFieldValue>E-Reach</controllingFieldValue>
+            <valueName>SIP Trunking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN - Existing or BYOA</controllingFieldValue>
+            <controllingFieldValue>Managed Firewall</controllingFieldValue>
+            <controllingFieldValue>Cloud Managed Solutions</controllingFieldValue>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>Ethernet - BYOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cloud Managed Solutions</controllingFieldValue>
+            <controllingFieldValue>Managed Enterprise WiFi - Existing BB/FiOS or BYOA</controllingFieldValue>
+            <valueName>SDWAN - BYOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>BOT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <controllingFieldValue>Data (Only)</controllingFieldValue>
+            <valueName>Broadband</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Centrex/CustoPak/CentraLink/Versaline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <controllingFieldValue>Data (Only)</controllingFieldValue>
+            <valueName>Fiber Optics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Hunting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>OneVoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Other (3 way calling, Call Forwarding, Frontier Texting, etc.)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>POTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Remote Call Forward</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Smart Voice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Toll Free</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>TV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice  (Only or Bundle)</controllingFieldValue>
+            <valueName>Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <valueName>Connect Cloud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <controllingFieldValue>EVPL</controllingFieldValue>
+            <controllingFieldValue>EIA</controllingFieldValue>
+            <valueName>IPVPN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <valueName>Managed Cellular Failover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <valueName>Managed Security - Advanced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <valueName>Managed Security - Standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <valueName>Managed Wi-Fi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Network Services</controllingFieldValue>
+            <valueName>Managed Wi-Fi - Outdoor</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

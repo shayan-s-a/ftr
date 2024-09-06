@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Status__c</fullName>
+    <description>Created for Saad Abughazaleh for use mainly by the BAMs. 4/6/2020</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select an option to update the status of the contact.</inlineHelpText>
+    <label>Contact Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Current</fullName>
+                <default>false</default>
+                <label>Current</label>
+            </value>
+            <value>
+                <fullName>Invalid</fullName>
+                <default>false</default>
+                <label>Invalid</label>
+            </value>
+            <value>
+                <fullName>Left Employment</fullName>
+                <default>false</default>
+                <label>Left Employment</label>
+            </value>
+            <value>
+                <fullName>Survey - Selected</fullName>
+                <default>false</default>
+                <label>Survey - Selected</label>
+            </value>
+            <value>
+                <fullName>Survey - Sent</fullName>
+                <default>false</default>
+                <label>Survey - Sent</label>
+            </value>
+            <value>
+                <fullName>Survey - Responded</fullName>
+                <default>false</default>
+                <label>Survey - Responded</label>
+            </value>
+            <value>
+                <fullName>Survey - Resend</fullName>
+                <default>false</default>
+                <label>Survey - Resend</label>
+            </value>
+            <value>
+                <fullName>Survey - Resent</fullName>
+                <default>false</default>
+                <label>Survey - Resent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

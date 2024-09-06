@@ -1,0 +1,55 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Quick Quote",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "input": {
+                "DSATTicketNumber": "%DSATTicketNumber%",
+                "EventStep": "Product Request",
+                "FiberDistance": "%AddressQualification:AddressQualificationResult:FiberDistance%",
+                "FiberTier": "%AddressQualification:AddressQualificationResult:FiberTier%",
+                "FrontierServedAddress": "%FrontierServedAddress%",
+                "LatLong": "%LatLong%",
+                "LitOnnetAddress": "%LitOnnetAddress%",
+                "MasterAgent": "%MasterAgentId%",
+                "OmniScriptID": "%SessionId%",
+                "PartnerName": "%UserName%",
+                "Partnerlogin": "%userName%",
+                "Qualificationstatus": "%Qualificationstatus%",
+                "QualifyBy": "%QualifyBy%",
+                "SubAgent": "%SubAgent_Name%",
+                "WireCenter": "%AddressQualification:AddressQualificationResult:WireCenterCLLI%",
+                "WireCenterMaxSpeed": "%AddressQualification:AddressQualificationResult:WireCenterSpeed%",
+                "products": "%SelectedProducts%",
+                "sendAddress": "%AddressQualification:AddressQualificationResult:QualifiedAddress:Address%",
+                "sendCity": "%AddressQualification:AddressQualificationResult:QualifiedAddress:City%",
+                "sendState": "%AddressQualification:AddressQualificationResult:QualifiedAddress:State%",
+                "sendZip": "%AddressQualification:AddressQualificationResult:QualifiedAddress:ZipCode%"
+            }
+        },
+        "label": "Report Product Request",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SetVal_ReportProductRequest",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English/SetVal_ReportProductRequest"
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specific_Request__c</fullName>
+    <externalId>false</externalId>
+    <label>Specific Request</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Related_To2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>After RSM approval</fullName>
+                <default>false</default>
+                <label>After RSM approval</label>
+            </value>
+            <value>
+                <fullName>Before RSM approval</fullName>
+                <default>false</default>
+                <label>Before RSM approval</label>
+            </value>
+            <value>
+                <fullName>Co name, address</fullName>
+                <default>false</default>
+                <label>Co name, address</label>
+            </value>
+            <value>
+                <fullName>Create/Modify Contracts</fullName>
+                <default>false</default>
+                <label>Create/Modify Contracts</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>General Assistance</fullName>
+                <default>false</default>
+                <label>General Assistance</label>
+            </value>
+            <value>
+                <fullName>Lead outside AE territory</fullName>
+                <default>false</default>
+                <label>Lead outside AE territory</label>
+            </value>
+            <value>
+                <fullName>Lead within AE territory</fullName>
+                <default>false</default>
+                <label>Lead within AE territory</label>
+            </value>
+            <value>
+                <fullName>Missing New Order button</fullName>
+                <default>false</default>
+                <label>Missing New Order button</label>
+            </value>
+            <value>
+                <fullName>Needs Access</fullName>
+                <default>false</default>
+                <label>Needs Access</label>
+            </value>
+            <value>
+                <fullName>Password Reset/Unlock</fullName>
+                <default>false</default>
+                <label>Password Reset/Unlock</label>
+            </value>
+            <value>
+                <fullName>Territory</fullName>
+                <default>false</default>
+                <label>Territory</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Ethernet Order</controllingFieldValue>
+            <controllingFieldValue>Network Discovery</controllingFieldValue>
+            <controllingFieldValue>Clari</controllingFieldValue>
+            <controllingFieldValue>CPQ / Sterling</controllingFieldValue>
+            <valueName>General Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet Order</controllingFieldValue>
+            <valueName>Missing New Order button</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network Discovery</controllingFieldValue>
+            <controllingFieldValue>Salesforce</controllingFieldValue>
+            <controllingFieldValue>Spring CM</controllingFieldValue>
+            <controllingFieldValue>CPQ / Sterling</controllingFieldValue>
+            <valueName>Needs Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salesforce</controllingFieldValue>
+            <valueName>Password Reset/Unlock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Spring CM</controllingFieldValue>
+            <valueName>Create/Modify Contracts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Opportunity Owner</controllingFieldValue>
+            <valueName>After RSM approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Opportunity Owner</controllingFieldValue>
+            <valueName>Before RSM approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company information incorrect</controllingFieldValue>
+            <valueName>Co name, address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record is correct in SF</controllingFieldValue>
+            <valueName>Lead outside AE territory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Record is correct in SF</controllingFieldValue>
+            <valueName>Lead within AE territory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Who is assigned to</controllingFieldValue>
+            <valueName>Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Who is assigned to</controllingFieldValue>
+            <valueName>Territory</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

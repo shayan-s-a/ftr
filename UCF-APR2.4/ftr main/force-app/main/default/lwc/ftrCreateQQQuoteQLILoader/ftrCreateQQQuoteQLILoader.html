@@ -1,0 +1,22 @@
+<template>
+    <template if:true={loading}>
+        
+            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>        
+               
+    </template>   
+    <div class="progressBar">
+        <div class="slds-grid slds-grid_align-spread slds-var-p-bottom_x-small" id="progress-bar-label-id-6">
+          <span> Processing Quote {processingQuote} of {totalQuotes} </span>
+          <span aria-hidden="true">
+            <strong>{currentPercent}% Complete</strong>
+          </span>
+        </div>
+        <div>
+            <lightning-progress-bar value={currentPercent} size="large" variant="circular"></lightning-progress-bar>
+        </div>
+    </div>            
+</template>

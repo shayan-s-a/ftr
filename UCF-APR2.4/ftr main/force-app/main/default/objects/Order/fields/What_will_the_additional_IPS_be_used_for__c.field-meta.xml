@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_will_the_additional_IPS_be_used_for__c</fullName>
+    <externalId>false</externalId>
+    <label>What will the additional IPS be used for</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Computers</fullName>
+                <default>false</default>
+                <label>Computers</label>
+            </value>
+            <value>
+                <fullName>DSL Equipment</fullName>
+                <default>false</default>
+                <label>DSL Equipment</label>
+            </value>
+            <value>
+                <fullName>Firewall</fullName>
+                <default>false</default>
+                <label>Firewall</label>
+            </value>
+            <value>
+                <fullName>Servers</fullName>
+                <default>false</default>
+                <label>Servers</label>
+            </value>
+            <value>
+                <fullName>Virtual Gaming/Training</fullName>
+                <default>false</default>
+                <label>Virtual Gaming/Training</label>
+            </value>
+            <value>
+                <fullName>VPN</fullName>
+                <default>false</default>
+                <label>VPN</label>
+            </value>
+            <value>
+                <fullName>Web Hosting</fullName>
+                <default>false</default>
+                <label>Web Hosting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

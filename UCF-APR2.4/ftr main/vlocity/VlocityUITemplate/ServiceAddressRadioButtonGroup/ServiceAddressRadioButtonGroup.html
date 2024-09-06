@@ -1,0 +1,44 @@
+<div class='nds-col_padded nds-size_1-of-1 vlt-radio-button-ftr' ng-controller="ServiceAddressSelectionController">
+	<fieldset class="slds-form-element" style="padding-left: 1rem;">
+		<div class="slds-form-element__control" ng-repeat="record in bpTree.response.SelectedLocations">
+			<span class="slds-radio">
+				<input
+					ng-model="bpTree.response.CurrentLocationId"
+					value="{{record.Id}}"
+					type="radio"
+					id="ServiceAddress-{{record.Id}}"
+					name="required"
+				/>
+				<label
+					class="slds-radio__label"
+					for="ServiceAddress-{{record.Id}}"
+				>
+					<span class="slds-radio_faux"></span>
+					<span 
+						class="slds-form-element__label " 
+						style="font-size: 1rem;" 
+						ng-class="{ bold : bpTree.response.CurrentLocationId == record.Id  }"
+					>
+						{{record.ShippingStreet}} {{record.ShippingCity}}, {{record.ShippingState}} {{record.ShippingPostalCode}}
+					</span>
+				</label>
+			</span>
+			<span ng-show="bpTree.response.CurrentLocationId == record.Id && bpTree.response.SelectedLocations.length > 1">
+				<div class="slds-form-element" style="padding-left: 2rem;">
+					<div class="slds-form-element__control">
+						<div class="slds-checkbox">
+						<input type="checkbox" name="options" ng-model='record.isPrimary' 
+							ng-change="setPrimaryLocation(record.Id)" id="primary-loc-flag-{{record.Id}}"/>
+						<label class="slds-checkbox__label" for="primary-loc-flag-{{record.Id}}">
+							<span class="slds-checkbox_faux"></span>
+							<span class="slds-form-element__label" style="font-size: 14px;">Set as Primary Location?</span>
+						</label>
+						</div>
+					</div>
+				</div>
+				<span class="nds-checkbox_faux"></span>
+			</span>
+			<div style="margin-bottom: 1rem;"></div>
+		</div>
+	</fieldset>
+</div>

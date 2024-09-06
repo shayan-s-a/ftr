@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_fields_are_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	OR(
+		ISPICKVAL(Order_Stage__c, &quot;Cancelled&quot;),
+		NOT(ISBLANK(TEXT( Cancellation__c)))
+	),
+	OR(
+		ISBLANK(TEXT(Reject_Reason__c)),
+		ISBLANK(Cancellation_Description__c ),
+		AND(
+			$RecordType.Name = &quot;ABS Order&quot;,
+			ISBLANK(Authorization_Name__c)
+		)
+	)
+)
+
+/*
+AND(
+$RecordType.Name = &quot;ABS Order&quot;,
+NOT(ISBLANK(TEXT( Cancellation__c))),
+
+OR(
+ISBLANK(Authorization_Name__c),
+ISBLANK(Cancellation_Description__c )
+))
+*/</errorConditionFormula>
+    <errorDisplayField>ABS_Add_On_Products__c</errorDisplayField>
+    <errorMessage>Cancel Reason &amp; Cancellation Description fields are required when Cancellation. For ABS Order Cancellation, the Cancellation Authorization Name is also required.</errorMessage>
+</ValidationRule>

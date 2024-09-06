@@ -1,0 +1,199 @@
+{
+    "dataSource": {
+        "type": null
+    },
+    "filter": {
+    },
+    "sessionVars": [
+        {
+            "name": "enableLoyaltyPoints",
+            "val": "$root.enableLoyaltyPoints"
+        }
+    ],
+    "states": [
+        {
+            "blankCardState": false,
+            "blankStateCheck": false,
+            "collapse": true,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "editMode": false,
+            "fields": [
+            ],
+            "filter": "$scope.data.status === 'active'",
+            "name": "cart Item",
+            "templateUrl": "cpq-cart-item-summary"
+        },
+        {
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "fields": [
+                {
+                    "collapse": true,
+                    "data": {
+                        "classSuffix": "name-field"
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "",
+                    "name": "Name",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "Location",
+                    "name": "['Premise_Detail__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "customInputType": "number",
+                        "minimum": "1",
+                        "required": "true",
+                        "validation": "lineItemIdsWithInvalidQuantity"
+                    },
+                    "displayLabel": "Quantity",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['Quantity']['label']",
+                    "name": "['Quantity']['value']",
+                    "type": "input"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "Recurring Charge",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__RecurringCharge__c']['label']",
+                    "name": "['%vlocity_namespace%__RecurringCharge__c']['value']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "classSuffix": "summary"
+                    },
+                    "displayLabel": "Recurring Total",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__RecurringTotal__c']['label']",
+                    "name": "['%vlocity_namespace%__RecurringTotal__c']['value']",
+                    "type": "currency"
+                }
+            ],
+            "name": "CustomView_Configuration Mode",
+            "templateUrl": "cpq-card-blank"
+        },
+        {
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "fields": [
+                {
+                    "collapse": true,
+                    "data": {
+                        "classSuffix": "name-field"
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "",
+                    "name": "Name",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "Location",
+                    "name": "['Premise_Detail__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "customInputType": "number",
+                        "minimum": "1",
+                        "required": "true",
+                        "validation": "lineItemIdsWithInvalidQuantity"
+                    },
+                    "displayLabel": "Quantity",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['Quantity']['label']",
+                    "name": "['Quantity']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "Recurring Charge",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__RecurringCharge__c']['label']",
+                    "name": "['%vlocity_namespace%__RecurringCharge__c']['value']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "classSuffix": "summary"
+                    },
+                    "displayLabel": "Recurring Total",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__RecurringTotal__c']['label']",
+                    "name": "['%vlocity_namespace%__RecurringTotal__c']['value']",
+                    "type": "currency"
+                }
+            ],
+            "name": "CustomView_Summary",
+            "templateUrl": "cpq-card-blank"
+        }
+    ],
+    "title": "Cart Item"
+}

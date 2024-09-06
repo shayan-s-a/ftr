@@ -1,0 +1,75 @@
+<template>
+    <!-- <div class="slds-p-around_medium slds-box" style="margin-top: 2rem; background: white;">
+        <div class="slds-text-heading_medium slds-p-bottom_small">Log Details</div>
+        
+        <div class="slds-text-heading_small slds-p-bottom_small slds-p-top_medium">Error Details</div>
+        
+    </div> -->
+    <lightning-accordion allow-multiple-sections-open active-section-name={activeSections}>
+        <lightning-accordion-section name="Log Details" label="Log Details">
+            <div class='slds-p-around_medium slds-box' style="background: white;">
+                <div class="slds-grid">
+                    <template for:each={logDetails} for:item="logDetail">
+                        <template if:true={logDetail.value}>
+                            <div class={logDetail.colCSS} key={logDetail.apiName}>
+                                <div class="slds-grid slds-text-title" style="justify-content: space-between;">
+                                    <template if:false={logDetail.action}>
+                                        <span>{logDetail.label}</span>
+                                    </template>
+                                    <template if:true={logDetail.action}>
+                                        <div class="action-label" title={logDetail.action.label} onclick={logDetail.action.open}>
+                                            <span >
+                                                {logDetail.label}
+                                            </span>
+                                            <lightning-icon size="xx-small" style="padding-left: .5rem;" icon-name="utility:open">
+                                            </lightning-icon>
+                                        </div>
+                                    </template>
+                                </div>
+                                <div data-field={logDetail.apiName} class={logDetail.css}>
+                                    {logDetail.value}
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </lightning-accordion-section>
+        <template if:true={hasError}>
+            <lightning-accordion-section name="Error Details" label="Error Details">
+                <div class='slds-p-around_medium slds-box' style="background: white;">
+                    <div class="slds-grid">
+                        <template for:each={errorDetails} for:item="errorDetail">
+                            <div class={errorDetail.colCSS} key={errorDetail.apiName} >
+                                <div class="slds-grid slds-text-title" style="justify-content: space-between;">
+                                    <span>{errorDetail.label}</span>
+                                </div>
+                                <div data-field={errorDetail.apiName} class={errorDetail.css}>
+                                    {errorDetail.value}
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </lightning-accordion-section>
+        </template>
+        <lightning-accordion-section name="Request" label="Request">
+            <div class='slds-p-around_medium slds-box' style="background: white;">
+                <div class="slds-grid" style="justify-content: space-between;">
+                    <pre lwc:dom="manual" class="request"> </pre>
+                    <lightning-icon size="xx-small" class="copy-text-icon" icon-name="utility:copy" onclick={copyRequest}>
+                    </lightning-icon>
+                </div>
+            </div>
+        </lightning-accordion-section>
+        <lightning-accordion-section name="Response" label="Response">
+            <div class='slds-p-around_medium slds-box' style="background: white;">
+                <div class="slds-grid" style="justify-content: space-between;">
+                    <pre lwc:dom="manual" class="response"> </pre>
+                    <lightning-icon size="xx-small" class="copy-text-icon" icon-name="utility:copy" onclick={copyResponse}>
+                    </lightning-icon>
+                </div>
+            </div>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>

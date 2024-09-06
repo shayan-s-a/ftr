@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reject_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Cancel Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cancellation__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account/Services Saved - RETENTION</fullName>
+                <default>false</default>
+                <label>Account/Services Saved - RETENTION</label>
+            </value>
+            <value>
+                <fullName>BDT Required- Frontier declines Construction/Cannot provide service</fullName>
+                <default>false</default>
+                <label>BDT Required- Frontier declines Construction/Cannot provide service</label>
+            </value>
+            <value>
+                <fullName>BDT Required- New Pricing Declined by Customer</fullName>
+                <default>false</default>
+                <label>BDT Required- New Pricing Declined by Customer</label>
+            </value>
+            <value>
+                <fullName>Competition- Customer went to Another Provider</fullName>
+                <default>false</default>
+                <label>Competition- Customer went to Another Provider</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Competition - Pricing</label>
+            </value>
+            <value>
+                <fullName>Contract - Not executed</fullName>
+                <default>false</default>
+                <label>Contract - Not executed</label>
+            </value>
+            <value>
+                <fullName>Credit Risk</fullName>
+                <default>false</default>
+                <label>Credit Risk</label>
+            </value>
+            <value>
+                <fullName>Customer Acquired by New Ownership</fullName>
+                <default>false</default>
+                <label>Customer Acquired by New Ownership</label>
+            </value>
+            <value>
+                <fullName>Customer Lease/Landlord - Lease issues and customer site requirements</fullName>
+                <default>false</default>
+                <label>Customer Lease/Landlord - Lease issues and customer site requirements</label>
+            </value>
+            <value>
+                <fullName>Customer Requested</fullName>
+                <default>false</default>
+                <label>Customer Requested</label>
+            </value>
+            <value>
+                <fullName>Customer Site Requirements - Declines service due to the cost of on-site requirements</fullName>
+                <default>false</default>
+                <label>Customer Site Requirements - Declines service due to the cost of on-site requirements</label>
+            </value>
+            <value>
+                <fullName>Customer Not Ready</fullName>
+                <default>false</default>
+                <label>Customer will not Respond to Frontier</label>
+            </value>
+            <value>
+                <fullName>Duplicate Order</fullName>
+                <default>false</default>
+                <label>Duplicate Order</label>
+            </value>
+            <value>
+                <fullName>Duplicate Request</fullName>
+                <default>false</default>
+                <label>Duplicate Request</label>
+            </value>
+            <value>
+                <fullName>Frontier Exceeded Implementation/Installation Time Window</fullName>
+                <default>false</default>
+                <label>Frontier Exceeded Implementation/Installation Time Window</label>
+            </value>
+            <value>
+                <fullName>No longer need</fullName>
+                <default>false</default>
+                <label>No longer need</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Product Solution changed (going with a different Product)</fullName>
+                <default>false</default>
+                <label>Product Solution Changed or Keeping Original Solution</label>
+            </value>
+            <value>
+                <fullName>Solution Sold Doesn’t work</fullName>
+                <default>false</default>
+                <label>Solution Sold Doesn’t work</label>
+            </value>
+            <value>
+                <fullName>STATS Order not SalesForce Order - Resubmitting via STATS</fullName>
+                <default>false</default>
+                <label>STATS Order not SalesForce Order - Resubmitting via STATS</label>
+            </value>
+            <value>
+                <fullName>Under Contract with Another Provider</fullName>
+                <default>false</default>
+                <label>Under Contract with Another Provider</label>
+            </value>
+            <value>
+                <fullName>Went to competitor</fullName>
+                <default>false</default>
+                <label>Went to competitor</label>
+            </value>
+            <value>
+                <fullName>Disconnect No Longer Needed</fullName>
+                <default>false</default>
+                <label>Disconnect No Longer Needed</label>
+            </value>
+            <value>
+                <fullName>Customer/Services Retained</fullName>
+                <default>false</default>
+                <label>Customer/Services Retained</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <controllingFieldValue>Frontier Declines Construction to Customer</controllingFieldValue>
+            <valueName>BDT Required- Frontier declines Construction/Cannot provide service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>BDT Required- New Pricing Declined by Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Competition- Customer went to Another Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Contract - Not executed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <controllingFieldValue>Frontier Declines Construction to Customer</controllingFieldValue>
+            <controllingFieldValue>Frontier Cancelled</controllingFieldValue>
+            <valueName>Credit Risk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Customer Acquired by New Ownership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Customer Lease/Landlord - Lease issues and customer site requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Customer Requested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Customer Site Requirements - Declines service due to the cost of on-site requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Customer Not Ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Duplicate Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <controllingFieldValue>Frontier Declines Construction to Customer</controllingFieldValue>
+            <controllingFieldValue>Frontier Cancelled</controllingFieldValue>
+            <valueName>Duplicate Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Frontier Exceeded Implementation/Installation Time Window</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <controllingFieldValue>Frontier Declines Construction to Customer</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Product Solution changed (going with a different Product)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>STATS Order not SalesForce Order - Resubmitting via STATS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Requested Cancellation</controllingFieldValue>
+            <valueName>Under Contract with Another Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Cancelled</controllingFieldValue>
+            <valueName>No longer need</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Cancelled</controllingFieldValue>
+            <valueName>Went to competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier Cancelled</controllingFieldValue>
+            <valueName>Solution Sold Doesn’t work</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

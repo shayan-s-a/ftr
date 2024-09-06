@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_ParentAccount</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+Account.RecordTypeId=&apos;0120h000000cc3X&apos;,
+Account.RecordTypeId=&apos;0128a000000tj2q&apos;,
+Account.RecordTypeId=&apos;0120h000000cc3d&apos;
+)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>The associated account must not be a Global, Billing or Service account.</errorMessage>
+</ValidationRule>

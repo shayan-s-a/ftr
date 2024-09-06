@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Currently_Under_Contract__c</fullName>
+    <description>Created for Britt for Lit Buildings project 11/12/2020</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does the customer have a current active contract?</inlineHelpText>
+    <label>Currently Under Contract</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

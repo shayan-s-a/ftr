@@ -1,0 +1,1883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Cancelled_Order_Email</fullName>
+        <description>Cancelled Order Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Order_Point_of_Contact__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cancelled_Order_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>DPI_Billing_Activated</fullName>
+        <description>DPI Billing Activated</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/DPI_Billing_Activated</template>
+    </alerts>
+    <alerts>
+        <fullName>DPI_Shell_Order_Entered</fullName>
+        <description>DPI Shell Order Entered</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/DPI_Order_Ready_for_Billing</template>
+    </alerts>
+    <alerts>
+        <fullName>Disconnect_order_is_completed</fullName>
+        <ccEmails>teresa.miles@ftr.com</ccEmails>
+        <description>Disconnect order is completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Disconnect_order_is_completed</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_Order_owner_after_48_hours_of_Rejection</fullName>
+        <ccEmails>john.creswell@ftr.com</ccEmails>
+        <description>Email sent to Order owner after 48 hours of  Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FrontierOpportunityRejected2</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_Order_owner_after_72_hours_of_Rejection</fullName>
+        <ccEmails>john.creswell@ftr.com</ccEmails>
+        <description>Email sent to Order owner after 72 hours of  Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Manager_s_Manager__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FrontierOpportunityRejected3</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_Order_owner_upon_Rejection</fullName>
+        <ccEmails>john.creswell@ftr.com</ccEmails>
+        <description>Email sent to Order owner upon Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FrontierOpportunityRejected1</template>
+    </alerts>
+    <alerts>
+        <fullName>Enter_DPI_Order</fullName>
+        <description>Enter DPI Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CNP_Management</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case_Notification_Templates/Enter_Cloud_Managed_Solutions_DPI_Order_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Enter_DPI_Shell_Order</fullName>
+        <description>Enter DPI Shell Order</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Enter_DPI_Shell_Order_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Frontier_Anyware_Stage</fullName>
+        <description>Frontier Anyware Stage Update</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CPE_COE__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>CPE_DCS__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Hot_Cut__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>VoIP_Translations__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Frontier_Anyware_Notificaitons</template>
+    </alerts>
+    <alerts>
+        <fullName>Frontier_UcaaS_CPECOE_Related_User_Notification</fullName>
+        <description>Frontier UcaaS - CPECOE Related User Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CPE_COE__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FAW_UcaaS_Order_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Frontier_UcaaS_DCS_Related_User_Notification</fullName>
+        <description>Frontier UcaaS - DCS Related User Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CPE_DCS__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FAW_UcaaS_Order_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Frontier_UcaaS_HotCut_Related_User_Notification</fullName>
+        <description>Frontier UcaaS - HotCut Related User Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Hot_Cut__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FAW_UcaaS_Order_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Frontier_UcaaS_NetCOE_Related_User_Notification</fullName>
+        <description>Frontier UcaaS - NetCOE Related User Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Broadband_COE__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FAW_UcaaS_Order_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Frontier_UcaaS_VTRANS_Related_User_Notification</fullName>
+        <description>Frontier UcaaS - VTRANS Related User Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>VoIP_Translations__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/FAW_UcaaS_Order_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>NCM_Order_Notification</fullName>
+        <ccEmails>FN.LN31653f@ftr.com</ccEmails>
+        <description>NCM Order Notification</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SF_Order_NCM</template>
+    </alerts>
+    <alerts>
+        <fullName>Network_Engineering_Request</fullName>
+        <description>Network Engineering Request</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>systemreporting@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case_Notification_Templates/Network_Engineering_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Cancelled_email</fullName>
+        <description>Order Cancelled email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Order_Point_of_Contact__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/Salesforce_Order_Cancelled</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Rejected</fullName>
+        <description>Order Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/STATS_Order_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>SEER_SE_order_assignment</fullName>
+        <ccEmails>Khizar.muhammad@ftr.com</ccEmails>
+        <description>SEER SE order assignment</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/SEER_SE_Order_Assignment</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Alert_to_new_owner</fullName>
+        <description>Send Alert to new owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/STATS_Order_Assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Record_Owner_and_Commercial_Sales_Support</fullName>
+        <description>Send Email to Record Owner and Commercial Sales Support</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Order_Point_of_Contact__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Completed_Order_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>UCaas_All_other_order_types</fullName>
+        <description>UCaaS Other Order Types</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>khizar.muhammad@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>teresa.miles@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/UCaaS_Order_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>ucaas_new_move_change_orders</fullName>
+        <ccEmails>VoIP_FAW_Translations@ftr.com</ccEmails>
+        <description>UCaaS Orders(New,Move or Change)</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/UCaaS_Order_Notification</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approval_Step_None</fullName>
+        <field>UCaaS_Approval_Step__c</field>
+        <literalValue>None</literalValue>
+        <name>Approval Step None</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_to_CNP</fullName>
+        <description>This field is updated when the prior approval is approved.</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Customer Network Provisioning</literalValue>
+        <name>Approval to CNP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_to_CPM_In_Progress</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPM In Progress</literalValue>
+        <name>Approval to CPM In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_to_MSA</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>MSA Review</literalValue>
+        <name>Approval to MSA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_to_NCM</fullName>
+        <description>Products = Off-net or EREACH</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Network Cost Management</literalValue>
+        <name>Approval to NCM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_to_Network_COE</fullName>
+        <description>This field is updated when the prior approval is approved.</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Network COE</literalValue>
+        <name>Approval to Network COE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approve_to_CPM_QA_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>QA Review</literalValue>
+        <name>Approve to CPM QA Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approve_to_SE</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Sales Engineering</literalValue>
+        <name>Approve to SE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CNP_for_DPI_Billing</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Customer Network Provisioning</literalValue>
+        <name>CNP for DPI Billing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CPE_COE</fullName>
+        <field>CPE_COE_Stage__c</field>
+        <literalValue>CPE COE Completed</literalValue>
+        <name>CPE COE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CPM_In_Progress</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>CPM In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CPM_in_Progress2</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPM In Progress</literalValue>
+        <name>CPM in Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DCS_Stage_Complete</fullName>
+        <field>CPE_DCS_Stage__c</field>
+        <literalValue>CPE DCS Completed</literalValue>
+        <name>DCS Stage Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ECR_EWO_In_Progress</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>ECR/EWO In Progress</literalValue>
+        <name>ECR/PSR In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Enter_DPI_Order</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Pending DPI Order</literalValue>
+        <name>Enter DPI Order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Hot_Cuts_Completed</fullName>
+        <field>Hot_Cut_Stage__c</field>
+        <literalValue>HOTCUT Completed</literalValue>
+        <name>Hot Cuts Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lock_Order</fullName>
+        <field>Order_Locked__c</field>
+        <literalValue>1</literalValue>
+        <name>Lock Order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Network_COE_Completed</fullName>
+        <field>Broadband_COE_Stage__c</field>
+        <literalValue>Simply BB Completed</literalValue>
+        <name>Network COE Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Non_Pay_Escalation_False</fullName>
+        <field>Escalation_approver_name__c</field>
+        <name>Non-Pay Escalation False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Non_Pay_Escalation_is_False</fullName>
+        <field>Reason_for_Escalation__c</field>
+        <name>Non-Pay Escalation is False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Null_Dynamic_Queue_Assignment</fullName>
+        <field>Broadband_Queue_Assignment__c</field>
+        <name>Null Dynamic Queue Assignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_Complete_Approval</fullName>
+        <field>UCaaS_Approval_Step__c</field>
+        <literalValue>Order Complete</literalValue>
+        <name>Order Complete Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_To_CPM</fullName>
+        <field>OwnerId</field>
+        <lookupValue>CPM</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner To CPM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_ABS</fullName>
+        <description>Used on ABS Orders to assign to ABS queue owned by Shonda Cann</description>
+        <field>OwnerId</field>
+        <lookupValue>ABS</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to ABS</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_CNP</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Customer_Network_Provisioning</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to CNP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_COE_Broadband</fullName>
+        <field>OwnerId</field>
+        <lookupValue>COE_Broadband</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to COE Broadband</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_CPE_COE</fullName>
+        <field>OwnerId</field>
+        <lookupValue>CPE_COE</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to CPE COE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_CPE_PM</fullName>
+        <field>OwnerId</field>
+        <lookupValue>CPE_PM</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to CPE PM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_CPM_Queue</fullName>
+        <description>Update the Order Owner to CPM queue</description>
+        <field>OwnerId</field>
+        <lookupValue>CPM</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to CPM Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Hot_Cuts</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Hot_Cuts</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Hot Cuts</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_MSA_Queue</fullName>
+        <description>Owner changed to MANAGED SERVICES ARCHITECT queue</description>
+        <field>OwnerId</field>
+        <lookupValue>Managed_Services_Architect</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to MSA Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_NCM</fullName>
+        <description>Products = Off-net or EREACH</description>
+        <field>OwnerId</field>
+        <lookupValue>Network_Cost_Management</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to NCM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Network_COE_Complex</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Network_COE_Complex</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Network COE Complex</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Network_COE_MS</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Network_COE_Managed_Services</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Network COE - MS</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Network_COE_NonComplex</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Network_COE_Non_Complex</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Network COE - Non-Complex</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Network_COE_Non_Complex</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Network_COE_Non_Complex</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Network COE - Non-Complex</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Network_COE_UCaas</fullName>
+        <description>Update order owner to Network COE - UCaas queue</description>
+        <field>OwnerId</field>
+        <lookupValue>Network_COE_UCaas</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Network COE - UCaas</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Project_Management</fullName>
+        <description>Order owner to Project management</description>
+        <field>OwnerId</field>
+        <lookupValue>Project_Management</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Project Management</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_RP</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Rochester_Provisioning</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to RP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_SDPM</fullName>
+        <description>Service Delivery Project Managers Queue</description>
+        <field>OwnerId</field>
+        <lookupValue>Service_Delivery_PM</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to SDPM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_SE_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Sales_Engineering</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to SE Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Sales_Engineering</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Sales_Engineering</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Sales Engineering</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Service_Delivery</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Service_Delivery_PM</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Service Delivery</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_TCI</fullName>
+        <field>OwnerId</field>
+        <lookupValue>TCI</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to TCI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_VPROV</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Voice_Provisioning</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to VPROV</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PM_in_Progress</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Project Manager</literalValue>
+        <name>PM in Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_AE_CRIS_ID</fullName>
+        <field>Selling_Representative_CRIS__c</field>
+        <formula>IF(NOT(ISBLANK(  Opportunity.Team_member__r.CRIS_ID__c  )),Opportunity.Team_member__r.CRIS_ID__c,&apos;&apos;)</formula>
+        <name>Populate AE CRIS ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_AE_Cnt_Name</fullName>
+        <field>Selling_Representative_Name__c</field>
+        <formula>IF(NOT(ISBLANK(Opportunity.Team_member__r.LastName)),
+Opportunity.Team_member__r.FirstName + &quot; &quot;+ Opportunity.Team_member__r.LastName,&apos;&apos;)</formula>
+        <name>Populate AE Cnt Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_AE_Contact_Num</fullName>
+        <field>Sales_Contact_Number__c</field>
+        <formula>IF(NOT(ISBLANK(Opportunity.Team_member__r.MobilePhone)),Opportunity.Team_member__r.MobilePhone,&apos;&apos;)</formula>
+        <name>Populate AE Contact Num</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_to_AE</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Rejected to AE</literalValue>
+        <name>Reject to AE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_to_SE</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Rejected to Sales Engineer</literalValue>
+        <name>Reject to SE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_to_MSA</fullName>
+        <description>Rejected to Managed Services Architect</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Rejected to MSA</literalValue>
+        <name>Rejected to MSA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_DPI_Billing</fullName>
+        <description>Update Order Stage to DPI Billing</description>
+        <field>Order_Stage__c</field>
+        <literalValue>DPI Billing</literalValue>
+        <name>Stage = DPI Billing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_DPI_Provisioning</fullName>
+        <description>Update Order stage to DPI Provisioning</description>
+        <field>Order_Stage__c</field>
+        <literalValue>DPI Provisioning</literalValue>
+        <name>Stage = DPI Provisioning</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Assignment</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Stage to Assignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Broadband_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Broadband Review</literalValue>
+        <name>Stage to Broadband Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CNP_Quality_Assurance</fullName>
+        <description>Order Stage = CNP Quality Assurance</description>
+        <field>Order_Stage__c</field>
+        <literalValue>CNP Quality Assurance</literalValue>
+        <name>Stage to CNP Quality Assurance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_COE_BCN</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE COE BCN</literalValue>
+        <name>Stage to CPE COE BCN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Assignment</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Assignment</literalValue>
+        <name>Stage to CPE PM Assignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_CXR_Touch_Point</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM CXR Touch Point</literalValue>
+        <name>Stage to CPE PM CXR Touch Point</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Coord_Internal_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Coordinate Internal Review</literalValue>
+        <name>Stage to CPE PM Coord Internal Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Coordinate_CXR_Touch_Pt</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Coordinate CXR Touch Point</literalValue>
+        <name>Stage to CPE PM Coordinate CXR Touch Pt</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Coordinate_Install</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Coordinate Install</literalValue>
+        <name>Stage to CPE PM Coordinate Install</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Coordinate_Kickoff_Call</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Coordinate Kickoff Call</literalValue>
+        <name>Stage to CPE PM Coordinate Kickoff Call</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_DGF_Completed</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM DGF Completed</literalValue>
+        <name>Stage to CPE PM DGF Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Internal_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Internal Review</literalValue>
+        <name>Stage to CPE PM Internal Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Kickoff_Call</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Kickoff Call</literalValue>
+        <name>Stage to CPE PM Kickoff Call</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM Review</literalValue>
+        <name>Stage to CPE PM Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_CPE_PM_TTU</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>CPE PM TTU</literalValue>
+        <name>Stage to CPE PM TTU</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Complete</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Complete</literalValue>
+        <name>Stage to Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Credit_Check</fullName>
+        <description>Used on ABS orders (Shonda Cann)</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Credit Check</literalValue>
+        <name>Stage to Credit Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_EWO</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>EWO In Progress</literalValue>
+        <name>Stage to EWO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_EWO_in_Progress</fullName>
+        <description>Update order stage to EWO in Progress</description>
+        <field>Order_Stage__c</field>
+        <literalValue>EWO In Progress</literalValue>
+        <name>Stage to EWO in Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Erate</fullName>
+        <description>Move to E-Rtae Stage</description>
+        <field>Order_Stage__c</field>
+        <literalValue>E-Rate</literalValue>
+        <name>Stage to Erate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Hot_Cuts</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Hot Cuts</literalValue>
+        <name>Stage to Hot Cuts</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_IMPM</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>IMPM</literalValue>
+        <name>Stage to IMPM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_In_Progress</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Stage to In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Issuing_Orders</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Issuing Orders</literalValue>
+        <name>Stage to Issuing Orders</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Issuing_Orders_RC</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Issuing Orders</literalValue>
+        <name>Stage to Issuing Orders</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_NCM</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Network Cost Management</literalValue>
+        <name>Stage to NCM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_NCOE_Order_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Awaiting Clean Order</literalValue>
+        <name>Stage to NCOE Order Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_NCOE_QA_Review</fullName>
+        <description>Order Stage = QA Review</description>
+        <field>Order_Stage__c</field>
+        <literalValue>QA Review</literalValue>
+        <name>Stage to NCOE QA Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Network_COE</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Network COE</literalValue>
+        <name>Stage to Network COE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Network_COE_DPI_Billing</fullName>
+        <description>Move the stage to DPI Billing</description>
+        <field>Order_Stage__c</field>
+        <literalValue>DPI Billing</literalValue>
+        <name>Stage to Network COE DPI Billing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Ordering</fullName>
+        <description>Used on ABS orders (Shonda Cann)</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Ordering</literalValue>
+        <name>Stage to Ordering</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_PSR</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>PSR In Progress</literalValue>
+        <name>Stage to PSR</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Pending_Assignment</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Pending Assignment</literalValue>
+        <name>Stage to Pending Assignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Pending_Billing</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Pending Billing</literalValue>
+        <name>Stage to Pending Billing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Pending_Order_Entry</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Pending Order Entry</literalValue>
+        <name>Stage to Pending Order Entry</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Pending_PO</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Pending PO</literalValue>
+        <name>Stage to Pending PO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_QA_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>QA Review</literalValue>
+        <name>Stage to QA Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Rejected_to_VPROV</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Rejected to VPROV</literalValue>
+        <name>Stage to Rejected to VPROV</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Send_to_WIP</fullName>
+        <description>Used on ABS orders (Shonda Cann)</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Send to WIP</literalValue>
+        <name>Stage to Sent to WIP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_Assignment</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning Assignment</literalValue>
+        <name>Stage to VPROV Assignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_CXR_Touchpoint</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning CXR Touch Point</literalValue>
+        <name>Stage to VPROV CXR Touchpoint</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_DPI_TN_Provisioning</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning DPI &amp; TN Provisioning</literalValue>
+        <name>Stage to VPROV DPI &amp; TN Provisioning</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_Internal_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning Internal Review</literalValue>
+        <name>Stage to VPROV Internal Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_Kickoff_Call</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning Kickoff Call</literalValue>
+        <name>Stage to VPROV Kickoff Call</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_Porting</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning Porting</literalValue>
+        <name>Stage to VPROV Porting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning Review</literalValue>
+        <name>Stage to VPROV Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_TTU</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning TTU</literalValue>
+        <name>Stage to VPROV TTU</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_VPROV_Translations</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning Translations</literalValue>
+        <name>Stage to VPROV Translations</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_to_Waiting_on_Downpayment</fullName>
+        <description>Used on ABS orders (Shonda Cann)</description>
+        <field>Order_Stage__c</field>
+        <literalValue>Waiting on Down Payment</literalValue>
+        <name>Stage to Waiting on Downpayment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Step_1_Approval</fullName>
+        <field>UCaaS_Approval_Step__c</field>
+        <literalValue>Step 1</literalValue>
+        <name>Step 1 Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Step_2_Approval</fullName>
+        <field>UCaaS_Approval_Step__c</field>
+        <literalValue>Step 2</literalValue>
+        <name>Step 2 Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Step_3_Approval</fullName>
+        <field>UCaaS_Approval_Step__c</field>
+        <literalValue>Step 3</literalValue>
+        <name>Step 3 Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submitted_for_Approval</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Submitted for Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Translations_Completed</fullName>
+        <field>VoIP_Translations_Stage__c</field>
+        <literalValue>VTRANS Completed</literalValue>
+        <name>Translations Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UCaaS_Approval_Process_Complete</fullName>
+        <field>UCaaS_Approval_Step__c</field>
+        <literalValue>UCaaS Approval Process Complete</literalValue>
+        <name>UCaaS Approval Process Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UCaaS_Broadband_Queue_Assignment</fullName>
+        <description>Assign the Order Field &apos;Broadband Queue Assignment&apos; the value &apos;FAW UCaaS Approval Assignment&apos; as a flag to some trigger functionality to get around a timing issue with an Approval Process next step&apos;s update.</description>
+        <field>Broadband_Queue_Assignment__c</field>
+        <formula>(&quot;FAW UCaaS Approval Assignmen&quot;)</formula>
+        <name>UCaaS Broadband Queue Assignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UCaaS_Dyanmic_Queue_Assignment</fullName>
+        <field>Broadband_Queue_Assignment__c</field>
+        <formula>(&quot;FAW UCaaS Assignment&quot;)</formula>
+        <name>UCaaS Dyanmic Queue Assignment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UCaaS_Dyanmic_Queue_Assignment_Step2</fullName>
+        <field>Broadband_Queue_Assignment__c</field>
+        <formula>(&quot;FAW UCaaS Assignme&quot;)</formula>
+        <name>UCaaS Dyanmic Queue Assignment - Step 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unlock_Order</fullName>
+        <field>Order_Locked__c</field>
+        <literalValue>0</literalValue>
+        <name>Unlock Order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Actual_Approver</fullName>
+        <field>Actual_Approver__c</field>
+        <formula>LastModifiedBy.Id</formula>
+        <name>Update Actual Approver</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Complete_Date</fullName>
+        <field>Order_Completion_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Order Complete Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Product_to_EReach</fullName>
+        <field>Product__c</field>
+        <literalValue>E-Reach</literalValue>
+        <name>Update Product to EReach</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Awaiting_Clean_Order</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Awaiting Clean Order</literalValue>
+        <name>Update Stage to Awaiting Clean Order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Clean_Order</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Clean Order</literalValue>
+        <name>Update Stage to Clean Order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Pending_QA_Review</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>Pending QA Review</literalValue>
+        <name>Update Stage to Pending QA Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VOIP_Provisioning_Checkpoint</fullName>
+        <field>Order_Stage__c</field>
+        <literalValue>VOIP Provisioning Checkpoint</literalValue>
+        <name>VOIP Provisioning Checkpoint</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>get_Managers_Manager</fullName>
+        <field>Manager_s_Manager__c</field>
+        <formula>Owner:User.Manager.Manager.Email</formula>
+        <name>get Managers Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>get_User_Manager</fullName>
+        <field>Manager__c</field>
+        <formula>Owner:User.Manager.Email</formula>
+        <name>get User Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Alert new Owner</fullName>
+        <actions>
+            <name>Send_Alert_to_new_owner</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( ISCHANGED(OwnerId), ISPICKVAL(Order_Stage__c,&quot;Order Engineering Desk&quot;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Populate AE Info on Order</fullName>
+        <actions>
+            <name>Populate_AE_CRIS_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Populate_AE_Cnt_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Populate_AE_Contact_Num</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Auto Populate AE Contact Number, AE Name and AE CRIS # from profile of the Account Executive from  opportunity team line item.</description>
+        <formula>AND(NOT(ISBLANK(Opportunity.Team_member__c)),  Opportunity.Team_member__r.Profile.Name = &apos;#CTF AccountExec&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Cancelled Order Email</fullName>
+        <actions>
+            <name>Cancelled_Order_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Circuit - Update to Hot Cuts</fullName>
+        <actions>
+            <name>Owner_to_Hot_Cuts</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Stage_to_Hot_Cuts</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Submitted for Approval</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordTypeId</field>
+            <operation>startsWith</operation>
+            <value>Circuit Change Order,Circuit New Order,Circuit Move Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Circuit_Product__c</field>
+            <operation>includes</operation>
+            <value>PRI</value>
+        </criteriaItems>
+        <description>Used on Circuit STATS orders in Submitted for Approval</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Circuit - Update to Network COE</fullName>
+        <actions>
+            <name>Owner_to_Network_COE_Complex</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Stage_to_Network_COE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 AND 3) OR (1 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Submitted for Approval</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordTypeId</field>
+            <operation>startsWith</operation>
+            <value>Circuit Change Order,Circuit Move Order,Circuit New Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Circuit_Product__c</field>
+            <operation>excludes</operation>
+            <value>PRI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Circuit Disconnect,Circuit Simple Record Order,Circuit Transfer of Ownership Order,Circuit Renewal Order</value>
+        </criteriaItems>
+        <description>Used on Circuit STATS orders in Submitted for Approval</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Completed Order Email</fullName>
+        <actions>
+            <name>Send_Email_to_Record_Owner_and_Commercial_Sales_Support</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FAW Mitel Change - Update to Project Management</fullName>
+        <actions>
+            <name>Owner_to_Project_Management</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Stage_to_QA_Review</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Submitted for Approval</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordTypeId</field>
+            <operation>startsWith</operation>
+            <value>FAW Mitel Change Order</value>
+        </criteriaItems>
+        <description>Used on FAW Mitel Change Order in Submitted for Approval</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FAW Mitel Disconnect - Update to Network COE - UCaaS</fullName>
+        <actions>
+            <name>Owner_to_Network_COE_UCaas</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Stage_to_Awaiting_Clean_Order</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Submitted for Approval</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordTypeId</field>
+            <operation>startsWith</operation>
+            <value>FAW Mitel Disconnect Order</value>
+        </criteriaItems>
+        <description>Used on FAW Mitel Disconnect Order in Submitted for Approval</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Non-Pay Escalation is false</fullName>
+        <actions>
+            <name>Non_Pay_Escalation_False</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Non_Pay_Escalation_is_False</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.Non_Pay_Escalation__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Non-Pay Escalation is false then reason for escalation &amp; Escalation approver name are null</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Order Complete</fullName>
+        <actions>
+            <name>Update_Order_Complete_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Order Rejected</fullName>
+        <actions>
+            <name>Order_Rejected</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( ISCHANGED(OwnerId), OR( ISPICKVAL(Order_Stage__c,&quot;Rejected to AE&quot;), ISPICKVAL(Order_Stage__c,&quot;Rejected to OED&quot;), ISPICKVAL(Order_Stage__c,&quot;Needs more information&quot;) ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Order Rejection Email Rules</fullName>
+        <actions>
+            <name>Email_sent_to_Order_owner_upon_Rejection</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Rejected to AE,Rejected to SE</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_sent_to_Order_owner_after_48_hours_of_Rejection</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>48</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_sent_to_Order_owner_after_72_hours_of_Rejection</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>72</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Order Rejection Email Rules - no weekends</fullName>
+        <actions>
+            <name>Email_sent_to_Order_owner_upon_Rejection</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.Order_Stage__c</field>
+            <operation>equals</operation>
+            <value>Rejected to AE,Rejected to SE</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_sent_to_Order_owner_after_72_hours_of_Rejection</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Order.OrdRejEmailDate72Hrs__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_sent_to_Order_owner_after_48_hours_of_Rejection</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Order.OrdRejEmailDate48Hrs__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Retrieving Owner Manager%27s</fullName>
+        <actions>
+            <name>get_Managers_Manager</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>get_User_Manager</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.CreatedById</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>UCaaS PostApproval Update</fullName>
+        <actions>
+            <name>UCaaS_Broadband_Queue_Assignment</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Order.Broadband_Queue_Assignment__c</field>
+            <operation>equals</operation>
+            <value>FAW UCaaS Assignme</value>
+        </criteriaItems>
+        <description>When we reach a certain stage in the UCaaS Order Approval Process, we need to assign a value to the Broadband Queue Assignment field as a flag to some Trigger functionality.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Order Point of Contact field</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Order.Order_Point_of_Contact__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Product to EReach</fullName>
+        <actions>
+            <name>Update_Product_to_EReach</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Order.Is_this_an_E_Reach_Off_Net_Ethernet__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <description>Is this an EReach/Off-Net Ethernet product = YES, then it should auto update the product to EReach</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

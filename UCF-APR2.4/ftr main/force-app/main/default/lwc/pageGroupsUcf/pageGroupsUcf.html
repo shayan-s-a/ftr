@@ -1,0 +1,129 @@
+<template>
+         <h6 >Group Page</h6>
+         
+    <div if:true={showContent}>
+       <!--<div if:true={showLoader}>
+          <div class="demo-only" style="height:6rem;position:relative;">
+             <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                <span class="slds-assistive-text">Loading </span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+             </div>
+          </div>-->
+         
+       <!--</div>-->
+       <div if:true={showLoader}>
+        		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+		   </div>
+       <div if:false={showLoader}>
+          <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+             <thead>
+                <tr>
+                   <th scope="col" onclick={sortByName} style="cursor: pointer">
+                     Group Names
+                     <span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+                   </th>
+                   <th scope="col">Members</th>
+                   <th scope="col"></th>
+                   <th scope="col"></th>
+                </tr>
+             </thead>
+             <tbody>
+                <template for:each={ftrPageGroup} for:item="obj" for:index="index">
+                   <tr key={obj.Id} data-row-index={index}>
+                      <td>{obj.Name}</td>
+                      <td>{obj.selectedItemsCount} Members</td>
+                      <td>
+                         
+                         <lightning-button-icon  icon-name="utility:edit"
+                            alternative-text="Edit"
+                            title="Edit"
+                            variant="bare"
+                            data-row-index={index}
+                            onclick={openDualListbox}
+                            >
+                         </lightning-button-icon>
+                          
+                      </td>
+                      <td>
+                          <template if:false={isnetworktranslation}>
+                         <lightning-button-icon  icon-name="utility:delete"
+                            alternative-text="Delete"
+                            title="Delete"
+                            variant="bare"
+                            onclick={handleDelete}
+                            data-id={obj.Id}>
+                         </lightning-button-icon>
+                          </template>
+                      </td>
+                   </tr>
+                </template>
+             </tbody>
+          </table>
+          <div class="slds-grid slds-wrap">
+             <!-- Text Input with half width -->
+             <div class="bg-color slds-col slds-size_1-of-2" >
+                <input 
+                   type="text" 
+                   id="groupName" 
+                   class="slds-input" 
+                   value={groupName} 
+                   onchange={handleGroupNameChange} 
+                   placeholder="New Group Name..." />
+             </div>
+             <!-- Add Button with icon -->
+             <div class="slds-col slds-size_1-of-2 slds-text-align_right">
+                 <template if:false={isnetworktranslation}>
+                <lightning-button-icon 
+                   icon-name="utility:add"  
+                   size="large" 
+                   variant="bare" 
+                   alternative-text="Add" 
+                   onclick={handleGroupCreate} 
+                   class="slds-float_right">
+                </lightning-button-icon>
+                 </template>
+             </div>
+          </div>
+       </div>
+       <template if:true={isModalOpen}>
+          <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_medium">
+             <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                   <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Edit</h1>
+                </div>
+                <div class="slds-modal__content" id="modal-content-id-1">
+                   <div if:true={showLoaderModal}>
+                      <div class="demo-only" style="height:6rem;position:relative;">
+                         <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                            <span class="slds-assistive-text">Loading </span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                         </div>
+                      </div>
+                   </div>
+                   <div if:false={showLoaderModal}>
+                      <lightning-dual-listbox name="languages"
+                         class="slds-m-around_large"
+                         label="Select Members"
+                         source-label="Available"
+                         selected-label="Selected"
+                         options={members}
+                         value={tempDIDIds}
+                         data-row-index={index}
+                         onchange={handleChangeDualListboxModal}>
+                      </lightning-dual-listbox>
+                   </div>
+                </div>
+                <template if:false={isnetworktranslation}>
+                <div class="slds-modal__footer">
+                   <lightning-button variant="brand" label="Save" title="Save" onclick={saveDualListbox} class="slds-m-left_x-small"></lightning-button>
+                   <lightning-button label="Cancel" title="Cancel" onclick={closeDualListbox} class="slds-m-left_x-small"></lightning-button>
+                </div>
+                </template>
+             </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+       </template>
+    </div>
+ </template>

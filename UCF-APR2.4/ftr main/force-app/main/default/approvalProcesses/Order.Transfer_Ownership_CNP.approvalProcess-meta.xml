@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>OrderNumber</field>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Order_Stage__c</field>
+        <field>Order_Created_Date__c</field>
+        <field>Reject_Reason__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Customer_Network_Provisioning</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Customer Network Provisioning</label>
+        <name>Customer_Network_Provisioning</name>
+    </approvalStep>
+    <description>Order Record Type = Records Only Order,Transfer Ownership Order,Contract Renewal,Disconnect Order, DID Order Request
+
+Product = EVPL,E-LAN,EIA,E-LAN + EIA 
+or 
+Product Type = SDWAN</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>((1 AND 2 AND 3 and 6) OR (1 and 2 and 4 and 6)) or 5</booleanFilter>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>Records Only Order,Transfer Ownership Order,Contract Renewal,Disconnect Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.CreatedDate</field>
+            <operation>greaterThan</operation>
+            <value>10/10/2017 10:00 PM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product__c</field>
+            <operation>equals</operation>
+            <value>EVPL,E-LAN,EIA,E-LAN + EIA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SDWAN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>DID Order Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.CreatedDate</field>
+            <operation>lessThan</operation>
+            <value>12/17/2020 9:00 PM</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Stage_to_Complete</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Order_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Reject_to_AE</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Lock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Owner_to_CNP</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Stage_to_PSR</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Transfer Ownership - CNP</label>
+    <processOrder>1</processOrder>
+    <recallActions>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

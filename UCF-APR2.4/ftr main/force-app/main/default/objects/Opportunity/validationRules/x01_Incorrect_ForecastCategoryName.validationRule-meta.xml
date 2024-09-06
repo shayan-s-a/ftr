@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x01_Incorrect_ForecastCategoryName</fullName>
+    <active>true</active>
+    <description>Restrict users from updating the Forecast Category Name to the wrong value.</description>
+    <errorConditionFormula>(
+    ISPICKVAL(StageName, &quot;Evaluating&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Pipeline&quot;)) ||
+    ISPICKVAL(StageName, &quot;Validating&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Best Case&quot;)) ||
+    ISPICKVAL(StageName, &quot;Investigating&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Pipeline&quot;)) ||
+    ISPICKVAL(StageName, &quot;Defining&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Pipeline&quot;)) ||
+    ISPICKVAL(StageName, &quot;Decision&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Commit&quot;)) ||
+    ISPICKVAL(StageName, &quot;Prospecting&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Omitted&quot;)) ||
+    ISPICKVAL(StageName, &quot;Closed/Won&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Closed&quot;)) ||
+    ISPICKVAL(StageName, &quot;Closed/Lost&quot;) &amp;&amp; NOT(ISPICKVAL(ForecastCategoryName , &quot;Omitted&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>ForecastCategoryName</errorDisplayField>
+    <errorMessage>Please put the correct Forecast for the current SalesStage:
+
+Evaluating/Investigating/Defining=&gt;Pipeline; Validating=&gt;Best Case;  Decision=&gt;Commit; Prospecting =&gt; Omitted; Closed/Won =&gt; Closed; Closed/Lost =&gt;Omitted.
+
+Opportunity error x01.</errorMessage>
+</ValidationRule>

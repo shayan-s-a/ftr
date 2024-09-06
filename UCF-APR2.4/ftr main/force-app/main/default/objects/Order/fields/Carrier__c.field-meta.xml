@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrier__c</fullName>
+    <externalId>false</externalId>
+    <label>Carrier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access Eagan</fullName>
+                <default>false</default>
+                <label>Access Eagan</label>
+            </value>
+            <value>
+                <fullName>American Telesis</fullName>
+                <default>false</default>
+                <label>American Telesis</label>
+            </value>
+            <value>
+                <fullName>Ameritech</fullName>
+                <default>false</default>
+                <label>Ameritech</label>
+            </value>
+            <value>
+                <fullName>Amery Telecom</fullName>
+                <default>false</default>
+                <label>Amery Telecom</label>
+            </value>
+            <value>
+                <fullName>Amherst Telephone Co.</fullName>
+                <default>false</default>
+                <label>Amherst Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Armstrong ( only if requested)</fullName>
+                <default>false</default>
+                <label>Armstrong ( only if requested)</label>
+            </value>
+            <value>
+                <fullName>AT&amp;T</fullName>
+                <default>false</default>
+                <label>AT&amp;T</label>
+            </value>
+            <value>
+                <fullName>B2Telecom</fullName>
+                <default>false</default>
+                <label>B2Telecom</label>
+            </value>
+            <value>
+                <fullName>Balsam West FiberNet</fullName>
+                <default>false</default>
+                <label>Balsam West FiberNet</label>
+            </value>
+            <value>
+                <fullName>Bandwidth</fullName>
+                <default>false</default>
+                <label>Bandwidth</label>
+            </value>
+            <value>
+                <fullName>Bayland Telephone, LLC</fullName>
+                <default>false</default>
+                <label>Bayland Telephone, LLC</label>
+            </value>
+            <value>
+                <fullName>Ben Lomand</fullName>
+                <default>false</default>
+                <label>Ben Lomand</label>
+            </value>
+            <value>
+                <fullName>BevComm</fullName>
+                <default>false</default>
+                <label>BevComm</label>
+            </value>
+            <value>
+                <fullName>Bloomer Telephone Co.</fullName>
+                <default>false</default>
+                <label>Bloomer Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Bruce Telephone Co., Inc.</fullName>
+                <default>false</default>
+                <label>Bruce Telephone Co., Inc.</label>
+            </value>
+            <value>
+                <fullName>Bulloch Telephone</fullName>
+                <default>false</default>
+                <label>Bulloch Telephone</label>
+            </value>
+            <value>
+                <fullName>Canby Tel</fullName>
+                <default>false</default>
+                <label>Canby Tel</label>
+            </value>
+            <value>
+                <fullName>Cascade Networks</fullName>
+                <default>false</default>
+                <label>Cascade Networks</label>
+            </value>
+            <value>
+                <fullName>CBC (California Broadband Coop Inc)</fullName>
+                <default>false</default>
+                <label>CBC (California Broadband Coop Inc)</label>
+            </value>
+            <value>
+                <fullName>CenturyLink</fullName>
+                <default>false</default>
+                <label>CenturyLink</label>
+            </value>
+            <value>
+                <fullName>Cequel dba Suddenlink</fullName>
+                <default>false</default>
+                <label>Cequel dba Suddenlink</label>
+            </value>
+            <value>
+                <fullName>Charter</fullName>
+                <default>false</default>
+                <label>Charter</label>
+            </value>
+            <value>
+                <fullName>CHRISTENSEN COMM</fullName>
+                <default>false</default>
+                <label>CHRISTENSEN COMM</label>
+            </value>
+            <value>
+                <fullName>Cincinnati Bell</fullName>
+                <default>false</default>
+                <label>Cincinnati Bell</label>
+            </value>
+            <value>
+                <fullName>Clear Lake Telephone Co., Inc.</fullName>
+                <default>false</default>
+                <label>Clear Lake Telephone Co., Inc.</label>
+            </value>
+            <value>
+                <fullName>Clearwave</fullName>
+                <default>false</default>
+                <label>Clearwave</label>
+            </value>
+            <value>
+                <fullName>Comlink</fullName>
+                <default>false</default>
+                <label>Comlink</label>
+            </value>
+            <value>
+                <fullName>Consolidated Communications</fullName>
+                <default>false</default>
+                <label>Consolidated Communications</label>
+            </value>
+            <value>
+                <fullName>Coon Valley Farmers Tel. Co., Inc.</fullName>
+                <default>false</default>
+                <label>Coon Valley Farmers Tel. Co., Inc.</label>
+            </value>
+            <value>
+                <fullName>Dukenet-now Time Warner</fullName>
+                <default>false</default>
+                <label>Dukenet-now Time Warner</label>
+            </value>
+            <value>
+                <fullName>Earthlink (no DS1&apos;s) (only if requested)</fullName>
+                <default>false</default>
+                <label>Earthlink (no DS1&apos;s) (only if requested)</label>
+            </value>
+            <value>
+                <fullName>ECC</fullName>
+                <default>false</default>
+                <label>ECC</label>
+            </value>
+            <value>
+                <fullName>Ellijay</fullName>
+                <default>false</default>
+                <label>Ellijay</label>
+            </value>
+            <value>
+                <fullName>Emery</fullName>
+                <default>false</default>
+                <label>Emery</label>
+            </value>
+            <value>
+                <fullName>ERC</fullName>
+                <default>false</default>
+                <label>ERC</label>
+            </value>
+            <value>
+                <fullName>EVERSTREAM</fullName>
+                <default>false</default>
+                <label>EVERSTREAM</label>
+            </value>
+            <value>
+                <fullName>Fairpoint</fullName>
+                <default>false</default>
+                <label>Fairpoint</label>
+            </value>
+            <value>
+                <fullName>Farmers Independent Telephone Co.</fullName>
+                <default>false</default>
+                <label>Farmers Independent Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>FiberLight LLC</fullName>
+                <default>false</default>
+                <label>FiberLight LLC</label>
+            </value>
+            <value>
+                <fullName>Fiberutilities</fullName>
+                <default>false</default>
+                <label>Fiberutilities</label>
+            </value>
+            <value>
+                <fullName>Finger Lakes (FLTG)</fullName>
+                <default>false</default>
+                <label>Finger Lakes (FLTG)</label>
+            </value>
+            <value>
+                <fullName>Firstlight</fullName>
+                <default>false</default>
+                <label>Firstlight</label>
+            </value>
+            <value>
+                <fullName>Global Capacity</fullName>
+                <default>false</default>
+                <label>Global Capacity</label>
+            </value>
+            <value>
+                <fullName>GPW (Georgia Public Web)</fullName>
+                <default>false</default>
+                <label>GPW (Georgia Public Web)</label>
+            </value>
+            <value>
+                <fullName>Hager Telecom, Inc.</fullName>
+                <default>false</default>
+                <label>Hager Telecom, Inc.</label>
+            </value>
+            <value>
+                <fullName>Hardy Telecommunications</fullName>
+                <default>false</default>
+                <label>Hardy Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Harrisonville Telephone Company</fullName>
+                <default>false</default>
+                <label>Harrisonville Telephone Company</label>
+            </value>
+            <value>
+                <fullName>Hillsboro Telephone Co.</fullName>
+                <default>false</default>
+                <label>Hillsboro Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Horizon Network Partners</fullName>
+                <default>false</default>
+                <label>Horizon Network Partners</label>
+            </value>
+            <value>
+                <fullName>Indiana Fibernet (IFN)</fullName>
+                <default>false</default>
+                <label>Indiana Fibernet (IFN)</label>
+            </value>
+            <value>
+                <fullName>Indianhead Telephone Co.</fullName>
+                <default>false</default>
+                <label>Indianhead Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>iNetworks</fullName>
+                <default>false</default>
+                <label>iNetworks</label>
+            </value>
+            <value>
+                <fullName>Integra</fullName>
+                <default>false</default>
+                <label>Integra</label>
+            </value>
+            <value>
+                <fullName>Intercarrier Networks (ICN)</fullName>
+                <default>false</default>
+                <label>Intercarrier Networks (ICN)</label>
+            </value>
+            <value>
+                <fullName>ION</fullName>
+                <default>false</default>
+                <label>ION</label>
+            </value>
+            <value>
+                <fullName>Iowa Network Services</fullName>
+                <default>false</default>
+                <label>Iowa Network Services</label>
+            </value>
+            <value>
+                <fullName>IRIS Networks</fullName>
+                <default>false</default>
+                <label>IRIS Networks</label>
+            </value>
+            <value>
+                <fullName>J. Staurulakis</fullName>
+                <default>false</default>
+                <label>J. Staurulakis</label>
+            </value>
+            <value>
+                <fullName>Jaguar Communications</fullName>
+                <default>false</default>
+                <label>Jaguar Communications</label>
+            </value>
+            <value>
+                <fullName>Lakefield Telephone Co.</fullName>
+                <default>false</default>
+                <label>Lakefield Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>LaValle Telephone Coop., Inc.</fullName>
+                <default>false</default>
+                <label>LaValle Telephone Coop., Inc.</label>
+            </value>
+            <value>
+                <fullName>Lemonweir Valley Telephone Co.</fullName>
+                <default>false</default>
+                <label>Lemonweir Valley Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Level3</fullName>
+                <default>false</default>
+                <label>Level3</label>
+            </value>
+            <value>
+                <fullName>Lightower</fullName>
+                <default>false</default>
+                <label>Lightower</label>
+            </value>
+            <value>
+                <fullName>Long Lines</fullName>
+                <default>false</default>
+                <label>Long Lines</label>
+            </value>
+            <value>
+                <fullName>LS Networks</fullName>
+                <default>false</default>
+                <label>LS Networks</label>
+            </value>
+            <value>
+                <fullName>Luck Telephone Co.</fullName>
+                <default>false</default>
+                <label>Luck Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Lumos</fullName>
+                <default>false</default>
+                <label>Lumos</label>
+            </value>
+            <value>
+                <fullName>Manawa Telephone Co., Inc.</fullName>
+                <default>false</default>
+                <label>Manawa Telephone Co., Inc.</label>
+            </value>
+            <value>
+                <fullName>Marquette Adams</fullName>
+                <default>false</default>
+                <label>Marquette Adams</label>
+            </value>
+            <value>
+                <fullName>MCNC</fullName>
+                <default>false</default>
+                <label>MCNC</label>
+            </value>
+            <value>
+                <fullName>Mediacom</fullName>
+                <default>false</default>
+                <label>Mediacom</label>
+            </value>
+            <value>
+                <fullName>Megapath (now Global Capacity)</fullName>
+                <default>false</default>
+                <label>Megapath (now Global Capacity)</label>
+            </value>
+            <value>
+                <fullName>Midstate Telephone - North Dakota</fullName>
+                <default>false</default>
+                <label>Midstate Telephone - North Dakota</label>
+            </value>
+            <value>
+                <fullName>Milltown Mutual Telephone Co.</fullName>
+                <default>false</default>
+                <label>Milltown Mutual Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Mount Horeb Telephone Co.</fullName>
+                <default>false</default>
+                <label>Mount Horeb Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Nebraska Central Telephone</fullName>
+                <default>false</default>
+                <label>Nebraska Central Telephone</label>
+            </value>
+            <value>
+                <fullName>Nebraska Link</fullName>
+                <default>false</default>
+                <label>Nebraska Link</label>
+            </value>
+            <value>
+                <fullName>Nelson Telephone Coop.</fullName>
+                <default>false</default>
+                <label>Nelson Telephone Coop.</label>
+            </value>
+            <value>
+                <fullName>Niagara Telephone Co.</fullName>
+                <default>false</default>
+                <label>Niagara Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>NIPCO</fullName>
+                <default>false</default>
+                <label>NIPCO</label>
+            </value>
+            <value>
+                <fullName>Noanet</fullName>
+                <default>false</default>
+                <label>Noanet</label>
+            </value>
+            <value>
+                <fullName>Noel</fullName>
+                <default>false</default>
+                <label>Noel</label>
+            </value>
+            <value>
+                <fullName>Northeast Telephone Co.</fullName>
+                <default>false</default>
+                <label>Northeast Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Nsight</fullName>
+                <default>false</default>
+                <label>Nsight</label>
+            </value>
+            <value>
+                <fullName>PalmettoNet (Spirit)</fullName>
+                <default>false</default>
+                <label>PalmettoNet (Spirit)</label>
+            </value>
+            <value>
+                <fullName>Paul Bunyan</fullName>
+                <default>false</default>
+                <label>Paul Bunyan</label>
+            </value>
+            <value>
+                <fullName>PenTeleData</fullName>
+                <default>false</default>
+                <label>PenTeleData</label>
+            </value>
+            <value>
+                <fullName>Piedmont Rural</fullName>
+                <default>false</default>
+                <label>Piedmont Rural</label>
+            </value>
+            <value>
+                <fullName>Pineland Tel Coop</fullName>
+                <default>false</default>
+                <label>Pineland Tel Coop</label>
+            </value>
+            <value>
+                <fullName>Plumas - Sierra Telecommunications</fullName>
+                <default>false</default>
+                <label>Plumas - Sierra Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Premier</fullName>
+                <default>false</default>
+                <label>Premier</label>
+            </value>
+            <value>
+                <fullName>Qwest</fullName>
+                <default>false</default>
+                <label>Qwest</label>
+            </value>
+            <value>
+                <fullName>Richland-Grant Telephone Coop., Inc.</fullName>
+                <default>false</default>
+                <label>Richland-Grant Telephone Coop., Inc.</label>
+            </value>
+            <value>
+                <fullName>Sacred Wind</fullName>
+                <default>false</default>
+                <label>Sacred Wind</label>
+            </value>
+            <value>
+                <fullName>Salish Networks</fullName>
+                <default>false</default>
+                <label>Salish Networks</label>
+            </value>
+            <value>
+                <fullName>Scott County Telephone Coop</fullName>
+                <default>false</default>
+                <label>Scott County Telephone Coop</label>
+            </value>
+            <value>
+                <fullName>Sharon Telephone Co.</fullName>
+                <default>false</default>
+                <label>Sharon Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Sharon Telephone Co.-CLEC</fullName>
+                <default>false</default>
+                <label>Sharon Telephone Co.-CLEC</label>
+            </value>
+            <value>
+                <fullName>Shentel</fullName>
+                <default>false</default>
+                <label>Shentel</label>
+            </value>
+            <value>
+                <fullName>Siren Telephone Co., Inc.</fullName>
+                <default>false</default>
+                <label>Siren Telephone Co., Inc.</label>
+            </value>
+            <value>
+                <fullName>Smithville Tel</fullName>
+                <default>false</default>
+                <label>Smithville Tel</label>
+            </value>
+            <value>
+                <fullName>Somerset Telephone Co., Inc.</fullName>
+                <default>false</default>
+                <label>Somerset Telephone Co., Inc.</label>
+            </value>
+            <value>
+                <fullName>SouthernLight</fullName>
+                <default>false</default>
+                <label>SouthernLight</label>
+            </value>
+            <value>
+                <fullName>Spring Valley Telephone Co.</fullName>
+                <default>false</default>
+                <label>Spring Valley Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Sprint</fullName>
+                <default>false</default>
+                <label>Sprint</label>
+            </value>
+            <value>
+                <fullName>STRATA</fullName>
+                <default>false</default>
+                <label>STRATA</label>
+            </value>
+            <value>
+                <fullName>Stratus Net/Access2Go</fullName>
+                <default>false</default>
+                <label>Stratus Net/Access2Go</label>
+            </value>
+            <value>
+                <fullName>Sunesys</fullName>
+                <default>false</default>
+                <label>Sunesys</label>
+            </value>
+            <value>
+                <fullName>Syringa</fullName>
+                <default>false</default>
+                <label>Syringa</label>
+            </value>
+            <value>
+                <fullName>TDS</fullName>
+                <default>false</default>
+                <label>TDS</label>
+            </value>
+            <value>
+                <fullName>TDS Telecom</fullName>
+                <default>false</default>
+                <label>TDS Telecom</label>
+            </value>
+            <value>
+                <fullName>TeliaSonera (only GIGE and higher)</fullName>
+                <default>false</default>
+                <label>TeliaSonera (only GIGE and higher)</label>
+            </value>
+            <value>
+                <fullName>The Bergen Telephone Co.</fullName>
+                <default>false</default>
+                <label>The Bergen Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Time Warner Cable</fullName>
+                <default>false</default>
+                <label>Time Warner Cable</label>
+            </value>
+            <value>
+                <fullName>Tri-County Telephone Coop., Inc.</fullName>
+                <default>false</default>
+                <label>Tri-County Telephone Coop., Inc.</label>
+            </value>
+            <value>
+                <fullName>Twin Lakes</fullName>
+                <default>false</default>
+                <label>Twin Lakes</label>
+            </value>
+            <value>
+                <fullName>TW Telecom (acquired by Level 3 6/14)</fullName>
+                <default>false</default>
+                <label>TW Telecom (acquired by Level 3 6/14)</label>
+            </value>
+            <value>
+                <fullName>Union Telephone Co.</fullName>
+                <default>false</default>
+                <label>Union Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Uniti Fiber</fullName>
+                <default>false</default>
+                <label>Uniti Fiber</label>
+            </value>
+            <value>
+                <fullName>US SIGNAL</fullName>
+                <default>false</default>
+                <label>US SIGNAL</label>
+            </value>
+            <value>
+                <fullName>Verizon</fullName>
+                <default>false</default>
+                <label>Verizon</label>
+            </value>
+            <value>
+                <fullName>Verizon Business</fullName>
+                <default>false</default>
+                <label>Verizon Business</label>
+            </value>
+            <value>
+                <fullName>Vernon Telephone Coop., Inc.</fullName>
+                <default>false</default>
+                <label>Vernon Telephone Coop., Inc.</label>
+            </value>
+            <value>
+                <fullName>Wabash</fullName>
+                <default>false</default>
+                <label>Wabash</label>
+            </value>
+            <value>
+                <fullName>Warwick Valley</fullName>
+                <default>false</default>
+                <label>Warwick Valley</label>
+            </value>
+            <value>
+                <fullName>West Carolina Rural</fullName>
+                <default>false</default>
+                <label>West Carolina Rural</label>
+            </value>
+            <value>
+                <fullName>West Wisconsin Tel</fullName>
+                <default>false</default>
+                <label>West Wisconsin Tel</label>
+            </value>
+            <value>
+                <fullName>Windstream</fullName>
+                <default>false</default>
+                <label>Windstream</label>
+            </value>
+            <value>
+                <fullName>Windwave</fullName>
+                <default>false</default>
+                <label>Windwave</label>
+            </value>
+            <value>
+                <fullName>WIN-Western Independent Networks</fullName>
+                <default>false</default>
+                <label>WIN-Western Independent Networks</label>
+            </value>
+            <value>
+                <fullName>WIN-Wisconsin Independent Network</fullName>
+                <default>false</default>
+                <label>WIN-Wisconsin Independent Network</label>
+            </value>
+            <value>
+                <fullName>Wittenberg Telephone Co.</fullName>
+                <default>false</default>
+                <label>Wittenberg Telephone Co.</label>
+            </value>
+            <value>
+                <fullName>Woodstock</fullName>
+                <default>false</default>
+                <label>Woodstock</label>
+            </value>
+            <value>
+                <fullName>XO</fullName>
+                <default>false</default>
+                <label>XO</label>
+            </value>
+            <value>
+                <fullName>Zayo/360 Networks</fullName>
+                <default>false</default>
+                <label>Zayo/360 Networks</label>
+            </value>
+            <value>
+                <fullName>Spectrum</fullName>
+                <default>false</default>
+                <label>Spectrum</label>
+            </value>
+            <value>
+                <fullName>Lumen</fullName>
+                <default>false</default>
+                <label>Lumen</label>
+            </value>
+            <value>
+                <fullName>CrownCastle</fullName>
+                <default>false</default>
+                <label>CrownCastle</label>
+            </value>
+            <value>
+                <fullName>Uniti</fullName>
+                <default>false</default>
+                <label>Uniti</label>
+            </value>
+            <value>
+                <fullName>Zayo</fullName>
+                <default>false</default>
+                <label>Zayo</label>
+            </value>
+            <value>
+                <fullName>Multiple</fullName>
+                <default>false</default>
+                <label>Multiple</label>
+            </value>
+            <value>
+                <fullName>Access2Go</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Access2Go</label>
+            </value>
+            <value>
+                <fullName>Global Telecom &amp; Technology</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Global Telecom &amp; Technology</label>
+            </value>
+            <value>
+                <fullName>Kentucky Data Link</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kentucky Data Link</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

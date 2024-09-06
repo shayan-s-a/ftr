@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPE_Product_replacement_detail</fullName>
+    <active>false</active>
+    <description>If product is selected is CPE then must select a product that is benig replaced.</description>
+    <errorConditionFormula>AND (  
+ISPICKVAL(CPE_Product__c
+, &quot;yes&quot;),  
+ISpickval(CPE_Product_Replacement__c, &quot;&quot;
+))</errorConditionFormula>
+    <errorDisplayField>CPE_Product_Replacement__c</errorDisplayField>
+    <errorMessage>This is a CPE product Opportunity. You must select which type of product is being replaced by CPE.</errorMessage>
+</ValidationRule>

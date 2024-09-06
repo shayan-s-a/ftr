@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hiring_Request_Replacement_Req_Fields</fullName>
+    <active>true</active>
+    <description>If Hire Type = Replacement, (Name of person being replaced, Resignation/Term Letter Notification and Resignation/Termination Date are required)</description>
+    <errorConditionFormula>AND
+(RecordType.Name = &quot;Hiring Request&quot;,
+ISPICKVAL(Reason_for_Replacement__c ,&quot;Replacement&quot;),
+OR(
+ISBLANK(Name_of_person_being_replaced__c ),
+ISBLANK(TEXT(Resignation_Letter_Term_Notification__c )),
+ISBLANK (Predicted_Resignation_Termination_Date__c)
+))</errorConditionFormula>
+    <errorMessage>If Hire Type = Replacement, &quot;Name of person being replaced&quot;,
+&quot;Resignation/Term Letter Notification&quot; and &quot;Resignation/Termination Date&quot; are required.</errorMessage>
+</ValidationRule>

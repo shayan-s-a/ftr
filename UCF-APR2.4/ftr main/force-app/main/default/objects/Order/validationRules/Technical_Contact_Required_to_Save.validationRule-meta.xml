@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technical_Contact_Required_to_Save</fullName>
+    <active>false</active>
+    <description>Technical Contact is required to save the order</description>
+    <errorConditionFormula>AND(
+OR(Record_Type_Ids__c = &quot;Vlocity OM Order&quot;, 
+Record_Type_Ids__c = &quot;Circuit Move Order&quot;,
+Record_Type_Ids__c = &quot;Frontier Direct Calling&quot;,
+Record_Type_Ids__c = &quot;Manual Vlocity Order&quot;,
+Record_Type_Ids__c = &quot;Frontier Direct Calling&quot;,
+Record_Type_Ids__c = &quot;Move Order&quot;,
+Record_Type_Ids__c = &quot;New Order&quot;,
+Record_Type_Ids__c = &quot;Change Order&quot;,
+Record_Type_Ids__c = &quot;Upgrade/Downgrade Order&quot;,
+Record_Type_Ids__c = &quot;UCaaS New Order&quot;
+),
+ISBLANK( Technical_Contact__c )
+)</errorConditionFormula>
+    <errorDisplayField>Technical_Contact__c</errorDisplayField>
+    <errorMessage>Technical Contact is required to save the order</errorMessage>
+</ValidationRule>

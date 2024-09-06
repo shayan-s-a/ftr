@@ -1,0 +1,961 @@
+<apex:page docType="html-5.0" applyHtmlTag="false" showHeader="false" sidebar="false" standardStylesheets="false" controller="vlocity_cmt.CardCanvasController">
+    <html xmlns:ng="http://angularjs.org" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-app="hybridCPQ" class="ng-cloak" dir="{!IF(isLanguageRTL, 'rtl', 'ltr')}">
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style type="text/css">
+            body {
+                margin: 0px !important;
+                padding: 0px !important;
+            }
+        </style>
+            <!-- SLDS-->
+            <apex:stylesheet value="{!IF(isLanguageRTL, URLFOR($Resource.vlocity_cmt__slds, '/assets/styles/salesforce-lightning-design-system-vf.rtl.min.css'), URLFOR($Resource.vlocity_cmt__slds, '/assets/styles/salesforce-lightning-design-system-vf.min.css'))}"/>
+            <apex:stylesheet value="{!$Resource.vlocity_cmt__HybridCPQCss}"/>
+
+            <!-- Salesforce Console API -->
+            <!-- Common scripts -->
+            <apex:includeScript value="/support/console/48.0/integration.js"/>
+            <script src="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
+            <script src="{!URLFOR($Resource.vlocity_cmt__angular_strap_bundle_1_6)}"></script>
+        </head>
+        <body>
+            <div class="vlocity via-slds">
+                <vloc-layout layout-name="cpq-base-grid" ctrl="CPQController"></vloc-layout>
+            </div>
+
+
+
+            <script src="{!$Resource.vlocity_cmt__SldsAngular}"></script>
+
+
+            <script src="{!URLFOR($Resource.vlocity_cmt__cardframework_core_assets, '/latest/cardframework_assets.js')}"></script>
+
+            <script src="{!$Resource.vlocity_cmt__VlocityDynamicForm}"></script>
+            <script src="{!URLFOR($Resource.vlocity_cmt__cardframework_core_assets, '/latest/cardframework.js')}"></script>
+
+            <script src="{!URLFOR($Resource.vlocity_cmt__LZString)}"></script>  
+            <script src="{!URLFOR($Resource.vlocity_cmt__cpq_assets, '/latest/cpq.js')}"></script>
+
+            <script type="text/javascript">
+
+
+
+angular.module('hybridCPQ')
+  .controller('CPQCartItemConfigController', ['$scope', '$rootScope', '$log', '$timeout', '$sldsModal', '$sldsToast', 'CPQ_CONST', 'pageService', 'CPQService', 'CPQSettingsService', 'CPQCartItemCrossActionService', 'CPQUtilityService', 'CPQCartItemConfigService','CPQTranslateService','TRANSLATION_FIELDS',
+                                              function($scope, $rootScope, $log, $timeout, $sldsModal, $sldsToast, CPQ_CONST, pageService, CPQService, CPQSettingsService, CPQCartItemCrossActionService, CPQUtilityService, CPQCartItemConfigService,CPQTranslateService, TRANSLATION_FIELDS) {
+
+    var itemObject, isAttrValid, apiSettings, actionMode;
+    var queue = [];
+    var saveTimeout = null;
+    actionMode = CPQService.actionMode;
+    $scope.attributesObj = null;
+    $scope.isConfigSubmit = false;
+    $scope.reRenderAttributesForm = false;
+    $scope.configItemObject = null; // Under $scope because Telus PS team needs to access it from template
+
+    apiSettings = CPQSettingsService.getApiSettings();
+
+    /*********** CPQ CART ITEM CONFIG EVENTS ************/
+    $scope.$on('vlocity.cpq.config.configpanelenabled', function(event, isConfigEnabled, data) {
+        var dataObject, itemKeys, lookupItem, editableItem, lookupDisplayValueItemKey, cartId, lineItemId;
+        $scope.detailEditableServerErrorMsg = null;
+
+        if (isConfigEnabled && data.itemObject) {
+
+
+          if (!data.isUpdateConfig) {
+          itemObject = CPQCartItemConfigService.getItemFields(data.itemObject);
+          }
+            if (itemObject.promotions) {
+                itemObject.i18TranslationComplete = false;
+                itemObject = CPQTranslateService.translateAttributeObj(itemObject);
+            }
+            if (!data.isUpdateConfig) {
+                $scope.configItemObject = angular.copy(itemObject);
+                $scope.attributesObj = itemObject.attributeCategories && itemObject.attributeCategories.records || [];
+            }
+            dataObject = {
+                parent: data.parent,
+                сonfigItem: $scope.configItemObject,
+                updatedAttributes: $scope.attributesObj
+            };
+
+            /*  To process use case when user opened a new config panel before API response with previous update is back,
+                FIFO pattern is used. So we are using queue to keep a reference to the object we are waiting for as API response. 
+                When API response is back and attribute is succesfully updated, we are removing first element from the queue.
+            */
+            updateQueue(dataObject);
+
+            //Set reRenderAttributesForm to false on new load.
+            //If user closes config panel before modify attributes response is received.
+            reRenderAttributes(data.reRenderAttributes);
+
+            itemKeys = _.keys(itemObject);
+            $scope.lookupItemList = [];
+            $scope.editableItemList = [];
+            cartId = pageService.params.id;
+            lineItemId = itemObject.Id.value;
+            angular.forEach(itemKeys, function(key) {
+                if (itemObject[key] && itemObject[key].editable && !itemObject[key].hidden) {
+                    if (itemObject[key].dataType === 'REFERENCE' && key !== $rootScope.nsPrefix + 'UsageMeasurementId__c') {
+                        lookupItem = angular.copy(itemObject[key]);
+                        lookupDisplayValueItemKey = key.slice(0, -1) + 'r';
+                        // if lookup field has null value in the __c object, then it would not have the __r object
+                        if (itemObject[lookupDisplayValueItemKey]) {
+                            lookupItem.displayValue = itemObject[lookupDisplayValueItemKey].Name;
+                        } else {
+                            lookupItem.displayValue = '';
+                            $scope.configItemObject[lookupDisplayValueItemKey] = {'Id': null, 'Name': null};
+                        }
+                        lookupItem.cartId = cartId;
+                        lookupItem.lineItemId = lineItemId;
+                        $scope.lookupItemList.push(lookupItem);
+                    } else {
+                        editableItem = angular.copy(itemObject[key]);
+                        $scope.editableItemList.push(editableItem);
+                    }
+                }
+            });
+        } else {
+            if ($scope.attributesObj) {
+                // If attributes validation fails
+                setUserAttrValues($scope.attributesObj);
+                // Save updated attribute value before closing config panel (HYB-764)
+                saveUpdatedAttributes($scope.attributesObj);
+            }
+            // Remove the vdf form by resetting the attributes and itemObject
+            $scope.attributesObj = null;
+            setProcessingLine(itemObject, false, true);
+            removeQueueElement();
+        }
+    });
+    /*********** END CPQ CART ITEM CONFIG EVENTS ************/
+
+    /* Custom Labels */
+    $scope.customLabels = {};
+    var toastCustomLabels = {};
+    var labelsArray = ['CPQClose','CPQSave','CPQCartConfigNoAttrsText','CPQCartConfigAdditionalSetting','CPQCartConfigLookupValues',
+        'CPQCartItemLookupText','CPQCartItemLookupCreateNew','CPQCartItemLookupFieldTitle','CPQCartItemLookupProvideInfo',
+        'CPQCartItemLookupCreateNewInstance', 'CPQCartItemServicePointLabel', 'CPQCartItemPremisesLabel', 'CPQCartItemServicePointSelectLabel', 'CPQCartItemQuantity'];
+    var toastLabelsArray = ['CPQUpdatingItem','CPQUpdatedItem','CPQUpdateItemFailed','CPQMustBeGreaterThanZero','CPQCanNotHaveLess',
+        'CPQCanNotHaveMoreThan','CPQMustBeGreaterThanOrEqualToZero','CPQQuantity'];
+    CPQService.setLabels(labelsArray, $scope.customLabels);
+    // Custom labels for toast messages
+    CPQService.setLabels(toastLabelsArray, toastCustomLabels);
+    /* End Custom Labels */
+
+    function setProcessingLine(obj, flag, resetData) {
+        if (obj) {
+            obj.processingLine = flag;
+        }
+
+        if (angular.isUndefined(resetData)) {
+            $scope.isConfigSubmit = flag;
+        }
+    }
+
+    function removeQueueElement() {
+        if (queue.length > 1) {
+            queue.shift();
+        }
+    }
+
+    function updateQueue(data) {
+        if ($scope.isConfigSubmit) {
+            queue.push(data);
+        } else {
+            queue[0] = data;
+        }
+    }
+
+    function reRenderAttributes(isRerenderNeeded) {
+        //Re render the attributes VDF
+        if (isRerenderNeeded) {
+            $scope.reRenderAttributesForm = true;
+        }
+        $timeout(function() {
+            $scope.reRenderAttributesForm = false;
+        }, 0);
+    }
+
+    function updateItemObject(lineItems, updatedlineItems) {
+        angular.forEach(updatedlineItems, function(line) {
+            if (lineItems.Id.value == line.Id.value) {
+                _.assign(lineItems, line);
+                if (line.attributeCategories) {
+                    _.assign($scope.attributesObj, line.attributeCategories.records);
+                }
+                return;
+            }
+            if (line.lineItems) {
+                updateItemObject(lineItems, line.lineItems.records);
+            }
+        });
+
+        removeQueueElement();
+    }
+
+    
+    function updateParentQuantityMapField(parent, updatedlineItems) {
+        if (parent && parent.Id.value == updatedlineItems[0].Id.value) {
+            // Update InCartQuantityMap__c field. Need for updating parentCardinalityMap
+            parent[$rootScope.nsPrefix + 'InCartQuantityMap__c'] = updatedlineItems[0][$rootScope.nsPrefix + 'InCartQuantityMap__c'];
+         }
+
+      }
+
+    function saveUpdatedAttributes(attributesObj) {
+        queue[0].updatedAttributes = attributesObj;
+    }
+
+    /**
+     * setUserAttrValues: Set saved value if attribute value is undefined (validation fails)
+     * @param  {object} attributesObj
+     */
+    function setUserAttrValues(attributesObj) {
+        if (isAttrValid) {
+            return;
+        }
+
+        angular.forEach(attributesObj, function(obj, key) {
+            angular.forEach(obj.productAttributes.records, function(attribute, key) {
+                if (angular.isUndefined(attribute.userValues)) {
+                    attribute.userValues = attribute.values[0].value;
+                }
+            });
+        });
+    }
+
+    function updateFieldValue(field) {
+        if (field && angular.isDefined(field.userValues)) {
+            if (field.inputType !== 'dropdown' && field.inputType !== 'checkbox' && field.inputType !== 'radio') {
+                field.values[0].value = field.userValues;
+            }
+        }
+    }
+
+    /**
+     * close: Closes attributes configuration panel for line item in cart
+     * @param  {object} itemObject
+     */
+    $scope.close = function() {
+        // Publishes event to enable the config panel
+        $rootScope.$broadcast('vlocity.cpq.config.configpanelenabled', false);
+        $rootScope.$broadcast('vlocity.layout.invalidate-total-card', {'isValid':true});
+        
+        removeQueueElement();
+    };
+
+    $scope.configSubmit = function() {
+        $rootScope.$broadcast('vlocity.layout.invalidate-total-card', {'isValid': false});
+        var updateItemsActionObj = {};
+        var configUpdateObject = {'records': [{}]}; // Update attributes API structure
+        var deleteArrayList = ['Attachments', 'messages', 'attributes', 'childProducts', 'lineItems', 'productGroups', 'actions'];
+        var modifiedChildItemObject;
+        var product2Name = CPQTranslateService.translate(
+            $scope.configItemObject.PricebookEntry.Product2.Name,
+            TRANSLATION_FIELDS.PROD2_NAME
+        );
+
+        var processingToastMessage = $sldsToast({
+            message: toastCustomLabels['CPQUpdatingItem'] + ' ' + product2Name + ' ...',
+            severity: 'info',
+            icon: 'info',
+            show: CPQService.toastEnabled('info')
+        });
+
+        //start spinner
+        setProcessingLine(itemObject, true);
+
+        // If attr validation fails
+        setUserAttrValues($scope.attributesObj);
+
+        //Update itemObject.attributeCategories but first make sure itemObject has attributes
+        if (queue[0].сonfigItem.attributeCategories && queue[0].сonfigItem.attributeCategories.records) {
+            /* the configItem is the object send to the server when the corresponding objects are updated
+             * when the attribute objects are picked and the close button is pressed before the request to the server
+             * is processed completely on the client side there will arise a situation where the client
+             * scope is destroyed . In that case the updated attribute object in the queue will contain the latest
+             * information.
+            */
+            queue[0].сonfigItem.attributeCategories.records = queue[0].updatedAttributes;
+        }
+
+
+        if (queue[0].parent && queue[0].parent.Id.value !== queue[0].сonfigItem.Id.value){
+            // update on a lineItem that has a parent
+            configUpdateObject.records[0] = angular.copy(queue[0].parent);
+            angular.forEach(deleteArrayList, function(key) {
+                delete configUpdateObject.records[0][key];
+            });
+
+            if (queue[0].parent.Id.value !== queue[0].сonfigItem.Id.value) {
+                modifiedChildItemObject = angular.copy(queue[0].сonfigItem);
+                angular.forEach(deleteArrayList, function(key) {
+                    delete modifiedChildItemObject[key];
+                });
+                configUpdateObject.records[0].lineItems = {'records': [modifiedChildItemObject]};
+            }
+        } else {
+            // update on the root which has no parent
+            configUpdateObject.records[0] = angular.copy(queue[0].сonfigItem);
+            angular.forEach(deleteArrayList, function(key) {
+                delete configUpdateObject.records[0][key];
+            });
+        }
+
+        updateItemsActionObj = queue[0].сonfigItem.actions.updateitems;
+
+        // use api settings from CPQSettingsService.getApiSettings() to determine if pricing and validation are required
+        updateItemsActionObj[actionMode].params.price = apiSettings.updateAPIRequiresPricing;
+        updateItemsActionObj[actionMode].params.validate = apiSettings.updateAPIRequiresValidation;
+
+        //Updated items for both remote and rest
+        updateItemsActionObj[actionMode].params.items = configUpdateObject;
+
+        CPQService.invokeAction(updateItemsActionObj).then(
+            function(data) {
+                var i,j,modifiedRecords;
+                var updatedItemObj = data.records[0];
+                var hasError = false;
+                var updateSuccessful = false;
+                var errorMsg;
+                var updatedLineItem;
+                var int;
+
+                processingToastMessage.hide();
+
+                angular.forEach(data.messages, function(message) {
+                    if (message.severity === CPQ_CONST.ERROR) {
+                        hasError = true;
+                        // HYB-663: The missing attribute messages are already shown in the red message bar at the top,
+                        // so showing those messages in toast every time an update is made is not necessary.
+                        // Hence, don't display 'This bundle has Errors' error or 'Required attribute missing' error
+                        if (message.code !== CPQ_CONST.BUNDLE_HAS_ERRORS && message.code === CPQ_CONST.REQUIRED_ATTR_MISSING) {
+                            // accumulate any error messages
+                            errorMsg = errorMsg ? errorMsg + '\n' + message.message : '\n' + message.message;
+                        }
+                    }
+                    if (message.severity === CPQ_CONST.INFO && message.code === CPQ_CONST.UPDATE_SUCCESSFUL) {
+                        updateSuccessful = true;
+                    }
+                });
+
+                if (!hasError) {
+                    // if there is NO overall error
+                    toastMessage = $sldsToast({
+                        backdrop: 'false',
+                        message: toastCustomLabels['CPQUpdatedItem'] + ' ' + product2Name,
+                        severity: 'success',
+                        icon: 'success',
+                        templateUrl: 'SldsToast.tpl.html',
+                        autohide: true,
+                        show: CPQService.toastEnabled('success')
+                    });
+
+                // this is the case when update is successful BUT there is other error such as required product attribute missing
+                } else if (updateSuccessful) {
+
+                    if (errorMsg) {
+                        // display mixed messages (update successful but encountered error(s) OTHER THAN 'This bundle has Errors' error or 'Required attribute missing' error)
+                        toastMessage = $sldsToast({
+                            backdrop: 'false',
+                            message: toastCustomLabels['CPQUpdatedItem'] + ' ' + product2Name + '\nbut encountered error(s):' + errorMsg,
+                            severity: 'warning',
+                            icon: 'warning',
+                            templateUrl: 'SldsToast.tpl.html',
+                            autohide: true,
+                            show: CPQService.toastEnabled('warning')
+                        });
+                    } else {
+                        // there is error but they are 'This bundle has Errors' error or 'Required attribute missing' error
+                        // that does not need to be displayed
+                        toastMessage = $sldsToast({
+                            backdrop: 'false',
+                            message: toastCustomLabels['CPQUpdatedItem'] + ' ' + product2Name,
+                            severity: 'success',
+                            icon: 'success',
+                            templateUrl: 'SldsToast.tpl.html',
+                            autohide: true,
+                            show: CPQService.toastEnabled('success')
+                        });
+                    }
+
+                } else {
+                    // display only error msg(s)
+                    toastMessage = $sldsToast({
+                        backdrop: 'false',
+                        title: product2Name,
+                        message: toastCustomLabels['CPQUpdateItemFailed'] + ' ' + product2Name,
+                        severity: 'error',
+                        icon: 'warning',
+                        templateUrl: 'SldsToast.tpl.html',
+                        autohide: true,
+                        show: CPQService.toastEnabled('error')
+                    });
+
+                }
+
+                // display server side error msg on config panel
+                if (updatedItemObj.lineItems && updatedItemObj.lineItems.records && updatedItemObj.lineItems.records.length > 0 &&
+                    updatedItemObj.lineItems.records[0].messages && updatedItemObj.lineItems.records[0].messages.length > 0 &&
+                    updatedItemObj.lineItems.records[0].messages[0].severity === CPQ_CONST.ERROR) {
+                    $scope.detailEditableServerErrorMsg = updatedItemObj.lineItems.records[0].messages[0].message;
+                } else {
+                    $scope.detailEditableServerErrorMsg = null;
+                }
+
+                if (updateSuccessful) {
+
+                    //Handle check for itemObject existence. If user closes config panel before the update response is received
+                    if (queue[0].сonfigItem) {
+                        // Update API is returning the empty actions object. Deleting actions before merge as a temporary fix.
+                        delete updatedItemObj.actions;
+                        updateItemObject(itemObject, data.records);
+                        // Update InCartQuantityMap__c field.
+                        updateParentQuantityMapField(queue[0].parent, data.records);
+                        // Handle case when we have root product as parent and its also have an rule to remove its child CMT-6106. 
+                        if (!queue[0].parent) {
+                            queue[0].сonfigItem[$rootScope.nsPrefix + 'InCartQuantityMap__c'] = data.records[0][$rootScope.nsPrefix + 'InCartQuantityMap__c'];
+                        }
+                        if (data.records && data.records[0].lineItems && data.records[0].lineItems.records) {
+                            updatedLineItem = data.records[0].lineItems.records;
+                            for (int = 0; int < updatedLineItem.length; int++) {
+                                if (queue[0].сonfigItem && queue[0].сonfigItem.Id.value === updatedLineItem[int].Id.value ) {
+                                    queue[0].сonfigItem[$rootScope.nsPrefix + 'InCartQuantityMap__c']  = updatedLineItem[int][$rootScope.nsPrefix + 'InCartQuantityMap__c'];
+                                }
+                            }
+                        }
+                    }
+
+                    //Cross actions
+                    if (data.actions) {
+                        CPQCartItemCrossActionService.processActions(data.actions);
+                    }
+
+                    //Reload total bar
+                    CPQService.reloadTotalBar();
+                }
+                // Stop spinner
+                setProcessingLine(itemObject, false);
+            }, function(error) {
+                $log.error('UpdateItem response failed: ', error);
+                processingToastMessage.hide();
+                // Stop spinner
+                setProcessingLine(itemObject, false);
+                $sldsToast({
+                    backdrop: 'false',
+                    title: toastCustomLabels['CPQUpdateItemFailed'] + ' ' + queue[0].сonfigItem.PricebookEntry.Product2.Name,
+                    message: error.message,
+                    severity: 'error',
+                    icon: 'warning',
+                    autohide: true,
+                    show: CPQService.toastEnabled('error')
+                });
+            });
+    };
+
+    // Vlocity Dynamic form mapping object
+    $scope.mapObject = function() {
+        return {
+            'fieldMapping' : {
+                'type' : 'inputType',
+                'value' : 'userValues',
+                'label' : 'label',
+                'readonly':'readonly',
+                'required': 'required',
+                'disabled': 'disabled',
+                'hidden': 'hidden',
+                'multiple': 'multiselect',
+                'customTemplate': 'customTemplate',
+                'valuesArray' : { //multiple values map. Eg: select, fieldset, radiobutton group
+                    'field': 'values',
+                    'value': 'value',
+                    'label': 'label',
+                    'disabled': 'disabled'
+                }
+            },
+            'pathMapping': {
+                'levels': 2,
+                'path': 'productAttributes.records'
+            }
+        };
+    };
+
+    /**
+     * getFieldObjectFromPath returns field based on the ng-model path
+     * @param  {string} path
+     * @return {Object}
+     */
+    function getFieldObjectFromPath(path) {
+        var firstDotIndex;
+        var lastDotIndex;
+        if (!path) {
+            return;
+        }
+
+        firstDotIndex = path.indexOf('.');
+        if (firstDotIndex != -1) {
+            path = path.substring(firstDotIndex);
+        }
+
+        lastDotIndex = path.lastIndexOf('.');
+        if (lastDotIndex != -1) {
+            path = path.substring(0, lastDotIndex);
+        }
+        path = CPQUtilityService.removeIfStartsWith(path, '.');
+
+        return _.get($scope, path);
+    }
+
+    $scope.getModifiedAttributes = function(e, formValidation, alwaysRunRules, alwaysSave) {
+        //cancel timeout if a new one is starting
+        if (saveTimeout) {
+            $timeout.cancel(saveTimeout);
+        }
+
+        var field, fieldName, modelPath, executeRules, activeInputElement, $configContent, scrollPosition;
+        var modifyAttributesActionObj = angular.copy($scope.configItemObject.actions.modifyattributes);
+        var attributesObj = {'records':[]};
+        var copyItemObject = angular.copy($scope.configItemObject);
+        var cherryPickItemObjectFields = ['attributeCategories', 'Id', 'Product2', 'PricebookEntry', 'PricebookEntryId'];
+
+        isAttrValid = true;
+        saveTimeout = null;
+        if(e.target){
+            fieldName = e.target.name;
+        }
+
+        if (fieldName && formValidation && formValidation[fieldName].$invalid) {
+            isAttrValid = !formValidation[fieldName].$invalid;
+            $rootScope.$broadcast('vlocity.layout.invalidate-total-card', {'isValid':isAttrValid});
+            return;
+        }
+
+        //start spinner
+        setProcessingLine(itemObject, true);
+
+        //Avoid angular events from $on. Only need to handle DOM events
+        modelPath = e && e.target && e.target.getAttribute('ng-model');
+        field = getFieldObjectFromPath(modelPath);
+        executeRules = (angular.isDefined(alwaysRunRules) && alwaysRunRules) ? true : field && field.hasRules;
+
+        // saved valid value should be displayed after entering an invalid value and reopen the configPanel
+        updateFieldValue(field);
+
+        if (!executeRules) {
+            if (alwaysSave) {
+                saveTimeout = $timeout(function () {
+                    $scope.configSubmit();
+                }, 800);
+            }
+            return;
+        }
+
+        // use api settings from CPQSettingsService.getApiSettings() to determine if pricing and validation are required
+        modifyAttributesActionObj[actionMode].params.price = apiSettings.modifyAttributesAPIRequiresPricing;
+        modifyAttributesActionObj[actionMode].params.validate = apiSettings.modifyAttributesAPIRequiresValidation;
+
+        //Update copyItemObject.attributeCategories but first make sure copyItemObject has attributes
+        if (copyItemObject.attributeCategories && copyItemObject.attributeCategories.records) {
+            copyItemObject.attributeCategories.records = $scope.attributesObj;
+        }
+        //Pass only the attribtues and mandatory fields for API to be performant.
+        attributesObj.records[0] = _.pick(copyItemObject, cherryPickItemObjectFields);
+
+        modifyAttributesActionObj[actionMode].params.items = attributesObj;
+
+        CPQService.invokeAction(modifyAttributesActionObj).then(
+            function(data) {
+                var attributesModified = false;
+                $log.debug('Modified attributes', data);
+
+                if (data.records && data.records.length > 0) {
+                    attributesModified = data.messages.some(function(msg) {
+                        return (msg.code === CPQ_CONST.ATTRIBUTE_MODIFICATION_SUCCESSFUL);
+                    });
+
+                    if (attributesModified) {
+                        activeInputElement = document.activeElement;
+                        $configContent = angular.element('#js-cpq-product-cart-config-form');
+                        scrollPosition = $configContent.scrollTop();
+                        $scope.reRenderAttributesForm = true;
+
+                        // Update attribute categories
+                        $scope.configItemObject.attributeCategories = data.records[0].attributeCategories;
+                        //make sure the object is populated with the right content before translating
+                        $scope.configItemObject = CPQTranslateService.translateAttributeObj($scope.configItemObject, function(configItemObject){
+                            $scope.configItemObject.i18TranslationComplete = false;
+                        });
+
+                        $scope.attributesObj = $scope.configItemObject.attributeCategories.records || [];
+                        queue[0].updatedAttributes = $scope.attributesObj;
+
+                        // Run after the current call stack is executed.
+                        // Rerenders VDF to reflect new attribute changes
+                        $timeout(function() {
+                            $scope.reRenderAttributesForm = false;
+                            saveTimeout = $timeout(function () {
+                                $scope.configSubmit();
+                                $configContent.scrollTop(scrollPosition);
+                                // fix: Cursor is getting lost when rerender attributes
+
+                                if (activeInputElement.type !== 'button') {
+                                    $('input[name=' + activeInputElement.name + ']').focus();
+                                }
+                            }, 0);
+                        }, 0);
+                    } else {
+                        //Fix for CMT-1115
+                        //Handle the usecase when hasRules flag is true and attributes are not modified
+                        $scope.configSubmit();
+                    }
+                } else {
+                    //Stop spinner if no data is returned, to prevent infinite spinner.
+                    setProcessingLine(itemObject, false);
+                }
+            }, function(error) {
+                $log.error('Config panel modified attributes response failed', error);
+                //Stop spinner in case of error, to prevent infinite spinner.
+                setProcessingLine(itemObject, false);
+            });
+    };
+
+    $scope.launchLineItemLookup = function(lookupItem) {
+
+        var lookupFieldName = lookupItem.fieldName;
+        var lookupDisplayValueItemFieldName = lookupFieldName.slice(0, -1) + 'r';
+        $scope.selectedLookupItemFieldName = lookupFieldName;
+        $scope.originalLookupItem = $scope.configItemObject[lookupFieldName];
+        $scope.originalDisplayValueLookupItem = $scope.configItemObject[lookupDisplayValueItemFieldName];
+        $rootScope.selectedLookupItem = {
+            'Id': lookupItem.value,
+            'Name': lookupItem.displayValue
+        };
+
+        if(lookupFieldName === $rootScope.nsPrefix + 'ServicePointId__c' ) {
+            $scope.launchServicePointLookup(lookupItem);
+            return;
+        }
+        $scope.createNewResultMsg = null;
+
+        $scope.params.lineItemId = lookupItem.lineItemId;
+        $scope.params.fieldName = lookupItem.fieldName;
+        // Account type pulling dynamicaly
+        $scope.params.fieldLabel = lookupItem.label;
+        $sldsModal({
+            backdrop: 'static',
+            templateUrl: 'CPQCartItemLookupFieldModal.tpl.html',
+            show: true,
+            scope: $scope
+        });
+    };
+
+    $scope.launchServicePointLookup = function(lookupItem) {
+        $rootScope.selectedServicePoint = {};
+        $rootScope.selectedPremises = {};
+
+        var account = $scope.configItemObject[$rootScope.nsPrefix + 'ServiceAccountId__c'];
+        if(account) {
+            $scope.params.accountId = account.value;
+        }
+
+        if($scope.originalLookupItem && $scope.originalLookupItem.value) {
+            $rootScope.selectedServicePoint = {Id: {value:$scope.originalLookupItem.value}};
+        }
+        $scope.servicePointObj = $scope.configItemObject[$rootScope.nsPrefix + 'ServicePointId__r'];
+        if($scope.servicePointObj) {
+            $rootScope.selectedPremises = {Id: {value:$scope.servicePointObj[$rootScope.nsPrefix + 'PremisesId__c']}};
+        }
+        $scope.configItemObject[$rootScope.nsPrefix + 'PremisesId__c'] = {value: $scope.servicePointObj[$rootScope.nsPrefix + 'PremisesId__c']};
+        $scope.originalPremises = $scope.configItemObject[$rootScope.nsPrefix + 'PremisesId__c'];
+
+        $sldsModal({
+            backdrop: 'static',
+            templateUrl: 'CPQCartItemServicePointModal.tpl.html',
+            show: true,
+            scope: $scope
+        });
+    };
+
+    $scope.saveServicePointInfo = function() {
+        for (var i = 0; i < $scope.lookupItemList.length; i++) {
+            if ($scope.lookupItemList[i].fieldName === $scope.selectedLookupItemFieldName) {
+                $scope.lookupItemList[i].value = $rootScope.selectedServicePoint.Id.value;
+                if($rootScope.selectedServicePoint.Name) {
+                    $scope.lookupItemList[i].value = $rootScope.selectedServicePoint.Id.value;
+                    $scope.lookupItemList[i].displayValue = $rootScope.selectedServicePoint.Name.value;
+                }
+                break;
+            }
+        }
+
+        $scope.originalLookupItem.value = $rootScope.selectedServicePoint.Id.value;
+        $scope.originalDisplayValueLookupItem.Id = $rootScope.selectedServicePoint.Id.value;
+        $scope.originalDisplayValueLookupItem.Name = $rootScope.selectedServicePoint.Name.value;
+        $scope.originalPremises.value = $rootScope.selectedPremises.Id.value;
+        $scope.servicePointObj[$rootScope.nsPrefix + 'PremisesId__c'] = $rootScope.selectedPremises.Id.value;
+        $scope.servicePointObj.Id = $rootScope.selectedServicePoint.Id.value;
+        $scope.configSubmit();
+    }
+
+    $scope.selectPremises = function() {
+        if($rootScope.selectedPremises.Id.value) {
+            var premisesId = $rootScope.selectedPremises.Id.value;
+            var params = {id: premisesId};
+            $scope.$parent.records = [];
+            $scope.$parent.updateDatasource(params, true).then(function(records){
+                $log.debug(records);
+
+                for(var i=0; i<records.length; i++) {
+                    if(records[i].Id.value === premisesId) {
+                        $rootScope.selectedPremises = records[i];
+                        $scope.selectServicePoints($rootScope.selectedPremises);
+                        break;
+                    }
+                }
+            });
+        }
+    };
+
+    $scope.selectServicePoints = function(selectedPremises) {
+        if(!selectedPremises || !selectedPremises.actions
+            || !selectedPremises.actions.getservicepoints) {
+            return;
+        }
+        var action = selectedPremises.actions.getservicepoints;
+        if(action.params && action.params.remote && $rootScope.selectedServicePoint.Id.value) {
+            action.params.remote.id = $rootScope.selectedServicePoint.Id.value;
+        }
+        CPQService.invokeAction(action).then(
+            function(data) {
+                $log.debug(data);
+                if(data.records) {
+                    for(var i=0; i< data.records.length; i++) {
+                        if(data.records[i].Id.value === $rootScope.selectedServicePoint.Id.value) {
+                            $rootScope.selectedServicePoint = data.records[i];
+                            break;
+                        }
+                    }
+                }
+            }, function(error) {
+                $log.error(error);
+            }
+        );
+    }
+
+    $scope.getPremises = function(search) {
+
+        if(!search) {
+            return;
+        }
+
+        if (search && typeof search === 'object') {
+            return ;
+        }
+
+        var params = {searchBy: search};
+        $scope.$parent.records = [];
+        return $scope.$parent.updateDatasource(params, true).then(function(data){
+            $log.debug(data);
+            return data;
+        });
+    }
+
+    $scope.getServicePoints = function(search, premises) {
+        if (!search) {
+            return ;
+        }
+        if (search && typeof search === 'object') {
+            return ;
+        }
+
+        if(!premises || !premises.actions
+            || !premises.actions.getservicepoints) {
+            return;
+        }
+        var action = premises.actions.getservicepoints;
+        if(action.remote && action.remote.params) {
+            action.remote.params.searchBy = search;
+        }
+        return CPQService.invokeAction(action).then(
+            function(data) {
+                $log.debug(data);
+                return data.records;
+            }, function(error) {
+                $log.error(error);
+            }
+        );
+    }
+
+    $scope.checkSelected = function() {
+        return !$rootScope.selectedPremises || !$rootScope.selectedPremises.Id || !$rootScope.selectedServicePoint
+                || !$rootScope.selectedServicePoint.Id;
+    }
+
+    var refreshLookupItem = function() {
+        $log.debug('refreshLookupItem: $rootScope.selectedLookupItem: ', $rootScope.selectedLookupItem);
+        var changedFieldName = $scope.selectedLookupItemFieldName;
+        var changedToId = $rootScope.selectedLookupItem.Id;
+        var changedToValue = $rootScope.selectedLookupItem.Name;
+        for (var i = 0; i < $scope.lookupItemList.length; i++) {
+            if ($scope.lookupItemList[i].fieldName === changedFieldName) {
+                $scope.lookupItemList[i].value = changedToId;
+                $scope.lookupItemList[i].displayValue = changedToValue;
+                break;
+            }
+        }
+        $log.debug('$scope.originalLookupItem: ', $scope.originalLookupItem);
+        $scope.originalLookupItem.value = changedToId;
+        $log.debug('$scope.originalDisplayValueLookupItem: ', $scope.originalDisplayValueLookupItem);
+        $scope.originalDisplayValueLookupItem.Id = changedToId;
+        $scope.originalDisplayValueLookupItem.Name = changedToValue;
+        $scope.configSubmit();
+    };
+
+    $scope.saveAccountInfo = function() {
+        refreshLookupItem();
+    };
+
+    $scope.refreshEditableField = function(editableItem, alwaysSave) {
+        var errorMsg, changedValue, originalEditableItem, isValidFieldValue;
+        var recurringValue = $rootScope.nsPrefix + 'RecurringManualDiscount__c';
+        var oneTimeValue = $rootScope.nsPrefix + 'OneTimeManualDiscount__c';
+        var recurringPrice = $rootScope.nsPrefix + 'RecurringCalculatedPrice__c';
+        editableItem.qtyValidationMessage = '';
+
+        if (editableItem.fieldName == recurringValue || editableItem.fieldName == oneTimeValue || editableItem.fieldName == recurringPrice) {
+            if (editableItem.value >= 0 && editableItem.value <= 100) {
+                isValidFieldValue = true;
+            } else {
+                isValidFieldValue = false;
+            }
+        }
+
+        if (editableItem.fieldName.toLowerCase() == 'quantity') {
+            if (angular.isUndefined(editableItem.value) || editableItem.value < 1) {
+                errorMsg = editableItem.fieldName + ' ' + toastCustomLabels['CPQMustBeGreaterThanZero'];
+            } else if (editableItem.value < $scope.configItemObject.minQuantity) {
+                errorMsg = editableItem.fieldName + ' ' + toastCustomLabels['CPQCanNotHaveLess'] + ' ' + $scope.configItemObject.minQuantity + ' ' + toastCustomLabels['CPQQuantity'];
+            } else if (editableItem.value > $scope.configItemObject.maxQuantity) {
+                errorMsg = editableItem.fieldName + ' ' + toastCustomLabels['CPQCanNotHaveMoreThan'] + ' ' + $scope.configItemObject.maxQuantity + ' ' + toastCustomLabels['CPQQuantity'];
+            }
+        } else if (angular.isDefined(isValidFieldValue) && !isValidFieldValue) {
+            errorMsg = editableItem.label + ' ' + toastCustomLabels['CPQMustBeGreaterThanOrEqualToZero'];
+        }
+
+        if (errorMsg) {
+            editableItem.qtyValidationMessage = errorMsg;
+        } else {
+            $log.debug('refreshEditableField: editableItem: ', editableItem);
+            changedValue = editableItem.value;
+            originalEditableItem = $scope.configItemObject[editableItem.fieldName];
+            originalEditableItem.value = changedValue;
+        }
+
+        if (!errorMsg && alwaysSave) {
+            $scope.configSubmit();
+        }
+    };
+
+    /**
+    *checkQuantityField : Used for checking calling service for prevent decimal character in quantity fields
+    * @param {field} current field 
+    * @param {key} key pressed by user
+    */
+
+    $scope.checkQuantityField = function(field, key) {
+        if (field === 'Quantity') {
+            CPQService.setIntegerOnlyFields(key);
+        }
+    };
+
+    $scope.processCreateNewLookupAction = function(newLookupAction) {
+        $log.debug('processCreateNewLookupAction: newLookupAction: ', newLookupAction);
+        $log.debug('processCreateNewLookupAction: jsonStr', newLookupAction.remote.params.inputFields);
+        $scope.createNewLookupAction = newLookupAction;
+        $scope.createNewLookupInputFields = JSON.parse(newLookupAction.remote.params.inputFields);//
+    };
+
+    $scope.refreshCreateNewLookupInputField = function(inputField) {
+        $log.debug('refreshCreateNewLookupInputField: inputField: ', inputField);
+        $log.debug('createNewLookupInputFieldValue: ', $scope.createNewLookupInputFieldValue);
+        $log.debug('scope.createNewLookupInputFields: ', $scope.createNewLookupInputFields);
+        for (var i = 0; i < $scope.createNewLookupInputFields.length; i++) {
+            if ($scope.createNewLookupInputFields[i].fieldName === inputField.fieldName) {
+                $scope.createNewLookupInputFields[i].value = $scope.createNewLookupInputFieldValue;
+                break;
+            }
+        }
+    };
+
+    $scope.createNewInstanceOfLookupField = function() {
+        $log.debug('createNewInstanceOfLookupField: $scope.createNewLookupAction: ', $scope.createNewLookupAction);
+        $scope.createNewLookupAction[actionMode].params.inputFields = $scope.createNewLookupInputFields;
+
+        CPQService.invokeAction($scope.createNewLookupAction).then(
+            function(data) {
+                $log.debug(data);
+                $log.debug('createNewLookupInputFieldValue: ', $scope.createNewLookupInputFieldValue);
+                $log.debug('scope.createNewLookupInputFields: ', $scope.createNewLookupInputFields);
+                for (var i = 0; i < $scope.createNewLookupInputFields.length; i++) {
+                    if ($scope.createNewLookupInputFields[i].editable) {
+                        $scope.createNewLookupInputFields[i].value = null;
+                    }
+                }
+                $scope.createNewLookupInputFieldValue = null;
+                $scope.createNewResultMsg = 'Create new instance successful';
+                var message = {'event': 'reload', 'message': null};
+                $rootScope.$broadcast('vlocity.layout.cpq-cart-item-lookup.events', message);
+            }, function(error) {
+                $log.error(error);
+                $scope.createNewResultMsg = 'Create new instance failed: ' + error;
+            });
+    };
+
+    $scope.isAsset = function(item, fieldName) {
+        return CPQService.isAsset(item,fieldName);
+    };
+    $scope.isReadOnly = function(item) {
+        return CPQService.isChangesNotAllowed(item);
+    };
+    $scope.isGroupAttached = function(item, field) {
+        if(field === 'Quantity') {
+            var hasQuoteGroupAttached = (item[$rootScope.nsPrefix + 'QuoteGroupId__c'] && item[$rootScope.nsPrefix + 'QuoteGroupId__c'].value) ? true : false;
+            var hasOrderGroupAttached = (item[$rootScope.nsPrefix + 'OrderGroupId__c'] && item[$rootScope.nsPrefix + 'OrderGroupId__c'].value) ? true : false;
+            return hasQuoteGroupAttached || hasOrderGroupAttached;
+        }
+        return false;
+    }
+
+    $scope.isAccountDisabled = function(item, fieldName) {
+        return CPQService.isFieldsEditable(item,fieldName);
+    };
+    $scope.getStateData = function(cards) {
+        if (cards.length && cards[0].states) {
+            CPQCartItemConfigService.configureFields(cards[0].states[0].fields);
+        }
+    };
+}]);
+
+
+
+
+
+                var sessionId = '{!$Api.Session_ID}';
+                //$rootScope.forcetkClient = new forcetk.Client();
+                //$rootScope.forcetkClient.setSessionToken('{!$Api.Session_ID}');
+                
+                var vlocCPQ = {
+                    'accessToken': '{!$Api.Session_ID}',
+                    'staticResourceURL' : {
+                        'slds': '{!URLFOR($Resource.vlocity_cmt__slds)}',
+                    }
+                };
+            </script>
+           <!-- loads the custom labels for the org 
+           <c:HybridCPQCustomLabelsComponent /> -->
+        </body>
+    </html>
+
+</apex:page>

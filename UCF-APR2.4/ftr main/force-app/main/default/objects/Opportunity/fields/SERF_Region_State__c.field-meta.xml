@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SERF_Region_State__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE ( Account.ShippingState , 
+
+&quot;Pennsylvania&quot; , &quot;North East&quot;, 
+&quot;New York&quot; , &quot;North East&quot;, 
+&quot;Connecticut&quot; , &quot;North East&quot;, 
+
+&quot;West Virginia&quot; , &quot;South East&quot; , 
+&quot;North Carolina&quot; , &quot;South East&quot; , 
+&quot;South Carolina&quot; , &quot;South East&quot; , 
+&quot;Florida&quot; , &quot;South East&quot; , 
+&quot;Alabama&quot; , &quot;South East&quot; , 
+&quot;Georgia&quot; , &quot;South East&quot; , 
+&quot;Mississippi&quot; , &quot;South East&quot; , 
+&quot;Tennessee&quot; , &quot;South East&quot; , 
+
+&quot;Minnesota&quot; , &quot;Central&quot; , 
+&quot;Iowa&quot; , &quot;Central&quot; , 
+&quot;Nebraska&quot; , &quot;Central&quot; , 
+&quot;Illinois&quot; , &quot;Central&quot; , 
+&quot;Michigan&quot; , &quot;Central&quot; , 
+&quot;Indiana&quot; , &quot;Central&quot; , 
+&quot;Wisconsin&quot; , &quot;Central&quot; , 
+&quot;Ohio&quot; , &quot;Central&quot; , 
+&quot;Texas&quot; , &quot;Central&quot; , 
+
+&quot;Washington&quot; , &quot;West&quot;, 
+&quot;Oregon&quot; , &quot;West&quot; , 
+&quot;California&quot; , &quot;West&quot;, 
+&quot;Arizona&quot; , &quot;West&quot;, 
+&quot;Idaho&quot; , &quot;West&quot;, 
+&quot;Utah&quot; , &quot;West&quot;, 
+&quot;Montana&quot; , &quot;West&quot;, 
+&quot;New Mexico&quot; , &quot;West&quot; , NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SERF Region State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

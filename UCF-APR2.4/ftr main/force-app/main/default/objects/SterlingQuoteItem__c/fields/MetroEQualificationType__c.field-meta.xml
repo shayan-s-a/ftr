@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MetroEQualificationType__c</fullName>
+    <externalId>false</externalId>
+    <label>MetroE Qualification Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Match</fullName>
+                <default>false</default>
+                <label>No Match</label>
+            </value>
+            <value>
+                <fullName>Terminal Match</fullName>
+                <default>false</default>
+                <label>Terminal Match</label>
+            </value>
+            <value>
+                <fullName>Exchange Match</fullName>
+                <default>false</default>
+                <label>Exchange Match</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

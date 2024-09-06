@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BANT_Obligatory_Fields</fullName>
+    <active>false</active>
+    <description>“BANT” questions are required only at the Validating (Best Case)/Decision (Commit) stages and only for new opportunities (create date since May/2022).</description>
+    <errorConditionFormula>AND(
+IF(
+AND(
+$Profile.Name &lt;&gt; &apos;#Alternate Channel Manager&apos;,
+$Profile.Name &lt;&gt; &apos;#CTF Small Business User&apos;,
+$Profile.Name &lt;&gt; &apos;Partner Support Team&apos;,
+
+OR(
+
+ISPICKVAL(StageName, &apos;Validating&apos;),
+ISPICKVAL(StageName, &apos;Decision&apos;)) ),
+
+
+OR(
+ISBLANK(BudgetText__c),
+ISBLANK(Budget__c),
+ISBLANK(Authority__c),
+ISBLANK(Need__c),
+ISBLANK(TEXT(NeedNumber__c)),
+
+ISBLANK(Timeline_From__c),
+ISBLANK(Timeline_To__c)
+),
+false
+),
+DATEVALUE(CreatedDate) &gt;= DATE(2022, 5, 1)
+)</errorConditionFormula>
+    <errorMessage>“BANT” questions are required at the Validating (Best Case) and Decision (Commit) stages.</errorMessage>
+</ValidationRule>

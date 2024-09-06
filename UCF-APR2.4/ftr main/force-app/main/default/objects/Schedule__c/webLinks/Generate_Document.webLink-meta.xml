@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Document</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Generate Document</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>&lt;script language=&quot;JavaScript&quot;&gt;
+
+function redirect()
+{
+parent.frames.location.replace(&quot;{URL GOES HERE}&quot;);
+}
+
+redirect();
+
+&lt;/script&gt;
+/apex/loop__looplus?eid={!Schedule__c.Id}&amp;accountid={!Schedule__c.Account_ID__c},&quot;_self &quot;</url>
+</WebLink>

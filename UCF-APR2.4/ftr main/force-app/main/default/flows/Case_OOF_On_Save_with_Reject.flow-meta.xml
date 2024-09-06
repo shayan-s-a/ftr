@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>OOF_Notify_SIP_Intake_More_Information_Needed</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Email Intake</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.OOF_Notify_SIP_Intake_More_Information_Needed</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>OOF_Notify_SIP_Intake_More_Information_Needed</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>Email SIP Intake</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.OOF_Notify_SIP_Intake_More_Information_Needed</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>OOF_Notify_911_More_Information_Needed</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_5_A1</name>
+        <label>Email 911</label>
+        <locationX>500</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.OOF_Notify_911_More_Information_Needed</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>OOF_Notify_DPI_Tables_More_Information_Needed</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_7_A1</name>
+        <label>Email DPI Tables</label>
+        <locationX>700</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.OOF_Notify_DPI_Tables_More_Information_Needed</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>OOF_Notify_DPI_Plant_Tables_More_Information_Needed</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_9_A1</name>
+        <label>Email DPI Plant Tables</label>
+        <locationX>900</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.OOF_Notify_DPI_Plant_Tables_More_Information_Needed</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>myVariable_waitStartTimeAssignment</name>
+        <label>myVariable_waitStartTimeAssignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myDecision</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Info Req from UCaaS Intake</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision2</name>
+        <label>myDecision2</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>Info Req from SIP UCaaS</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision4</name>
+        <label>myDecision4</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision6</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_5</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_5</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_5_A1</targetReference>
+            </connector>
+            <label>Information Requested from 911</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>3.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision6</name>
+        <label>myDecision6</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision8</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_7</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_7</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_7_A1</targetReference>
+            </connector>
+            <label>Info Req from DPI Tables</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>4.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision8</name>
+        <label>myDecision8</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_9</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_9</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_9_A1</targetReference>
+            </connector>
+            <label>Info Req from DPI Plant Tables</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND ([Case].RecordType.Name == &apos;Out of Franchise&apos;,
+	CONTAINS([Case].Order_Product_Type__c, &apos;UCaaS&apos;),
+	TEXT([Case].Initiator_Queue_Status__c) == &apos;INFO REQUESTED FROM&apos;,
+	OR (TEXT([Case].X911_Queue_1_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].X911_Queue_2_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].DPI_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].DPI_Plant_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].EDW_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].Taxation_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>AND ({!myVariable_current.RecordType.Name} == &apos;Out of Franchise&apos;,
+	CONTAINS({!myVariable_current.Order_Product_Type__c}, &apos;UCaaS&apos;),
+	TEXT({!myVariable_current.Initiator_Queue_Status__c}) == &apos;INFO REQUESTED FROM&apos;,
+	OR (TEXT({!myVariable_current.X911_Queue_1_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.X911_Queue_2_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.DPI_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.DPI_Plant_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.EDW_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.Taxation_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND ([Case].RecordType.Name == &apos;Out of Franchise&apos;,
+	CONTAINS([Case].Order_Product_Type__c, &apos;SIP&apos;),
+	TEXT([Case].Initiator_Queue_Status__c) == &apos;INFO REQUESTED FROM&apos;,
+	OR (TEXT([Case].X911_Queue_1_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].X911_Queue_2_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].DPI_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].DPI_Plant_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].EDW_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+		TEXT([Case].Taxation_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>AND ({!myVariable_current.RecordType.Name} == &apos;Out of Franchise&apos;,
+	CONTAINS({!myVariable_current.Order_Product_Type__c}, &apos;SIP&apos;),
+	TEXT({!myVariable_current.Initiator_Queue_Status__c}) == &apos;INFO REQUESTED FROM&apos;,
+	OR (TEXT({!myVariable_current.X911_Queue_1_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.X911_Queue_2_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.DPI_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.DPI_Plant_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.EDW_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+		TEXT({!myVariable_current.Taxation_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND ([Case].RecordType.Name == &apos;Out of Franchise&apos;,
+OR(TEXT([Case].X911_Queue_1_Status__c) == &apos;INFO REQUESTED FROM&apos;, TEXT([Case].X911_Queue_2_Status__c) == &apos;INFO REQUESTED FROM&apos;),
+OR (TEXT([Case].Initiator_Queue_Status__c ) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].DPI_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+    TEXT([Case].DPI_Plant_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].EDW_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].Taxation_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].Order_Writer_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_5</name>
+        <dataType>Boolean</dataType>
+        <expression>AND ({!myVariable_current.RecordType.Name} == &apos;Out of Franchise&apos;,
+OR(TEXT({!myVariable_current.X911_Queue_1_Status__c}) == &apos;INFO REQUESTED FROM&apos;, TEXT({!myVariable_current.X911_Queue_2_Status__c}) == &apos;INFO REQUESTED FROM&apos;),
+OR (TEXT({!myVariable_current.Initiator_Queue_Status__c} ) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.DPI_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+    TEXT({!myVariable_current.DPI_Plant_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.EDW_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.Taxation_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.Order_Writer_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND ([Case].RecordType.Name == &apos;Out of Franchise&apos;,
+TEXT([Case].DPI_Tables_Queue_Status__c) == &apos;INFO REQUESTED FROM&apos;,
+OR (TEXT([Case].DPI_Plant_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].EDW_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].X911_Queue_2_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].Order_Writer_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_7</name>
+        <dataType>Boolean</dataType>
+        <expression>AND ({!myVariable_current.RecordType.Name} == &apos;Out of Franchise&apos;,
+TEXT({!myVariable_current.DPI_Tables_Queue_Status__c}) == &apos;INFO REQUESTED FROM&apos;,
+OR (TEXT({!myVariable_current.DPI_Plant_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.EDW_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.X911_Queue_2_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.Order_Writer_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND ([Case].RecordType.Name == &apos;Out of Franchise&apos;,
+TEXT([Case].DPI_Plant_Tables_Queue_Status__c) == &apos;INFO REQUESTED FROM&apos;,
+OR (TEXT([Case].DPI_Plant_Tables_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].X911_Queue_2_Status__c) == &apos;NEED FURTHER INFO&apos;,
+	TEXT([Case].Order_Writer_Queue_Status__c) == &apos;NEED FURTHER INFO&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_9</name>
+        <dataType>Boolean</dataType>
+        <expression>AND ({!myVariable_current.RecordType.Name} == &apos;Out of Franchise&apos;,
+TEXT({!myVariable_current.DPI_Plant_Tables_Queue_Status__c}) == &apos;INFO REQUESTED FROM&apos;,
+OR (TEXT({!myVariable_current.DPI_Plant_Tables_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.X911_Queue_2_Status__c}) == &apos;NEED FURTHER INFO&apos;,
+	TEXT({!myVariable_current.Order_Writer_Queue_Status__c}) == &apos;NEED FURTHER INFO&apos;))</expression>
+    </formulas>
+    <interviewLabel>Case_OOF_On_Save_with_Reject-1_InterviewLabel</interviewLabel>
+    <label>Case OOF On Save with Reject</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Case</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_waitStartTimeVariable</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Flow.CurrentDateTime</elementReference>
+        </value>
+    </variables>
+</Flow>

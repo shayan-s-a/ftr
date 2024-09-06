@@ -1,0 +1,74 @@
+.dummy{
+	color : black;
+}
+.warning-message {
+    border: 1px solid #FFB75D;
+    background-color: #FFF3E0;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #D43C00;
+    font-weight: 500;
+}
+
+.class-taxtbox-width {
+ width: 150px !important;
+}
+
+.exampleHolder{
+    position: center;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    color: blue;
+}
+
+
+.slds-modal {
+    /* Styles to ensure modal is centered and overlays the page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* High z-index to overlay on top of other content */
+}
+
+.slds-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998; /* Just below the modal */
+    background: rgba(0, 0, 0, .5); /* Semi-transparent backdrop */
+}
+
+.slds-modal__container {
+    max-width: 500px; /* Adjust as needed */
+    width: 90%; /* Responsive width */
+    margin: 0 auto;
+}
+
+.slds-textarea {
+    height: 100px; /* Adjust as per your requirement */
+}
+.slds-modal__content .slds-form-element__control {
+    margin-bottom: 1rem; /* Adds space between the form elements */
+}
+
+.slds-textarea {
+    resize: none; /* Prevent resizing if you want a fixed size */
+}
+
+h6{
+    font-size: 18px;
+}
+
+.custom-table-overflow{
+    overflow: auto;
+    min-height: 400px;
+}

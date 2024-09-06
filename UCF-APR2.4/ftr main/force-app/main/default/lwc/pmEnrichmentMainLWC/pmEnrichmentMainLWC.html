@@ -1,0 +1,77 @@
+<template> 
+  
+
+<div class="slds-box slds-theme_default">
+        <div class="slds-tabs_default slds-tabs_default__item  custom-tab_buttons">
+            <div class="slds-button-group" role="group">
+                <button class={tab1Class} onclick={handleSelectTab} data-name="tab1">Service Locations</button>
+                <button class={tab2Class} onclick={handleSelectTab} data-name="tab2">Phone Numbers</button>
+                 <button class={tab3Class} onclick={handleSelectTab} data-name="tab3">Employee Information</button>
+                <button class={tab4Class} onclick={handleSelectTab} data-name="tab4">Multi Line Hunting Groups</button>
+                 <button class={tab5Class} onclick={handleSelectTab} data-name="tab5">Auto Attendants</button>
+                <button class={tab6Class} onclick={handleSelectTab} data-name="tab6">General VoiceMails</button>
+                 <button class={tab7Class} onclick={handleSelectTab} data-name="tab7">Customizations Notes</button>
+                <button class={tab8Class} onclick={handleSelectTab} data-name="tab8">Page Groups</button>
+                <!-- Add more buttons as necessary -->
+            </div>
+        </div>
+        <div>
+            <template if:true={isTab1Selected}>
+                <!-- Load your LWC component for Tab 1 -->
+              <c-service-Location-L-W-C  isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-Service-Location-L-W-C >
+            </template>
+            <template if:true={isTab2Selected}>
+                <!-- Load your LWC component for Tab 2 -->
+                
+                <c-phone-Number-L-W-C  isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-phone-Number-L-W-C>
+               
+             </template>
+            <template if:true={isTab3Selected}>
+                <!-- Load your LWC component for Tab 2 -->
+                <c-employe-Information-L-W-C  isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-employe-Information-L-W-C> 
+            </template>
+            <template if:true={isTab4Selected}>
+                <!-- Load your LWC component for Tab 2 -->
+                 <c-multi-Line-Hunting-Group-L-W-C  isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-multi-Line-Hunting-Group-L-W-C>
+            </template>
+            <template if:true={isTab5Selected}>
+                <!-- Load your LWC component for Tab 2 -->
+                <c-Auto-Attendent-L-W-C isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-Auto-Attendent-L-W-C>
+            </template>
+            <template if:true={isTab6Selected}>
+                <!-- Load your LWC component for Tab 2 -->
+                <c-general-Voice-Mail-L-W-C isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-general-Voice-Mail-L-W-C >
+            </template>
+            <template if:true={isTab7Selected}>
+                <!-- Load your LWC component for Tab 2 -->
+                 <c-customizations-Notes-Ucf isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-customizations-Notes-Ucf>
+            </template>
+            <template if:true={isTab8Selected}>
+                <!-- Load your LWC component for Tab 2 -->
+                <c-page-Groups-Ucf isnetworktranslation={isNetworkTranslation} record-id={recordId} onrecordchange={handleRecordChange}></c-page-Groups-Ucf>
+            </template>
+            <!-- Add more components as necessary -->
+        </div>
+    </div>
+    <template if:true={isChangeTabModalOpen}>
+        <lightning-card if:true={isChangeTabModalOpen}>
+            <div class="slds-container_small">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <h2 class="slds-text-heading_medium slds-hyphenate">Confirmation</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p class="slds-align_absolute-center">You have unsaved changes that will be lost. Are you sure to switch tab?</p>
+                        </div>
+                        <div class="slds-modal__footer">
+                            <button class="slds-button slds-button_neutral" aria-label="No" onclick={handleCancel}>Cancel</button>
+                            <button class="slds-button slds-button_brand" aria-label="Confirm" onclick={handleConfirm}>Confirm</button>
+                        </div>  
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </lightning-card>
+    </template>
+</template>

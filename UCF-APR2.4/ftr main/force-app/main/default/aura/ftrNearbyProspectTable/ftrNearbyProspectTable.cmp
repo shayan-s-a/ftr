@@ -1,0 +1,68 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForRecordHome" controller="ftrNearbyProspectController">
+	<aura:registerEvent name="reloadComponent" type="c:ftrNearbyProspectComponentEvent"/>
+    <!-- <ltng:require styles="{! $Resource.DataTable_Plugin + '/DataTables-1.10.21/css/jquery.dataTables.min.css'}" 
+                  scripts="{!join(',', 
+                           $Resource.DataTable_Plugin + '/jQuery-3.3.1/jquery-3.3.1.min.js', 
+                           $Resource.DataTable_Plugin + '/DataTables-1.10.21/js/jquery.dataTables.min.js')
+                           }" afterScriptsLoaded="{!c.scriptsLoaded}"/> -->
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+    <aura:attribute name="recordId" type="String"  />
+    <aura:attribute name="errorMsg" type="String"  />
+    <aura:attribute name="distance" type="String" default="5" />
+    <aura:attribute name="records" type="Object[]"/>
+    <aura:attribute name="loading" type="boolean" default="true"/>
+    <aura:attribute name="error" type="boolean" default="false"/>    
+
+
+    <aura:if isTrue="{!v.loading}">
+        <div style="height: 200px;"></div>
+        <lightning:spinner alternativeText="Loading" size="medium" />
+    </aura:if>
+    <div class="slds-m-around_medium" id="tableId-container">
+        <table id="tableId" class="slds-table slds-table_bordered slds-table_cell-buffer slds-hidden" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Lattice Rating (Connectivity)</th>
+                    <th>Provider Last Change Date</th>
+                    <th>Current Voice Provider</th>
+                    <th>Previous Voice Provider</th>
+                    <th>Building Type</th>
+                    <th>DB Total Wireline Bill</th>
+                    <th>Total Domestic Employees</th>
+                    <!-- <th>Total Global Employees</th> -->
+                    <!-- <th>D&amp;B Total Wireline Bill</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.records}" var="record">
+                    <tr>
+                        <td><a href="{!record.url}" target="_blank">{!record.CompanyName}</a></td>
+                        <td>{!record.Rating}</td>
+                        <td>{!record.ProviderLastChangedDate}</td>
+                        <td>{!record.CurrentProvider}</td>
+                        <td>{!record.PreviousProvider}</td>
+                        <td>{!record.BuildingType}</td>
+                        <td>{!record.D_B_Total_Wireline_Bill}</td>
+                        <td>{!record.Total_Domestic_Employees}</td>
+                        <!-- <td>{!record.Employees}</td> -->
+                        <!-- <td>{!record.WirelineBill}</td> -->
+                    </tr>
+                </aura:iteration>  
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Lattice Rating (Connectivity)</th>
+                    <th>Provider Last Change Date</th>
+                    <th>Current Voice Provider</th>
+                    <th>Previous Voice Provider</th>
+                    <th>Building Type</th>
+                    <!-- <th>Total Global Employees</th> -->
+                    <!-- <th>D&amp;B Total Wireline Bill</th> -->
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</aura:component>

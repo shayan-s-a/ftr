@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Type_Ids__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(RecordTypeId,
+	&quot;012E0000000kLoZ&quot;,&quot;Change Order&quot;,
+	&quot;012E0000000kLoa&quot;,&quot;Contract Renewal&quot;,
+	&quot;012E0000000kLob&quot;,&quot;Disconnect Order&quot;,
+	&quot;012E0000000kLoc&quot;,&quot;Move Order&quot;,
+	&quot;012E0000000kLod&quot;,&quot;New Order&quot;,
+	&quot;012E0000000kLoe&quot;,&quot;Records Only Order&quot;,
+	&quot;012E0000000kLof&quot;,&quot;Transfer Ownership Order&quot;,
+	&quot;012E0000000kLog&quot;,&quot;Upgrade/Downgrade Order&quot;,
+	&quot;0120h000000cc4L&quot;, &quot;Group Cart&quot;,
+	&quot;0120h000000cc4M&quot;, &quot;Master Order&quot;,
+	&quot;0120h000000cc4N&quot;, &quot;Mobile Phone Order&quot;,
+	&quot;0120h000000cc5E&quot;, &quot;New Vlocity Order&quot;,
+	&quot;0120h000000cc4O&quot;, &quot;Sub Order&quot;,
+        &quot;0120h00000086oG&quot;, &quot;ABS Order&quot;,
+        &quot;0120h00000086oH&quot;, &quot;Circuit Change Order&quot;,
+        &quot;0120h00000086oI&quot;, &quot;Circuit Disconnect Order&quot;,
+        &quot;0120h00000086oJ&quot;, &quot;Circuit Move Order&quot;,
+        &quot;0120h00000086oK&quot;, &quot;Circuit New Order&quot;,
+        &quot;0120h00000086oN&quot;, &quot;Circuit Renewal Order&quot;,
+        &quot;0120h00000086oL&quot;, &quot;Circuit Simple Record Order&quot;,
+        &quot;0120h00000086oM&quot;, &quot;Circuit Transfer of Ownership Order&quot;,
+        &quot;0120h000000iADl&quot;, &quot;DID Order Request&quot;,
+        &quot;0120h00000086oO&quot;, &quot;FAW Mitel Change Order&quot;,
+        &quot;0120h00000086oP&quot;, &quot;FAW Mitel Disconnect Order&quot;,
+        &quot;0120h000000CFaq&quot;, &quot;UCaaS Change Order&quot;,
+        &quot;0120h000000CFar&quot;, &quot;UCaaS Contract Renewal Order&quot;,
+        &quot;0120h000000CFas&quot;, &quot;UCaaS Disconnect Order&quot;,
+        &quot;0120h000000CFat&quot;, &quot;UCaaS Move Order&quot;,
+        &quot;0120h000000CFau&quot;, &quot;UCaaS New Order&quot;,
+        &quot;0120h000000CFav&quot;, &quot;UCaaS Records Only Order&quot;,
+        &quot;0120h000000CFaw&quot;, &quot;UCaaS Transfer of Ownership Order&quot;,
+        &quot;0120h00000086oQ&quot;, &quot;Voice Change Order&quot;,
+        &quot;0120h00000086oR&quot;, &quot;Voice Disconnect Order&quot;,
+        &quot;0120h00000086oS&quot;, &quot;Voice Move Order&quot;,
+        &quot;0120h00000086oT&quot;, &quot;Voice New Order&quot;,
+        &quot;0120h00000086oU&quot;, &quot;Voice Renewal Order&quot;, 
+        &quot;0120h00000086oV&quot;, &quot;Voice Simple Order&quot;,
+        &quot;0120h00000086oW&quot;, &quot;Voice Transfer of Ownership Order&quot;,
+        &quot;0120h000000YRm0&quot;, &quot;Vlocity OM Order&quot;,
+        &quot;0120h000000Uq62&quot;, &quot;Ethernet New Order (Partner)&quot;,
+        &quot;0120h000000MeAP&quot;, &quot;Ethernet Upgrade/Downgrade - Order (Partner)&quot;,
+
+
+
+
+
+	&quot;&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Record Type Ids</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

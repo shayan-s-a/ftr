@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Competitor Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Altice</fullName>
+                <default>false</default>
+                <label>Altice</label>
+            </value>
+            <value>
+                <fullName>Atlantic Broadband</fullName>
+                <default>false</default>
+                <label>Atlantic Broadband</label>
+            </value>
+            <value>
+                <fullName>Bel Ari Internet</fullName>
+                <default>false</default>
+                <label>Bel Ari Internet</label>
+            </value>
+            <value>
+                <fullName>Charter</fullName>
+                <default>false</default>
+                <label>Charter</label>
+            </value>
+            <value>
+                <fullName>Comcast</fullName>
+                <default>false</default>
+                <label>Comcast</label>
+            </value>
+            <value>
+                <fullName>Cox</fullName>
+                <default>false</default>
+                <label>Cox</label>
+            </value>
+            <value>
+                <fullName>Direct TV</fullName>
+                <default>false</default>
+                <label>Direct TV</label>
+            </value>
+            <value>
+                <fullName>Dish</fullName>
+                <default>false</default>
+                <label>Dish</label>
+            </value>
+            <value>
+                <fullName>Gigamonster</fullName>
+                <default>false</default>
+                <label>Gigamonster</label>
+            </value>
+            <value>
+                <fullName>One Source</fullName>
+                <default>false</default>
+                <label>One Source</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Starry</fullName>
+                <default>false</default>
+                <label>Starry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

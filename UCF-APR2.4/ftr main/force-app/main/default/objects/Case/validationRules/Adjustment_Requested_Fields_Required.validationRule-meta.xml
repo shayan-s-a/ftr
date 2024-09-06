@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adjustment_Requested_Fields_Required</fullName>
+    <active>true</active>
+    <description>If user selects &quot;Adjustment Requested&quot; for the field &quot;Billing Issue Cause/Category&quot;, they must fill out the following fields: Billing Error Order, Date of Error Causing Adjustment, What is the error?, Reason for Error?, and Estimated Adjustment Amount.</description>
+    <errorConditionFormula>AND( 
+RecordType.Name = &quot;Billing&quot;,
+ISPICKVAL(Billing_Issue_Cause__c, &quot;Adjustment Requested&quot;),
+OR(
+ISBLANK(Billing_Error_Order__c ),
+ISBLANK(CAP_Date_of_Error_Causing_Adjustment__c ),
+ISBLANK( CAP_What_is_the_error__c ),
+ISBLANK(CAP_Reason_for_Error__c),
+ISBLANK( Estimated_Adjustment_Amount__c )
+)
+)</errorConditionFormula>
+    <errorMessage>If &quot;Adjustment Requested&quot; Is selected for &quot;Billing Issue Cause/Category&quot;, then you must fill out the following fields: Billing Error Order, Date of Error Causing Adjustment, What is the error?, Reason for Error?, and Estimated Adjustment Amount.</errorMessage>
+</ValidationRule>

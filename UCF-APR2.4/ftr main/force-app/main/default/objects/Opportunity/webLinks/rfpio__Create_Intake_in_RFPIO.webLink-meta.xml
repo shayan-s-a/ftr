@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfpio__Create_Intake_in_RFPIO</fullName>
+    <availability>online</availability>
+    <description>Create Intake in RFPIO</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Intake in RFPIO</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>https://rfpio.ap7.visual.force.com/apex/CreateNewRfpioIntake?ObjectId={!Opportunity.Id}</url>
+</WebLink>

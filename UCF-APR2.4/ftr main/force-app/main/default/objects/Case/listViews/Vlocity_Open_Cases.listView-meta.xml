@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vlocity_Open_Cases</fullName>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Team_Impacted__c</columns>
+    <columns>Related_To2__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Jira__c</columns>
+    <columns>Targeted_Date__c</columns>
+    <columns>Create_By_Name__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.CLOSED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Vlocity</value>
+    </filters>
+    <filters>
+        <field>ClosedCase__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Vlocity - Open Cases</label>
+    <sharedTo>
+        <group>Admin_Users</group>
+        <group>FrontierAdministrators</group>
+        <group>SFDC_Admins</group>
+        <group>Vlocity</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,23 @@
+{
+    "%vlocity_namespace%__AdditionalInformation__c": "This VIP will update a product based on the fields passed in as fieldsToUpdate or attributesToUpdate.",
+    "%vlocity_namespace%__CustomJavaScript__c": "Quote_UpdateProduct_SampleInput.json",
+    "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "%vlocity_namespace%__Element__c": [
+        "Quote_UpdateProduct_Element_GetCCSData.json",
+        "Quote_UpdateProduct_Element_getQLI.json",
+        "Quote_UpdateProduct_Element_AttributeTransform.json",
+        "Quote_UpdateProduct_Element_updateXLIAttributes.json",
+        "Quote_UpdateProduct_Element_Response.json"
+    ],
+    "%vlocity_namespace%__IsProcedure__c": true,
+    "%vlocity_namespace%__IsReusable__c": false,
+    "%vlocity_namespace%__Language__c": "Procedure",
+    "%vlocity_namespace%__ProcedureKey__c": "Quote_UpdateProduct",
+    "%vlocity_namespace%__PropertySet__c": "Quote_UpdateProduct_PropertySet.json",
+    "%vlocity_namespace%__SubType__c": "UpdateProduct",
+    "%vlocity_namespace%__Type__c": "Quote",
+    "Name": "Update Product in Cart",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/UpdateProduct/Procedure"
+}

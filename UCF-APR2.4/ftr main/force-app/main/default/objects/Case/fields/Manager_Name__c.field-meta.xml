@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Created for Randall Meeks on Case 00767403 3/2021 TMM</description>
+    <externalId>false</externalId>
+    <label>Manager Name</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Manager</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

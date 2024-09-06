@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timeline_Validation</fullName>
+    <active>true</active>
+    <description>Validates that a custom field called Timeline_To__c does not come before Timeline_From__c.</description>
+    <errorConditionFormula>Timeline_To__c &lt; Timeline_From__c</errorConditionFormula>
+    <errorDisplayField>Timeline_From__c</errorDisplayField>
+    <errorMessage>Timeline To cannot be before Timeline From.</errorMessage>
+</ValidationRule>

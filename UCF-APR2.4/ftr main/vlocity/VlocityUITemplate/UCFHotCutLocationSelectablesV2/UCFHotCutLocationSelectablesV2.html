@@ -1,0 +1,50 @@
+<div class='slds-col_padded slds-size_1-of-1 customer-info-table' ng-controller="UCFHotCutLocationSelectablesController"
+	ng-hide="child.eleArray[0].propSetMap.hide">
+	<table class="slds-card slds-table slds-table_bordered slds-table_cell-buffer">
+		<tbody id="table-to-refresh">
+			<tr ng-repeat='(recordIndex, record) in tableData | orderBy:sort.column:sort.descending | limitTo:table.pageSize track by $index'
+				class="list-row">
+				<td>
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-47">Service Location:</label>
+						<div class="slds-form-element__control">
+							<input type="text" id="text-input-id-47" placeholder="Placeholder text…" readonly="true" class="slds-input" value="{{record.Name}}">
+							</div>
+						</div>
+				</td>
+				<td ng-if="(duedateLocations[record.Id] != null)">
+					<label class="slds-form-element__label" for="text-input-id-47">Hot Cut Due Date</label>
+					<div class="slds-form-element__control">
+						<input type="text" placeholder="dd-MM-yyyy" readonly="true" value="{{duedateLocations[record.Id]}}"/>
+							</div>
+					</div>
+				</td>
+				<td>
+					<div class="slds-form-element">
+						<label ng-if="(duedateLocations[record.Id] != null)" class="slds-form-element__label" for="text-input-id-47">Updated Hot Cut Due Date <abbr class="slds-required" title="required">* </abbr></label>
+						<label ng-if="(duedateLocations[record.Id] == null)" class="slds-form-element__label" for="text-input-id-47">Hot Cut Due Date<abbr class="slds-required" title="required">* </abbr></label>
+						<div class="slds-form-element__control">
+							<input type="date" id="datepicker_{{record.Id}}" ng-change="setDueDate(record.Id, recordIndex)" format="dd-MM-yyyy" name="datepicker_{{record.Id}}" ng-model="dueDates[record.Id].value" placeholder="dd-MM-yyyy" min={{minDate}} onkeydown="return false" required />
+							</div>
+						</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="slds-grid pagination" ng-if="table.totalRecordCount > table.pageSize && tableData.length > 0">
+		<p class="content" style="width:100%;">
+			Page {{table.currentPage+1}} of {{numberOfPages()}}. </p>
+		<div class="slds-grid" style="width:100%;place-content: flex-end;">
+			<div style="padding:0.5rem;">
+				<button class="slds-button slds-button_icon slds-button_icon-border" title="Previous" ng-click="previousHandler()" ng-disabled="table.currentPage == 0">
+						<span class="arrow left"></span>
+					</button>
+			</div>
+			<div style="padding:0.5rem;">
+				<button class="slds-button slds-button_icon slds-button_icon-border" title="Next" ng-click="nextHandler()" ng-disabled="table.currentPage >= table.totalRecordCount/table.pageSize - 1">
+						<span class="arrow right"></span>
+					</button>
+			</div>
+		</div>
+	</div>
+</div>

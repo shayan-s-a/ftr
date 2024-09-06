@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_Incorrect_Reason__c</fullName>
+    <description>Used on Jaryl Northrop&apos;s First Bill Review Case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If Bill Correct = No, this field is required.</inlineHelpText>
+    <label>Bill Incorrect Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ETF Billed in Error</fullName>
+                <default>false</default>
+                <label>ETF Billed in Error</label>
+            </value>
+            <value>
+                <fullName>LD/BOT Billing Incorrectly</fullName>
+                <default>false</default>
+                <label>LD/BOT Billing Incorrectly</label>
+            </value>
+            <value>
+                <fullName>MRC Billing Incorrectly</fullName>
+                <default>false</default>
+                <label>MRC Billing Incorrectly</label>
+            </value>
+            <value>
+                <fullName>NRCs Charged in Error</fullName>
+                <default>false</default>
+                <label>NRCs Charged in Error</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Promo Missing</fullName>
+                <default>false</default>
+                <label>Promo Missing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

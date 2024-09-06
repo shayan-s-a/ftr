@@ -1,0 +1,54 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-m-top_small slds-m-bottom_medium">
+        <h2 class="slds-text-heading_small slds-m-bottom_small">
+            Batch Jobs
+        </h2>
+        <p class="slds-m-bottom_small">
+            Make sure <a onclick={openEmailDeliverability}>Email Deliverability</a> 
+            <span> Access level is set to </span>
+            <code style="background:#f3f1f1; padding: 2px 6px;">All Emails</code>
+            <span> so you can recieve an email of the batch job results.</span>
+        </p>
+
+        <lightning-accordion style="border-top: 1px solid lightgrey; border-bottom: 1px solid lightgrey;"
+            class="example-accordion">
+
+            <lightning-accordion-section name="deleteTestData" label="Delete Test Data by Company">
+                <div class="slds-grid slds-grid_vertical-align-end">
+                    <lightning-radio-group name="Data" label="Data to delete" options={deleteOptions} value={deleteData}
+                        type="radio" class="slds-m-right_large" onchange={handleDeleteDataSelection}>
+                    </lightning-radio-group>
+                    <div class="slds-size_1-of-4">
+                        <c-ftr-lookup-element obj-name="Account" icon-name="standard:account"
+                            label-name="Company" placeholder="Search Company..."
+                            search-field={accountFields} filter={accountFilter}
+                            display-fields={accountDisplayFields} onlookup={handleLookup}> </c-ftr-lookup-element>
+                    </div>
+                    <lightning-button variant="destructive" label="Delete Test Data" onclick={deleteTestData}
+                        class="slds-m-left_x-small" disabled={loading}></lightning-button>
+                </div>
+                <div class="slds-grid slds-wrap slds-m-bottom_medium slds-grid_align-end" if:true={batchJobTableRecords}>
+                    <div class="slds-m-bottom_small">
+                        <lightning-button-icon icon-name="utility:refresh" variant="border-filled" 
+                        alternative-text="Refresh" title="Refresh" onclick={getJobStatus}></lightning-button-icon>
+                    </div>
+                    <lightning-datatable hide-checkbox-column data={batchJobTableRecords} columns={batchJobTableColumns} key-field='Id'></lightning-datatable>
+                </div>
+
+            </lightning-accordion-section>
+
+            <lightning-accordion-section name="otherJobs" label="Other jobs">
+
+                <div class="slds-grid slds-grid_vertical-align-end">
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                </div>
+
+            </lightning-accordion-section>
+
+        </lightning-accordion>
+
+    </div>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_of_Property_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordType.Name =  &quot;Community_Connection_Task_Disposition&quot; &amp;&amp;	 
+ISPICKVAL( Status, &quot;Completed&quot;) &amp;&amp;
+ISPICKVAL( Disposition_of_Property__c, &quot;None&quot;)</errorConditionFormula>
+    <errorDisplayField>Disposition_of_Property__c</errorDisplayField>
+    <errorMessage>Please update this field correctly.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,73 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Quick Quote",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "Quick Quote",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "CompanySelection",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English/CompanySelection",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "CompanySelection",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "bStandalone": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 11,
+        "customAttributes": [
+            {
+                "name": "obj-name",
+                "source": "Account"
+            },
+            {
+                "name": "icon-name",
+                "source": "standard:account"
+            },
+            {
+                "name": "label-name",
+                "source": "Company"
+            },
+            {
+                "name": "placeholder",
+                "source": "Search Companies..."
+            },
+            {
+                "name": "search-field",
+                "source": "Name"
+            },
+            {
+                "name": "filter",
+                "source": "RecordType.Name = \"Master\""
+            },
+            {
+                "name": "display-fields",
+                "source": "Name, Owner.Name"
+            },
+            {
+                "name": "required",
+                "source": "yes"
+            }
+        ],
+        "hide": false,
+        "label": "CompanyLookup",
+        "lwcName": "ftrAccountLookupByAddress",
+        "required": true,
+        "show": null
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Custom Lightning Web Component",
+    "Name": "CompanyLookup",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/QuickQuote/English/CompanyLookup"
+}

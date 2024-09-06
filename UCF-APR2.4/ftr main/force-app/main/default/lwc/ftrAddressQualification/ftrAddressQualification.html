@@ -1,0 +1,240 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:true={loading}>
+        <div class="slds-spinner_container">
+            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </template>
+    <div class="slds-grid">
+        <template if:true={error}>
+            <lightning-formatted-text value={error} class="slds-text-color_error"></lightning-formatted-text>
+        </template>
+        <!-- <button style="margin-left: auto;" if:true={showPreviousButton} class="slds-button slds-button_neutral"
+            onclick={omniPrevStep}>Previous</button> -->
+        <button class="slds-button slds-button_brand slds-p-horizontal_x-large"
+            style="margin-left: auto;" onclick={findAddresses}>Qualify Location</button>
+    </div>
+    <div class="slds-m-vertical_large" if:true={showAddressList}>
+        <div class="slds-text-heading_small slds-m-bottom_small">
+            Found Addresses:
+        </div>
+        <div style="height: 300px" data-id="addressList">
+            <lightning-datatable data={addressList} max-row-selection='1' columns={columns} key-field='id'
+                onrowselection={handleAddressSelection}>
+            </lightning-datatable>
+        </div>
+    </div>
+    <template if:true={showQualificationResults}>
+        <article class="slds-card " data-id="qualification">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span>Qualification Details -
+                                <span class="slds-text-color_success" if:true={isQualified}> {qualificationMessage} </span>
+                                <span class="slds-text-color_error" if:false={isQualified}> {qualificationMessage} </span>
+                            </span>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner" if:true={qualification} >
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Address</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static"> {qualification.QualifiedAddress.Address},
+                                    {qualification.QualifiedAddress.City}, {qualification.QualifiedAddress.State}
+                                    {qualification.QualifiedAddress.ZipCode} </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">DSAT Ticket #</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static">{qualification.Id} </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Legacy</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={isLEGACY}> Yes </div>
+                                <div class="slds-form-element__static" if:false={isLEGACY}> No </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Lat/Long</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static"> {qualification.QualifiedAddress.Latitude},
+                                    {qualification.QualifiedAddress.Longitude} </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Wire Center CLLI</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.WireCenterCLLI}>
+                                    {qualification.WireCenterCLLI} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.WireCenterCLLI}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Fiber Distance (ft)</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.FiberDistance}>
+                                    {qualification.FiberDistance} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.FiberDistance}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Wire Center Max Speed</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.WireCenterSpeed}>
+                                    {qualification.WireCenterSpeed} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.WireCenterSpeed}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Fiber Tier</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:false={isBDT}> {qualification.FiberTier}
+                                </div>
+                                <div class="slds-form-element__static slds-text-color_error" if:true={isBDT}>
+                                    {qualification.FiberTier} </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Wire Center QoS</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.WireCenterQoS}>
+                                    {qualification.WireCenterQoS} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.WireCenterQoS}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">Products</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.Products}>
+                                    {qualification.Products} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.Products}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">LIT/OnNet Address</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.LitBuilding}> Yes </div>
+                                <div class="slds-form-element__static" if:false={qualification.LitBuilding}> No </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">HBE</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={isHBE}> Yes </div>
+                                <div class="slds-form-element__static" if:false={isHBE}> No </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">HBE Max Speed</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.HBEDetails.HBEMaxSpeed}>
+                                    {qualification.HBEDetails.HBEMaxSpeed} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.HBEDetails.HBEMaxSpeed}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">HBE Max QoS</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.HBEDetails.HBEMaxQoS}>
+                                    {qualification.HBEDetails.HBEMaxQoS} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.HBEDetails.HBEMaxQoS}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <div
+                            class="slds-form-element slds-form-element_readonly slds-col slds-m-left_medium slds-m-top_medium slds-m-right_medium">
+                            <span class="slds-form-element__label">HBE Products</span>
+                            <div class="slds-form-element__control">
+                                <div class="slds-form-element__static" if:true={qualification.HBEDetails.Products}>
+                                    {qualification.HBEDetails.Products} </div>
+                                <div class="slds-form-element__static slds-text-color_error"
+                                    if:false={qualification.HBEDetails.Products}> N/A </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </template>
+    <div class="slds-grid slds-wrap slds-gutters slds-p-vertical_medium">
+        <div class="slds-col slds-order_2 slds-medium-order_1 slds-size_12-of-12 slds-medium-size_6-of-12">
+            <!-- Cancel button used to be here... placeholder nothing should be here -->
+        </div>
+        <div class="slds-col slds-order_1 slds-medium-order_2 slds-size_12-of-12 slds-medium-size_6-of-12">
+            <div class="slds-grid slds-wrap slds-grid_align-end omniscript-button-position">
+                <div class="omniscript-btn-next slds-size_12-of-12 slds-m-bottom_xx-small slds-medium-size_3-of-12 slds-m-left_small"
+                    if:true={isQualified}>
+                    <button onclick={goNext} type="button"
+                        class="vlocity-btn slds-button slds-button_brand slds-size_1-of-1 slds-p-horizontal_none slds-text-align_center">
+                        <span class="btnLabel">Proceed to Pricing</span>
+                    </button>
+                </div>
+                <div if:true={showQualifyAnotherLocationBtn}>
+                    <button onclick={refreshPage} type="button" class="slds-button slds-button_brand">
+                        Qualify a Different Location
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

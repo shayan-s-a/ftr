@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(Probability=0)  ,    &quot;Lost&quot;,   
+ IF(AND(Probability=1)  ,    &quot;Closed/Won&quot;,   
+  IF(AND(  CloseDate&gt;=TODAY(), YEAR(CloseDate)=YEAR(TODAY()), MONTH(CloseDate)=MONTH(TODAY()), Probability&lt;1, Probability&gt;0), &quot;Forecast&quot;,  
+   IF(AND( CloseDate&gt;TODAY(), YEAR(CloseDate)&gt;YEAR(TODAY()), Probability&lt;1, Probability&gt;0), &quot;Pipeline&quot;,
+    IF(AND( CloseDate&gt;TODAY(), MONTH(CloseDate)&gt;MONTH(TODAY()), Probability&lt;1, Probability&gt;0), &quot;Pipeline&quot;,
+  &quot;Open, but Close Date Passed&quot;
+     )
+    )
+   )
+  )
+ )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Forecast Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

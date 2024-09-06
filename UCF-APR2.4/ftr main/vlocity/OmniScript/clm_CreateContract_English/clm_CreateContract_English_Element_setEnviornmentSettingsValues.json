@@ -1,0 +1,44 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "CLM CreateContract",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/clm/CreateContract/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ABSProfileFlag": "=IF(%userProfile% = '#ABS Customer Service Analyst' || %userProfile% = '#ABS Customer Service Supervisor',true,false)",
+            "AdminProfileFlag": "=IF(%userProfile% = 'Frontier System Administrator' || %userProfile% = 'System Administrator',true,false)",
+            "AltChannelProfileFlag": "=IF (%userProfile% = 'Partner Support Team' || %userProfile% = 'Frontier Partner Portal User' || %userProfile% = '#Alternate Channel Leadership',true,false)",
+            "CallCenterProfileFlag": "=IF(%userProfile% = '#CTF Small Business User',true,false)",
+            "CustomerServiceProfileFlag": "=IF(%userProfile% = '#CTF RegionalSalesMgr' || %userProfile% = '#CTF Customer Service Analyst' || %userProfile% = '#BAM - Business Account Manager',true,false)",
+            "ESSubType": "null",
+            "ESType": "AllowDuplicate",
+            "MDUProfileFlag": "=IF(%userProfile% = '#Alternate Channel - Community Connections Sales',true,false)",
+            "MDUTemplatesflag": "=IF(%userProfile% = '#Alternate Channel - Community Connections Sales',true,false)",
+            "NoQuoteRequiredFlag1": "=IF(%AdminProfileFlag% || %WholesaletemplateFlag% || %ABSProfileFlag% || %CallCenterProfileFlag% || %MDUProfileFlag%, true, false)",
+            "SigningOrder": "='Customer 1st, Frontier 2nd'",
+            "WholesaletemplateFlag": "=IF(%userProfile% != NULL && %userProfile% == 'Carrier Account Executive',true,IF(%userProfile% != NULL && %userProfile% == 'Carrier Sales Manager',true,IF(%userProfile% != NULL && %userProfile% == 'Carrier SE',true,IF(%userProfile% != NULL && %userProfile% == 'Carrier SE Supervisor',true,IF(%userProfile% != NULL && %userProfile% == 'Carrier SSC',true,false)))))"
+        },
+        "label": "set Enviornment Settings values",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "setEnviornmentSettingsValues",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/clm/CreateContract/English/setEnviornmentSettingsValues"
+}

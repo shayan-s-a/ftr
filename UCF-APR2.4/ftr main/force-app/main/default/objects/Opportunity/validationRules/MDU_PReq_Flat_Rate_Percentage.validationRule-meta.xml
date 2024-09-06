@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_PReq_Flat_Rate_Percentage</fullName>
+    <active>true</active>
+    <description>Controls that this field don´t be empty when changing to Proforma
+Requested Status</description>
+    <errorConditionFormula>AND(RecordType.Name = &quot;Community Connections&quot;,
+ISPICKVAL(StageName ,&quot;Proforma Requested&quot;),
+ISBLANK(Flat_Rate_Percentage__c),
+OR(ISPICKVAL( Agreement_Type__c , &quot;EMA&quot;),
+ISPICKVAL( Agreement_Type__c , &quot;EMA-DOORFEEONLY&quot;),
+ISPICKVAL( Agreement_Type__c , &quot;EMA-DOOR-REVSHARE&quot;),
+ISPICKVAL( Agreement_Type__c , &quot;EMA-REVSHAREONLY&quot;),
+ISPICKVAL( Agreement_Type__c , &quot;NEMA&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Flat_Rate_Percentage__c</errorDisplayField>
+    <errorMessage>Flat Rate Percentage is missing.</errorMessage>
+</ValidationRule>

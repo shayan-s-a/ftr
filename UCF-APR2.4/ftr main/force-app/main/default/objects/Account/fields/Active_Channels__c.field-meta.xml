@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Channels__c</fullName>
+    <externalId>false</externalId>
+    <label>Active Channels</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BIG BOX</fullName>
+                <default>false</default>
+                <label>BIG BOX</label>
+            </value>
+            <value>
+                <fullName>COMMUNITY CONNECTIONS</fullName>
+                <default>false</default>
+                <label>COMMUNITY CONNECTIONS</label>
+            </value>
+            <value>
+                <fullName>CROSS SELL</fullName>
+                <default>false</default>
+                <label>CROSS SELL</label>
+            </value>
+            <value>
+                <fullName>DIGITAL PAID SEARCH</fullName>
+                <default>false</default>
+                <label>DIGITAL PAID SEARCH</label>
+            </value>
+            <value>
+                <fullName>DOOR TO DOOR-COMMERCIAL</fullName>
+                <default>false</default>
+                <label>DOOR TO DOOR-COMMERCIAL</label>
+            </value>
+            <value>
+                <fullName>DOOR TO DOOR-RESIDENTIAL</fullName>
+                <default>false</default>
+                <label>DOOR TO DOOR-RESIDENTIAL</label>
+            </value>
+            <value>
+                <fullName>MASTER AGENT</fullName>
+                <default>false</default>
+                <label>MASTER AGENT</label>
+            </value>
+            <value>
+                <fullName>PREMIER RETAIL</fullName>
+                <default>false</default>
+                <label>PREMIER RETAIL</label>
+            </value>
+            <value>
+                <fullName>REFERRAL AGENTS-RESIDENTIAL</fullName>
+                <default>false</default>
+                <label>REFERRAL AGENTS-RESIDENTIAL</label>
+            </value>
+            <value>
+                <fullName>RETAIL AGENTS-RESIDENTIAL</fullName>
+                <default>false</default>
+                <label>RETAIL AGENTS-RESIDENTIAL</label>
+            </value>
+            <value>
+                <fullName>TELEMARKETING</fullName>
+                <default>false</default>
+                <label>TELEMARKETING</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

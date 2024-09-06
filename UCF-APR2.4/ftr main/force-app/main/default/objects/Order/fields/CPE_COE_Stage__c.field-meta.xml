@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPE_COE_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>CPE COE Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>UCaaS_Cutover_Picklist__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audit Review</fullName>
+                <default>false</default>
+                <label>Audit Review</label>
+            </value>
+            <value>
+                <fullName>NPR Ordering</fullName>
+                <default>false</default>
+                <label>NPR Ordering</label>
+            </value>
+            <value>
+                <fullName>Establish DPI Billing Account</fullName>
+                <default>false</default>
+                <label>Establish DPI Billing Account</label>
+            </value>
+            <value>
+                <fullName>Add to WIP</fullName>
+                <default>false</default>
+                <label>Add to WIP</label>
+            </value>
+            <value>
+                <fullName>NBC</fullName>
+                <default>false</default>
+                <label>NBC</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>CPE COE Completed</fullName>
+                <default>false</default>
+                <label>CPE COE Completed</label>
+            </value>
+            <value>
+                <fullName>Ordering CPE Equipment</fullName>
+                <default>false</default>
+                <label>Ordering CPE Equipment</label>
+            </value>
+            <value>
+                <fullName>Establishing DPI CPE Account</fullName>
+                <default>false</default>
+                <label>Establishing DPI CPE Account</label>
+            </value>
+            <value>
+                <fullName>Send to WIP</fullName>
+                <default>false</default>
+                <label>Send to WIP</label>
+            </value>
+            <value>
+                <fullName>Waiting on COC/COA</fullName>
+                <default>false</default>
+                <label>Waiting on COC/COA</label>
+            </value>
+            <value>
+                <fullName>CPE Order Billed</fullName>
+                <default>false</default>
+                <label>CPE Order Billed</label>
+            </value>
+            <value>
+                <fullName>WIP Billing Notification</fullName>
+                <default>false</default>
+                <label>WIP Billing Notification</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Audit Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Add to WIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>CPE COE Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Ordering CPE Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Establishing DPI CPE Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Waiting on COC/COA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>CPE Order Billed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>NPR Ordering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Establish DPI Billing Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>NBC</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

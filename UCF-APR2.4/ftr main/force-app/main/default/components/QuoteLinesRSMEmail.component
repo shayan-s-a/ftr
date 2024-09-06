@@ -1,0 +1,21 @@
+<apex:component controller="QuoteLinesController" access="global">
+  <apex:attribute name="quote_Id" description="Quote Id" type="Id" assignTo="{!vquoteId}"/>
+    
+    <table border="1">
+            <tr>
+                <th> Recurring Charge</th>
+                <th> Onetime Charge</th>
+                <th> Product Name </th> 
+                <th> Service Address </th>
+            </tr>
+            <apex:repeat var="li" value="{!quotelines}">
+                 <tr>
+                    <th> {!li.vlocity_cmt__RecurringCharge__c}</th>
+                    <th> {!li.vlocity_cmt__OneTimeCharge__c}</th>
+                    <th> {!li.Product2.Name} </th> 
+                    <th> {!li.vlocity_cmt__ServiceAccountId__r.Name} </th> 
+                     
+                </tr>
+            </apex:repeat>
+        </table>
+</apex:component>

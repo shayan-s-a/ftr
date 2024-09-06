@@ -1,0 +1,65 @@
+{
+    "%vlocity_namespace%__Active__c": false,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "DID Enrichment OS",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/DIDEnrichment/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "userCanEdit": true
+        },
+        "label": "CheckIfUserCANedit",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "New",
+                        "field": "OrderStage"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Solutions Engineering",
+                        "field": "OrderStage"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Sales Engineering",
+                        "field": "OrderStage"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "#VOIPSalesEngineer",
+                        "field": "userProfile"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Frontier System Administrator",
+                        "field": "userProfile"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "CheckIfUserCANedit",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/DIDEnrichment/English/CheckIfUserCANedit"
+}

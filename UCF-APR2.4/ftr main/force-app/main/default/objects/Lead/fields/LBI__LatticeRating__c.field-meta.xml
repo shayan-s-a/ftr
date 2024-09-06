@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LBI__LatticeRating__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Value of Rating field from associated Recommendation record.</description>
+    <externalId>false</externalId>
+    <formula>LBI__Recommendation__r.LBI__Rank__c</formula>
+    <inlineHelpText>Value of Rating field from associated Recommendation record.</inlineHelpText>
+    <label>Lattice Recommendation Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

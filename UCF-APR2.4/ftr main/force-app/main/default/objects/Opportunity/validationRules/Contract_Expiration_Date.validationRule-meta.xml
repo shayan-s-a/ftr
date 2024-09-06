@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Expiration_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK( FTR_Contract_Expiration_Date__c ),
+RecordType.Name = &apos;Community Connection&apos;,
+ISPICKVAL(  Contract_Category__c , &quot;Renewal&quot;))</errorConditionFormula>
+    <errorDisplayField>FTR_Contract_Expiration_Date__c</errorDisplayField>
+    <errorMessage>Please provide the FTR Contract Expiration Date</errorMessage>
+</ValidationRule>

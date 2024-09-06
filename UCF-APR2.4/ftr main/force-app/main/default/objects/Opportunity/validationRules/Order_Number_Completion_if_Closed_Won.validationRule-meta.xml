@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Number_Completion_if_Closed_Won</fullName>
+    <active>false</active>
+    <description>Order Number Field must contain the Order Number if Sales Stage is closed/Won</description>
+    <errorConditionFormula>And(
+  
+ISPICKVAL(StageName, &quot;Closed/Won&quot;),  
+ISBLANK( RPON_Order__c ), Pricebook2.Name = &quot;Standard Price Book&quot;,
+NOT ISPICKVAL( System_the_Order_Entered_In__c , &quot;Sterling&quot;),
+NOT ISPICKVAL( System_the_Order_Entered_In__c , &quot;Salesforce&quot;),
+  (RecordType.Name  != &quot;Carrier Service&quot;)   
+)</errorConditionFormula>
+    <errorDisplayField>RPON_Order__c</errorDisplayField>
+    <errorMessage>Order Number must contain a value if Sales Stage is Closed/Won....
+If this is a Salesforce or Sterling Order, Please select SALESFORCE or STERLING For: 
+System the Order # Entered From</errorMessage>
+</ValidationRule>

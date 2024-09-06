@@ -1,0 +1,95 @@
+<apex:page showHeader="true" controller="PricingFormulaDefinitionController" lightningStylesheets="true" docType="html-5.0" tabStyle="Address_Based_Pricing_Admin__tab" action="{!init}">
+    <apex:slds /> 
+    <apex:sectionHeader title="Pricing Formula Configuration" subtitle="Configure the MRC & NRC Pricing Formulas"/>
+    <apex:form >
+        <apex:pageBlock title="Pricing Formula" mode="edit">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!save}" value="Save" rendered="{!pageMode=='Edit'}" />
+                <apex:commandButton action="{!test}" value="Test" rendered="{!pageMode=='Edit'}"/>
+                <apex:commandButton action="{!run}" value="Run" rendered="{!pageMode=='Test'}"/>
+                <apex:commandButton action="{!close}" value="Close" rendered="{!pageMode=='Test'}"/>                
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2" showHeader="false"  >
+                <apex:pageBlockSectionItem >
+                    <apex:selectList label="Formulas" value="{!currentFormulaGroup}" size="1" >
+                        <apex:selectOptions value="{!pricingFormulas}"/>
+                        <apex:actionSupport event="onchange" action="{!selectFormula}" />
+                        <apex:outputLabel >Formula Group</apex:outputLabel>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" showHeader="true" title="Edit Formulas" rendered="{!currentFormulaGroup <> '' && pageMode=='Edit'}">
+                <div>
+                    <apex:outputText style="color:red" value="{!groupErrors}" rendered="{!groupHasError}"></apex:outputText>    
+                </div>
+                <apex:pageBlockSectionItem>
+                    <apex:inputText label="Group Name" value="{!formulaGroupLabel}">
+                        <apex:outputLabel>Formula Label</apex:outputLabel>
+                    </apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel layout="block" style="width:100%">
+                        <apex:inputTextarea value="{!mrcFormula}" rows="10" style="width:100%" id="mrcField" readonly="{!groupHasError}">
+                            <apex:outputLabel >MRC Formula ({!mrcFormulaName})</apex:outputLabel>
+                            <div>
+                            	<apex:outputText style="color:red" value="{!mrcErrors}" ></apex:outputText>  
+                            </div>
+                        </apex:inputTextarea>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem>
+                    <apex:outputPanel layout="block">
+                        <apex:inputTextarea value="{!nrcFormula}" rows="8" style="width:100%" id="mrcField" readonly="{!groupHasError}">
+                            <apex:outputLabel >NRC Formula ({!nrcFormulaName})</apex:outputLabel>
+                            <div>
+                            	<apex:outputText style="color:red" value="{!nrcErrors}" ></apex:outputText>    
+                            </div>
+                        </apex:inputTextarea>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection columns="1" showHeader="true" title="Test Formulas" rendered="{!currentFormulaGroup <> '' && pageMode=='Test'}">
+                <apex:pageBlockSection columns="4" showHeader="false">
+                    <apex:pageBlockSectionItem dataStyle="text-align: right;width:20%;font-weight: bold;">
+                        MRC
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem dataStyle="text-align: left;width:80%;border-bottom:solid 1px;">
+                        <apex:outputText label="NRR" value="{0,number, Currency}">
+                            <apex:param value="{!mrcTestValue}" />
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem dataStyle="text-align: right;width:20%;font-weight: bold;">
+                        NRC
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem dataStyle="text-align: left;width:80%;border-bottom:solid 1px">
+                        <apex:outputText label="NRR" value="{0,number, Currency}">
+                            <apex:param value="{!nrcTestValue}" />
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="4" showHeader="false">
+                    <apex:repeat var="pricingVar" value="{!pricingVars}">
+                        <apex:pageBlockSectionItem dataStyle="text-align: right;width:20%">
+                        <apex:outputLabel style="text-align:right" >{!pricingVar.name}</apex:outputLabel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem dataStyle="width:80%">
+                            <apex:outputPanel>
+                                
+                                <apex:inputText label="{!pricingVar.name}" rendered="{!pricingVar.displayType=='text'}"  value="{!pricingVar.textVal}"/>
+                                <apex:inputText label="{!pricingVar.name}" rendered="{!pricingVar.displayType=='number'}" value="{!pricingVar.numericVal}"/>
+                                <apex:selectList rendered="{!pricingVar.displayType=='picklist'}" size="1" value="{!pricingVar.textVal}">
+                                    <apex:selectOptions value="{!pricingVar.picklistItems}"/>
+                                </apex:selectList>
+                                <apex:inputCheckbox rendered="{!pricingVar.displayType=='checkbox'}" value="{!pricingVar.boolVal}"/>
+                            </apex:outputPanel>
+                                
+                        </apex:pageBlockSectionItem>
+                    </apex:repeat>
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

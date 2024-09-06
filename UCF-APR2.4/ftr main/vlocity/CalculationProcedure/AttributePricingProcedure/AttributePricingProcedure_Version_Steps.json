@@ -1,0 +1,545 @@
+[
+    {
+        "%vlocity_namespace%__CalculationMatrixId__c": {
+            "Name": "AttributePricingMatrix",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__CalculationMatrix__c/AttributePricingMatrix",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationMatrix__c"
+        },
+        "%vlocity_namespace%__CalculationProcedureId__c": {
+            "Name": "AttributePricingProcedure",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedure__c"
+        },
+        "%vlocity_namespace%__CalculationProcedureVersionId__c": {
+            "%vlocity_namespace%__CalculationProcedureId__r.Name": "AttributePricingProcedure",
+            "%vlocity_namespace%__VersionNumber__c": 3,
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedureVersion__c/3/%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureVersion__c"
+        },
+        "%vlocity_namespace%__ConditionalInputDisplayData__c": [
+        ],
+        "%vlocity_namespace%__Function__c": "Matrix Lookup",
+        "%vlocity_namespace%__GlobalKey__c": "09b005a7-a2b5-c8ef-c1f3-7d2fd2d6b895",
+        "%vlocity_namespace%__Input__c": [
+            {
+                "columnKey": "6c06ab",
+                "dataType": "Text",
+                "label": null,
+                "listValues": null,
+                "name": "Source Product Name"
+            },
+            {
+                "columnKey": "9cdca5",
+                "dataType": "Text",
+                "label": null,
+                "listValues": null,
+                "name": "Source Product Code"
+            },
+            {
+                "columnKey": "2feec9",
+                "dataType": "Text",
+                "label": null,
+                "listValues": null,
+                "name": "Characteristic Name"
+            },
+            {
+                "columnKey": "c45dcc",
+                "dataType": "Text",
+                "label": null,
+                "listValues": null,
+                "name": "Characteristic Value"
+            }
+        ],
+        "%vlocity_namespace%__IsConditionalStep__c": false,
+        "%vlocity_namespace%__IsIncludedInResult__c": true,
+        "%vlocity_namespace%__OutputJSON__c": [
+            {
+                "columnKey": "1393a1",
+                "dataType": "Number",
+                "label": null,
+                "listValues": null,
+                "name": "MRC"
+            },
+            {
+                "columnKey": "3e8a25",
+                "dataType": "Number",
+                "label": null,
+                "listValues": null,
+                "name": "NRC"
+            }
+        ],
+        "%vlocity_namespace%__OutputMappingJSON__c": "{\"MRC\":\"AttributePricingMatrix__MRC\",\"NRC\":\"AttributePricingMatrix__NRC\"}",
+        "%vlocity_namespace%__Sequence__c": 1,
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureStep__c"
+    },
+    {
+        "%vlocity_namespace%__CalculationFormulaLong__c": "TRUE",
+        "%vlocity_namespace%__CalculationFormulaTags__c": [
+            {
+                "alias": "TRUE",
+                "dataType": "Text",
+                "text": "TRUE"
+            }
+        ],
+        "%vlocity_namespace%__CalculationProcedureId__c": {
+            "Name": "AttributePricingProcedure",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedure__c"
+        },
+        "%vlocity_namespace%__CalculationProcedureVersionId__c": {
+            "%vlocity_namespace%__CalculationProcedureId__r.Name": "AttributePricingProcedure",
+            "%vlocity_namespace%__VersionNumber__c": 3,
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedureVersion__c/3/%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureVersion__c"
+        },
+        "%vlocity_namespace%__ConditionalInputDisplayData__c": [
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "AT&T",
+                "dataType": "Text",
+                "text": "AT&T"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "Spectrum",
+                "dataType": "Text",
+                "text": "Spectrum"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "Verizon",
+                "dataType": "Text",
+                "text": "Verizon"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "Lumen",
+                "dataType": "Text",
+                "text": "Lumen"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "'",
+                "dataType": "Text",
+                "text": "Zayo"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "Windstream",
+                "dataType": "Text",
+                "text": "Windstream"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "Uniti",
+                "dataType": "Text",
+                "text": "Uniti"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "Crown_Castle",
+                "dataType": "Text",
+                "text": "Crown_Castle"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            },
+            {
+                "alias": "OR",
+                "text": "OR"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "CharacteristicValue",
+                "dataType": "Text",
+                "text": "Characteristic Value",
+                "userDefined": false
+            },
+            {
+                "alias": "INCLUDES",
+                "text": "INCLUDES"
+            },
+            {
+                "alias": "Everstream",
+                "dataType": "Text",
+                "text": "Everstream"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            }
+        ],
+        "%vlocity_namespace%__Conditions__c": "( CharacteristicValue INCLUDES AT&T ) OR ( CharacteristicValue INCLUDES Spectrum ) OR ( CharacteristicValue INCLUDES Verizon ) OR ( CharacteristicValue INCLUDES Lumen ) OR ( CharacteristicValue INCLUDES ' ) OR ( CharacteristicValue INCLUDES Windstream ) OR ( CharacteristicValue INCLUDES Uniti ) OR ( CharacteristicValue INCLUDES Crown_Castle ) OR ( CharacteristicValue INCLUDES Everstream )",
+        "%vlocity_namespace%__Function__c": "Calculation",
+        "%vlocity_namespace%__GlobalKey__c": "c1ac6c6f-0cf0-eadc-213a-1b8d94ea7660",
+        "%vlocity_namespace%__Input__c": [
+        ],
+        "%vlocity_namespace%__IsConditionalStep__c": true,
+        "%vlocity_namespace%__IsIncludedInResult__c": true,
+        "%vlocity_namespace%__OutputJSON__c": {
+            "alias": "IsPartnered",
+            "dataType": "Boolean",
+            "name": "IsPartnered"
+        },
+        "%vlocity_namespace%__OutputMappingJSON__c": "{\"IsPartnered\":\"IsPartnered\"}",
+        "%vlocity_namespace%__Sequence__c": 2,
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureStep__c"
+    },
+    {
+        "%vlocity_namespace%__CalculationFormulaLong__c": "AttributePricingMatrix__MRC + ( AttributePricingMatrix__MRC * Frontier_MarkUP )",
+        "%vlocity_namespace%__CalculationFormulaTags__c": [
+            {
+                "alias": "AttributePricingMatrix__MRC",
+                "dataType": "Number",
+                "text": "MRC ( AttributePricingMatrix )",
+                "userDefined": false
+            },
+            {
+                "alias": "+",
+                "text": "+"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "AttributePricingMatrix__MRC",
+                "dataType": "Number",
+                "text": "MRC ( AttributePricingMatrix )",
+                "userDefined": false
+            },
+            {
+                "alias": "*",
+                "text": "*"
+            },
+            {
+                "alias": "Frontier_MarkUP",
+                "dataType": "Percent",
+                "text": "Frontier_MarkUP"
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            }
+        ],
+        "%vlocity_namespace%__CalculationProcedureId__c": {
+            "Name": "AttributePricingProcedure",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedure__c"
+        },
+        "%vlocity_namespace%__CalculationProcedureVersionId__c": {
+            "%vlocity_namespace%__CalculationProcedureId__r.Name": "AttributePricingProcedure",
+            "%vlocity_namespace%__VersionNumber__c": 3,
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedureVersion__c/3/%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureVersion__c"
+        },
+        "%vlocity_namespace%__ConditionalInputDisplayData__c": [
+            {
+                "alias": "IsPartnered",
+                "dataType": "Boolean",
+                "text": "IsPartnered",
+                "userDefined": true
+            },
+            {
+                "alias": "==",
+                "text": "=="
+            },
+            {
+                "alias": "TRUE",
+                "dataType": "Boolean",
+                "text": "TRUE",
+                "userDefined": true
+            }
+        ],
+        "%vlocity_namespace%__Conditions__c": "IsPartnered == TRUE",
+        "%vlocity_namespace%__Function__c": "Calculation",
+        "%vlocity_namespace%__GlobalKey__c": "d8ce14d2-85b1-8f9f-2f78-1a5c49c277af",
+        "%vlocity_namespace%__Input__c": [
+        ],
+        "%vlocity_namespace%__IsConditionalStep__c": true,
+        "%vlocity_namespace%__IsIncludedInResult__c": true,
+        "%vlocity_namespace%__OutputJSON__c": {
+            "alias": "REC_MNTH_STD_PRC",
+            "dataType": "Currency",
+            "name": "REC_MNTH_STD_PRC"
+        },
+        "%vlocity_namespace%__OutputMappingJSON__c": "{\"REC_MNTH_STD_PRC\":\"REC_MNTH_STD_PRC\"}",
+        "%vlocity_namespace%__Sequence__c": 3,
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureStep__c"
+    },
+    {
+        "%vlocity_namespace%__CalculationFormulaLong__c": "AttributePricingMatrix__MRC",
+        "%vlocity_namespace%__CalculationFormulaTags__c": [
+            {
+                "alias": "AttributePricingMatrix__MRC",
+                "dataType": "Number",
+                "text": "MRC ( AttributePricingMatrix )",
+                "userDefined": false
+            }
+        ],
+        "%vlocity_namespace%__CalculationProcedureId__c": {
+            "Name": "AttributePricingProcedure",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedure__c"
+        },
+        "%vlocity_namespace%__CalculationProcedureVersionId__c": {
+            "%vlocity_namespace%__CalculationProcedureId__r.Name": "AttributePricingProcedure",
+            "%vlocity_namespace%__VersionNumber__c": 3,
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedureVersion__c/3/%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureVersion__c"
+        },
+        "%vlocity_namespace%__ConditionalInputDisplayData__c": [
+            {
+                "alias": "NOT",
+                "text": "NOT"
+            },
+            {
+                "alias": "(",
+                "text": "("
+            },
+            {
+                "alias": "IsPartnered",
+                "dataType": "Boolean",
+                "text": "IsPartnered",
+                "userDefined": true
+            },
+            {
+                "alias": ")",
+                "text": ")"
+            }
+        ],
+        "%vlocity_namespace%__Conditions__c": "NOT ( IsPartnered )",
+        "%vlocity_namespace%__Function__c": "Calculation",
+        "%vlocity_namespace%__GlobalKey__c": "27121ebe-fc44-827c-ad1b-3a16d1019bd5",
+        "%vlocity_namespace%__Input__c": [
+        ],
+        "%vlocity_namespace%__IsConditionalStep__c": true,
+        "%vlocity_namespace%__IsIncludedInResult__c": true,
+        "%vlocity_namespace%__OutputJSON__c": {
+            "alias": "REC_MNTH_STD_PRC",
+            "dataType": "Currency",
+            "name": "REC_MNTH_STD_PRC"
+        },
+        "%vlocity_namespace%__OutputMappingJSON__c": "{\"REC_MNTH_STD_PRC\":\"REC_MNTH_STD_PRC\"}",
+        "%vlocity_namespace%__Sequence__c": 4,
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureStep__c"
+    },
+    {
+        "%vlocity_namespace%__CalculationFormulaLong__c": "AttributePricingMatrix__NRC",
+        "%vlocity_namespace%__CalculationFormulaTags__c": [
+            {
+                "alias": "AttributePricingMatrix__NRC",
+                "dataType": "Number",
+                "text": "NRC ( AttributePricingMatrix )",
+                "userDefined": false
+            }
+        ],
+        "%vlocity_namespace%__CalculationProcedureId__c": {
+            "Name": "AttributePricingProcedure",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedure__c"
+        },
+        "%vlocity_namespace%__CalculationProcedureVersionId__c": {
+            "%vlocity_namespace%__CalculationProcedureId__r.Name": "AttributePricingProcedure",
+            "%vlocity_namespace%__VersionNumber__c": 3,
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedureVersion__c/3/%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureVersion__c"
+        },
+        "%vlocity_namespace%__ConditionalInputDisplayData__c": [
+        ],
+        "%vlocity_namespace%__Function__c": "Calculation",
+        "%vlocity_namespace%__GlobalKey__c": "719836b2-b615-ba93-c044-ad2831325a63",
+        "%vlocity_namespace%__Input__c": [
+        ],
+        "%vlocity_namespace%__IsConditionalStep__c": false,
+        "%vlocity_namespace%__IsIncludedInResult__c": true,
+        "%vlocity_namespace%__OutputJSON__c": {
+            "alias": "OT_STD_PRC",
+            "dataType": "Currency",
+            "name": "OT_STD_PRC"
+        },
+        "%vlocity_namespace%__OutputMappingJSON__c": "{\"OT_STD_PRC\":\"OT_STD_PRC\"}",
+        "%vlocity_namespace%__Sequence__c": 5,
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureStep__c"
+    }
+]

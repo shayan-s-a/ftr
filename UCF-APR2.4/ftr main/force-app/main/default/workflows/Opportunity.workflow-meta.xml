@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Auditor_Fail_Pending_Email</fullName>
+        <ccEmails>sales.auditing@ftr.com</ccEmails>
+        <description>Auditor Fail Pending Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales.auditing@ftr.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Frontier_Templates_June_2010/Auditor_Pending_Audit_Failure_Email_v2</template>
+    </alerts>
+    <alerts>
+        <fullName>Auditor_Rejection_Email</fullName>
+        <ccEmails>sales.auditing@ftr.com</ccEmails>
+        <description>Auditor Rejection Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sales.auditing@ftr.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Frontier_Templates_June_2010/Auditor_Rejection_Email_v2</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_for_Opportunity_created_with_Migration_Only_option_for_Migration_field</fullName>
+        <description>Email for Opportunity created with Migration Only option for Migration field</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_for_Opportunity_created_with_Migration_Only_option_for_Migration_field</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_for_Opportunity_created_with_Migration_Plus_option_for_Migration_field</fullName>
+        <description>Email for Opportunity created with Migration Plus option for Migration field</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_for_Opportunity_created_with_Migration_Plus_option_for_Migration_field</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_CloudIT</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM_CloudIT West</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_CloudIT</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_CloudIT_Central</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM_CloudIT Central</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_CloudIT</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_CloudIT_Central_Cloud_Connect</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM Cloud Connect Central</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_ConnectCloud</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_CloudIT_Central_East</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM_CloudIT East</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_CloudIT</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_CloudIT_East_Cloud_Connect</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM East Cloud Connect</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_ConnectCloud</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_CloudIT_West_Cloud_Connect</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM West Cloud Connect</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_ConnectCloud</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_Enterprise_WiFi_Central</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM Enterprise WiFi Central</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_EnterpriseWiFi</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_Enterprise_WiFi_East</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM Enterprise WiFi East</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_EnterpriseWiFi</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_BDM_Enterprise_WiFi_West</fullName>
+        <ccEmails>CMS_BDM@ftr.com</ccEmails>
+        <description>Email sent to BDM Enterprise WiFi West</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_sent_to_BDM_EnterpriseWiFi</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_SE_as_he_is_assigned_to_SEER</fullName>
+        <description>Email sent to SE as he is assigned to SEER</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SEER_Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Assigned_to_Oppt_Team</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_to_direct_sales_manager</fullName>
+        <ccEmails>mithu.rahman@ftr.com</ccEmails>
+        <description>Email sent to direct sales manager</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager_s_Email_of_Teaming_with__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Teaming_opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_sent_when_Frontier_Calling_Call_Phone_is_selected</fullName>
+        <ccEmails>sales@nuwave.com</ccEmails>
+        <description>Email sent when Frontier Calling Call Phone is selected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Frontier_Calling_with_Cloud_Phone</template>
+    </alerts>
+    <alerts>
+        <fullName>Migration_Approval_email_sent_to_managers</fullName>
+        <description>Migration Approval email sent to managers</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Manager_s_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Approval_Form_Case_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>OpportunityApproval</fullName>
+        <description>Opportunity Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/FrontierOpportunityApproved</template>
+    </alerts>
+    <alerts>
+        <fullName>OpportunityRejected</fullName>
+        <description>Opportunity Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/FrontierOpportunityRejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_MasterAgent_OrderNotification</fullName>
+        <description>Opportunity - Master Agent - Order Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Agent_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>HTML_Email_Templates/Opportunity_MasterAgent_OrderNotification</template>
+    </alerts>
+    <alerts>
+        <fullName>Total_360_Notification</fullName>
+        <description>Total 360 Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Total360_Opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>redlin_contract</fullName>
+        <description>redline contract</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>commercial.sales.redline@ftr.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>HTML_Email_Templates/Email_notification_to_opportunity_owner_Redline</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ContractSignedDate</fullName>
+        <field>Contract_Sign_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Contract Signed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ContractUpdate</fullName>
+        <field>Contract_OLD__c</field>
+        <literalValue>1</literalValue>
+        <name>Contract? Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Email_flag_for_redline</fullName>
+        <field>Email_flag_for_redline__c</field>
+        <literalValue>0</literalValue>
+        <name>Email flag for redline</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Email_flag_for_redline_2</fullName>
+        <field>Email_flag_for_redline_2__c</field>
+        <literalValue>1</literalValue>
+        <name>Email flag for redline 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Increment_Push_Counter_Field</fullName>
+        <description>Increment the Push Counter by 1</description>
+        <field>Push_Counter__c</field>
+        <formula>IF( 
+ISNULL( Push_Counter__c ), 
+1, 
+Push_Counter__c + 1 
+)</formula>
+        <name>Increment Push Counter Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Memo_Update</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Memo_Read_only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Memo Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Memo_Update1</fullName>
+        <field>Memo__c</field>
+        <formula>&apos;--&apos;</formula>
+        <name>Memo Update1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MgrApprovedClosedInk</fullName>
+        <description>Update the Mgr Approved field to &quot;Closed (Ink)&quot;</description>
+        <field>Mrg_Approved__c</field>
+        <literalValue>Closed (Ink)</literalValue>
+        <name>Mgr Approved = Closed (Ink)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MgrApprovedPending</fullName>
+        <description>Update the Mgr Approved field to &quot;Pending&quot;</description>
+        <field>Mrg_Approved__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Mgr Approved = Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Clear_Mgr_Approved</fullName>
+        <description>Clear the Manager Approved field on the Opportunity record</description>
+        <field>Mrg_Approved__c</field>
+        <name>Opportunity - Clear Mgr Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_UpdateAgentEmail</fullName>
+        <field>Agent_Email__c</field>
+        <formula>Master_Agent__r.Agent_Email__c</formula>
+        <name>Opportunity - Update Agent Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Oppty_closed_push_count</fullName>
+        <description>shows how many times the oppty closed date is pushed</description>
+        <field>Opportunity_Closed_Date_Push_Count__c</field>
+        <formula>Opportunity_Closed_Date_Push_Count__c +1</formula>
+        <name>Oppty closed push count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Prior_close_date</fullName>
+        <field>Prior_close_date__c</field>
+        <formula>PRIORVALUE(CloseDate)</formula>
+        <name>Prior close date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Stage_to_Closed_Won</fullName>
+        <field>StageName</field>
+        <literalValue>Closed/Won</literalValue>
+        <name>Sales Stage to Closed/Won</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Seer_Completed_date</fullName>
+        <field>SEER_Completed_Date__c</field>
+        <formula>Today()</formula>
+        <name>Seer Completed date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Seer_status_is_complete</fullName>
+        <description>SEER Status is complete when assigned to user is selected</description>
+        <field>SEER_Status__c</field>
+        <literalValue>Complete</literalValue>
+        <name>Seer status is complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status</fullName>
+        <field>StageName</field>
+        <literalValue>Closed/Lost</literalValue>
+        <name>Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateContractFieldFalse</fullName>
+        <field>Contract_OLD__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Contract? Field False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateContractSignedDate</fullName>
+        <field>Contract_Sign_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Contract Signed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateManagerApprovalDate</fullName>
+        <field>Mgr_Signed_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Manager Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approved_Date</fullName>
+        <field>Approved_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Manager_s_Email</fullName>
+        <field>Manager_s_Email__c</field>
+        <formula>Owner.Manager_Email__c</formula>
+        <name>Update Manager&apos;s Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Other_Reason_Lost_Details</fullName>
+        <field>Other_Reason_Lost_Details__c</field>
+        <formula>&quot;No response back from the Master Agent&quot;</formula>
+        <name>Update Other Reason Lost Details</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Reason_Lost</fullName>
+        <field>Reason_Won_Lost__c</field>
+        <literalValue>Other</literalValue>
+        <name>Update Reason Lost</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sales_Stage_to_Closed_Lost</fullName>
+        <field>StageName</field>
+        <literalValue>Closed/Lost</literalValue>
+        <name>Update Sales Stage to Closed/Lost</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Submitted_Date</fullName>
+        <field>Submitted_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Update Submitted Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_close_date_as_Today</fullName>
+        <field>CloseDate</field>
+        <formula>Today()</formula>
+        <name>Update close date as Today</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_closed_time</fullName>
+        <field>Reason_Won_Lost_Time2__c</field>
+        <formula>NOW()</formula>
+        <name>Update closed time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdatedSignedDate</fullName>
+        <field>Mgr_Signed_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Updated Signed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Check Closed%2FWon Opportunity</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won,Closed/Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Opportunity Lightning</value>
+        </criteriaItems>
+        <description>If Opportunity Stage=Closed/won or lost then agent should&apos;nt be able to create quote.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Close Opportunity for PST profile</fullName>
+        <actions>
+            <name>Update_Other_Reason_Lost_Details</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Reason_Lost</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Sales_Stage_to_Closed_Lost</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Update Opportunities for Partner Support Team profile if the Opportunity is greater than Created Date  &gt;60 and Sales Stage is not equal to Closed/Won or Closed/Lost</description>
+        <formula>AND( (RecordTypeId = &apos;012E0000000dgAK&apos;), (Owner.ProfileId = &apos;00e0L000000Qtux&apos;), ( TODAY() - DATEVALUE(CreatedDate) &gt; 60), (OR( NOT(ISPICKVAL( StageName,&apos;Closed/Won&apos;)),  NOT(ISPICKVAL( StageName,&apos;Closed/Lost&apos;)))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Closed Date Update</fullName>
+        <actions>
+            <name>Update_close_date_as_Today</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email Notification to opportunity owner %28redline%29</fullName>
+        <actions>
+            <name>redlin_contract</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Email_flag_for_redline_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Email_flag_for_redline__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email flag for redline 1 off</fullName>
+        <actions>
+            <name>Email_flag_for_redline</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Email_flag_for_redline_2__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Email_flag_for_redline__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email for Opportunity created with Migration option for Migration field</fullName>
+        <actions>
+            <name>Email_for_Opportunity_created_with_Migration_Only_option_for_Migration_field</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Migration__c</field>
+            <operation>equals</operation>
+            <value>Migration</value>
+        </criteriaItems>
+        <description>Email for Opportunity created with Migration option for Migration field</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Memo read only</fullName>
+        <actions>
+            <name>Memo_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Memo__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Community Connection,Frontier Secure,Equote</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity - Order Notification %28Agent%29</fullName>
+        <actions>
+            <name>Opportunity_MasterAgent_OrderNotification</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RPON_Order__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity - Update Agent Email</fullName>
+        <actions>
+            <name>Opportunity_UpdateAgentEmail</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>OR(  ISCHANGED(Master_Agent__c),  NOT(ISNULL(Master_Agent__c)) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Audit %3A Fail Pending</fullName>
+        <actions>
+            <name>Auditor_Fail_Pending_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Audit_Results__c</field>
+            <operation>equals</operation>
+            <value>Fail Pending</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Audit %3A Failed</fullName>
+        <actions>
+            <name>Auditor_Rejection_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Audit_Results__c</field>
+            <operation>equals</operation>
+            <value>Fail,Fail E911</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Opportunity Closed Lost</fullName>
+        <active>true</active>
+        <formula>OR( CreatedBy.Profile.Name  = &apos;Agents&apos;, CreatedBy.Profile.Name  = &apos;Sub Agents&apos;, CreatedBy.Profile.Name  = &apos;Internal Alternate Channel Executives&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Status</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity.LastModifiedDate</offsetFromField>
+            <timeLength>90</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>OpportunityFieldTracking</fullName>
+        <actions>
+            <name>Memo_Update1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>The workflow is used for tracking the changes that are done by small bussiness user on the existing opportunities.</description>
+        <formula>$User.ProfileId   &lt;&gt;  &apos;00eE000000104Cd&apos;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Oppt Closed%2FWon time stamp</fullName>
+        <actions>
+            <name>Update_closed_time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed/Won,Closed/Lost</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Oppty Prior close date</fullName>
+        <actions>
+            <name>Prior_close_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.CloseDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Oppty push counter</fullName>
+        <actions>
+            <name>Oppty_closed_push_count</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( NOT(ISNEW()), ISCHANGED(CloseDate), CloseDate &gt;  Prior_close_date__c  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Push Counter</fullName>
+        <actions>
+            <name>Increment_Push_Counter_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Increment the Push Counter field by 1</description>
+        <formula>IF(  CloseDate &gt; PRIORVALUE( CloseDate ),  IF (MONTH(CloseDate) &lt;&gt; MONTH(PRIORVALUE( CloseDate )) ,  TRUE,  FALSE),  FALSE)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEER Email sent</fullName>
+        <actions>
+            <name>Email_sent_to_SE_as_he_is_assigned_to_SEER</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>ISCHANGED( SEER_Assigned_To__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEER Status is complete</fullName>
+        <actions>
+            <name>Seer_Completed_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Seer_status_is_complete</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.SEER_Assigned_To__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Carrier Service</value>
+        </criteriaItems>
+        <description>SEER Status is complete when user assigned</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Total 360 Opportunity Email</fullName>
+        <actions>
+            <name>Total_360_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Memo Read only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>contains</operation>
+            <value>Total 360</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>contains</operation>
+            <value>Total360</value>
+        </criteriaItems>
+        <description>Email notification sent out to Jeff May if Opportunity Name contains TOTAL 360</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Contract%3F Field</fullName>
+        <actions>
+            <name>ContractUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Contract_Check__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Contract%3F Field False</fullName>
+        <actions>
+            <name>UpdateContractFieldFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Contract_Check__c</field>
+            <operation>lessThan</operation>
+            <value>1</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update MEA Field</fullName>
+        <actions>
+            <name>Migration_Approval_email_sent_to_managers</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>NOT(ISBLANK( Managers_Email_Address__c ))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Opportunity Closed%2FWon</fullName>
+        <active>false</active>
+        <description>An email is to be sent out when the opportunity&apos;s status is set to closed/won.</description>
+        <formula>Not(IsClosed)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Update the Sales Stage and Close Date</fullName>
+        <actions>
+            <name>Sales_Stage_to_Closed_Won</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_close_date_as_Today</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISCHANGED( RPON_Order__c ) &amp;&amp; $Profile.Name = &apos;Partner Support Team&apos;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

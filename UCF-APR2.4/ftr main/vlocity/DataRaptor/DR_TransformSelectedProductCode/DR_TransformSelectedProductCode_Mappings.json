@@ -1,0 +1,50 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "Formula",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Formula",
+        "%vlocity_namespace%__FormulaOrder__c": 1,
+        "%vlocity_namespace%__FormulaResultPath__c": "SelectedProductCodeFlag",
+        "%vlocity_namespace%__Formula__c": "SERIALIZE(CONCAT(%SelectedProducts:PricebookEntry:Product2:ProductCode%))",
+        "%vlocity_namespace%__GlobalKey__c": "21ce71b8-d003-9627-8801-8016101f8ada",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "DR_TransformSelectedProductCodeCustom5670",
+        "%vlocity_namespace%__OMplusSyncEnabled__c": true,
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "DR_TransformSelectedProductCode",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "SelectedProductAddon:AddonProductCode",
+        "%vlocity_namespace%__DomainObjectFieldType__c": "JSON",
+        "%vlocity_namespace%__GlobalKey__c": "0a1c80e4-9442-3f8a-9f3b-71ac99420cfb",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "SelectedProducts:PricebookEntry:Product2:ProductCode",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "DR_TransformSelectedProductCodeCustom955",
+        "%vlocity_namespace%__OMplusSyncEnabled__c": true,
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "DR_TransformSelectedProductCode",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "SelectedProductCodeFlag",
+        "%vlocity_namespace%__GlobalKey__c": "6c3f5d7a-a14f-9ec0-daf1-3e15d68b9c40",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "SelectedProductCodeFlag",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "DR_TransformSelectedProductCodeCustom1274",
+        "%vlocity_namespace%__OMplusSyncEnabled__c": true,
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "DR_TransformSelectedProductCode",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

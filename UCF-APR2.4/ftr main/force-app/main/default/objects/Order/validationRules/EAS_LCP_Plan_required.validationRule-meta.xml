@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EAS_LCP_Plan_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Is_it_a_EAS_LCP_Plan__c , &quot;EAS&quot;),
+ISPICKVAL(Is_it_a_EAS_LCP_Plan__c , &quot;LCP&quot;)
+),
+OR(
+
+ISBLANK(  EAS_LCP_Plan__c )
+)
+)</errorConditionFormula>
+    <errorMessage>If EAS or LCP is selected for Is This an EAS/LCP area? then EAS/LCP Plan is required.</errorMessage>
+</ValidationRule>

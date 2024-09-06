@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Disposition_Status__c</fullName>
+    <description>Reflects the current status of the account, including specific knock statuses.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Reflects the current status of the account, including specific knock statuses.</inlineHelpText>
+    <label>Lead Disposition Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Knock 1</fullName>
+                <default>false</default>
+                <label>Knock 1</label>
+            </value>
+            <value>
+                <fullName>Knock 2</fullName>
+                <default>false</default>
+                <label>Knock 2</label>
+            </value>
+            <value>
+                <fullName>Knock 3</fullName>
+                <default>false</default>
+                <label>Knock 3</label>
+            </value>
+            <value>
+                <fullName>Closed - Won Sale</fullName>
+                <default>false</default>
+                <label>Closed - Won Sale</label>
+            </value>
+            <value>
+                <fullName>Closed - Not Interested</fullName>
+                <default>false</default>
+                <label>Closed - Not Interested</label>
+            </value>
+            <value>
+                <fullName>Closed - Not Serviceable</fullName>
+                <default>false</default>
+                <label>Closed - Not Serviceable</label>
+            </value>
+            <value>
+                <fullName>Closed - Vacant Home</fullName>
+                <default>false</default>
+                <label>Closed - Vacant Home</label>
+            </value>
+            <value>
+                <fullName>Closed - Gated Community</fullName>
+                <default>false</default>
+                <label>Closed - Gated Community</label>
+            </value>
+            <value>
+                <fullName>Closed - Gated Home</fullName>
+                <default>false</default>
+                <label>Closed - Gated Home</label>
+            </value>
+            <value>
+                <fullName>Closed - Existing Customer</fullName>
+                <default>false</default>
+                <label>Closed - Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Do Not Solicit</fullName>
+                <default>false</default>
+                <label>Do Not Solicit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

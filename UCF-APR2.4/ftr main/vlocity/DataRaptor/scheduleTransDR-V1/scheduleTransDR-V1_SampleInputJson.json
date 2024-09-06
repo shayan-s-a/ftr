@@ -1,0 +1,621 @@
+{
+    "CustomerName": "My Testing Account",
+    "Email": "justin.henak@ibm.com",
+    "FrontierSignature": "Test Approver",
+    "Line": [
+        {
+            "LineNumber": "0001",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_EIA_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "EIA  (Ethernet Internet Access)",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$178.00",
+            "SLA": "Silver",
+            "ServiceAccountId": "0011900000nEne5AAC",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0001.0001",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_EVC_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "EVC",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$178.00",
+            "SLA": "Silver",
+            "ServiceAccountId": "0011900000nEne5AAC",
+            "Speed": "500 Mbps",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0001.0002",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_IP_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "IP",
+            "ProductObjectType": "a9719000000AoJ0AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$0.00",
+            "ServiceAccountId": "0011900000nEne5AAC",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0001.0003",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_PORT_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "Port Charge",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$0.00",
+            "SLA": "Silver",
+            "ServiceAccountId": "0011900000nEne5AAC",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0002.0001",
+            "OneTimeTotal": "$250.00",
+            "ProductCode": "ENT_ETH_ACCESS_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "Access",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$1,105.00",
+            "ServiceAccountId": "0011900000nEne5AAC",
+            "Speed": "800 Mbps",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0003",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_EVPL_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "EVPL (Ethernet Virtual Private Line)",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$419.00",
+            "ServiceAccountId": "0011900000nEne5AAC",
+            "Speed": "300 Mbps",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0003.0001",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_EVC_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "EVC",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$252.00",
+            "SLA": "Platinum",
+            "ServiceAccountId": "0011900000nEncWAAS",
+            "Speed": "200 Mbps",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0002.0002",
+            "OneTimeTotal": "$250.00",
+            "ProductCode": "ENT_ETH_ACCESS_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "Access",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$1,010.00",
+            "ServiceAccountId": "0011900000nEncWAAS",
+            "Speed": "200 Mbps",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0003.0002",
+            "OneTimeTotal": "$0.00",
+            "ProductCode": "ENT_ETH_EVC_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "EVC",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$167.00",
+            "SLA": "Gold",
+            "ServiceAccountId": "0011900000nEncRAAS",
+            "Speed": "50 Mbps",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        },
+        {
+            "LineNumber": "0002.0003",
+            "OneTimeTotal": "$250.00",
+            "ProductCode": "ENT_ETH_ACCESS_0001",
+            "ProductFamily": "Ethernet",
+            "ProductName": "Access",
+            "ProductObjectType": "a9719000000AoJ5AAK",
+            "Quantity": 1,
+            "RecurringTotal": "$1,010.00",
+            "ServiceAccountId": "0011900000nEncRAAS",
+            "Speed": "50 Mbps",
+            "Term": "24 Months",
+            "Tier": "Tier 1"
+        }
+    ],
+    "OneTimeTotal": "$750.00",
+    "OwnerName": "Test CTF AE",
+    "ProductExists": {
+        "ProductName_isAccess": true,
+        "ProductName_isEIA": true,
+        "ProductName_isEVC": true,
+        "ProductName_isEVPL": true,
+        "ProductName_isIP": true,
+        "ProductName_isPort": true
+    },
+    "QuoteNumber": "00000445",
+    "RecurringTotal": "$3,722.00",
+    "SA": [
+        {
+            "Premise_Detail__c": "495 South Main Street, Irving, 75060",
+            "ServiceAccountId": "0011900000nEncRAAS"
+        },
+        {
+            "Premise_Detail__c": "600 South Main Street, Irving, 75060",
+            "ServiceAccountId": "0011900000nEncWAAS"
+        },
+        {
+            "Premise_Detail__c": "510 South Main Street, Irving, 75060",
+            "ServiceAccountId": "0011900000nEne5AAC"
+        }
+    ],
+    "SALines": [
+        {
+            "Line": [
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0003.0002",
+                    "%vlocity_namespace%__OneTimeTotal__c": 0,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5OAAQ",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5OAAQ",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_EVC_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 167,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEncRAAS",
+                    "@ATTR_BANDWIDTH": "50 Mbps",
+                    "@ATTR_CEVLANCOSPRESERV": false,
+                    "@ATTR_CEVLANIDSITE1": null,
+                    "@ATTR_CEVLANIDSITE2": null,
+                    "@ATTR_CEVLANPRESERVIDSITE1": false,
+                    "@ATTR_CEVLANPRESERVIDSITE2": false,
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_DPIROUTERTER": "Z Location",
+                    "@ATTR_EVCSubType": "EVPL",
+                    "@ATTR_EVCType": "EVPL",
+                    "@ATTR_INTRA_INTER": "Interstate",
+                    "@ATTR_SLA": "Gold",
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEffGAG",
+                    "LineNumber": "00003364",
+                    "Premise_Detail__c": "495 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5OAAQ",
+                            "Name": "EVC",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_EVC_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                },
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0002.0003",
+                    "%vlocity_namespace%__OneTimeTotal__c": 250,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5dAAA",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5dAAA",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_ACCESS_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 1010,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEncRAAS",
+                    "@ATTR_BANDWIDTH": "50 Mbps",
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_INTRA_INTER": "Interstate",
+                    "@ATTR_ROLLUP_BANDWIDTH": null,
+                    "@ATTR_SLA": null,
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEfkGAG",
+                    "LineNumber": "00003365",
+                    "Premise_Detail__c": "495 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5dAAA",
+                            "Name": "Access",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_ACCESS_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                }
+            ],
+            "Premise_Detail__c": "495 South Main Street, Irving, 75060"
+        },
+        {
+            "Line": [
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0003.0001",
+                    "%vlocity_namespace%__OneTimeTotal__c": 0,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5OAAQ",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5OAAQ",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_EVC_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 252,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEncWAAS",
+                    "@ATTR_BANDWIDTH": "200 Mbps",
+                    "@ATTR_CEVLANCOSPRESERV": false,
+                    "@ATTR_CEVLANIDSITE1": null,
+                    "@ATTR_CEVLANIDSITE2": null,
+                    "@ATTR_CEVLANPRESERVIDSITE1": false,
+                    "@ATTR_CEVLANPRESERVIDSITE2": false,
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_DPIROUTERTER": "Z Location",
+                    "@ATTR_EVCSubType": "EVPL",
+                    "@ATTR_EVCType": "EVPL",
+                    "@ATTR_INTRA_INTER": "Interstate",
+                    "@ATTR_SLA": "Platinum",
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEfHGAW",
+                    "LineNumber": "00003357",
+                    "Premise_Detail__c": "600 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5OAAQ",
+                            "Name": "EVC",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_EVC_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                },
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0002.0002",
+                    "%vlocity_namespace%__OneTimeTotal__c": 250,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5dAAA",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5dAAA",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_ACCESS_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 1010,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEncWAAS",
+                    "@ATTR_BANDWIDTH": "200 Mbps",
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_INTRA_INTER": "Interstate",
+                    "@ATTR_ROLLUP_BANDWIDTH": null,
+                    "@ATTR_SLA": null,
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEfVGAW",
+                    "LineNumber": "00003362",
+                    "Premise_Detail__c": "600 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5dAAA",
+                            "Name": "Access",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_ACCESS_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                }
+            ],
+            "Premise_Detail__c": "600 South Main Street, Irving, 75060"
+        },
+        {
+            "Line": [
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 178,
+                    "%vlocity_namespace%__LineNumber__c": "0001",
+                    "%vlocity_namespace%__OneTimeTotal__c": 0,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5JAAQ",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5JAAQ",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_EIA_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 178,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEne5AAC",
+                    "@ATTR_BANDWIDTH": null,
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_SLA": "Silver",
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEf6GAG",
+                    "LineNumber": "00003350",
+                    "Premise_Detail__c": "510 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5JAAQ",
+                            "Name": "EIA  (Ethernet Internet Access)",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_EIA_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                },
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0001.0001",
+                    "%vlocity_namespace%__OneTimeTotal__c": 0,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5OAAQ",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5OAAQ",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_EVC_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 178,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEne5AAC",
+                    "@ATTR_BANDWIDTH": "500 Mbps",
+                    "@ATTR_CEVLANCOSPRESERV": false,
+                    "@ATTR_CEVLANIDSITE1": null,
+                    "@ATTR_CEVLANIDSITE2": null,
+                    "@ATTR_CEVLANPRESERVIDSITE1": false,
+                    "@ATTR_CEVLANPRESERVIDSITE2": false,
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_DPIROUTERTER": "NEWINNICLLI",
+                    "@ATTR_EVCSubType": "Internet",
+                    "@ATTR_EVCType": "EIA",
+                    "@ATTR_INTRA_INTER": "Interstate",
+                    "@ATTR_SLA": "Silver",
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEf7GAG",
+                    "LineNumber": "00003351",
+                    "Premise_Detail__c": "510 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5OAAQ",
+                            "Name": "EVC",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_EVC_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                },
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0001.0002",
+                    "%vlocity_namespace%__OneTimeTotal__c": 0,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5YAAQ",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5YAAQ",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_IP_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 0,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEne5AAC",
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_IPADD": null,
+                    "@ATTR_IPREQTR": null,
+                    "@ATTR_IP_BLOCKS": null,
+                    "@ATTR_TIER": "Tier 1",
+                    "@ATTR_TOPO": null,
+                    "Id": "0QL19000000LEf8GAG",
+                    "LineNumber": "00003352",
+                    "Premise_Detail__c": "510 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ0AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5YAAQ",
+                            "Name": "IP",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ0AAK",
+                                    "Name": "Base Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_IP_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                },
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0001.0003",
+                    "%vlocity_namespace%__OneTimeTotal__c": 0,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5TAAQ",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5TAAQ",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_PORT_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 0,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEne5AAC",
+                    "@ATTR_BANDWIDTH": null,
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_SLA": "Silver",
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEf9GAG",
+                    "LineNumber": "00003353",
+                    "Premise_Detail__c": "510 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5TAAQ",
+                            "Name": "Port Charge",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_PORT_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                },
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 0,
+                    "%vlocity_namespace%__LineNumber__c": "0002.0001",
+                    "%vlocity_namespace%__OneTimeTotal__c": 250,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5dAAA",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5dAAA",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_ACCESS_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 1105,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEne5AAC",
+                    "@ATTR_BANDWIDTH": "800 Mbps",
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_INTRA_INTER": "Interstate",
+                    "@ATTR_ROLLUP_BANDWIDTH": null,
+                    "@ATTR_SLA": null,
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEfBGAW",
+                    "LineNumber": "00003355",
+                    "Premise_Detail__c": "510 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5dAAA",
+                            "Name": "Access",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_ACCESS_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                },
+                {
+                    "%vlocity_namespace%__EffectiveOneTimeTotal__c": 0,
+                    "%vlocity_namespace%__EffectiveRecurringTotal__c": 419,
+                    "%vlocity_namespace%__LineNumber__c": "0003",
+                    "%vlocity_namespace%__OneTimeTotal__c": 0,
+                    "%vlocity_namespace%__Product2Id__c": "01t190000058z5nAAA",
+                    "%vlocity_namespace%__Product2Id__r.Id": "01t190000058z5nAAA",
+                    "%vlocity_namespace%__Product2Id__r.ProductCode": "ENT_ETH_EVPL_0001",
+                    "%vlocity_namespace%__Product2Id__r.RecordTypeId": "01219000000d8NdAAI",
+                    "%vlocity_namespace%__RecurringTotal__c": 419,
+                    "%vlocity_namespace%__ServiceAccountId__c": "0011900000nEne5AAC",
+                    "@ATTR_BANDWIDTH": "300 Mbps",
+                    "@ATTR_CONTRACT_TERM": "24 Months",
+                    "@ATTR_SLA": null,
+                    "@ATTR_TIER": "Tier 1",
+                    "Id": "0QL19000000LEfGGAW",
+                    "LineNumber": "00003356",
+                    "Premise_Detail__c": "510 South Main Street Irving TX 75060",
+                    "Product": [
+                        {
+                            "%vlocity_namespace%__ObjectTypeId__c": "a9719000000AoJ5AAK",
+                            "Family": "Ethernet",
+                            "Id": "01t190000058z5nAAA",
+                            "Name": "EVPL (Ethernet Virtual Private Line)",
+                            "Object": [
+                                {
+                                    "Id": "a9719000000AoJ5AAK",
+                                    "Name": "Ethernet Product Specification",
+                                    "OwnerId": "00519000002dJDEAA2",
+                                    "RecordTypeId": "01219000000d8NKAAY"
+                                }
+                            ],
+                            "ProductCode": "ENT_ETH_EVPL_0001",
+                            "RecordTypeId": "01219000000d8NdAAI"
+                        }
+                    ],
+                    "Quantity": 1,
+                    "QuoteId": "0Q019000000JxooCAC"
+                }
+            ],
+            "Premise_Detail__c": "510 South Main Street, Irving, 75060"
+        }
+    ],
+    "ScheduleDate": "11/18/2019",
+    "ScheduleNumber": "S-5555000348",
+    "ScheduleTypePurpose": "Order for New Services",
+    "curtdate": "11/18/2019"
+}

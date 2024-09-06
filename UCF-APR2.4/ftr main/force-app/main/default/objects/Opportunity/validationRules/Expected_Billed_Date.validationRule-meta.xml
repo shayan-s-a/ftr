@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Billed_Date</fullName>
+    <active>true</active>
+    <description>Field must contain a date if Sales Stage equals Verbal Commit or Closed Won</description>
+    <errorConditionFormula>AND( 
+$RecordType.Id = &quot;012E0000000fKa7&quot;,
+$RecordType.Id = &quot;012E0000000fEAS&quot;,
+$RecordType.Id = &quot;012E0000000dgAK&quot;,
+$RecordType.Id = &quot;012E0000000dgAL&quot;,
+$RecordType.Id = &quot;0120h000000cbpX&quot;,
+ 
+ISPICKVAL(StageName, &quot;Closed/Won&quot;), 
+ISBLANK(Expected_Billed_Date__c))</errorConditionFormula>
+    <errorDisplayField>Expected_Billed_Date__c</errorDisplayField>
+    <errorMessage>Expected Billed Date must contain a Date (xx/xx/xxxx) When Sales Stage equals Closed/Won.</errorMessage>
+</ValidationRule>

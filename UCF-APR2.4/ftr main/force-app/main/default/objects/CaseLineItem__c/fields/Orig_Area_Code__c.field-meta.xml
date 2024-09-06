@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orig_Area_Code__c</fullName>
+    <description>For Orig area code entry</description>
+    <externalId>false</externalId>
+    <label>Orig Area Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Area_Code_Global</valueSetName>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

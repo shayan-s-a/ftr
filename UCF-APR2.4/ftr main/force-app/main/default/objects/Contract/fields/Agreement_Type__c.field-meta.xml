@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreement_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Agreement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Broadband, FiOS &amp; Voice Bundles</fullName>
+                <default>false</default>
+                <label>Broadband, FiberOptic &amp; Voice Bundles - Existing/Upgrades</label>
+            </value>
+            <value>
+                <fullName>Broadband, FiOS &amp; Voice Bundles - New Service</fullName>
+                <default>false</default>
+                <label>Broadband, FiberOptic &amp; Voice Bundles - New Service</label>
+            </value>
+            <value>
+                <fullName>Current Broadband Offers</fullName>
+                <default>false</default>
+                <label>Current Broadband Offers</label>
+            </value>
+            <value>
+                <fullName>Ethernet/Data Services</fullName>
+                <default>false</default>
+                <label>Ethernet/Transport Services</label>
+            </value>
+            <value>
+                <fullName>FSA 1 Page</fullName>
+                <default>false</default>
+                <label>FSA 1 Page</label>
+            </value>
+            <value>
+                <fullName>FSA Standard Full Version</fullName>
+                <default>false</default>
+                <label>FSA Standard Full Version</label>
+            </value>
+            <value>
+                <fullName>Local Services</fullName>
+                <default>false</default>
+                <label>Local Services</label>
+            </value>
+            <value>
+                <fullName>Managed Services</fullName>
+                <default>false</default>
+                <label>Managed Services</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>NDA</fullName>
+                <default>false</default>
+                <label>NDA</label>
+            </value>
+            <value>
+                <fullName>Premier Retail LOA</fullName>
+                <default>false</default>
+                <label>Premier Retail LOA</label>
+            </value>
+            <value>
+                <fullName>Premier Retail LOA-MDF</fullName>
+                <default>false</default>
+                <label>Premier Retail LOA-MDF</label>
+            </value>
+            <value>
+                <fullName>SAA</fullName>
+                <default>false</default>
+                <label>SAA</label>
+            </value>
+            <value>
+                <fullName>Twenty-Twenty LOA-MDF</fullName>
+                <default>false</default>
+                <label>Twenty-Twenty LOA-MDF</label>
+            </value>
+            <value>
+                <fullName>VAL</fullName>
+                <default>false</default>
+                <label>VAL</label>
+            </value>
+            <value>
+                <fullName>VoIP</fullName>
+                <default>false</default>
+                <label>VoIP</label>
+            </value>
+            <value>
+                <fullName>Wi-Fi</fullName>
+                <default>false</default>
+                <label>Wireless Solutions</label>
+            </value>
+            <value>
+                <fullName>PAL</fullName>
+                <default>false</default>
+                <label>PAL</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>PAL-Marketing</fullName>
+                <default>false</default>
+                <label>PAL-Marketing</label>
+            </value>
+            <value>
+                <fullName>Marketing Agreement</fullName>
+                <default>false</default>
+                <label>Marketing Agreement</label>
+            </value>
+            <value>
+                <fullName>Door to Door LOA-MDF</fullName>
+                <default>false</default>
+                <label>Door to Door LOA-MDF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

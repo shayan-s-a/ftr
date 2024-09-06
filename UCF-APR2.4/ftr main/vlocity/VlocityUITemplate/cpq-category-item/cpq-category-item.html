@@ -1,0 +1,13 @@
+<div class="slds-tile cpq-category-item" data-product-id="{{obj.Id.value}}" ng-controller="CPQCategoryItemController" ng-click="selectCategory(obj)" ng-class="{'cpq-category-item-highlighted': isSelectedCategory}">
+    <div class="slds-media cpq-product-item-container">
+        <div class="slds-media__body">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-small-size--10-of-12 slds-medium-size--10-of-12 slds-large-size--10-of-12">
+                    <p class="slds-tile__title product-name">
+                        {{::obj.catalogName}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

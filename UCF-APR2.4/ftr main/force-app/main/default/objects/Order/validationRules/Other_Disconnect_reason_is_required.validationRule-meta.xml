@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Disconnect_reason_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordTypeId = &quot;012E0000000kLob&quot;,
+ISBLANK(Other_Disconnect_Reason__c),
+ISPICKVAL( Competition__c , &quot;Other&quot;))</errorConditionFormula>
+    <errorDisplayField>Other_Disconnect_Reason__c</errorDisplayField>
+    <errorMessage>Other Competitor Name is Required</errorMessage>
+</ValidationRule>

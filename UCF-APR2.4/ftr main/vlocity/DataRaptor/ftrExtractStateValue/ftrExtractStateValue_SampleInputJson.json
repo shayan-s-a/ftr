@@ -1,0 +1,179 @@
+{
+    "AccountCountryAddress": "United States",
+    "AccountRT": "Master",
+    "AccountState": "FL",
+    "AccountType": "CreatedByPortal",
+    "AddressQualification": {
+        "Address-Block": {
+            "Address": "E Cass St, Tampa, FL 33602, USA",
+            "City": "Tampa",
+            "State": "FL",
+            "StreetAddress": "East Cass Street",
+            "Zip": "33602"
+        },
+        "AddressQualificationResult": {
+            "AQRecordId": null,
+            "BusinessName": "",
+            "CPQId": "",
+            "CopperCiacEstimate": "0",
+            "CopperCiacTier": "Yellow",
+            "CopperDistance": "1459",
+            "CopperQualification": "Qualified (up to 50MB)",
+            "CopperTier": "Tier 1",
+            "CreatedBy": "VFO user Vlocity and company ABCDE",
+            "CreatedById": 30267,
+            "CreatorEmail": "SIFT.App.Support@ftr.com",
+            "EReachProviders": [
+            ],
+            "FiberCiacEstimate": "0",
+            "FiberCiacTier": "Yellow",
+            "FiberDistance": "203",
+            "FiberQualification": "Qualified (max WC speed)",
+            "FiberTier": "Tier 1",
+            "Id": 1668509,
+            "InFootprint": true,
+            "Level": "b",
+            "LitBuilding": false,
+            "M6OrderNumber": null,
+            "Market": "D",
+            "Opened": "2023-01-20T10:26:53.519282-05:00",
+            "OpportunityId": "",
+            "PERRouter": "MIASFLTT6CW",
+            "PricingTier": "1.0",
+            "Products": "DIA, EVPL, ELAN, IPVPN, Jumbo Frames, EPL, Connect Cloud, EPath, EReach",
+            "ProductsPretty": "DIA,EVPL,ELAN,IPVPN,Jumbo Frames,EPL,Connect Cloud,EPath,EReach",
+            "QualifiedAddress": {
+                "Address": "1012 E CASS ST",
+                "City": "TAMPA",
+                "Latitude": 27.9531353,
+                "Longitude": -82.4549133,
+                "State": "FL",
+                "ZipCode": "336023535"
+            },
+            "SiteName": null,
+            "VFORecordId": null,
+            "WireCenterCLLI": "TAMPFLXA",
+            "WireCenterQoS": "Platinum",
+            "WireCenterSpeed": "1000MB",
+            "qualifiedBy": "Address"
+        },
+        "DSATTicket": null,
+        "Latitude": null,
+        "Longitude": null,
+        "QualifyBy": "Address"
+    },
+    "CaseRT": "Account_Management",
+    "CreateServiceAccountResponse": {
+        "ServiceAccountId": "0017c00000ywr7jAAA",
+        "ServiceAccounts": "",
+        "ServiceAccountsUpdated": true
+    },
+    "DRId_ReportQuickQuote__c": "aMl7c0000000GuSCAU",
+    "DSATTicketNumber": 1668509,
+    "FrontierServedAddress": "Yes",
+    "ISSpeedGreaterThan1Gbps": false,
+    "LWCInput": null,
+    "LatLong": "27.9531353, -82.4549133",
+    "LitOnnetAddress": false,
+    "MasterAgentId": "a1V7c000001CgHBEA0",
+    "MasterAgentName": "Nespon",
+    "ProductAddOn": {
+        "InterfaceTypeAll": "Copper RJ45",
+        "InterfaceTypeRJ45": null,
+        "SelectIPBlock": "/29 = 5 IPs",
+        "SelectManagedRouter": "No"
+    },
+    "Qualificationstatus": "Frontier Qualified Address",
+    "SelectedProducts": [
+        {
+            "%vlocity_namespace%__JSONAttribute__c": null,
+            "%vlocity_namespace%__OneTimeCharge__c": 0,
+            "%vlocity_namespace%__RecurringCharge__c": 890,
+            "%vlocity_namespace%__ServiceAccountId__c": "0017c00000ywr7jAAA",
+            "Description": "DIA (Dedicated Internet Access)",
+            "Id": 2,
+            "PricebookEntry": {
+                "Product2": {
+                    "Id": "01t0h000002mZekAAE",
+                    "Name": "DIA (Dedicated Internet Access)",
+                    "ProductCode": "ENT_ETH_EIA_0002",
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v57.0/sobjects/Product2/01t0h000002mZekAAE"
+                    }
+                },
+                "Product2Id": "01t0h000002mZekAAE",
+                "attributes": {
+                    "type": "PricebookEntry"
+                }
+            },
+            "PricebookEntryId": null,
+            "Speed_Mbps__c": 500,
+            "Speed__c": "500 Mbps",
+            "Term__c": "60 Months"
+        }
+    ],
+    "SessionId": "QQuote-a2225d8d-e03b-93c4-dc8d-75974e51bf44",
+    "SubAgent_Name": "Sub-Nespon",
+    "UserLogin": "pablo.ingold@nespon.com.devpportal",
+    "UserName": "Pablo Ingold Sosa",
+    "ftrPartnerAllowedToCreateAccount": true,
+    "input": {
+        "DSATTicketNumber": 1668509,
+        "EventStep": "Product Request",
+        "FiberDistance": "203",
+        "FiberTier": "Tier 1",
+        "FrontierServedAddress": "Yes",
+        "LatLong": "27.9531353, -82.4549133",
+        "LitOnnetAddress": false,
+        "MasterAgent": "a1V7c000001CgHBEA0",
+        "OmniScriptID": "QQuote-a2225d8d-e03b-93c4-dc8d-75974e51bf44",
+        "PartnerName": "Pablo Ingold Sosa",
+        "Partnerlogin": "pablo.ingold@nespon.com.devpportal",
+        "Qualificationstatus": "Frontier Qualified Address",
+        "QualifyBy": "Address",
+        "SubAgent": "Sub-Nespon",
+        "WireCenter": "TAMPFLXA",
+        "WireCenterMaxSpeed": "1000MB",
+        "products": [
+            {
+                "%vlocity_namespace%__JSONAttribute__c": null,
+                "%vlocity_namespace%__OneTimeCharge__c": 0,
+                "%vlocity_namespace%__RecurringCharge__c": 890,
+                "%vlocity_namespace%__ServiceAccountId__c": "0017c00000ywr7jAAA",
+                "Description": "DIA (Dedicated Internet Access)",
+                "Id": 2,
+                "PricebookEntry": {
+                    "Product2": {
+                        "Id": "01t0h000002mZekAAE",
+                        "Name": "DIA (Dedicated Internet Access)",
+                        "ProductCode": "ENT_ETH_EIA_0002",
+                        "attributes": {
+                            "type": "Product2",
+                            "url": "/services/data/v57.0/sobjects/Product2/01t0h000002mZekAAE"
+                        }
+                    },
+                    "Product2Id": "01t0h000002mZekAAE",
+                    "attributes": {
+                        "type": "PricebookEntry"
+                    }
+                },
+                "PricebookEntryId": null,
+                "Speed_Mbps__c": 500,
+                "Speed__c": "500 Mbps",
+                "Term__c": "60 Months"
+            }
+        ],
+        "sendAddress": "1012 E CASS ST",
+        "sendCity": "TAMPA",
+        "sendState": "FL",
+        "sendZip": "336023535"
+    },
+    "timeStamp": "2023-01-20T15:26:29.008Z",
+    "userCurrencyCode": "USD",
+    "userId": "0057c000007owl4AAA",
+    "userName": "pablo.ingold@nespon.com.devpportal",
+    "userProfile": "System Administrator",
+    "userTimeZone": "-300",
+    "userTimeZoneName": "America/New_York"
+}

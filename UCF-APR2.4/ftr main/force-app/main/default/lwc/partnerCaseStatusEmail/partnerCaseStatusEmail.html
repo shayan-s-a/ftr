@@ -1,0 +1,111 @@
+<!--
+  @description       : 
+  @author            : Monir Zaman
+  @group             : 
+  @* last modified on  : 18-08-2023
+  @* last modified by  : Monir Zaman
+  Modifications Log
+  Ver   Date         Author        Modification
+  1.0   17-08-2023   Monir Zaman   Initial Version
+-->
+<template>
+  <template if:true={form1}>
+    <lightning-quick-action-panel header="Choose Email Template">
+      <lightning-combobox
+        name="ETemplate"
+        label="Choose Email Template"
+        value={value}
+        placeholder="Select a template"
+        options={eTempOptions}
+        onchange={eTempOptionsChange}
+      ></lightning-combobox>
+
+      <br /><br />
+
+      <lightning-formatted-rich-text
+        value={eTempPreview}
+      ></lightning-formatted-rich-text>
+
+      <div slot="footer">
+        <lightning-button
+          variant="neutral"
+          label="Cancel"
+          onclick={closeAction}
+        >
+        </lightning-button>
+
+        <lightning-button
+          variant="brand"
+          label="Next"
+          onclick={handleNextForm}
+          class="slds-m-left_x-small"
+        >
+        </lightning-button>
+      </div>
+    </lightning-quick-action-panel>
+  </template>
+
+  <template if:true={form2}>
+    <lightning-quick-action-panel header="Send Email">
+      <div>
+        <lightning-input
+          type="email"
+          label="To Addresses"
+          value={toEmail}
+          readonly
+        ></lightning-input>
+
+        <lightning-input
+          type="email"
+          label="CC Addresses"
+          value={ccEmail}
+          onchange={handleCCEmailChange}
+          multiple
+        ></lightning-input>
+
+        <lightning-input
+          type="text"
+          label="Subject"
+          value={subject}
+          onchange={handleSubjectChange}
+          class="slds-p-bottom_medium"
+        ></lightning-input>
+
+        <lightning-input-rich-text
+          value={eTempPreview}
+          onchange={handleETempChange}
+          class="slds-p-bottom_small"
+        ></lightning-input-rich-text>
+
+        <lightning-input
+          type="file"
+          label="Attachment"
+          onchange={handleFilesChange}
+          multiple
+        >
+        </lightning-input>
+
+        <div class="slds-text-body_small slds-text-color_success">
+          {fileName}
+        </div>
+      </div>
+
+      <div slot="footer">
+        <lightning-button
+          variant="neutral"
+          label="Cancel"
+          onclick={closeAction}
+        >
+        </lightning-button>
+
+        <lightning-button
+          variant="brand"
+          label="Send Mail"
+          onclick={handleSendEmail}
+          class="slds-m-left_x-small"
+        >
+        </lightning-button>
+      </div>
+    </lightning-quick-action-panel>
+  </template>
+</template>

@@ -1,0 +1,41 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Order Enrichment (SE)",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/Enrichment/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "OrphanUNI": false,
+            "hasDIA": "=IF(CONTAINS(%CustomerAndOrderInformation:Products__c%, 'EIA'), true, false )",
+            "hasELAN": "=IF(%CustomerAndOrderInformation:ELANCount%>0, true, false )",
+            "hasEVPL": "=IF(CONTAINS(%CustomerAndOrderInformation:Products__c%, 'EVPL'), true, false )",
+            "hasMDIA": "=IF(%CustomerAndOrderInformation:MDIACount%>0, true, false )",
+            "hasSDWAN": "=IF(CONTAINS(%CustomerAndOrderInformation:Products__c%, 'SDWAN'), true, false )",
+            "hasSIP": "=IF(CONTAINS(%CustomerAndOrderInformation:Products__c%, 'SIP'), true, false )"
+        },
+        "label": "SetProductValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            false,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SetProductValues",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/Enrichment/English/SetProductValues"
+}

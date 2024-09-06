@@ -1,0 +1,34 @@
+<aura:component
+  controller="WSQuoteController"              
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+  access="global">
+  <aura:attribute name="recordId" type="Id" />
+  <!-- quote Id is passed -->
+
+  <aura:attribute name="Spinner" type="boolean" default="false" />
+  <aura:attribute name="unSyncSuccess" type="boolean"/>
+
+  <!--create a component attributes -->
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <aura:handler event="aura:waiting" action="{!c.showSpinner}" />
+  <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}" />
+
+  <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+      <div
+        class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative"
+        role="alert"
+      >
+        <span class="slds-assistive-text">Loading</span>
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+      </div>
+    </div>
+  </aura:if>
+
+  <aura:if isTrue="{!v.unSyncSuccess}">
+    <div> Quote Un-Synched Successfully!! </div>
+    <aura:set attribute="else"> <div> Quote Un-Synch Failed!! </div> </aura:set>
+  </aura:if>
+</aura:component>

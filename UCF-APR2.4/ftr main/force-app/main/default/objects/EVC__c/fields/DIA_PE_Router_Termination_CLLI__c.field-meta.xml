@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DIA_PE_Router_Termination_CLLI__c</fullName>
+    <description>OEM ID- HUB1, HUB2, Remote for HBE ELAN locations reuse of DIA PE Router field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>OEM ID for HBE ELAN locations</inlineHelpText>
+    <label>ELAN OEM ID</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HUB1</fullName>
+                <default>false</default>
+                <label>HUB1</label>
+            </value>
+            <value>
+                <fullName>HUB2</fullName>
+                <default>false</default>
+                <label>HUB2</label>
+            </value>
+            <value>
+                <fullName>Remote</fullName>
+                <default>false</default>
+                <label>Remote</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ELAN-1</controllingFieldValue>
+            <controllingFieldValue>ELAN-2</controllingFieldValue>
+            <controllingFieldValue>ELAN-3</controllingFieldValue>
+            <controllingFieldValue>ELAN-4</controllingFieldValue>
+            <controllingFieldValue>ELAN-5</controllingFieldValue>
+            <controllingFieldValue>ELAN-6</controllingFieldValue>
+            <controllingFieldValue>ELAN-7</controllingFieldValue>
+            <controllingFieldValue>ELAN-8</controllingFieldValue>
+            <valueName>HUB1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELAN-1</controllingFieldValue>
+            <controllingFieldValue>ELAN-2</controllingFieldValue>
+            <controllingFieldValue>ELAN-3</controllingFieldValue>
+            <controllingFieldValue>ELAN-4</controllingFieldValue>
+            <controllingFieldValue>ELAN-5</controllingFieldValue>
+            <controllingFieldValue>ELAN-6</controllingFieldValue>
+            <controllingFieldValue>ELAN-7</controllingFieldValue>
+            <controllingFieldValue>ELAN-8</controllingFieldValue>
+            <valueName>HUB2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELAN-1</controllingFieldValue>
+            <controllingFieldValue>ELAN-2</controllingFieldValue>
+            <controllingFieldValue>ELAN-3</controllingFieldValue>
+            <controllingFieldValue>ELAN-4</controllingFieldValue>
+            <controllingFieldValue>ELAN-5</controllingFieldValue>
+            <controllingFieldValue>ELAN-6</controllingFieldValue>
+            <controllingFieldValue>ELAN-7</controllingFieldValue>
+            <controllingFieldValue>ELAN-8</controllingFieldValue>
+            <valueName>Remote</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

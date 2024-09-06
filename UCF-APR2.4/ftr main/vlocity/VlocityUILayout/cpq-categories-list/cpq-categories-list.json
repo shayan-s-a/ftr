@@ -1,0 +1,32 @@
+{
+    "Cards": [
+        "cpq-category-item"
+    ],
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.catalogId",
+                "val": ""
+            }
+        ],
+        "type": "Dual",
+        "value": {
+            "apexRemoteResultVar": "records[0].childCatalogs.records",
+            "apexRestResultVar": "records[0].childCatalogs",
+            "endpoint": "/%vlocity_namespace%/v2/cpq/catalogs/{{params.catalogId}}",
+            "inputMap": {
+                "catalogId": "{{$root.rootCatalogId}}",
+                "hierarchy": "2"
+            },
+            "methodType": "GET",
+            "remoteClass": "CpqAppHandler",
+            "remoteMethod": "getCatalogHierarchy",
+            "remoteNSPrefix": "%vlocity_namespace%"
+        }
+    },
+    "templates": {
+        "0": {
+            "templateUrl": "cpq-categories-list"
+        }
+    }
+}

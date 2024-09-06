@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner Support Request</fullName>
+    <description>Partner Support Request</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>01-New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>10-Quote Working</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>12-Quote On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>14-Quote Question from Submitter</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>16-Quote Question to Submitter</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>18-Quote Move to Contracting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>19-Quote Completed%3B Waiting on Contract</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>20-Contract Working</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>22-Contract On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>24-Contract Question From Submitter</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>26-Contract Question to Submitter</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>28-Contract Moved to Ordering</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>29-Contract Completed%3B Waiting on Order</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>30-Order Working</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>32-Order On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>34-Order Question from Submitter</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>36-Order Question to Submitter</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>50-Escalated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>80-On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>85-Cancelled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>90-Closed</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

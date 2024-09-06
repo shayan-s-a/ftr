@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Type__c</fullName>
+    <description>Created for De Collins case 00702182 for case Manual Invoice 12/2020</description>
+    <externalId>false</externalId>
+    <label>Invoice Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IPP</fullName>
+                <default>false</default>
+                <label>IPP</label>
+            </value>
+            <value>
+                <fullName>WAWF</fullName>
+                <default>false</default>
+                <label>WAWF</label>
+            </value>
+            <value>
+                <fullName>VIPR</fullName>
+                <default>false</default>
+                <label>VIPR</label>
+            </value>
+            <value>
+                <fullName>Other (Note in description field)</fullName>
+                <default>false</default>
+                <label>Other (Note in description field)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

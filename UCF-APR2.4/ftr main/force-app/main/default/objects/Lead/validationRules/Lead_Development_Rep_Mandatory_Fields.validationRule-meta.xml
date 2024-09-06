@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Development_Rep_Mandatory_Fields</fullName>
+    <active>true</active>
+    <description>The following fields mandatory for a lead to be converted to an opportunity for the Lead Development Rep (LDR) profiles
+&quot;Description of Customer Need&quot;
+&quot;Time Frame&quot;
+&quot;Lead Product List&quot;
+&quot;Estimated Pipeline Value&quot;
+&quot;Number of Employees&quot;</description>
+    <errorConditionFormula>(IsConverted )&amp;&amp; 
+ISBLANK(Description_of_customer_needs__c)&amp;&amp; 
+ISBLANK(TEXT(Time_frame__c ))&amp;&amp; 
+ISNULL( Lead_Product_List__c)&amp;&amp; 
+ISBLANK(Estimated_Pipeline_Value__c )&amp;&amp; 
+ISBLANK(Number_of_Employees__c ) &amp;&amp; 
+$Profile.Id = &apos;00e0L000000ai4B&apos;</errorConditionFormula>
+    <errorMessage>Please fill out the following fields
+Description of Customer Need,
+Time Frame,
+Lead Product List,
+Estimated Pipeline Value,
+Number of Employees.</errorMessage>
+</ValidationRule>

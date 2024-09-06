@@ -1,0 +1,54 @@
+{
+    "%vlocity_namespace%__Active__c": false,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Add Child Products To Cart - SIP",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/AddChildProductsSIP/Procedure",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "CPEPBXManufacturerName": "%CustomerVOIPRequirements:CPEPBXManufacturerName%",
+            "CPEPBXModel": "%CustomerVOIPRequirements:CPEPBXModel%",
+            "CPEPBXSoftwareRel": "%CustomerVOIPRequirements:CPEPBXSoftwareRel%",
+            "ConcurrentCallSession": "%CustomerVOIPRequirements:ConcurrentCallSession%",
+            "PBXHandOff": "%CustomerVOIPRequirements:PBXHandOff%",
+            "RackMountBracket": "%CustomerVOIPRequirements:RackMountBracket%",
+            "TransportLayer": "%CustomerVOIPRequirements:TransportLayer%",
+            "WaiveRouter": "%CustomerVOIPRequirements:WaiveRouter%",
+            "itemId": "%CustomerVOIPRequirements:itemId%"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": true,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction5",
+        "remoteClass": "ftr_ElementRulesConfigService",
+        "remoteMethod": "updateCCSDataForSIP",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Remote Action",
+    "Name": "UpdateLineItems",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/AddChildProductsSIP/Procedure/UpdateLineItems"
+}

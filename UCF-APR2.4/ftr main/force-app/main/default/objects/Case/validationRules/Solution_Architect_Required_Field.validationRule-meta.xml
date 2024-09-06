@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Architect_Required_Field</fullName>
+    <active>true</active>
+    <description>If  Case Type = Product Revenue, Account and Opportunity are required fields.</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;Solution Architect&quot;,
+ISPICKVAL(Case_Type__c, &quot;Product Revenue&quot;),
+ISBLANK(Opportunity__c)
+)</errorConditionFormula>
+    <errorDisplayField>Opportunity__c</errorDisplayField>
+    <errorMessage>If &quot;Product Revenue&quot; is selected for Case Type, Account and Opportunity are required fields.</errorMessage>
+</ValidationRule>

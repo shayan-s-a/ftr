@@ -1,0 +1,9 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <lightning:navigation aura:id="navigationService"/>
+    
+    <force:recordData aura:id="accRecData"
+    recordId="{!v.recordId}" 
+    fields="Type" recordUpdated="{!c.handleRecordUpdated}"/>
+    
+</aura:component>

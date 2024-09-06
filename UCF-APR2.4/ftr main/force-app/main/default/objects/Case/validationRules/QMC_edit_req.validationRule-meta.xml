@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QMC_edit_req</fullName>
+    <active>true</active>
+    <description>Cant close an auto-created Welcome Pack case without editing.</description>
+    <errorConditionFormula>ISblank(Subject) &amp;&amp;  ISPICKVAL(Status, &quot;closed&quot;) &amp;&amp; OR(RecordType.Name = &quot;QMC&quot;,RecordType.Name = &quot;Welcome Pack&quot;)</errorConditionFormula>
+    <errorMessage>Must edit and add all required fields before closing.</errorMessage>
+</ValidationRule>

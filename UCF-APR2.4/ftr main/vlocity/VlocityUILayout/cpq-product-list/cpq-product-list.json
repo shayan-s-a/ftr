@@ -1,0 +1,61 @@
+{
+    "Cards": [
+        "cpq-product-item"
+    ],
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "0Q01k000000D6Pr"
+            },
+            {
+                "name": "attrs.includeIneligible",
+                "val": "true"
+            }
+        ],
+        "type": "Dual",
+        "value": {
+            "apexRemoteResultVar": "records",
+            "apexRestResultVar": "records",
+            "endpoint": "/%vlocity_namespace%/v2/cpq/carts/{{params.id}}/products?offsetSize=0&pagesize=10&fields=IsActive,Id,Name,UnitPrice,ProductCode,%vlocity_namespace%__RecurringPrice__c&includeIneligible={{attrs.includeIneligible}}",
+            "inputMap": {
+                "cartId": "{{params.id}}",
+                "fields": "IsActive,Id,Name,UnitPrice,ProductCode,%vlocity_namespace%__RecurringPrice__c",
+                "includeAttachment": "true",
+                "includeIneligible": "{{attrs.includeIneligible}}",
+                "localeCode": "{{attrs.cpqUserLocale}}",
+                "offsetSize": "0",
+                "pagesize": "10"
+            },
+            "methodType": "GET",
+            "remoteClass": "CpqAppHandler",
+            "remoteMethod": "getCartsProducts",
+            "remoteNSPrefix": "%vlocity_namespace%",
+            "resultVar": "result.records"
+        }
+    },
+    "previewType": "runTime",
+    "session": {
+        "query": "iPhone and {{params.Id}}",
+        "size": "{{payload.totalSize}}"
+    },
+    "sessionVars": [
+        {
+            "formula": "",
+            "name": "totalSize",
+            "val": "payload.totalSize"
+        },
+        {
+            "name": "nextProducts",
+            "val": "payload.actions.nextproducts"
+        }
+    ],
+    "templates": {
+        "0": {
+            "templateUrl": "cpq-product-list-categories"
+        }
+    },
+    "workspace": [
+        "cpq-product-item/Vlocity/1/1514323252344"
+    ]
+}

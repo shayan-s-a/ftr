@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_Connections_Property</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>Account_Owner_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.CC_Property</value>
+    </filters>
+    <label>3-All Community Connections Properties</label>
+    <sharedTo>
+        <role>Global</role>
+        <roleAndSubordinatesInternal>Alternate_Channel_Community_Connections_Sales_Leadership</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

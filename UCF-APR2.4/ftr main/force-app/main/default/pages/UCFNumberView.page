@@ -1,0 +1,227 @@
+<apex:page showHeader="true" sidebar="false" controller="DIDNumberViewController" lightningStylesheets="true" docType="html-5.0">
+    <apex:slds />
+    <style>
+        .header {
+            margin: 1rem 0;
+            margin-right: 1rem;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        body .bPageBlock .pbSubheader,
+        .slds-vf-scope .bPageBlock .pbSubheader {
+            margin-top: 1rem;
+        }
+
+        .header .details {
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header .details .fields {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header .details .fields div:first-child {
+            margin-right: 1rem;
+        }
+
+        .header .buttons {
+            margin-left: auto;
+        }
+
+        body .bPageBlock .pbSubheader h3,
+        .slds-vf-scope .bPageBlock .pbSubheader h3 {
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            padding: 0.2rem 0;
+        }
+
+        .slds-scope *,
+        .slds-scope *:before,
+        .slds-scope *:after {
+            font-family: "Salesforce Sans", Arial, sans-serif !important;
+            color: rgb(84, 105, 141) !important;
+        }
+
+        body .slds-vf-data-table thead th,
+        body .slds-vf-data-table thead td,
+        .slds-vf-scope .slds-vf-data-table thead th,
+        .slds-vf-scope .slds-vf-data-table thead td {
+            background: white !important;
+            font-weight: 900 !important;
+        }
+
+        .footer {
+            margin: 1rem 0;
+        }
+
+        :disabled {
+            background: lightgrey !important;
+        }
+        .slds-form-element_readonly {
+            margin: 1rem;
+        }
+    </style>
+    <div class="slds-scope">
+        <apex:form id="form">
+            <div>
+                    <apex:pageBlock >
+                        <div class="header">
+                            <div>
+                                <h1 class="slds-text-heading_medium slds-m-top_large">
+                                    Service Location:
+                                </h1>
+                                <h3>{!didLocationDetails.ServiceAccountId__r.vlocity_cmt__PremisesId__r.Premise_Detail__c}</h3>
+                            </div>
+                            <div class="buttons">
+                                <apex:commandButton action="{!generateUcfCSV}" value="Download" rendered="{!showDownload}" />
+                            </div>
+                        </div>
+                        <!-- Service Account info -->
+                        <!-- DID Location Info -->
+                            <apex:pageBlockSection title="DID Location" columns="1">
+                                <!-- DID Location Details -->
+                                <!-- <div class="didDetails">
+                                    <apex:detail subject="{!didLocationId}" relatedList="false" title="false" id="didDetails"/> 
+                                </div> -->
+                                    <div class="slds-grid">
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Name</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.Name}</div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">DID Location</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.PremisesId__r.Premise_Detail__c}</div>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Location Main Phone Number</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.UCFLocationMainPhoneNumber__c}</div>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Test Number</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.TestNumber__c}</div>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Main Directory Number</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.MDN__c}</div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <!-- <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Incoming caller ID presentation</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.IncomingCallerID__c}</div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Call Paths</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.NumberOfCallPaths__c}</div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">International Dialing Option</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.InternationalDialingOptions__c}</div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Connect line ID screening</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.ConnectLineIDScreening__c}</div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-form-element slds-form-element_readonly">
+                                                <span class="slds-form-element__label">Number of DID's to be reserved for this location</span>
+                                                <div class="slds-form-element__control">
+                                                <div class="slds-form-element__static">{!didLocationDetails.NumberOfDIDs__c}</div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </apex:pageBlockSection>
+                                <!-- DID Number Details -->
+                                <apex:pageBlockSection title="DID Numbers " columns="1" rendered="{!didNumbers != null}">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <div>
+                                            Total number of records: {!countOfDIDNumbers}
+                                        </div>
+                                        <!-- <div>Page {!currentPage + 1} of {!didNumbers.size / pageSize} </div> -->
+                                    </div>
+                                    <apex:pageBlock >
+                                        <table>
+                                            <thead>
+                                                <th>DID Number</th>
+                                                <th>Current Carrier</th>
+                                                <th>Install Type</th>
+                                                <th>Third Party?</th>
+                                                <th>Rate Center</th>
+                                                <th>Created Date</th>
+                                                <th>Created By</th>
+                                            </thead>
+                                            <apex:repeat value="{!didNumbers}" var="number" id="number">
+                                                <tr>
+                                                    <td>{!number.DID_Number__c}</td>
+                                                    <td>{!number.Ucf_Current_Carrier__c}</td>
+                                                    <td>{!number.Ucf_Install_Type__c}</td>
+                                                    <td>{!number.ThirdParty__c}</td>
+                                                    <td>{!number.RateCenter__c}</td>
+                                                    <td>{!number.CreatedDate}</td>
+                                                    <td>{!number.CreatedBy.Name}</td>
+                                                </tr>
+                                            </apex:repeat>
+                                        </table>
+                                        <apex:pageBlockButtons >
+                                            <div style="display: flex; flex-direction: row;">
+                                                <div style="margin-left: auto;" >
+                                                    <apex:commandButton action="{!previousNumber}" value="Previous" rendered="{!countOfDIDNumbers > didNumberPageSize}" />
+                                                    <apex:commandButton action="{!nextNumber}" value="Next" rendered="{!countOfDIDNumbers > didNumberPageSize}" />
+                                                </div>
+                                            </div>
+                                            
+                                        </apex:pageBlockButtons>
+                                    </apex:pageBlock>
+                                </apex:pageBlockSection>
+                                <!-- 911 Option Details -->
+                                <!-- <apex:pageBlockSection title="911 Option" columns="1" rendered="{!X911Options != null}">
+                                    <table>
+                                        <thead>
+                                            <th>Number</th>
+                                            <th>Option</th>
+                                            <th>Name</th>
+                                            <th>FTR 911 Provider?</th>
+                                            <th>Location</th>
+                                        </thead>
+                                        <apex:repeat value="{!x911Options}" var="option" id="option">
+                                            <tr>
+                                                <td>{!option.PhoneNumber__c}</td>
+                                                <td>{!option.Option__c}</td>
+                                                <td>{!option.Name}</td>
+                                                <td>{!option.FTR_911_Provider__c}</td>
+                                                <td>{!option.PremisesId__r.Premise_Detail__c}</td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </table>
+                                </apex:pageBlockSection> -->
+                    </apex:pageBlock>
+            </div>
+        </apex:form>
+
+    </div>
+</apex:page>

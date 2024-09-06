@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Operations_Support_Opportunity</fullName>
+    <active>true</active>
+    <businessProcess>Standard Support Process</businessProcess>
+    <description>Issue this case from the Opportunity for assistance with Opportunity related issues (Including Vlocity)</description>
+    <label>Sales Operations Support - Opportunity</label>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Account Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automatically Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BidNet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CJIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSA Org</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instant Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance-In-Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarketSource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitel - Dunthorpe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Efforts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remedy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2EO%2ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Top Dollar Trade In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WFM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Authorization rights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing or incorrect products%2Fpricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Action %28No error%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SF Admin Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted to Jira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training needs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viewing capabilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

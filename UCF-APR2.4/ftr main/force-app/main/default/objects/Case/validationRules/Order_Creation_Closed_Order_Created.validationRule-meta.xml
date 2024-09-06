@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Creation_Closed_Order_Created</fullName>
+    <active>true</active>
+    <description>Cannot close Order Creation case as Order Created if the order number is not populated.</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;Order Creation&quot;,
+ISPICKVAL(Status, &quot;Closed&quot;),
+ISPICKVAL( Reason , &quot;Order Created&quot;),
+
+ISBLANK(  Orderz__c  )
+)</errorConditionFormula>
+    <errorMessage>The case cannot be closed as Order Created if the Order field is blank.</errorMessage>
+</ValidationRule>

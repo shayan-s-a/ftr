@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Center__c</fullName>
+    <externalId>false</externalId>
+    <label>Center</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Burnsville, MN</fullName>
+                <default>false</default>
+                <label>Burnsville, MN</label>
+            </value>
+            <value>
+                <fullName>Charleston, WV</fullName>
+                <default>false</default>
+                <label>Charleston, WV</label>
+            </value>
+            <value>
+                <fullName>Ft. Wayne, IN</fullName>
+                <default>false</default>
+                <label>Ft. Wayne, IN</label>
+            </value>
+            <value>
+                <fullName>Kingman, AZ</fullName>
+                <default>false</default>
+                <label>Kingman, AZ</label>
+            </value>
+            <value>
+                <fullName>Pomona, CA</fullName>
+                <default>false</default>
+                <label>Pomona, CA</label>
+            </value>
+            <value>
+                <fullName>Tampa, FL</fullName>
+                <default>false</default>
+                <label>Tampa, FL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

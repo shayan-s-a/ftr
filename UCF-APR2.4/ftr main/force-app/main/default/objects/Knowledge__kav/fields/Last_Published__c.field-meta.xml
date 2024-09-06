@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Published__c</fullName>
+    <description>Date only value from the Last Published Date field (which is a Date/Time field)</description>
+    <externalId>false</externalId>
+    <formula>DATEVALUE( LastPublishedDate )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Date only value from the Last Published Date field (which is a Date/Time field)</inlineHelpText>
+    <label>Last Published</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

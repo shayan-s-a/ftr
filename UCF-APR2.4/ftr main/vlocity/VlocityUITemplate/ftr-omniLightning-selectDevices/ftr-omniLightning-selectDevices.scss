@@ -1,0 +1,216 @@
+.via-slds.via-omni {
+    // .ftr-accordion-container {
+    //     .slds-small-size--2-of-12, .slds-small-size_2-of-12 {
+    //         width: 50%;
+    //     }
+    //     .slds-medium-size--3-of-12, .slds-medium-size_3-of-12 {
+    //         width: 33.33%;
+    //     }
+    //     .slds-large-size--4-of-12, .slds-large-size_4-of-12 {
+    //         width: 25%;
+    //     }
+    //     .slds-x-large-size--4-of-12, .slds-x-large-size_4-of-12 {
+    //         width: 25%;
+    //     }
+    // }
+
+    .ftr-accordion-container {
+        width: 100%;
+        .ftr-accordion-header {
+            background: #F3F3F3;
+            padding: 5px 15px;
+            &.active {
+                .ftr-accordion-header_chevron {
+                    transform: rotate(90deg);
+                }
+            }
+            .ftr-accordion-header_chevron {
+                display: inline-block;
+            }
+            
+        }
+        .ftr-accordion-body {
+            padding: 15px;
+            &_warningMsg {
+                background: #DE7A00;
+                font-weight: bold;
+                border-radius: 3px;
+                padding: 5px 10px;
+                margin-bottom: 10px;
+                color: #181818;
+                text-align: center;
+            }
+        }
+        .ftr-accordion-body .ftr-selectableItems.vlc-slds-items--container {
+                width: 25%;
+                position: relative;
+                color: #54698d;
+                .vlc-slds-selectableItem {
+                    padding: 10px 15px;
+                }
+            }
+        // .ftr-selectableItems.vlc-slds-items--container .vlc-slds-selectableItem
+    }
+    .selectableItemTiles {
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        background-color: lightgrey;
+    }
+
+    .vlc-slds-selectableItem {
+        max-height: 168px;
+        min-height: 168px;
+        cursor: pointer !important;
+    }
+
+    #product-name {
+        position: relative;
+        display: inline-block;
+        font-size: 1rem;
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #product-name .vlc-slds_info_icon {
+        display: inline-block;
+
+        button {
+            padding-bottom: 5px;
+        }
+    }
+
+    #description-tooltip {
+        visibility: hidden;
+        width: 300px;
+        height: auto;
+        text-overflow: clip;
+        font-size: 0.75rem;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px;
+        position: absolute;
+        z-index: 10;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -90px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    #product-name:hover #description-tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #product-name #description-tooltip::after,
+    #product-name #description-tooltip::before {
+        right: 50%;
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    #product-name #description-tooltip::after {
+        border-color: rgba(0, 0, 0, 0);
+        border-top-color: #555;
+        border-width: 5px;
+        margin-top: -5px;
+    }
+
+    #product-name #description-tooltip::before {
+        border-color: rgba(0, 0, 0, 0);
+        border-top-color: #555;
+        border-width: 8px;
+        margin-top: -8px;
+    }
+
+    .vlc-slds-item--onecost {
+        text-align: center;
+
+        .slds-form__element__label{
+            width: 100%;
+        }
+        .slds-form__element__label_text{
+            font-size:14px;
+        }
+    }
+
+    .vlc-slds-item--cost {
+        text-align: center;
+
+        .slds-form__element__label{
+            width: 100%;
+        }
+    }
+    // Tile checkbox positioning
+    .tile_checkbox {
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    // Selected tiles will have a red background & border
+    .tile_selected {
+        border-color: red;
+        background-color: #F1E9E9;
+    }
+    
+    // Turns text red when tiles are selected
+    .redtext {
+        color: red;
+    }
+    
+
+}
+
+@media screen and (min-width: 30em) {
+    .via-slds.via-omni {
+        .ftr-accordion-container {
+            .ftr-accordion-body .ftr-selectableItems.vlc-slds-items--container {
+                width: 100%;
+            }
+        }   
+    }
+}
+@media screen and (min-width: 48em) {
+    .via-slds.via-omni {
+        .ftr-accordion-container {
+            .ftr-accordion-body .ftr-selectableItems.vlc-slds-items--container {
+                width: 50%;
+            }
+        }   
+    }
+}
+@media screen and (min-width: 1135px) {
+    .via-slds.via-omni {
+        .ftr-accordion-container {
+            .ftr-accordion-body .ftr-selectableItems.vlc-slds-items--container {
+                width: 33.33%;
+
+            }
+        }   
+    }
+}
+
+@media screen and (min-width: 1467px) {
+    .via-slds.via-omni {
+        .ftr-accordion-container {
+            .ftr-accordion-body .ftr-selectableItems.vlc-slds-items--container {
+                width: 25%;
+            }
+        }   
+    }
+}
+
+// small-	30em / 480px and higher
+// medium-	48em / 768px and higher
+// large-	64em / 1024px and higher

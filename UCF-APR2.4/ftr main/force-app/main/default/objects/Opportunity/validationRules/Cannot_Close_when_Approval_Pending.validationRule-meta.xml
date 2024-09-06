@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Close_when_Approval_Pending</fullName>
+    <active>true</active>
+    <description>Cannot Close when BDT approval pending</description>
+    <errorConditionFormula>AND(ISPICKVAL(StageName,&apos;Closed/Won&apos;),OR(Approval_Status__c = &apos;Pending&apos;,Approval_Status__c = &apos;Approval Not Submitted&apos;))</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Can&apos;t select Closed/Won when BDT/ICB approval Pending</errorMessage>
+</ValidationRule>

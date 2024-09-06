@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_For_Approval_Enhanced</fullName>
+    <availability>online</availability>
+    <description>Submit MDU Proposal Options for approval</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Submit For Approval (Enhanced)</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/flow/Screen_Flow_MDU_Proposal_Option_Approval_Flow?VarT_OpptyId={!Opportunity.Id}&amp;retUrl=/{!Opportunity.Id}</url>
+</WebLink>

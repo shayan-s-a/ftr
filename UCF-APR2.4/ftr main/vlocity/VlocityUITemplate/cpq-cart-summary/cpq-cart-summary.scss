@@ -1,0 +1,13 @@
+/*** CPQ THEME VARIABLES ***/
+@import "cpq-theme-variables";
+
+/* $cpq-namespace is defined in cpq-base-variables */
+$namespace: $cpq-namespace;
+
+.vlocity {
+    &.via-slds {
+        .#{$namespace}-cart-summary {
+            
+        }
+    }
+}

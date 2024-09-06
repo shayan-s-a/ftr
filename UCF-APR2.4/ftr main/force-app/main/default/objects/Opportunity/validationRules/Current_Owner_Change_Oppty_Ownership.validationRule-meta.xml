@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Owner_Change_Oppty_Ownership</fullName>
+    <active>true</active>
+    <description>Only current owner can change Community Connections Opportunity ownership</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &apos;Community_Connections&apos;, /* Community Connections
+*/
+ISCHANGED( OwnerId ),
+NOT(
+OR(
+PRIORVALUE(OwnerId) = $User.Id,
+$UserRole.DeveloperName = &apos;Multifamily_Leadership&apos;, /* Jack Campbell and his role */
+$Profile.Id = &quot;00eE000000126tW&quot;, /* Frontier Auditor */
+$Profile.Id = &quot;00e40000000nYck&quot;, /* Frontier System Administrator */
+$Profile.Id = &quot;00e40000000nTsD&quot; /* System Administrator */
+)
+)
+)</errorConditionFormula>
+    <errorMessage>You don&apos;t have permission to change this Opportunity Owner.</errorMessage>
+</ValidationRule>

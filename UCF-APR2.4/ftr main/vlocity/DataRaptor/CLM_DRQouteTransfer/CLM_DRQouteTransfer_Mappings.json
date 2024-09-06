@@ -1,0 +1,33 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "Formula",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Formula",
+        "%vlocity_namespace%__FormulaOrder__c": 1,
+        "%vlocity_namespace%__FormulaResultPath__c": "CombinedQuotes",
+        "%vlocity_namespace%__Formula__c": "LISTMERGE(\"Id\", LIST(VlocityQuotes),LIST(Quotes))",
+        "%vlocity_namespace%__GlobalKey__c": "09860af3-e662-5e0f-477c-a7e2579daea6",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "CLM_DRQouteTransferCustom6009",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "CLM_DRQouteTransfer",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "CombinedQuotes",
+        "%vlocity_namespace%__GlobalKey__c": "1aa3238c-5eda-d0d6-0b17-041ca5d66ba3",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "CombinedQuotes",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "CLM_DRQouteTransferCustom1488",
+        "%vlocity_namespace%__TransformValuesMap__c": "{\"\":\"\"}",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "CLM_DRQouteTransfer",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

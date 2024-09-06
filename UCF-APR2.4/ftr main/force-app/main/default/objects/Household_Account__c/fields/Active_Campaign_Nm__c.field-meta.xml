@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Campaign_Nm__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Most recent campaign that this lead has been attributed to. Each lead can only be mapped to one unique campaign at a time</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Most recent campaign that this lead has been attributed to. Each lead can only be mapped to one unique campaign at a time</inlineHelpText>
+    <label>Active Campaign Name</label>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Household Accounts</relationshipLabel>
+    <relationshipName>Household_Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

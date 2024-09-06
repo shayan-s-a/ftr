@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ucf_Identifying_Location__c</fullName>
+    <externalId>false</externalId>
+    <label>Identifying Location</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales Office</fullName>
+                <default>false</default>
+                <label>Sales Office</label>
+            </value>
+            <value>
+                <fullName>Administration Office</fullName>
+                <default>false</default>
+                <label>Administration Office</label>
+            </value>
+            <value>
+                <fullName>Customer Service Office</fullName>
+                <default>false</default>
+                <label>Customer Service Office</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+Hi {!Receiving_User.FirstName},
+
+            Welcome to {!Community_Name}! To get started, go to {!Community_Url}
+
+            Username: {!Receiving_User.Username}
+            Password : {!Receiving_User.PartnerUser_pwd__c}
+
+Please change your password after the first login.
+            
+
+            Thanks,
+            {!Organization.Name}

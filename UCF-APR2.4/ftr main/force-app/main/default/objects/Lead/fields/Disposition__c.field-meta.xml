@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition__c</fullName>
+    <externalId>false</externalId>
+    <label>Disposition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Disposition_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bundle (FBU, FBE or FBM)</fullName>
+                <default>false</default>
+                <label>Bundle (FBU, FBE or FBM)</label>
+            </value>
+            <value>
+                <fullName>Busy</fullName>
+                <default>false</default>
+                <label>Busy</label>
+            </value>
+            <value>
+                <fullName>CO Closed</fullName>
+                <default>false</default>
+                <label>CO Closed</label>
+            </value>
+            <value>
+                <fullName>Contacted by Vendor or Previous Caller</fullName>
+                <default>false</default>
+                <label>Contacted by Vendor or Previous Caller</label>
+            </value>
+            <value>
+                <fullName>Current Frontier Data Customer</fullName>
+                <default>false</default>
+                <label>Current Frontier Data Customer</label>
+            </value>
+            <value>
+                <fullName>Customer Moving</fullName>
+                <default>false</default>
+                <label>Customer Moving</label>
+            </value>
+            <value>
+                <fullName>Disconnected Telephone Number</fullName>
+                <default>false</default>
+                <label>Disconnected Telephone Number</label>
+            </value>
+            <value>
+                <fullName>DM (Decision Maker) Not Available</fullName>
+                <default>false</default>
+                <label>DM (Decision Maker) Not Available</label>
+            </value>
+            <value>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+                <label>Do Not Call</label>
+            </value>
+            <value>
+                <fullName>Email or Written Document Requested</fullName>
+                <default>false</default>
+                <label>Email or Written Document Requested</label>
+            </value>
+            <value>
+                <fullName>Fax Machine</fullName>
+                <default>false</default>
+                <label>Fax Machine</label>
+            </value>
+            <value>
+                <fullName>Government Office/School</fullName>
+                <default>false</default>
+                <label>Government Office/School</label>
+            </value>
+            <value>
+                <fullName>HSI</fullName>
+                <default>false</default>
+                <label>HSI</label>
+            </value>
+            <value>
+                <fullName>Language Barrier (Spanish/Other)</fullName>
+                <default>false</default>
+                <label>Language Barrier (Spanish/Other)</label>
+            </value>
+            <value>
+                <fullName>Left Live Message w/ Contact Information</fullName>
+                <default>false</default>
+                <label>Left Live Message w/ Contact Information</label>
+            </value>
+            <value>
+                <fullName>Metro E</fullName>
+                <default>false</default>
+                <label>Metro E</label>
+            </value>
+            <value>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+                <label>No Answer</label>
+            </value>
+            <value>
+                <fullName>No Longer in Business</fullName>
+                <default>false</default>
+                <label>No Longer in Business</label>
+            </value>
+            <value>
+                <fullName>Not a BSC Account (BPC, ESG, BRCH, RES)</fullName>
+                <default>false</default>
+                <label>Not a BSC Account (BPC, ESG, BRCH, RES)</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Afraid to Change</fullName>
+                <default>false</default>
+                <label>Not Interested - Afraid to Change</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Decision Maker Not Available</fullName>
+                <default>false</default>
+                <label>Not Interested - Decision Maker Not Available</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Happy w/Current Provider</fullName>
+                <default>false</default>
+                <label>Not Interested - Happy w/Current Provider</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Made Presentation</fullName>
+                <default>false</default>
+                <label>Not Interested - Made Presentation</label>
+            </value>
+            <value>
+                <fullName>Not Interested - No Presentation (No Offer)</fullName>
+                <default>false</default>
+                <label>Not Interested - No Presentation (No Offer)</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Presentation Made</fullName>
+                <default>false</default>
+                <label>Not Interested - Presentation Made</label>
+            </value>
+            <value>
+                <fullName>Not Interested - Price/Too Expensive</fullName>
+                <default>false</default>
+                <label>Not Interested - Price/Too Expensive</label>
+            </value>
+            <value>
+                <fullName>Pending PUC Complaint</fullName>
+                <default>false</default>
+                <label>Pending PUC Complaint</label>
+            </value>
+            <value>
+                <fullName>POM</fullName>
+                <default>false</default>
+                <label>POM</label>
+            </value>
+            <value>
+                <fullName>Scheduled Callback No Presentation (No Offer)</fullName>
+                <default>false</default>
+                <label>Scheduled Callback No Presentation (No Offer)</label>
+            </value>
+            <value>
+                <fullName>Service/Billing Issue</fullName>
+                <default>false</default>
+                <label>Service/Billing Issue</label>
+            </value>
+            <value>
+                <fullName>TV (Dish Network)</fullName>
+                <default>false</default>
+                <label>TV (Dish Network)</label>
+            </value>
+            <value>
+                <fullName>Under Contract (1-3 mo.), (3-6 mo.), (6-12 mo.), (1+ years)</fullName>
+                <default>false</default>
+                <label>Under Contract (1-3 mo.), (3-6 mo.), (6-12 mo.), (1+ years)</label>
+            </value>
+            <value>
+                <fullName>Voice (AccessLines, Ala Carte Features)</fullName>
+                <default>false</default>
+                <label>Voice (AccessLines, Ala Carte Features)</label>
+            </value>
+            <value>
+                <fullName>Voicemail - Left Message</fullName>
+                <default>false</default>
+                <label>Voicemail - Left Message</label>
+            </value>
+            <value>
+                <fullName>Wrong Number</fullName>
+                <default>false</default>
+                <label>Wrong Number</label>
+            </value>
+            <value>
+                <fullName>Outside of FTR footprint</fullName>
+                <default>false</default>
+                <label>Outside of FTR footprint</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sale Opportunity</controllingFieldValue>
+            <valueName>Bundle (FBU, FBE or FBM)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Opportunity</controllingFieldValue>
+            <valueName>HSI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Opportunity</controllingFieldValue>
+            <valueName>Metro E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Opportunity</controllingFieldValue>
+            <valueName>POM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Opportunity</controllingFieldValue>
+            <valueName>TV (Dish Network)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Opportunity</controllingFieldValue>
+            <valueName>Voice (AccessLines, Ala Carte Features)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <valueName>Contacted by Vendor or Previous Caller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <valueName>Customer Moving</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <valueName>Government Office/School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>No Longer in Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Not Interested - Afraid to Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Not Interested - Decision Maker Not Available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Not Interested - Happy w/Current Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Not Interested - Made Presentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Not Interested - No Presentation (No Offer)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <valueName>Not Interested - Presentation Made</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Not Interested - Price/Too Expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total Refusal</controllingFieldValue>
+            <valueName>Under Contract (1-3 mo.), (3-6 mo.), (6-12 mo.), (1+ years)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <valueName>CO Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <valueName>Current Frontier Data Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <valueName>Disconnected Telephone Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <valueName>Do Not Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <valueName>Fax Machine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Language Barrier (Spanish/Other)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <valueName>Not a BSC Account (BPC, ESG, BRCH, RES)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <valueName>Pending PUC Complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <valueName>Service/Billing Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unworkable</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <valueName>Wrong Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Finalized Record</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Busy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Finalized Record</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>DM (Decision Maker) Not Available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Finalized Record</controllingFieldValue>
+            <valueName>Email or Written Document Requested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Finalized Record</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Left Live Message w/ Contact Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Finalized Record</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>No Answer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Finalized Record</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Scheduled Callback No Presentation (No Offer)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Finalized Record</controllingFieldValue>
+            <controllingFieldValue>1st Attempt Call</controllingFieldValue>
+            <controllingFieldValue>2nd Attempt Call</controllingFieldValue>
+            <controllingFieldValue>3rd Attempt Call</controllingFieldValue>
+            <valueName>Voicemail - Left Message</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

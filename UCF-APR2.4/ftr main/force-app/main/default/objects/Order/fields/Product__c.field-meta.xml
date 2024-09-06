@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Cloud Managed Solutions</fullName>
+                <default>false</default>
+                <label>Cloud Managed Solutions</label>
+            </value>
+            <value>
+                <fullName>CMS - Existing or BYOA</fullName>
+                <default>false</default>
+                <label>CMS - Existing or BYOA</label>
+            </value>
+            <value>
+                <fullName>CMS - New or Upgrade Ethernet</fullName>
+                <default>false</default>
+                <label>CMS - New or Upgrade Ethernet</label>
+            </value>
+            <value>
+                <fullName>CMS - New or Upgrade FiOS/HSI</fullName>
+                <default>false</default>
+                <label>CMS - New or Upgrade FiberOptic/HSI</label>
+            </value>
+            <value>
+                <fullName>Data (Only)</fullName>
+                <default>false</default>
+                <label>Data (Only)</label>
+            </value>
+            <value>
+                <fullName>EIA</fullName>
+                <default>false</default>
+                <label>EIA</label>
+            </value>
+            <value>
+                <fullName>E-LAN</fullName>
+                <default>false</default>
+                <label>E-LAN</label>
+            </value>
+            <value>
+                <fullName>E-LAN + EIA</fullName>
+                <default>false</default>
+                <label>E-LAN + EIA</label>
+            </value>
+            <value>
+                <fullName>E-Reach</fullName>
+                <default>false</default>
+                <label>E-Reach</label>
+            </value>
+            <value>
+                <fullName>EVPL</fullName>
+                <default>false</default>
+                <label>EVPL</label>
+            </value>
+            <value>
+                <fullName>Frontier AnyWare UCaaS - BYOA</fullName>
+                <default>false</default>
+                <label>Existing BB/FiberOptic or BYOA</label>
+            </value>
+            <value>
+                <fullName>FAW 2.5</fullName>
+                <default>false</default>
+                <label>FAW 2.5</label>
+            </value>
+            <value>
+                <fullName>FAW 3.5</fullName>
+                <default>false</default>
+                <label>FAW 3.5</label>
+            </value>
+            <value>
+                <fullName>FBH VOIP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>FBH VOIP</label>
+            </value>
+            <value>
+                <fullName>Frontier AnyWare UCaaS</fullName>
+                <default>false</default>
+                <label>Frontier AnyWare UCaaS</label>
+            </value>
+            <value>
+                <fullName>Frontier Business Hosted VOIP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Frontier Business Hosted VOIP</label>
+            </value>
+            <value>
+                <fullName>IP Connect</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IP Connect</label>
+            </value>
+            <value>
+                <fullName>Managed Enterprise WiFi - Existing BB/FiOS or BYOA</fullName>
+                <default>false</default>
+                <label>Managed Enterprise WiFi - Existing BB/FiberOptic or BYOA</label>
+            </value>
+            <value>
+                <fullName>Managed Enterprise WiFi - New or Existing Ethernet</fullName>
+                <default>false</default>
+                <label>Managed Enterprise WiFi - New or Existing Ethernet</label>
+            </value>
+            <value>
+                <fullName>Managed Enterprise WiFi - New or Upgrade BB/FiOS</fullName>
+                <default>false</default>
+                <label>Managed Enterprise WiFi - New or Upgrade BB/FiberOptic</label>
+            </value>
+            <value>
+                <fullName>Managed Firewall</fullName>
+                <default>false</default>
+                <label>Managed Firewall</label>
+            </value>
+            <value>
+                <fullName>Managed Network Services</fullName>
+                <default>false</default>
+                <label>Managed Network Services</label>
+            </value>
+            <value>
+                <fullName>Managed Security</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Managed Security</label>
+            </value>
+            <value>
+                <fullName>National ELAN</fullName>
+                <default>false</default>
+                <label>National ELAN</label>
+            </value>
+            <value>
+                <fullName>Frontier AnyWare UCaaS + Ethernet</fullName>
+                <default>false</default>
+                <label>New or Existing EIA</label>
+            </value>
+            <value>
+                <fullName>Frontier AnyWare UCaaS + Broadband</fullName>
+                <default>false</default>
+                <label>New or Upgrade BB/FiberOptic</label>
+            </value>
+            <value>
+                <fullName>Off-Net Ethernet</fullName>
+                <default>false</default>
+                <label>Off-Net Ethernet</label>
+            </value>
+            <value>
+                <fullName>Ring Central</fullName>
+                <default>false</default>
+                <label>Ring Central</label>
+            </value>
+            <value>
+                <fullName>SDWAN</fullName>
+                <default>false</default>
+                <label>SDWAN</label>
+            </value>
+            <value>
+                <fullName>SDWAN - E-Reach/Off-Net Ethernet</fullName>
+                <default>false</default>
+                <label>SDWAN - E-Reach/Off-Net Ethernet</label>
+            </value>
+            <value>
+                <fullName>SDWAN - Existing or BYOA</fullName>
+                <default>false</default>
+                <label>SDWAN - Existing or BYOA</label>
+            </value>
+            <value>
+                <fullName>SDWAN IKE</fullName>
+                <default>false</default>
+                <label>SDWAN IKE</label>
+            </value>
+            <value>
+                <fullName>SDWAN - New or Upgrade BB</fullName>
+                <default>false</default>
+                <label>SDWAN - New or Upgrade BB</label>
+            </value>
+            <value>
+                <fullName>SDWAN - New or Upgrade Ethernet</fullName>
+                <default>false</default>
+                <label>SDWAN - New or Upgrade Ethernet</label>
+            </value>
+            <value>
+                <fullName>SIP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SIP</label>
+            </value>
+            <value>
+                <fullName>Total 360</fullName>
+                <default>false</default>
+                <label>Total 360</label>
+            </value>
+            <value>
+                <fullName>Voice  (Only or Bundle)</fullName>
+                <default>false</default>
+                <label>Voice  (Only or Bundle)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CPE</controllingFieldValue>
+            <valueName>Total 360</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>SDWAN - E-Reach/Off-Net Ethernet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>SDWAN - Existing or BYOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>SDWAN IKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>SDWAN - New or Upgrade BB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>SDWAN - New or Upgrade Ethernet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier AnyWare UCaaS</controllingFieldValue>
+            <controllingFieldValue>UCaaS/UCF</controllingFieldValue>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>Frontier AnyWare UCaaS - BYOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier AnyWare UCaaS</controllingFieldValue>
+            <valueName>Frontier AnyWare UCaaS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier AnyWare UCaaS</controllingFieldValue>
+            <controllingFieldValue>UCaaS/UCF</controllingFieldValue>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>Managed Network Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier AnyWare UCaaS</controllingFieldValue>
+            <controllingFieldValue>UCaaS/UCF</controllingFieldValue>
+            <valueName>Frontier AnyWare UCaaS + Ethernet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier AnyWare UCaaS</controllingFieldValue>
+            <controllingFieldValue>UCaaS/UCF</controllingFieldValue>
+            <valueName>Frontier AnyWare UCaaS + Broadband</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Enterprise WiFi</controllingFieldValue>
+            <valueName>Managed Enterprise WiFi - Existing BB/FiOS or BYOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Enterprise WiFi</controllingFieldValue>
+            <valueName>Managed Enterprise WiFi - New or Existing Ethernet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Enterprise WiFi</controllingFieldValue>
+            <valueName>Managed Enterprise WiFi - New or Upgrade BB/FiOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Services</controllingFieldValue>
+            <valueName>Cloud Managed Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Services</controllingFieldValue>
+            <valueName>Managed Firewall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier Anyware Mitel Hosted</controllingFieldValue>
+            <valueName>FAW 2.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frontier Anyware Mitel Hosted</controllingFieldValue>
+            <valueName>FAW 3.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice/Data/TV</controllingFieldValue>
+            <valueName>Data (Only)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voice/Data/TV</controllingFieldValue>
+            <valueName>Voice  (Only or Bundle)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>EIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>E-LAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>E-LAN + EIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>E-Reach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>EVPL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>National ELAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <valueName>Off-Net Ethernet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet</controllingFieldValue>
+            <controllingFieldValue>Ring Central</controllingFieldValue>
+            <valueName>Ring Central</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

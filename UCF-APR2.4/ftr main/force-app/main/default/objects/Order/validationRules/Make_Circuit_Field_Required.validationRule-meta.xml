@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Make_Circuit_Field_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+AND(
+NOT( ispickval(Product_Type__c, &apos;SDWAN&apos;)),
+OR( 
+Record_Type_Ids__c = &apos;Disconnect Order&apos;, 
+Record_Type_Ids__c = &apos;Change Order&apos;, 
+Record_Type_Ids__c = &apos;Upgrade Order&apos;, 
+Record_Type_Ids__c = &apos;Move Order&apos;),ISBLANK(Circuit__c)
+),
+OR(
+NOT( ispickval(Product_Type__c, &apos;Ring Central&apos;)),
+NOT( Record_Type_Ids__c = &apos;Disconnect Order&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Circuit__c</errorDisplayField>
+    <errorMessage>Please enter Circuit #</errorMessage>
+</ValidationRule>

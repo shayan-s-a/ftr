@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General</fullName>
+    <active>true</active>
+    <label>General</label>
+    <picklistValues>
+        <picklist>Business_Unit__c</picklist>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Goal_Strategic_Initiative__c</picklist>
+        <values>
+            <fullName>Increase Revenue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandatory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reduce Expense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Run the Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Business_Unit__c</picklist>
+        <values>
+            <fullName>ENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Departments__c</picklist>
+        <values>
+            <fullName>Business - Alt Channels Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Enterprise Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Enterprise Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Managed Assurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Managed Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - New System%2FTool Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Product and Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - SMB Product and Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Sales Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business - Vendor Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Systems__c</picklist>
+        <values>
+            <fullName>DPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gigaverse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_This_Fast_Track_Request__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Type__c</picklist>
+        <values>
+            <fullName>Brand %28Naming for new Products%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitive Insights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metrics %26 Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product %28includes new%2C update to existing%2C offer %28pricing%29%2C promotion%2Cetc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Support Materials %28Flyers%2C Yard Signs%2C Job Aids%2C Scribes%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

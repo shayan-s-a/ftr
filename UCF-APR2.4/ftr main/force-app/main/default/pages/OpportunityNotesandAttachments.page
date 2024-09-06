@@ -1,0 +1,632 @@
+<apex:page id="pgOpportunity" tabstyle="Opportunity" standardcontroller="Opportunity" extensions="Opportunity_Controller"
+    action="{!retrieveAccountDetails}" doctype="html-5.0" applyBodyTag="true" lightningStylesheets="true">
+    <apex:slds rendered="true" />
+    <style type="text/css">
+        .custPopup1 {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+        displays in the center of the screen. First set the width. Then set
+        margin-left to negative half of what the width is. You can add
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            position: fixed;
+            top: 20%;
+        }
+
+        .custPopup2 {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+        displays in the center of the screen. First set the width. Then set
+        margin-left to negative half of what the width is. You can add
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top: 400px;
+        }
+
+        .popupBackground1 {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+    </style>
+
+    <style>
+        .display_false {
+            display: none;
+        }
+
+        #close {
+            //padding:1px;
+            border: 1.5px solid DarkGray;
+            background-color: WhiteSmoke; //border-radius:1.5px;
+            font-weight: bold;
+            font-size: 95%;
+            border-bottom: 1px solid grey;
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            height: 23.5px;
+        }
+
+        .approved {
+            background-color: #A1F78D !important;
+        }
+
+        .rejected {
+            background-color: #FB8A8C !important;
+        }
+
+        .pending {
+            background-color: #FFD74B !important;
+        }
+
+        .proposal-button {
+            margin-left: -80px !important;
+        }
+
+        .generate-button {
+            margin-left: -130px !important;
+        }
+
+
+        #blanket,
+        #proposal-blanket,
+        #generate-blanket,
+        #blanketSterling,
+        #blanketSFAQuote,
+        #schedule-blanket {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+        #popUpDiv,
+        #popUpDivSterling,
+        #popUpDivSFAQuote {
+            float: center;
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+        displays in the center of the screen. First set the width. Then set 
+        margin-left to negative half of what the width is. You can add 
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+        }
+
+        #proposalPopDiv,
+        #schedulePopDiv {
+            /* position:absolute;
+        background-color:#eeeeee;
+        width:40%;
+        height:330px;  //the CRT form portion
+        z-index: 22; */
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+        displays in the center of the screen. First set the width. Then set 
+        margin-left to negative half of what the width is. You can add 
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top: 600px;
+        }
+
+        #generatePopDiv {
+            position: absolute;
+            background-color: #eeeeee;
+            width: 40%;
+            height: 140px; //the CRT form portion
+            z-index: 22;
+        }
+
+        .thLeft {
+            text-align: right;
+            font-size: 9pt;
+            width: 25;
+        }
+
+        .alignup {
+            vertical-align: top;
+        }
+
+        .alignmid {
+            vertical-align: middle;
+            text-align: right;
+        }
+
+        .proposalInfo {
+            width: 190%;
+            height: 50px;
+        }
+
+        .proposalInfo2 {
+            width: 245%;
+            height: 50px;
+        }
+
+        .scheduleInfo1 {
+            margin-left: -140px;
+            width: 67%;
+            height: 15px;
+        }
+
+        .scheduleInfo2 {
+            margin-left: 0px;
+            width: 67%;
+            height: 15px;
+        }
+
+        .proposal-label {
+            width: 200%;
+            height: 15px;
+        }
+
+        .schedule-label {
+            width: 200%;
+        }
+
+        #datePicker {
+            z-index: 10000;
+        }
+
+        .custPopup {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+        displays in the center of the screen. First set the width. Then set 
+        margin-left to negative half of what the width is. You can add 
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: 30px;
+            top: -445px;
+        }
+
+        .popupBackground {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+        .submit-button {
+            margin-left: 20px;
+            width: 48px;
+            height: 23px;
+        }
+    </style>
+    <script type="text/javascript">
+        var __sfdcSessionId = '{!GETSESSIONID()}';
+    </script>
+    <script src="/soap/ajax/28.0/connection.js" type="text/javascript"></script>
+    <script src="/soap/ajax/28.0/apex.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //jquery$ = jQuery.noConflict();
+        j$ = jQuery.noConflict();
+
+        function toggle(div_id, id) {
+            var el = document.getElementById(div_id);
+            if (el.style.display == 'none') { el.style.display = 'block'; }
+            else { el.style.display = 'none'; }
+        }
+
+        function toggle(div_id) {
+            var el = document.getElementById(div_id);
+            if (el.style.display == 'none') { el.style.display = 'block'; }
+            else { el.style.display = 'none'; }
+        }
+
+        function blanket_size(popUpDivVar, id) {
+            if (typeof window.innerWidth != 'undefined') {
+                viewportheight = window.innerHeight;
+            } else {
+                viewportheight = document.documentElement.clientHeight;
+            }
+            if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
+                blanket_height = viewportheight;
+            } else {
+                if (document.body.parentNode.clientHeight > document.body.parentNode.scrollHeight) {
+                    blanket_height = document.body.parentNode.clientHeight;
+                } else {
+                    blanket_height = document.body.parentNode.scrollHeight;
+                }
+            }
+            var blanket = document.getElementById('blanket');
+
+            blanket.style.height = '110%'; //the background portion  
+            // blanket.style.height = blanket_height + 'px';
+
+            var popUpDiv = document.getElementById(popUpDivVar);
+            //popUpDiv_height=blanket_height/2-150;//150 is half popups height
+            //popUpDiv_height='330px';
+            //popUpDiv.style.top =  '400px';
+
+            //blanket.style.top =  '25px';
+            blanket.style.position = 'Absolute';
+            //popUpDiv.style.top = popUpDiv_height + 'px';
+        }
+
+        function blanket_size(popUpDivVar) {
+            if (typeof window.innerWidth != 'undefined') {
+                viewportheight = window.innerHeight;
+            } else {
+                viewportheight = document.documentElement.clientHeight;
+            }
+            if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
+                blanket_height = viewportheight;
+            } else {
+                if (document.body.parentNode.clientHeight > document.body.parentNode.scrollHeight) {
+                    blanket_height = document.body.parentNode.clientHeight;
+                } else {
+                    blanket_height = document.body.parentNode.scrollHeight;
+                }
+            }
+            var blanket = document.getElementById('blanket');
+            blanket.style.height = '115%'; //the background portion  
+            //blanket.style.height = blanket_height + 'px';
+
+            var popUpDiv = document.getElementById(popUpDivVar);
+            popUpDiv.style.top = top + 'px';
+            //blanket.style.top =  '25px';
+            //blanket.style.left = '30%';
+            blanket.style.position = 'Absolute';
+            //popUpDiv.style.top = popUpDiv_height + 'px';
+        }
+
+        function window_pos(popUpDivVar, id) {
+            if (typeof window.innerWidth != 'undefined') {
+                viewportwidth = window.innerHeight;
+            } else {
+                viewportwidth = document.documentElement.clientHeight;
+            }
+            if ((viewportwidth > document.body.parentNode.scrollWidth) && (viewportwidth > document.body.parentNode.clientWidth)) {
+                window_width = viewportwidth;
+            } else {
+                if (document.body.parentNode.clientWidth > document.body.parentNode.scrollWidth) {
+                    window_width = document.body.parentNode.clientWidth;
+                } else {
+                    window_width = document.body.parentNode.scrollWidth;
+                }
+            }
+
+            var popUpDivSFAQuote = document.getElementById(popUpDivSFAQuote);
+            window_width = window_width / 2 - 150;//150 is half popups width
+            popUpDivSFAQuote.style.left = '16%';
+
+            //popUpDiv.style.left = window_width + 'px';
+        }
+
+        function window_pos(popUpDivVar) {
+
+            var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+            var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+            var top = ((height / 2) - (300)) + window.scrollY + dualScreenTop; //Assuming 300 is popup window height as its dynamic and defined as a static value.
+
+            var popUpDiv = document.getElementById(popUpDivVar);
+            popUpDiv.style.top = top + 'px';
+
+            if (typeof window.innerWidth != 'undefined') {
+                viewportwidth = window.innerHeight;
+            } else {
+                viewportwidth = document.documentElement.clientHeight;
+            }
+            if ((viewportwidth > document.body.parentNode.scrollWidth) && (viewportwidth > document.body.parentNode.clientWidth)) {
+                window_width = viewportwidth;
+            } else {
+                if (document.body.parentNode.clientWidth > document.body.parentNode.scrollWidth) {
+                    window_width = document.body.parentNode.clientWidth;
+                } else {
+                    window_width = document.body.parentNode.scrollWidth;
+                }
+            }
+            window_width = window_width / 2 - 150;//150 is half popups width
+            //popUpDiv.style.left = window_width + 'px';
+        }
+
+        function popup(windowname, id, icb) {
+            if (icb == 'true') {
+                //updateSterlingQuote(id);
+                setCurrentProduct(id);
+                blanket_size(windowname, id);
+                window_pos(windowname, id);
+                toggle('blanket', id);
+                toggle(windowname, id);
+                //alert(windowname);
+                return false;
+            }
+            else {
+                updateSterlingQuotewithoutpopup(id);
+            }
+        }
+
+        function popupSterling(windowname, id) {
+
+            //updateSterlingQuote(id);
+            blanket_size(windowname, id);
+            window_pos(windowname, id);
+            toggle('blanketSterling', id);
+            toggle(windowname, id);
+
+            return false;
+        }
+
+        function popupSFAQuote(windowname, id) {
+            //updateSterlingQuote(id);
+            blanket_size(windowname, id);
+            window_pos(windowname, id);
+            toggle('blanketSFAQuote', id);
+            toggle(windowname, id);
+
+            return false;
+        }
+
+        function submitForApproval(id) {
+            submitforapproval(id);
+        }
+
+        function proposalpopup(windowname) {
+            alert(windowname);
+            blanket_size(windowname);
+            alert('111111111');
+            window_pos(windowname);
+            alert('2222');
+            toggle('blanket');
+            alert('333333333');
+            toggle(windowname);
+            alert('44444');
+            return false;
+        }
+
+        //Giri 23/04/2014 Start
+        function schedulepopup(windowname) {
+            if ({!IsContractExistForAccount        
+} == false) {
+            blanket_size(windowname);
+            window_pos(windowname);
+            toggle('generate-blanket');
+            toggle(windowname);
+            return false;
+        }
+            else {
+            return true;
+        }       
+        }
+        //Giri 23/04/2014 End.
+        function SycnUnSyncDeleteClick(oper, Quoteid) {
+            if (oper == 'Sync') {
+                actionSycnClick(Quoteid);
+            }
+            if (oper == 'UnSync') {
+                actionUnSycnClick(Quoteid);
+            }
+            if (oper == 'QuoteDel') {
+                actionQuoteDeleteClick(Quoteid);
+            }
+            return false;
+        }
+
+        function handleVlocityQuoteAction(action, quoteId) {
+            if (action == 'Delete')
+                actionDeleteVlocityQuote(quoteId);
+            else if (action == 'Sync')
+                actionSyncVlocityQuote(quoteId);
+            else if (action == 'UnSync')
+                actionUnSyncVlocityQuote(quoteId);
+            return false;
+        }
+
+        function productDeleteClick(Record_Type, Quoteid) {
+            alert(Record_Type);
+            if (Record_Type == 'SFA') {
+                actionProductDeleteClick(Quoteid);
+                return false;
+            }
+            else if (Record_Type == 'Sterling Line Item') {
+                actionProductDeleteClick(Quoteid);
+                return true;
+            }
+        }
+
+
+        function selectSecondElement() {
+            var elem = document.getElementById("{!$Component.updatearea.popupblock.popupblocksection.popupregion}");
+            elem.selectedIndex = "0";
+        }
+
+        function submitForApproval(id) {
+            submitforapproval(id);
+        }
+
+        function checkLimit(limitField, limitCount) {
+            var limitNum = 150;
+            if (limitField.value.length > limitNum) {
+                limitField.value = limitField.value.substring(0, limitNum);
+            } else {
+                limitCount.value = limitNum - limitField.value.length;
+            }
+        }
+        //------------added-----------
+        function openNewTab() {
+            var win = window.open("http://sift.corp.ftr.com/", '_blank');
+            win.focus();
+        }
+        j$(".speeddropdown_0").change(function () {
+            var tempSelect = j$(".speeddropdown_0")[0];
+            alert(tempSelect.val());
+        });
+
+    </script>
+    
+    <apex:form >
+    <apex:pageblock id="attPB" title="Notes & Attachments">
+                    <style>
+                        @page {
+                            margin-top: 15%;
+                            @top-center {
+                                content: element(header1);
+                            }
+
+                            @bottom-right {
+                                content: "Page: " counter(page) " / " counter(pages);
+                                font-size: 80%;
+                            }
+                        }
+                    </style>
+
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="New Note" action="{!redirectToNewNote}" />
+                        <apex:commandButton value="Attach File" action="{!redirectToNewAttachment}" />
+                        <apex:commandButton value="Create Proposal" action="{!showPopup}" rerender="tstpopup" />
+                    </apex:pageBlockButtons>
+                    <apex:outputpanel rendered="{!Attachments.size != 0}">
+                        <apex:pageblocktable value="{!Attachments}" var="Nitem">
+                            <apex:column headerValue="Action" headerClass="headerRow">
+                                <apex:outputLink styleClass="actionLink" target="_blank" value="{!if(LEFT(Nitem.Id, 3) = '00P', '/servlet/servlet.FileDownload?file='&Nitem.Id, '/'&Nitem.Id)}">View</apex:outputLink>
+                                <span>&nbsp;|&nbsp;</span>
+                                <apex:commandLink status="delStatus" reRender="attPB" action="{!deleteAttachment}" title="Delete Attachment" value="Del">
+                                    <apex:param value="{!Nitem.Id}" name="delAttId" assignTo="{!delAttId}" />
+                                </apex:commandLink>
+                                <apex:actionStatus id="delStatus">
+                                    <apex:facet name="start">
+                                        <apex:image url="{!URLFOR($Resource.Animation_Loading)}" />
+                                    </apex:facet>
+                                </apex:actionStatus>
+                            </apex:column>
+                            <apex:column headerValue="Type" headerClass="headerRow">
+                                <apex:outputText value="{!Nitem.typeOf}" /></apex:column>
+                            <apex:column headerValue="Title" headerClass="headerRow">
+                                <apex:outputLink target="_top" value="{!Nitem.urlRedirection}">{!Nitem.Name}</apex:outputLink>
+                            </apex:column>
+                            <apex:column headerValue="Last Modified" headerClass="headerRow">
+                                <apex:outputText value="{!Nitem.LastModifiedDate}" /></apex:column>
+                            <apex:column headerValue="Created By" headerClass="headerRow">
+                                <apex:outputLink target="_top" value="/{!Nitem.CreatedById}">{!Nitem.createByName}</apex:outputLink>
+                            </apex:column>
+                        </apex:pageblocktable>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore">
+                            <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(attHasPrevious)}" />
+                            <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!attHasPrevious}" />
+                            <apex:commandLink status="attFetchStatus" reRender="attPB" action="{!attPrevious}" title="Previous Page" value="Previous Page"
+                                rendered="{!attHasPrevious}" />
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(attHasPrevious)}">Previous Page</apex:outputPanel>
+                            &nbsp;({!(attPageNumber * attPageSize)+1-attPageSize}-{!IF((attPageNumber * attPageSize)>attNoOfRecords, attNoOfRecords,(attPageNumber
+                            * attPageSize))} of {!attNoOfRecords})&nbsp;
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(attHasNext)}">Next Page</apex:outputPanel>
+                            <apex:commandLink status="attFetchStatus" reRender="attPB" title="Next Page" value="Next Page" rendered="{!attHasNext}" action="{!attNext}"
+                            />&nbsp;
+                            <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!attHasNext}" />
+                            <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(attHasNext)}" />
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore" style="color:#4AA02C;font-weight:bold;">
+                            <apex:actionStatus id="attFetchStatus" startText="Fetching..." stopText="" />
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputpanel rendered="{!Attachments.size == 0}">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0" style="margin-left:-6px;margin-right:-15px;">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <th scope="col" class="noRowsHeader" style="font-weight:normal;font-size:1em;">No records to display</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputpanel>
+
+                </apex:pageblock>
+        </apex:form>
+    <apex:form >
+
+            <apex:outputPanel id="tstpopup">
+                <apex:outputPanel styleClass="popupBackground1" layout="block" rendered="{!displayPopUp}" />
+                <apex:outputPanel styleClass="custPopup1" layout="block" rendered="{!displayPopUp}">
+                    <apex:pageBlock title="Information For Proposal" id="popupblockk">
+                        <apex:pageblocksection id="popupblocksection0A" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:outputText styleClass="proposal-label" value="">Proposal Type:</apex:outputText>
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection0B" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:selectList value="{!selectedProposalType}" size="1" required="true">
+                                <apex:selectOptions value="{!proposalTypes}" />
+                            </apex:selectList>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection1" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:outputText styleClass="proposal-label" value="Your Company's current communications capabilities include:" />
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection2" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:inputTextArea styleClass="proposalInfo" value="{!proposalCompany}" onkeydown="checkLimit(this,this.form.countdown);"
+                                onkeyup="checkLimit(this,this.form.countdown);" onchange="checkLimit(this,this.form.countdown);"
+                            />
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection3" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:outputText styleClass="proposal-label" value="Your immediate and future communications needs are:" />
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection4" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:inputTextArea styleClass="proposalInfo2" value="{!proposalFuture}" onkeydown="checkLimit(this,this.form.countdown);"
+                                onkeyup="checkLimit(this,this.form.countdown);" onchange="checkLimit(this,this.form.countdown);"
+                            />
+                        </apex:pageblocksection>
+                        <apex:outputLabel value="A quote needs to be synced to generate proposal" rendered="{!showNoSyncError && NOT(showApprovedProductsNonZero)}"
+                        />
+                        <apex:outputLabel value="Approval Pending-Product(S) Not Eligible For Proposal At This Time" rendered="{!showApprovedProductsNonZero && NOT(showNoSyncError)}"
+                        />
+                    </apex:pageBlock>
+                    <br/>
+                    <br/>
+                    <br/> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:commandButton value="Generate" styleClass="proposal-button" action="{!generateproposalattachment}" rerender="proposalpopup"
+                        rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}" />
+                    <apex:commandButton value="Close" action="{!closePopup}" rerender="tstpopup" />
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:form>
+</apex:page>

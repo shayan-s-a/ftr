@@ -1,0 +1,74 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "21439732-90f9-fa75-79a8-c8667a2a429a",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "ELAN M6 DPI TN",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/ELAN M6 DPI TN",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "ced14ef8-c149-f0d3-0036-2b193da064ab",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/ced14ef8-c149-f0d3-0036-2b193da064ab",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "ced14ef8-c149-f0d3-0036-2b193da064ab",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "M6 DPI",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/M6 DPI/21439732-90f9-fa75-79a8-c8667a2a429a/Product2/ced14ef8-c149-f0d3-0036-2b193da064ab"
+    },
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "6da4a5ee-35df-2145-c585-4b39b9340334",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "ELAN M6",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/ELAN M6",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "ced14ef8-c149-f0d3-0036-2b193da064ab",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/ced14ef8-c149-f0d3-0036-2b193da064ab",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "ced14ef8-c149-f0d3-0036-2b193da064ab",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "ELAN M6",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/ELAN M6/6da4a5ee-35df-2145-c585-4b39b9340334/Product2/ced14ef8-c149-f0d3-0036-2b193da064ab"
+    },
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"ATTR_TECH_IS_PAERTNERED\",\"left-side-name\":\"Tech_Is_Partnered\",\"left-side-type\":\"attribute\",\"left-side-category\":\"Technical Attributes\",\"left-side-datatype\":\"Text\",\"op\":\"=\",\"right-side\":\"true\"}",
+        "%vlocity_namespace%__GlobalKey__c": "ae9b31c3-8d19-67e7-0bac-7e41027d1cdb",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "ELAN M6 Order",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/ELAN M6 Order",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "ced14ef8-c149-f0d3-0036-2b193da064ab",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/ced14ef8-c149-f0d3-0036-2b193da064ab",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "ced14ef8-c149-f0d3-0036-2b193da064ab",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "M6 ELAN EVC Order",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/M6 ELAN EVC Order/ae9b31c3-8d19-67e7-0bac-7e41027d1cdb/Product2/ced14ef8-c149-f0d3-0036-2b193da064ab"
+    }
+]

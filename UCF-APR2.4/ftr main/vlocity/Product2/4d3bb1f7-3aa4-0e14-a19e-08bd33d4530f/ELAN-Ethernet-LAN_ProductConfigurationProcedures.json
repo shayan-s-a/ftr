@@ -1,0 +1,98 @@
+[
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_BANDWIDTH\":{\"actionsList\":[{\"action\":\"ASSIGN\",\"value\":\"5 Mbps\"}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "22df020d-739f-063b-d455-b7b9351ac6d3",
+        "%vlocity_namespace%__ProductGroupKey__c": "f4b6b545-0520-e046-206f-56d677a6da8f",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "TEST",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/22df020d-739f-063b-d455-b7b9351ac6d3"
+    },
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_BANDWIDTH\":{\"actionsList\":[{\"action\":\"CONSTRAIN\",\"value\":\"1 Gbps\",\"actionType\":\"exclude\"},{\"action\":\"CONSTRAIN\",\"value\":\"500 Mbps\",\"actionType\":\"exclude\"},{\"action\":\"CONSTRAIN\",\"value\":\"200 Mbps\",\"actionType\":\"exclude\"}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "d6f87d5a-8e7b-1290-4ce7-e75346da023b",
+        "%vlocity_namespace%__ProductGroupKey__c": "f4b6b545-0520-e046-206f-56d677a6da8f",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "Partner Vendor Speed",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/d6f87d5a-8e7b-1290-4ce7-e75346da023b"
+    },
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_CoS\":{\"actionsList\":[{\"action\":\"DISABLE\",\"value\":false},{\"action\":\"CONSTRAIN\",\"value\":\"Gold\",\"actionType\":\"exclude\"},{\"action\":\"CONSTRAIN\",\"value\":\"Platinum\",\"actionType\":\"exclude\"}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "805541fc-0759-bf8e-9363-f81eda956bf1",
+        "%vlocity_namespace%__ProductGroupKey__c": "f4b6b545-0520-e046-206f-56d677a6da8f",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "HBE Class of Service Test",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/805541fc-0759-bf8e-9363-f81eda956bf1"
+    },
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_ELIGBL_PARTNRD\":{\"actionsList\":[{\"action\":\"HIDE\",\"value\":true}],\"index\":0},\"ATTR_PARTNER_TIER\":{\"actionsList\":[{\"action\":\"HIDE\",\"value\":true},{\"action\":\"ASSIGN\",\"value\":\"\"}],\"index\":1},\"ATTR_TECH_JURIS\":{\"actionsList\":[{\"action\":\"DISABLE\",\"value\":false}],\"index\":2}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "59aa521f-2410-a8a7-01b4-bcdd129a2984",
+        "%vlocity_namespace%__ProductGroupKey__c": "f4b6b545-0520-e046-206f-56d677a6da8f",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "Clear Partner Tier Value",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/59aa521f-2410-a8a7-01b4-bcdd129a2984"
+    },
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_NETWORK_HBE\":{\"actionsList\":[{\"action\":\"ASSIGN\",\"value\":true}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "6bfb9f19-06a3-d004-908c-be8312a3dd40",
+        "%vlocity_namespace%__ProductGroupKey__c": "f4b6b545-0520-e046-206f-56d677a6da8f",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "ELAN HBE Flag",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/6bfb9f19-06a3-d004-908c-be8312a3dd40"
+    },
+    {
+        "%vlocity_namespace%__ActionParameters__c": "{\"ATTR_PARTNER\":{\"actionsList\":[{\"action\":\"CONSTRAIN\",\"value\":\"AT&T\",\"actionType\":\"include\"}],\"index\":0}}",
+        "%vlocity_namespace%__EntityFilterId__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "d2dea693-5de3-01e9-99dc-c3942205fe1d",
+        "%vlocity_namespace%__ProductGroupKey__c": "f4b6b545-0520-e046-206f-56d677a6da8f",
+        "%vlocity_namespace%__ProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "Name": "Partner Restriction",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__ProductConfigurationProcedure__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__ProductConfigurationProcedure__c/d2dea693-5de3-01e9-99dc-c3942205fe1d"
+    }
+]

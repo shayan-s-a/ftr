@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckAccountMasterAndCarrier</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+AND(
+ISNEW(),
+Account.RecordType.Name != &apos;Master&apos;,
+Account.RecordType.Name != &apos;Carrier Service&apos;,
+OR(
+RecordType.Name=&apos;Opportunity Lightning&apos;,
+RecordType.Name=&apos;Partner Opportunity - New&apos;
+)
+)
+
+,
+AND(
+ISCHANGED(AccountId),
+Account.RecordType.Name != &apos;Master&apos;,
+Account.RecordType.Name != &apos;Carrier Service&apos;,
+OR(
+RecordType.Name=&apos;Opportunity Lightning&apos;,
+RecordType.Name=&apos;Partner Opportunity - New&apos;
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>The associated Account must be a Master account or Carrier Service account</errorMessage>
+</ValidationRule>

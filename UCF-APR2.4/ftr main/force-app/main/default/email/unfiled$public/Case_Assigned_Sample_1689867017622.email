@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi,<br />
+Case #<a href="{{{Case.Link}}}">{{{Case.CaseNumber}}}</a>&nbsp;was assigned to you by {{{Sender.FirstName}}} {{{Sender.LastName}}}.<br />
+<br />
+<strong>Case Subject: </strong>{{{Case.Subject}}}<br />
+<strong>Case Description:</strong> {{{Case.Description}}}<br />
+<strong>Priority:</strong> {{{Case.Priority}}}<br />
+<strong>Created By:</strong> {{{Case.Create_By_Name__c}}}<br />
+<strong>Created On:</strong> {{{Case.CreatedDate}}}<br />
+<br />
+Thank you,<br />
+{{{Organization.Name}}}</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Bill_Review_Bill_Incorrect_Req</fullName>
+    <active>true</active>
+    <description>If Billing Correct = No then Incorrect Billing is a required field.</description>
+    <errorConditionFormula>AND(
+
+ISPICKVAL(Billing_Correct__c ,&quot;No&quot;),
+
+ISPICKVAL(Bill_Incorrect_Reason__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Bill_Incorrect_Reason__c</errorDisplayField>
+    <errorMessage>If Billing Correct = No, then Bill Incorrect Reason is required.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Routing_IO_FAC__c</fullName>
+    <externalId>false</externalId>
+    <label>Special Routing IO FAC</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>D = Route other than normal</fullName>
+                <default>false</default>
+                <label>D = Route other than normal</label>
+            </value>
+            <value>
+                <fullName>E = Self Healing Loop</fullName>
+                <default>false</default>
+                <label>E = Self Healing Loop</label>
+            </value>
+            <value>
+                <fullName>F = Alternate Wire Center</fullName>
+                <default>false</default>
+                <label>F = Alternate Wire Center</label>
+            </value>
+            <value>
+                <fullName>G = Self Healing Loop via Alternate Wire Center</fullName>
+                <default>false</default>
+                <label>G = Self Healing Loop via Alternate Wire Center</label>
+            </value>
+            <value>
+                <fullName>H = Self Healing Wire Center</fullName>
+                <default>false</default>
+                <label>H = Self Healing Wire Center</label>
+            </value>
+            <value>
+                <fullName>J = Self Healing Alternate Wire Center</fullName>
+                <default>false</default>
+                <label>J = Self Healing Alternate Wire Center</label>
+            </value>
+            <value>
+                <fullName>K = Special Routing at POP/PRILOC</fullName>
+                <default>false</default>
+                <label>K = Special Routing at POP/PRILOC</label>
+            </value>
+            <value>
+                <fullName>N = N/A</fullName>
+                <default>false</default>
+                <label>N = N/A</label>
+            </value>
+            <value>
+                <fullName>1 = Avoidance</fullName>
+                <default>false</default>
+                <label>1 = Avoidance</label>
+            </value>
+            <value>
+                <fullName>2 = Diversity</fullName>
+                <default>false</default>
+                <label>2 = Diversity</label>
+            </value>
+            <value>
+                <fullName>3 = Avoidance and Diversity</fullName>
+                <default>false</default>
+                <label>3 = Avoidance and Diversity</label>
+            </value>
+            <value>
+                <fullName>4 = Self Healing Interoffice Facilities</fullName>
+                <default>false</default>
+                <label>4 = Self Healing Interoffice Facilities</label>
+            </value>
+            <value>
+                <fullName>5 = Special Routing for Interoffice Facilities</fullName>
+                <default>false</default>
+                <label>5 = Special Routing for Interoffice Facilities</label>
+            </value>
+            <value>
+                <fullName>6 = Route other than normal</fullName>
+                <default>false</default>
+                <label>6 = Route other than normal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

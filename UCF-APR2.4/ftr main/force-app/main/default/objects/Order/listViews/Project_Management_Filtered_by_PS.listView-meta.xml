@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Management_Filtered_by_PS</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>Order_Created_Date__c</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>Network_Project_Specialist__c</columns>
+    <columns>ORDER.RECORDTYPE</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Product__c</columns>
+    <columns>Add_On_Products__c</columns>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,Complete,New,Rejected to AE</value>
+    </filters>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Order.Change_Order,Order.Contract_Renewal,Order.DID_Order_Request,Order.Disconnect_Order,Order.Records_Only_Order,Order.Transfer_Ownership_Order,Order.UCaaS_Contract_Renewal_Order,Order.UCaaS_Records_Only_Order,Order.UCaaS_Transfer_of_Ownership_Order</value>
+    </filters>
+    <label>Project Management - Filtered by PS</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

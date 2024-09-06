@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_Rate_Support_Specialist__c</fullName>
+    <description>Created for E-Rate Task, Lisa Barrow</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Yes if you would like the E-Rate Support Specialist to handle this opportunity.  Select No if you want to handle it yourself.</inlineHelpText>
+    <label>E-Rate Support Specialist Requested</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

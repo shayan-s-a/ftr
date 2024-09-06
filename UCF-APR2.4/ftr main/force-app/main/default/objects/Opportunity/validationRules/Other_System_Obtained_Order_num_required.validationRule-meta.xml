@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_System_Obtained_Order_num_required</fullName>
+    <active>false</active>
+    <description>Other system Order Number Field must contain the text  if closed/Won and System is none.</description>
+    <errorConditionFormula>AND (  
+ISPICKVAL(StageName, &quot;Closed/Won&quot;),  
+ISpickval( System_the_Order_Entered_In__c, &quot;none&quot;))</errorConditionFormula>
+    <errorDisplayField>Other_System_for_Order__c</errorDisplayField>
+    <errorMessage>Other System Order number must contain text if System Order number provided by is &quot;none&quot; and Closed/Won</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ABS_Escalation_reason_field_is_req</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND
+(
+
+RecordTypeId=&quot;0120h00000086oG&quot;,
+ABS_Escalation__c ,TRUE,
+ISBLANK(TEXT ( ABS_Escalation_Reasons__c  ) )
+)</errorConditionFormula>
+    <errorMessage>If ABS Escalation check box is checked then ABS Escalation Reasons and ABS Escalation Approver fields are required.</errorMessage>
+</ValidationRule>

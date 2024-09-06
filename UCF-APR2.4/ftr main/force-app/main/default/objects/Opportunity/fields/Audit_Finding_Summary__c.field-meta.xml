@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audit_Finding_Summary__c</fullName>
+    <externalId>false</externalId>
+    <label>Audit Finding Summary</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contract/Supporting Documents Missing</fullName>
+                <default>false</default>
+                <label>Contract/Supporting Documents Missing</label>
+            </value>
+            <value>
+                <fullName>CPE Gross Margin % does not match UTACS</fullName>
+                <default>false</default>
+                <label>CPE Gross Margin % does not match UTACS</label>
+            </value>
+            <value>
+                <fullName>Invalid Order Number</fullName>
+                <default>false</default>
+                <label>Invalid Order Number</label>
+            </value>
+            <value>
+                <fullName>Net New MRR or CPE Value Incorrect</fullName>
+                <default>false</default>
+                <label>Net New MRR or CPE Value Incorrect</label>
+            </value>
+            <value>
+                <fullName>Order Cancelled</fullName>
+                <default>false</default>
+                <label>Order Cancelled</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pricing does not Match contract</fullName>
+                <default>false</default>
+                <label>Pricing does not Match contract</label>
+            </value>
+            <value>
+                <fullName>Product Entered Not on Order</fullName>
+                <default>false</default>
+                <label>Product Entered Not on Order</label>
+            </value>
+            <value>
+                <fullName>Record Update/No Sale</fullName>
+                <default>false</default>
+                <label>Record Update/No Sale</label>
+            </value>
+            <value>
+                <fullName>Sale Month Variance</fullName>
+                <default>false</default>
+                <label>Sale Month Variance</label>
+            </value>
+            <value>
+                <fullName>STATS Not Submitted</fullName>
+                <default>false</default>
+                <label>STATS Not Submitted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

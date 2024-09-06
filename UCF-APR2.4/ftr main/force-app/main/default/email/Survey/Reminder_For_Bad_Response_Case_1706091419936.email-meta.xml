@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Remind case owner to action on a case which was created due to a bad response</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Email Notification To Owner Regarding Survey Case</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>Gentle Reminder: Urgent Action Required on Survey Case</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disconnect_Reason__c</fullName>
+    <description>Used on the Disconnect case</description>
+    <externalId>false</externalId>
+    <label>Disconnect Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing - Master Summary/BTN Change</fullName>
+                <default>false</default>
+                <label>Billing - Master Summary/BTN Change</label>
+            </value>
+            <value>
+                <fullName>Closure - Business or Location</fullName>
+                <default>false</default>
+                <label>Closure - Business or Location</label>
+            </value>
+            <value>
+                <fullName>Cost Reduction - Customer Initiated</fullName>
+                <default>false</default>
+                <label>Cost Reduction - Customer Initiated</label>
+            </value>
+            <value>
+                <fullName>Downgrade - Same Products at Reduced Capacity/MRC</fullName>
+                <default>false</default>
+                <label>Downgrade - Same Products at Reduced Capacity/MRC</label>
+            </value>
+            <value>
+                <fullName>No Further Need</fullName>
+                <default>false</default>
+                <label>No Further Need</label>
+            </value>
+            <value>
+                <fullName>Non Payment - Collections</fullName>
+                <default>false</default>
+                <label>Non Payment - Collections</label>
+            </value>
+            <value>
+                <fullName>Order Entry Error - Incorrect/Missing S&amp;E</fullName>
+                <default>false</default>
+                <label>Order Entry Error - Incorrect/Missing S&amp;E</label>
+            </value>
+            <value>
+                <fullName>Port Out - Wholesale</fullName>
+                <default>false</default>
+                <label>Port Out - Wholesale</label>
+            </value>
+            <value>
+                <fullName>Pricing - Competition</fullName>
+                <default>false</default>
+                <label>Pricing - Competition</label>
+            </value>
+            <value>
+                <fullName>Renewal - Write Down</fullName>
+                <default>false</default>
+                <label>Renewal - Write Down</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Service Reliability - Repair Issues</fullName>
+                <default>false</default>
+                <label>Service Reliability - Repair Issues</label>
+            </value>
+            <value>
+                <fullName>Technology - Not Available</fullName>
+                <default>false</default>
+                <label>Technology - Not Available</label>
+            </value>
+            <value>
+                <fullName>Temporary - Seasonal/Vacation Services</fullName>
+                <default>false</default>
+                <label>Temporary - Seasonal/Vacation Services</label>
+            </value>
+            <value>
+                <fullName>Upgrade - New Products at Reduced MRC</fullName>
+                <default>false</default>
+                <label>Upgrade - New Products at Reduced MRC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

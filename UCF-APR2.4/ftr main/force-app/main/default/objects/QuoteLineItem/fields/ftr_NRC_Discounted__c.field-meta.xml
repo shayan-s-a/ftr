@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ftr_NRC_Discounted__c</fullName>
+    <description>NRC Discounted Percent</description>
+    <externalId>false</externalId>
+    <formula>((vlocity_cmt__BaseOneTimeCharge__c - vlocity_cmt__OneTimeCharge__c)/vlocity_cmt__BaseOneTimeCharge__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ftr NRC Discounted</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Percent</type>
+</CustomField>

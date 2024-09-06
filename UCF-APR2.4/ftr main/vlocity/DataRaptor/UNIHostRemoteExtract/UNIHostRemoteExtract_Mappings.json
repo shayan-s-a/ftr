@@ -1,0 +1,49 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "OrderItem",
+        "%vlocity_namespace%__FilterGroup__c": 0,
+        "%vlocity_namespace%__FilterOperator__c": "=",
+        "%vlocity_namespace%__FilterValue__c": "EVCId",
+        "%vlocity_namespace%__GlobalKey__c": "2b489a3b-9dff-253e-3fcf-563fc2365108",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "Id",
+        "%vlocity_namespace%__InterfaceObjectLookupOrder__c": 1,
+        "%vlocity_namespace%__InterfaceObjectName__c": "OrderItem",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "UNIHostRemoteExtractCustom8019",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "UNIHostRemoteExtract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "OrderItem:HubId",
+        "%vlocity_namespace%__GlobalKey__c": "5d74cc46-9193-5346-d5d6-6f804b50681f",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "OrderItem:UNI_Host__c",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "UNIHostRemoteExtractCustom6492",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "UNIHostRemoteExtract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "OrderItem:SpokeId",
+        "%vlocity_namespace%__GlobalKey__c": "47074182-0daa-ebe0-7935-f90f07d28a6e",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "OrderItem:UNI_Remote__c",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "UNIHostRemoteExtractCustom2048",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "UNIHostRemoteExtract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Lost_to_and_End_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Rejection_Reason__c, &quot;Currently under Contract&quot;),
+OR( ISBLANK(Expiration_of_Competitor_Agreement__c),
+ISPICKVAL(Competitor_Lost_to__c, &quot;&quot;)))</errorConditionFormula>
+    <errorMessage>Please provide the Competitor Lost to and Expiration of Competitor Agreement</errorMessage>
+</ValidationRule>

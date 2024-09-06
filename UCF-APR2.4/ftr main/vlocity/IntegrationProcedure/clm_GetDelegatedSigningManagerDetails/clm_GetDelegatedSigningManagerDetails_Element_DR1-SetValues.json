@@ -1,0 +1,33 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "GetDelegatedSigningManagerDetails",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/clm/GetDelegatedSigningManagerDetails/Procedure",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "DelegatedApproverEmail": "=%DR1-CheckOOOStatusOfManager:DelegatedApproverEmail%",
+            "DelegatedApproverId": "=%DR1-CheckOOOStatusOfManager:DelegatedApproverId%",
+            "DelegatedApproverName": "=%DR1-CheckOOOStatusOfManager:DelegatedApproverName% + ' - ' + %DR1-CheckOOOStatusOfManager:DelegatedApproverEmail%",
+            "DelegatedApproverTitle": "=%DR1-CheckOOOStatusOfManager:DelegatedApproverTitle%"
+        },
+        "executionConditionalFormula": "IF( %DR1-CheckOOOStatusOfManager:DelegatedApproverId% != $Vlocity.NULL, true ,false ) AND IF( %DR2-CheckOOOStatusforDelegatedManager:DelegatedApproverId% == $Vlocity.NULL, true ,false )\r\n",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "label": "SetValues1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "DR1-SetValues",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/clm/GetDelegatedSigningManagerDetails/Procedure/DR1-SetValues"
+}

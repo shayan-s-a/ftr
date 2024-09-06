@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Did_Info_Value__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( DIDNumberInfo__c  , 
+&apos;New DID Range&apos;, &apos;DIDS: New&apos;, 
+&apos;Existing DIDs&apos;, &apos;DIDS: Existing&apos;, 
+&apos;Combo New &amp; Port-In&apos;, &apos;Combo New &amp; Port-In&apos;, 
+&apos;Existing # (Regrade)&apos;, &apos;DIDS: Existing&apos;, 
+&apos;Port-In&apos;, &apos;DIDs: Winback&apos;, 
+&apos;Winback&apos;, &apos;DIDs: Winback&apos;, 
+&apos;Combo&apos;, &apos;Combo&apos;, 
+&apos;OOF&apos;, &apos;DIDS: OOF&apos;, 
+&apos;Combo New &amp; Port-In&apos;, &apos;Combo New &amp; Port-In&apos;,&apos;&apos; 
+)</formula>
+    <label>Did Info Value</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

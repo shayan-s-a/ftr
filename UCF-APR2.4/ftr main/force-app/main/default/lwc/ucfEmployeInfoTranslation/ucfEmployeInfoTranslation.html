@@ -1,0 +1,106 @@
+<template>
+
+     <lightning-button variant="brand" label="Translation" 
+     onclick={displayEmpInfoDetailForPM} 
+     class="slds-m-left_x-small 
+     slds-m-top_large"></lightning-button>
+ 
+<template if:true={showData}>
+  
+  <div class="slds-button-group slds-float_right" role="group">
+            
+            <lightning-file-upload accept={acceptedFormats} label="Attach CSV File" onuploadfinished={uploadFileHandler}></lightning-file-upload>
+            <lightning-button variant="brand" label="Export Template" onclick={exportTemplate} class="slds-m-left_x-small slds-m-top_large"></lightning-button>
+            <lightning-button variant="brand" label="Export CSV" onclick={exportCSV} class="slds-m-left_x-small slds-m-top_large"></lightning-button>
+            <!-- <lightning-button variant="brand" label="Import CSV" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button> -->
+            
+
+        </div>
+
+        
+        <br><br><br><br>
+         <div class="slds-scrollable_x">
+                <template if:true={getEmployeInformationDataForPM}>
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                
+                              <th class="" scope="col" onclick={handleSort} > 
+                                <div class="slds-truncate" title="Phone Number">Phone Number</div>
+                              </th>
+                              <th class="" scope="col" onclick={handleSort} >
+                                <div class="slds-truncate" title="Extension">Extension</div>
+                              </th>
+                              <th class="" scope="col" onclick={handleSort} >
+                                <div class="slds-truncate" title="User Name">User Name</div>
+                              </th>
+                            
+                              <th class="" scope="col" onclick={handleSort} >
+                                <div class="slds-truncate" title="EAS Pin">EAS Pin</div>
+                              </th>
+                              <th class="" scope="col" onclick={handleSort} >
+                                <div class="slds-truncate" title="MAC Address">MAC Address</div>
+                              </th>
+                            <th class="" scope="col" onclick={handleSort} >
+                                <div class="slds-truncate" title="MAC Address">Device  Type</div>
+                              </th>
+                                 <th class="" scope="col" onclick={handleSort} >
+                                <div class="slds-truncate" title="MAC Address">MAC Accessories</div>
+                              </th>
+
+                            </tr>
+                          </thead>
+                         <tbody>
+                            <template for:each={getEmployeInformationDataForPM} for:item ='obj'>
+                            <tr class="" key = {obj.key} >
+            
+                                    <td >
+                                        
+                                        <div class="slds-cell-wrap">{obj.DIDNumber__c}</div>
+                                    </td>
+                                    <td data-label="object label">
+                                     {obj.Ucf_Extension__c}
+                                    </td>
+                                    <td data-label="object label">
+                                        
+                                            <input type="text" disabled class="slds-input" value={obj.Ucf_User_Name__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_User_Name__c" />
+                                    
+                                    </td>    
+                                    <td data-label="object label">
+                                       
+                                            <input type="text" class="slds-input" 
+                                            value={obj.EAS_Pin__c} onchange={handleInputChange} 
+                                            onkeypress={validateInputForNumber}
+                                             maxlength="6"
+                                            data-record-id={obj.Id} 
+                                            data-field-name="EAS_Pin__c" 
+                                            required />
+                                      
+                                    </td>
+                                    <td>
+              
+                                            <input type="text" class="slds-input" maxlength="16" value={obj.Ucf_MAC_Address__c} onchange={handleInputChange} data-record-id={obj.Id} data-field-name="Ucf_MAC_Address__c" />
+                                 </td>
+                                  <td>
+              
+                                    {obj.Ucf_Device_Type__c}
+                                 </td>
+                                  <td>
+              
+                                             {obj.Ucf_Device_Accessories__c}
+                                 </td>
+
+                            </tr>
+                        
+                            </template>
+                        </tbody>
+                    </table>
+                </template>
+
+     <div class="slds-align_absolute-center slds-m-top_medium">
+    <lightning-button class="slds-button_outline-brand" label="Cancel" onclick={handleCancel}></lightning-button>
+    <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+</div>
+         </div>
+     </template> 
+</template>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Error_Order__c</fullName>
+    <description>Used to note the order number associated with an adjustment request.  Used on the Billing case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the STATS, WFM, Salesforce or DPI order number that caused the billing error.</inlineHelpText>
+    <label>Billing Error Order</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

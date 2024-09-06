@@ -1,0 +1,50 @@
+<div class="nds-form-element nds-size_1-of-1 nds-p-around_small nds-input__tooltip nds-medium-size_6-of-12" ng-class="{'nds-has-error': [[vdf-form-field-name]].$invalid && [[vdf-form-field-name]].$touched, 'is-required': required}" vdf-element-container="true">
+    <div class="nds-form-element__icon" ng-if="::field.description">
+        <a href="javascript:void(0);" 
+                nds-popover 
+                data-container="{{attrs.tooltipContainer ? attrs.tooltipContainer : '.via-nds'}}" 
+                nubbin-direction="bottom-left" 
+                tooltip="true" 
+                data-title="{{::field.description}}">
+            <nds-svg-icon sprite="'utility'" size="'x-small'" icon="'info'" extra-classes="'nds-icon-text-default'"></nds-svg-icon>
+            <span class="nds-assistive-text">{{::$root.vlocity.getCustomLabel('VDFHelp', 'Help')}}</span>
+        </a>
+    </div>
+    <div class="nds-form-element__control nds-form-element__control-animated-label nds-grid">
+        <span class="nds-form-element__addon" ng-if="::field.dataType == 'currency'" ng-bind-html="::localeCurencySym"></span>
+        <input
+            vdf-input="true"
+            
+            vdf-input-name="true"
+            class="nds-input ng-dirty"
+            type="text"
+            ng-model="field.value"
+        />
+        <label class="nds-form-element__label" for="{{::field.description}}">
+            <abbr class="nds-required" title="required" ng-if="::field.required">*</abbr>
+            {{:: translate && field.label ? $root.vlocity.getCustomLabel(field.label, field.label) : field.label}}
+        </label>
+        <span class="nds-form-element__addon" ng-if="::field.dataType == 'percentage'">%</span>
+    </div>
+
+    <!-- Error status: {{[[vdf-form-field-name]] | json}} -->
+    <!-- Standard Error Messages -->
+    <div ng-messages="[[vdf-form-field-name]].$error" ng-if="[[vdf-form-field-name]].$touched" role="alert">
+        <div class="nds-form-element__help" ng-message="required">{{::$root.vlocity.getCustomLabel('VDFEmptyDate', 'Please enter a value for this field')}}</div>
+        <div class="nds-form-element__help" ng-message="invalid">{{::$root.vlocity.getCustomLabel('VDFInvalidField', 'Please enter a value for this invalid field')}}</div>
+        <div class="nds-form-element__help" ng-message="email">{{::$root.vlocity.getCustomLabel('VDFValidEmail', 'Please enter a valid email address')}}</div>
+        <div class="nds-form-element__help" ng-message="number">{{::$root.vlocity.getCustomLabel('VDFValidNumber', 'Please enter a valid number')}}</div>
+        <div class="nds-form-element__help" ng-message="min">
+            {{::$root.vlocity.getCustomLabel('VDFFieldTooSmall', 'This field value is too small')}} <span ng-if="::field.min">({{::$root.vlocity.getCustomLabel('VDFFieldMin', 'minimum is {1}', field.min)}})</span>
+        </div>
+        <div class="nds-form-element__help" ng-message="max">
+            {{::$root.vlocity.getCustomLabel('VDFFieldTooHigh', 'This field value is too high')}} <span ng-if="::field.max">({{::$root.vlocity.getCustomLabel('VDFFieldMax', 'maximum is {1}', field.max)}})</span>
+        </div>
+        <div class="nds-form-element__help" ng-message="minlength">
+            {{::$root.vlocity.getCustomLabel('VDFFieldTooShort', 'This field is too short')}} <span ng-if="field.minLength">({{::$root.vlocity.getCustomLabel('VDFFieldMimChar', 'minimum is {1} characters', field.minLength)}})</span>
+        </div>
+        <div class="nds-form-element__help" ng-message="maxlength">
+            {{::$root.vlocity.getCustomLabel('VDFFieldTooLong', 'This field is too long')}} <span ng-if="field.maxLength">({{::$root.vlocity.getCustomLabel('VDFFieldMaxChar', 'maximum is {1} characters', field.maxLength)}})</span>
+        </div>
+    </div>
+</div>

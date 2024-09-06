@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelz_Order</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Cancel Order</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+
+var o = new sforce.SObject(&apos;Order&apos;); 
+var x = &apos;{!Order.Order_Stage__c}&apos;; 
+var y = &apos;{!Order.Reject_Reason__c}&apos;; 
+
+if ( x == &quot;Cancelled&quot;); 
+else if ( y == &quot;&quot;) 
+alert(&apos;Cancel Reason field is required to cancel Order&apos;); 
+
+else{ 
+
+o.id = &apos;{!Order.Id}&apos;; 
+o.Order_Stage__c = &apos;Cancelled&apos;; 
+result = sforce.connection.update([o]); 
+{alert(&apos;This Order Request was Cancelled&apos;); 
+} 
+window.location.reload(); 
+}</url>
+</WebLink>

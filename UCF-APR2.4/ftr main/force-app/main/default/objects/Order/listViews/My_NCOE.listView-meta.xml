@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_NCOE</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDER.RECORDTYPE</columns>
+    <columns>Customer_Requested_Date__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <columns>vlocity_cmt__DueDate__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,Complete,Rejected to AE</value>
+    </filters>
+    <label>My NCOE Orders</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

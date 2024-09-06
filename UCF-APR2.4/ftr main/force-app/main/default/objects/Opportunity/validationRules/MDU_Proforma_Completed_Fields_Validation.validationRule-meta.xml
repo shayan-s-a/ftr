@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_Proforma_Completed_Fields_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &quot;Community_Connections&quot;, ISPICKVAL(StageName ,&quot;Proforma Completed&quot;),
+OR(
+AND(ISBLANK(Bulk_Internet_Fee_MRC__c),
+ISPICKVAL(Agreement_Type__c, &apos;Bulk&apos;)),
+AND(ISBLANK(Bulk_Internet_Speed__c),
+ISPICKVAL(Agreement_Type__c, &apos;Bulk&apos;))
+)
+)</errorConditionFormula>
+    <errorMessage>Please, complete the next fields: Bulk - Internet Fee(MRC), Bulk - Internet Speed.</errorMessage>
+</ValidationRule>

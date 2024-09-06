@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>cms_cpm@ftr.com</email>
+    <name>CPM</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Approval_Testers</publicGroup>
+        </publicGroups>
+        <users>
+            <user>andie.kopf@ftr.com</user>
+            <user>annp.dillon@ftr.com</user>
+            <user>austin.hanold@ftr.com</user>
+            <user>carissa.bhardwaj@ftr.com</user>
+            <user>ladonna.roush@ftr.com</user>
+            <user>elsie.winkfield@ftr.com</user>
+            <user>jessica.diaz@ftr.com</user>
+            <user>john.creswell@ftr.com</user>
+            <user>kelly.bruner@ftr.com</user>
+            <user>kisha.boatley@ftr.com</user>
+            <user>lisa.leakey@ftr.com</user>
+            <user>lisa.steele@ftr.com</user>
+            <user>marie.carspecken@ftr.com</user>
+            <user>marissa.a.magliaro@ftr.com</user>
+            <user>rafiqa.huddleston@ftr.com</user>
+            <user>randal.oakley@ftr.com</user>
+            <user>randy.sackett@ftr.com</user>
+            <user>tammy.kroeten@ftr.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Order</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Sales_Engineering_Support_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

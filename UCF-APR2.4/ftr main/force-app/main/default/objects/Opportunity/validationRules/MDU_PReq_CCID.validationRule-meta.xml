@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_PReq_CCID</fullName>
+    <active>true</active>
+    <description>Controls that this field don´t be empty when changing to Proforma
+Requested Status</description>
+    <errorConditionFormula>AND(RecordType.Name = &quot;Community Connections&quot;,
+ISPICKVAL(StageName ,&quot;Proforma Requested&quot;),
+ISBLANK(CCID__c),
+ISPICKVAL(Contract_Category__c, &quot;Renewal&quot;)
+)</errorConditionFormula>
+    <errorMessage>CCID is missing.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,50 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "cfe7407c-0be7-8c1f-6124-324f74a2939c",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "E2E Master Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/E2E Master Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "ELAN E2E scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/ELAN E2E scenario/cfe7407c-0be7-8c1f-6124-324f74a2939c/Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f"
+    },
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"ATTR_ELIGBL_PARTNRD\",\"left-side-name\":\"Partnered\",\"left-side-type\":\"attribute\",\"left-side-category\":\"Eligibility Attributes\",\"left-side-datatype\":\"Checkbox\",\"op\":\"=\",\"right-side\":\"true\"}",
+        "%vlocity_namespace%__GlobalKey__c": "947691d7-6269-dce9-0fe8-31dc6cc50de1",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "Ereach",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/Ereach",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "Ereach Plan",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/Ereach Plan/947691d7-6269-dce9-0fe8-31dc6cc50de1/Product2/4d3bb1f7-3aa4-0e14-a19e-08bd33d4530f"
+    }
+]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDT_Create_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK(   BDT_Create_Date__c ),
+RecordType.Name = &apos;Community Connection&apos;,
+ISPICKVAL(    BDT_Required__c , &quot;Yes&quot;))</errorConditionFormula>
+    <errorDisplayField>BDT_Create_Date__c</errorDisplayField>
+    <errorMessage>Please provide the BDT Create Date</errorMessage>
+</ValidationRule>

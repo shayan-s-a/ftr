@@ -1,0 +1,182 @@
+<aura:component controller="FTRWSAddressController"
+	implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+	access="global">
+	<!--<aura:html tag="style">
+		.slds-modal__container { 
+        	width : 80% !important; max-width : 80% !important;
+		}
+	</aura:html>-->
+    
+    <aura:registerEvent name="addressEvent" type="c:WSAddressEvent"/>
+
+	<aura:attribute name="showSingleAddrValType" type="boolean" default="true" />
+
+	<!-- stores opportunity id -->
+	<aura:attribute name="oppId" type="Id" />
+
+	<aura:attribute name="location" type="string" default="" />
+	<aura:attribute name="predictions" type="List" default="[]" />
+	<aura:attribute name="streetNo" type="string" default="" />
+	<aura:attribute name="streetName" type="string" default="" />
+	<aura:attribute name="unit" type="string" default="" />
+	<aura:attribute name="city" type="string" default="" />
+	<aura:attribute name="country" type="string" default="" />
+	<aura:attribute name="state" type="string" default="" />
+	<aura:attribute name="street" type="string" default="" />
+	<aura:attribute name="zip" type="string" default="" />
+	<aura:attribute name="addressId" type="Id" />
+    <aura:attribute name="gLat" type="string" default="" />
+    <aura:attribute name="gLng" type="string" default="" />
+	<aura:attribute name="isDPIValidated" type="boolean" default="false" />
+
+	<aura:attribute name="dpiData" type="List" />
+	<aura:attribute name="col" type="List" />
+	<aura:attribute name="selectedRow" type="Object" />
+
+	<aura:attribute name="disableSaveBTN" type="boolean" default="false" />
+	<aura:attribute name="disableUpdateBTN" type="boolean" default="true" />
+
+	<aura:attribute name="validateDpiClicked" type="boolean" default="false" />
+
+	<!--create a component attributs -->
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+<!--Old Code
+	<article class="slds-card">
+		<lightning:layout multipleRows="true" class="border">
+			<aura:if isTrue="{!v.showSingleAddrValType}">
+				<lightning:layoutItem padding="around-small" size="12">
+					<div class="slds-card__body slds-card__body_inner">
+						<div class="slds-text-align_left">
+							<lightning:input label="Location" type="search" name="location" class="font"
+								aura:id="location" value="{!v.location}" onchange="{!c.getCities}"
+								placeholder="Enter address here" />
+
+							<aura:if isTrue="{!v.predictions.length > 0}">
+								<ul class="city_predictions">
+									<aura:iteration items="{!v.predictions}" var="prediction">
+										<li class="slds-listbox__item">
+											<a onclick="{!c.getCityDetails}"
+												data-placeid="{!prediction.place_id}">{!prediction.description}</a>
+										</li>
+									</aura:iteration>
+								</ul>
+							</aura:if>
+						</div>
+					</div>
+				</lightning:layoutItem>
+				<lightning:layoutItem padding="around-small" size="12" class="border2">
+					<div class="slds-card__body slds-card__body_inner">
+						<div class="slds-text-align_left">
+							<lightning:input label="Street #" class="font" name="streetNo" aura:id="streetNo"
+								value="{!v.streetNo}" />
+
+							<lightning:input label="Street Name" class="font" name="streetName" aura:id="streetName"
+								value="{!v.streetName}" />
+
+							<lightning:input label="City" name="city" class="font" aura:id="city" value="{!v.city}" />
+
+							<lightning:input label="State" name="state" class="font" aura:id="state"
+								value="{!v.state}" />
+
+							<lightning:input label="Zip Code" name="zip" class="font" aura:id="zip" value="{!v.zip}" />
+						</div>
+					</div>
+				</lightning:layoutItem>
+                
+                
+				<lightning:layoutItem padding="around-small" size="12">
+					<div class="slds-text-align_right">
+                     <lightning:button variant="brand" label="Next" onclick="{!c.saveAddress}" /> 
+							
+					</div>
+				</lightning:layoutItem>
+
+				<aura:if isTrue="{!v.validateDpiClicked}">
+					<lightning:layoutItem padding="around-small" size="12">
+						<c:WSDPIAddressValidationResult streetNo="{!v.streetNo}" streetName="{!v.streetName}"
+							unit="{!v.unit}" city="{!v.city}" state="{!v.state}" zip="{!v.zip}"
+							addressId="{!v.addressId}" />
+					</lightning:layoutItem>
+
+				</aura:if>
+			</aura:if>
+		</lightning:layout>
+	</article>
+                        
+-->
+    <!-- pavani: New Code -->
+            <section>
+                <div class="slds-modal__container">
+                <div class="slds-modal__content slds-p-around--medium">
+                  <lightning:layout multipleRows="true" class="border">  
+			<aura:if isTrue="{!v.showSingleAddrValType}">
+				<lightning:layoutItem padding="around-small" size="12">
+					<div class="slds-card__body slds-card__body_inner">
+						<div class="slds-text-align_left">
+							<lightning:input label="Location" type="search" name="location" class="font"
+								aura:id="location" value="{!v.location}" onchange="{!c.getCities}"
+								placeholder="Enter address here" />
+
+							<aura:if isTrue="{!v.predictions.length > 0}">
+								<ul class="city_predictions">
+									<aura:iteration items="{!v.predictions}" var="prediction">
+										<li class="slds-listbox__item">
+											<a onclick="{!c.getCityDetails}"
+												data-placeid="{!prediction.place_id}">{!prediction.description}</a>
+										</li>
+									</aura:iteration>
+								</ul>
+							</aura:if>
+						</div>
+					</div>
+				</lightning:layoutItem>
+				<lightning:layoutItem padding="around-small" size="12" class="border2">
+					<div class="slds-card__body slds-card__body_inner">
+						<div class="slds-text-align_left">
+							<lightning:input label="Street #" class="font" name="streetNo" aura:id="streetNo"
+								value="{!v.streetNo}" />
+
+							<lightning:input label="Street Name" class="font" name="streetName" aura:id="streetName"
+								value="{!v.streetName}" />
+
+							<lightning:input label="City" name="city" class="font" aura:id="city" value="{!v.city}" />
+
+							<lightning:input label="State" name="state" class="font" aura:id="state"
+								value="{!v.state}" />
+
+							<lightning:input label="Zip Code" name="zip" class="font" aura:id="zip" value="{!v.zip}" />
+						</div>
+					</div>
+				</lightning:layoutItem>
+                
+                
+				<lightning:layoutItem padding="around-small" size="12">
+					<div class="slds-text-align_right">
+                     <!--   <lightning:button variant="brand" label="Next" onclick="{!c.saveAddress}" /> -->
+							
+					</div>
+				</lightning:layoutItem>
+
+				<aura:if isTrue="{!v.validateDpiClicked}">
+					<lightning:layoutItem padding="around-small" size="12">
+						<c:WSDPIAddressValidationResult streetNo="{!v.streetNo}" streetName="{!v.streetName}"
+							unit="{!v.unit}" city="{!v.city}" state="{!v.state}" zip="{!v.zip}"
+							addressId="{!v.addressId}" />
+					</lightning:layoutItem>
+
+				</aura:if>
+			</aura:if>  
+                    </lightning:layout>
+                </div>
+                
+                <div class="slds-text-align_right">
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" label="Validate" onclick="{!c.saveAddress}" />
+                    </footer>
+                
+                </div>
+                </div>
+                    </section>
+    
+</aura:component>

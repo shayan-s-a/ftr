@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Request__c</fullName>
+    <externalId>false</externalId>
+    <label>Related To</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <!--Test-->
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce Configuration</fullName>
+                <default>false</default>
+                <label>Salesforce Configuration</label>
+            </value>
+            <value>
+                <fullName>Approval Process</fullName>
+                <default>false</default>
+                <label>Approval Process</label>
+            </value>
+            <value>
+                <fullName>Assignment Rule</fullName>
+                <default>false</default>
+                <label>Assignment Rule</label>
+            </value>
+            <value>
+                <fullName>Comms Cloud/Vlocity</fullName>
+                <default>false</default>
+                <label>Comms Cloud/Vlocity</label>
+            </value>
+            <value>
+                <fullName>Connected2Fiber</fullName>
+                <default>false</default>
+                <label>Connected2Fiber</label>
+            </value>
+            <value>
+                <fullName>Dashboard / Reports / Analytics</fullName>
+                <default>false</default>
+                <label>Dashboard / Reports / Analytics</label>
+            </value>
+            <value>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+                <label>Data Load</label>
+            </value>
+            <value>
+                <fullName>Defect/Error Msgs</fullName>
+                <default>false</default>
+                <label>Defect/Error Msgs</label>
+            </value>
+            <value>
+                <fullName>Docusign</fullName>
+                <default>false</default>
+                <label>Docusign</label>
+            </value>
+            <value>
+                <fullName>Marketing Cloud/Pardot</fullName>
+                <default>false</default>
+                <label>Marketing Cloud/Pardot</label>
+            </value>
+            <value>
+                <fullName>New App/Managed Package</fullName>
+                <default>false</default>
+                <label>New App/Managed Package</label>
+            </value>
+            <value>
+                <fullName>New Idea</fullName>
+                <default>false</default>
+                <label>New Idea</label>
+            </value>
+            <value>
+                <fullName>Opportunity/Quote/Order</fullName>
+                <default>false</default>
+                <label>Opportunity/Quote/Order</label>
+            </value>
+            <value>
+                <fullName>Partner Support/Alt Channel</fullName>
+                <default>false</default>
+                <label>Partner Support/Alt Channel</label>
+            </value>
+            <value>
+                <fullName>Password Reset / User Account / Permissions</fullName>
+                <default>false</default>
+                <label>Password Reset / User Account / Permissions</label>
+            </value>
+            <value>
+                <fullName>Service Cloud / Case Management</fullName>
+                <default>false</default>
+                <label>Service Cloud / Case Management</label>
+            </value>
+            <value>
+                <fullName>Territory Management (Updates / Changes)</fullName>
+                <default>false</default>
+                <label>Territory Management (Updates / Changes)</label>
+            </value>
+            <value>
+                <fullName>User Account</fullName>
+                <default>false</default>
+                <label>User Account</label>
+            </value>
+            <value>
+                <fullName>ZoomInfo/DnB</fullName>
+                <default>false</default>
+                <label>ZoomInfo/DnB</label>
+            </value>
+            <value>
+                <fullName>Other (Please elaborate the description field below)</fullName>
+                <default>false</default>
+                <label>Other (Please elaborate the description field below)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

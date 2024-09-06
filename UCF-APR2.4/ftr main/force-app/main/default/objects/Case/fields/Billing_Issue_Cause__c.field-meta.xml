@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Issue_Cause__c</fullName>
+    <externalId>false</externalId>
+    <label>Billing Issue Cause/Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adjustment Requested</fullName>
+                <default>false</default>
+                <label>Adjustment Requested</label>
+            </value>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+                <label>Audit</label>
+            </value>
+            <value>
+                <fullName>Billing Discrepancy</fullName>
+                <default>false</default>
+                <label>Billing Discrepancy</label>
+            </value>
+            <value>
+                <fullName>CABs Research</fullName>
+                <default>false</default>
+                <label>CABs Research</label>
+            </value>
+            <value>
+                <fullName>Category 5</fullName>
+                <default>false</default>
+                <label>Category 5</label>
+            </value>
+            <value>
+                <fullName>Complex Billing</fullName>
+                <default>false</default>
+                <label>Complex Billing</label>
+            </value>
+            <value>
+                <fullName>DPI Posting</fullName>
+                <default>false</default>
+                <label>DPI Posting</label>
+            </value>
+            <value>
+                <fullName>EDI</fullName>
+                <default>false</default>
+                <label>EDI</label>
+            </value>
+            <value>
+                <fullName>Equipment (UEC)</fullName>
+                <default>false</default>
+                <label>Equipment (UEC)</label>
+            </value>
+            <value>
+                <fullName>ETF</fullName>
+                <default>false</default>
+                <label>ETF</label>
+            </value>
+            <value>
+                <fullName>First Bill Review</fullName>
+                <default>false</default>
+                <label>First Bill Review</label>
+            </value>
+            <value>
+                <fullName>GLOBYS</fullName>
+                <default>false</default>
+                <label>GLOBYS</label>
+            </value>
+            <value>
+                <fullName>Investigation</fullName>
+                <default>false</default>
+                <label>Investigation</label>
+            </value>
+            <value>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+                <label>Invoices</label>
+            </value>
+            <value>
+                <fullName>Manual invoice</fullName>
+                <default>false</default>
+                <label>Manual invoice</label>
+            </value>
+            <value>
+                <fullName>Misapplied Payment/Payment Transfer</fullName>
+                <default>false</default>
+                <label>Misapplied Payment/Payment Transfer</label>
+            </value>
+            <value>
+                <fullName>Misquoted</fullName>
+                <default>false</default>
+                <label>Misquoted</label>
+            </value>
+            <value>
+                <fullName>Missed Commitment</fullName>
+                <default>false</default>
+                <label>Missed Commitment</label>
+            </value>
+            <value>
+                <fullName>Next Bill Review</fullName>
+                <default>false</default>
+                <label>Next Bill Review</label>
+            </value>
+            <value>
+                <fullName>No CAP credit</fullName>
+                <default>false</default>
+                <label>No CAP credit</label>
+            </value>
+            <value>
+                <fullName>NRC</fullName>
+                <default>false</default>
+                <label>NRC</label>
+            </value>
+            <value>
+                <fullName>Order Error</fullName>
+                <default>false</default>
+                <label>Order Error</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Payment Investigation</fullName>
+                <default>false</default>
+                <label>Payment Investigation</label>
+            </value>
+            <value>
+                <fullName>Pending CAP Approval</fullName>
+                <default>false</default>
+                <label>Pending CAP Approval</label>
+            </value>
+            <value>
+                <fullName>Pending System Issue Resolution</fullName>
+                <default>false</default>
+                <label>Pending System Issue Resolution</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Service Affecting Outage</fullName>
+                <default>false</default>
+                <label>Service Affecting Outage</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>TEM</fullName>
+                <default>false</default>
+                <label>TEM</label>
+            </value>
+            <value>
+                <fullName>Unhappy with Product/Service</fullName>
+                <default>false</default>
+                <label>Unhappy with Product/Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

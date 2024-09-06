@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bidders_Conference_Due_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ISPICKVAL(Bidder_s_Conference_Due_Date__c, &quot;Yes&quot;),
+
+ISBLANK(Bidder_s_Conference_Date_Time__c))</errorConditionFormula>
+    <errorMessage>Please fill out the Bidder’s Conference Date &amp; Time</errorMessage>
+</ValidationRule>

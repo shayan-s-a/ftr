@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Objection__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Objection</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Objection</fullName>
+                <default>false</default>
+                <label>No Objection</label>
+            </value>
+            <value>
+                <fullName>Cancel COVID-19</fullName>
+                <default>false</default>
+                <label>Cancel COVID-19</label>
+            </value>
+            <value>
+                <fullName>Changing to Competition – AT&amp;T</fullName>
+                <default>false</default>
+                <label>Changing to Competition – AT&amp;T</label>
+            </value>
+            <value>
+                <fullName>Changing to Competition – Cox Communications</fullName>
+                <default>false</default>
+                <label>Changing to Competition – Cox Communications</label>
+            </value>
+            <value>
+                <fullName>Changing to Competition – Other; Add to Comments</fullName>
+                <default>false</default>
+                <label>Changing to Competition – Other; Add to Comments</label>
+            </value>
+            <value>
+                <fullName>Changing to Competition – Spectrum/Charter</fullName>
+                <default>false</default>
+                <label>Changing to Competition – Spectrum/Charter</label>
+            </value>
+            <value>
+                <fullName>Changing to Competition – TimeWarner</fullName>
+                <default>false</default>
+                <label>Changing to Competition – TimeWarner</label>
+            </value>
+            <value>
+                <fullName>Competition Price is Better</fullName>
+                <default>false</default>
+                <label>Competition Price is Better</label>
+            </value>
+            <value>
+                <fullName>Competition Speed is Faster</fullName>
+                <default>false</default>
+                <label>Competition Speed is Faster</label>
+            </value>
+            <value>
+                <fullName>Customer Doesn’t Use Internet</fullName>
+                <default>false</default>
+                <label>Customer Doesn’t Use Internet</label>
+            </value>
+            <value>
+                <fullName>Due Date Too Far Out</fullName>
+                <default>false</default>
+                <label>Due Date Too Far Out</label>
+            </value>
+            <value>
+                <fullName>Need to Think About It</fullName>
+                <default>false</default>
+                <label>Need to Think About It</label>
+            </value>
+            <value>
+                <fullName>Not authorized to make decision</fullName>
+                <default>false</default>
+                <label>Not authorized to make decision</label>
+            </value>
+            <value>
+                <fullName>Order on hold for follow up</fullName>
+                <default>false</default>
+                <label>Order on hold for follow up</label>
+            </value>
+            <value>
+                <fullName>Price Too High</fullName>
+                <default>false</default>
+                <label>Price Too High</label>
+            </value>
+            <value>
+                <fullName>Speed</fullName>
+                <default>false</default>
+                <label>Speed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

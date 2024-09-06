@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set for Sales Managers of BAMS and Frontier Sales Users</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Managers(CTF)</label>
+    <permissionSets>Access_Sales_Engineering_Request</permissionSets>
+    <permissionSets>Audit_Chatter_Case_Permission</permissionSets>
+    <permissionSets>Case_Sales_Ops_Sales_Enablement</permissionSets>
+    <permissionSets>E_Rate_Opportunity_Fields_View_Only</permissionSets>
+    <permissionSets>E_Reach</permissionSets>
+    <permissionSets>Frontier_Anyware</permissionSets>
+    <permissionSets>LBI__LatticeSalesManager</permissionSets>
+    <permissionSets>Network_Discovery_Access</permissionSets>
+    <permissionSets>SF_lightning_only</permissionSets>
+    <permissionSets>Salesforce_Ordering</permissionSets>
+    <permissionSets>ear__Enhanced_Approval_Requests</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

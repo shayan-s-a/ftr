@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decline_Case</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Decline Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+
+var objCase = new sforce.SObject(&apos;Case&apos;); 
+
+var x = &apos;{!Case.Audit_Task_Created__c}&apos;;
+
+if( x == true)
+alert(&apos;Please Complete the Task before closing the case&apos;);
+
+else {
+
+objCase.Id = &apos;{!Case.Id}&apos;; 
+objCase.Status = &apos;Declined&apos;;
+
+var result = sforce.connection.update([objCase]); 
+if(result[0].success==&apos;true&apos;){ 
+alert(&apos;This Dispute Case was Declined Successfully&apos;); 
+window.parent.location.href=&quot;/{!Case.Id}&quot;;
+}}</url>
+</WebLink>

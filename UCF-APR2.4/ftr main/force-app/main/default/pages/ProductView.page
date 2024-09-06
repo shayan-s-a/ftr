@@ -1,0 +1,36 @@
+<apex:page showHeader="true" sidebar="false" controller="ProductViewController" lightningStylesheets="true" docType="html-5.0" >
+    <apex:slds />
+    <style>
+        .generateCSVbtn {
+            position: absolute !important;
+            top: 2rem;
+            right: 1rem;
+        }
+        body .pbTitle .mainTitle {
+            font-size: 1rem !important;
+        }
+    </style>
+    <div class="slds-scope">
+        <apex:form id="form">
+            <apex:pageBlock title="Product View" >
+                <apex:commandButton styleClass="generateCSVbtn" action="{!generateCSV}" value="Generate CSV" rendered="{!allData.size > 0}"/>
+                <apex:repeat value="{!allData}" var="data" id="iterator">
+                    <apex:pageBlockSection title="{!data.title}" columns="1">
+                        <apex:dataTable value="{!data.records}" var="record" id="table" rowClasses="odd,even" styleClass="tableClass">
+                            <apex:repeat value="{!data.columns}" var="column" id="column">
+                                <apex:column>
+                                    <apex:facet name="header">{!column.label}</apex:facet>
+                                    <apex:outputText value="{!record[column.fieldName]}"/>
+                                </apex:column>
+                            </apex:repeat>
+                        </apex:dataTable>
+                    </apex:pageBlockSection>
+                </apex:repeat>
+                <div>
+                    Total # of records: {!totalNumberOfRecords}
+                </div>
+            </apex:pageBlock>
+        </apex:form>
+        
+    </div>
+</apex:page>

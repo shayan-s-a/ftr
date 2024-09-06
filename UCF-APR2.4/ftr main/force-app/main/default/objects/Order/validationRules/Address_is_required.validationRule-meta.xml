@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_is_required</fullName>
+    <active>true</active>
+    <description>Addresses are required until the fix is implemented where addresses are auto-populated in lightning.</description>
+    <errorConditionFormula>AND(
+OR (
+$RecordType.Name = &quot;UCaaS Change Order&quot;,
+$RecordType.Name = &quot;UCaaS Contract Renewal Order-&quot;,
+$RecordType.Name = &quot;UCaaS Disconnect Order&quot;,
+$RecordType.Name = &quot;UCaaS Move Order&quot;,
+$RecordType.Name = &quot;UCaaS New Order&quot;,
+$RecordType.Name = &quot;UCaaS Records Only Order&quot;,
+$RecordType.Name = &quot;ABS Order&quot;,
+$RecordType.Name = &quot;Circuit Change Order&quot;,
+$RecordType.Name = &quot;Circuit Disconnect&quot;,
+$RecordType.Name = &quot;Circuit Move of Voice Change Order&quot;,
+$RecordType.Name = &quot;Circuit Move Order&quot;,
+$RecordType.Name = &quot;Circuit New Order&quot;,
+$RecordType.Name = &quot;Circuit renewal Order&quot;,
+$RecordType.Name = &quot;Circuit Simple Record Order&quot;,
+$RecordType.Name = &quot;Circuit Transfer of Ownership Order&quot;,
+$RecordType.Name = &quot;Voice Change Order&quot;,
+$RecordType.Name = &quot;Voice Disconnect Order&quot;,
+$RecordType.Name = &quot;Voice Renewal Order&quot;,
+$RecordType.Name = &quot;Voice Transfer of Ownership&quot;,
+$RecordType.Name = &quot;UCaaS Transfer of Ownership Order&quot;),
+
+
+OR(
+ISBLANK(BillingAddress),
+ISBLANK(BillingStreet ) ,
+ISBLANK(BillingCity) ,
+ISBLANK(BillingState),
+ISBLANK(BillingPostalCode),
+ISBLANK(BillingCountry),
+ISBLANK(ShippingAddress),
+ISBLANK( ShippingCity ),
+ISBLANK( ShippingState ),
+ISBLANK( ShippingStreet ),
+ISBLANK( ShippingPostalCode ),
+ISBLANK(  ShippingCountry )
+
+))</errorConditionFormula>
+    <errorMessage>Addresses are required</errorMessage>
+</ValidationRule>

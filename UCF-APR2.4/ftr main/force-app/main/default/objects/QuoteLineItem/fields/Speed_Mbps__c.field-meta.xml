@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Speed_Mbps__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (
+	CONTAINS(Speed__c, &apos;Mbps&apos;),  
+	VALUE(TRIM(LEFT(Speed__c, LEN(Speed__c) - 4))),
+	IF(
+		CONTAINS(Speed__c, &apos;Gbps&apos;),  
+		VALUE(TRIM(LEFT(Speed__c, LEN(Speed__c) - 4))) * 1000,
+		0
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Speed (Mbps)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

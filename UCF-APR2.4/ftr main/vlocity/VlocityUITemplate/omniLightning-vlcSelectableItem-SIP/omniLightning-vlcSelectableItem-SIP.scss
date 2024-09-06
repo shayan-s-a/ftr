@@ -1,0 +1,115 @@
+// Default/Deselected tile look & feel
+.selectableItemTiles {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
+.vlc-slds-selectableItem {
+    max-height: 168px;
+    min-height: 168px;
+    cursor: pointer !important;
+}
+
+#product-name {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#product-name .vlc-slds_info_icon {
+    display: inline-block;
+
+    button {
+        padding-bottom: 5px;
+    }
+}
+
+#description-tooltip {
+   visibility: hidden;
+    width: 300px;
+    height: auto;
+    text-overflow: clip;
+    font-size: 0.75rem;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -90px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#product-name:hover #description-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+#product-name #description-tooltip::after,
+#product-name #description-tooltip::before {
+    right: 50%;
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#product-name #description-tooltip::after {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #555;
+    border-width: 5px;
+    margin-top: -5px;
+}
+
+#product-name #description-tooltip::before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #555;
+    border-width: 8px;
+    margin-top: -8px;
+}
+
+.vlc-slds-item--onecost {
+    text-align: center;
+
+    .slds-form__element__label{
+        width: 100%;
+    }
+}
+
+.vlc-slds-item--cost {
+    text-align: center;
+
+    .slds-form__element__label{
+        width: 100%;
+    }
+}
+// Tile checkbox positioning
+.tile_checkbox {
+    text-align: center;
+    vertical-align: middle;
+}
+ 
+// Selected tiles will have a red background & border
+.tile_selected {
+    border-color: red;
+    background-color: #F1E9E9;
+}
+ 
+// Turns text red when tiles are selected
+.redtext {
+    color: red;
+}

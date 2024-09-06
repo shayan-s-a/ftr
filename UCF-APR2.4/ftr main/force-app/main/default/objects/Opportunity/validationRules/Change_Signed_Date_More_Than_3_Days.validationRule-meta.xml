@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Signed_Date_More_Than_3_Days</fullName>
+    <active>true</active>
+    <description>Do not allow the RSM or VP to change the MgrSignedDate by more than 2 days on an approved opportunity.</description>
+    <errorConditionFormula>AND( OR(ISPICKVAL(Mrg_Approved__c, &quot;Closed (Ink)&quot;),  ISPICKVAL(PRIORVALUE(Mrg_Approved__c), &quot;Closed (Ink)&quot;)),   OR(($Profile.Name =  &quot;RegionalSalesMgr&quot;), ( $Profile.Name  =  &quot;VicePres&quot;)), OR(Approved_Date__c - Mgr_Signed_Date__c &gt;6, Mgr_Signed_Date__c - Approved_Date__c &gt;6))</errorConditionFormula>
+    <errorDisplayField>Mgr_Signed_Date__c</errorDisplayField>
+    <errorMessage>Cannot change Mgr Signed Date by more than 3 days from original Approval Date.</errorMessage>
+</ValidationRule>

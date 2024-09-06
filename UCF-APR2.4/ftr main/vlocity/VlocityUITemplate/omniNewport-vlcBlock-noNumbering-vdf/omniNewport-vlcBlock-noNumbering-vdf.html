@@ -1,0 +1,91 @@
+<div class="nds-size_1-of-1" >
+    <ng-form name='loopform'
+             class='nds-form-element nds-clearfix nds-block nds-p-around_small'
+             id ='{{::control.LocationDetail}}'
+             ng-repeat='control in child.eleArray'>
+
+        <div class="nds-form-element__control nds-block_container" ng-controller="vlcBlockController">
+            <span ng-repeat="item in bpTree.response.OrderItems | filter: { ServiceAccountId: locationId }" style="width: 100%;">
+                <!-- add block label -->
+                <!-- <label vlc-slds-toggle="toggle"
+                   class="nds-form-element__label nds-clearfix clicked" 
+                   ng-if="loaded"
+                   style="padding-left: 0;"> -->
+<!-- <div class="nds-form-element__control"> -->
+            <label class="nds-checkbox">
+                <input id="Checkbox4" type="checkbox" name="loopname" id="{{$index + 1}}" value="{{$index + 1}}" ng-show='item.ProductCode == "ENT_ETH_UNI_0001"' ng-model="item.selected" ng-change="selectedUNI(item)" class="ng-valid ng-touched ng-dirty ng-empty" aria-invalid="false">
+                <span class="nds-checkbox_faux" ng-show='item.ProductCode == "ENT_ETH_UNI_0001"'></span>
+                
+                <label class="nds-checkbox__label" vlc-bubble-canceller="test" ng-class="{leftShift: item.ProductCode != 'ENT_ETH_UNI_0001'}">
+                    <span class="nds-form-element__label nds-form-element__control-help ng-binding"></span>
+                    <!-- ngIf: control.propSetMap.help -->
+                    <div class="nds-control-action__container" style="top: 2px;color: #1564bf;font-size: 14px;">  {{item.ProductName}}</div>
+               </label>
+            </label>
+        <!-- </div> -->
+                <!-- <div class="nds-form-element__label_toggleText">
+                    {{::item.ProductName}}
+                </div> -->
+                
+                <div class="nds-control-action__container" vlc-bubble-canceller="testing">
+                    <!-- <span ng-if='::control.propSetMap.repeat'
+                          ng-disabled="control.propSetMap.repeatLimit !== undefined && control.propSetMap.repeatLimit !== null && child.eleArray.length >= control.propSetMap.repeatLimit+1"
+                          ng-click="baseCtrl.addItem(this, child, $index)"
+                          aria-hidden="true">
+                        {{::customLabels.OmniAdd}}
+                    </span> -->
+
+                    <span ng-if='child.eleArray.length > 1'
+                          ng-click='removeDomElement(this, child, $index)'
+                          vlc-slds-remove-item="ng-form.nds-block"
+                          aria-hidden="true">
+                        {{::customLabels.OmniDelete}}
+                    </span>
+                </div>
+            <!-- </label>  -->
+            
+            <!-- block withing the main grid  ng-hide hides hthe block by default-->
+            <div class='nds-size_1-of-1 toggleElement bw-clicked'
+                 vlc-slds-toggle-cust-elem='visible'>
+                <div  class="nds-control-action__container" vlc-bubble-canceller="test" ng-if="::!control.propSetMap.label">
+                    
+                    <!-- <span ng-if="::control.propSetMap.repeat"
+                          ng-disabled="control.propSetMap.repeatLimit !== undefined && control.propSetMap.repeatLimit !== null && child.eleArray.length >= control.propSetMap.repeatLimit+1"
+                          ng-click="baseCtrl.addItem(this, child, $index)"
+                          aria-hidden="true">
+                        {{::customLabels.OmniAdd}}
+                    </span> -->
+
+                    <span ng-if="child.eleArray.length > 1"
+                          ng-click='removeDomElement(this, child, $index)'
+                          vlc-slds-remove-item="ng-form.nds-block"
+                          aria-hidden="true">
+                        {{::customLabels.OmniDelete}}
+                    </span>
+
+                </div>
+
+                <div class="nds-grid nds-wrap nds-grid_pull-padded" >
+                <!-- {{control.response.Access_ServiceAccountId}} === {{control.response}} -->
+                 
+                    <vlocity-dynamic-form
+                        ng-model="item.Attributes"
+                        class="nds-form-element nds-form-element__control"
+                        
+                        name="myForm1"
+                        map-object="{{mapObject}}"
+                    />
+
+                    <child vlc-slds-change-inline-templates="::child.eleArray[0].propSetMap.showInputWidth"
+                           class="nds-size_1-of-1 nds-medium-size_{{child.eleArray[0].propSetMap.controlWidth}}-of-12"
+                           ng-repeat='child in ::children = control.children'
+                           ng-init="child.blockIndex = control.index"
+                           ng-show='::!child.eleArray[0].propSetMap.hide'
+                           ng-if='(child.eleArray[0].propSetMap.hide && child.eleArray[0].type!=="Formula")||(!child.eleArray[0].propSetMap.show || evaluateShow(child.eleArray[0], this))'>
+                    </child>
+                </div>
+            </div>
+            </span>
+        </div>
+    </ng-form>
+</div>

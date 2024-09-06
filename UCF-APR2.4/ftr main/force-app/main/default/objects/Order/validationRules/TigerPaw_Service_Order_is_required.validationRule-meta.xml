@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TigerPaw_Service_Order_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;ABS Order&quot;,
+ISPICKVAL(  Billing_System__c ,&quot;TigerPaw&quot;),
+ISBLANK(TigerPaw_Service_Order__c )
+)</errorConditionFormula>
+    <errorMessage>When TigerPaw is selected for Billing System &quot;TigerPaw Service Order# &quot; field is required.</errorMessage>
+</ValidationRule>

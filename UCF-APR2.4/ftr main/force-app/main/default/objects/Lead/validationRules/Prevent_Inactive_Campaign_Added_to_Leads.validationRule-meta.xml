@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Inactive_Campaign_Added_to_Leads</fullName>
+    <active>true</active>
+    <description>Prevents inactive campaigns from being assigned to leads.</description>
+    <errorConditionFormula>AND(
+NOT(
+OR(
+$Profile.Id = &quot;00eE000000126tW&quot;, /* Frontier Auditor */
+$Profile.Id = &quot;00e40000000nYck&quot;, /* Frontier System Administrator */
+$Profile.Id = &quot;00e40000000nTsD&quot;, /* System Administrator */
+$Profile.Id = &quot;00eE000000124Kn&quot; /* System Analyst */
+)
+),
+OR (
+AND(
+ISCHANGED(Primary_Campaign__c),
+NOT(Primary_Campaign__r.IsActive)
+),
+AND(
+ISCHANGED( Secondary_Campaign__c),
+NOT(Secondary_Campaign__r.IsActive)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Cannot assign an inactive campaign to a lead. Please select an active campaign.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WorkphoneCell_phone_or_Email_is_required</fullName>
+    <active>true</active>
+    <description>Cell_phone_or_Email_is_required</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &apos;Frontier System Administrator&apos;,
+ISNEW(),
+ISBLANK(MobilePhone),
+ISBLANK(Phone),
+ISBLANK(Email)
+)</errorConditionFormula>
+    <errorMessage>Work Phone, Cellular Phone or Email is required.</errorMessage>
+</ValidationRule>

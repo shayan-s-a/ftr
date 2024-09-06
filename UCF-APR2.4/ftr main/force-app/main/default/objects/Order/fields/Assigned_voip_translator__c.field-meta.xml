@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_voip_translator__c</fullName>
+    <externalId>false</externalId>
+    <label>Assigned VOIP Translator</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PAUL CLARK</fullName>
+                <default>false</default>
+                <label>PAUL CLARK</label>
+            </value>
+            <value>
+                <fullName>WILLIAM RUSS II</fullName>
+                <default>false</default>
+                <label>WILLIAM RUSS II</label>
+            </value>
+            <value>
+                <fullName>PETER GUTSCHE</fullName>
+                <default>false</default>
+                <label>PETER GUTSCHE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

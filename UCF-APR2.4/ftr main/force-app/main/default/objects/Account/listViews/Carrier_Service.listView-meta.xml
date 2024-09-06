@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrier_Service</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Primary_ACNA__c</columns>
+    <columns>Account_Owner_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Carrier_Service</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Carrier</value>
+    </filters>
+    <label>3-All Carrier Service Accounts</label>
+    <sharedTo>
+        <role>Global</role>
+        <roleAndSubordinatesInternal>Sales_Business_Operations_Supervisors</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Wholesale_SVP</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

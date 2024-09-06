@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_Request</fullName>
+    <availability>online</availability>
+    <description>This button updates the status to Completed</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Complete Request</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+var o = new sforce.SObject(&quot;Order&quot;); 
+
+if
+(!
+(&apos;{!User.ProfileId}&apos;==&apos;00e0L000000QtbX&apos;)&amp;&amp; !
+(&apos;{!User.ProfileId}&apos;==&apos;00e40000000nYck&apos;)&amp;&amp; !
+(&apos;{!User.ProfileId}&apos;==&apos;00e0L000000j95L&apos;)&amp;&amp; !
+(&apos;{!User.ProfileId}&apos;==&apos;00eE0000001A9Qz&apos;)&amp;&amp; !
+(&apos;{!Order.Multi_Products__c}&apos; !== &quot;&quot;))
+
+alert(&apos;You do not have permission to Complete this Order&apos;); 
+else{
+o.id = &quot;{!Order.Id}&quot;; 
+o.Order_Stage__c = &apos;Complete&apos;; 
+result = sforce.connection.update([o]); 
+alert(&apos;This Order Request was Completed Successfully&apos;); 
+window.location.reload();
+}</url>
+</WebLink>

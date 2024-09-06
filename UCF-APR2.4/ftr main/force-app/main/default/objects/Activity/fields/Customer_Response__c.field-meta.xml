@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Response__c</fullName>
+    <description>Created for Tanya Duck for Product Migration Task on Case 00739154 01/19/2021</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the appropriate response, if Other is selected, please add Comments.</inlineHelpText>
+    <label>Customer Response</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Interested at this time</fullName>
+                <default>false</default>
+                <label>Not Interested at this time</label>
+            </value>
+            <value>
+                <fullName>Still In contract Current Carrier</fullName>
+                <default>false</default>
+                <label>Still In contract Current Carrier</label>
+            </value>
+            <value>
+                <fullName>No bundled services required</fullName>
+                <default>false</default>
+                <label>No bundled services required</label>
+            </value>
+            <value>
+                <fullName>Requested Quote</fullName>
+                <default>false</default>
+                <label>Requested Quote</label>
+            </value>
+            <value>
+                <fullName>Other (add Comments)</fullName>
+                <default>false</default>
+                <label>Other (add Comments)</label>
+            </value>
+            <value>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+                <label>Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Answered - Requested MA</fullName>
+                <default>false</default>
+                <label>Answered - Requested MA</label>
+            </value>
+            <value>
+                <fullName>Answered - MA Signed</fullName>
+                <default>false</default>
+                <label>Answered - MA Signed</label>
+            </value>
+            <value>
+                <fullName>Answered - Do Not Call</fullName>
+                <default>false</default>
+                <label>Answered - Do Not Call</label>
+            </value>
+            <value>
+                <fullName>Answered - Not Interested</fullName>
+                <default>false</default>
+                <label>Answered - Not Interested</label>
+            </value>
+            <value>
+                <fullName>Answered - Not Interested (Competitor)</fullName>
+                <default>false</default>
+                <label>Answered - Not Interested (Competitor)</label>
+            </value>
+            <value>
+                <fullName>Answered - Unqualified</fullName>
+                <default>false</default>
+                <label>Answered - Unqualified</label>
+            </value>
+            <value>
+                <fullName>Answered - Other</fullName>
+                <default>false</default>
+                <label>Answered - Other</label>
+            </value>
+            <value>
+                <fullName>Answered - Referred Elsewhere</fullName>
+                <default>false</default>
+                <label>Answered - Referred Elsewhere</label>
+            </value>
+            <value>
+                <fullName>Answered - Intro Reject</fullName>
+                <default>false</default>
+                <label>Answered - Intro Reject</label>
+            </value>
+            <value>
+                <fullName>Answered - Pitch Reject</fullName>
+                <default>false</default>
+                <label>Answered - Pitch Reject</label>
+            </value>
+            <value>
+                <fullName>No Answer - Bad Number / Wrong Number</fullName>
+                <default>false</default>
+                <label>No Answer - Bad Number / Wrong Number</label>
+            </value>
+            <value>
+                <fullName>No Answer - Left VM</fullName>
+                <default>false</default>
+                <label>No Answer - Left VM</label>
+            </value>
+            <value>
+                <fullName>No Answer - No VM</fullName>
+                <default>false</default>
+                <label>No Answer - No VM</label>
+            </value>
+            <value>
+                <fullName>No Answer - Other</fullName>
+                <default>false</default>
+                <label>No Answer - Other</label>
+            </value>
+            <value>
+                <fullName>Gatekeeper Probed</fullName>
+                <default>false</default>
+                <label>Gatekeeper Probed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

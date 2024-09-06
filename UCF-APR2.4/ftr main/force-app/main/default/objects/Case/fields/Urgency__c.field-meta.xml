@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Urgency__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( ispickval(How__c, &quot;100+&quot;), 3,0) +
+if( ispickval(How__c, &quot;25-50+&quot;), 2,0)+
+if( ispickval( Priority, &quot;High&quot;),2,0)+
+if( ispickval( Priority, &quot;Medium&quot;),1,0)+
+if( ispickval( Type_of_Request__c , &quot;SpringCM/contracts/document issue&quot;),4,0)+
+if( ispickval( Type_of_Request__c , &quot;Data load&quot;),3,0)+
+if( ispickval( Type_of_Request__c , &quot;User Account - Production&quot;),3,0) +
+if( ispickval( Type_of_Request__c , &quot;Audit&quot;),4,0) +
+if( ispickval( Type_of_Request__c , &quot;Defect&quot;),3,0) +
+if( ispickval( Type_of_Request__c , &quot;Marketo&quot;),3,0) +
+if( Desired_Due_Date__c &lt; Today() &amp;&amp; NOT(ispickval( Status , &quot;Closed&quot;)),2,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Urgency</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

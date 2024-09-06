@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C2F_FreeUDV_Override_Ind__c</fullName>
+    <description>Y/N indicator where &apos;Y&apos; means that the address (e.g. control#/env) is contained within the Copper to Fiber Free UDV Override pricing file provided to IT. Address (control#/env) universe is tied to static list.  Defaults to ‘N’</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Y/N indicator where &apos;Y&apos; means that the address (e.g. control#/env) is contained within the Copper to Fiber Free UDV Override pricing file provided to IT. Address (control#/env) universe is tied to static list.  Defaults to ‘N’</inlineHelpText>
+    <label>Copper-to-Fiber Free UDV Eligible</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Y</fullName>
+                <default>false</default>
+                <label>Y</label>
+            </value>
+            <value>
+                <fullName>N</fullName>
+                <default>false</default>
+                <label>N</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

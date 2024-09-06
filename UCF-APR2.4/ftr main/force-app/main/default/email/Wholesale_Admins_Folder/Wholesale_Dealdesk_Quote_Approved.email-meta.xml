@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Wholesale Dealdesk Approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Wholesale - Dealdesk Quote Approved</name>
+    <style>none</style>
+    <subject>Wholesale Dealdesk Approval for {!SterlingQuote__c.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

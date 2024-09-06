@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flat_Rate_Percentage</fullName>
+    <active>true</active>
+    <description>Add &quot;Flat Rate Percentage&quot; option to &quot;Revenue Share&quot; field on the opportunity object in the section titled &quot;Business Development Tool (BDT) and Financial Information&quot;</description>
+    <errorConditionFormula>AND (
+RecordTypeId = &quot;012E0000000fK7P&quot;,
+ISPICKVAL (Revenue_Share__c, &quot;Flat Rate Percentage&quot;),
+ISBLANK (Flat_Rate_Percentage__c)
+)</errorConditionFormula>
+    <errorMessage>Please input percentage value in &quot;Flat Rate Percentage&quot; field</errorMessage>
+</ValidationRule>

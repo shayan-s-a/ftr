@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOTCUT_Lock__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+ispickval(CPE_DCS_Stage__c, &quot;Review Order&quot;),
+
+AND(
+ispickval(CPE_DCS_Stage__c, &quot;Review Order&quot;),
+ispickval(Hot_Cut_Stage__c, &quot;Review Order&quot;)
+),
+
+AND(
+ispickval(CPE_DCS_Stage__c, &quot;Schedule CDC Call&quot;),
+ispickval(Hot_Cut_Stage__c, &quot;Review Order&quot;)
+),
+
+AND(
+ispickval(CPE_DCS_Stage__c, &quot;Revised CDC Uploaded&quot;),
+ispickval(Hot_Cut_Stage__c, &quot;Checklist Completed&quot;)
+),
+
+AND(
+ispickval(CPE_DCS_Stage__c, &quot;Internal Call Scheduled&quot;),
+ispickval(Hot_Cut_Stage__c, &quot;Checklist in Progress&quot;)
+),
+
+AND(
+ispickval(CPE_DCS_Stage__c, &quot;Internal Call Scheduled&quot;),
+ispickval(Hot_Cut_Stage__c, &quot;Checklist Completed&quot;)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>HOTCUT Lock</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

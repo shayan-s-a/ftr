@@ -1,0 +1,93 @@
+<div ng-controller="RcShippingInfoShipmentDetailsController">
+	<div class='nds-col_padded nds-size_1-of-1 customer-info-table'>
+		<div
+			style="display:flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin: 1rem 0;">
+			<h1 class="nds-element_text-font">Select Phones to Ship</h1>
+		</div>
+<!-- 
+		<div ng-if="addErrorMsg" class="slds-text-color_error" style="font-size: 0.9rem; padding: 0.5rem;"> 
+		{{addErrorMsg}}
+		</div> -->
+
+		<table class="nds-table nds-table_bordered nds-table_cell-buffer"
+			ng-class="[compareWindowWidth(1024,'vlc-slds-table_stacked'),compareWindowWidth(375,'vertical')]">
+			<thead>
+				<tr class="nds-text-heading_label">
+					<th scope="col" ng-model="colm" ng-click='sortColumn("DeviceName")'>
+						<div>Devices</div>
+					</th>
+					<th scope="col" ng-class="selectedCls('DeviceType')" ng-click='sortColumn("DeviceType")'>
+						<div class="nds-truncate">Type</div>
+					</th>
+					<th scope="col" ng-class="selectedCls('TotalDevice')" ng-click='sortColumn("TotalDevice")'>
+						<div class="nds-truncate">Total</div>
+					</th>
+					<th scope="col" ng-class="selectedCls('AllocatedDevice')" ng-click='sortColumn("AllocatedDevice")'>
+						<div class="nds-truncate">Allocated</div>
+					</th>
+					<th scope="col" ng-class="selectedCls('RemainingDevice')" ng-click='sortColumn("RemainingDevice")'>
+						<div class="nds-truncate">Total Remaining</div>
+					</th>
+					<th scope="col" ng-class="selectedCls('RemainingDevice')" ng-click='sortColumn("RemainingDevice")'>
+						<div class="nds-truncate">Ship Count</div>
+					</th>
+					<th scope="col" ng-class="selectedCls('ShipCount')" ng-click='sortColumn("ShipCount")'>
+						<div class="nds-truncate">Add Ship Count</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="table-to-refresh">
+				<!-- <tr ng-repeat='p in control.vlcSI[control.itemsKey]' ng-class="{ 'vlc-selectableitem-selected' : p.vlcSelected }" > -->
+					<tr ng-repeat='p in bpTree.response.ShippingDeviceDetails' ng-class="{ 'vlc-selectableitem-selected' : p.vlcSelected }" >
+					<!-- <td>{{p.Name}}</td>
+					<td>{{p.Type}}</td>
+					<td>{{p.Total}}</td>
+					<td></td>
+					<td>{{p.Total}}</td> -->
+					<td>{{p.Name}}</td>
+					<td>{{p.Type}}</td>
+					<td>{{p.Total}}</td>
+					<td>{{p.Allocated}}</td>
+					<td>{{p.Remaining}}</td>
+					<td>{{p.ShipCount}}</td>
+					<td>
+					<!-- Text Input box -->
+						<div>
+							<label class="slds-truncate">
+							<input type="number" min="1" max="999999" pattern="[0-9]" ng-keypress="myFunct($event)"  class="slds-input" id="{{p.Id}}"/>
+						</label>
+						<div>
+					</td>
+					<td>
+					<div ng-controller="RcShippingInfoShipmentDetailsController">
+					<button style="padding: 0 1rem;" class="slds-button" ng-click="toggleEditMode(p)" >
+						<p>Save</p>
+					</button>
+					</div>
+				</td>
+				</tr>
+			</tbody>
+		</table>
+		<p id="errorMessage" style="color: red;"></p>
+		<br>
+		<br>
+		<div class="nds-spinner_container" ng-if="isLoading">
+			<div class="nds-spinner_brand nds-spinner nds-spinner_x-large" id="loader" aria-hidden="false" role="alert">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+					<circle cx="6" cy="50">
+						<animateTransform attributeName="transform" dur="1s" type="translate"
+							values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+					</circle>
+					<circle cy="50">
+						<animateTransform attributeName="transform" dur="1s" type="translate"
+							values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+					</circle>
+					<circle cy="50">
+						<animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+							repeatCount="indefinite" begin="0.3" />
+					</circle>
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RCLicenseCount__c</fullName>
+    <description>This field will aggregate the quantities of RC license products for the EPC Rules.</description>
+    <externalId>false</externalId>
+    <label>RC License Count</label>
+    <summarizedField>QuoteLineItem.Quantity</summarizedField>
+    <summaryFilterItems>
+        <field>QuoteLineItem.VlocityFamily__c</field>
+        <operation>equals</operation>
+        <value>Licenses</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>QuoteLineItem.VlocitySubType__c</field>
+        <operation>equals</operation>
+        <value>RingCentral</value>
+    </summaryFilterItems>
+    <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

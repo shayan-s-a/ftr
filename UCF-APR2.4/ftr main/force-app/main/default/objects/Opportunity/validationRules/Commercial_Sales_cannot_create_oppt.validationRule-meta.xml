@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Sales_cannot_create_oppt</fullName>
+    <active>true</active>
+    <description>012E0000000fHl4 - Comm Conn Property
+00eE000000125Fl - Comm Conn Sales
+00e40000000nYck - Frontier Admins
+00eE0000000agkq - Channel Sales Support
+00e8a000002XXex - Multifamily Leadership</description>
+    <errorConditionFormula>AND(
+Account.RecordTypeId = &quot;012E0000000fHl4&quot;,
+Owner.ProfileId &lt;&gt; &quot;00eE000000125Fl&quot;,
+Owner.ProfileId &lt;&gt; &quot;00e8a000002XXex&quot;,
+Owner.ProfileId &lt;&gt; &quot;00eE0000000agkq&quot;,
+Owner.ProfileId &lt;&gt; &quot;00e40000000nYck&quot;,
+Owner.ProfileId &lt;&gt; &quot;012E0000000fHl4&quot;
+)</errorConditionFormula>
+    <errorDisplayField>of_replaced_Units__c</errorDisplayField>
+    <errorMessage>Commercial Sales cannot create Community Connection Accounts and Opportunities for Community Connection - Property record type.</errorMessage>
+</ValidationRule>

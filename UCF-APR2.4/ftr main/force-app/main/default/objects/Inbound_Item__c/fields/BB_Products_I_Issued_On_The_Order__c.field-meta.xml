@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BB_Products_I_Issued_On_The_Order__c</fullName>
+    <externalId>false</externalId>
+    <label>BB Products I Issued On The Order</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BroadBand Upgrade – Exist. Customer</fullName>
+                <default>false</default>
+                <label>BroadBand Upgrade – Exist. Customer</label>
+            </value>
+            <value>
+                <fullName>Copper Broadband – New BB Order</fullName>
+                <default>false</default>
+                <label>Copper Broadband – New BB Order</label>
+            </value>
+            <value>
+                <fullName>FIOS Broadband – New BB Order</fullName>
+                <default>false</default>
+                <label>FIOS Broadband – New BB Order</label>
+            </value>
+            <value>
+                <fullName>No Broadband Sold</fullName>
+                <default>false</default>
+                <label>No Broadband Sold</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Vantage Broadband – New BB Order</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vantage Broadband – New BB Order</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

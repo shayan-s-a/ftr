@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimate_Incentives_Prod</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Estimate Incentives</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var url=&quot;https://www.xactlycorp.com/xintegrations/jsp/incent_estimator.jsp?opId={!Opportunity.Id}&amp;sfSessionId={!API.Session_ID}&amp;sfServerUrl={!API.Partner_Server_URL_150}&amp;sfPartnerServerUrl={!API.Partner_Server_URL_150}&amp;sfOrgId={!Organization.Id}&quot;
+if (window.showModalDialog) {
+window.showModalDialog (url,&apos;EstimateIncentive&apos;,&apos;resizable:yes;scroll:yes;dialogHeight:500px;dialogWidth:850px;location:no;status:no; center:yes;dialogleft:180px;dialogtop : 260px;&apos;);
+}else{
+window.open(url,&apos;Estimate Incentive&apos;,&apos;centerscreen,dependent=NO,dialog=YES,modal=YES,status=0,toolbar=0,width=750,height=400,scrollbars=1,resizable=1,left=180,top=260,screenX=180,screenY=260&apos;);
+}</url>
+</WebLink>

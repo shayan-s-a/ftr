@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account Team Change</fullName>
+                <default>false</default>
+                <label>Account Team Change</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Case / Order Issue</fullName>
+                <default>false</default>
+                <label>Case / Order Issue</label>
+            </value>
+            <value>
+                <fullName>Company Record</fullName>
+                <default>false</default>
+                <label>Company Record</label>
+            </value>
+            <value>
+                <fullName>Contract Request</fullName>
+                <default>false</default>
+                <label>Contract Request</label>
+            </value>
+            <value>
+                <fullName>Convert a Lead</fullName>
+                <default>false</default>
+                <label>Convert a Lead</label>
+            </value>
+            <value>
+                <fullName>Dashboard Request</fullName>
+                <default>false</default>
+                <label>Dashboard Request</label>
+            </value>
+            <value>
+                <fullName>E-Rate (RFP Only)</fullName>
+                <default>false</default>
+                <label>E-Rate (RFP Only)</label>
+            </value>
+            <value>
+                <fullName>FSA/Schedule</fullName>
+                <default>false</default>
+                <label>FSA/Schedule</label>
+            </value>
+            <value>
+                <fullName>General Support</fullName>
+                <default>false</default>
+                <label>General Support</label>
+            </value>
+            <value>
+                <fullName>Hierarchy Updates</fullName>
+                <default>false</default>
+                <label>Hierarchy Updates</label>
+            </value>
+            <value>
+                <fullName>Knowledge Article Request</fullName>
+                <default>false</default>
+                <label>Knowledge Article Request</label>
+            </value>
+            <value>
+                <fullName>New Idea</fullName>
+                <default>false</default>
+                <label>New Idea</label>
+            </value>
+            <value>
+                <fullName>Opportunity Corrections</fullName>
+                <default>false</default>
+                <label>Opportunity Corrections</label>
+            </value>
+            <value>
+                <fullName>Order Request</fullName>
+                <default>false</default>
+                <label>Order Request</label>
+            </value>
+            <value>
+                <fullName>Orders</fullName>
+                <default>false</default>
+                <label>Orders</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Support Request</fullName>
+                <default>false</default>
+                <label>Other Support Request</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset</label>
+            </value>
+            <value>
+                <fullName>Post Sale Care</fullName>
+                <default>false</default>
+                <label>Post Sale Care</label>
+            </value>
+            <value>
+                <fullName>Quote</fullName>
+                <default>false</default>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Quote Request</fullName>
+                <default>false</default>
+                <label>Quote Request</label>
+            </value>
+            <value>
+                <fullName>Repair Escalation</fullName>
+                <default>false</default>
+                <label>Repair Escalation</label>
+            </value>
+            <value>
+                <fullName>Report Request</fullName>
+                <default>false</default>
+                <label>Report Request</label>
+            </value>
+            <value>
+                <fullName>RFP/RFQ/RFI (Not E-Rate or RHC)</fullName>
+                <default>false</default>
+                <label>RFP/RFQ/RFI (Not E-Rate or RHC)</label>
+            </value>
+            <value>
+                <fullName>Rural Health Care (RFP Only)</fullName>
+                <default>false</default>
+                <label>Rural Health Care (RFP Only)</label>
+            </value>
+            <value>
+                <fullName>Software/Access Issues</fullName>
+                <default>false</default>
+                <label>Software/Access Issues</label>
+            </value>
+            <value>
+                <fullName>Spring CM</fullName>
+                <default>false</default>
+                <label>Spring CM</label>
+            </value>
+            <value>
+                <fullName>Submit an Order</fullName>
+                <default>false</default>
+                <label>Submit an Order</label>
+            </value>
+            <value>
+                <fullName>Updated an Opportunity</fullName>
+                <default>false</default>
+                <label>Updated an Opportunity</label>
+            </value>
+            <value>
+                <fullName>Vlocity</fullName>
+                <default>false</default>
+                <label>Vlocity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Negotiation__c</fullName>
+    <externalId>false</externalId>
+    <label>Negotiation (Port Speed)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto</fullName>
+                <default>true</default>
+                <label>Auto</label>
+            </value>
+            <value>
+                <fullName>No-Negotiate</fullName>
+                <default>false</default>
+                <label>No-Negotiate</label>
+            </value>
+            <value>
+                <fullName>100M Auto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>100M Auto</label>
+            </value>
+            <value>
+                <fullName>100M No Auto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>100M No Auto</label>
+            </value>
+            <value>
+                <fullName>10G Auto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10G Auto</label>
+            </value>
+            <value>
+                <fullName>10G No Auto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10G No Auto</label>
+            </value>
+            <value>
+                <fullName>1G Auto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1G Auto</label>
+            </value>
+            <value>
+                <fullName>1G No Auto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1G No Auto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

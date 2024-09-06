@@ -1,0 +1,359 @@
+{
+    "dataSource": {
+        "type": null,
+        "value": {
+        }
+    },
+    "filter": {
+    },
+    "states": [
+        {
+            "blankStateCheck": false,
+            "collapse": false,
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "fields": [
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['%vlocity_namespace%__OneTimeCharge__c']['label']",
+                    "name": "['%vlocity_namespace%__OneTimeCharge__c']['value']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['%vlocity_namespace%__OneTimeTotal__c']['label']",
+                    "name": "['%vlocity_namespace%__OneTimeTotal__c']['value']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Action",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__Action__c']['label']",
+                    "name": "['%vlocity_namespace%__Action__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Effective Quantity",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__EffectiveQuantity__c']['label']",
+                    "name": "['%vlocity_namespace%__EffectiveQuantity__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Recurring Manual Discount",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__RecurringManualDiscount__c']['label']",
+                    "name": "['%vlocity_namespace%__RecurringManualDiscount__c']['value']",
+                    "type": "percentage"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "One Time Manual Discount",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__OneTimeManualDiscount__c']['label']",
+                    "name": "['%vlocity_namespace%__OneTimeManualDiscount__c']['value']",
+                    "type": "percentage"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "Effective One Time Total",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__EffectiveOneTimeTotal__c']['label']",
+                    "name": "['%vlocity_namespace%__EffectiveOneTimeTotal__c']['value']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "Effective Recurring Total",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__EffectiveRecurringTotal__c']['label']",
+                    "name": "['%vlocity_namespace%__EffectiveRecurringTotal__c']['value']",
+                    "type": "currency"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Asset Reference Id",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__AssetReferenceId__c']['label']",
+                    "name": "['%vlocity_namespace%__AssetReferenceId__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Sub Action",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__SubAction__c']['label']",
+                    "name": "['%vlocity_namespace%__SubAction__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Item Name",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__ItemName__c']['label']",
+                    "name": "['%vlocity_namespace%__ItemName__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Cpq Cardinality Message",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__CpqCardinalityMessage__c']['label']",
+                    "name": "['%vlocity_namespace%__CpqCardinalityMessage__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "hidden": true
+                    },
+                    "displayLabel": "Cpq Pricing Message",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['%vlocity_namespace%__CpqPricingMessage__c']['label']",
+                    "name": "['%vlocity_namespace%__CpqPricingMessage__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": false,
+                        "hidden": true
+                    },
+                    "displayLabel": "Quantity",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['Quantity']['label']",
+                    "name": "['Quantity']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "DSAT Ticket #",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['DSAT_Ticket__c']['label']",
+                    "name": "['DSAT_Ticket__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "Fiber Tier",
+                    "fieldType": "standard",
+                    "group": "Custom Fields",
+                    "label": "['Fiber_Tier__c']['label']",
+                    "name": "['Fiber_Tier__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['Lit__c']['label']",
+                    "name": "['Lit__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['WC_QOS__c']['label']",
+                    "name": "['WC_QOS__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['WC_Speed__c']['label']",
+                    "name": "['WC_Speed__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['Level__c']['label']",
+                    "name": "['Level__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['Market__c']['label']",
+                    "name": "['Market__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "isDSAT": true,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['Copper_Tier__c']['label']",
+                    "name": "['Copper_Tier__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['Floor_Price_Recurring__c']['label']",
+                    "name": "['Floor_Price_Recurring__c']['value']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "data": {
+                        "editable": true,
+                        "hidden": false,
+                        "readonly": true
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "['Floor_Price_One_Time__c']['label']",
+                    "name": "['Floor_Price_One_Time__c']['value']",
+                    "type": "string"
+                }
+            ],
+            "name": "configItemFields",
+            "templateUrl": "cpq-card-blank"
+        }
+    ],
+    "title": "cpq-product-cart-config-card"
+}

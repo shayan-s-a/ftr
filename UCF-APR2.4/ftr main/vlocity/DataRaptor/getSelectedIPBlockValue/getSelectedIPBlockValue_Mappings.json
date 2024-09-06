@@ -1,0 +1,35 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "QuoteLineItem",
+        "%vlocity_namespace%__FilterGroup__c": 0,
+        "%vlocity_namespace%__FilterOperator__c": "=",
+        "%vlocity_namespace%__FilterValue__c": "qliId",
+        "%vlocity_namespace%__GlobalKey__c": "a4545159-8e44-d923-6cc2-7f78f9878e3b",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "Id",
+        "%vlocity_namespace%__InterfaceObjectLookupOrder__c": 1,
+        "%vlocity_namespace%__InterfaceObjectName__c": "QuoteLineItem",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getSelectedAttributeValueCustom7145",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getSelectedIPBlockValue",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "IP Blocks",
+        "%vlocity_namespace%__GlobalKey__c": "79219770-0379-6e95-24c3-6b10077f8268",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "QuoteLineItem:@ATTR_IP_BLOCKS",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getSelectedAttributeValueCustom9027",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getSelectedIPBlockValue",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

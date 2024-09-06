@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Management_Ring_Central</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>Territory_Name__c</columns>
+    <columns>Sales_Channel__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Network_Project_Specialist__c</columns>
+    <columns>Related_Order__c</columns>
+    <columns>Product_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>Ring Central</value>
+    </filters>
+    <filters>
+        <field>Related_Order__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,Complete</value>
+    </filters>
+    <label>Project Management - Ring Central</label>
+</ListView>

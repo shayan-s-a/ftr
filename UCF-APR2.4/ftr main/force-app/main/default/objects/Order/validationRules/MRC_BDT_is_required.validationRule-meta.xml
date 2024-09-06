@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRC_BDT_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL( MRC_BDT_PRICING__c ,&quot;Yes&quot;),
+ISBLANK( MRC_BDT__c ))</errorConditionFormula>
+    <errorDisplayField>Engineering_Charges__c</errorDisplayField>
+    <errorMessage>If MRC BDT PRICING is yes then MRC BDT is required.</errorMessage>
+</ValidationRule>

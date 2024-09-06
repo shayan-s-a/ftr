@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formula_0__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (Integer_2__c &lt; Integer_1__c || Integer_1__c &gt; 100000,
+    1000000, 
+    MIN(
+        1000000,
+        MAX(
+            Decimal_5__c,
+            (MIN(
+                IF(Integer_1__c &lt;= 20,
+                    (2173+1500+IF(Integer_3__c&lt;2000, 767, IF(Integer_3__c&lt;6000, 1198, IF(Integer_3__c&lt;10000, 2435, 1000000000000)))),
+                    IF(Integer_1__c&lt;=50,
+                        (3671+1500+IF(Integer_3__c&lt;2000, 1699, IF(Integer_3__c&lt;6000, 1699, IF(Integer_3__c&lt;10000, 4174, 1000000000000)))),
+                        1000000000000
+                    )
+                ),
+                IF(Integer_4__c&lt;=4000, Decimal_1__c*Integer_4__c + 3000, 1000000000000)) * Decimal_2__c
+            ) * Decimal_3__c + Decimal_4__c 
+        ) + Decimal_0__c
+    )
+)</formula>
+    <label>Address Based Pricing</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

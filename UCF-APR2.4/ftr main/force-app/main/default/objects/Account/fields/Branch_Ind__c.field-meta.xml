@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Ind__c</fullName>
+    <description>Updated/Created by Randy Gromlich for D&amp;B/MLR data 3/5/2020</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A code which describes the organizational status of the business. &quot;IF&quot; = in FTR footprint; &quot;OOF&quot; = outside the FTR serving area.</inlineHelpText>
+    <label>Branch Indicator</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branch</fullName>
+                <default>false</default>
+                <label>Branch</label>
+            </value>
+            <value>
+                <fullName>HQ</fullName>
+                <default>false</default>
+                <label>HQ</label>
+            </value>
+            <value>
+                <fullName>OOF-Branch</fullName>
+                <default>false</default>
+                <label>OOF-Branch</label>
+            </value>
+            <value>
+                <fullName>OOF-HQ</fullName>
+                <default>false</default>
+                <label>OOF-HQ</label>
+            </value>
+            <value>
+                <fullName>OOF-Single</fullName>
+                <default>false</default>
+                <label>OOF-Single</label>
+            </value>
+            <value>
+                <fullName>Single</fullName>
+                <default>false</default>
+                <label>Single</label>
+            </value>
+            <value>
+                <fullName>IF-Branch</fullName>
+                <default>false</default>
+                <label>IF-Branch</label>
+            </value>
+            <value>
+                <fullName>IF-HQ</fullName>
+                <default>false</default>
+                <label>IF-HQ</label>
+            </value>
+            <value>
+                <fullName>IF-Single</fullName>
+                <default>false</default>
+                <label>IF-Single</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

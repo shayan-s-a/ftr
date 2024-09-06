@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TimeZone__c</fullName>
+    <externalId>false</externalId>
+    <label>TimeZone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alaskan Standard Time (AKST)</fullName>
+                <default>false</default>
+                <label>Alaskan Standard Time (AKST)</label>
+            </value>
+            <value>
+                <fullName>Central Standard Time (CST)</fullName>
+                <default>false</default>
+                <label>Central Standard Time (CST)</label>
+            </value>
+            <value>
+                <fullName>Eastern Standard Time (EST)</fullName>
+                <default>false</default>
+                <label>Eastern Standard Time (EST)</label>
+            </value>
+            <value>
+                <fullName>Pacific Standard Time (PST)</fullName>
+                <default>false</default>
+                <label>Pacific Standard Time (PST)</label>
+            </value>
+            <value>
+                <fullName>Mountain Standard Time (MST)</fullName>
+                <default>false</default>
+                <label>Mountain Standard Time (MST)</label>
+            </value>
+            <value>
+                <fullName>Hawaii-Aleutian Standard Time (HST)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hawaii-Aleutian Standard Time (HST)</label>
+            </value>
+            <value>
+                <fullName>Samoa standard time (UTC-11)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Samoa standard time (UTC-11)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

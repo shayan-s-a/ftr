@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Workgroup_Account_Link</fullName>
+    <active>true</active>
+    <errorConditionFormula>WorkGroupId__r.Name != &apos;Customer&apos; &amp;&amp; AccountId__c != null &amp;&amp; RecordType.Name != &apos;NCM&apos;</errorConditionFormula>
+    <errorMessage>Only Customer workgroups can be linked to a customer</errorMessage>
+</ValidationRule>

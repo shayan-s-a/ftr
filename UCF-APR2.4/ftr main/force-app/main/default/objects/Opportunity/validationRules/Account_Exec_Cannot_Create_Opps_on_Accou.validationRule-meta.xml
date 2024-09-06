@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Exec_Cannot_Create_Opps_on_Accou</fullName>
+    <active>false</active>
+    <description>Prevents Account Exec Profile from creating Opportunities on Accounts they do not.
+BAM &amp; Frontier Sales.</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+Account.OwnerId &lt;&gt; &quot;005E00000066ttB&quot;,
+OwnerId &lt;&gt; Account.OwnerId,
+OwnerId &lt;&gt; Account.Owner.ManagerId,
+($User.ProfileId = &apos;00e0h000001WfvO&apos; || $User.ProfileId = &apos;00e0h000001WfeA&apos; || $User.ProfileId = &apos;00eE0000001A8C8&apos; )
+)</errorConditionFormula>
+    <errorMessage>You are not the owner of this Company.  Therefore you cannot create an  Opportunity related to it.</errorMessage>
+</ValidationRule>

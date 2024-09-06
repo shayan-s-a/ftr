@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_this_an_SDWAN_VoiP_Migration__c</fullName>
+    <description>Created for Ross Ferguson for use on New SDWAN orders.  4/9/20</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select either Y(Yes) or N(No) when adding SDWAN</inlineHelpText>
+    <label>Is this an SDWAN/VoiP Migration?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>Yes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SDWAN</controllingFieldValue>
+            <valueName>No</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formula_3__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (Integer_2__c &lt; Integer_1__c ,
+ 1000000,IF ( Integer_1__c &gt; 2000,Decimal_5__c , Formula_5__c))</formula>
+    <label>DIA HBE Eligible</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

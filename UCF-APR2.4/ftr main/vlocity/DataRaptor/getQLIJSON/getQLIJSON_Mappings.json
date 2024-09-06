@@ -1,0 +1,49 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "QLI",
+        "%vlocity_namespace%__FilterGroup__c": 0,
+        "%vlocity_namespace%__FilterOperator__c": "=",
+        "%vlocity_namespace%__FilterValue__c": "QuoteId",
+        "%vlocity_namespace%__GlobalKey__c": "69d9ce77-e76d-62e5-32a2-b34dc6b77baa",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "QuoteId",
+        "%vlocity_namespace%__InterfaceObjectLookupOrder__c": 1,
+        "%vlocity_namespace%__InterfaceObjectName__c": "QuoteLineItem",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getQLIJSONCustom3831",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getQLIJSON",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Id",
+        "%vlocity_namespace%__GlobalKey__c": "adca62e2-25d5-15e6-ab6a-e13ae6fd0d63",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "QLI:Id",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getQLIJSONCustom5323",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getQLIJSON",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "JSON",
+        "%vlocity_namespace%__GlobalKey__c": "8764ecc4-426c-4af3-0af3-a8741d20cd94",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "QLI:%vlocity_namespace%__JSONAttribute__c",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "getQLIJSONCustom7089",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "getQLIJSON",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

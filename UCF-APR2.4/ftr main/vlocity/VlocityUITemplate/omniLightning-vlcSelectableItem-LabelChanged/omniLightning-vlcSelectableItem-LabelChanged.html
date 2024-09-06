@@ -1,0 +1,82 @@
+<a  class="slds-size--4-of-12 slds-medium-size--4-of-12 slds-large-size--4-of-12 vlc-slds-items--container"
+    ng-controller="SelectableItemFTRLabelChanged"
+    ng-click="addProduct(p, control)"
+    vlc-slds-prod-desc="{{ p.Product2.Description }}"
+    ng-repeat='p in control.vlcSI[control.itemsKey][0].records'>
+
+    <div class="vlc-slds-selectableItem">
+
+        <label class="slds-form__element__label" id="product-name">
+            {{p.Name.value}}
+
+            <div class="vlc-slds_info_icon" ng-show="p.Product2.Description.length > 0">
+            <button class="slds-button slds-button_icon slds-button slds-button_icon" aria-describedby="help" aria-disabled="true" title="Help">
+            <svg class="slds-button__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" id="info"><path d="M26 2C12.7 2 2 12.7 2 26s10.7 24 24 24 24-10.7 24-24S39.3 2 26 2zm0 12.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm5 21c0 .5-.4.9-1 .9h-8c-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1.5 0 1-.3 1-.9v-4c0-.5-.4-1.1-1-1.1-.5 0-1-.3-1-.9v-2c0-.5.4-1.1 1-1.1h6c.5 0 1 .5 1 1.1v8c0 .5.4.9 1 .9.5 0 1 .5 1 1.1v2z"></path></svg>
+            <span class="slds-assistive-text">Description</span>
+            </button>
+            </div>
+
+
+            <span class="tooltip" role="tooltip" id="description-tooltip" ng-show="p.Product2.Description.length > 0">
+                {{p.Product2.Description}}
+            </span>
+        </label> <!--label-->
+
+        
+        <div ng-if="control.propSetMap.showNRC" ng-if="!control.propSetMap.dontFormatPrice" class="vlc-slds-item--onecost" ng-init="UnitPrice = p.UnitPrice.value ? p.UnitPrice.value : 0.00">
+
+            <label ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">
+                {{UnitPrice | currency:bpTree.cpqCurrencySymbol  | numFormatFilter}}
+            </label>
+            <label ng-if="control.propSetMap.dontFormatPrice" ng-hide="UnitPrice == 0.00"  class="slds-form__element__label" style="font-size:14px;">
+                {{UnitPrice}}
+            </label>
+            
+
+            <label ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">Purchase Price</label>
+            
+        </div>
+        
+    
+        <div ng-if="control.propSetMap.showMRC" ng-if="!control.propSetMap.dontFormatPrice" class="vlc-slds-item--cost" ng-init="RecurringPrice__c = p[nsPrefix + 'RecurringPrice__c'].value ? p[nsPrefix + 'RecurringPrice__c'].value : 0.00">
+
+            <label ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">
+                {{RecurringPrice__c | currency:bpTree.cpqCurrencySymbol  | numFormatFilter}}
+            </label>
+            <label ng-if="control.propSetMap.dontFormatPrice" ng-hide="RecurringPrice__c== 0.00" class="slds-form__element__label" style="font-size:14px;" >
+                {{RecurringPrice__c}}
+            </label>
+           <label ng-if="!control.propSetMap.dontFormatPrice" class="slds-form__element__label">Monthly Rental</label>
+           
+        </div>
+        
+        
+        
+        <div class="vls-slds-item--action">
+
+            <span class="slds-icon_container slds-icon-action-approval slds-icon_container--circle">
+                <slds-svg-icon aria-hidden="true"
+                            sprite="'action'"
+                            icon="'approval'"
+                            size="'small'"
+                            extra-classes="''">
+                </slds-svg-icon>
+            </span>
+
+        </div>
+
+    </div>
+
+</a>
+<div class='vlc-slds-loadmore-products-btn vlc-slds-remote-action--button' ng-if="control.vlcSI[control.itemsKey][0].actions">
+    <div class="slds-form-element__control">
+        <div class="vlc-control-wrapper">
+            <div id="loadMoreProducts"
+                 class='slds-box'
+                 title="Load More"
+                 ng-click="baseCtrl.loadMoreProducts(control, this)">
+                <p>{{::customLabels.OmniSelItemLoadMore}}</p>
+            </div>
+        </div>
+    </div>
+</div>

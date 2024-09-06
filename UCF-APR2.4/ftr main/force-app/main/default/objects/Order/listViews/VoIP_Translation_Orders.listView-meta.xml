@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VoIP_Translation_Orders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>VoIP_Translations__c</columns>
+    <columns>VoIP_Translations_Stage__c</columns>
+    <columns>Hot_Cut__c</columns>
+    <columns>Hot_Cut_Stage__c</columns>
+    <columns>CPE_DCS_Stage__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Customer_Requested_Date__c</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Order_Stage__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>VoIP_Translations_Stage__c</field>
+        <operation>equals</operation>
+        <value>Review,Translations In Progress,VTRANS Completed</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notContain</operation>
+        <value>Complete,Cancelled,Rejected to AE</value>
+    </filters>
+    <filters>
+        <field>Product__c</field>
+        <operation>startsWith</operation>
+        <value>FAW UCaaS</value>
+    </filters>
+    <label>VoIP Translation Orders</label>
+    <sharedTo>
+        <group>VoIP_Translation_Group</group>
+    </sharedTo>
+</ListView>

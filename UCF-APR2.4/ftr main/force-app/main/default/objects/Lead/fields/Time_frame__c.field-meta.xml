@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_frame__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Example:  Within next 90 days.</inlineHelpText>
+    <label>Timeframe</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Immediately</fullName>
+                <default>false</default>
+                <label>Immediately</label>
+            </value>
+            <value>
+                <fullName>&lt;30 days</fullName>
+                <default>false</default>
+                <label>&lt;30 days</label>
+            </value>
+            <value>
+                <fullName>30 – 90 Days</fullName>
+                <default>false</default>
+                <label>30 – 90 Days</label>
+            </value>
+            <value>
+                <fullName>91 – 180 Days</fullName>
+                <default>false</default>
+                <label>91 – 180 Days</label>
+            </value>
+            <value>
+                <fullName>181+ Days</fullName>
+                <default>false</default>
+                <label>181+ Days</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

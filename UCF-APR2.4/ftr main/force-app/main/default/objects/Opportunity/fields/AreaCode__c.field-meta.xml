@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AreaCode__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( LEFT(Account.Phone, 1)= &apos;(&apos;,mid(Account.Phone,2,3), 
+MID( Account.Phone ,1,3))</formula>
+    <label>AreaCode</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

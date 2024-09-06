@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Circuit_ID_Required</fullName>
+    <active>false</active>
+    <description>if the &quot;Order&quot; record type is &quot;Move, Disconnect, or Upgrade&quot; Circuit ID is required</description>
+    <errorConditionFormula>AND(
+OR(
+Order__r.RecordType.Name = &quot;Move Order&quot;,
+Order__r.RecordType.Name = &quot;Disconnect Order&quot;,
+Order__r.RecordType.Name = &quot;Upgrade Order&quot;
+),
+RecordType.Name = &quot;M6 Service Order&quot;,
+Circuit_ID__c = &quot;&quot; 
+)</errorConditionFormula>
+    <errorMessage>For Move, Disconnect, or Upgrade orders, the Circuit ID is required is required</errorMessage>
+</ValidationRule>

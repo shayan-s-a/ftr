@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Billing Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BDT (Carrier) - Business Decision Tool</fullName>
+                <default>false</default>
+                <label>BDT (Carrier) - Business Decision Tool</label>
+            </value>
+            <value>
+                <fullName>BDT (Retail) - Business Decision Tool</fullName>
+                <default>false</default>
+                <label>BDT (Retail) - Business Decision Tool</label>
+            </value>
+            <value>
+                <fullName>CAN – Cancel Install</fullName>
+                <default>false</default>
+                <label>CAN - Cancel Install</label>
+            </value>
+            <value>
+                <fullName>CAN – Cancel Upgrade/Move</fullName>
+                <default>false</default>
+                <label>CAN - Cancel Upgrade/Move</label>
+            </value>
+            <value>
+                <fullName>CIAC (Adv Pymt) - Advanced Payment for Construction</fullName>
+                <default>false</default>
+                <label>CIAC (Adv Pymt) - Advanced Payment for Construction</label>
+            </value>
+            <value>
+                <fullName>DIP - Directory Listings</fullName>
+                <default>false</default>
+                <label>DIP - Directory Listings</label>
+            </value>
+            <value>
+                <fullName>GEN- General Billing (With Project Number)</fullName>
+                <default>false</default>
+                <label>GEN- General Billing (With Project Number)</label>
+            </value>
+            <value>
+                <fullName>MAP - Map Request</fullName>
+                <default>false</default>
+                <label>MAP - Map Request</label>
+            </value>
+            <value>
+                <fullName>MSW - Misc Billing</fullName>
+                <default>true</default>
+                <label>MSW - Misc Billing</label>
+            </value>
+            <value>
+                <fullName>POL - Pole Billing</fullName>
+                <default>false</default>
+                <label>POL - Pole Billing</label>
+            </value>
+            <value>
+                <fullName>RWO - Joint Pole and Make Ready (With Project Number)</fullName>
+                <default>false</default>
+                <label>RWO - Joint Pole and Make Ready (With Project Number)</label>
+            </value>
+            <value>
+                <fullName>VID - Video Advertising</fullName>
+                <default>false</default>
+                <label>VID - Video Advertising</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

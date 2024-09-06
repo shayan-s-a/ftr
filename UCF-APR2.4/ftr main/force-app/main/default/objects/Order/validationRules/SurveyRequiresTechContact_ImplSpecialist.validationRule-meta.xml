@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SurveyRequiresTechContact_ImplSpecialist</fullName>
+    <active>true</active>
+    <description>Technical Contact and Impl Special are required to complete order and send survey for some record types</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Order_Stage__c, &quot;Complete&quot;),
+NOT(ISBLANK(Network_Project_Specialist__c)),
+OR(Record_Type_Ids__c = &quot;Vlocity OM Order&quot;, 
+Record_Type_Ids__c = &quot;Circuit Move Order&quot;,
+Record_Type_Ids__c = &quot;Frontier Direct Calling&quot;,
+Record_Type_Ids__c = &quot;Manual Vlocity Order&quot;,
+Record_Type_Ids__c = &quot;Frontier Direct Calling&quot;,
+Record_Type_Ids__c = &quot;Move Order&quot;,
+Record_Type_Ids__c = &quot;New Order&quot;,
+Record_Type_Ids__c = &quot;Change Order&quot;,
+Record_Type_Ids__c = &quot;Upgrade/Downgrade Order&quot;,
+Record_Type_Ids__c = &quot;UCaaS New Order&quot;
+),
+ISBLANK( Technical_Contact__c )
+)</errorConditionFormula>
+    <errorMessage>Technical Contact and Impl Special are required to complete order and send survey for some record types</errorMessage>
+</ValidationRule>

@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schedule_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Schedule Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Agreement_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Backup and Recovery</fullName>
+                <default>false</default>
+                <label>Backup and Recovery</label>
+            </value>
+            <value>
+                <fullName>BHSI and FSUV</fullName>
+                <default>false</default>
+                <label>BHSI and FSUV</label>
+            </value>
+            <value>
+                <fullName>BHSI and FSUV - CT</fullName>
+                <default>false</default>
+                <label>BHSI and FSUV - CT</label>
+            </value>
+            <value>
+                <fullName>BHSI and OneVoice</fullName>
+                <default>false</default>
+                <label>BHSI and OneVoice</label>
+            </value>
+            <value>
+                <fullName>BHSI and OneVoice - Promo</fullName>
+                <default>false</default>
+                <label>BHSI and OneVoice - Promo</label>
+            </value>
+            <value>
+                <fullName>Broadband and FSUV</fullName>
+                <default>false</default>
+                <label>Broadband and FSUV - Existing Customers Only</label>
+            </value>
+            <value>
+                <fullName>Broadband and Onevoice - CT</fullName>
+                <default>false</default>
+                <label>Broadband and Onevoice - CT - Existing Customers Only</label>
+            </value>
+            <value>
+                <fullName>Broadband and OneVoice - CT Promo</fullName>
+                <default>false</default>
+                <label>Broadband and OneVoice - CT Promo</label>
+            </value>
+            <value>
+                <fullName>Broadband and OneVoice</fullName>
+                <default>false</default>
+                <label>Broadband and OneVoice - Existing Customers Only</label>
+            </value>
+            <value>
+                <fullName>Broadband and OneVoice Nationwide</fullName>
+                <default>false</default>
+                <label>Broadband and OneVoice Nationwide</label>
+            </value>
+            <value>
+                <fullName>Broadband Service - CA-FL-TX</fullName>
+                <default>false</default>
+                <label>Broadband Service - CA-FL-TX</label>
+            </value>
+            <value>
+                <fullName>Business Internet Copper Enterprise Only</fullName>
+                <default>false</default>
+                <label>Business Internet Copper Enterprise Only</label>
+            </value>
+            <value>
+                <fullName>Business Local-LD</fullName>
+                <default>false</default>
+                <label>Business Local-LD</label>
+            </value>
+            <value>
+                <fullName>Cabling Service</fullName>
+                <default>false</default>
+                <label>Cabling Service</label>
+            </value>
+            <value>
+                <fullName>Converged Voice Bundle</fullName>
+                <default>false</default>
+                <label>Converged Voice Bundle</label>
+            </value>
+            <value>
+                <fullName>CPE Purchase Install</fullName>
+                <default>false</default>
+                <label>CPE Purchase Install</label>
+            </value>
+            <value>
+                <fullName>CPE Purchase install Maintenance</fullName>
+                <default>false</default>
+                <label>CPE Purchase install Maintenance</label>
+            </value>
+            <value>
+                <fullName>CPE Voice Maintenance</fullName>
+                <default>false</default>
+                <label>CPE Voice Maintenance</label>
+            </value>
+            <value>
+                <fullName>Critical Customer Notification E-911</fullName>
+                <default>false</default>
+                <label>Critical Customer Notification E-911</label>
+            </value>
+            <value>
+                <fullName>CyberCenter</fullName>
+                <default>false</default>
+                <label>CyberCenter</label>
+            </value>
+            <value>
+                <fullName>DIA Schedule_02012021</fullName>
+                <default>false</default>
+                <label>DIA</label>
+            </value>
+            <value>
+                <fullName>E-LAN</fullName>
+                <default>false</default>
+                <label>E-LAN</label>
+            </value>
+            <value>
+                <fullName>E-LAN Managed Router</fullName>
+                <default>false</default>
+                <label>E-LAN Managed Router</label>
+            </value>
+            <value>
+                <fullName>E-LINE</fullName>
+                <default>false</default>
+                <label>ELINE – EVPL – EPL</label>
+            </value>
+            <value>
+                <fullName>Enterprise Managed WLAN</fullName>
+                <default>false</default>
+                <label>Enterprise Managed WLAN</label>
+            </value>
+            <value>
+                <fullName>EVPL</fullName>
+                <default>false</default>
+                <label>EVPL</label>
+            </value>
+            <value>
+                <fullName>EVPL Managed Router</fullName>
+                <default>false</default>
+                <label>EVPL Managed Router</label>
+            </value>
+            <value>
+                <fullName>Fiber and OneVoice Nationwide - Legacy</fullName>
+                <default>false</default>
+                <label>Fiber and OneVoice Nationwide - Legacy</label>
+            </value>
+            <value>
+                <fullName>Fiber First Offer ENTERPRISE ONLY</fullName>
+                <default>false</default>
+                <label>Fiber First Offer ENTERPRISE ONLY</label>
+            </value>
+            <value>
+                <fullName>FiberOffice and OneVoice</fullName>
+                <default>false</default>
+                <label>FiberOffice and OneVoice</label>
+            </value>
+            <value>
+                <fullName>FiberOffice and OneVoice - CT</fullName>
+                <default>false</default>
+                <label>FiberOffice and OneVoice - CT - Existing Customers Only</label>
+            </value>
+            <value>
+                <fullName>FiberOffice and OneVoice - Legacy</fullName>
+                <default>false</default>
+                <label>FiberOffice and OneVoice - Legacy - Existing Customers Only</label>
+            </value>
+            <value>
+                <fullName>Fiberoffice and Onevoice - Promo</fullName>
+                <default>false</default>
+                <label>Fiberoffice and Onevoice - Promo</label>
+            </value>
+            <value>
+                <fullName>FiberOptic and OneVoice Schedule - Fiber Optimization</fullName>
+                <default>false</default>
+                <label>FiberOptic and OneVoice Schedule - Fiber Optimization</label>
+            </value>
+            <value>
+                <fullName>FiOS Broadband and FBV</fullName>
+                <default>false</default>
+                <label>FiberOptic Broadband and FBV</label>
+            </value>
+            <value>
+                <fullName>FiOS Broadband and FBV(IN-OR-WA Only)</fullName>
+                <default>false</default>
+                <label>FiberOptic Broadband and FBV(IN-OR-WA Only)</label>
+            </value>
+            <value>
+                <fullName>FiOS Broadband and FSUV</fullName>
+                <default>false</default>
+                <label>FiberOptic Broadband and FSUV</label>
+            </value>
+            <value>
+                <fullName>FiOS Broadband and OneVoice</fullName>
+                <default>false</default>
+                <label>FiberOptic Broadband and OneVoice - Existing Customers Only</label>
+            </value>
+            <value>
+                <fullName>FiOS Broadband and OneVoice Nationwide</fullName>
+                <default>false</default>
+                <label>FiberOptic Broadband and OneVoice Nationwide</label>
+            </value>
+            <value>
+                <fullName>FiOS Broadband and OneVoice - Promo</fullName>
+                <default>false</default>
+                <label>FiberOptic Broadband and OneVoice - Promo</label>
+            </value>
+            <value>
+                <fullName>FiOS TV - Hospitality IN-OR-WA</fullName>
+                <default>false</default>
+                <label>FiberOptic TV - Hospitality IN-OR-WA</label>
+            </value>
+            <value>
+                <fullName>FiOS TV Locals Plus Private</fullName>
+                <default>false</default>
+                <label>FiberOptic TV Locals Plus Private</label>
+            </value>
+            <value>
+                <fullName>FiOS TV Locals Plus Public</fullName>
+                <default>false</default>
+                <label>FiberOptic TV Locals Plus Public</label>
+            </value>
+            <value>
+                <fullName>Frontier AnyWare UCaaS</fullName>
+                <default>false</default>
+                <label>Frontier AnyWare UCaaS</label>
+            </value>
+            <value>
+                <fullName>Frontier Business Voice</fullName>
+                <default>false</default>
+                <label>Frontier Business Voice</label>
+            </value>
+            <value>
+                <fullName>Frontier Business Xtreme</fullName>
+                <default>false</default>
+                <label>Frontier Business Xtreme</label>
+            </value>
+            <value>
+                <fullName>Frontier Connect Cloud</fullName>
+                <default>false</default>
+                <label>Frontier Connect Cloud</label>
+            </value>
+            <value>
+                <fullName>Frontier Calling Cloud Phone</fullName>
+                <default>false</default>
+                <label>Frontier Direct Calling</label>
+            </value>
+            <value>
+                <fullName>Frontier Simplified 4-8</fullName>
+                <default>false</default>
+                <label>Frontier Simplified 4-8</label>
+            </value>
+            <value>
+                <fullName>Frontier Simplified 8-16</fullName>
+                <default>false</default>
+                <label>Frontier Simplified 8-16</label>
+            </value>
+            <value>
+                <fullName>Frontier Tandem</fullName>
+                <default>false</default>
+                <label>Frontier Tandem</label>
+            </value>
+            <value>
+                <fullName>Frontier Tandem-for-Enterprise</fullName>
+                <default>false</default>
+                <label>Frontier Tandem-for-Enterprise</label>
+            </value>
+            <value>
+                <fullName>IP Connect</fullName>
+                <default>false</default>
+                <label>IP Connect</label>
+            </value>
+            <value>
+                <fullName>SIP Trunking</fullName>
+                <default>false</default>
+                <label>IP Trunking</label>
+            </value>
+            <value>
+                <fullName>Managed Firewall</fullName>
+                <default>false</default>
+                <label>Managed Firewall</label>
+            </value>
+            <value>
+                <fullName>Managed Service - Router</fullName>
+                <default>false</default>
+                <label>Managed Service - Router</label>
+            </value>
+            <value>
+                <fullName>MetroE LAN-WAN</fullName>
+                <default>false</default>
+                <label>MetroE LAN-WAN</label>
+            </value>
+            <value>
+                <fullName>Managed Network Services</fullName>
+                <default>false</default>
+                <label>MNS - Managed Network Services</label>
+            </value>
+            <value>
+                <fullName>OneVoice</fullName>
+                <default>false</default>
+                <label>OneVoice</label>
+            </value>
+            <value>
+                <fullName>Optical Transport</fullName>
+                <default>false</default>
+                <label>Optical Transport (FOTS)</label>
+            </value>
+            <value>
+                <fullName>Pilot Retention Offer Dec 2022</fullName>
+                <default>false</default>
+                <label>Pilot Retention Offer Dec 2022</label>
+            </value>
+            <value>
+                <fullName>Private Line</fullName>
+                <default>false</default>
+                <label>Private Line</label>
+            </value>
+            <value>
+                <fullName>Ring Central</fullName>
+                <default>false</default>
+                <label>Ring Central Enterprise</label>
+            </value>
+            <value>
+                <fullName>Satellite Broadband</fullName>
+                <default>false</default>
+                <label>Satellite Broadband</label>
+            </value>
+            <value>
+                <fullName>Satellite Broadband Service</fullName>
+                <default>false</default>
+                <label>Satellite Broadband Service</label>
+            </value>
+            <value>
+                <fullName>UCF - CCaaS</fullName>
+                <default>false</default>
+                <label>UCF - CCaaS</label>
+            </value>
+            <value>
+                <fullName>UCF - UCaaS</fullName>
+                <default>false</default>
+                <label>UCF - UCaaS</label>
+            </value>
+            <value>
+                <fullName>Voice Internet Service - CA-FL-TX</fullName>
+                <default>false</default>
+                <label>Voice Internet Service - CA-FL-TX</label>
+            </value>
+            <value>
+                <fullName>Voice Internet Service - CTF Promo</fullName>
+                <default>false</default>
+                <label>Voice Internet Service - CTF Promo</label>
+            </value>
+            <value>
+                <fullName>Wi-Fi Anchor Tenant</fullName>
+                <default>false</default>
+                <label>Wi-Fi Anchor Tenant</label>
+            </value>
+            <value>
+                <fullName>Wi-Fi Anchor Tenant - Govt</fullName>
+                <default>false</default>
+                <label>Wi-Fi Anchor Tenant - Govt</label>
+            </value>
+            <value>
+                <fullName>Wi-Fi Hot Spot</fullName>
+                <default>false</default>
+                <label>Wi-Fi Hot Spot</label>
+            </value>
+            <value>
+                <fullName>BroadbandandOneVoice_AFTER_Nov_19_2020</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Broadband And Onevoice-After Nov 19 2020</label>
+            </value>
+            <value>
+                <fullName>FiberandOneVoice_AFTER_Nov19_2020</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Fiber And Onevoice-After Nov 19 2020</label>
+            </value>
+            <value>
+                <fullName>Fiber Broadband and OneVoice Nationwide - Legacy - Pre-NOV19 - BIRCH</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Fiber and OneVoice - BEFORE Nov 19 2020</label>
+            </value>
+            <value>
+                <fullName>Fiber First Offer SMB ONLY</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Fiber First Offer</label>
+            </value>
+            <value>
+                <fullName>FiberOptic BroadbandandOneVoice_AFTER_Nov19_2020</fullName>
+                <default>false</default>
+                <label>SMB ONLY - FiberOptic Broadband and OneVoice - AFTER Nov 19 2020</label>
+            </value>
+            <value>
+                <fullName>FiberOptic Broadband and OneVoice Nationwide - Pre-NOV19 - BIRCH</fullName>
+                <default>false</default>
+                <label>SMB ONLY - FiberOptic Broadband and OneVoice - BEFORE Nov 19 2020</label>
+            </value>
+            <value>
+                <fullName>Fiber Optimization Offer w24 Month Price Guarantee and First OneVoice Line Free</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Fiber Optimization W24month Price Guarantee And First Onevoice Free</label>
+            </value>
+            <value>
+                <fullName>Frontier and RingCentral</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Frontier + RingCentral</label>
+            </value>
+            <value>
+                <fullName>Frontier Business Fiber Internet Smart Voice and Business Security Pro 2G-2 Year Price Guarantee</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Frontier Business Fiber Internet Smart Voice and Business Security Pro 2G-2 Year Price Guarantee</label>
+            </value>
+            <value>
+                <fullName>Ring Central SMB</fullName>
+                <default>false</default>
+                <label>SMB ONLY - Ring Central SMB</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Local Services</controllingFieldValue>
+            <valueName>Business Local-LD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local Services</controllingFieldValue>
+            <valueName>OneVoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>Critical Customer Notification E-911</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>Frontier AnyWare UCaaS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>Frontier Business Voice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>Frontier Calling Cloud Phone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>SIP Trunking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>Ring Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>UCF - CCaaS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>UCF - UCaaS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VoIP</controllingFieldValue>
+            <valueName>Ring Central SMB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wi-Fi</controllingFieldValue>
+            <valueName>Enterprise Managed WLAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous</controllingFieldValue>
+            <valueName>Cabling Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Miscellaneous</controllingFieldValue>
+            <valueName>CyberCenter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door to Door LOA-MDF</controllingFieldValue>
+            <valueName>FiOS Broadband and FBV(IN-OR-WA Only)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Broadband Offers</controllingFieldValue>
+            <valueName>Business Internet Copper Enterprise Only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Broadband Offers</controllingFieldValue>
+            <valueName>Fiber First Offer ENTERPRISE ONLY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Broadband Offers</controllingFieldValue>
+            <valueName>Fiber First Offer SMB ONLY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Broadband Offers</controllingFieldValue>
+            <valueName>Fiber Optimization Offer w24 Month Price Guarantee and First OneVoice Line Free</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Broadband Offers</controllingFieldValue>
+            <valueName>Frontier and RingCentral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Broadband Offers</controllingFieldValue>
+            <valueName>Frontier Business Fiber Internet Smart Voice and Business Security Pro 2G-2 Year Price Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Services</controllingFieldValue>
+            <valueName>Frontier Connect Cloud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Services</controllingFieldValue>
+            <valueName>Managed Firewall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broadband, FiOS &amp; Voice Bundles - New Service</controllingFieldValue>
+            <valueName>FiberOptic and OneVoice Schedule - Fiber Optimization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broadband, FiOS &amp; Voice Bundles</controllingFieldValue>
+            <valueName>Pilot Retention Offer Dec 2022</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broadband, FiOS &amp; Voice Bundles</controllingFieldValue>
+            <valueName>BroadbandandOneVoice_AFTER_Nov_19_2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broadband, FiOS &amp; Voice Bundles</controllingFieldValue>
+            <valueName>FiberandOneVoice_AFTER_Nov19_2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broadband, FiOS &amp; Voice Bundles</controllingFieldValue>
+            <valueName>Fiber Broadband and OneVoice Nationwide - Legacy - Pre-NOV19 - BIRCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broadband, FiOS &amp; Voice Bundles</controllingFieldValue>
+            <valueName>FiberOptic BroadbandandOneVoice_AFTER_Nov19_2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broadband, FiOS &amp; Voice Bundles</controllingFieldValue>
+            <valueName>FiberOptic Broadband and OneVoice Nationwide - Pre-NOV19 - BIRCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet/Data Services</controllingFieldValue>
+            <valueName>DIA Schedule_02012021</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet/Data Services</controllingFieldValue>
+            <valueName>E-LAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet/Data Services</controllingFieldValue>
+            <valueName>E-LINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet/Data Services</controllingFieldValue>
+            <valueName>Managed Network Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet/Data Services</controllingFieldValue>
+            <valueName>Optical Transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ethernet/Data Services</controllingFieldValue>
+            <valueName>Private Line</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

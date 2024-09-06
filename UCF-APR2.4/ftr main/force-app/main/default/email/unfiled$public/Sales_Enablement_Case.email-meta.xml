@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to alert the Sales Enablement Queue member a case has been assigned to the queue</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Sales Enablement Case</name>
+    <style>none</style>
+    <subject>Sales Enablement Case Submission Alert:    {!Case.CaseNumber}</subject>
+    <textOnly>Please follow the link below to view the new case submission to the Sales Enablement Queue.
+
+Sales Enablement Case
+
+Thank you</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

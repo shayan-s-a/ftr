@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSAM_BPO_Support</fullName>
+    <active>true</active>
+    <businessProcess>Standard Support Process</businessProcess>
+    <label>CSAM BPO Support</label>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Account Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automatically Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BidNet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CJIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSA Org</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Reports or Similar Requests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instant Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance-In-Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MarketSource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitel - Dunthorpe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM Org</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provisioning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Efforts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remedy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2EO%2ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce Reports or Changes Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Top Dollar Trade In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WFM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>AE Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Assignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorization rights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balance Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing matter resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CABS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAP Credit Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellation or disconnect %28customer left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Needed - Customer Design Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chronic %E2%80%93Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complex Billing Investigation%2FResearch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consolidate Requests into Single CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Could not be reached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Expiration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convert As Is</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Issued %28CAP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Issued %28Emailed Requests%2FWFM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer service issue resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPI Credit Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed instructions given</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disconnected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSA%2FSchedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issued CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misapplied Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misdirect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misquote-Engineer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misquote-Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Repair Commitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing or incorrect products%2Fpricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network matter resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Action %28No error%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Issues Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Order Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Work Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order_Cancelled_Auto_Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Found and Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Not Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Finished %26 Successfully Installed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Info Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Task Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SF Admin Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAT w%2FEBD Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAT w%2FEBD and CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule ID %23 Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted to Jira</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training needs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viewing capabilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Won</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Community Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

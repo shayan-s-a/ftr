@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Is_Required_For_OP_Case</fullName>
+    <active>true</active>
+    <description>Opportunity must be entered if the field &quot;Related To&quot; equals Opportunity.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName= &quot;Sales_Operations_Support&quot;,
+ISPICKVAL(Related_To2__c, &quot;Opportunity&quot;),
+ISBLANK(Opportunity__c)
+)</errorConditionFormula>
+    <errorDisplayField>Opportunity__c</errorDisplayField>
+    <errorMessage>Opportunity must be entered if the field &quot;Related To&quot; equals Opportunity.</errorMessage>
+</ValidationRule>

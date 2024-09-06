@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_order_number_when_Closed_Won</fullName>
+    <active>false</active>
+    <description>Make this field mandatory when Stage is closed/won</description>
+    <errorConditionFormula>AND ( 
+ISPICKVAL(StageName, &quot;Closed/Won&quot;))</errorConditionFormula>
+    <errorDisplayField>System_the_Order_Entered_In__c</errorDisplayField>
+    <errorMessage>IWhen Sales Stage is Closed/Won, you must enter the system name of where you obtained the Order Number</errorMessage>
+</ValidationRule>

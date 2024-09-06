@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Category__c</fullName>
+    <description>Created for Randall Meeks, Bill Holomon Case 00767403 3/2021 Training Request Case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the desired training needs.</inlineHelpText>
+    <label>Training Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account Assignment / ROE</fullName>
+                <default>false</default>
+                <label>Account Assignment / ROE</label>
+            </value>
+            <value>
+                <fullName>Account Prioritization</fullName>
+                <default>false</default>
+                <label>Account Prioritization</label>
+            </value>
+            <value>
+                <fullName>Base Management</fullName>
+                <default>false</default>
+                <label>Base Management</label>
+            </value>
+            <value>
+                <fullName>Call Plan</fullName>
+                <default>false</default>
+                <label>Call Plan</label>
+            </value>
+            <value>
+                <fullName>COBRA Billing Portal</fullName>
+                <default>false</default>
+                <label>COBRA Billing Portal</label>
+            </value>
+            <value>
+                <fullName>Customer Billed Revenue / TIBR</fullName>
+                <default>false</default>
+                <label>Customer Billed Revenue / TIBR</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Forecasting</fullName>
+                <default>false</default>
+                <label>Forecasting</label>
+            </value>
+            <value>
+                <fullName>Obstacles/Objections</fullName>
+                <default>false</default>
+                <label>Obstacles/Objections</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pipeline Management</fullName>
+                <default>false</default>
+                <label>Pipeline Management</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+                <label>Prospecting</label>
+            </value>
+            <value>
+                <fullName>Systems/Processes - Other</fullName>
+                <default>false</default>
+                <label>Systems/Processes - Other</label>
+            </value>
+            <value>
+                <fullName>Systems/Processes - Salesforce</fullName>
+                <default>false</default>
+                <label>Systems/Processes - Salesforce</label>
+            </value>
+            <value>
+                <fullName>Value Hypothesis or Pitch</fullName>
+                <default>false</default>
+                <label>Value Hypothesis or Pitch</label>
+            </value>
+            <value>
+                <fullName>Xactly / Compensation Plan</fullName>
+                <default>false</default>
+                <label>Xactly / Compensation Plan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Reason_Lost_Detail</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Other_Reason_Lost_Details__c =&quot;&quot;,
+RecordType.Name = &apos;Community Connection&apos;,
+ISPICKVAL( StageName , &quot;Closed/Lost&quot;))</errorConditionFormula>
+    <errorDisplayField>Other_Reason_Lost_Details__c</errorDisplayField>
+    <errorMessage>Please provide Other Reason Lost Details</errorMessage>
+</ValidationRule>

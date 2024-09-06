@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Salesforce Requests</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Vlocity_Tier_1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Sales Operations Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Request_Type__c</field>
+                <operation>equals</operation>
+                <value>Vlocity</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sales_and_Operations_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Account Management</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Business_Type__c</field>
+                <operation>equals</operation>
+                <value>Carrier</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_Sales_Operations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Account Management</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Business_Type__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sales_and_Operations_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Salesforce Admin&apos; &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_Sales_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Sales Operations Support</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sales_Ops_Hire_Request</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Hiring Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>Closed</value>
+            </criteriaItems>
+            <template>unfiled$public/Generic_Case_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_Sales_Operations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Account Creation</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Collections</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Cancellation MBR</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sales_and_Operations_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>SFA Codes</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Partner_SMB_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>SMB</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_Billing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; Billing_Support_Needed__c &amp;&amp; RVP__c = &apos;RVP BAM&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;)) &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_West</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP West&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;)) &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_Central</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP Central&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;)) &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_East</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP East&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;)) &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_BAM</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP BAM&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;)) &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_Churn</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; CONTAINS(Subject, &apos;Churn Alert&apos;) &amp;&amp; ISNEW()</formula>
+            <template>Case_Notification_Templates/Churn_Alert_Case</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_SLED</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; RVP__c = &apos;RVP Federal&apos; &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sales_Enablement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Training Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Training_Category__c</field>
+                <operation>notEqual</operation>
+                <value>COBRA Billing Portal</value>
+            </criteriaItems>
+            <template>unfiled$public/Sales_Enablement_Case</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Enterprise_Portal_Support_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Enterprise Portal Support Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Enterprise_Portal_Support_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR ( 3 AND 4) OR (1 AND 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Account Activity</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Case_Reason_Other__c</field>
+                <operation>equals</operation>
+                <value>COBRA Billing Portal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Training Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Training_Category__c</field>
+                <operation>equals</operation>
+                <value>COBRA Billing Portal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Case_Reason_Other__c</field>
+                <operation>equals</operation>
+                <value>Enterprise Portal</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>CSAM_BPO_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>RecordType.Name = &apos;CSAM BPO Support&apos; &amp;&amp; ISNEW()</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>systemreporting@ftr.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Billing Issue</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <formula>OR( (RecordType.Name = &apos;Salesforce Admin&apos;), (RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; Billing_Support_Needed__c &amp;&amp; RVP__c = &apos;RVP BAM&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;))), (RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP West&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;))), (RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP Central&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;))), (RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP East&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;))), (RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; NOT(Billing_Support_Needed__c) &amp;&amp; RVP__c = &apos;RVP BAM&apos; &amp;&amp; NOT(CONTAINS(Subject, &apos;Churn&apos;))), (RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; CONTAINS(Subject, &apos;Churn Alert&apos;)), (RecordType.Name = &apos;Sales Enablement Team&apos; &amp;&amp; RVP__c = &apos;RVP Federal&apos;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>systemreporting@ftr.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Order Creation,Account Activity,Repair</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Partner_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Ent Partner/Dir Sales Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>ENT Partner</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Direct_Sales_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Ent Partner/Dir Sales Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>ENT Direct Sales</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

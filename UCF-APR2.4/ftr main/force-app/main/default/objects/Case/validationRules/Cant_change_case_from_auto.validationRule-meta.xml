@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_change_case_from_auto</fullName>
+    <active>true</active>
+    <description>If the case origin is &quot;Auto&quot;, it cannot be changed to another value.</description>
+    <errorConditionFormula>ISPICKVAL(PRIORVALUE(Origin), &quot;Auto&quot;) &amp;&amp; ISCHANGED(Origin)</errorConditionFormula>
+    <errorDisplayField>Origin</errorDisplayField>
+    <errorMessage>Cannot change case origin from Auto.</errorMessage>
+</ValidationRule>

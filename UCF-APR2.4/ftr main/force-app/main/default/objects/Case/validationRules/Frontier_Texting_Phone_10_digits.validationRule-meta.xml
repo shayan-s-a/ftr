@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frontier_Texting_Phone_10_digits</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+(NOT(REGEX(Contact_Callback_Number__c , &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Contact_Callback_Number__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Text_Enabled_Telephone_1__c , &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Text_Enabled_Telephone_1__c &lt;&gt; &quot;&quot;),
+(NOT(REGEX(Text_Enabled_Telephone_2__c , &quot;\\D*?(\\d\\D*?){10}&quot;)) &amp;&amp; Text_Enabled_Telephone_2__c &lt;&gt; &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Contact Callback Number, Text Enabled Telephone 1 and Text Enabled Telephone 2 must be 10 digits with no special characters.</errorMessage>
+</ValidationRule>

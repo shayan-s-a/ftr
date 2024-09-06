@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AddressespendingBDTResponse__c</fullName>
+    <externalId>false</externalId>
+    <label>Addresses pending BDT Response</label>
+    <summaryFilterItems>
+        <field>FTRWSAddress__c.BDT_Required_checkbox__c</field>
+        <operation>equals</operation>
+        <value>False</value>
+    </summaryFilterItems>
+    <summaryForeignKey>FTRWSAddress__c.Opportunity_ID__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

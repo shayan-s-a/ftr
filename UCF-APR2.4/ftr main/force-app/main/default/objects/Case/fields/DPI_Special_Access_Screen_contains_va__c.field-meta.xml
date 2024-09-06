@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DPI_Special_Access_Screen_contains_va__c</fullName>
+    <description>Added for First Bill Review - CNP Case record type per Jim Power on case 
+00738230 02-04-2021</description>
+    <externalId>false</externalId>
+    <inlineHelpText>DPI Special Access screen contains valid Circuit ID</inlineHelpText>
+    <label>DPI SAC has Valid Circuit ID</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No_NA</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,322 @@
+{
+    "AddOns": [
+        {
+            "ChieldProductName": "MNS - Managed Cellular Failover",
+            "ProductCode": "ENT_ETH_EIA_003",
+            "childPorductCode": "ENT_ETH_CELL_01"
+        },
+        {
+            "ChieldProductName": "MNS - Managed Security - Standard",
+            "ProductCode": "ENT_ETH_EIA_003",
+            "childPorductCode": "ENT_ETH_STD_01"
+        },
+        {
+            "ChieldProductName": "MNS - Managed Wi-Fi - Outdoor",
+            "ProductCode": "ENT_ETH_EIA_003",
+            "childPorductCode": "ENT_ETH_WIFI_02"
+        },
+        {
+            "ChieldProductName": "MNS - Managed Security – Advanced",
+            "ProductCode": "ENT_ETH_EIA_003",
+            "childPorductCode": "ENT_ETH_ADV_01"
+        },
+        {
+            "ChieldProductName": "MNS - Managed Wi-Fi - Indoor",
+            "ProductCode": "ENT_ETH_EIA_003",
+            "childPorductCode": "ENT_ETH_WIFI_01"
+        }
+    ],
+    "AddressQualification": {
+        "Address-Block": {
+            "Address": "104 W Mulberry St, Bloomington, IL 61701, USA",
+            "City": "Bloomington",
+            "State": "IL",
+            "StreetAddress": "104 West Mulberry Street",
+            "Zip": "61701"
+        },
+        "AddressQualificationResult": {
+            "AQRecordId": null,
+            "BusinessName": "",
+            "CPQId": "",
+            "CopperCiacEstimate": null,
+            "CopperCiacTier": null,
+            "CopperDistance": "1089",
+            "CopperQualification": "Qualified (up to 50MB)",
+            "CopperTier": "Tier 1",
+            "CreatedBy": "VFO user Vlocity and company ABCDE",
+            "CreatedById": 30253,
+            "CreatorEmail": "SIFT.App.Support@ftr.com",
+            "EReachProviders": [
+            ],
+            "EquipmentCost": 0,
+            "FiberCiacEstimate": null,
+            "FiberCiacTier": null,
+            "FiberCost": 0,
+            "FiberDistance": "600",
+            "FiberQualification": "Qualified (max WC speed)",
+            "FiberTier": "Tier 1",
+            "Id": 1673810,
+            "InFootprint": true,
+            "LengthFeet": 0,
+            "Level": "b",
+            "LinkStatus": "",
+            "LitBuilding": false,
+            "M6OrderNumber": null,
+            "Market": "D",
+            "Opened": "2023-05-17T08:03:01.0008541-04:00",
+            "OpportunityId": "",
+            "PERRouter": "CHCGILDTZN2",
+            "PricingTier": null,
+            "Products": "DIA, EVPL, ELAN, IPVPN, Jumbo Frames, EPL, Connect Cloud, EPath, EReach",
+            "ProductsPretty": "DIA,EVPL,ELAN,IPVPN,Jumbo Frames,EPL,Connect Cloud,EPath,EReach",
+            "QualifiedAddress": {
+                "Address": "104 W MULBERRY ST",
+                "City": "BLOOMINGTON",
+                "Latitude": 40.4831822,
+                "Longitude": -88.99428929999999,
+                "State": "IL",
+                "ZipCode": "61701"
+            },
+            "SiteName": null,
+            "TotalCost": 0,
+            "VFORecordId": null,
+            "WireCenterCLLI": "BLTNILXD",
+            "WireCenterQoS": "Platinum",
+            "WireCenterSpeed": "2GB",
+            "qualifiedBy": "Address"
+        },
+        "DSATTicket": null,
+        "Latitude": null,
+        "Longitude": null,
+        "QualifyBy": "Address"
+    },
+    "CreateServiceAccountResponse": {
+        "ServiceAccountId": "0017d00001NIhXHAA1",
+        "ServiceAccounts": "",
+        "ServiceAccountsUpdated": true
+    },
+    "DSATTicketNumber": 1673810,
+    "FrontierServedAddress": "Yes",
+    "ISSpeedGreaterThan1Gbps": false,
+    "LWCInput": null,
+    "LatLong": "40.4831822, -88.99428929999999",
+    "ListAction1": "",
+    "LitOnnetAddress": false,
+    "MasterAgentId": null,
+    "MasterAgentName": null,
+    "NewMasterAccount": null,
+    "ProductAddOn": {
+        "InterfaceTypeAll": "Copper RJ45",
+        "SelectIPBlock": "/29 = 5 IPs"
+    },
+    "ProductAddOnMNS": {
+        "ENT_ETH_ADV_01": false,
+        "ENT_ETH_CELL_01": false,
+        "ENT_ETH_STD_01": false,
+        "ENT_ETH_WIFI_01": false,
+        "ENT_ETH_WIFI_02": false,
+        "InterfaceTypeAllMNS": "Copper RJ45",
+        "NoOfIndoorAP": null,
+        "NoOfOutdoorAP": null,
+        "Radio1": "/29 = 5 IPs"
+    },
+    "Qualificationstatus": "Frontier Qualified Address",
+    "SelectedProducts": [
+        {
+            "%vlocity_namespace%__JSONAttribute__c": null,
+            "%vlocity_namespace%__OneTimeCharge__c": 0,
+            "%vlocity_namespace%__RecurringCharge__c": 390,
+            "%vlocity_namespace%__ServiceAccountId__c": "0017d00001NIhXHAA1",
+            "Description": "MNS - Managed Dedicated Internet",
+            "Id": 8,
+            "PricebookEntry": {
+                "Product2": {
+                    "Id": "01t7d000006QmUvAAK",
+                    "Name": "MNS - Managed Dedicated Internet",
+                    "ProductCode": "ENT_ETH_EIA_003",
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v58.0/sobjects/Product2/01t7d000006QmUvAAK"
+                    }
+                },
+                "Product2Id": "01t7d000006QmUvAAK",
+                "attributes": {
+                    "type": "PricebookEntry"
+                }
+            },
+            "PricebookEntryId": null,
+            "Speed_Mbps__c": 20,
+            "Speed__c": "20 Mbps",
+            "Term__c": "60 Months"
+        },
+        {
+            "%vlocity_namespace%__JSONAttribute__c": null,
+            "%vlocity_namespace%__OneTimeCharge__c": 0,
+            "%vlocity_namespace%__RecurringCharge__c": 390,
+            "%vlocity_namespace%__ServiceAccountId__c": "0017d00001NIhXHAA1",
+            "Description": "DIA (Dedicated Internet Access)",
+            "Id": 48,
+            "PricebookEntry": {
+                "Product2": {
+                    "Id": "01t0h000002mZekAAE",
+                    "Name": "DIA (Dedicated Internet Access)",
+                    "ProductCode": "ENT_ETH_EIA_0002",
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v58.0/sobjects/Product2/01t0h000002mZekAAE"
+                    }
+                },
+                "Product2Id": "01t0h000002mZekAAE",
+                "attributes": {
+                    "type": "PricebookEntry"
+                }
+            },
+            "PricebookEntryId": null,
+            "Speed_Mbps__c": 30,
+            "Speed__c": "30 Mbps",
+            "Term__c": "60 Months"
+        },
+        {
+            "%vlocity_namespace%__JSONAttribute__c": null,
+            "%vlocity_namespace%__OneTimeCharge__c": 0,
+            "%vlocity_namespace%__RecurringCharge__c": 470,
+            "%vlocity_namespace%__ServiceAccountId__c": "0017d00001NIhXHAA1",
+            "Description": "MNS - Managed Dedicated Internet",
+            "Id": 6,
+            "PricebookEntry": {
+                "Product2": {
+                    "Id": "01t7d000006QmUvAAK",
+                    "Name": "MNS - Managed Dedicated Internet",
+                    "ProductCode": "ENT_ETH_EIA_003",
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v58.0/sobjects/Product2/01t7d000006QmUvAAK"
+                    }
+                },
+                "Product2Id": "01t7d000006QmUvAAK",
+                "attributes": {
+                    "type": "PricebookEntry"
+                }
+            },
+            "PricebookEntryId": null,
+            "Speed_Mbps__c": 40,
+            "Speed__c": "40 Mbps",
+            "Term__c": "60 Months"
+        }
+    ],
+    "SessionId": "QQuote-f3e014ba-7a1c-9b16-3dd0-89471e685846",
+    "UserLogin": "prashant.v@prodapt.com.test03",
+    "UserName": "Prashant Verma",
+    "input": {
+        "DSATTicketNumber": 1673810,
+        "EventStep": "Product Request",
+        "FiberDistance": "600",
+        "FiberTier": "Tier 1",
+        "FrontierServedAddress": "Yes",
+        "LatLong": "40.4831822, -88.99428929999999",
+        "LitOnnetAddress": false,
+        "MasterAgent": "",
+        "OmniScriptID": "QQuote-f3e014ba-7a1c-9b16-3dd0-89471e685846",
+        "PartnerName": "Prashant Verma",
+        "Partnerlogin": "prashant.v@prodapt.com.test03",
+        "Qualificationstatus": "Frontier Qualified Address",
+        "QualifyBy": "Address",
+        "SubAgent": "",
+        "WireCenter": "BLTNILXD",
+        "WireCenterMaxSpeed": "2GB",
+        "products": [
+            {
+                "%vlocity_namespace%__JSONAttribute__c": null,
+                "%vlocity_namespace%__OneTimeCharge__c": 0,
+                "%vlocity_namespace%__RecurringCharge__c": 390,
+                "%vlocity_namespace%__ServiceAccountId__c": "0017d00001NIhXHAA1",
+                "Description": "MNS - Managed Dedicated Internet",
+                "Id": 8,
+                "PricebookEntry": {
+                    "Product2": {
+                        "Id": "01t7d000006QmUvAAK",
+                        "Name": "MNS - Managed Dedicated Internet",
+                        "ProductCode": "ENT_ETH_EIA_003",
+                        "attributes": {
+                            "type": "Product2",
+                            "url": "/services/data/v58.0/sobjects/Product2/01t7d000006QmUvAAK"
+                        }
+                    },
+                    "Product2Id": "01t7d000006QmUvAAK",
+                    "attributes": {
+                        "type": "PricebookEntry"
+                    }
+                },
+                "PricebookEntryId": null,
+                "Speed_Mbps__c": 20,
+                "Speed__c": "20 Mbps",
+                "Term__c": "60 Months"
+            },
+            {
+                "%vlocity_namespace%__JSONAttribute__c": null,
+                "%vlocity_namespace%__OneTimeCharge__c": 0,
+                "%vlocity_namespace%__RecurringCharge__c": 390,
+                "%vlocity_namespace%__ServiceAccountId__c": "0017d00001NIhXHAA1",
+                "Description": "DIA (Dedicated Internet Access)",
+                "Id": 48,
+                "PricebookEntry": {
+                    "Product2": {
+                        "Id": "01t0h000002mZekAAE",
+                        "Name": "DIA (Dedicated Internet Access)",
+                        "ProductCode": "ENT_ETH_EIA_0002",
+                        "attributes": {
+                            "type": "Product2",
+                            "url": "/services/data/v58.0/sobjects/Product2/01t0h000002mZekAAE"
+                        }
+                    },
+                    "Product2Id": "01t0h000002mZekAAE",
+                    "attributes": {
+                        "type": "PricebookEntry"
+                    }
+                },
+                "PricebookEntryId": null,
+                "Speed_Mbps__c": 30,
+                "Speed__c": "30 Mbps",
+                "Term__c": "60 Months"
+            },
+            {
+                "%vlocity_namespace%__JSONAttribute__c": null,
+                "%vlocity_namespace%__OneTimeCharge__c": 0,
+                "%vlocity_namespace%__RecurringCharge__c": 470,
+                "%vlocity_namespace%__ServiceAccountId__c": "0017d00001NIhXHAA1",
+                "Description": "MNS - Managed Dedicated Internet",
+                "Id": 6,
+                "PricebookEntry": {
+                    "Product2": {
+                        "Id": "01t7d000006QmUvAAK",
+                        "Name": "MNS - Managed Dedicated Internet",
+                        "ProductCode": "ENT_ETH_EIA_003",
+                        "attributes": {
+                            "type": "Product2",
+                            "url": "/services/data/v58.0/sobjects/Product2/01t7d000006QmUvAAK"
+                        }
+                    },
+                    "Product2Id": "01t7d000006QmUvAAK",
+                    "attributes": {
+                        "type": "PricebookEntry"
+                    }
+                },
+                "PricebookEntryId": null,
+                "Speed_Mbps__c": 40,
+                "Speed__c": "40 Mbps",
+                "Term__c": "60 Months"
+            }
+        ],
+        "sendAddress": "104 W MULBERRY ST",
+        "sendCity": "BLOOMINGTON",
+        "sendState": "IL",
+        "sendZip": "61701"
+    },
+    "timeStamp": "2023-05-17T11:58:39.963Z",
+    "userCurrencyCode": "USD",
+    "userId": "0057d0000079OvHAAU",
+    "userName": "prashant.v@prodapt.com.test03",
+    "userProfile": "Frontier System Administrator",
+    "userTimeZone": "-240",
+    "userTimeZoneName": "America/New_York"
+}

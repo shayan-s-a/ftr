@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Churn_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Churn Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Services-+ Revenue</fullName>
+                <default>false</default>
+                <label>Additional Services-+ Revenue</label>
+            </value>
+            <value>
+                <fullName>Adjustment-Credits Issued</fullName>
+                <default>false</default>
+                <label>Adjustment-Credits Issued</label>
+            </value>
+            <value>
+                <fullName>Closure-Business or Location</fullName>
+                <default>false</default>
+                <label>Closure-Business or Location</label>
+            </value>
+            <value>
+                <fullName>Cost Reduction-Customer Initiated</fullName>
+                <default>false</default>
+                <label>Cost Reduction-Customer Initiated</label>
+            </value>
+            <value>
+                <fullName>Frontier Anywhere-Moved out of billing system</fullName>
+                <default>false</default>
+                <label>Frontier Anywhere-Moved out of billing system</label>
+            </value>
+            <value>
+                <fullName>FTR-Initiated</fullName>
+                <default>false</default>
+                <label>FTR-Initiated</label>
+            </value>
+            <value>
+                <fullName>Link/Unlink-Incorrect Customer Number</fullName>
+                <default>false</default>
+                <label>Link/Unlink-Incorrect Customer Number</label>
+            </value>
+            <value>
+                <fullName>Master Summary-Billing Change</fullName>
+                <default>false</default>
+                <label>Master Summary-Billing Change</label>
+            </value>
+            <value>
+                <fullName>Module-Customer Number/Non Frontier</fullName>
+                <default>false</default>
+                <label>Module-Customer Number/Non Frontier</label>
+            </value>
+            <value>
+                <fullName>Non Payment-Collections</fullName>
+                <default>false</default>
+                <label>Non Payment-Collections</label>
+            </value>
+            <value>
+                <fullName>Order Entry Error-Incorrect/Missing S&amp;E</fullName>
+                <default>false</default>
+                <label>Order Entry Error-Incorrect/Missing S&amp;E</label>
+            </value>
+            <value>
+                <fullName>Port Out-Wholesale</fullName>
+                <default>false</default>
+                <label>Port Out-Wholesale</label>
+            </value>
+            <value>
+                <fullName>Pricing-Competition</fullName>
+                <default>false</default>
+                <label>Pricing-Competition</label>
+            </value>
+            <value>
+                <fullName>Renewal-Write Down</fullName>
+                <default>false</default>
+                <label>Renewal-Write Down</label>
+            </value>
+            <value>
+                <fullName>Service Reliability-Repair issues</fullName>
+                <default>false</default>
+                <label>Service Reliability-Repair issues</label>
+            </value>
+            <value>
+                <fullName>Technology-Not Available</fullName>
+                <default>false</default>
+                <label>Technology-Not Available</label>
+            </value>
+            <value>
+                <fullName>Temporary-Seasonal/Vacation services</fullName>
+                <default>false</default>
+                <label>Temporary-Seasonal/Vacation services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_field_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(RecordType.Name = &quot;MDU Event&quot;,  (Subject = &quot;Other&quot;),ISBLANK(Description)),
+AND(RecordType.Name = &quot;MDU Event&quot;,  OR(ISPICKVAL(Stage__c,&quot;Other&quot;),ISPICKVAL(Stage__c,&quot;Rejected&quot;)),ISBLANK(Description))
+)</errorConditionFormula>
+    <errorDisplayField>Description</errorDisplayField>
+    <errorMessage>Description field is required</errorMessage>
+</ValidationRule>

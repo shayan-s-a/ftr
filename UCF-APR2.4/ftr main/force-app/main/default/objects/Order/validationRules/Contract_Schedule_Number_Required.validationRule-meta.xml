@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Schedule_Number_Required</fullName>
+    <active>true</active>
+    <description>Upgrade and Move Order record types mentioned in the Formula</description>
+    <errorConditionFormula>AND(( ContractId = &quot;&quot;),
+(OR( RecordTypeId =&apos;012E0000000kLog&apos;, 
+RecordTypeId =&apos;012E0000000kLoc&apos;)))</errorConditionFormula>
+    <errorMessage>Contract-Schedule field is Required</errorMessage>
+</ValidationRule>

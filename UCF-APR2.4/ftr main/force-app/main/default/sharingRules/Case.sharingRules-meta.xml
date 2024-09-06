@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Alert_Tracker_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing Alert Tracker Cases to Alert Tracker Team</description>
+        <label>Alert Tracker Sharing</label>
+        <sharedTo>
+            <group>Alert_Tracker_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Alert Tracker</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>All_Case_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>All Case Sharing</label>
+        <sharedTo>
+            <group>Case_View_All_Members</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>notEqual</operation>
+            <value>ENT Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Alert Tracker</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_Alt_Channel_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case Alt Channel Sharing</label>
+        <sharedTo>
+            <group>Alt_Channel_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>equals</operation>
+            <value>ENT Partner</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>CSA_cases_shared_with_Analyst</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Cases created by CSA's will be shared with the System Analyst profile</description>
+        <label>CSA cases shared with Analyst</label>
+        <sharedTo>
+            <group>System_Analysts</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>CustomerServiceReps</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MDU_Cases_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MDU Cases RW</label>
+        <sharedTo>
+            <group>MDU_All</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Multifamily_Leadership</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Referral</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sales Referral</label>
+        <sharedTo>
+            <role>CustomerServiceReps</role>
+        </sharedTo>
+        <sharedFrom>
+            <queue>Salesforce_Request</queue>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

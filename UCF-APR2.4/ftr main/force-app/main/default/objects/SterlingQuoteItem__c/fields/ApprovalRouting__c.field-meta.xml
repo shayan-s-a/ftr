@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalRouting__c</fullName>
+    <externalId>false</externalId>
+    <label>ApprovalRouting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Build</fullName>
+                <default>false</default>
+                <label>Customer Build</label>
+            </value>
+            <value>
+                <fullName>Customer Build - SMB Only</fullName>
+                <default>false</default>
+                <label>Customer Build - SMB Only</label>
+            </value>
+            <value>
+                <fullName>Customer Build - Wireless</fullName>
+                <default>false</default>
+                <label>Customer Build - Wireless</label>
+            </value>
+            <value>
+                <fullName>Renewal / Special Pricing</fullName>
+                <default>false</default>
+                <label>Renewal / Special Pricing</label>
+            </value>
+            <value>
+                <fullName>Renewal / Special Pricing - SMB Only</fullName>
+                <default>false</default>
+                <label>Renewal / Special Pricing - SMB Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

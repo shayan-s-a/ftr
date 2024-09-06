@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_Loss_Reason__c</fullName>
+    <description>Opportunity Loss Reason</description>
+    <externalId>false</externalId>
+    <label>List Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Didn&apos;t reach Decision Stage</fullName>
+                <default>false</default>
+                <label>Didn&apos;t reach Decision Stage</label>
+            </value>
+            <value>
+                <fullName>Wrong Solution (i.e. needed router or FW)</fullName>
+                <default>false</default>
+                <label>Wrong Solution (i.e. needed router or FW)</label>
+            </value>
+            <value>
+                <fullName>SD-WAN Feature not supported</fullName>
+                <default>false</default>
+                <label>SD-WAN Feature not supported</label>
+            </value>
+            <value>
+                <fullName>Requirements Changed</fullName>
+                <default>false</default>
+                <label>Requirements Changed</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Already with Frontier</fullName>
+                <default>false</default>
+                <label>Already with Frontier</label>
+            </value>
+            <value>
+                <fullName>DM Unavailable</fullName>
+                <default>false</default>
+                <label>DM Unavailable</label>
+            </value>
+            <value>
+                <fullName>Happy w/Current Carrier</fullName>
+                <default>false</default>
+                <label>Happy w/Current Carrier</label>
+            </value>
+            <value>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+                <label>No Answer</label>
+            </value>
+            <value>
+                <fullName>Not Interested in Frontier</fullName>
+                <default>false</default>
+                <label>Not Interested in Frontier</label>
+            </value>
+            <value>
+                <fullName>Qualification Incorrect – Fiber</fullName>
+                <default>false</default>
+                <label>Qualification Incorrect – Fiber</label>
+            </value>
+            <value>
+                <fullName>Other (explain)</fullName>
+                <default>false</default>
+                <label>Other (explain)</label>
+            </value>
+            <value>
+                <fullName>Customer did not return calls</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer did not return calls</label>
+            </value>
+            <value>
+                <fullName>Funding went away</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funding went away</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Managed Router</controllingFieldValue>
+            <controllingFieldValue>Metro Ethernet</controllingFieldValue>
+            <controllingFieldValue>Bundled Full T1s (not custom T)</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Custom T</controllingFieldValue>
+            <controllingFieldValue>Private Line LH</controllingFieldValue>
+            <controllingFieldValue>Frame Relay/ATM/LTS</controllingFieldValue>
+            <controllingFieldValue>Private Line MAN</controllingFieldValue>
+            <controllingFieldValue>Full T1 Data Service</controllingFieldValue>
+            <controllingFieldValue>RSVP</controllingFieldValue>
+            <controllingFieldValue>Full T1 Voice Service</controllingFieldValue>
+            <controllingFieldValue>Wireless</controllingFieldValue>
+            <controllingFieldValue>IP Centrex, Internet Access</controllingFieldValue>
+            <controllingFieldValue>Wireless Hot Spot</controllingFieldValue>
+            <controllingFieldValue>Local Dial Tone</controllingFieldValue>
+            <controllingFieldValue>Long Distance</controllingFieldValue>
+            <controllingFieldValue>Managed Business Server</controllingFieldValue>
+            <valueName>Didn&apos;t reach Decision Stage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Router</controllingFieldValue>
+            <controllingFieldValue>Metro Ethernet</controllingFieldValue>
+            <controllingFieldValue>Bundled Full T1s (not custom T)</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Custom T</controllingFieldValue>
+            <controllingFieldValue>Private Line LH</controllingFieldValue>
+            <controllingFieldValue>Frame Relay/ATM/LTS</controllingFieldValue>
+            <controllingFieldValue>Private Line MAN</controllingFieldValue>
+            <controllingFieldValue>Full T1 Data Service</controllingFieldValue>
+            <controllingFieldValue>RSVP</controllingFieldValue>
+            <controllingFieldValue>Full T1 Voice Service</controllingFieldValue>
+            <controllingFieldValue>Wireless</controllingFieldValue>
+            <controllingFieldValue>IP Centrex, Internet Access</controllingFieldValue>
+            <controllingFieldValue>Wireless Hot Spot</controllingFieldValue>
+            <controllingFieldValue>Local Dial Tone</controllingFieldValue>
+            <controllingFieldValue>Long Distance</controllingFieldValue>
+            <controllingFieldValue>Managed Business Server</controllingFieldValue>
+            <valueName>Wrong Solution (i.e. needed router or FW)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Router</controllingFieldValue>
+            <controllingFieldValue>Metro Ethernet</controllingFieldValue>
+            <controllingFieldValue>Bundled Full T1s (not custom T)</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Custom T</controllingFieldValue>
+            <controllingFieldValue>Private Line LH</controllingFieldValue>
+            <controllingFieldValue>Frame Relay/ATM/LTS</controllingFieldValue>
+            <controllingFieldValue>Private Line MAN</controllingFieldValue>
+            <controllingFieldValue>Full T1 Data Service</controllingFieldValue>
+            <controllingFieldValue>RSVP</controllingFieldValue>
+            <controllingFieldValue>Full T1 Voice Service</controllingFieldValue>
+            <controllingFieldValue>Wireless</controllingFieldValue>
+            <controllingFieldValue>IP Centrex, Internet Access</controllingFieldValue>
+            <controllingFieldValue>Wireless Hot Spot</controllingFieldValue>
+            <controllingFieldValue>Local Dial Tone</controllingFieldValue>
+            <controllingFieldValue>Long Distance</controllingFieldValue>
+            <controllingFieldValue>Managed Business Server</controllingFieldValue>
+            <valueName>SD-WAN Feature not supported</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Router</controllingFieldValue>
+            <controllingFieldValue>Metro Ethernet</controllingFieldValue>
+            <controllingFieldValue>Bundled Full T1s (not custom T)</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Custom T</controllingFieldValue>
+            <controllingFieldValue>Private Line LH</controllingFieldValue>
+            <controllingFieldValue>Frame Relay/ATM/LTS</controllingFieldValue>
+            <controllingFieldValue>Private Line MAN</controllingFieldValue>
+            <controllingFieldValue>Full T1 Data Service</controllingFieldValue>
+            <controllingFieldValue>RSVP</controllingFieldValue>
+            <controllingFieldValue>Full T1 Voice Service</controllingFieldValue>
+            <controllingFieldValue>Wireless</controllingFieldValue>
+            <controllingFieldValue>IP Centrex, Internet Access</controllingFieldValue>
+            <controllingFieldValue>Wireless Hot Spot</controllingFieldValue>
+            <controllingFieldValue>Local Dial Tone</controllingFieldValue>
+            <controllingFieldValue>Long Distance</controllingFieldValue>
+            <controllingFieldValue>Managed Business Server</controllingFieldValue>
+            <valueName>Requirements Changed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Router</controllingFieldValue>
+            <controllingFieldValue>Metro Ethernet</controllingFieldValue>
+            <controllingFieldValue>Bundled Full T1s (not custom T)</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Custom T</controllingFieldValue>
+            <controllingFieldValue>Private Line LH</controllingFieldValue>
+            <controllingFieldValue>Frame Relay/ATM/LTS</controllingFieldValue>
+            <controllingFieldValue>Private Line MAN</controllingFieldValue>
+            <controllingFieldValue>Full T1 Data Service</controllingFieldValue>
+            <controllingFieldValue>RSVP</controllingFieldValue>
+            <controllingFieldValue>Full T1 Voice Service</controllingFieldValue>
+            <controllingFieldValue>Wireless</controllingFieldValue>
+            <controllingFieldValue>IP Centrex, Internet Access</controllingFieldValue>
+            <controllingFieldValue>Wireless Hot Spot</controllingFieldValue>
+            <controllingFieldValue>Local Dial Tone</controllingFieldValue>
+            <controllingFieldValue>Long Distance</controllingFieldValue>
+            <controllingFieldValue>Managed Business Server</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Managed Router</controllingFieldValue>
+            <controllingFieldValue>Metro Ethernet</controllingFieldValue>
+            <controllingFieldValue>Bundled Full T1s (not custom T)</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Custom T</controllingFieldValue>
+            <controllingFieldValue>Private Line LH</controllingFieldValue>
+            <controllingFieldValue>Frame Relay/ATM/LTS</controllingFieldValue>
+            <controllingFieldValue>Private Line MAN</controllingFieldValue>
+            <controllingFieldValue>Full T1 Data Service</controllingFieldValue>
+            <controllingFieldValue>RSVP</controllingFieldValue>
+            <controllingFieldValue>Full T1 Voice Service</controllingFieldValue>
+            <controllingFieldValue>Wireless</controllingFieldValue>
+            <controllingFieldValue>IP Centrex, Internet Access</controllingFieldValue>
+            <controllingFieldValue>Wireless Hot Spot</controllingFieldValue>
+            <controllingFieldValue>Local Dial Tone</controllingFieldValue>
+            <controllingFieldValue>Long Distance</controllingFieldValue>
+            <controllingFieldValue>Managed Business Server</controllingFieldValue>
+            <valueName>Other (explain)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Frontier</controllingFieldValue>
+            <valueName>Already with Frontier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Frontier</controllingFieldValue>
+            <valueName>DM Unavailable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Frontier</controllingFieldValue>
+            <valueName>Happy w/Current Carrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Frontier</controllingFieldValue>
+            <valueName>No Answer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Frontier</controllingFieldValue>
+            <valueName>Not Interested in Frontier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Frontier</controllingFieldValue>
+            <valueName>Qualification Incorrect – Fiber</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

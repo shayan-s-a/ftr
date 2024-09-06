@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EscalationRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <escalationRule>
+        <fullName>Case Escalation Rules</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <businessHoursSource>None</businessHoursSource>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Directory Listing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.ProfileId</field>
+                <operation>equals</operation>
+                <value>#Customer Service - Directory Listing - Case Submitter</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Case_Directory_Listing</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>60</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+        </ruleEntry>
+    </escalationRule>
+    <escalationRule>
+        <fullName>Notify Survey Bad Response Case Owner</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <businessHoursSource>None</businessHoursSource>
+            <escalationAction>
+                <minutesToEscalation>10080</minutesToEscalation>
+                <notifyCaseOwner>true</notifyCaseOwner>
+                <notifyEmail>mhasan@aprosoft.com</notifyEmail>
+                <notifyToTemplate>Survey/Reminder_For_Bad_Response_Case_1706091419936</notifyToTemplate>
+            </escalationAction>
+            <escalationStartTime>CaseCreation</escalationStartTime>
+            <formula>ISPICKVAL(Related_To2__c, "B2B Survey") &amp;&amp; ISPICKVAL(Status, "New")</formula>
+        </ruleEntry>
+    </escalationRule>
+</EscalationRules>

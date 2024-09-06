@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Lost_checkbox_Address_Lost_reaso__c</fullName>
+    <externalId>false</externalId>
+    <label>Address Lost reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not in Network</fullName>
+                <default>false</default>
+                <label>Not in Network</label>
+            </value>
+            <value>
+                <fullName>CIAC too High</fullName>
+                <default>false</default>
+                <label>CIAC too High</label>
+            </value>
+            <value>
+                <fullName>Lost to competitor</fullName>
+                <default>false</default>
+                <label>Lost to competitor</label>
+            </value>
+            <value>
+                <fullName>Competitor/Price</fullName>
+                <default>false</default>
+                <label>Competitor/Price</label>
+            </value>
+            <value>
+                <fullName>Competitor/Due Date</fullName>
+                <default>false</default>
+                <label>Competitor/Due Date</label>
+            </value>
+            <value>
+                <fullName>Competitor/Other</fullName>
+                <default>false</default>
+                <label>Competitor/Other</label>
+            </value>
+            <value>
+                <fullName>Quote timed out</fullName>
+                <default>false</default>
+                <label>Quote timed out</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

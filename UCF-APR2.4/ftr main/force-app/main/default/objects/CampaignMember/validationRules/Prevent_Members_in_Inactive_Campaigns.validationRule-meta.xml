@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Members_in_Inactive_Campaigns</fullName>
+    <active>true</active>
+    <description>Prevents adding of members to inactive campaigns</description>
+    <errorConditionFormula>AND(
+NOT(
+OR(
+$Profile.Id = &quot;00eE000000126tW&quot;, /* Frontier Auditor */
+$Profile.Id = &quot;00e40000000nYck&quot;, /* Frontier System Administrator */
+$Profile.Id = &quot;00e40000000nTsD&quot;, /* System Administrator */
+$Profile.Id = &quot;00eE000000124Kn&quot; /* System Analyst */
+)
+),
+AND (
+ISNEW(),
+NOT(Campaign.IsActive)
+)
+)</errorConditionFormula>
+    <errorMessage>Members cannot be added to inactive campaigns. Please select an active campaign.</errorMessage>
+</ValidationRule>

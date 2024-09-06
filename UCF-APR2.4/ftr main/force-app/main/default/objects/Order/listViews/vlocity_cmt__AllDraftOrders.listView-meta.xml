@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>vlocity_cmt__AllDraftOrders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>ORDERS.TYPE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>statsCreatedByCrisId__c</columns>
+    <columns>Order_Created_Date__c</columns>
+    <columns>Product__c</columns>
+    <columns>Product_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.Circuit_Disconnect,Order.Disconnect_Order,Order.UCaaS_Disconnect_Order</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>equals</operation>
+        <value>Complete,Customer Network Provisioning,PSR In Progress</value>
+    </filters>
+    <label>All Draft Orders</label>
+</ListView>

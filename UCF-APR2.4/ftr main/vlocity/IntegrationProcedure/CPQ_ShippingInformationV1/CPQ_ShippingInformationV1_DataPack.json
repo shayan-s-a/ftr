@@ -1,0 +1,31 @@
+{
+    "%vlocity_namespace%__CustomJavaScript__c": "CPQ_ShippingInformationV1_SampleInput.json",
+    "%vlocity_namespace%__DisableMetadataCache__c": false,
+    "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "%vlocity_namespace%__Element__c": [
+        "CPQ_ShippingInformationV1_Element_CheckIfAddressNull.json",
+        "CPQ_ShippingInformationV1_Element_AddShippingInformation.json",
+        "CPQ_ShippingInformationV1_Element_GetNewShippingInfoDetails.json",
+        "CPQ_ShippingInformationV1_Element_InsertShippingDevices.json",
+        "CPQ_ShippingInformationV1_Element_UpdateAllocatedDevicesCount.json",
+        "CPQ_ShippingInformationV1_Element_ResponseAction1.json",
+        "CPQ_ShippingInformationV1_Element_ResponseAction2.json",
+        "CPQ_ShippingInformationV1_Element_GetShippingDevices.json",
+        "CPQ_ShippingInformationV1_Element_IPAddShippingDevices.json",
+        "CPQ_ShippingInformationV1_Element_UpdateAllocatedDevices.json"
+    ],
+    "%vlocity_namespace%__IsLwcEnabled__c": false,
+    "%vlocity_namespace%__IsProcedure__c": true,
+    "%vlocity_namespace%__IsReusable__c": false,
+    "%vlocity_namespace%__IsTest__c": false,
+    "%vlocity_namespace%__Language__c": "Procedure",
+    "%vlocity_namespace%__OmniProcessType__c": "Integration Procedure",
+    "%vlocity_namespace%__ProcedureKey__c": "CPQ_ShippingInformationV1",
+    "%vlocity_namespace%__PropertySet__c": "CPQ_ShippingInformationV1_PropertySet.json",
+    "%vlocity_namespace%__SubType__c": "ShippingInformationV1",
+    "%vlocity_namespace%__Type__c": "CPQ",
+    "Name": "CreateShippingInformationV1",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/ShippingInformationV1/Procedure"
+}

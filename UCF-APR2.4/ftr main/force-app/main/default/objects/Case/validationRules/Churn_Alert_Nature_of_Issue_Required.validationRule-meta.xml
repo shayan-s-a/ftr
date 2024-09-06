@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Churn_Alert_Nature_of_Issue_Required</fullName>
+    <active>true</active>
+    <description>If churn risks detected = yes, then Nature of issue is required.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;Churn Alert&quot;,
+ISPICKVAL(Were_Churn_Risks_Detected__c, &quot;Yes&quot;),
+ISBLANK(TEXT(Nature_of_the_Risk__c)))</errorConditionFormula>
+    <errorDisplayField>Nature_of_the_Risk__c</errorDisplayField>
+    <errorMessage>If Churn Risks were detected, then Nature of the Risk is required.</errorMessage>
+</ValidationRule>

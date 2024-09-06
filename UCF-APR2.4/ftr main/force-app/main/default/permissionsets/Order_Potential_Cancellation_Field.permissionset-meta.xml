@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows user to update potential cancellation field</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.Potential_Cancellation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Order -  Potential Cancellation Field</label>
+    <license>Salesforce</license>
+</PermissionSet>

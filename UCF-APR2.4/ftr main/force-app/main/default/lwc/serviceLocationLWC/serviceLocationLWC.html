@@ -1,0 +1,355 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+	<div if:true={downloadLoader}>
+         
+		<div class="exampleHolder">
+		   <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+		</div>
+	 </div>
+	<lightning-card>
+		
+		<div if:true={ShowLoader}>
+         
+			 <div class="exampleHolder">
+        		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+			 </div>
+          </div>
+        
+		<template if:true={showWarningMessage}>
+			<!-- Your warning message here, e.g. a toast or div with a warning -->
+			<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+				<span class="warning-message ">
+
+            </br> "Remember to upload the customer’s Music on Hold file(s) to the Salesforce order. The file(s) MUST be provided as a Mono, 
+            </br> 16 Mega-Hertz, 16-bit PCM .wav file(s) for upload into the UCF service. 
+            </br> There can be no more than 10 separate customer Music on Hold files, and their combined size must be less than 20 Mega-Bytes.
+        </span>
+
+			</div>
+		</template>
+		<template if:true={isTranslation}>
+			<div if:false={ShowLoader} class="slds-m-around_medium" role="group">
+				Business Group Name
+				<br><input type="text" id="BGN" class="slds-input" style="width:30%" value={BusinessGroupName}
+                       onchange={handleInputBusinessGroup} maxlength="64" />
+
+    </div>
+		</template>
+		<template if:true={isReadOnly}>
+			<div if:false={ShowLoader} class="slds-m-around_medium" role="group">
+				Business Group Name
+				<br><input type="text" id="rBGN" class="slds-input" style="width:30%" value={BusinessGroupName}
+                       onchange={handleInputBusinessGroup} maxlength="64" disabled  />
+
+    </div>
+		</template>
+		<template if:true={isTranslation}>
+			<div if:false={ShowLoader} class="slds-m-around_medium" role="group">
+				EAS Pin
+				<br>
+				<input type="text" id="EAS" class="slds-input" style="width:30%" maxlength="6"  onkeypress={validateInputForNumber}
+                        value={EAS_Pin} onchange={handleInputEASPin}/>
+   		 </div>
+		</template>
+		<template if:true={isReadOnly}>
+			<div if:false={ShowLoader} class="slds-m-around_medium" role="group">
+				<!-- sldsValidatorIgnoreNextLine -->
+    EAS Pin
+				<br>
+				<input type="text" id="rEAS" class="slds-input" style="width:30%" maxlength="6"  onkeypress={validateInputForNumber}
+                        value={EAS_Pin} onchange={handleInputEASPin} disabled  />
+   		 </div>
+		</template>
+
+		<div if:false={ShowLoader} class="custom-table-overflow">
+
+			<div if:false={ShowLoader} class="slds-grid slds-grid_vertical-align-center slds-m-bottom_x-small">
+				<div class="slds-col">
+					<h6> Service Location Information </h6>
+				</div>
+				<!-- <template if:false={isnetworktranslation}> -->
+				<div>
+					<lightning-button variant="brand" label="Download PM Enrichment CSV" onclick={download}
+						class="slds-m-left_x-small"></lightning-button>
+						<c-xlsx-main header-list={xlsHeader} filename={filename} worksheet-name-list={workSheetNameList}
+							sheet-data={xlsData}></c-xlsx-main>
+						<!-- <template if:true={isXlsx}> -->
+						<!-- </template> -->
+				</div>
+				<!-- </template> -->
+				
+			</div>
+
+			<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+
+				<thead>
+					<tr>
+						<th scope="col" class="slds-text-title_caps" data-field-name="Location_Name__c" onclick={sortAllFields} style="cursor: pointer">Location Name
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+
+						<th scope="col" class="slds-text-title_caps" data-field-name="Location_Address__c" onclick={sortAllFields} style="cursor: pointer">Location Address
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+
+                        <th scope="col" class="slds-text-title_caps" data-field-name="Main_Phone_Number__c" onclick={sortAllFields} style="cursor: pointer">Main Phone #
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th> 
+
+						<th scope="col" class="slds-text-title_caps" data-field-name="Shipping_Location__c" onclick={sortAllFields} style="cursor: pointer">Shipping Location
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+
+						<th scope="col" class="slds-text-title_caps" data-field-name="Time_Zone__c" onclick={sortAllFields} style="cursor: pointer">Time Zone
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+
+						<th scope="col" class="slds-text-title_caps" data-field-name="New_Construction__c" onclick={sortAllFields} style="cursor: pointer">New Construction
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+						<th scope="col" class="slds-text-title_caps" data-field-name="Contact_Name__c" onclick={sortAllFields} style="cursor: pointer">Contact Name
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+						<th scope="col" class="slds-text-title_caps" data-field-name="Contact_Email__c" onclick={sortAllFields} style="cursor: pointer">Contact Email
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+						<th scope="col" class="slds-text-title_caps" data-field-name="Contact_Phone__c" onclick={sortAllFields} style="cursor: pointer">Contact Phone
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+						
+						<th scope="col" class="slds-text-title_caps" data-field-name="Caller_ID_Name__c" onclick={sortAllFields} style="cursor: pointer">Caller ID Name
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+						<th scope="col" class="slds-text-title_caps" data-field-name="Custom_music__c" onclick={sortAllFields} style="cursor: pointer">Custom Music
+							<span style="color: blue; font-weight: bold; font-size: 15px;">↑</span>
+						</th>
+
+						<template class="slds-text-title_caps" if:false={isnetworktranslation}>
+						<th scope="col">Expand</th>
+						</template>
+					</tr>
+				</thead>
+				<tbody>
+					<template for:each={accounts} for:item="account">
+						<tr key={account.Id}>
+							<td>
+								<div class="slds-form-element__control">
+									<input type="text" id="Location_Name__c" class="slds-input"
+                        				   value={account.Location_Name__c}
+										   data-record-id={account.Id}
+										   onchange={handleInputChange}
+										  
+										   data-field-name="Location_Name__c" name="inputvalidate" required/>
+								</div>
+								<!-- {account.Location_Name__c} -->
+							</td>
+							<td>
+								{account.Location_Address__c}
+							</td>
+                            <td>
+								<div class="slds-form-element__control">
+									<input  type="text" id="Main_Phone_Number__c" class="slds-input"
+                        				    value={account.Main_Phone_Number__c}  data-record-id={account.Id}
+                        				    onchange={handleInputChange} maxlength="10"
+                        					data-field-name="Main_Phone_Number__c" name="inputvalidate" required />
+                    			</div>
+							</td>
+							<td>
+								<template if:true={account.editMode}>
+
+					<lightning-combobox name="shippingLocation" variant="label-hidden" value={account.Shipping_Location__c}
+										options={shippingLocationOptions} onchange={handleInputChange}  selected={account.Shipping_Location__c}
+										data-record-id={account.Id} data-field-name="Shipping_Location__c" >
+									</lightning-combobox>
+								</template>
+								<template if:false={account.editMode}>
+									{account.ShippingLocation}
+								</template>
+							</td>
+							<td>
+								<template if:true={account.editMode}>
+						
+									<lightning-combobox name="timeZone" variant="label-hidden" value={account.Time_Zone__c}
+										options={timeZoneOptions} onchange={handleInputChange}  selected={account.Time_Zone__c}
+										data-record-id={account.Id} data-field-name="Time_Zone__c" data-name="validate" required >
+									</lightning-combobox>
+								</template>
+
+				
+								<template if:false={account.editMode}>
+									{account.TimeZone}
+								</template>
+							</td>
+							<td>
+								<template if:true={account.editMode}>
+					<lightning-combobox name="newConstruction" variant="label-hidden" value={account.New_Construction__c}
+										options={constructionOptions} 
+										onchange={handleInputChange}  
+										selected={account.New_Construction__c}
+										data-record-id={account.Id} 
+										data-field-name="New_Construction__c"
+										 data-name="validate" required >
+									</lightning-combobox>
+								</template>
+								<template if:false={account.editMode}>
+									{account.NewConstruction}
+								</template>
+							</td>
+
+							<td>
+
+								<div class="slds-form-element__control">
+									<!-- Assuming you have a Lightning rich-text component available, you'd use it here. If not, consider using another library or component. -->
+									<input type="text" id="Contact_Name__c"
+                        class="slds-input" value={account.Contact_Name__c}
+                       onchange={handleInputChange}
+                        data-record-id={account.Id}
+                        data-field-name="Contact_Name__c" name="inputvalidate" required/>
+                    </div>
+							</td>
+							<td>
+
+								<div class="slds-form-element__control">
+									<!-- Assuming you have a Lightning rich-text component available, you'd use it here. If not, consider using another library or component. -->
+									<input type="text" id="Contact_Email__c"
+                        class="slds-input"
+                        value={account.Contact_Email__c}
+                         data-record-id={account.Id}
+                        onchange={handleInputChange}
+                        data-field-name="Contact_Email__c" name="inputvalidate" required/>
+                    </div>
+							</td>
+							<td>
+
+								<div class="slds-form-element__control">
+									<!-- Assuming you have a Lightning rich-text component available, you'd use it here. If not, consider using another library or component. -->
+									<input type="text" id="Contact_Phone__c" class="slds-input"
+                        value={account.Contact_Phone__c}  data-record-id={account.Id}
+                        onchange={handleInputChange} maxlength="10"
+                        data-field-name="Contact_Phone__c" name="inputvalidate" required/>
+                    </div>
+							</td>
+
+									 
+							<td>
+
+								<div class="slds-form-element__control">
+									<!-- Assuming you have a Lightning rich-text component available, you'd use it here. If not, consider using another library or component. -->
+									<input type="text" id="Caller_ID_Name__c"
+                        class="slds-input"
+                         data-record-id={account.Id} maxlength="15"
+                        value={account.Caller_ID_Name__c}
+                         onchange={handleInputChange}
+                         data-field-name="Caller_ID_Name__c" name="inputvalidate" required />
+                    </div>
+							</td>
+
+							<td>
+			
+							<template if:true={account.editMode}>
+						<lightning-combobox 
+						name="customMusic" 
+						variant="label-hidden" 
+						value={account.CustomMusic}
+						options={customMusicOptions} 
+						onchange={handleInputChange}  
+						selected={account.CustomMusic}
+						data-record-id={account.Id} 
+						data-field-name="Custom_music__c"
+						 data-name="validate" required>
+									</lightning-combobox>
+								</template>
+								<template if:false={account.editMode}>
+									{account.CustomMusic}
+								</template>
+							</td>
+							<template if:false={isnetworktranslation}>
+							<td>
+								<lightning-button-icon icon-name="utility:edit" alternative-text="Edit" title="Edit"
+										onclick={openModal} data-record-id={account.Id} variant="brand">
+									</lightning-button-icon>
+							</td>
+							</template>
+						</tr>
+					</template>
+				</tbody>
+			</table>
+		</div>
+		<template if:false={isnetworktranslation}>
+				<div if:false={ShowLoader} class="slds-align_absolute-center slds-m-top_medium">
+					<lightning-button class="slds-button_outline-brand slds-m-right_xx-small" label="Cancel" onclick={handleCancel}>
+					</lightning-button>
+					<lightning-button class="slds-m-left_xx-small" variant="brand" label="Save" onclick={handleSave}></lightning-button>
+				</div>
+		</template>
+
+		<!-- Modal Popup -->
+		<template if:true={isModalOpen}>
+			<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-modal="true"
+				aria-label="Edit Address Modal">
+				<div class="slds-modal__container">
+					<!-- Modal Header -->
+					<header class="slds-modal__header">
+						<h2 class="slds-text-heading_medium">Edit Address</h2>
+					</header>
+
+					<!-- Modal Body -->
+					<div class="slds-modal__content slds-p-around_medium">
+						<div class="slds-grid slds-wrap">
+							<!-- Shipping Address -->
+							<div class="slds-col slds-size_1-of-1 slds-p-horizontal_small">
+								<!-- <label class="slds-form-element__label" for="shippingAddress">Shipping Address</label>
+									<div class="slds-form-element__control">
+										<input type="text" id="shippingAddress" class="slds-input" value={shippingAddress} onchange={handleShippingAddressChange} />
+									</div> -->
+									<label class="slds-form-element__label" for="shippingStreet">Street</label>
+									<div class="slds-form-element__control">
+										<input type="text" id="shippingStreet" class="slds-input" value={shippingStreet} onchange={handleshippingStreetChange} />
+									</div>
+									<label class="slds-form-element__label" for="shippingCity">City</label>
+									<div class="slds-form-element__control">
+										<input type="text" id="shippingCity" class="slds-input" value={shippingCity} onchange={handleshippingCityChange} />
+									</div>
+									<label class="slds-form-element__label" for="shippingState">State</label>
+									<div class="slds-form-element__control">
+										<input type="text" id="shippingState" class="slds-input" value={shippingState} onchange={handleshippingStateChange} />
+									</div>
+									<label class="slds-form-element__label" for="shippingZip">Zip</label>
+									<div class="slds-form-element__control">
+										<input type="text" id="shippingZip" class="slds-input" value={shippingZip} onchange={handleshippingZipChange} />
+									</div>
+							</div>
+
+								<!-- Construction Details - Text Area -->
+								<div class="slds-col slds-size_1-of-1 slds-p-horizontal_small">
+									<label class="slds-form-element__label" for="constructionDetails">
+                Construction Details
+            </label>
+									<div class="slds-form-element__control">
+										<textarea id="constructionDetails" class="slds-textarea" onchange={handleConstructionDetailsChange}>{constructionDetails}</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal Footer -->
+						<footer class="slds-modal__footer ">
+							<template if:false={isnetworktranslation}>
+								<lightning-button   label="Save" onclick={handleModalSave} variant="brand"></lightning-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</template>
+							<lightning-button class="slds-m-right_xx-small"  label="Cancel" onclick={closeModal} variant="neutral" ></lightning-button>
+						</footer>
+					</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open"></div>
+		</template>
+		<div if:true={isModalOpen} class="slds-backdrop slds-backdrop_open"></div>
+	</lightning-card>
+</template>

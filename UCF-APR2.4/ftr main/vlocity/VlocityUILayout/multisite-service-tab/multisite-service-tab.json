@@ -1,0 +1,32 @@
+{
+    "Cards": [
+        "Service Table"
+    ],
+    "componentName": "cfMultisiteServiceTab",
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "0016C00000i4gJDQAY"
+            }
+        ],
+        "type": "DataRaptor",
+        "value": {
+            "body": "{\n    \"Product\": [\n        {\n            \"ServiceAccount\": [\n                {\n                    \"Id\": \"0014P000025iO41QAE\",\n                    \"Name\" : \"Starbucks Inc\",\n                    \"Address\" : \"Seattle, WA\",\n                    \"Offers\" : 4\n                },\n                {\n                    \"Id\": \"0014P0000gdfgsdftt\",\n                    \"Name\" : \"Starbucks CA\",\n                    \"Address\": \"Los Angeles, CA\",\n                    \"Offers\" : 5\n                }\n            ],\n            \"Id\": \"01t4P000008Cor0QAC\",\n            \"Name\" : \"Business Mobile Plan\"\n        },\n        {\n            \"ServiceAccount\": [\n                {\n                    \"Id\": \"0014P000025iO41QAE\",\n                    \"Name\" : \"Starbucks San Francisco\",\n                    \"Address\" : \"Salesforce Tower, 5th Floor\",\n                    \"Offers\" : 2\n                },\n                {\n                    \"Id\": \"0014P0000gdfgsdftt\",\n                    \"Name\" : \"Starbucks PA\",\n                    \"Address\" : \"Star Ave, Easton, PA\",\n                    \"Offers\" : 1\n                }\n            ],\n            \"Id\": \"01t4P000008Cor0QAC\",\n            \"Name\" : \"IQ-VPN\"\n        },\n        {\n            \"ServiceAccount\": [\n                {\n                    \"Id\": \"0014P000025iO41QAE\",\n                    \"Name\" : \"Starbucks NY\",\n                    \"Address\" : \"Madison Ave, NewYork, NY\",\n                    \"Offers\" : 3\n                },\n                {\n                    \"Id\": \"0014P0000gdfgsdftt\",\n                    \"Name\" : \"Starbucks FL\",\n                    \"Address\" : \"Nancy St, Orlando, FL\",\n                    \"Offers\" : 4\n                }\n            ],\n            \"Id\": \"01t4P000008Cor0QAC\",\n            \"Name\" : \"Business Data Plan\"\n        },\n        {\n            \"ServiceAccount\": [\n                {\n                    \"Id\": \"0014P000025iO41QAE\",\n                    \"Name\" : \"Starbucks West\",\n                    \"Address\" : \"Fisher St, San Diego, CA\",\n                    \"Offers\" : 4\n                },\n                {\n                    \"Id\": \"0014P0000gdfgsdftt\",\n                    \"Name\" : \"Starbucks East\",\n                    \"Address\" : \"Valley Rd, Philadelphia, PA\",\n                    \"Offers\" : 1\n                }\n            ],\n            \"Id\": \"01t4P000008Cor0QAC\",\n            \"Name\" : \"IQ-JFK\"\n        }\n    ]\n}",
+            "bundle": "GetAssetsAndServiceDetails",
+            "inputMap": {
+                "AccountId": "{{params.id}}"
+            },
+            "resultVar": ""
+        }
+    },
+    "previewType": "runTime",
+    "templates": {
+        "0": {
+            "templateUrl": "multisite-service-cont"
+        }
+    },
+    "workspace": [
+        "Service Table/CTL/1/1563947348452"
+    ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Task_before_Case_Closure</fullName>
+    <active>false</active>
+    <description>Audit Case cannot be Closed/Pass when associated Task is Open</description>
+    <errorConditionFormula>ISPICKVAL (Status, &apos;Pass&apos;) &amp;&amp;
+Audit_Task_Created__c = True</errorConditionFormula>
+    <errorDisplayField>X809__c</errorDisplayField>
+    <errorMessage>Please Complete the Task before closing the case.</errorMessage>
+</ValidationRule>

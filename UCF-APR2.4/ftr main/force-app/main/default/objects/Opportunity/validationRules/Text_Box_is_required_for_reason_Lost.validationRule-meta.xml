@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Text_Box_is_required_for_reason_Lost</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ RecordType.DeveloperName = &quot;Opportunity_Lightning&quot;,
+RecordType.DeveloperName = &quot;Partner_Opportunity_New&quot;,
+
+ISPICKVAL(Reason_Lost__c,&quot;Other&quot;),
+
+ISBLANK(  Detail_Lost_Reasons__c )
+
+)</errorConditionFormula>
+    <errorMessage>If Reason Lost is &quot;Other&quot; then &quot;Detail Lost Reasons&quot; is required.</errorMessage>
+</ValidationRule>

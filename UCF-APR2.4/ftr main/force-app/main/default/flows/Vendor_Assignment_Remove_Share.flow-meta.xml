@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <description>Adds Budget Share to collection for eventual deletion</description>
+        <name>Add_Budget_Share_to_Delete_to_Collection</name>
+        <label>Add Budget Share to Delete to Collection</label>
+        <locationX>270</locationX>
+        <locationY>1367</locationY>
+        <assignmentItems>
+            <assignToReference>BudgetShares</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Budget_Shares_to_Delete</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Through_Budgets</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Are there Budget shares to delete?</description>
+        <name>Are_there_Budget_share_to_delete</name>
+        <label>Are there Budget shares to delete?</label>
+        <locationX>182</locationX>
+        <locationY>1583</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>ThereAreBudgetSharesToDelete</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>BudgetShares</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Budget_Shares</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if there is a project share that needs to be deleted</description>
+        <name>Is_there_a_Project_share_to_delete</name>
+        <label>Is there a Project share to delete?</label>
+        <locationX>182</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Get_Budgets</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>ThereIsAProjectShareToDelete</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Project_Shares_to_Delete.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Share</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if the Public Group exists</description>
+        <name>Public_Group_Exists</name>
+        <label>Public Group Exists?</label>
+        <locationX>336</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Public_Group.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Project_Shares_to_Delete</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>When a Vendor Assignment is deleted, revokes access to the specified project and its related Budgets for the specified Vendor.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>The Developer Name of the Public Group</description>
+        <name>GroupDeveloperName</name>
+        <dataType>String</dataType>
+        <expression>&quot;ST&quot;&amp;{!$Record.Vendor__c}</expression>
+    </formulas>
+    <interviewLabel>Vendor Assignment: Remove Share {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Vendor Assignment: Remove Share</label>
+    <loops>
+        <description>Loop Through Budgets related to the Project that the vendor is being unassigned from</description>
+        <name>Loop_Through_Budgets</name>
+        <label>Loop Through Budgets</label>
+        <locationX>182</locationX>
+        <locationY>1127</locationY>
+        <collectionReference>Get_Budgets</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Get_Budget_Shares_to_Delete</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Are_there_Budget_share_to_delete</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_Budget_Shares</name>
+        <label>Delete Budget Shares</label>
+        <locationX>50</locationX>
+        <locationY>1703</locationY>
+        <inputReference>BudgetShares</inputReference>
+    </recordDeletes>
+    <recordDeletes>
+        <description>Deletes the Project Share</description>
+        <name>Delete_Share</name>
+        <label>Delete Share</label>
+        <locationX>50</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>Get_Budgets</targetReference>
+        </connector>
+        <inputReference>Get_Project_Shares_to_Delete</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <description>Gets Budget Shares to delete</description>
+        <name>Get_Budget_Shares_to_Delete</name>
+        <label>Get Budget Shares to Delete</label>
+        <locationX>270</locationX>
+        <locationY>1247</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Add_Budget_Share_to_Delete_to_Collection</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Loop_Through_Budgets.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>UserOrGroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Public_Group.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RowCause</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Manual</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Budget__Share</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Budgets related to the Project that the vendor is being unassigned from</description>
+        <name>Get_Budgets</name>
+        <label>Get Budgets</label>
+        <locationX>182</locationX>
+        <locationY>1007</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Through_Budgets</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Budget__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets Project Shares to delete</description>
+        <name>Get_Project_Shares_to_Delete</name>
+        <label>Get Project Shares to Delete</label>
+        <locationX>182</locationX>
+        <locationY>551</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_there_a_Project_share_to_delete</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>UserOrGroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Public_Group.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RowCause</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Manual</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>sitetracker__Project__Share</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the Public Group for the Vendor specified by the Vendor Assignment.</description>
+        <name>Get_Public_Group</name>
+        <label>Get Public Group</label>
+        <locationX>336</locationX>
+        <locationY>311</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Public_Group_Exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GroupDeveloperName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>210</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Public_Group</targetReference>
+        </connector>
+        <object>Vendor_Assignment__c</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Budget Share collection to be deleted</description>
+        <name>BudgetShares</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Budget__Share</objectType>
+    </variables>
+</Flow>

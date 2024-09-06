@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_Proforma_Requested_Fields_Validation</fullName>
+    <active>true</active>
+    <description>Controls that this fields don´t be empty when changing to Proforma Completed Status</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &quot;Community_Connections&quot;, ISPICKVAL(StageName ,&quot;Proforma Requested&quot;),
+OR(
+ISBLANK(TEXT(Installation_Type__c)),
+ISBLANK(CRT_Number__c),
+ISBLANK(TEXT(Demo_Type__c)),
+ISBLANK(Marketing_Door_Fees__c),
+ISBLANK(Number_Of_Courtesy_Accounts__c),
+ISBLANK(Number_Of_Demonstration_Accounts__c),
+ISBLANK(Capital_Review_Notes__c),
+AND(ISPICKVAL( Contract_Category__c , &quot;RENEWAL&quot;), ISBLANK(TEXT(Renewal_Movement_Type__c))),
+AND(ISPICKVAL( Agreement_Type__c , &quot;BULK&quot;), ISBLANK(Bulk_Internet_Speed__c)),
+AND(ISPICKVAL( Agreement_Type__c , &quot;BULK&quot;), ISBLANK(Bulk_Video_Package_Name__c)),
+AND(ISPICKVAL( Agreement_Type__c , &quot;BULK-EMA&quot;), ISBLANK(Bulk_Internet_Speed__c)),
+AND(ISPICKVAL( Agreement_Type__c , &quot;BULK-EMA&quot;), ISBLANK(Bulk_Video_Package_Name__c)),
+AND(ISPICKVAL( Agreement_Type__c , &quot;EMA&quot;),ISBLANK( Flat_Rate_Percentage__c )),
+AND(ISPICKVAL( Agreement_Type__c , &quot;EMA-DOOR-REVSHARE&quot;),ISBLANK( Flat_Rate_Percentage__c )),
+AND(ISPICKVAL( Agreement_Type__c , &quot;NEMA&quot;),ISBLANK( Flat_Rate_Percentage__c )),
+AND(ISPICKVAL( Agreement_Type__c , &quot;EMA-DOORFEEONLY&quot;),ISBLANK( Flat_Rate_Percentage__c )),
+AND(ISPICKVAL( Agreement_Type__c , &quot;EMA-REVSHAREONLY&quot;),ISBLANK( Flat_Rate_Percentage__c ))
+)
+)</errorConditionFormula>
+    <errorMessage>One or more fields is missing: Installation Type, CRT Number, Demo Type, Marketing Door Fees, No.Courtesy Acc, No.Demo Acc, Capital Review Notes, Renewal Movement Type, Bulk; Internet Speed, Internet Fee MRC, Video Package Name, Flat Rate Percentage.</errorMessage>
+</ValidationRule>

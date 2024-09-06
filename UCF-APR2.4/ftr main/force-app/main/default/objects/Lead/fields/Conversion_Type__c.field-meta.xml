@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conversion_Type__c</fullName>
+    <description>Related To	
+Lead Source / Primary Campaign Creation or Pick list value added/created</description>
+    <externalId>false</externalId>
+    <label>Conversion Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+                <label>Inbound Call</label>
+            </value>
+            <value>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+                <label>Outbound Call</label>
+            </value>
+            <value>
+                <fullName>Inbound Chat</fullName>
+                <default>false</default>
+                <label>Inbound Chat</label>
+            </value>
+            <value>
+                <fullName>Form fill</fullName>
+                <default>false</default>
+                <label>Form fill</label>
+            </value>
+            <value>
+                <fullName>Cart Submission</fullName>
+                <default>false</default>
+                <label>Cart Submission</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

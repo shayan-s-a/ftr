@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agt_Term_Residual__c</fullName>
+    <externalId>false</externalId>
+    <label>Agent Term/ Residual</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1yr or less /10%</fullName>
+                <default>false</default>
+                <label>1yr or less /10%</label>
+            </value>
+            <value>
+                <fullName>2yr /14%</fullName>
+                <default>false</default>
+                <label>2yr /14%</label>
+            </value>
+            <value>
+                <fullName>3yr /16%</fullName>
+                <default>false</default>
+                <label>3yr /16%</label>
+            </value>
+            <value>
+                <fullName>4yr / 18%</fullName>
+                <default>false</default>
+                <label>4yr / 18%</label>
+            </value>
+            <value>
+                <fullName>5yr+ / 20%</fullName>
+                <default>false</default>
+                <label>5yr+ / 20%</label>
+            </value>
+            <value>
+                <fullName>1yr /4%</fullName>
+                <default>false</default>
+                <label>1yr /4%</label>
+            </value>
+            <value>
+                <fullName>2yr /5%</fullName>
+                <default>false</default>
+                <label>2yr /5%</label>
+            </value>
+            <value>
+                <fullName>3yr /6%</fullName>
+                <default>false</default>
+                <label>3yr /6%</label>
+            </value>
+            <value>
+                <fullName>MTM</fullName>
+                <default>false</default>
+                <label>MTM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

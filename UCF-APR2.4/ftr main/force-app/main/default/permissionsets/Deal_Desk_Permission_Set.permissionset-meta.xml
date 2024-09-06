@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>DealDeskCustomPermission</name>
+    </customPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SterlingQuoteItem__c.Allocated_Total_Capex_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SterlingQuoteItem__c.Allocated_Total_Capex__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SterlingQuoteItem__c.CIAC__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SterlingQuoteItem__c.NPV_Net_Present_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Deal Desk Permission Set</label>
+</PermissionSet>

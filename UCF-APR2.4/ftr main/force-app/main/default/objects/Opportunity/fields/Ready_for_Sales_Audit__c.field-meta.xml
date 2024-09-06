@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_for_Sales_Audit__c</fullName>
+    <description>This field detects if the opportunity is ready to be audited.</description>
+    <externalId>false</externalId>
+    <formula>AND(
+ispickval(StageName,&quot;Closed/Won&quot;),
+CPE_NRC__c &gt; 2500,
+ispickval(Mrg_Approved__c, &quot;Closed (Ink)&quot;),
+Net_New_MRR__c = 0,
+ispickval(Audit_Results__c, &quot;&quot;),
+
+
+OR(
+MONTH(TODAY()) &gt; 2 &amp;&amp; DAY(TODAY()) &lt;= 14 &amp;&amp; MONTH(TODAY()) - MONTH(CloseDate) = 2 &amp;&amp; YEAR(TODAY()) - YEAR(CloseDate) = 0,
+MONTH(TODAY()) &gt; 2 &amp;&amp; DAY(TODAY()) &gt;= 15 &amp;&amp; MONTH(TODAY()) - MONTH(CloseDate) = 1 &amp;&amp; YEAR(TODAY()) - YEAR(CloseDate) = 0,
+MONTH(TODAY()) = 2 &amp;&amp; DAY(TODAY()) &lt;= 14 &amp;&amp; MONTH(TODAY()) - MONTH(CloseDate) = -11 &amp;&amp; YEAR(TODAY()) - YEAR(CloseDate) = 0,
+MONTH(TODAY()) = 2 &amp;&amp; DAY(TODAY()) &gt;= 15 &amp;&amp; MONTH(TODAY()) - MONTH(CloseDate) = 1 &amp;&amp; YEAR(TODAY()) - YEAR(CloseDate) = 0,
+MONTH(TODAY()) = 1 &amp;&amp; DAY(TODAY()) &lt;= 14 &amp;&amp; MONTH(TODAY()) - MONTH(CloseDate) = -10 &amp;&amp; YEAR(TODAY()) - YEAR(CloseDate) = 1,
+MONTH(TODAY()) = 1 &amp;&amp; DAY(TODAY()) &gt;= 15 &amp;&amp; MONTH(TODAY()) - MONTH(CloseDate) = -11 &amp;&amp; YEAR(TODAY()) - YEAR(CloseDate) = 1
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Ready for Sales Audit</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

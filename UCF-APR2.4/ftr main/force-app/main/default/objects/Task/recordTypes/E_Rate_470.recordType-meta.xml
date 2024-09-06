@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E_Rate_470</fullName>
+    <active>true</active>
+    <description>Used by E-Rate Support Specialists to track 470 Flow</description>
+    <label>E-Rate 470</label>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Appointment Attended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo %28CPE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discovery Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door Knocks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Proposal Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Contacted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>AE Meeting Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDT Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Sent to CSR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Placed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP Case Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFQ%2FRFP Document Sent to CSR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Business Lunch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outgoing Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEER</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

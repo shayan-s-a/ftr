@@ -1,0 +1,61 @@
+{
+    "dataSource": {
+        "type": null,
+        "value": {
+        }
+    },
+    "filter": {
+    },
+    "states": [
+        {
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "fields": [
+                {
+                    "collapse": true,
+                    "data": {
+                    },
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "Product",
+                    "name": "Product",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['LineDescription']",
+                    "fieldType": "standard",
+                    "group": "Custom Properties",
+                    "label": "LineDescription",
+                    "name": "['LineDescription']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "<<Custom Field>>",
+                    "editing": false,
+                    "fieldType": "custom",
+                    "label": "",
+                    "name": "Attributes",
+                    "type": ""
+                }
+            ],
+            "name": "Attributes",
+            "templateUrl": "order-item-attributes"
+        }
+    ],
+    "title": "Order Item Attributes Card"
+}

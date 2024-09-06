@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ftr_WC_Speed_Mbps__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (
+	CONTAINS( WC_Speed__c, &apos;MB&apos;),  
+	VALUE(TRIM(LEFT(WC_Speed__c, LEN(WC_Speed__c) - 2))),
+	IF(
+		CONTAINS( WC_Speed__c, &apos;GB&apos;),  
+		VALUE(TRIM(LEFT(WC_Speed__c, LEN(WC_Speed__c) - 2))) * 1000,
+		0
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>WC Speed(Mbps)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

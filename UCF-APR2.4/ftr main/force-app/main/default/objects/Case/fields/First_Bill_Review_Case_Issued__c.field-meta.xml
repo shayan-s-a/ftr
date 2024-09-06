@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Bill_Review_Case_Issued__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to ensure multiple First Bill Review cases are not generated from a case.
+Can be used on any case but was created for the Circuit case.  4/26/20.  Only Admins can view it.</description>
+    <externalId>false</externalId>
+    <label>First Bill Review Case Issued</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

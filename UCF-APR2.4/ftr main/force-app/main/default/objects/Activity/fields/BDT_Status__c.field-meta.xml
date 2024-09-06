@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDT_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>BDT Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>BDT Submitted</fullName>
+                <default>false</default>
+                <label>BDT Submitted</label>
+            </value>
+            <value>
+                <fullName>BDT Competed</fullName>
+                <default>false</default>
+                <label>BDT Competed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

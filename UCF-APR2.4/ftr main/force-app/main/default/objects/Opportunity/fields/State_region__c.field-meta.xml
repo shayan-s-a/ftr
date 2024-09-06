@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_region__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( Account.ShippingState = &apos;California&apos; || Account.ShippingState = &apos;Oregon&apos; || Account.ShippingState = &apos;Washington&apos; || Account.ShippingState = &apos;Nevada&apos; || Account.ShippingState = &apos;Idaho&apos; || Account.ShippingState = &apos;Utah&apos; || Account.ShippingState = &apos;Arizona&apos; || Account.ShippingState = &apos;Montana&apos; ||  Account.ShippingState = &apos;Alaska&apos; || Account.ShippingState = &apos;Hawaii&apos;, &apos;West&apos;, 
+
+IF ( Account.ShippingState = &apos;Wyoming&apos; || Account.ShippingState = &apos;Colorado&apos; || Account.ShippingState = &apos;New Mexico&apos; || Account.ShippingState = &apos;North Dakota&apos; || Account.ShippingState = &apos;South Dakota&apos; || Account.ShippingState = &apos;Nebraska&apos; || Account.ShippingState = &apos;Kansas&apos; || Account.ShippingState = &apos;Oklahoma&apos; ||  Account.ShippingState = &apos;Texas&apos; || Account.ShippingState = &apos;Minnesota&apos; || Account.ShippingState = &apos;Iowa&apos; || Account.ShippingState = &apos;Missouri&apos; || Account.ShippingState = &apos;Arkansas&apos; || Account.ShippingState = &apos;Louisiana&apos; || Account.ShippingState = &apos;Wisconsin&apos; || Account.ShippingState = &apos;Illinois&apos; ||  Account.ShippingState = &apos;Mississippi&apos; , &apos;Central&apos;,
+
+IF ( Account.ShippingState = &apos;Michigan&apos; || Account.ShippingState = &apos;Indiana&apos; || Account.ShippingState = &apos;Kentucky&apos; || Account.ShippingState = &apos;Tennessee&apos; || Account.ShippingState = &apos;Alabama&apos; || Account.ShippingState = &apos;Ohio&apos; || Account.ShippingState = &apos;Georgia&apos; || Account.ShippingState = &apos;Florida&apos; ||  Account.ShippingState = &apos;South Carolina&apos; || Account.ShippingState = &apos;North Carolina&apos; || Account.ShippingState = &apos;Virginia&apos; || Account.ShippingState = &apos;West Virginia&apos; || Account.ShippingState = &apos;Delaware&apos; || Account.ShippingState = &apos;Maryland&apos; || Account.ShippingState = &apos;New Jersey&apos; || Account.ShippingState = &apos;Pennsylvania&apos; ||  Account.ShippingState = &apos;New York&apos; || Account.ShippingState = &apos;Connecticut&apos; || Account.ShippingState = &apos;Rhode Island&apos; || Account.ShippingState = &apos;Massachusetts&apos; || Account.ShippingState = &apos;Vermont&apos; || Account.ShippingState = &apos;New Hampshire&apos; || Account.ShippingState = &apos;Maine&apos;  , &apos;East&apos;,
+
+
+
+
+
+
+&quot;&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>State region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

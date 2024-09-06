@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engineering_Charges_is_Mandatory</fullName>
+    <active>true</active>
+    <description>MRC charges fields is mandatory if Cancellation field is Customer Requested Cancellation.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name &lt;&gt; &quot;Circuit Change Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Circuit Disconnect&quot;,
+$RecordType.Name &lt;&gt; &quot;Circuit Move Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Circuit New Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Circuit Renewal Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Circuit Simple Record Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Circuit Transfer of Ownership Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Voice Change Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Voice Disconnect Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Voice Move Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Voice New Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Voice Renewal Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Voice Simple Order&quot;,
+$RecordType.Name &lt;&gt; &quot;Voice Transfer of Ownership Order&quot;,
+$RecordType.Name &lt;&gt; &quot;FAW Mitel Change Order&quot;,
+$RecordType.Name &lt;&gt; &quot;FAW Mitel Disconnect Order&quot;,
+
+ISBLANK(Engineering_Charges__c),
+ISPICKVAL(Cancellation__c,&quot;Customer Requested Cancellation&quot;))</errorConditionFormula>
+    <errorDisplayField>Engineering_Charges__c</errorDisplayField>
+    <errorMessage>Engineering Charges field is mandatory if the Cancellation field is Customer Requested Cancellation.</errorMessage>
+</ValidationRule>

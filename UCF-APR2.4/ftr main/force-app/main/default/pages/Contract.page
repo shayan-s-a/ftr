@@ -1,0 +1,10 @@
+<apex:page tabstyle="Contract" standardcontroller="Contract">
+    <apex:outputPanel rendered="{!Contract.CanUserSeeThisRecord__c == false}">
+        <span>
+            You do not have access to this record.
+        </span>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!Contract.CanUserSeeThisRecord__c == true}">
+        <apex:detail relatedlist="true" subject="{!Contract.Id}" inlineEdit="true" />
+    </apex:outputPanel>
+</apex:page>

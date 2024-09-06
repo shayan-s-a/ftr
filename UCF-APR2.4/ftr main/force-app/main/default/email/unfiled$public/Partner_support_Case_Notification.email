@@ -1,0 +1,10 @@
+Case {!Case.CaseNumber} has been Assigned to {!Case.OwnerFullName}.
+
+Link to Case:  {!Case.Link}
+
+Created Date:  {!Case.CreatedDate}
+Status:  {!Case.Status}{!Case.Status__c}
+Origin:  {!Case.Origin}
+
+Case Subject:  {!Case.Subject}
+Case Description:  {!Case.Description}

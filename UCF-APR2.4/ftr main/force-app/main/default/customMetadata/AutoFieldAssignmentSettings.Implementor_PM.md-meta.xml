@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Project Manager</label>
+    <protected>false</protected>
+    <values>
+        <field>ExcludedOrderStages__c</field>
+        <value xsi:type="xsd:string">Complete;New;Cancelled;Completed</value>
+    </values>
+    <values>
+        <field>ExcludedRecordTypes__c</field>
+        <value xsi:type="xsd:string">Change Order;Contract Renewal;DID Order Request;Disconnect Order;Records Only Order;Transfer Ownership Order;UCaaS Contract Renewal Order;UCaaS Disconnect Order;UCaaS Records Only Order;UCaaS Transfer of Ownership Order</value>
+    </values>
+    <values>
+        <field>IncludedProductTypes__c</field>
+        <value xsi:type="xsd:string">Ethernet;Frontier AnyWare UCaaS;UCF;Managed Enterprise WiFi;SDWAN;FOTS;EIA;E-LAN;E-LAN &amp; DIA;EVPL;UCaaS/UCF</value>
+    </values>
+    <values>
+        <field>IncludedRecordTypes__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>IsAutomationEnabled__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>QueueName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ShouldCreateTask__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Incorrect__c</fullName>
+    <description>Created for Heather M/Stacy McD  10/21 for the Order Creation Case</description>
+    <externalId>false</externalId>
+    <label>Missing/Incorrect Information</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BDT/Pricing Discrepancies</fullName>
+                <default>false</default>
+                <label>BDT/Pricing Discrepancies</label>
+            </value>
+            <value>
+                <fullName>BTN</fullName>
+                <default>false</default>
+                <label>BTN</label>
+            </value>
+            <value>
+                <fullName>Circuit Information</fullName>
+                <default>false</default>
+                <label>Circuit Information</label>
+            </value>
+            <value>
+                <fullName>Contact Information</fullName>
+                <default>false</default>
+                <label>Contact Information</label>
+            </value>
+            <value>
+                <fullName>DGF</fullName>
+                <default>false</default>
+                <label>DGF</label>
+            </value>
+            <value>
+                <fullName>FSA</fullName>
+                <default>false</default>
+                <label>FSA</label>
+            </value>
+            <value>
+                <fullName>LOA</fullName>
+                <default>false</default>
+                <label>LOA</label>
+            </value>
+            <value>
+                <fullName>Multiple Documents</fullName>
+                <default>false</default>
+                <label>Multiple Documents</label>
+            </value>
+            <value>
+                <fullName>PRI Capacity</fullName>
+                <default>false</default>
+                <label>PRI Capacity</label>
+            </value>
+            <value>
+                <fullName>Product Calculator</fullName>
+                <default>false</default>
+                <label>Product Calculator</label>
+            </value>
+            <value>
+                <fullName>Schedule</fullName>
+                <default>false</default>
+                <label>Schedule</label>
+            </value>
+            <value>
+                <fullName>System Issues</fullName>
+                <default>false</default>
+                <label>System Issues</label>
+            </value>
+            <value>
+                <fullName>TAX ID</fullName>
+                <default>false</default>
+                <label>TAX ID</label>
+            </value>
+            <value>
+                <fullName>Misc</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Misc</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

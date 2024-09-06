@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_complete_audit_task</fullName>
+    <active>false</active>
+    <description>Deactivated 11/18/2021 because the Audit task is assigned to the AE and they are unable to complete their own task. TMM</description>
+    <errorConditionFormula>AND( RecordTypeId = &quot;0120L000000RdA3&quot;, 
+$Profile.Id = &quot;00e0h000001WfeA&quot;,
+$Profile.Id = &quot;00e0h000001WfvO&quot;,
+$Profile.Id = &quot;00eE0000001A84n&quot;, 
+$Profile.Id = &quot;00e0L0000012AB2&quot;,
+$Profile.Id = &quot;00eE000000127m2&quot;, 
+ISPICKVAL( Status , &quot;Completed&quot;) )</errorConditionFormula>
+    <errorMessage>You are not authorized to complete this task</errorMessage>
+</ValidationRule>

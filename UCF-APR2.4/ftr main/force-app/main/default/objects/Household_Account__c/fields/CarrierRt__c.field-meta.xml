@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CarrierRt__c</fullName>
+    <description>US Postal Service code assigned to this household address to aid in mail delivery. The code is 1 letter for the carrier route type (city, rural, PO Box, or highway) and 3 digits for the carrier code.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>US Postal Service code assigned to this household address to aid in mail delivery. The code is 1 letter for the carrier route type (city, rural, PO Box, or highway) and 3 digits for the carrier code.</inlineHelpText>
+    <label>USPS Carrier Route Identifier</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

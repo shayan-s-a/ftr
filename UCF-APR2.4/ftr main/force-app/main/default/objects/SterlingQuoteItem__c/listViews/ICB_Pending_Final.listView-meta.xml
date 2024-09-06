@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICB_Pending_Final</fullName>
+    <columns>SterlingQuote__c</columns>
+    <columns>NAME</columns>
+    <columns>AdjustedMRC__c</columns>
+    <columns>CPQLineNumber__c</columns>
+    <columns>CurrentStatus__c</columns>
+    <columns>DSAT_AddressID__c</columns>
+    <columns>DiscountType__c</columns>
+    <columns>ICB_Comments__c</columns>
+    <columns>Overall_Quote_Status__c</columns>
+    <columns>OverallStatus__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CurrentStatus__c</field>
+        <operation>equals</operation>
+        <value>Pending Final Update</value>
+    </filters>
+    <label>ICB Pending Final</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

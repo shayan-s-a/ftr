@@ -1,0 +1,17 @@
+{!Case.Account_Executive_Formula__c},<br/><br/>
+
+Please be aware of the following account changes/modifications.<br/>
+<br/>
+If you are not the correct AE please forward to the correct AE and advise to have Salesforce updated with the correct AE assignment.<br/>
+<br/>
+<b>Contact Name:</b> {!Case.Contact}<br/>
+<b>Monthly Recurring Charges:</b> {!Case.OrderManagement_MonthlyRecurringCharges__c}<br/>
+<b>Non Recurring Charges:</b> {!Case.OrderManagement_NonRecurringCharges__c}<br/>
+<b>Case Origin:</b> {!Case.Origin}<br/>
+<b>Description:</b> {!Case.Description}<br/><br/>
+
+Follow the link below to access the Salesforce case.<br/>
+<a href={!Case.Link}>{!Case.CaseNumber}</a><br/><br/>
+
+Thank You,<br/>
+{!Case.CreatedBy}

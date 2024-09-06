@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Types_1__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the mix of solutions that are requested by the RFI/RFP</inlineHelpText>
+    <label>Solution Types</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Internet Access</fullName>
+                <default>false</default>
+                <label>Internet Access</label>
+            </value>
+            <value>
+                <fullName>Multi-Site Connectivity</fullName>
+                <default>false</default>
+                <label>Multi-Site Connectivity</label>
+            </value>
+            <value>
+                <fullName>Legacy Voice</fullName>
+                <default>false</default>
+                <label>Legacy Voice</label>
+            </value>
+            <value>
+                <fullName>Cloud or SIP Voice</fullName>
+                <default>false</default>
+                <label>Cloud or SIP Voice</label>
+            </value>
+            <value>
+                <fullName>Other Managed Solutions</fullName>
+                <default>false</default>
+                <label>Other Managed Solutions</label>
+            </value>
+            <value>
+                <fullName>CPE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CPE</label>
+            </value>
+            <value>
+                <fullName>E911</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>E911</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

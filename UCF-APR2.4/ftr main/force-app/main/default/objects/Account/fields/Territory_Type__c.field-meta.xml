@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Territory_Type__c</fullName>
+    <description>Setup to identify if the SFDC Account is assigned to an TAE, BAE or EAE... TAE would be Geo Assignment or Blank. If Assigned to a BAE or EAE - the field would reflect Assigned Base.</description>
+    <externalId>false</externalId>
+    <label>Territory Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assigned_Base</fullName>
+                <default>false</default>
+                <label>Assigned Base</label>
+            </value>
+            <value>
+                <fullName>Carrier Services</fullName>
+                <default>false</default>
+                <label>Carrier Services</label>
+            </value>
+            <value>
+                <fullName>Geographic</fullName>
+                <default>true</default>
+                <label>Geographic</label>
+            </value>
+            <value>
+                <fullName>North American Data Center</fullName>
+                <default>false</default>
+                <label>North American Data Center</label>
+            </value>
+            <value>
+                <fullName>Frontier Corp Tel Acct</fullName>
+                <default>false</default>
+                <label>Frontier Corp Tel Acct</label>
+            </value>
+            <value>
+                <fullName>Frontier Corp Tel Account</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Frontier Corp Tel Account</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

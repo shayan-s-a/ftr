@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQO_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>MQO Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2018 Lit Building Promotion</fullName>
+                <default>false</default>
+                <label>2018 Lit Building Promotion</label>
+            </value>
+            <value>
+                <fullName>BidNet - CPE</fullName>
+                <default>false</default>
+                <label>BidNet - CPE</label>
+            </value>
+            <value>
+                <fullName>Branded Paid Search</fullName>
+                <default>false</default>
+                <label>Branded Paid Search</label>
+            </value>
+            <value>
+                <fullName>Cart Submission</fullName>
+                <default>false</default>
+                <label>Cart Submission</label>
+            </value>
+            <value>
+                <fullName>ChoiceConvention2017</fullName>
+                <default>false</default>
+                <label>ChoiceConvention2017</label>
+            </value>
+            <value>
+                <fullName>CJIS - CPE</fullName>
+                <default>false</default>
+                <label>CJIS - CPE</label>
+            </value>
+            <value>
+                <fullName>CNL Disconnect Campaign</fullName>
+                <default>false</default>
+                <label>CNL Disconnect Campaign</label>
+            </value>
+            <value>
+                <fullName>Cold Call/Outbound</fullName>
+                <default>false</default>
+                <label>Cold Call/Outbound</label>
+            </value>
+            <value>
+                <fullName>Cold Calling</fullName>
+                <default>false</default>
+                <label>Cold Calling</label>
+            </value>
+            <value>
+                <fullName>Contact Aggregator/List Upload</fullName>
+                <default>false</default>
+                <label>Contact Aggregator/List Upload</label>
+            </value>
+            <value>
+                <fullName>Contact Form</fullName>
+                <default>false</default>
+                <label>Contact Form</label>
+            </value>
+            <value>
+                <fullName>Content Form</fullName>
+                <default>false</default>
+                <label>Content Form</label>
+            </value>
+            <value>
+                <fullName>Content Syndication</fullName>
+                <default>false</default>
+                <label>Content Syndication</label>
+            </value>
+            <value>
+                <fullName>Costar - MDU</fullName>
+                <default>false</default>
+                <label>Costar - MDU</label>
+            </value>
+            <value>
+                <fullName>CoStar - MDU – Expansion</fullName>
+                <default>false</default>
+                <label>CoStar - MDU – Expansion</label>
+            </value>
+            <value>
+                <fullName>Costar - MTU</fullName>
+                <default>false</default>
+                <label>Costar - MTU</label>
+            </value>
+            <value>
+                <fullName>CPE – Avaya</fullName>
+                <default>false</default>
+                <label>CPE – Avaya</label>
+            </value>
+            <value>
+                <fullName>CPE – BidNet</fullName>
+                <default>false</default>
+                <label>CPE – BidNet</label>
+            </value>
+            <value>
+                <fullName>CPE - CJIS</fullName>
+                <default>false</default>
+                <label>CPE - CJIS</label>
+            </value>
+            <value>
+                <fullName>CPE Maintenance Renewal</fullName>
+                <default>false</default>
+                <label>CPE Maintenance Renewal</label>
+            </value>
+            <value>
+                <fullName>CPE – Maintenance Renewal</fullName>
+                <default>false</default>
+                <label>CPE – Maintenance Renewal</label>
+            </value>
+            <value>
+                <fullName>CPE – MarketSource</fullName>
+                <default>false</default>
+                <label>CPE – MarketSource</label>
+            </value>
+            <value>
+                <fullName>CPE – Phone / Hotline</fullName>
+                <default>false</default>
+                <label>CPE – Phone / Hotline</label>
+            </value>
+            <value>
+                <fullName>CPE – Warranty Expiration</fullName>
+                <default>false</default>
+                <label>CPE – Warranty Expiration</label>
+            </value>
+            <value>
+                <fullName>Customer - Alt Channel</fullName>
+                <default>false</default>
+                <label>Customer - Alt Channel</label>
+            </value>
+            <value>
+                <fullName>Demo Examples</fullName>
+                <default>false</default>
+                <label>Demo Examples</label>
+            </value>
+            <value>
+                <fullName>Direct Traffic</fullName>
+                <default>false</default>
+                <label>Direct Traffic</label>
+            </value>
+            <value>
+                <fullName>Dun &amp; Bradstreet</fullName>
+                <default>false</default>
+                <label>Dun &amp; Bradstreet</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>eRate</fullName>
+                <default>false</default>
+                <label>eRate</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Form Fill</fullName>
+                <default>false</default>
+                <label>Form Fill</label>
+            </value>
+            <value>
+                <fullName>IDG Form</fullName>
+                <default>false</default>
+                <label>IDG Form</label>
+            </value>
+            <value>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+                <label>Inbound Call</label>
+            </value>
+            <value>
+                <fullName>Inbound Chat</fullName>
+                <default>false</default>
+                <label>Inbound Chat</label>
+            </value>
+            <value>
+                <fullName>Internal Customer Database (DPI/Dynamics)</fullName>
+                <default>false</default>
+                <label>Internal Customer Database (DPI/Dynamics)</label>
+            </value>
+            <value>
+                <fullName>Internal Referral</fullName>
+                <default>false</default>
+                <label>Internal Referral</label>
+            </value>
+            <value>
+                <fullName>Lead List</fullName>
+                <default>false</default>
+                <label>Lead List</label>
+            </value>
+            <value>
+                <fullName>Marketo - Campaign</fullName>
+                <default>false</default>
+                <label>Marketo - Campaign</label>
+            </value>
+            <value>
+                <fullName>Massini</fullName>
+                <default>false</default>
+                <label>Massini</label>
+            </value>
+            <value>
+                <fullName>MDU to MDU</fullName>
+                <default>false</default>
+                <label>MDU to MDU</label>
+            </value>
+            <value>
+                <fullName>MDU to MTU</fullName>
+                <default>false</default>
+                <label>MDU to MTU</label>
+            </value>
+            <value>
+                <fullName>MTU to MDU</fullName>
+                <default>false</default>
+                <label>MTU to MDU</label>
+            </value>
+            <value>
+                <fullName>MTU to MTU</fullName>
+                <default>false</default>
+                <label>MTU to MTU</label>
+            </value>
+            <value>
+                <fullName>Netline Form</fullName>
+                <default>false</default>
+                <label>Netline Form</label>
+            </value>
+            <value>
+                <fullName>Non-Search Paid Media</fullName>
+                <default>false</default>
+                <label>Non-Search Paid Media</label>
+            </value>
+            <value>
+                <fullName>Organic Search</fullName>
+                <default>false</default>
+                <label>Organic Search</label>
+            </value>
+            <value>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+                <label>Outbound Call</label>
+            </value>
+            <value>
+                <fullName>Outdoor Media</fullName>
+                <default>false</default>
+                <label>Outdoor Media</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Pay-Per-Lead</fullName>
+                <default>false</default>
+                <label>Pay-Per-Lead</label>
+            </value>
+            <value>
+                <fullName>Prospect - Alt Channel</fullName>
+                <default>false</default>
+                <label>Prospect - Alt Channel</label>
+            </value>
+            <value>
+                <fullName>Referral Program</fullName>
+                <default>false</default>
+                <label>Referral Program</label>
+            </value>
+            <value>
+                <fullName>Referral Traffic</fullName>
+                <default>false</default>
+                <label>Referral Traffic</label>
+            </value>
+            <value>
+                <fullName>Sales Generated Lead</fullName>
+                <default>false</default>
+                <label>Sales Generated Lead</label>
+            </value>
+            <value>
+                <fullName>SnapApp Form</fullName>
+                <default>false</default>
+                <label>SnapApp Form</label>
+            </value>
+            <value>
+                <fullName>Social Traffic</fullName>
+                <default>false</default>
+                <label>Social Traffic</label>
+            </value>
+            <value>
+                <fullName>Take the Lead</fullName>
+                <default>false</default>
+                <label>Take the Lead</label>
+            </value>
+            <value>
+                <fullName>Test Lead</fullName>
+                <default>false</default>
+                <label>Test Lead</label>
+            </value>
+            <value>
+                <fullName>Transfer from Small Business</fullName>
+                <default>false</default>
+                <label>Transfer from Small Business</label>
+            </value>
+            <value>
+                <fullName>Unbranded Paid Search</fullName>
+                <default>false</default>
+                <label>Unbranded Paid Search</label>
+            </value>
+            <value>
+                <fullName>Vidyard Form</fullName>
+                <default>false</default>
+                <label>Vidyard Form</label>
+            </value>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+            <value>
+                <fullName>Zoominfo</fullName>
+                <default>false</default>
+                <label>Zoominfo</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

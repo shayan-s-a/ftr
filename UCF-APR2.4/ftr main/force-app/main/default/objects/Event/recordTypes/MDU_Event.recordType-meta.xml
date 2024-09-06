@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_Event</fullName>
+    <active>true</active>
+    <description>MDU Event</description>
+    <label>MDU Event</label>
+    <picklistValues>
+        <picklist>BDT_Status__c</picklist>
+        <values>
+            <fullName>BDT Competed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDT Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Blitzing__c</picklist>
+        <values>
+            <fullName>Lit Building Project 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Playbook - Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Playbook - Managed WLAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Playbook - UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_Campaign__c</picklist>
+        <values>
+            <fullName>Connectivity - Lit Building - Tampa %E2%80%93 Accounts</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Connectivity - Lit Building - Tampa - Meeting Incentive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Company_Stage__c</picklist>
+        <values>
+            <fullName>Decline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Static</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Information_Valid__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Role__c</picklist>
+        <values>
+            <fullName>Client%2FReference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Notice Person 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Notice Person 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Carrier__c</picklist>
+        <values>
+            <fullName>AT%26T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centurylink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crown Castle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spectrum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOW</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Currently_Under_Contract__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Response__c</picklist>
+        <values>
+            <fullName>No bundled services required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested at this time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28add Comments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Still In contract Current Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unresponsive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Temperature__c</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disposition_of_Property__c</picklist>
+        <values>
+            <fullName>Competitive Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitive Agreement%2C Not Recommended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Competitive Agreement%2C  Recommended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Competitive Agreement%2C Not Recommended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Recommend for Module</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>E_Rate_Support_Specialist__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>E_Rate_Task_Disposition__c</picklist>
+        <values>
+            <fullName>Call Back Later</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Answer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refer to a New Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove from Call List</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>E_Rate_User__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Frontier_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Disposition__c</picklist>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Created</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unresponsive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Correction_Required__c</picklist>
+        <values>
+            <fullName>BDT%2FCPQ issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Account Number Missing for Upgrade%2FDisconnect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Circuit ID missing for upgrades%2Fdisconnects</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact missing%2Fincorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract missing%2Fincorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DGF Handoff%2FTopology Change Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DGF Incorrect Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DID Enrichment not complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DID Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disconnect ETL awareness%2Fauthorization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Reach%2FOff-Net address Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired Quote need Refreshed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAC Form Ready for Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing%2FInvalid Quick Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need Countersigned Signatures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Vlocity order required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity not complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Not Clear%2FConflicting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Redesign Required</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Hold_Reason__c</picklist>
+        <values>
+            <fullName>Customer Delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPI Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delayed Order %28DOR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management Approval%2FDecision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIFT Ticket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tables Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Products_Quoted__c</picklist>
+        <values>
+            <fullName>DIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiberoptics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed Wifi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD-Wan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prospect__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending approval from Frontier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending approval from Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Outreach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door to Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doorhanger-Flyer distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email blast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber Expansion project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lunch %26 Learn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Offer Rollout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Property Launch %2F Pre-Sales Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Appreciation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Check-In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Sponsored Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Gathering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tabletop Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoom event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Task_Attribute__c</picklist>
+        <values>
+            <fullName>470 Proposal Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Outreach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door to Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lunch %26 Learn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Offer Rollout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Property Launch %2F Pre-Sales Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Appreciation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Check-In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Sponsored Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Gathering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__EventStatus__c</picklist>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Shared</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

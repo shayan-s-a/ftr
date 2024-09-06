@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Action_Record_RMA_Material_Escalation_to_MCC_E</name>
+        <label>Action Record RMA/Material Escalation to MCC-E</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <actionName>sitetracker__Action_Item__c.Action_Record_RMA_Material_Escalation_to_MCC_E</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Action_Record_RMA_Material_Escalation_to_WOMACK_DIRECT_REPORTS</name>
+        <label>Action Record RMA/Material Escalation to WOMACK_DIRECT_REPORTS</label>
+        <locationX>314</locationX>
+        <locationY>455</locationY>
+        <actionName>sitetracker__Action_Item__c.Action_Record_RMA_Material_Escalation_to_WOMACK_DIRECT_REPORTS</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>Justification_Code_Subcategory</name>
+        <label>Check Justification Code/Subcategory</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Action_Record_RMA_Material_Escalation_to_WOMACK_DIRECT_REPORTS</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Justification_Code_Subcategory</name>
+            <conditionLogic>(1 OR 2 OR 3 OR 4 OR 5) OR ((6 OR 7) AND (8 OR 9 OR 10 OR 11 OR 12 OR 13 OR 14 OR 15 OR 16 OR 17)) OR (18)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>67-Common Equipment Costs</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>68-Commercial Revenue Enterprise</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>69-Commercial Revenue Wholesale</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>76-Commercial Drop</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>78-FTTC (Fiber to the Cell)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>30-Network Modernization</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>65-Network Pre-Positioning</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>METRO E</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>BDT</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>DS-1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>ASR</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>FTTC</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>FTTC - AT&amp;T</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>FTTC - IOF</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>FTTC - NEW</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>FTTC -VZW</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Subcategory__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>DS-3</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sitetracker__Project_ID__r.Justification_Code__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>27-Strategic Solutions</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Action_Record_RMA_Material_Escalation_to_MCC_E</targetReference>
+            </connector>
+            <label>Check Justification Code/Subcategory</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>RMA or Material Escalation Action records email alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RMA or Material Escalation Action records email alert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Justification_Code_Subcategory</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>sitetracker__Task_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>RMA</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>sitetracker__Task_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Material Escalation</stringValue>
+            </value>
+        </filters>
+        <object>sitetracker__Action_Item__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Enablement_Cant_Close_Case</fullName>
+    <active>true</active>
+    <description>Created for Training Request Case for Randall Meeks case 00767403 3/21 TMM</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &quot;Training Request&quot;,
+ISPICKVAL(Status, &quot;Closed&quot;),
+ISBLANK( Manager_Name__c ),
+ISBLANK( Date_Discussed_with_Manager__c ),
+ISBLANK( Action_Confirmed_with_Manager__c),
+ISBLANK( Committed_Completion_Date__c)
+)</errorConditionFormula>
+    <errorMessage>Manager Name, Date Discussed with Manager, Action Confirmed with Manager, Committed Completion Date are required in order to close the case.</errorMessage>
+</ValidationRule>

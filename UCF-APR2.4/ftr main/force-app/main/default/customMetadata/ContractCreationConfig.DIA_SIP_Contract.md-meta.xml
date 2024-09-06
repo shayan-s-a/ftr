@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>DIA + SIP Contract</label>
+    <protected>false</protected>
+    <values>
+        <field>Agreement_Type__c</field>
+        <value xsi:type="xsd:string">Ethernet/Data Services</value>
+    </values>
+    <values>
+        <field>IsBundle__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Product_Family__c</field>
+        <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>Products__c</field>
+        <value xsi:type="xsd:string">EIA;SIP</value>
+    </values>
+    <values>
+        <field>Schedule_Type__c</field>
+        <value xsi:type="xsd:string">DIA Schedule_02012021</value>
+    </values>
+</CustomMetadata>

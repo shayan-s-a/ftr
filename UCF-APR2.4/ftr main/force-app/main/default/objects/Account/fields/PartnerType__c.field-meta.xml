@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PartnerType__c</fullName>
+    <description>Account - Partner Record Type</description>
+    <externalId>false</externalId>
+    <label>Partner Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Interconnect</fullName>
+                <default>false</default>
+                <label>Interconnect</label>
+            </value>
+            <value>
+                <fullName>IT Consultant</fullName>
+                <default>false</default>
+                <label>IT Consultant</label>
+            </value>
+            <value>
+                <fullName>IT Firm</fullName>
+                <default>false</default>
+                <label>IT Firm</label>
+            </value>
+            <value>
+                <fullName>Master Agent</fullName>
+                <default>false</default>
+                <label>Master Agent</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Solution Provider</fullName>
+                <default>false</default>
+                <label>Solution Provider</label>
+            </value>
+            <value>
+                <fullName>System Integrator</fullName>
+                <default>false</default>
+                <label>System Integrator</label>
+            </value>
+            <value>
+                <fullName>Telecom Agent</fullName>
+                <default>false</default>
+                <label>Telecom Agent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

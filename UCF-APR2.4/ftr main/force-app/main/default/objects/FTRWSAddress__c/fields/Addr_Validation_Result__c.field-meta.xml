@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Addr_Validation_Result__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE( CASE(Comments__c, 
+&quot;Multiple DPI addresses found, please validate the address manually&quot;, &quot;/resource/yellow&quot;,
+&quot;Invalid DPI Address;&quot;, &quot;/resource/red&quot;,
+&quot;Invalid DSAT Address;&quot;, &quot;/resource/red&quot;,
+&quot;Invalid DPI Address; Invalid DSAT Address;&quot;, &quot;/resource/red&quot;,
+&quot;Invalid DSAT ID;&quot;, &quot;/resource/red&quot;,
+if(AND(Comments__c==&apos;&apos;, DPI_Qualified__c , DSAT_Qualified__c ),&quot;/resource/green&quot;,&quot;/resource/White&quot;)), &apos;&apos;, 22, 22)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Addr Validation Result</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,122 @@
+<apex:page showHeader="true" sidebar="false" controller="DIDNumberViewController" contentType="{!renderAsExcel}">
+    <style>
+        table {
+            border: 1px solid lightgrey;
+        }
+
+        th,
+        td {
+            border: 1px solid lightgrey !important;
+        }
+        .didLocationTable th, .didLocationTable td {
+            text-align: left !important;
+        }
+    </style>
+    <div>
+        <div>
+            <h1 class="slds-text-heading_medium slds-m-top_large">
+                Service Location: {!didLocationDetails.ServiceAccountId__r.vlocity_cmt__PremisesId__r.Premise_Detail__c}
+            </h1>
+        </div>
+        <!-- DID Location Info -->
+
+        <!-- DID Location Details -->
+        <h2 class="slds-text-heading_medium">
+            DID Location Details:
+        </h2>
+        <table class="didLocationTable">
+            <tr>
+                <td>Name</td>
+                <td>{!didLocationDetails.Name}</td>
+            </tr>
+            <tr>
+                <td>DID Location</td>
+                <td>{!didLocationDetails.PremisesId__r.Premise_Detail__c}</td>
+            </tr>
+            <tr>
+                <td>Incoming caller ID presentation</td>
+                <td>{!didLocationDetails.IncomingCallerID__c}</td>
+            </tr>
+            <tr>
+                <td>Call Paths</td>
+                <td>{!didLocationDetails.NumberOfCallPaths__c}</td>
+            </tr>
+            <tr>
+                <td>Main Directory Number (MDN)</td>
+                <td>{!didLocationDetails.BTN__c}</td>
+            </tr>
+            <tr>
+                <td>Billing Number (BTN)</td>
+                <td>{!didLocationDetails.BTN__c}</td>
+            </tr>
+            <tr>
+                <td>Test Number</td>
+                <td>{!didLocationDetails.TestNumber__c}</td>
+            </tr>
+            <tr>
+                <td>International Dialing Option</td>
+                <td>{!didLocationDetails.InternationalDialingOptions__c}</td>
+            </tr>
+            <tr>
+                <td>Connect line ID screening</td>
+                <td>{!didLocationDetails.ConnectLineIDScreening__c}</td>
+            </tr>
+            <tr>
+                <td>Number of DID's to be reserved for this location</td>
+                <td>{!didLocationDetails.NumberOfDIDs__c}</td>
+            </tr>
+        </table>
+        
+        <!-- DID Number Details -->
+        <h2 class="slds-text-heading_medium slds-m-bottom_top">
+            DID Numbers:
+        </h2>
+        <table>
+            <thead>
+                <th>DID Number</th>
+                <th>DID Number Info</th>
+                <th>Third Party?</th>
+                <th>Rate Center</th>
+                <th>Feature</th>
+                <th>Created Date</th>
+                <th>Created By</th>
+            </thead>
+            <apex:repeat value="{!allDIDNumbers}" var="numberList" id="numberList">
+                <apex:repeat value="{!numberList}" var="number" id="number">
+                    <tr>
+                        <td>{!number.DID_Number__c}</td>
+                        <td>{!number.DIDNumberInfo__c}</td>
+                        <td>{!number.ThirdParty__c}</td>
+                        <td>{!number.RateCenter__c}</td>
+                        <td>{!number.Feature__c}</td>
+                        <td>{!number.CreatedDate}</td>
+                        <td>{!number.CreatedBy.Name}</td>
+                    </tr>
+                </apex:repeat>
+            </apex:repeat>
+        </table>
+
+        <!-- 911 Details -->
+        <h2 class="slds-text-heading_medium slds-m-bottom_top">
+            911 Option:
+        </h2>
+        <table>
+            <thead>
+                <th>Number</th>
+                <th>Option</th>
+                <th>Name</th>
+                <th>FTR 911 Provider?</th>
+                <th>Location</th>
+            </thead>
+            <apex:repeat value="{!x911Options}" var="option" id="option">
+                <tr>
+                    <td>{!option.PhoneNumber__c}</td>
+                    <td>{!option.Option__c}</td>
+                    <td>{!option.Name}</td>
+                    <td>{!option.FTR_911_Provider__c}</td>
+                    <td>{!option.PremisesId__r.Premise_Detail__c}</td>
+                </tr>
+            </apex:repeat>
+        </table>
+    </div>
+</apex:page>

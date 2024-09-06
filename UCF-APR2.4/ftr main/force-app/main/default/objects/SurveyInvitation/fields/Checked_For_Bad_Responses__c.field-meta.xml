@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Checked_For_Bad_Responses__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check whether this Survey Invitation was checked for Bad Responses. If false, it will be picked up by the schedule trigger flow and do action accordingly.</description>
+    <externalId>false</externalId>
+    <label>Checked For Bad Responses</label>
+    <type>Checkbox</type>
+</CustomField>

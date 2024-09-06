@@ -1,0 +1,15 @@
+.slds-radio .slds-radio__label,
+.slds-checkbox .slds-checkbox__label,
+.slds-scope .slds-radio .slds-radio__label,
+.slds-scope .slds-checkbox .slds-checkbox__label{
+    display: inline !important;
+}
+.omni-read-only {
+    cursor: not-allowed;
+    -webkit-filter: unset; 
+     filter: unset !important; 
+}
+.omni-read-only [data-omni-input] .slds-checkbox_faux, .omni-read-only [data-omni-input] .slds-radio_faux, .omni-read-only [data-omni-input] input, .omni-read-only [data-omni-input] select, .omni-read-only [data-omni-input] textarea {
+    -webkit-filter: unset;
+    filter: unset !important;
+}

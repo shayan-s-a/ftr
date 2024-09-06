@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_At_Risk__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason at Risk</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing Issues</fullName>
+                <default>false</default>
+                <label>Billing Issues</label>
+            </value>
+            <value>
+                <fullName>CSR/Expiration Request</fullName>
+                <default>false</default>
+                <label>CSR/Expiration Request</label>
+            </value>
+            <value>
+                <fullName>Dark Fiber</fullName>
+                <default>false</default>
+                <label>Dark Fiber</label>
+            </value>
+            <value>
+                <fullName>Moving to New Network</fullName>
+                <default>false</default>
+                <label>Moving to New Network</label>
+            </value>
+            <value>
+                <fullName>Network Upgrade</fullName>
+                <default>false</default>
+                <label>Network Upgrade</label>
+            </value>
+            <value>
+                <fullName>New Provider</fullName>
+                <default>false</default>
+                <label>New Provider</label>
+            </value>
+            <value>
+                <fullName>New Technology</fullName>
+                <default>false</default>
+                <label>New Technology</label>
+            </value>
+            <value>
+                <fullName>No MSA</fullName>
+                <default>false</default>
+                <label>No MSA</label>
+            </value>
+            <value>
+                <fullName>Out For Bid</fullName>
+                <default>false</default>
+                <label>Out For Bid</label>
+            </value>
+            <value>
+                <fullName>Portal Availability</fullName>
+                <default>false</default>
+                <label>Portal Availability</label>
+            </value>
+            <value>
+                <fullName>Port Out</fullName>
+                <default>false</default>
+                <label>Port Out</label>
+            </value>
+            <value>
+                <fullName>Product Availability</fullName>
+                <default>false</default>
+                <label>Product Availability</label>
+            </value>
+            <value>
+                <fullName>Renewal at Lower Rate</fullName>
+                <default>false</default>
+                <label>Renewal at Lower Rate</label>
+            </value>
+            <value>
+                <fullName>Renewal Write-down</fullName>
+                <default>false</default>
+                <label>Renewal Write-down</label>
+            </value>
+            <value>
+                <fullName>Service Issues</fullName>
+                <default>false</default>
+                <label>Service Issues</label>
+            </value>
+            <value>
+                <fullName>SIP Migration</fullName>
+                <default>false</default>
+                <label>SIP Migration</label>
+            </value>
+            <value>
+                <fullName>Staff Responsiveness</fullName>
+                <default>false</default>
+                <label>Staff Responsiveness</label>
+            </value>
+            <value>
+                <fullName>Billing Error</fullName>
+                <default>false</default>
+                <label>Billing Error</label>
+            </value>
+            <value>
+                <fullName>Business/Location Closure</fullName>
+                <default>false</default>
+                <label>Business/Location Closure</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Competition/RFP</fullName>
+                <default>false</default>
+                <label>Competition/RFP</label>
+            </value>
+            <value>
+                <fullName>Customer Experience</fullName>
+                <default>false</default>
+                <label>Customer Experience</label>
+            </value>
+            <value>
+                <fullName>Service Impairment</fullName>
+                <default>false</default>
+                <label>Service Impairment</label>
+            </value>
+            <value>
+                <fullName>Customer Retained - Product/Solution Migration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Retained - Product/Solution Migration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

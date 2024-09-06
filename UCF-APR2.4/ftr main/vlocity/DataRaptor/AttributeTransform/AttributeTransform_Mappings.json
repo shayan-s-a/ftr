@@ -1,0 +1,72 @@
+[
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "items",
+        "%vlocity_namespace%__DomainObjectFieldType__c": "List<Map>",
+        "%vlocity_namespace%__GlobalKey__c": "a38949a0-cab3-48f2-78ec-ca4d0d7c4c32",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "AttributeTransformCustom4942",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "AttributeTransform",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "items:Attributes",
+        "%vlocity_namespace%__DomainObjectFieldType__c": "List<Map>",
+        "%vlocity_namespace%__GlobalKey__c": "1068f060-e4d6-640f-5972-700ac9b3c755",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "AttributeTransformCustom9916",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "AttributeTransform",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "items:Attributes:AttributeCode",
+        "%vlocity_namespace%__GlobalKey__c": "56f51bbc-0607-f6ed-352d-ea3bfc004955",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "OrderItems:Attributes:code",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "AttributeTransformCustom6053",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "AttributeTransform",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "items:Attributes:Value",
+        "%vlocity_namespace%__GlobalKey__c": "e5716d31-4a21-34ea-3ecf-a4df247100cd",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "OrderItems:Attributes:value",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "AttributeTransformCustom9662",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "AttributeTransform",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "items:Id",
+        "%vlocity_namespace%__GlobalKey__c": "2bd24bbd-dffa-6e22-0253-d8fb08b3f7d5",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "OrderItems:Id",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "AttributeTransformCustom6155",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "AttributeTransform",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    }
+]

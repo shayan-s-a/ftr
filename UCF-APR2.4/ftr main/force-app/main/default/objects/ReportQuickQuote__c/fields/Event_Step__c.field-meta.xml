@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Step__c</fullName>
+    <externalId>false</externalId>
+    <label>Event Step</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Service Address Request</fullName>
+                <default>false</default>
+                <label>Service Address Request</label>
+            </value>
+            <value>
+                <fullName>Product Request</fullName>
+                <default>false</default>
+                <label>Product Request</label>
+            </value>
+            <value>
+                <fullName>Pricing Request</fullName>
+                <default>false</default>
+                <label>Pricing Request</label>
+            </value>
+            <value>
+                <fullName>Opportunity Saved</fullName>
+                <default>false</default>
+                <label>Opportunity Saved</label>
+            </value>
+            <value>
+                <fullName>Qualify Location</fullName>
+                <default>false</default>
+                <label>Qualify Location</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

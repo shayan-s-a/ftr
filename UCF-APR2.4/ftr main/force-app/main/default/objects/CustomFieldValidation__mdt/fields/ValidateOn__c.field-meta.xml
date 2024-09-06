@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidateOn__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Validate On</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Submit Order</fullName>
+                <default>true</default>
+                <label>Submit Order</label>
+            </value>
+            <value>
+                <fullName>Request SE Review</fullName>
+                <default>false</default>
+                <label>Request SE Review</label>
+            </value>
+            <value>
+                <fullName>Submit UCF to QA Review</fullName>
+                <default>false</default>
+                <label>Submit UCF to QA Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

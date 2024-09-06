@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Correction_Cannot_Close_Task</fullName>
+    <active>true</active>
+    <description>To prevent task from being closed if Resolution Action Taken field is not completed.</description>
+    <errorConditionFormula>AND(
+RecordType.Name =&quot;Order Correction&quot;,
+ISPICKVAL(Status , &quot;Completed&quot;),
+ISBLANK(Resolution_Action_Taken__c)
+)</errorConditionFormula>
+    <errorDisplayField>Resolution_Action_Taken__c</errorDisplayField>
+    <errorMessage>Please complete the Resolution Action Taken field before completing the task.</errorMessage>
+</ValidationRule>

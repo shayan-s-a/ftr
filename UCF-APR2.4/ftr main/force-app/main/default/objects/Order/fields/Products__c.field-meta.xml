@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products__c</fullName>
+    <externalId>false</externalId>
+    <label>Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EIA</fullName>
+                <default>false</default>
+                <label>EIA</label>
+            </value>
+            <value>
+                <fullName>EVPL</fullName>
+                <default>false</default>
+                <label>EVPL</label>
+            </value>
+            <value>
+                <fullName>SDWAN</fullName>
+                <default>false</default>
+                <label>SDWAN</label>
+            </value>
+            <value>
+                <fullName>UCF</fullName>
+                <default>false</default>
+                <label>UCF</label>
+            </value>
+            <value>
+                <fullName>UCaaS</fullName>
+                <default>false</default>
+                <label>UCaaS</label>
+            </value>
+            <value>
+                <fullName>CCaaS</fullName>
+                <default>false</default>
+                <label>CCaaS</label>
+            </value>
+            <value>
+                <fullName>Private Network</fullName>
+                <default>false</default>
+                <label>Private Network</label>
+            </value>
+            <value>
+                <fullName>SIP</fullName>
+                <default>false</default>
+                <label>SIP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

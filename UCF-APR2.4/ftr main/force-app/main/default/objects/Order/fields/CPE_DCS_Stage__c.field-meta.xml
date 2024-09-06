@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPE_DCS_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>CPE DCS Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>UCaaS_Cutover_Picklist__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Review</fullName>
+                <default>false</default>
+                <label>Review</label>
+            </value>
+            <value>
+                <fullName>Coordinate Kickoff Call</fullName>
+                <default>false</default>
+                <label>Coordinate Kickoff Call</label>
+            </value>
+            <value>
+                <fullName>Kickoff Call</fullName>
+                <default>false</default>
+                <label>Kickoff Call</label>
+            </value>
+            <value>
+                <fullName>DGF Completed</fullName>
+                <default>false</default>
+                <label>DGF Completed</label>
+            </value>
+            <value>
+                <fullName>Coordinate Internal Review</fullName>
+                <default>false</default>
+                <label>Coordinate Internal Review</label>
+            </value>
+            <value>
+                <fullName>Internal Review</fullName>
+                <default>false</default>
+                <label>Internal Review</label>
+            </value>
+            <value>
+                <fullName>Coordinate CXR Touch Point</fullName>
+                <default>false</default>
+                <label>Coordinate CXR Touch Point</label>
+            </value>
+            <value>
+                <fullName>CXR Touch Point</fullName>
+                <default>false</default>
+                <label>CXR Touch Point</label>
+            </value>
+            <value>
+                <fullName>Hold Pending Tech Rx CPE</fullName>
+                <default>false</default>
+                <label>Hold Pending Tech Rx CPE</label>
+            </value>
+            <value>
+                <fullName>Coordinate Install</fullName>
+                <default>false</default>
+                <label>Coordinate Install</label>
+            </value>
+            <value>
+                <fullName>TTU</fullName>
+                <default>false</default>
+                <label>TTU</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>CPE DCS Completed</fullName>
+                <default>false</default>
+                <label>CPE DCS Completed</label>
+            </value>
+            <value>
+                <fullName>Review Order</fullName>
+                <default>false</default>
+                <label>Review Order</label>
+            </value>
+            <value>
+                <fullName>Schedule CDC Call</fullName>
+                <default>false</default>
+                <label>Schedule CDC Call</label>
+            </value>
+            <value>
+                <fullName>Revised CDC Uploaded</fullName>
+                <default>false</default>
+                <label>Revised CDC Uploaded</label>
+            </value>
+            <value>
+                <fullName>Internal Call Scheduled</fullName>
+                <default>false</default>
+                <label>Internal Call Scheduled</label>
+            </value>
+            <value>
+                <fullName>Internal Call Completed</fullName>
+                <default>false</default>
+                <label>Internal Call Completed</label>
+            </value>
+            <value>
+                <fullName>Welcome Email Sent</fullName>
+                <default>false</default>
+                <label>Welcome Email Sent</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>CPE DCS Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Review Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Schedule CDC Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Revised CDC Uploaded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Internal Call Scheduled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Internal Call Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Welcome Email Sent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Coordinate Kickoff Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Kickoff Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>DGF Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Coordinate Internal Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Internal Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Coordinate CXR Touch Point</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>CXR Touch Point</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Hold Pending Tech Rx CPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Coordinate Install</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>TTU</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,178 @@
+{
+    "EVCLocationDetails": {
+        "EVCLocation": [
+            {
+                "SIPDetails": {
+                    "Bandwidth": null,
+                    "CPEPBXManufacturerName": null,
+                    "CPEPBXModel": null,
+                    "CPEPBXSoftwareRel": null,
+                    "CallPaths": "25.00",
+                    "EVCType": "SIP",
+                    "Jurisdiction": "Interstate",
+                    "RouteTarget": null,
+                    "RouterWaived": "No",
+                    "SIPId": "8026u000000Kyr0AAC",
+                    "SpecialRequirements": null
+                },
+                "ServiceAccountIdSIP": "0016u000001wLqRAAU",
+                "ServiceAccountNameSIP": "301 Leora Lane, Lewisville, TX  75056"
+            },
+            {
+                "SIPDetails": {
+                    "Bandwidth": null,
+                    "CPEPBXManufacturerName": "Router Name",
+                    "CPEPBXModel": "Model Name",
+                    "CPEPBXSoftwareRel": "Software Name",
+                    "CallPaths": "10.00",
+                    "EVCType": "Analog",
+                    "Jurisdiction": "Interstate",
+                    "RouteTarget": null,
+                    "RouterWaived": "Yes",
+                    "SIPId": "8026u000000KyqwAAC",
+                    "SpecialRequirements": null
+                },
+                "ServiceAccountIdSIP": "0016u000001wTHjAAM",
+                "ServiceAccountNameSIP": "1506 Oxford Court, Denton, TX  76209"
+            }
+        ]
+    },
+    "NetworkAccess": [
+        {
+            "Bandwidth": "500 Mbps",
+            "ServiceAccountId": "0016u000001wLqRAAU"
+        },
+        {
+            "Bandwidth": "5 Mbps",
+            "ServiceAccountId": "0016u000001wTHjAAM"
+        }
+    ],
+    "OrderId": "8016u000000Kym0AAC",
+    "UNILocationDetails": {
+        "UNILocation": [
+            {
+                "HandOff": "SIP",
+                "ServiceAccountId": "0016u000001wLqRAAU",
+                "ServiceAccountName": "301 Leora Lane, Lewisville, TX  75056",
+                "UNIDetails": {
+                    "AnalogAccessoriesKits": {
+                        "AmphenolCable": "No",
+                        "x66Block": "Yes",
+                        "x66BlockBracket": "Yes",
+                        "x66BlockCover": "Yes"
+                    },
+                    "AnalogHunting": {
+                        "HuntArrangement": "Circular",
+                        "HuntEnabled": "Yes",
+                        "TelephoneNumberHuntSequence": "123"
+                    },
+                    "AnalogTrunkInformation": {
+                        "AnalogStartDialMethod": "Loop Start",
+                        "NumberOfAnalogHandoffs": 123,
+                        "PunchdownInformation": "Existing Block"
+                    },
+                    "DSATID": "1654818",
+                    "EnableInterface": "Yes",
+                    "ExistingM6UniCktId": null,
+                    "FaultPropagation": "Yes",
+                    "IADAccessoriesKits": {
+                        "Cable": "Yes",
+                        "CableQuantity": 1
+                    },
+                    "IADConfiguration": {
+                        "IADConfigNotes": "test",
+                        "IADHandoff": "PRI/T1",
+                        "IADRackMountKit": "TA 900 23\" RM BRKT",
+                        "IADWallMountBracketKit": "No",
+                        "InstallCables": "Yes"
+                    },
+                    "IADTrunkInformation": {
+                        "Coding": "123",
+                        "Framing": "123",
+                        "NumberOfChannels": 123,
+                        "NumberOfDigits": "123",
+                        "NumberOfHandoffs": "1",
+                        "NumberOfT1s": 1,
+                        "StartDialMethod": "123",
+                        "TrunkType": "123",
+                        "UsedChannels": "123"
+                    },
+                    "ManagedService": {
+                        "CentralOffice": "test",
+                        "City": "test",
+                        "Country": "United States",
+                        "ManagedIAD": null,
+                        "ManagedRouter": null,
+                        "State": "test",
+                        "StreetAddress": "test",
+                        "TechnicalSupervisorName": "test",
+                        "TechnicalSupervisorPhone": "1231231231",
+                        "WebRTTicketNumber": "test",
+                        "ZipCode": "test"
+                    },
+                    "Speed": "10 GBPS",
+                    "UNIExtensionId": null,
+                    "UNIFrameSize": "<=9000",
+                    "UNIId": "8026u000000KzJIAA0",
+                    "UNIJurisdiction": "Intrastate",
+                    "UNIMode": "Blank",
+                    "UNINegotiation": "Auto",
+                    "UNIPhysicalMedium": "Fiber Multi Mode 850nm",
+                    "VlanTagConfig": "Untagged"
+                }
+            },
+            {
+                "HandOff": "Analog",
+                "ServiceAccountId": "0016u000001wTHjAAM",
+                "ServiceAccountName": "1506 Oxford Court, Denton, TX  76209",
+                "UNIDetails": {
+                    "AnalogAccessoriesKits": null,
+                    "AnalogHunting": null,
+                    "AnalogTrunkInformation": null,
+                    "DSATID": "1654735",
+                    "EnableInterface": "Yes",
+                    "ExistingM6UniCktId": null,
+                    "FaultPropagation": "No",
+                    "IADAccessoriesKits": null,
+                    "IADConfiguration": null,
+                    "IADTrunkInformation": null,
+                    "ManagedService": {
+                        "CentralOffice": null,
+                        "City": null,
+                        "Country": null,
+                        "ManagedIAD": null,
+                        "ManagedRouter": null,
+                        "State": null,
+                        "StreetAddress": null,
+                        "TechnicalSupervisorName": null,
+                        "TechnicalSupervisorPhone": null,
+                        "WebRTTicketNumber": null,
+                        "ZipCode": null
+                    },
+                    "Speed": "1G",
+                    "UNIExtensionId": null,
+                    "UNIFrameSize": "<=1600",
+                    "UNIId": "8026u000000KzJDAA0",
+                    "UNIJurisdiction": "Interstate",
+                    "UNIMode": "Full Duplex",
+                    "UNINegotiation": "No-Auto",
+                    "UNIPhysicalMedium": "Copper RJ45",
+                    "VlanTagConfig": "Service Multiplexing"
+                }
+            }
+        ]
+    },
+    "id": "a9p6u0000008OOIAA2",
+    "isdtp": "p1",
+    "layout": "lightning",
+    "sfdcIFrameHost": "web",
+    "sfdcIFrameOrigin": "https://ftr--epcsip2--vlocity-cmt.visualforce.com",
+    "timeStamp": "2021-05-19T19:27:32.446Z",
+    "userCurrencyCode": "USD",
+    "userId": "0050h00000IQYfgAAH",
+    "userName": "eric.marcondes@ftr.com.epcsip2",
+    "userProfile": "Frontier System Administrator",
+    "userTimeZone": -420,
+    "vlcPersistentComponent": {
+    }
+}

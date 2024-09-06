@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hiring_Request_LOA_Required_Fields</fullName>
+    <active>true</active>
+    <description>Used on record type = Hiring Request. If field = Is this an Over Hire for an employee on LOA = Yes, fields Last date worked  and Expected Return to work date are required.</description>
+    <errorConditionFormula>AND
+(RecordType.Name = &quot;Hiring Request&quot;,
+ISPICKVAL( Is_this_an_Over_Hire_for_an_employee_on__c  ,&quot;Yes&quot;),
+OR(
+ISBLANK(Last_day_worked__c ),
+ISBLANK( Expected_return_to_work_date__c )
+))</errorConditionFormula>
+    <errorMessage>If Is Over Hire due to employee on LOA = Yes, &quot;Last date worked&quot; and &quot;Expected return to work date&quot; are required.</errorMessage>
+</ValidationRule>

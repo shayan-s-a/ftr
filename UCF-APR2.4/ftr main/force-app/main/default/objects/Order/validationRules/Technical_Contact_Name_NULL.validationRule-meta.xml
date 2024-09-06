@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technical_Contact_Name_NULL</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(Technical_Contact_Name__c), 
+
+isCreatedByVlocity__c = FALSE,
+
+(OR(RecordTypeId = &apos;012E0000000kLoz&apos;, 
+RecordTypeId = &apos;012E0000000kLoc&apos;, 
+RecordTypeId = &apos;012E0000000kLod&apos;, 
+RecordTypeId = &apos;012E0000000kLog&apos;)), 
+
+(OR(DATEVALUE(CreatedDate) &gt; DATEVALUE(&quot;2017-10-11&quot;), 
+ISNEW())) 
+)</errorConditionFormula>
+    <errorDisplayField>Technical_Contact_Name__c</errorDisplayField>
+    <errorMessage>Please fill in the Technical Contact Name field</errorMessage>
+</ValidationRule>

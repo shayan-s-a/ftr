@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_Connections_Opportunities</fullName>
+    <active>true</active>
+    <description>Community Connections Opportunities can only be related to a Connected Community – Property.</description>
+    <errorConditionFormula>OR(
+Account.RecordType.Name == &apos;Connected Community - Notice Company&apos;, 
+Account.RecordType.Name == &apos;Connected Community - Portfolio Company&apos;
+)</errorConditionFormula>
+    <errorMessage>All Community Connections Opportunities must be associated with the Property. Company</errorMessage>
+</ValidationRule>

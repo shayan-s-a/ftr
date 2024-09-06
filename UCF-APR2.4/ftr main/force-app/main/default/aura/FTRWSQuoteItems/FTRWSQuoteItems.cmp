@@ -1,0 +1,38 @@
+<aura:component
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global"
+                controller="WSQuoteController"
+                >
+    <!-- attributes -->
+    <aura:attribute name="data" type="Object" />
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="addressId" type="Id" />
+    <aura:attribute name="openAdjustmentModal" type="Boolean" default="false" />
+    <aura:attribute name="allowEdit" type="Boolean" default="false" />
+    <aura:attribute name="quoteItemRec" type="Object" />
+    <aura:attribute name="recurringType" type="String" />
+    <!--Wholesale Enhancement Vyshnavi Ends **/-->
+    <aura:attribute name = "draftValues" type="Object" default="[]"/>
+    <aura:attribute name = "errors" type="Object" default="[]"/>
+    <!--Wholesale Enhancement Vyshnavi Ends **/ -->
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <!-- the container element determine the height of the datatable -->
+    <div>
+        <lightning:datatable
+                             columns="{! v.columns }"
+                             data="{! v.data }"
+                             keyField="Id"
+                             onrowaction="{! c.handleRowAction }" minColumnWidth="150"
+                             errors = "{!v.errors}"
+                             draftValues = "{!v.draftValues}"
+                             onsave = "{!c.handleTableSave}"
+                             />
+    </div>
+    
+    <aura:if isTrue="{!v.openAdjustmentModal}">
+        <div> <c:WSAdjustmentModal quoteItemRecord="{!v.quoteItemRec}" quoteId="{!v.recordId}" recurringType="{!v.recurringType}"/> </div>
+    </aura:if>    
+</aura:component>

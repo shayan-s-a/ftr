@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificate_of_Acceptance_cant_close</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;Closed&quot;),
+ISBLANK(COA_Date__c),
+RecordType.Name = &quot;Certificate of Acceptance&quot;
+)</errorConditionFormula>
+    <errorMessage>Cannot close this case without populating the COA Date</errorMessage>
+</ValidationRule>

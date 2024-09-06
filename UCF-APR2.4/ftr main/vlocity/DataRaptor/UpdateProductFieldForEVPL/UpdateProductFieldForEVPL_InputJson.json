@@ -1,0 +1,136 @@
+{
+    "ContextId": null,
+    "CustomerAndOrderInformation": {
+        "AccountTeamMemberName-Block": {
+            "AccountTeamMemberName": null
+        },
+        "AccountTeamMemberUser": null,
+        "AddNewContact": null,
+        "BilltoContact-Block": {
+            "BilltoContact": null,
+            "BilltoContactEmailInvisible": null,
+            "BilltoContactId": null,
+            "BilltoContactPhoneNumberInvisible": null
+        },
+        "CreatedByCRISID": null,
+        "CreatedByEmail": null,
+        "CreatedByName": null,
+        "CreatedByPhoneNumber": null,
+        "CustomerName": null,
+        "CustomerRequestedStartDate": null,
+        "FederalTaxIDNum": null,
+        "NewContact": {
+            "NewContactCellPhone": null,
+            "NewContactEmail": null,
+            "NewContactExtension": null,
+            "NewContactFirstname": null,
+            "NewContactId": null,
+            "NewContactLastName": null,
+            "NewContactWorkPhone": null
+        },
+        "OrderContact-Block": {
+            "OrderContact": null,
+            "OrderContactEmailInvisible": null,
+            "OrderContactId": null,
+            "OrderContactPhoneNumberInvisible": null
+        },
+        "OrderStartDate": null,
+        "OrderType": null,
+        "PartnerId": null,
+        "TTLNumber": null,
+        "TechnicalContact-Block": {
+            "TechnicalContact": null,
+            "TechnicalContactEmailInvisible": null,
+            "TechnicalContactId": null,
+            "TechnicalContactPhoneNumberInvisible": null
+        }
+    },
+    "DPIBillingInformation": {
+        "CustomerInfoBlock": {
+            "CustomerBillingAddress-Block": {
+                "BillingCity": null,
+                "BillingCountry": null,
+                "BillingPostalCode": null,
+                "BillingStateCode": null,
+                "BillingStreet": null,
+                "CustomerBillingAddress": null
+            },
+            "InternationalBillingAddress": null,
+            "OrganizationType": null
+        },
+        "ServiceLocationInfoBlock": {
+            "BTNSelect": null,
+            "BillingCycle__c": null,
+            "BillingTelephoneNumber__c": null,
+            "DPIBillingDetailsId": null,
+            "DPIEnvironment": null,
+            "GlobalAccountNumber__c": null,
+            "MasterSummaryNumber__c": null,
+            "ServiceLocationDetail": null,
+            "ServiceLocationId": null
+        }
+    },
+    "LocationAndContactInfo": {
+        "LocationInfoBlock": {
+            "AdditionalLocationInfo": {
+                "BuildingNumber": null,
+                "Floor": null,
+                "LocationId": null,
+                "RoomSuiteNumber": null,
+                "SiteAccessHours": null,
+                "SpecialRequirements": null
+            },
+            "ContactInfo": {
+                "ContactId": null,
+                "ContactRole": null,
+                "LocationContactId": null
+            },
+            "LocationDetail": null
+        },
+        "NewContactP2": null,
+        "NewContactP2Block": {
+            "CellPhoneP2": null,
+            "EmailP2": null,
+            "FirstNameP2": null,
+            "LastNameP2": null,
+            "NewContactId2": null,
+            "WorkPhoneP2": null
+        }
+    },
+    "OrderUpdated": {
+    },
+    "SplitOrder": {
+    },
+    "timeStamp": null,
+    "userId": null,
+    "userName": null,
+    "userProfile": null,
+    "userTimeZone": null,
+    "vlcPersistentComponent": {
+    },
+    "vlcTimeTracking": {
+        "CustomerAndOrderInformation": null,
+        "DPIBillingInformation": null,
+        "GetAccountTeamMemberDetails": null,
+        "GetAllBillingAccountDetails": null,
+        "GetContactInfo": null,
+        "GetMasterAccountInfo": null,
+        "GetOrderDetails": null,
+        "GiveAccessToServiceAccounts": null,
+        "LocationAndContactInfo": null,
+        "NotifyIT": null,
+        "OrderUpdated": null,
+        "QueryLocation": null,
+        "SaveOrder": null,
+        "SaveOrderBillingInfo": null,
+        "SaveServiceAccountBillingInfo": null,
+        "SetValues2SalesEngineerId": null,
+        "SetValues2SupportTeamMemberId": null,
+        "SplitOrder": null,
+        "UpdateCustomerAndOrderInformation": null,
+        "UpdateOrderProduct": null,
+        "UpdateOrderStatus": null,
+        "UpdateProductField": null,
+        "UpsertLocationContact": null
+    }
+}

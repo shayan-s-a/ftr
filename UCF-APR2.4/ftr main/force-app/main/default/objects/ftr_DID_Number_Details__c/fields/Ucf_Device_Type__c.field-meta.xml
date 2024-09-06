@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ucf_Device_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Device Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yealink T31G</fullName>
+                <default>false</default>
+                <label>Yealink T31G</label>
+            </value>
+            <value>
+                <fullName>Yealink CP960 Conference</fullName>
+                <default>false</default>
+                <label>Yealink CP960 Conference</label>
+            </value>
+            <value>
+                <fullName>Yealink T54W</fullName>
+                <default>false</default>
+                <label>Yealink T54W</label>
+            </value>
+            <value>
+                <fullName>Yealink T57W</fullName>
+                <default>false</default>
+                <label>Yealink T57W</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

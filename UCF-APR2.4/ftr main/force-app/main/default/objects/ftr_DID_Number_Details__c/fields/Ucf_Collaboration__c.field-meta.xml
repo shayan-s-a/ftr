@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ucf_Collaboration__c</fullName>
+    <externalId>false</externalId>
+    <label>Collaboration</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10 Attendees</fullName>
+                <default>false</default>
+                <label>10 Attendees</label>
+            </value>
+            <value>
+                <fullName>25 Attendees</fullName>
+                <default>false</default>
+                <label>25 Attendees</label>
+            </value>
+            <value>
+                <fullName>100 Attendees</fullName>
+                <default>false</default>
+                <label>100 Attendees</label>
+            </value>
+            <value>
+                <fullName>200 Attendees</fullName>
+                <default>false</default>
+                <label>200 Attendees</label>
+            </value>
+            <value>
+                <fullName>300 Attendees</fullName>
+                <default>false</default>
+                <label>300 Attendees</label>
+            </value>
+            <value>
+                <fullName>500 Attendees</fullName>
+                <default>false</default>
+                <label>500 Attendees</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

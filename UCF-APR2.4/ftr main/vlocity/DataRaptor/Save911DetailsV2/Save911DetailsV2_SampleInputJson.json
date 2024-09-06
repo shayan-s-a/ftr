@@ -1,0 +1,253 @@
+{
+    "AvailableUNIs": [
+        {
+            "DSATID": "1640665",
+            "FrameSize": "<=1600",
+            "Id": "8027g0000000cajAAA",
+            "Mode": "Full Duplex",
+            "Name": "User to Network Interface (UNI) Port",
+            "PhysicalMedium": "Copper RJ45",
+            "PortSpeed": "1G",
+            "ServiceAccount": "610 East Zack Street, Tampa, FL  33602",
+            "selected": true
+        },
+        {
+            "DSATID": "1641501",
+            "FrameSize": "<=1600",
+            "Id": "8027g0000000caoAAA",
+            "Mode": "Full Duplex",
+            "Name": "User to Network Interface (UNI) Port",
+            "PhysicalMedium": "Copper RJ45",
+            "PortSpeed": "1G",
+            "ServiceAccount": "610 North Morgan Street, Tampa, FL  33602",
+            "selected": true
+        }
+    ],
+    "Configure911": {
+        "ELINERL": {
+            "DIDNumber": "",
+            "ELINERLAddress-Block": {
+                "ELINERLAddress": "",
+                "ELINERLCity": "",
+                "ELINERLCountry": null,
+                "ELINERLState": "",
+                "ELINERLStreet": "",
+                "ELINERLZipCode": ""
+            },
+            "ELINERLId": "",
+            "ELINERLName": ""
+        },
+        "FTR911Provider": "Yes",
+        "MainDesignatedSection": {
+            "MainDesignatedAddress-Block": {
+                "MainDesignatedAddress": "12301 N Stemmons Fwy, Farmers Branch, TX 75234, USA",
+                "MainDesignatedCity": "Farmers Branch",
+                "MainDesignatedCountry": "United States",
+                "MainDesignatedState": "TX",
+                "MainDesignatedStreet": "12301 North Stemmons Freeway",
+                "MainDesignatedZipCode": "75234"
+            },
+            "MainDesignatedId": "aH67g0000004CUNCA2",
+            "MainDesignatedName": "610 E Zack1",
+            "MainDesignatedNumber": "8132290329"
+        },
+        "x911Option": "Main Designated #"
+    },
+    "ContextId": "8017g0000004mVBAAY",
+    "CurrentDIDLocationCount": 0,
+    "CurrentServiceLocation": {
+        "Address": "610 East Zack Street, Tampa, FL  33602",
+        "City": "Tampa",
+        "Country": "United States",
+        "DIDLocations": [
+            {
+                "name": "610 E Zack1",
+                "value": "aH77g000000CadcCAC"
+            }
+        ],
+        "Id": "0017g00001GVq2LAAT",
+        "Name": "610 East Zack Street, Tampa, FL  33602",
+        "State": "FL",
+        "Street": "610 East Zack Street",
+        "ZipCode": "33602",
+        "currentLocationIndex": 1
+    },
+    "DIDLocationDetails": {
+        "Address-Block": {
+            "Address": "610 East Zack Street, Tampa, FL  33602",
+            "City": "Tampa",
+            "Country": "United States",
+            "State": "FL",
+            "Street": "610 East Zack Street",
+            "ZipCode": "33602"
+        },
+        "AutoCallFailDestinationNumber": null,
+        "BTN": "8132290328",
+        "CallerIdPresentation": "Number Only",
+        "ConnectLineIdScreening": "Valid Telecordia 10-Digit Format",
+        "DIDLocationId": "aH77g000000CadcCAC",
+        "DIDLocationName": "610 E Zack1",
+        "DIDTestNumber": null,
+        "DIDUNIAssoc": {
+            "NumberOfUNIs": 2,
+            "OrderOfUNI": "Round Robin"
+        },
+        "DigitsSentToCustomer": "3",
+        "InternationalDialing": "No",
+        "InternationalDialingOptions": null,
+        "MDN": "8132290328",
+        "NPA": null,
+        "NXX": null,
+        "NumberOfAvailableUNIs": 2,
+        "NumberOfCallPaths": 3,
+        "NumberOfDIDs": 2
+    },
+    "DIDNumbers": [
+        {
+            "DIDLocationId": "aH77g000000CadcCAC",
+            "DIDNumber": "8132290329",
+            "DIDNumberInfo": "New DID Range",
+            "Feature": "N/A",
+            "Id": "aH87g000000CaWjCAK",
+            "RateCenter": "tamoa",
+            "ThirdParty": "No"
+        },
+        {
+            "DIDLocationId": "aH77g000000CadcCAC",
+            "DIDNumber": "8132290328",
+            "DIDNumberInfo": "New DID Range",
+            "Feature": "N/A",
+            "Id": "aH87g000000CaWeCAK",
+            "RateCenter": "tampa",
+            "ThirdParty": "No"
+        }
+    ],
+    "DRId_%vlocity_namespace%__Premises__c": "aAc7g00000005nRCAQ",
+    "DRId_ftr_DID_Location_Details__c": "aH77g000000CadcCAC",
+    "Finished": false,
+    "LoopBackProductCode": "SIP_LOOP_BACK_NUMBER",
+    "MainDesignatedAddress-Block": {
+        "Text21": "Dallas County"
+    },
+    "OrderStage": "PSR In Progress",
+    "Qualification": "",
+    "SelectServiceLocation": {
+        "CountOfLocations": 2,
+        "CurrentLocationId": "0017g00001GVq2LAAT",
+        "CurrentLocationLit": false,
+        "CurrentLocationName": "610 East Zack Street, Tampa, FL  33602",
+        "ExistingDIDLocations": "610 E Zack1",
+        "PrimaryLocationId": null,
+        "SelectNewOrEixstingDID": "Existing",
+        "ServiceLocations": null,
+        "userCanEdit": true
+    },
+    "SelectedDIDLocation": "aH77g000000CadcCAC",
+    "SelectedUNIs": "8027g0000000cajAAA;8027g0000000caoAAA",
+    "ServiceAccounts": [
+        {
+            "Address": "610 North Morgan Street, Tampa, FL  33602",
+            "City": "Tampa",
+            "Country": "United States",
+            "DIDLocations": [
+                {
+                    "name": "610 N Morgan DID1",
+                    "value": "aH77g000000CadNCAS"
+                },
+                {
+                    "name": "610 N Morgan DID2",
+                    "value": "aH77g000000CadSCAS"
+                },
+                {
+                    "name": "610 N Morgan DID3",
+                    "value": "aH77g000000CadXCAS"
+                }
+            ],
+            "Id": "0017g00001GVpv3AAD",
+            "Name": "610 North Morgan Street, Tampa, FL  33602",
+            "State": "FL",
+            "Street": "610 North Morgan Street",
+            "ZipCode": "33602",
+            "currentLocationIndex": 0
+        },
+        {
+            "Address": "610 East Zack Street, Tampa, FL  33602",
+            "City": "Tampa",
+            "Country": "United States",
+            "DIDLocations": [
+                {
+                    "name": "610 E Zack1",
+                    "value": "aH77g000000CadcCAC"
+                }
+            ],
+            "Id": "0017g00001GVq2LAAT",
+            "Name": "610 East Zack Street, Tampa, FL  33602",
+            "State": "FL",
+            "Street": "610 East Zack Street",
+            "ZipCode": "33602",
+            "currentLocationIndex": 1
+        }
+    ],
+    "VOIPQualifications": [
+        {
+            "AvailableVOIP": "FTR",
+            "E911Type": "STATIC",
+            "Id": "aHC7g0000004DG1GAM",
+            "IsThirdParty": false,
+            "LATA": "952",
+            "NPA": 813,
+            "NXX": 229,
+            "OCN": "0328",
+            "OCNName": "FRONTIER FLORIDA LLC DBA FRONTIER COMM OF FLORIDA",
+            "RateCenter": "TAMPA CENTRAL",
+            "ServiceAccountId": "0017g00001GVq2LAAT",
+            "ServiceAccountName": "610 East Zack Street, 33602",
+            "State": "FL"
+        },
+        {
+            "AvailableVOIP": "FTR",
+            "E911Type": "STATIC",
+            "Id": "aHC7g0000004DKcGAM",
+            "IsThirdParty": false,
+            "LATA": "952",
+            "NPA": 813,
+            "NXX": 873,
+            "OCN": "0328",
+            "OCNName": "FRONTIER FLORIDA LLC DBA FRONTIER COMM OF FLORIDA",
+            "RateCenter": "TAMPA CENTRAL",
+            "ServiceAccountId": "0017g00001GVq2LAAT",
+            "ServiceAccountName": "610 East Zack Street, 33602",
+            "State": "FL"
+        },
+        {
+            "AvailableVOIP": "FTR",
+            "E911Type": "STATIC",
+            "Id": "aHC7g000000CajzGAC",
+            "IsThirdParty": false,
+            "LATA": "552",
+            "NPA": 940,
+            "NXX": 297,
+            "OCN": "4344",
+            "OCNName": "FRONTIER SOUTHWEST INC DBA FRONTIER COMM OF TEXAS",
+            "RateCenter": "DENTON",
+            "ServiceAccountId": "0017g00001GVq2LAAT",
+            "ServiceAccountName": "610 East Zack Street, 33602",
+            "State": "TX"
+        }
+    ],
+    "VoipQualUpsertResult": "",
+    "id": "a9p7g000000Cz2lAAC",
+    "isdtp": "p1",
+    "layout": "lightning",
+    "sfdcIFrameHost": "web",
+    "sfdcIFrameOrigin": "https://ftr--test03--vlocity-cmt.visualforce.com",
+    "timeStamp": "2021-06-15T13:42:11.040Z",
+    "totalDIDNumberRecordCount": 2,
+    "userCurrencyCode": "USD",
+    "userId": "0050h00000IQYfgAAH",
+    "userName": "eric.marcondes@ftr.com.test03",
+    "userProfile": "Frontier System Administrator",
+    "userTimeZone": -420,
+    "vlcPersistentComponent": {
+    }
+}

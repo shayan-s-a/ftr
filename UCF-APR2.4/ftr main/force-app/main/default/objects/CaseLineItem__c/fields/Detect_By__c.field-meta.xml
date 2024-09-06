@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detect_By__c</fullName>
+    <description>As a current Alert Tracker user, I need to have the ability to select a Detect By item from a menu so that every case contains Detect By information. Values to include ATT email, Collections, Conversation Center, Customer, DPI, Fraud Credit, Fraud Engineer, L3 email, R&amp;C, VZ email</description>
+    <externalId>false</externalId>
+    <inlineHelpText>select a Detect By item</inlineHelpText>
+    <label>Detect By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ATT email</fullName>
+                <default>false</default>
+                <label>ATT email</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Conversation Center</fullName>
+                <default>false</default>
+                <label>Conversation Center</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>DPI</fullName>
+                <default>false</default>
+                <label>DPI</label>
+            </value>
+            <value>
+                <fullName>Fraud Credit</fullName>
+                <default>false</default>
+                <label>Fraud Credit</label>
+            </value>
+            <value>
+                <fullName>Fraud Engineer</fullName>
+                <default>false</default>
+                <label>Fraud Engineer</label>
+            </value>
+            <value>
+                <fullName>L3 email</fullName>
+                <default>false</default>
+                <label>L3 email</label>
+            </value>
+            <value>
+                <fullName>R&amp;C</fullName>
+                <default>false</default>
+                <label>R&amp;C</label>
+            </value>
+            <value>
+                <fullName>VZ email</fullName>
+                <default>false</default>
+                <label>VZ email</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

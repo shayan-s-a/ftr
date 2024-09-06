@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSA__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>FSA</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6)</booleanFilter>
+        <errorMessage>The FSA selected must be on the same account as this product schedule.</errorMessage>
+        <filterItems>
+            <field>Contract.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contract.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Frontier Services Agreement</value>
+        </filterItems>
+        <filterItems>
+            <field>Contract.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Default</value>
+        </filterItems>
+        <filterItems>
+            <field>Contract.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Community Connections - Agreement</value>
+        </filterItems>
+        <filterItems>
+            <field>Contract.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>VZ3 Agreement - VEC</value>
+        </filterItems>
+        <filterItems>
+            <field>Contract.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>VZ3 Agreement - VES</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contract</referenceTo>
+    <relationshipLabel>Child Contracts</relationshipLabel>
+    <relationshipName>Child_Contracts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CanUserSeeThisRecord__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(
+        $User.View_All_Contracts__c = TRUE,
+        CONTAINS(Contract_Record_Type_Formula__c,&apos;Frontier Services Agreement&apos;),
+        IF(
+            OR(CONTAINS(CreatedBy.UserRole.Name, &apos;B2B&apos;), CONTAINS(CreatedBy.Profile.Name, &apos;#Revana AccountExec&apos;)),
+            IF(
+                CONTAINS($UserRole.Name, &apos;B2B&apos;), 
+                TRUE, 
+                FALSE
+            ),
+            IF(
+                CONTAINS($UserRole.Name, &apos;B2B&apos;), 
+                FALSE, 
+                TRUE
+            )
+        )
+    ), 
+    TRUE, 
+    FALSE
+)</formula>
+    <label>Can logged in user see this record?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

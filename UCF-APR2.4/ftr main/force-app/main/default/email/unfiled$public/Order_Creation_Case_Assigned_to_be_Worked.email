@@ -1,0 +1,10 @@
+{!Case.CreatedBy},<br />
+
+<p>Your case has been assigned to generate your order.<p><br />
+<b>Order Creation Case Details:</b><br />
+<p>Account Name: {!Case.Account}<br />
+<p>Opportunity Name: {!Case.Opportunity__c}<br />
+<p>Assigned To: {!Case.OwnerFullName}<br />
+
+</p>
+<p>To view the full details of the Case, please click the link: {!Case.Link}</p>

@@ -1,0 +1,49 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "CheckDSAT",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Validation/DSAT/Procedure",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "CheckDSAT",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Validation/DSAT/Procedure",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "LatLongQualification",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Validation/DSAT/Procedure/LatLongQualification",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "LatLongQualification",
+    "%vlocity_namespace%__ParentElementType__c": "Conditional Block",
+    "%vlocity_namespace%__PropertySet__c": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "CopperTier": "=IF(%GetDSATLatLongDetails:CopperTier%==\"1\", \"Tier 1\", IF(%GetDSATLatLongDetails:CopperTier%==\"2\", \"Tier 2\", %GetDSATLatLongDetails:CopperTier%))",
+            "FiberTier": "=IF(%GetDSATLatLongDetails:FiberTier%==\"1\", \"Tier 1\", IF(%GetDSATLatLongDetails:FiberTier%==\"2\", \"Tier 2\", %GetDSATLatLongDetails:FiberTier%))",
+            "ProductsPretty": "IF(ISNOTBLANK(%PrettyPrintProductsLatLong:value%),%PrettyPrintProductsLatLong:value%,IF(ISNOTBLANK(%PrettyPrintProductsHBELatLong:value%),%PrettyPrintProductsHBELatLong:value%,''))",
+            "vendorlist": "%vendorLatLong:value%"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues3",
+        "responseJSONNode": "GetDSATLatLongDetails",
+        "responseJSONPath": "",
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Set Values",
+    "Name": "SetTiers",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Validation/DSAT/Procedure/SetTiers"
+}

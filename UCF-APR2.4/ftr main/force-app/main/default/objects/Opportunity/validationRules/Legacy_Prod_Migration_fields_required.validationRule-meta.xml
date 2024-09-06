@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Prod_Migration_fields_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Campaign.Name = &quot;TDM to VoIP Migration&quot;,
+OR((ISBLANK(Legacy_Product_List__c)),
+ISBLANK(Legacy_MRR_Value__c)))</errorConditionFormula>
+    <errorMessage>If Primary Campaign is set to &quot;TDM to VoIP Migration&quot; then 
+Legacy Product List and Legacy MRR Value fields are required</errorMessage>
+</ValidationRule>

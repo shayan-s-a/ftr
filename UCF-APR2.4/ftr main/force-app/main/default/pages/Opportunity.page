@@ -1,0 +1,1124 @@
+<apex:page id="pgOpportunity" tabstyle="Opportunity" standardcontroller="Opportunity" extensions="Opportunity_Controller"
+    action="{!retrieveAccountDetails}" doctype="html-5.0" lightningStylesheets="true">
+    
+    <apex:outputPanel rendered="{!AND(lightningRecordtype,Not(Contains($CurrentPage.Url, 'lightning.force.com')))}">
+        <p>Please open this opportunity in Lightning Experience.</p>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!OR(Not(lightningRecordtype),Contains($CurrentPage.Url, 'lightning.force.com'))}">
+    <style type="text/css">
+        .custPopup1 {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+        displays in the center of the screen. First set the width. Then set
+        margin-left to negative half of what the width is. You can add
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            position: fixed;
+            top: 20%;
+        }
+
+        .custPopup2 {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+        displays in the center of the screen. First set the width. Then set
+        margin-left to negative half of what the width is. You can add
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top: 400px;
+        }
+
+        .popupBackground1 {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+    </style>
+
+    <style>
+        .display_false {
+            display: none;
+        }
+
+        #close {
+            //padding:1px;
+            border: 1.5px solid DarkGray;
+            background-color: WhiteSmoke; //border-radius:1.5px;
+            font-weight: bold;
+            font-size: 95%;
+            border-bottom: 1px solid grey;
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            height: 23.5px;
+        }
+
+        .approved {
+            background-color: #A1F78D !important;
+        }
+
+        .rejected {
+            background-color: #FB8A8C !important;
+        }
+
+        .pending {
+            background-color: #FFD74B !important;
+        }
+
+        .proposal-button {
+            margin-left: -80px !important;
+        }
+
+        .generate-button {
+            margin-left: -130px !important;
+        }
+
+
+        #blanket,
+        #proposal-blanket,
+        #generate-blanket,
+        #blanketSterling,
+        #blanketSFAQuote,
+        #schedule-blanket {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+        #popUpDiv,
+        #popUpDivSterling,
+        #popUpDivSFAQuote {
+            float: center;
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+        displays in the center of the screen. First set the width. Then set 
+        margin-left to negative half of what the width is. You can add 
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+        }
+
+        #proposalPopDiv,
+        #schedulePopDiv {
+            /* position:absolute;
+        background-color:#eeeeee;
+        width:40%;
+        height:330px;  //the CRT form portion
+        z-index: 22; */
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+        displays in the center of the screen. First set the width. Then set 
+        margin-left to negative half of what the width is. You can add 
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top: 600px;
+        }
+
+        #generatePopDiv {
+            position: absolute;
+            background-color: #eeeeee;
+            width: 40%;
+            height: 140px; //the CRT form portion
+            z-index: 22;
+        }
+
+        .thLeft {
+            text-align: right;
+            font-size: 9pt;
+            width: 25;
+        }
+
+        .alignup {
+            vertical-align: top;
+        }
+
+        .alignmid {
+            vertical-align: middle;
+            text-align: right;
+        }
+
+        .proposalInfo {
+            width: 190%;
+            height: 50px;
+        }
+
+        .proposalInfo2 {
+            width: 245%;
+            height: 50px;
+        }
+
+        .scheduleInfo1 {
+            margin-left: -140px;
+            width: 67%;
+            height: 15px;
+        }
+
+        .scheduleInfo2 {
+            margin-left: 0px;
+            width: 67%;
+            height: 15px;
+        }
+
+        .proposal-label {
+            width: 200%;
+            height: 15px;
+        }
+
+        .schedule-label {
+            width: 200%;
+        }
+
+        #datePicker {
+            z-index: 10000;
+        }
+
+        .custPopup {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+        displays in the center of the screen. First set the width. Then set 
+        margin-left to negative half of what the width is. You can add 
+        the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: 30px;
+            top: -445px;
+        }
+
+        .popupBackground {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+        .submit-button {
+            margin-left: 20px;
+            width: 48px;
+            height: 23px;
+        }
+    </style>
+    <script type="text/javascript">
+        var __sfdcSessionId = '{!GETSESSIONID()}';
+    </script>
+    <script src="/soap/ajax/28.0/connection.js" type="text/javascript"></script>
+    <script src="/soap/ajax/28.0/apex.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //jquery$ = jQuery.noConflict();
+        j$ = jQuery.noConflict();
+
+        function toggle(div_id, id) {
+            var el = document.getElementById(div_id);
+            if (el.style.display == 'none') { el.style.display = 'block'; }
+            else { el.style.display = 'none'; }
+        }
+
+        function toggle(div_id) {
+            var el = document.getElementById(div_id);
+            if (el.style.display == 'none') { el.style.display = 'block'; }
+            else { el.style.display = 'none'; }
+        }
+
+        function blanket_size(popUpDivVar, id) {
+            if (typeof window.innerWidth != 'undefined') {
+                viewportheight = window.innerHeight;
+            } else {
+                viewportheight = document.documentElement.clientHeight;
+            }
+            if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
+                blanket_height = viewportheight;
+            } else {
+                if (document.body.parentNode.clientHeight > document.body.parentNode.scrollHeight) {
+                    blanket_height = document.body.parentNode.clientHeight;
+                } else {
+                    blanket_height = document.body.parentNode.scrollHeight;
+                }
+            }
+            var blanket = document.getElementById('blanket');
+
+            blanket.style.height = '110%'; //the background portion  
+            // blanket.style.height = blanket_height + 'px';
+
+            var popUpDiv = document.getElementById(popUpDivVar);
+            //popUpDiv_height=blanket_height/2-150;//150 is half popups height
+            //popUpDiv_height='330px';
+            //popUpDiv.style.top =  '400px';
+
+            //blanket.style.top =  '25px';
+            blanket.style.position = 'Absolute';
+            //popUpDiv.style.top = popUpDiv_height + 'px';
+        }
+
+        function blanket_size(popUpDivVar) {
+            if (typeof window.innerWidth != 'undefined') {
+                viewportheight = window.innerHeight;
+            } else {
+                viewportheight = document.documentElement.clientHeight;
+            }
+            if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
+                blanket_height = viewportheight;
+            } else {
+                if (document.body.parentNode.clientHeight > document.body.parentNode.scrollHeight) {
+                    blanket_height = document.body.parentNode.clientHeight;
+                } else {
+                    blanket_height = document.body.parentNode.scrollHeight;
+                }
+            }
+            var blanket = document.getElementById('blanket');
+            blanket.style.height = '115%'; //the background portion  
+            //blanket.style.height = blanket_height + 'px';
+
+            var popUpDiv = document.getElementById(popUpDivVar);
+            popUpDiv.style.top = top + 'px';
+            //blanket.style.top =  '25px';
+            //blanket.style.left = '30%';
+            blanket.style.position = 'Absolute';
+            //popUpDiv.style.top = popUpDiv_height + 'px';
+        }
+
+        function window_pos(popUpDivVar, id) {
+            if (typeof window.innerWidth != 'undefined') {
+                viewportwidth = window.innerHeight;
+            } else {
+                viewportwidth = document.documentElement.clientHeight;
+            }
+            if ((viewportwidth > document.body.parentNode.scrollWidth) && (viewportwidth > document.body.parentNode.clientWidth)) {
+                window_width = viewportwidth;
+            } else {
+                if (document.body.parentNode.clientWidth > document.body.parentNode.scrollWidth) {
+                    window_width = document.body.parentNode.clientWidth;
+                } else {
+                    window_width = document.body.parentNode.scrollWidth;
+                }
+            }
+
+            var popUpDivSFAQuote = document.getElementById(popUpDivSFAQuote);
+            window_width = window_width / 2 - 150;//150 is half popups width
+            popUpDivSFAQuote.style.left = '16%';
+
+            //popUpDiv.style.left = window_width + 'px';
+        }
+
+        function window_pos(popUpDivVar) {
+
+            var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+            var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+            var top = ((height / 2) - (300)) + window.scrollY + dualScreenTop; //Assuming 300 is popup window height as its dynamic and defined as a static value.
+
+            var popUpDiv = document.getElementById(popUpDivVar);
+            popUpDiv.style.top = top + 'px';
+
+            if (typeof window.innerWidth != 'undefined') {
+                viewportwidth = window.innerHeight;
+            } else {
+                viewportwidth = document.documentElement.clientHeight;
+            }
+            if ((viewportwidth > document.body.parentNode.scrollWidth) && (viewportwidth > document.body.parentNode.clientWidth)) {
+                window_width = viewportwidth;
+            } else {
+                if (document.body.parentNode.clientWidth > document.body.parentNode.scrollWidth) {
+                    window_width = document.body.parentNode.clientWidth;
+                } else {
+                    window_width = document.body.parentNode.scrollWidth;
+                }
+            }
+            window_width = window_width / 2 - 150;//150 is half popups width
+            //popUpDiv.style.left = window_width + 'px';
+        }
+
+        function popup(windowname, id, icb) {
+            if (icb == 'true') {
+                //updateSterlingQuote(id);
+                setCurrentProduct(id);
+                blanket_size(windowname, id);
+                window_pos(windowname, id);
+                toggle('blanket', id);
+                toggle(windowname, id);
+                //alert(windowname);
+                return false;
+            }
+            else {
+                updateSterlingQuotewithoutpopup(id);
+            }
+        }
+
+        function popupSterling(windowname, id) {
+
+            //updateSterlingQuote(id);
+            blanket_size(windowname, id);
+            window_pos(windowname, id);
+            toggle('blanketSterling', id);
+            toggle(windowname, id);
+
+            return false;
+        }
+
+        function popupSFAQuote(windowname, id) {
+            //updateSterlingQuote(id);
+            blanket_size(windowname, id);
+            window_pos(windowname, id);
+            toggle('blanketSFAQuote', id);
+            toggle(windowname, id);
+
+            return false;
+        }
+
+        function submitForApproval(id) {
+            submitforapproval(id);
+        }
+
+        function proposalpopup(windowname) {
+            alert(windowname);
+            blanket_size(windowname);
+            alert('111111111');
+            window_pos(windowname);
+            alert('2222');
+            toggle('blanket');
+            alert('333333333');
+            toggle(windowname);
+            alert('44444');
+            return false;
+        }
+
+        //Giri 23/04/2014 Start
+        function schedulepopup(windowname) {
+            if ({!IsContractExistForAccount        
+} == false) {
+            blanket_size(windowname);
+            window_pos(windowname);
+            toggle('generate-blanket');
+            toggle(windowname);
+            return false;
+        }
+            else {
+            return true;
+        }       
+        }
+        //Giri 23/04/2014 End.
+        function SycnUnSyncDeleteClick(oper, Quoteid) {
+            if (oper == 'Sync') {
+                actionSycnClick(Quoteid);
+            }
+            if (oper == 'UnSync') {
+                actionUnSycnClick(Quoteid);
+            }
+            if (oper == 'QuoteDel') {
+                actionQuoteDeleteClick(Quoteid);
+            }
+            return false;
+        }
+
+        function handleVlocityQuoteAction(action, quoteId) {
+            if (action == 'Delete')
+                actionDeleteVlocityQuote(quoteId);
+            else if (action == 'Sync')
+                actionSyncVlocityQuote(quoteId);
+            else if (action == 'UnSync')
+                actionUnSyncVlocityQuote(quoteId);
+            return false;
+        }
+
+        function productDeleteClick(Record_Type, Quoteid) {
+            alert(Record_Type);
+            if (Record_Type == 'SFA') {
+                actionProductDeleteClick(Quoteid);
+                return false;
+            }
+            else if (Record_Type == 'Sterling Line Item') {
+                actionProductDeleteClick(Quoteid);
+                return true;
+            }
+        }
+
+
+        function selectSecondElement() {
+            var elem = document.getElementById("{!$Component.updatearea.popupblock.popupblocksection.popupregion}");
+            elem.selectedIndex = "0";
+        }
+
+        function submitForApproval(id) {
+            submitforapproval(id);
+        }
+
+        function checkLimit(limitField, limitCount) {
+            var limitNum = 150;
+            if (limitField.value.length > limitNum) {
+                limitField.value = limitField.value.substring(0, limitNum);
+            } else {
+                limitCount.value = limitNum - limitField.value.length;
+            }
+        }
+        //------------added-----------
+        function openNewTab() {
+            var win = window.open("http://sift.corp.ftr.com/", '_blank');
+            win.focus();
+        }
+        j$(".speeddropdown_0").change(function () {
+            var tempSelect = j$(".speeddropdown_0")[0];
+            alert(tempSelect.val());
+        });
+
+    </script>
+    <apex:outputPanel rendered="{!NOT(PilotUser)}">
+        <apex:detail relatedlist="true" subject="{!Opportunity.Id}" inlineEdit="true" />
+    </apex:outputPanel>
+
+
+    <apex:outputPanel rendered="{!PilotUser}">
+        <apex:detail relatedlist="false" subject="{!Opportunity.Id}" inlineEdit="true" />
+        <apex:outputpanel rendered="{!opportunity.recordtype.DeveloperName!='Opportunity_Locked'}">
+            <apex:form id="frmOpportunity">
+                <!-- <apex:actionFunction action="{!quickQuote}" name="quickQuote">
+                <apex:param name="comments" assignTo="{!comments}" value="{0}" />
+            </apex:actionFunction> -->
+                <apex:pageblock title="Quote" id="quoteListpb">
+                    <apex:actionStatus id="processStatus">
+                        <apex:facet name="start">
+                            <apex:image url="{!URLFOR($Resource.Animation_Loading)}" />
+                        </apex:facet>
+                    </apex:actionStatus>
+                    <apex:pageblockbuttons location="top">
+                     <!--   <apex:commandbutton value="New Vlocity Quote" action="{!launchQuoteOmniscript}" /> -->
+                        <apex:commandbutton rendered="{!AND(VZ3_CPQ_Disabled, Opportunity.Opportunity_Type__c != 'Renewal', $Profile.Name != 'Partner Community User')}"
+                            value="New Qualified Quote" onclick="return popupSterling('popUpDivSterling', null)" />
+                        <apex:commandbutton rendered="{!AND(VZ3_CPQ_Disabled, Opportunity.Opportunity_Type__c == 'Renewal', $Profile.Name != 'Partner Community User')}"
+                            value="New Qualified Quote" action="{!reDirectToSterling}" />
+                        <apex:commandbutton value="New SFA Quote" onclick="return popupSterling('popUpDivSFAQuote', null)" />
+                        <apex:commandButton value="SIFT Qualification" onclick="openNewTab();return false" />
+                    </apex:pageblockbuttons>
+                    <apex:outputpanel rendered="{!lstStrQuote.size != 0}">
+                        <apex:pageMessages />
+                        <apex:actionFunction name="actionSyncVlocityQuote" status="processStatus" action="{!syncVlocityQuote}" rerender="pbSterlingQuote,pbProduct,arrow">
+                            <apex:param value="" name="currentVlocityQuoteId" assignTo="{!currentVlocityQuoteId}" />
+                        </apex:actionFunction>
+                        <apex:actionFunction name="actionUnSyncVlocityQuote" status="processStatus" action="{!unSyncVlocityQuote}" rerender="pbSterlingQuote,pbProduct,arrow">
+                            <apex:param value="" name="currentVlocityQuoteId" assignTo="{!currentVlocityQuoteId}" />
+                        </apex:actionFunction>
+                        <apex:actionFunction name="actionDeleteVlocityQuote" status="processStatus" action="{!deleteVlocityQuote}" rerender="pbSterlingQuote,pbProduct,arrow">
+                            <apex:param value="" name="currentVlocityQuoteId" assignTo="{!currentVlocityQuoteId}" />
+                        </apex:actionFunction>
+                        <apex:actionFunction name="actionSycnClick" status="processStatus" action="{!productSyncClick}" rerender="pbSterlingQuote,pbProduct,arrow">
+                            <apex:param value="" name="strQuoteid" assignTo="{!strQuoteid}" />
+                        </apex:actionFunction>
+                        <apex:actionFunction name="actionUnSycnClick" status="processStatus" action="{!productUnSyncClick}" rerender="pbSterlingQuote,pbProduct,arrow">
+                            <apex:param value="" name="strQuoteid" assignTo="{!strQuoteid}" />
+                        </apex:actionFunction>
+                        <apex:actionFunction name="actionQuoteDeleteClick" status="processStatus" action="{!deletelink}" rerender="pbSterlingQuote,pbProduct,arrow,quoteListpb">
+                            <apex:param value="" name="SelectedId" assignTo="{!SelectedId}" />
+                        </apex:actionFunction>
+                        <apex:pageblocktable value="{!lstStrQuote}" var="sq" id="pbSterlingQuote" rendered="{!lstStrQuote.size != 0}">
+                            <apex:column headervalue="Actions">
+                                <apex:commandLink title="Edit Quote" action="{!editlinks}" value="Edit" rendered="{!ShowEditLinks && sq.RecordTypeName != 'Vlocity'}">
+                                    <apex:param name="SelectedId" value="{!sq.Id}" assignTo="{!SelectedId}" />
+                                </apex:commandLink>
+                                <apex:commandLink title="Edit Quote" action="{!editVlocityQuote}" value="Edit" rendered="{!sq.RecordTypeName == 'Vlocity'}">
+                                    <apex:param name="currentVlocityQuoteId" value="{!sq.Id}" assignTo="{!currentVlocityQuoteId}" />
+                                </apex:commandLink>
+                                <apex:outputtext value=" | " rendered="{!IF(sq.RecordTypeName == 'SFA' || ShowEditLinks,TRUE,FALSE)}" />
+                                <apex:commandLink title="Delete Quote" onclick="return SycnUnSyncDeleteClick('QuoteDel','{!sq.Id}');" value="Del" rendered="{!IF(sq.RecordTypeName == 'SFA' || ShowEditLinks,TRUE,FALSE) && sq.RecordTypeName != 'Vlocity'}"
+                                />
+                                <apex:commandLink title="Delete Quote" onclick="return handleVlocityQuoteAction('Delete','{!sq.Id}');" value="Del" rendered="{!sq.RecordTypeName == 'Vlocity'}"
+                                />
+                                <apex:outputText value=" | " rendered="{!AND(NOT(sq.IsSyncing),(sq.IsSyncAllowedByAdmin || sq.IsSyncAllowed),ShowEditLinks)}"
+                                />
+                                <apex:commandLink title="Sync Quote" value="Sync" onclick="return SycnUnSyncDeleteClick('Sync','{!sq.Id}');" rendered="{!NOT(sq.IsSyncing) && (sq.IsSyncAllowedByAdmin || sq.IsSyncAllowed) && sq.RecordTypeName != 'Vlocity'}"
+                                />
+                                <apex:commandLink title="Sync Quote" value="Sync" onclick="return handleVlocityQuoteAction('Sync','{!sq.Id}');" rendered="{!NOT(sq.IsSyncing) && sq.RecordTypeName == 'Vlocity'}"
+                                />
+                                <apex:outputText value=" | " rendered="{!(sq.IsSyncing ) }" />
+                                <apex:commandLink title="Unsync Quote" value="Unsync" onclick="return SycnUnSyncDeleteClick('UnSync','{!sq.Id}');" rendered="{!sq.IsSyncing  && sq.RecordTypeName != 'Vlocity'}"
+                                />
+                                <apex:commandLink title="Unsync Quote" value="Unsync" onclick="return handleVlocityQuoteAction('UnSync','{!sq.Id}');" rendered="{!sq.IsSyncing  && sq.RecordTypeName == 'Vlocity'}"
+                                />
+                            </apex:column>
+                            <apex:column headerValue="Name" headerClass="headerRow" rendered="{!sq.RecordTypeName != 'Vlocity'}">
+                                <apex:outputLink target="_top" styleClass="actionLink" value="/apex/Quote?id={!sq.id}&sfdc.override=1">{!sq.Name}</apex:outputLink>
+                                <span>&nbsp;&nbsp;</span>
+                            </apex:column>
+                            <apex:column headerValue="Name" headerClass="headerRow" rendered="{!sq.RecordTypeName == 'Vlocity'}">
+                                <apex:outputLink target="_top" styleClass="actionLink" value="/{!sq.id}">{!sq.Name}</apex:outputLink>
+                                <span>&nbsp;&nbsp;</span>
+                            </apex:column>
+                            <apex:column headervalue="Synced">
+                                <apex:inputCheckbox value="{!sq.IsSyncing}" disabled="true" />
+                            </apex:column>
+                            <apex:column value="{!sq.RecordTypeName}" Headervalue="Record Type" />
+                        </apex:pageblocktable>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore" id="arrow">
+                            <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(hasPrevious)}" />
+                            <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!hasPrevious}" />
+                            <apex:commandLink status="fetchStatus" reRender="pbSterlingQuote,arrow" action="{!previous}" title="Previous Page" value="Previous Page"
+                                rendered="{!hasPrevious}" />
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(hasPrevious)}">Previous Page</apex:outputPanel>
+                            &nbsp;({!(pageNumber * size)+1-size}-{!IF((pageNumber * size)>noOfRecords, noOfRecords,(pageNumber * size))} of {!noOfRecords})&nbsp;
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(hasNext)}">Next Page</apex:outputPanel>
+                            <apex:commandLink status="fetchStatus" reRender="pbSterlingQuote,arrow" title="Next Page" value="Next Page" rendered="{!hasNext}"
+                                action="{!next}" />&nbsp;
+                            <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!hasNext}" />
+                            <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(hasNext)}" />
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore" style="color:#4AA02C;font-weight:bold;">
+                            <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText="" />
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputpanel rendered="{!lstStrQuote.size == 0}">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0" style="margin-left:-6px;margin-right:-15px;">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <th scope="col" class="noRowsHeader" style="font-weight:normal;font-size:1em;">No records to display</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputpanel>
+                </apex:pageblock>
+
+                <apex:pageblock title="Products" id="pbProduct">
+                    <apex:outputpanel rendered="{!Products.size != 0}">
+                        <apex:commandButton value="Quick Quote" action="{!showPopupQQ}" rendered="{!Products.size > 0}" />
+                        <span style="display:none;" id="quickQuoteProgress">
+                            <span style="color: red; font-weight: bold;">creating quote...</span>
+                            <img src="/img/loading.gif" alt=" " />
+                        </span>
+                        <apex:actionFunction action="{!updateSterlingQuote}" name="updateSterlingQuote" rerender="updatearea" status="rerenderStatus">
+                            <apex:param name="param" value="" id="y" assignTo="{!presentProduct}"></apex:param>
+                        </apex:actionFunction>
+                        <apex:actionFunction action="{!updateSterlingQuote}" name="updateSterlingQuotewithoutpopup" status="rerenderStatus">
+                            <apex:param name="param" value="" assignTo="{!presentProduct}"></apex:param>
+                        </apex:actionFunction>
+                        <apex:actionFunction action="{!setCurrentProduct}" name="setCurrentProduct" rerender="updatearea" status="rerenderStatus">
+                            <apex:param name="param" value="" id="z" assignTo="{!presentProduct}"></apex:param>
+                        </apex:actionFunction>
+                        <apex:actionFunction action="{!submitforapproval}" name="submitforapproval" rerender="">
+                            <apex:param name="param" value="" id="x" assignTo="{!currentProduct}"></apex:param>
+                        </apex:actionFunction>
+                        <apex:actionFunction name="actionProductDeleteClick" status="processStatusProduct" action="{!delOppProductMethod}" rerender="pbSterlingQuote,pbProduct">
+                            <apex:param value="" name="did" assignTo="{!SterlingQuoteDelVal}" />
+                        </apex:actionFunction>
+                        <apex:actionStatus id="rerenderStatus" onstop="selectSecondElement()" />
+
+                        <apex:pageblocktable id="pbtProduct" value="{!Products}" var="sqitem">
+                            <apex:column headerValue="Action" headerClass="headerRow">
+                                <!--<apex:commandLink value="Edit" styleClass="actionLink" action="{!editProductMethod}"  rendered="{!IF(sqitem.isFinance || sqitem.isemptystatus || sqitem.isRecalled,True,False)}">-->
+                                <apex:commandLink value="Edit" styleClass="actionLink" action="{!editProductMethod}" rendered="{!IF(sqitem.isFinance && ShowEditLinks,True,False)}">
+                                    <apex:param value="{!sqitem.id}" name="strOppProductEditval" assignTo="{!strOppProductEditval}" />
+                                </apex:commandLink>
+                                <apex:outputtext escape="false" value="<span >|&nbsp;</span>" rendered="{!IF(sqitem.isFinance && ShowEditLinks,True,False)}"
+                                />
+                                <apex:commandLink onclick="return productDeleteClick('{!sqitem.quoteRecordType}','{!sqitem.id}');" value="Del" rendered="{!IF(sqitem.quoteRecordType == 'SFA' || sqitem.quoteRecordType == 'Vlocity',FALSE,TRUE)}"
+                                />
+                                <span class="display_{!sqitem.isPending || sqitem.isApproved || (!sqitem.isDiscountTypeEmpty && (sqitem.isEmptyStatus||sqitem.isRecalled))}">&nbsp;|&nbsp;</span>
+                                <apex:outputText rendered="{!sqitem.isApproved}" value="Approved"></apex:outputText>
+                                <apex:outputText rendered="{!sqitem.isPending}" value="In progress...."></apex:outputText>
+                                <apex:outputLink rendered="{! (!sqitem.isApproved) && (!sqitem.isDiscountTypeEmpty) && sqitem.isICB && (sqitem.isEmptyStatus ||sqitem.isRecalled)}"
+                                    onclick="popup('popUpDiv', '{!sqitem.Id}','{!sqitem.isICB}'); return false;">Submit For Approval</apex:outputLink>
+                                <apex:outputLink rendered="{! (!sqitem.isApproved) && (!sqitem.isDiscountTypeEmpty) && !sqitem.isICB && (sqitem.isEmptyStatus ||sqitem.isRecalled)}"
+                                    onclick="submitForApproval('{!sqitem.Id}'); return false;">Submit For Approval</apex:outputLink>
+
+                                <!-- <apex:outputLink rendered="{! false || (sqitem.DiscountType == 'BDT' && sqitem.RecordType.Name == 'SFA') || (!sqitem.isDiscountTypeEmpty && !sqitem.isICB && (sqitem.isEmptyStatus ||sqitem.isRecalled))}" onclick="return popup('popUpDiv', 'popUpDiv','true');">Submit For Approval</apex:outputLink> -->
+                            </apex:column>
+                            <apex:column value="{!sqitem.OverallStatus}" headervalue="Status" />
+
+                            <apex:column headervalue="Product">
+                                <apex:outputlink value="/apex/QuoteLineItem?id={!sqitem.quoteitemid}" rendered="{!sqitem.quoteRecordType != 'Vlocity'}">
+                                    {!sqitem.Name} </apex:outputlink>
+                                <apex:outputlink value="/apex/vlocity_cmt__hybridcpq?id={!sqitem.quoteId}" rendered="{!sqitem.quoteRecordType == 'Vlocity'}">
+                                    {!sqitem.Name} </apex:outputlink>
+                            </apex:column>
+                            <apex:column value="{!sqitem.Speed}" headervalue="Speed" />
+                            <apex:column value="{!sqitem.IsPromoProduct}" headervalue="Promo Product" />
+                            <apex:column value="{!sqitem.Quantity}" headervalue="Quantity" />
+                            <apex:column headervalue="TermLength">
+                                <apex:outputtext value="{!sqitem.TermLength}" rendered="{!IF(sqitem.TermLength != 0, true, false)}" />
+                            </apex:column>
+                            <apex:column headervalue="Installments">
+                                <apex:outputtext value="{!sqitem.NumInstallments}" rendered="{!IF(sqitem.NumInstallments != 0, true, false)}" />
+                            </apex:column>
+                            <apex:column value="{!sqitem.RenewalMRR}" headervalue="Renewal MRR" />
+                            <apex:column value="{!sqitem.NetNewMRR}" headervalue="Net New MRR" />propos
+                            <apex:column value="{!sqitem.CPEGrossMargin}" headervalue="CPE Gross Margin" />
+                            <apex:column value="{!sqitem.CPENRC}" headervalue="CPE NRC" />
+                            <apex:column value="{!sqitem.NRC}" headervalue="NRC" />
+                            <!--<apex:column value="{!sqitem.DiscountType}" headervalue="Discount Type"/>-->
+                            <apex:column value="{!sqitem.ServiceAddress}" headervalue="Service Address" />
+                            <apex:column value="{!sqitem.ZAddress}" headervalue="Z-Address" />
+
+                        </apex:pageblocktable>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore">
+                            <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(prdHasPrevious)}" />
+                            <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!prdHasPrevious}" />
+                            <apex:commandLink status="prdFetchStatus" reRender="pbProduct" action="{!prdPrevious}" title="Previous Page" value="Previous Page"
+                                rendered="{!prdHasPrevious}" />
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(prdHasPrevious)}">Previous Page</apex:outputPanel>
+                            &nbsp;({!(prdPageNumber * prdPageSize)+1-prdPageSize}-{!IF((prdPageNumber * prdPageSize)>prdNoOfRecords, prdNoOfRecords,(prdPageNumber
+                            * prdPageSize))} of {!prdNoOfRecords})&nbsp;
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(prdHasNext)}">Next Page</apex:outputPanel>
+                            <apex:commandLink status="prdFetchStatus" reRender="pbProduct" title="Next Page" value="Next Page" rendered="{!prdHasNext}"
+                                action="{!prdNext}" />&nbsp;
+                            <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!prdHasNext}" />
+                            <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(prdHasNext)}" />
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore" style="color:#4AA02C;font-weight:bold;">
+                            <apex:actionStatus id="prdFetchStatus" startText="Fetching..." stopText="" />
+                        </apex:outputPanel>
+                    </apex:outputpanel>
+                    <apex:outputpanel rendered="{!Products.size == 0}">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0" style="margin-left:-6px;margin-right:-15px;">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <th scope="col" class="noRowsHeader" style="font-weight:normal;font-size:1em;">No records to display</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputpanel>
+                </apex:pageblock>
+
+                <apex:pageblock id="attPB" title="Notes & Attachments">
+                    <style>
+                        @page {
+                            margin-top: 15%;
+                            @top-center {
+                                content: element(header1);
+                            }
+
+                            @bottom-right {
+                                content: "Page: " counter(page) " / " counter(pages);
+                                font-size: 80%;
+                            }
+                        }
+                    </style>
+
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="New Note" action="{!redirectToNewNote}" />
+                        <apex:commandButton value="Attach File" action="{!redirectToNewAttachment}" />
+                        <apex:commandButton value="Create Proposal" action="{!showPopup}" rerender="tstpopup" />
+                        <!--<apex:commandButton id="btn" value="Create Proposal" onclick="proposalpopup('proposalPopDiv'); return false;" />-->
+                    </apex:pageBlockButtons>
+                    <apex:outputpanel rendered="{!Attachments.size != 0}">
+                        <apex:pageblocktable value="{!Attachments}" var="Nitem">
+                            <!--      <apex:column value="{!Nitem.id}"/>
+<apex:column value="{!Nitem.Title}"/>
+<apex:column value="{!Nitem.lastmodifieddate}"/>
+<apex:column value="{!Nitem.CreatedBy.Name}"/>
+-->
+                            <apex:column headerValue="Action" headerClass="headerRow">
+                                <apex:outputLink styleClass="actionLink" target="_blank" value="{!if(LEFT(Nitem.Id, 3) = '00P', '/servlet/servlet.FileDownload?file='&Nitem.Id, '/'&Nitem.Id)}">View</apex:outputLink>
+                                <span>&nbsp;|&nbsp;</span>
+                                <apex:commandLink status="delStatus" reRender="attPB" action="{!deleteAttachment}" title="Delete Attachment" value="Del">
+                                    <apex:param value="{!Nitem.Id}" name="delAttId" assignTo="{!delAttId}" />
+                                </apex:commandLink>
+                                <apex:actionStatus id="delStatus">
+                                    <apex:facet name="start">
+                                        <apex:image url="{!URLFOR($Resource.Animation_Loading)}" />
+                                    </apex:facet>
+                                </apex:actionStatus>
+                            </apex:column>
+                            <apex:column headerValue="Type" headerClass="headerRow">
+                                <apex:outputText value="{!Nitem.typeOf}" /></apex:column>
+                            <apex:column headerValue="Title" headerClass="headerRow">
+                                <apex:outputLink target="_top" value="{!Nitem.urlRedirection}">{!Nitem.Name}</apex:outputLink>
+                            </apex:column>
+                            <apex:column headerValue="Last Modified" headerClass="headerRow">
+                                <apex:outputText value="{!Nitem.LastModifiedDate}" /></apex:column>
+                            <apex:column headerValue="Created By" headerClass="headerRow">
+                                <apex:outputLink target="_top" value="/{!Nitem.CreatedById}">{!Nitem.createByName}</apex:outputLink>
+                            </apex:column>
+                        </apex:pageblocktable>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore">
+                            <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(attHasPrevious)}" />
+                            <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!attHasPrevious}" />
+                            <apex:commandLink status="attFetchStatus" reRender="attPB" action="{!attPrevious}" title="Previous Page" value="Previous Page"
+                                rendered="{!attHasPrevious}" />
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(attHasPrevious)}">Previous Page</apex:outputPanel>
+                            &nbsp;({!(attPageNumber * attPageSize)+1-attPageSize}-{!IF((attPageNumber * attPageSize)>attNoOfRecords, attNoOfRecords,(attPageNumber
+                            * attPageSize))} of {!attNoOfRecords})&nbsp;
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(attHasNext)}">Next Page</apex:outputPanel>
+                            <apex:commandLink status="attFetchStatus" reRender="attPB" title="Next Page" value="Next Page" rendered="{!attHasNext}" action="{!attNext}"
+                            />&nbsp;
+                            <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!attHasNext}" />
+                            <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(attHasNext)}" />
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore" style="color:#4AA02C;font-weight:bold;">
+                            <apex:actionStatus id="attFetchStatus" startText="Fetching..." stopText="" />
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputpanel rendered="{!Attachments.size == 0}">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0" style="margin-left:-6px;margin-right:-15px;">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <th scope="col" class="noRowsHeader" style="font-weight:normal;font-size:1em;">No records to display</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputpanel>
+
+                </apex:pageblock>
+                <apex:pageblock title="Schedule" id="pbSchedule">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Generate" onclick="return schedulepopup('generatePopDiv');" action="{!generateschedule}" rendered="{!bolshowgenerate}"
+                        />
+                        <!-- <apex:commandButton value="Test" rendered="{!IF($Profile.Name =='Frontier System Administrator', true , false) && bolshowgenerate}" action="{!showPopup}" rerender="schpopup"  /> -->
+                        <!-- <apex:commandButton value="Send Signature" rendered="{!IF($Profile.Name =='Frontier System Administrator', true , false) && bolshowgenerate}"  action="{!Submit}" rerender="tstpopupdocusign"/> -->
+                    </apex:pageBlockButtons>
+                    <!-- <apex:pageMessages /> -->
+                    <apex:outputpanel rendered="{!Schedule.size != 0}">
+                        <apex:pageblocktable value="{!Schedule}" var="SItem">
+                            <apex:column >
+                                <apex:outputLink target="_top" styleClass="actionLink" value="/{!SItem.id}">{!SItem.Name}</apex:outputLink>
+                                <span>&nbsp;&nbsp;</span>
+                            </apex:column>
+                            <apex:column value="{!SItem.Contract_Term_months__c}" />
+                            <apex:column value="{!SItem.Schedule_Start_Date__c}" />
+                            <apex:column value="{!SItem.Schedule_End_Date__c}" />
+
+
+                        </apex:pageblocktable>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore">
+                            <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(schHasPrevious)}" />
+                            <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!schHasPrevious}" />
+                            <apex:commandLink status="schFetchStatus" reRender="pbSchedule" action="{!schPrevious}" title="Previous Page" value="Previous Page"
+                                rendered="{!schHasPrevious}" />
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(schHasPrevious)}">Previous Page</apex:outputPanel>
+                            &nbsp;({!(schPageNumber * schPageSize)+1-schPageSize}-{!IF((schPageNumber * schPageSize)>schNoOfRecords, schNoOfRecords,(schPageNumber
+                            * schPageSize))} of {!schNoOfRecords})&nbsp;
+                            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(schHasNext)}">Next Page</apex:outputPanel>
+                            <apex:commandLink status="schFetchStatus" reRender="pbSchedule" title="Next Page" value="Next Page" rendered="{!schHasNext}"
+                                action="{!schNext}" />&nbsp;
+                            <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!schHasNext}" />
+                            <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(schHasNext)}" />
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="pSearchShowMore" style="color:#4AA02C;font-weight:bold;">
+                            <apex:actionStatus id="schFetchStatus" startText="Fetching..." stopText="" />
+                        </apex:outputPanel>
+                    </apex:outputpanel>
+                    <apex:outputpanel rendered="{!ScheudleItem.size == 0}">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0" style="margin-left:-6px;margin-right:-15px;">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <th scope="col" class="noRowsHeader" style="font-weight:normal;font-size:1em;">No records to display</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </apex:outputpanel>
+                </apex:pageblock>
+
+
+            </apex:form>
+
+            <apex:relatedList list="Orders" />
+            <apex:relatedList list="OpenActivities" />
+            <apex:relatedList list="ActivityHistories" />
+            <apex:relatedlist list="ProcessSteps" />
+            <apex:relatedList list="OpportunityTeamMembers" />
+            <apex:relatedList list="Cases__r" />
+            <apex:relatedList list="Sales_Engineering_Support_Requests__r" />
+            <apex:relatedList list="E_Reach_Connections__r" />
+            <apex:relatedList list="DGFs__r" />
+            <apex:relatedList list="dsfs__R00N80000002fD9vEAE__r" rendered="{!$Profile.Name != 'Partner Community User'}" />
+
+            <div id="proposal-blanket" style="display:none;"> </div>
+            <div id="proposalPopDiv" style="display:none;">
+                <apex:Form >
+                </apex:Form>
+            </div>
+        </apex:outputpanel>
+        <apex:form >
+
+            <apex:outputPanel id="tstpopup">
+                <apex:outputPanel styleClass="popupBackground1" layout="block" rendered="{!displayPopUp}" />
+                <apex:outputPanel styleClass="custPopup1" layout="block" rendered="{!displayPopUp}">
+                    <apex:pageBlock title="Information For Proposal" id="popupblockk">
+                        <apex:pageblocksection id="popupblocksection0A" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:outputText styleClass="proposal-label" value="">Proposal Type:</apex:outputText>
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection0B" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:selectList value="{!selectedProposalType}" size="1" required="true">
+                                <apex:selectOptions value="{!proposalTypes}" />
+                            </apex:selectList>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection1" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:outputText styleClass="proposal-label" value="Your Company's current communications capabilities include:" />
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection2" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:inputTextArea styleClass="proposalInfo" value="{!proposalCompany}" onkeydown="checkLimit(this,this.form.countdown);"
+                                onkeyup="checkLimit(this,this.form.countdown);" onchange="checkLimit(this,this.form.countdown);"
+                            />
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection3" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:outputText styleClass="proposal-label" value="Your immediate and future communications needs are:" />
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection4" rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}">
+                            <apex:inputTextArea styleClass="proposalInfo2" value="{!proposalFuture}" onkeydown="checkLimit(this,this.form.countdown);"
+                                onkeyup="checkLimit(this,this.form.countdown);" onchange="checkLimit(this,this.form.countdown);"
+                            />
+                        </apex:pageblocksection>
+                        <apex:outputLabel value="A quote needs to be synced to generate proposal" rendered="{!showNoSyncError && NOT(showApprovedProductsNonZero)}"
+                        />
+                        <apex:outputLabel value="Approval Pending-Product(S) Not Eligible For Proposal At This Time" rendered="{!showApprovedProductsNonZero && NOT(showNoSyncError)}"
+                        />
+                    </apex:pageBlock>
+                    <br/>
+                    <br/>
+                    <br/> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:commandButton value="Generate" styleClass="proposal-button" action="{!generateproposalattachment}" rerender="proposalpopup"
+                        rendered="{!NOT(showNoSyncError || showApprovedProductsNonZero)}" />
+                    <apex:commandButton value="Close" action="{!closePopup}" rerender="tstpopup" />
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:form>
+
+        <apex:form >
+            <apex:outputPanel id="tstpopupQQ">
+                <apex:outputPanel styleClass="popupBackground1" layout="block" rendered="{!displayPopUpQQ}" />
+                <apex:outputPanel styleClass="custPopup2" layout="block" rendered="{!displayPopUpQQ}">
+                    <apex:pageBlock title="" id="popupblockQQ">
+                        <apex:pageblocksection id="popupblocksection0AQQ">
+                            <apex:outputText styleClass="proposal-label" value="">Quick Quote Type:</apex:outputText>
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection0BQQ">
+                            <apex:selectList value="{!selectedQQT}" size="1" required="true">
+                                <apex:selectOptions value="{!qqTypes}" />
+                            </apex:selectList>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection1QQ">
+                            <apex:outputText styleClass="proposal-label" value="">Comments (The comments will be included in the attachment created in Notes and Attachments):</apex:outputText>
+                            <br/>
+                        </apex:pageblocksection>
+                        <apex:pageblocksection id="popupblocksection2QQ">
+                            <apex:inputTextArea styleClass="proposalInfo" value="{!commentStr}" onkeydown="checkLimit(this,this.form.countdown);" onkeyup="checkLimit(this,this.form.countdown);"
+                                onchange="checkLimit(this,this.form.countdown);" />
+                            <br/>
+                        </apex:pageblocksection>
+                    </apex:pageBlock>
+                    <br/>
+                    <br/>
+                    <br/> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <div align="center">
+                        <apex:commandButton value="Save" styleClass="proposal-button" action="{!quickQuoteQQ}" rerender="tstpopupQQ" />
+                        <apex:commandButton value="Close" action="{!closePopupQQ}" rerender="tstpopupQQ" />
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:form>
+
+
+        <div id="schedule-blanket" style="display:none;"> </div>
+        <div id="schedulePopDiv" style="display:none;">
+            <apex:Form >
+            </apex:Form>
+        </div>
+
+
+        <div id="blanket" style="display:none;"> </div>
+        <div id="popUpDiv" style="display:none;">
+            <!--      <apex:form id="updatearea">
+<apex:pageMessages />        
+<apex:pageBlock title="Individual Case Basis Request" id="popupblock"  mode="maindetail">
+<apex:pageblockSection columns="1" id="popupblocksection">
+<apex:selectList value="{!objSterlingQuoteItem.ApprovalPriority__c}" multiselect="false" size="1" label="Approval Priority">
+<apex:selectOption itemValue="Normal" itemLabel="Normal"/>
+<apex:selectOption itemValue="Urgent" itemLabel="Urgent"/>
+</apex:selectList>                      
+<!-- comment this line <apex:inputField id="territoryPL" value="{!objSterlingQuoteItem.ApprovalTerritory__c}"  required="true"/> 
+<apex:selectList value="{!objSterlingQuoteItem.ApprovalTerritory__c}" size="1" multiselect="false" title="Approval Territory" label="Approval Territory">
+<apex:selectOptions value="{!MyOptions}"/>
+</apex:selectList>
+<apex:selectList value="{!objSterlingQuoteItem.ApprovalRegion__c}" size="1" multiselect="false" label="Approval Region">
+<apex:selectOptions value="{!MyOptionsDependent}"/>
+</apex:selectList>
+<!-- comment this line <apex:inputField value="{!objSterlingQuoteItem.ApprovalRegion__c}" required="true" id="popupregion"/>
+<apex:inputField value="{!objSterlingQuoteItem.ApprovalRouting__c}"  required="true"  />
+<apex:inputField value="{!objSterlingQuoteItem.ICB_Comments__c}" style="width:290px; height:20px"/>
+</apex:pageBlockSection>            
+</apex:pageBlock>
+
+<div style="margin-right:20px;">   <apex:commandButton styleClass="submit-button" value="Submit" rerender="updatearea"  action="{!SubmitForICB}"/>
+<input id="close" type="button" class="btn" value="Cancel" onclick="popup('popUpDiv', null,null)"/> </div> 
+</apex:form>
+-->
+            <!-- MGG319 Remove popup for ICB Processes -->
+            <apex:form id="updatearea">
+                <apex:pageMessages />
+                <apex:pageBlock title="Discount Pricing Request" id="popupblock" mode="maindetail">
+                    <apex:pageblockSection columns="1" id="popupblocksection">
+                        <apex:inputField value="{!objSterlingQuoteItem.ICB_Request__c}" label="ICB/BDT Request #" />
+
+                        <apex:inputField value="{!objSterlingQuoteItem.SIFT_Number__c}" label="SIFT #" />
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+
+                <div style="margin-right:20px;">
+                    <apex:commandButton styleClass="submit-button" value="Submit" rerender="updatearea" action="{!SubmitForICB}">
+                        <apex:param name="param" value="" id="x" assignTo="{!currentProduct}"></apex:param>
+                    </apex:commandButton>
+                    <input id="close" type="button" class="btn" value="Cancel" onclick="popup('popUpDiv', null,null)" />
+                </div>
+            </apex:form>
+        </div>
+
+        <div id="blanketSterling" style="display:none;"> </div>
+        <div id="popUpDivSterling" style="display:none;">
+            <apex:form >
+                <apex:pageBlock >
+                    <apex:pageBlockSection title="List of Addresses" id="custinfo" columns="1" rendered="{!displayAddressGrid}">
+                        <tr>
+                            <apex:pageblockTable value="{!addressinfo}" var="varVal">
+                                <apex:column value="{!varVal.strColumnOne}" headerValue="Address Info" headerClass="TableTitle" style="font-weight: bold;"
+                                    Width="200px" />
+                                <apex:column value="{!varVal.strColumnTwo}" headerValue="" headerClass="TableTitle" Width="250px" />
+                            </apex:pageblocktable>
+                        </tr>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+                <center>
+                    <span>Select an address from below dropdown</span>
+                    <br/>
+                    <br/>
+                    <apex:selectList value="{!defaultAddress}" size="1">
+                        <apex:selectOptions value="{!dynamicOptions}" />
+                    </apex:selectList>
+                    <br/>
+                    <br/>
+                    <apex:commandButton value="SUBMIT" action="{!reDirectToSterling}" />
+                    <input id="close" type="button" class="btn" value="Cancel" onclick="popupSterling('popUpDivSterling', null)" />
+                </center>
+            </apex:form>
+        </div>
+
+        <div id="blanketSFAQuote" style="display:none;"> </div>
+        <div id="popUpDivSFAQuote" style="display:none;">
+            <apex:form >
+                <apex:pageBlock >
+                    <apex:pageBlockSection title="List of SFA Addresses" id="custinfo" columns="1" rendered="{!displayAddressGrid}">
+                        <tr>
+                            <apex:pageblockTable value="{!addressinfo}" var="varVal">
+                                <apex:column value="{!varVal.strColumnOne}" headerValue="Address Info" headerClass="TableTitle" style="font-weight: bold;"
+                                    Width="200px" />
+                                <apex:column value="{!varVal.strColumnTwo}" headerValue="" headerClass="TableTitle" Width="250px" />
+                            </apex:pageblocktable>
+                        </tr>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+                <center>
+                    <span>Select an address from below dropdown</span>
+                    <br/>
+                    <br/>
+                    <apex:selectList value="{!defaultAddress}" size="1">
+                        <apex:selectOptions value="{!dynamicOptions}" />
+                    </apex:selectList>
+                    <br/>
+                    <br/>
+                    <apex:commandButton value="SUBMIT" action="{!reDirectToSFAQuote}" />
+                    <input id="close" type="button" class="btn" value="Cancel" onclick="popupSterling('popUpDivSFAQuote', null)" />
+                </center>
+            </apex:form>
+        </div>
+
+        <div id="generate-blanket" style="display:none; top:600px margin-left:-1.5%;"> </div>
+        <div id="generatePopDiv" style="display:none; left:2px">
+            <apex:Form >
+                <apex:outputPanel id="generatePopup">
+                    <apex:outputPanel styleClass="popupBackground" layout="block" />
+                    <!-- rendered="{!displayPopUp}" -->
+                    <apex:outputPanel id="popupGenerateformpanel" styleClass="custPopup" layout="block">
+                        <!-- rendered="{!displayPopUp}" -->
+                        <apex:pageBlock title="Information For Schedule" id="popupblockk">
+                            <apex:outputLabel value="You should create a Contract to your account in order to generate a schedule" />
+                        </apex:pageBlock>
+                        <div style="padding-left:23em;">
+                            <input type="button" class="btn" value="Generate Contract" Class="generate-button" onclick="window.open('{!URLFOR($Action.Contract.New,null,[ctrc7=objOpp.Account.Name,ctrc7_lkid=objOpp.AccountId,ctrc5=dtToday],false)}','_blank');schedulepopup('generatePopDiv');"
+                            /> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input id="close" class="btn" type="button" value="Close" onclick="schedulepopup('generatePopDiv');" />
+                        </div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:Form>
+        </div>
+    </apex:outputpanel>
+    <style type="text/css">
+        .docusigncustpopup {
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding: 10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top: 100px;
+        }
+
+        .docusignBackGround {
+            background-color: black;
+            opacity: 0.20;
+            filter: alpha(opacity=20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+    </style>
+
+    </apex:outputPanel>
+</apex:page>

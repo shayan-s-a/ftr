@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Set Comments when Frame Rate is 9600</description>
+        <name>Set_Comments</name>
+        <label>Set Comments</label>
+        <locationX>68</locationX>
+        <locationY>153</locationY>
+        <assignmentItems>
+            <assignToReference>DGF.Description__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Frame Rate is &lt;=9600. Services will need to be delivered by Fiber Transport</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_DGF</targetReference>
+        </connector>
+    </assignments>
+    <interviewLabel>DGF - Add Fiber Requirement Comment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DGF - Add Fiber Requirement Comment</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Find_Parent_DGF</name>
+        <label>Find Parent DGF</label>
+        <locationX>68</locationX>
+        <locationY>56</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Comments</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>DGF_ID</elementReference>
+            </value>
+        </filters>
+        <object>DGF__c</object>
+        <outputReference>DGF</outputReference>
+        <queriedFields>Description__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_DGF</name>
+        <label>Update DGF</label>
+        <locationX>70</locationX>
+        <locationY>257</locationY>
+        <inputReference>DGF</inputReference>
+    </recordUpdates>
+    <startElementReference>Find_Parent_DGF</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>DGF</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>DGF__c</objectType>
+    </variables>
+    <variables>
+        <name>DGF_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

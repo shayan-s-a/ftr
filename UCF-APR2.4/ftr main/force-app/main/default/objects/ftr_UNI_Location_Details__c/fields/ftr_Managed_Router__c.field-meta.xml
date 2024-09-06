@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ftr_Managed_Router__c</fullName>
+    <externalId>false</externalId>
+    <label>Managed Router</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CISCO ISR4321-SEC/K9 P/N:ISR4321-SEC/K9</fullName>
+                <default>false</default>
+                <label>CISCO ISR4321-SEC/K9 P/N:ISR4321-SEC/K9</label>
+            </value>
+            <value>
+                <fullName>CISCO ISR4331-SEC/K9 P/N:ISR4331-SEC/K9</fullName>
+                <default>false</default>
+                <label>CISCO ISR4331-SEC/K9 P/N:ISR4331-SEC/K9</label>
+            </value>
+            <value>
+                <fullName>CISCO ISR4431-SEC/K9 P/N:ISR4431-SEC/K9</fullName>
+                <default>false</default>
+                <label>CISCO ISR4431-SEC/K9 P/N:ISR4431-SEC/K9</label>
+            </value>
+            <value>
+                <fullName>CISCO ISR4451-SEC/K9 P/N:ISR4451-SEC/K9</fullName>
+                <default>false</default>
+                <label>CISCO ISR4451-SEC/K9 P/N:ISR4451-SEC/K9</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Won__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason Won</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>E-Rate Evaluation</fullName>
+                <default>false</default>
+                <label>E-Rate Evaluation</label>
+            </value>
+            <value>
+                <fullName>Existing Services</fullName>
+                <default>false</default>
+                <label>Existing Services</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Product Offering</fullName>
+                <default>false</default>
+                <label>Product Offering</label>
+            </value>
+            <value>
+                <fullName>Promotion/Campaign</fullName>
+                <default>false</default>
+                <label>Promotion/Campaign</label>
+            </value>
+            <value>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+                <label>Relationship</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed/Won</controllingFieldValue>
+            <valueName>E-Rate Evaluation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed/Won</controllingFieldValue>
+            <valueName>Existing Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed/Won</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed/Won</controllingFieldValue>
+            <valueName>Product Offering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed/Won</controllingFieldValue>
+            <valueName>Promotion/Campaign</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed/Won</controllingFieldValue>
+            <valueName>Relationship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed/Won</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

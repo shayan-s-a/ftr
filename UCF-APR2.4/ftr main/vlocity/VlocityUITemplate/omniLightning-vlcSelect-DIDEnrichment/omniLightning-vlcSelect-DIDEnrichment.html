@@ -1,0 +1,52 @@
+<div class='slds-col--padded slds-size--1-of-1' ng-controller="vlcSelectDIDController">
+
+    <ng-form name='loopform'
+             class='slds-form-element vlc-flex vlc-slds-select-control'
+             ng-repeat='control in child.eleArray'>
+
+        <div class='slds-form-element__control slds-input-has-icon slds-has-input-has-icon--right' >
+            <label for="{{::control.name}}" class='slds-form-element__label' style="font-weight:400;padding-bottom: 0.5rem;font-size: 0.9rem;">{{::control.propSetMap.label}}
+                <span class='vlc-asterix icon-v-asterix'
+                        ng-if='control.req'>
+                </span>
+            </label>
+            <div class="slds-select_container vlc-control-wrapper vlc-slds__border vlc-slds__border--primary" help="{{::control.propSetMap.help}}">
+                
+                <span class="vlc-slds-form-element__center--horizontal" style="padding-top: 0rem; ">
+                    {{ control.response.name }}
+                </span>
+
+                <!-- this select control should not be visible to the user -->
+                <select name='loopname'
+                        id='{{::control.name}}'
+                        style='opacity:-1'
+                        ng-disabled='control.ro'
+                        ng-required='control.req'
+                        ng-model='control.response'
+                        class='slds-select'
+                        vlc-slds-val-checker="response"
+                        ng-init='init(this, control)'
+                        ng-options='sOption as sOption.name for sOption in bpTree.response.CurrentServiceLocation.DIDLocations track by sOption.value'
+                        ng-change='setElementData("SelectedDIDLocation", control.response.value);autoAdvance(control.response.autoAdv);aggregate(this, control.index, control.indexInParent, true, -1)'> 
+                </select>
+
+                <!-- tooltip template -->
+                <a vlc-slds-tool-tip="test" ng-show="{{control.propSetMap.help}}"> i </a>
+                
+            </div>
+            
+            <slds-svg-icon aria-hidden="true"
+                           sprite="'utility'"
+                           icon="'down'"
+                           size="'small'"
+                           style="top: 3.5rem !important;"
+                           extra-classes="'slds-button__icon slds-button__icon--large'">
+            </slds-svg-icon>
+
+            <div ng-include="::errHTMLId"></div>
+
+        </div>
+
+    </ng-form>
+
+</div>

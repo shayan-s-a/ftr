@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>Changes the Stage Owner to Implementation Specialist if the Stage is selected as PM Enrichment.</description>
+    <environments>Default</environments>
+    <interviewLabel>Change Stage Owner to Implementation Specialist {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Change Stage Owner to Implementation Specialist</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Stage_Owner</name>
+        <label>Update Stage Owner</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Order_Stage__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PM Assignment</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Network_Project_Specialist__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Products__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>UCF</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Order_Stage__c</field>
+            <value>
+                <stringValue>PM Enrichment</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Network_Project_Specialist__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>vlocity_cmt__OrderStatus__c</field>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Stage_Owner</targetReference>
+        </connector>
+        <object>Order</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

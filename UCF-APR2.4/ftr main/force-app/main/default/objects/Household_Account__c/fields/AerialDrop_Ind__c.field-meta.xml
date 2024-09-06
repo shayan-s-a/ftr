@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AerialDrop_Ind__c</fullName>
+    <description>Indicates whether an aerial drop (overhead cabling) is present or required at the property, impacting installation processes.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates whether an aerial drop (overhead cabling) is present or required at the property, impacting installation processes.</inlineHelpText>
+    <label>Aerial Drop Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Y</fullName>
+                <default>false</default>
+                <label>Y</label>
+            </value>
+            <value>
+                <fullName>N</fullName>
+                <default>false</default>
+                <label>N</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

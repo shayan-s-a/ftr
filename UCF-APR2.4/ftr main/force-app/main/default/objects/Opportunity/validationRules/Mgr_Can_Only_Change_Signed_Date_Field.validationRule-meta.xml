@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mgr_Can_Only_Change_Signed_Date_Field</fullName>
+    <active>true</active>
+    <description>Not authorized to change auditted fields on an approved Opportunity.</description>
+    <errorConditionFormula>AND(OR( ISPICKVAL(Mrg_Approved__c, &quot;Closed (Ink)&quot;),  ISPICKVAL( PRIORVALUE(Mrg_Approved__c), &quot;Closed/Won&quot;)), OR(( $Profile.Id = &quot;00eL0000000HgrS&quot;),( $Profile.Id = &quot;00eL0000000HgrX&quot;)), OR( ISCHANGED(Name), ISCHANGED(OwnerId), ISCHANGED(CloseDate),  ISCHANGED(CPE_NRC__c),ISCHANGED( Total_CPE_NRC__c ), ISCHANGED(MRR_Amount__c), ISCHANGED(Net_New_MRR__c), ISCHANGED( Total_Monthly_Amount__c ), ISCHANGED( Renewal_MRR__c ), ISCHANGED( StageName ), ISCHANGED( Audited_By__c ), ISCHANGED( Date_Audited__c ), ISCHANGED( Mrg_Approved__c ), ISCHANGED( Date_of_Execution__c ),  ISCHANGED( Who_Executed_Contract_on_Cust_Behalf__c ), ISCHANGED(Product_name__c), ISCHANGED(TotalOpportunityQuantity), ISCHANGED( RPON_Order__c ) ))</errorConditionFormula>
+    <errorMessage>Not authorized to change auditted fields on an approved Opportunity</errorMessage>
+</ValidationRule>

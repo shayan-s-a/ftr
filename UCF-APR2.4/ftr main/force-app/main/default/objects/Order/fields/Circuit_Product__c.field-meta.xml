@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Circuit_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Circuit Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2 - Wire</fullName>
+                <default>false</default>
+                <label>2 - Wire</label>
+            </value>
+            <value>
+                <fullName>4 - Wire</fullName>
+                <default>false</default>
+                <label>4 - Wire</label>
+            </value>
+            <value>
+                <fullName>BOT</fullName>
+                <default>false</default>
+                <label>BOT</label>
+            </value>
+            <value>
+                <fullName>BRI</fullName>
+                <default>false</default>
+                <label>BRI</label>
+            </value>
+            <value>
+                <fullName>Circuit Other (SONET, Frame Relay, etc.)</fullName>
+                <default>false</default>
+                <label>Circuit Other (SONET, Frame Relay, etc.)</label>
+            </value>
+            <value>
+                <fullName>E911/CAMA Trunks/SS7</fullName>
+                <default>false</default>
+                <label>E911/CAMA Trunks/SS7</label>
+            </value>
+            <value>
+                <fullName>FOTS</fullName>
+                <default>false</default>
+                <label>FOTS</label>
+            </value>
+            <value>
+                <fullName>Off-Premise Extension</fullName>
+                <default>false</default>
+                <label>Off-Premise Extension</label>
+            </value>
+            <value>
+                <fullName>PRI</fullName>
+                <default>false</default>
+                <label>PRI</label>
+            </value>
+            <value>
+                <fullName>Private Line DS3</fullName>
+                <default>false</default>
+                <label>Private Line DS3</label>
+            </value>
+            <value>
+                <fullName>Private Line T1 / DS1/Smart-T</fullName>
+                <default>false</default>
+                <label>Private Line T1 / DS1/Smart-T</label>
+            </value>
+            <value>
+                <fullName>BOTS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BOTS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

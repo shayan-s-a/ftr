@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSA_SaM_Update_Case_Ownership</fullName>
+    <active>false</active>
+    <description>CSAs and SAMs can only change ownership of cases which they are the current owner</description>
+    <errorConditionFormula>AND( 
+ISCHANGED(OwnerId), 
+PRIORVALUE(OwnerId) &lt;&gt; $User.Id, 
+$Profile.Name = &quot;#CTF Customer Service Analyst&quot; 
+)</errorConditionFormula>
+    <errorMessage>The Ownership of this Case cannot be changed.</errorMessage>
+</ValidationRule>

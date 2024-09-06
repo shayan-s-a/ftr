@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Send To Email Addresses">
+        <div class="slds-p-around_medium">
+            <lightning-input class="custom-input"
+                label="Send To"
+                type="email"
+                multiple
+                value={sendToEmails}
+                onchange={handleInputChange}
+                required
+            ></lightning-input>
+            
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,78 @@
+<aura:component
+  implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader"
+  access="global"
+  controller="WSQuoteController"
+>
+  <!--WSSubmitApproval-->
+
+  <aura:attribute name="recordId" type="Id" />
+  <aura:attribute name="showSuccess" type="Boolean" default="false"/>  
+  <aura:attribute name="showError" type="Boolean" default="false"/>  
+    
+  <aura:handler name="init" value="{!this}" action="{!c.init}" />
+  <article>
+      <div>
+        <aura:if isTrue="{!v.showSuccess}">
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-1"
+          >
+            <p><b>Quote Submitted for Approval</b></p>
+          </div>
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-2"
+          ></div>
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-3"
+          ></div>
+        </aura:if>
+        <aura:if isTrue="{!v.showError}">
+          <div
+            class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-1">
+            <p><b>Cannot Submit Quote for Approval</b></p>
+          </div>
+        </aura:if>
+
+        <footer class="slds-card__footer">
+          <div class="slds-text-align_right">
+            <lightning:button
+              variant="brand"
+              label="Close"
+              title="Close"
+              onclick="{! c.hideModel }"
+            />
+          </div>
+        </footer>
+      </div>
+  
+      
+      
+      <!--  <header>
+        <aura:if isTrue="{!v.showSuccess}">
+            <div class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-1">
+                <p><b>Quote Submitted for Approval</b></p></div>
+
+        </aura:if>
+        <aura:if isTrue="{!v.showError}">
+            <div class="slds-modal__content slds-p-around_medium"
+            id="modal-content-id-1">
+                <p><b>Failed to submit Quote for Approval</b></p></div>
+        </aura:if>        
+         </header>
+
+    <footer class="slds-card__footer">
+      <div class="slds-text-align_right">
+        <lightning:button
+          variant="brand"
+          label="Close"
+          title="Close"
+          onclick="{! c.hideModel }"
+        />
+      </div>
+    </footer> -->
+  </article>
+</aura:component>

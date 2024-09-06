@@ -1,0 +1,16 @@
+<html>
+       <head>
+          
+        </head>
+        <body>
+            <h1>DI 711 Order</h1>
+            <p>PM Name - {!PMName}</p>
+            <p>DPI Order Number - {!OrderNumber}</p>
+            <p>NPA-711 - {!BillingTelephoneNumber}</p>
+            <p>Due Date - {!Duedate}</p>
+            <p>Service address Of Site Survey- {!ServiceAddress}</p>
+            <p>Customer CBR Info - {!LocationContact}</p>
+            <h3> Phones & Accessories</h3>
+            <p>{!OrderItem}</p>
+        </body>
+    </html>

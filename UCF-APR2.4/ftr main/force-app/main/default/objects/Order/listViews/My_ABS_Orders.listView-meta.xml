@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_ABS_Orders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ABS_MRC_Amount__c</columns>
+    <columns>ABS_NRC_Amount__c</columns>
+    <columns>Total_ABS_Revenue__c</columns>
+    <columns>ORDER.SHIPPING_CITY</columns>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled,Complete</value>
+    </filters>
+    <label>My ABS Orders</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ABS_Customer_Service_Supervisor</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

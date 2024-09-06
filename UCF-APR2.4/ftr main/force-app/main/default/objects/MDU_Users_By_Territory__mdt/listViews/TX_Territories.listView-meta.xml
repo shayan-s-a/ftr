@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TX_Territories</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>State_Code__c</field>
+        <operation>equals</operation>
+        <value>TX</value>
+    </filters>
+    <filters>
+        <field>MasterLabel</field>
+        <operation>contains</operation>
+        <value>MDU</value>
+    </filters>
+    <label>TX Territories</label>
+    <language>en_US</language>
+</ListView>

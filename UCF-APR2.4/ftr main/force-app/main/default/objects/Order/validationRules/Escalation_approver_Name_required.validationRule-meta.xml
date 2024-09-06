@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalation_approver_Name_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+Non_Pay_Escalation__c,TRUE, 
+ISBLANK(Escalation_approver_name__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Escalation_approver_name__c</errorDisplayField>
+    <errorMessage>Escalation Approver Name is required</errorMessage>
+</ValidationRule>

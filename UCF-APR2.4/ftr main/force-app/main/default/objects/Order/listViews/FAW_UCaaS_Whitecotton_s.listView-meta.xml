@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAW_UCaaS_Whitecotton_s</fullName>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>Order_Stage__c</columns>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Customer_Requested_Date__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>CPE_DCS__c</columns>
+    <columns>CPE_COE_Stage__c</columns>
+    <columns>Hot_Cut__c</columns>
+    <columns>Hot_Cut_Stage__c</columns>
+    <columns>VoIP_Translations__c</columns>
+    <columns>VoIP_Translations_Stage__c</columns>
+    <columns>CPE_COE__c</columns>
+    <columns>CPE_DCS_Stage__c</columns>
+    <columns>Product__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product__c</field>
+        <operation>startsWith</operation>
+        <value>FAW UCaaS</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Complete,Cancelled</value>
+    </filters>
+    <filters>
+        <field>SALES.ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>Test Company</value>
+    </filters>
+    <label>FAW UCaaS - Whitecotton&apos;s</label>
+    <sharedTo>
+        <group>Whitecotton</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auth_name_is_required</fullName>
+    <active>true</active>
+    <description>If the MRC and Engineering Fees are waived and it’s YES-  then the Authorization Name field MUST be filled in.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(MRC_and_Engineering_Fees_Waived__c, &quot;Yes&quot;),
+ISBLANK(Authorization_Name__c)
+)</errorConditionFormula>
+    <errorDisplayField>MRC_and_Engineering_Fees_Waived__c</errorDisplayField>
+    <errorMessage>Authorization Name is required if MRC and Engineering Fees Waived is Yes</errorMessage>
+</ValidationRule>

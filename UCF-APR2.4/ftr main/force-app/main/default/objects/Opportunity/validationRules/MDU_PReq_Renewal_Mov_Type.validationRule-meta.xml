@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_PReq_Renewal_Mov_Type</fullName>
+    <active>true</active>
+    <description>Controls that this field don´t be empty when changing to Proforma
+Requested Status</description>
+    <errorConditionFormula>AND(RecordType.Name = &quot;Community Connections&quot;,
+ISPICKVAL(StageName ,&quot;Proforma Requested&quot;),
+ISBLANK(TEXT(Renewal_Movement_Type__c)),
+ISPICKVAL(Contract_Category__c, &quot;Renewal&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Renewal_Movement_Type__c</errorDisplayField>
+    <errorMessage>Renewal Movement Type is missing.</errorMessage>
+</ValidationRule>

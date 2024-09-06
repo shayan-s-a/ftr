@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Account_Creation_Restricted</fullName>
+    <active>true</active>
+    <description>Rule prevents unauthorized users from creating accounts.</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+$User.Account_Creation_Allowed__c &lt;&gt; TRUE,
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Direct Sales Support&apos;,
+$Profile.Name &lt;&gt; &apos;Direct Sales Support Admin&apos;,
+$Profile.Name &lt;&gt; &apos;Frontier System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Multifamily Sales&apos;,
+$Profile.Name &lt;&gt; &apos;#Alternate Channel - Sales Support&apos;,
+$Profile.Name &lt;&gt; &apos;Multifamily Leadership&apos;,
+$Profile.Name &lt;&gt; &apos;Frontier Auditor&apos;,
+$Profile.Name &lt;&gt; &apos;Offline Promo&apos;,
+$Profile.Name &lt;&gt; &apos;#CTF Small Business User&apos;,
+$Profile.Name &lt;&gt; &apos;#Alternate Channel Manager&apos;,
+$Profile.Name &lt;&gt; &apos;#Alternate Channel Leadership&apos;,
+$Profile.Name &lt;&gt; &apos;#Commercial SMB Sales&apos;,
+$Profile.Name &lt;&gt; &apos;Lead Development Rep (LDR)&apos;,
+$Profile.Name &lt;&gt; &apos;#MTU&apos;,
+RecordType.Name!=&apos;Service&apos;,
+RecordType.Name!=&apos;Billing&apos;,
+RecordType.Name!=&apos;Grant Company&apos;,
+NOT(
+AND(
+ftr_Approved_Creation_Process__c = true,
+$Profile.Name = &apos;Frontier Partner Portal User&apos;,
+RecordType.Name = &apos;Master&apos;,
+Parent.Name = &apos;Global Portal Account&apos;
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>DPI_Aging_00_30__c</errorDisplayField>
+    <errorMessage>This profile is restricted from creating new accounts. Please enter an Account Management case and provide the following information:  Account Name, BTN, Billing and Service Addresses.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>PAL__c.MDU_Engineering_Contact__c</field>
+    </columns>
+    <columns>
+        <field>PAL__c.MDU_Email__c</field>
+    </columns>
+    <columns>
+        <field>PAL__c.MDU_Milestone_Status__c</field>
+    </columns>
+    <columns>
+        <field>PAL__c.MDU_Notes_and_comments__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Milestone Tracker - Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$PAL__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>PAL__c.Agreement_Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

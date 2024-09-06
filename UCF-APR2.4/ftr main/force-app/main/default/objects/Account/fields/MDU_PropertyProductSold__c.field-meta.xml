@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_PropertyProductSold__c</fullName>
+    <externalId>false</externalId>
+    <label>Property Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ARO Custom</fullName>
+                <default>false</default>
+                <label>ARO Custom</label>
+            </value>
+            <value>
+                <fullName>Dish</fullName>
+                <default>false</default>
+                <label>Dish</label>
+            </value>
+            <value>
+                <fullName>U-verse</fullName>
+                <default>false</default>
+                <label>U-verse</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

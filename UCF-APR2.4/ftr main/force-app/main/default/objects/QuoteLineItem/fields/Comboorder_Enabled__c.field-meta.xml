@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comboorder_Enabled__c</fullName>
+    <externalId>false</externalId>
+    <formula>if (vlocity_cmt__Product2Id__r.ProductCode =&quot;ENT_ETH_EIA_0002&quot;,True,if (vlocity_cmt__Product2Id__r.ProductCode =&quot;ENT_ETH_EVPL_0010&quot;,True,False))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Comboorder_Enabled</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,66 @@
+<div class='slds-col_padded slds-size_1-of-1 customer-info-table' ng-controller="customTableController"
+	ng-hide="child.eleArray[0].propSetMap.hide">
+	<table class="slds-card slds-table slds-table_bordered slds-table_cell-buffer">
+		<thead>
+			<tr class="slds-text-heading_small list-row">
+				<th scope="col" ng-if="child.eleArray[0].propSetMap.selectable">
+				</th>
+				<th ng-repeat="col in child.eleArray[0].propSetMap.columns" scope="col" class="list-row"
+					ng-click='sortColumn(col.apiName)' ng-if="!child.eleArray[0].propSetMap.noSort">
+					<div class="slds-truncate">{{col.label}}</div>
+				</th>
+				<th ng-repeat="col in child.eleArray[0].propSetMap.columns" scope="col" class="list-row"
+					ng-if="child.eleArray[0].propSetMap.noSort">
+					<div class="slds-truncate" style="cursor: default;">{{col.label}}</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody id="table-to-refresh">
+			<tr ng-repeat='(recordIndex, record) in tableData | orderBy:sort.column:sort.descending | limitTo:table.pageSize track by $index' class="list-row">
+				<td class="slds-cell-shrink"
+					ng-if="child.eleArray[0].propSetMap.selectable && !child.eleArray[0].propSetMap.multiSelect">
+					<span class="slds-radio">
+						<input ng-click="evaluateChange(record)" type="radio" id="table-data-{{record.Id}}" ng-checked="bpTree.response[child.eleArray[0].propSetMap.path].Id == record.Id" ng-value="record" name="default" />
+						<label for="table-data-{{record.Id}}" class="slds-radio__label" >
+							<span class="slds-radio_faux"></span>
+					</label>
+					</span>
+				</td>
+				<td class="slds-cell-shrink"
+					ng-if="child.eleArray[0].propSetMap.selectable && child.eleArray[0].propSetMap.multiSelect">
+					<span class="slds-checkbox">
+						<input ng-model="record.selected" ng-change="evaluateChange(record)" type="checkbox" id="table-data-{{record.Id}}-{{$index}}" />
+						<label for="table-data-{{record.Id}}-{{$index}}" class="slds-checkbox__label" >
+							<span class="slds-checkbox_faux"></span>
+					</label>
+					</span>
+				</td>
+				<td ng-repeat='col in child.eleArray[0].propSetMap.columns'>
+					<label ng-if="record[col.apiName] == true" class="slds-truncate">Yes</label>
+					<label ng-if="record[col.apiName] == false" class="slds-truncate">No</label>
+					<label ng-if="record[col.apiName] != false && record[col.apiName] != true && col.apiName != 'Name'" class="slds-truncate">{{record[col.apiName]}}</label>
+					<label ng-if="col.apiName == 'Name' " class="slds-truncate">{{record[col.apiName]}} - {{alphabet[recordIndex]}} </label>
+					<label ng-if="col.apiName == 'isSuccess' " class="slds-truncate">
+						<svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.408"></g><g id="SVGRepo_iconCarrier"> <circle opacity="0.5" cx="12" cy="12" r="10" stroke="#000000" stroke-width="1.5"></circle> <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+					</label>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="slds-grid pagination" ng-if="table.totalRecordCount > table.pageSize && tableData.length > 0">
+		<p class="content" style="width:100%;">
+			Page {{table.currentPage+1}} of {{numberOfPages()}}. </p>
+		<div class="slds-grid" style="width:100%;place-content: flex-end;">
+			<div style="padding:0.5rem;">
+				<button class="slds-button slds-button_icon slds-button_icon-border" title="Previous" ng-click="previousHandler()" ng-disabled="table.currentPage == 0">
+						<span class="arrow left"></span>
+					</button>
+			</div>
+			<div style="padding:0.5rem;">
+				<button class="slds-button slds-button_icon slds-button_icon-border" title="Next" ng-click="nextHandler()" ng-disabled="table.currentPage >= table.totalRecordCount/table.pageSize - 1">
+						<span class="arrow right"></span>
+					</button>
+			</div>
+		</div>
+	</div>
+</div>

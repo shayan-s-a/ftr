@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Ent_Opps_Sharing_to_National</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ent Opps Sharing to National</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>National</roleAndSubordinatesInternal>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>equals</operation>
+            <value>Grow Frontier</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>startsWith</operation>
+            <value>Grow Frontier,GF</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MDU_Opportunity_R_W</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MDU Opportunity R/W</label>
+        <sharedTo>
+            <group>MDU_Opportunity_R_W</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Community Connections</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Alt_Ch_Int_Partner_Oppty_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Alt Ch Int: Partner Oppty Access</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>B2B_Alt_Channel</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <portalRoleAndSubordinates>FrontierPartnerPortalPartnerUser</portalRoleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Alt_Channel_Int_Oppty_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Alt Channel Int: Oppty Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>B2B_Alt_Channel</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>B2B_Alt_Channel</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Enterprise_Oppty_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Enterprise Oppty Sharing</label>
+        <sharedTo>
+            <group>Enterprise_Sales_Org</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Enterprise_Sales_Org</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Federal_Oppty_Access_Central</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Federal Oppty Access Central</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Federal_B2B</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Central</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Federal_Oppty_Access_East</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Federal Oppty Access East</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Federal_B2B</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>East</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Federal_Oppty_Access_West</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Federal Oppty Access West</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Federal_B2B</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>West</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Opportunity_Sharing_with_Sales_Support_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Opportunity Sharing with Sales Support Team</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Sales_Support_Director</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <group>Enterprise_Sales_Org</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Retention_Oppty_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Retention Oppty Access</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Retention</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Global</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

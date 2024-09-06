@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Bill__c</fullName>
+    <description>Customer Monthly Bill Average</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Monthly Bill is the average bill amount over a 3 month period.  This value is advisory and could vary greatly from typical bill months.</inlineHelpText>
+    <label>Monthly Bill</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

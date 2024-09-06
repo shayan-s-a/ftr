@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_is_required_for_MDU</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        RecordType.DeveloperName = &quot;MDU_Lead&quot;,
+        RecordType.DeveloperName = &quot;MDU_MTU_Lead&quot;
+    ),
+    OR(
+        ISBLANK(Street),
+        ISBLANK(State),
+        ISBLANK(PostalCode)
+    ),
+AND(
+NOT(ISPICKVAL(Status, &quot;Rejected - Disqualify&quot;)),
+NOT(ISPICKVAL(Status, &quot;Rejected - Duplicate&quot;)),
+NOT(ISPICKVAL(Status, &quot;Rejected - Return to Nurture Stream&quot;))
+)
+)</errorConditionFormula>
+    <errorMessage>Address is required</errorMessage>
+</ValidationRule>

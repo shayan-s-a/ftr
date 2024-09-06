@@ -1,0 +1,91 @@
+.THIS table.dataTable thead .sorting::after {
+    content: '';
+}
+
+.THIS table.dataTable thead .sorting_desc::after {
+    content: '';
+}
+
+.THIS table.dataTable thead .sorting_asc::after {
+    content: '';
+}
+
+.THIS table.dataTable thead th {
+    padding-left: 10px !important;
+}
+
+.THIS table.dataTable thead th:first-child {
+    padding-left: 24px !important;
+}
+
+.THIS .dataTables_length {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.THIS .dataTables_filter {
+    white-space: nowrap;
+}
+
+.THIS table.dataTable tfoot th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.THIS table.dataTable tfoot th:first-child {
+    padding-left: 10px;
+}
+
+.THIS .paginate_button.current {
+    background: white !important;
+    border: 1px solid black !important;
+}
+
+.THIS .paginate_button:hover {
+    background: #F2F2F6 !important;
+    border: 1px solid black !important;
+    color: black !important;
+}
+
+.THIS .paginate_button.disabled:hover {
+    background: none !important;
+    border: 1px solid transparent !important;
+    color: black !important;
+}
+
+.THIS .dataTable {
+    box-shadow: 1px 2px 3px lightgrey!important;
+    border: 1px solid lightgrey;
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.THIS .dataTables_wrapper .dataTables_paginate .paginate_button[aria-controls="tableId"]:hover {
+    color: black !important;
+}
+
+.THIS .slds-hidden {
+    display: none;
+}
+
+.THIS .reload-btn {
+    width: fit-content;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.THIS #tableId.slds-table th, .THIS #tableId.slds-table td {
+    white-space: break-spaces !important;
+}
+
+.THIS td.details-control {
+    background: url('../resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+.THIS tr.shown td.details-control {
+    background: url('../resources/details_close.png') no-repeat center center;
+}

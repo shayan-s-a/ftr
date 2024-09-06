@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(WorkGroupId__r.Field__c,
+  &quot;Network_Project_Specialist__c&quot;, &quot;Network Project Specialist&quot;,
+  &quot;Order_Provisioner__c&quot;, &quot;Order Provisioner&quot;,
+  &quot;Implementor_PM__c&quot;, &quot;Project Manager&quot;, 
+  &quot;&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Field</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

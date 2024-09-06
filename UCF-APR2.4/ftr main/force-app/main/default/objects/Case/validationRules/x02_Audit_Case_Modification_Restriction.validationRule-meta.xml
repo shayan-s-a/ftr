@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x02_Audit_Case_Modification_Restriction</fullName>
+    <active>false</active>
+    <description>Only Frontier Admins and specified Audit users can modify Audit Cases.</description>
+    <errorConditionFormula>AND(&#xD;
+    NOT(ISNEW()),&#xD;
+    RecordType.DeveloperName = "Audit",&#xD;
+    $User.Id &lt;&gt; '005E0000002bMNB', /* Cynthia Hendricks */&#xD;
+    $User.Id &lt;&gt; '00540000000wVUA', /* Denise Robertson */&#xD;
+    $User.Id &lt;&gt; '005E0000003YGZl', /* Todd Bowser */&#xD;
+    $User.Id &lt;&gt; '00540000001jrYu', /* Valerie Moore */&#xD;
+    $Profile.Id &lt;&gt; '00e40000000nYck' /* Frontier System Administrator*/&#xD;
+)</errorConditionFormula>
+    <errorMessage>Only Frontier System Administrators/Auditors can modify Audit Cases.&#xD;
+Case Error x02.</errorMessage>
+</ValidationRule>

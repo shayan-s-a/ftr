@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Update all related Sites so that their State matches the Exchange&apos;s State.</description>
+    <interviewLabel>Update all related Sites so that their State matches the Exchange&apos;s State. {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Cascade Exchange&apos;s State to Related Sites</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update all related Sites so that their State matches the Exchange&apos;s State.</description>
+        <name>Update_Related_Sites_so_that_State_Matches</name>
+        <label>Update Related Sites so that State Matches</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Exchange__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>sitetracker__State__c</field>
+            <value>
+                <elementReference>$Record.State__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>sitetracker__Site__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Related_Sites_so_that_State_Matches</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>State__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Exchange__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

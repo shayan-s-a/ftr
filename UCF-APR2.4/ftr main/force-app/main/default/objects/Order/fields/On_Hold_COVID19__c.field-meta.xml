@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>On_Hold_COVID19__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created Check box for Order Entry Team to identify order is on hold by customer given the COVID19 impact. This is a temperary field and is view only for all except the Order Entry Teams.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to tag orders being placed on hold due to COVID19 per customer request.</inlineHelpText>
+    <label>On Hold - COVID19</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

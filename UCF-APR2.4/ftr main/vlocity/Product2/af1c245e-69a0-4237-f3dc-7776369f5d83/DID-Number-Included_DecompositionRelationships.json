@@ -1,0 +1,33 @@
+[
+    {
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__DestinationDefaultQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMaxQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMinQuantity__c": 1,
+        "%vlocity_namespace%__DestinationProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "57c3ab17-4caf-923c-6365-4deff94c9945",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "Product2/57c3ab17-4caf-923c-6365-4deff94c9945",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__GlobalKey__c": "c34f9b00-97c3-2581-caf8-c33f0e77147b",
+        "%vlocity_namespace%__MappingsData__c": "[{\"source_attr_name\":\"DID Included Number\",\"mapping_type\":\"ad-verbatim\",\"destination_attr_name\":\"DID Included Number\",\"destination_attr_code\":\"ATTR_DID_INC_NUMBER\",\"source_attr_code\":\"ATTR_DID_INC_NUMBER\",\"source_type\":\"Attribute\"}]",
+        "%vlocity_namespace%__Priority__c": "",
+        "%vlocity_namespace%__RequireReservation__c": false,
+        "%vlocity_namespace%__SourceDefaultQuantity__c": 1,
+        "%vlocity_namespace%__SourceMaxQuantity__c": "",
+        "%vlocity_namespace%__SourceMinQuantity__c": 0,
+        "%vlocity_namespace%__SourceProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "af1c245e-69a0-4237-f3dc-7776369f5d83",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/af1c245e-69a0-4237-f3dc-7776369f5d83",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__SourceProductId__r.%vlocity_namespace%__GlobalKey__c": "af1c245e-69a0-4237-f3dc-7776369f5d83",
+        "%vlocity_namespace%__XORGroup__c": "",
+        "Name": "DID Included To SIP CFS",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DecompositionRelationship__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__DecompositionRelationship__c/DID Included To SIP CFS/Product2/af1c245e-69a0-4237-f3dc-7776369f5d83"
+    }
+]

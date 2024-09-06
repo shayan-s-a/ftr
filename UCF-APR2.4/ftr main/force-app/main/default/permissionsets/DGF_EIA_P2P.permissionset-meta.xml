@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>DGF - EIA_P2P</label>
+    <recordTypeVisibilities>
+        <recordType>DGF__c.EIA</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>DGF__c.Simple_Point_to_Point_ELINE</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

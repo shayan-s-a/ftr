@@ -1,0 +1,95 @@
+$error-color: rgb(186, 5, 23);
+
+
+.customer-info-table {
+
+    table{
+        border: 1px solid lightgrey;
+        border-collapse: collapse;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: left;
+        th div{
+            cursor: pointer;
+        }
+    }
+
+    .arrow {
+        border: solid grey;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        height: 0.9rem;
+        width: 0.9rem;
+        margin: 7px;
+        margin-top: 8px;
+        border-radius: 2px;
+    }
+
+    .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        margin-left: 3px;
+    }
+
+    .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        margin-right: 3px;
+    }
+
+    #clear-btn {
+        color: $error-color;
+        padding: 3px;
+        cursor: pointer;
+    }
+    .pagination {
+        width: 100%;
+        flex-direction: column;
+        vertical-align: baseline;
+        text-align: end;
+    }
+    .sort-true {
+        font-weight: bold;
+    }
+    .sort-false {
+        font-weight: bold;
+    }
+
+    .tm_icon_magenta {
+        fill: #1564bf !important;
+        padding: 3px;
+        cursor: pointer;
+    }
+    .disabled_checkbox {
+        pointer-events: none !important; //This makes it not clickable
+    }
+     .slds-table_bordered {
+        border-collapse: collapse;
+    }
+    input[type="checkbox"]{
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+    }
+     .slds-button_brand{
+        display: block;
+    }    
+    .slds-input {
+        min-height: 2rem !important;
+        height: 2rem !important;
+        width: fit-content !important;
+    }
+
+    .list-row {
+        font-size: 0.9rem;
+        line-height: 2rem;
+
+        
+    }
+
+    button:disabled {
+        background: #f3f1f1;
+        border: 1px solid lightgrey !important;
+    }
+}

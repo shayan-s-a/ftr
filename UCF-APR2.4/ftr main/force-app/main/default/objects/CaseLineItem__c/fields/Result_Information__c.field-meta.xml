@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Result_Information__c</fullName>
+    <description>As a current Alert Tracker user, I need to have the ability to select from a menu a Result so that every case contains Result information for every Contact attempt. Values to include Busy Signal, Disconnected, Email Submitted, Fax Sent, Left Message, No Message Left, Other, Ring No Answer, Spoke With, Too Early/Too Late, Wrong Contact</description>
+    <externalId>false</externalId>
+    <label>Result Information</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Busy Signal</fullName>
+                <default>false</default>
+                <label>Busy Signal</label>
+            </value>
+            <value>
+                <fullName>Disconnected</fullName>
+                <default>false</default>
+                <label>Disconnected</label>
+            </value>
+            <value>
+                <fullName>Email Submitted</fullName>
+                <default>false</default>
+                <label>Email Submitted</label>
+            </value>
+            <value>
+                <fullName>Fax Sent</fullName>
+                <default>false</default>
+                <label>Fax Sent</label>
+            </value>
+            <value>
+                <fullName>Left Message</fullName>
+                <default>false</default>
+                <label>Left Message</label>
+            </value>
+            <value>
+                <fullName>No Message Left</fullName>
+                <default>false</default>
+                <label>No Message Left</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Ring No Answer</fullName>
+                <default>false</default>
+                <label>Ring No Answer</label>
+            </value>
+            <value>
+                <fullName>Spoke With</fullName>
+                <default>false</default>
+                <label>Spoke With</label>
+            </value>
+            <value>
+                <fullName>Too Early/Too Late</fullName>
+                <default>false</default>
+                <label>Too Early/Too Late</label>
+            </value>
+            <value>
+                <fullName>Wrong Contact</fullName>
+                <default>false</default>
+                <label>Wrong Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

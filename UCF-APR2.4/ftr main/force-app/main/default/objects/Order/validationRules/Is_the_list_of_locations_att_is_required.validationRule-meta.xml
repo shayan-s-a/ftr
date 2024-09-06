@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_the_list_of_locations_att_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(  Is_this_a_Multi_Location_Renewal__c ,&quot;Yes&quot;),
+ISBLANK( TEXT( Is_the_list_of_locations_attached__c )))</errorConditionFormula>
+    <errorMessage>If Is this a Multi-Location Renewal? is Yes then Is the list of locations attached? is required.</errorMessage>
+</ValidationRule>

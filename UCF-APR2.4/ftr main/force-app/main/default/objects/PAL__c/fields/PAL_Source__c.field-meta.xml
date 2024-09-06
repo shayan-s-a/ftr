@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PAL_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>PAL Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AE/TM</fullName>
+                <default>false</default>
+                <label>AE/TM</label>
+            </value>
+            <value>
+                <fullName>BDM</fullName>
+                <default>false</default>
+                <label>BDM</label>
+            </value>
+            <value>
+                <fullName>Drasco</fullName>
+                <default>false</default>
+                <label>Drasco</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>STI</fullName>
+                <default>false</default>
+                <label>STI</label>
+            </value>
+            <value>
+                <fullName>D2D</fullName>
+                <default>false</default>
+                <label>D2D</label>
+            </value>
+            <value>
+                <fullName>WEB</fullName>
+                <default>false</default>
+                <label>WEB</label>
+            </value>
+            <value>
+                <fullName>Vendor Other</fullName>
+                <default>false</default>
+                <label>Vendor Other</label>
+            </value>
+            <value>
+                <fullName>Infinity</fullName>
+                <default>false</default>
+                <label>Infinity</label>
+            </value>
+            <value>
+                <fullName>Avantive</fullName>
+                <default>false</default>
+                <label>Avantive</label>
+            </value>
+            <value>
+                <fullName>Infinity NON PH</fullName>
+                <default>false</default>
+                <label>Infinity NON PH</label>
+            </value>
+            <value>
+                <fullName>Avantive NON PH</fullName>
+                <default>false</default>
+                <label>Avantive NON PH</label>
+            </value>
+            <value>
+                <fullName>Website Elect PALS</fullName>
+                <default>false</default>
+                <label>Website Elect PALS</label>
+            </value>
+            <value>
+                <fullName>RUI</fullName>
+                <default>false</default>
+                <label>RUI</label>
+            </value>
+            <value>
+                <fullName>RUI NON PH</fullName>
+                <default>false</default>
+                <label>RUI NON PH</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

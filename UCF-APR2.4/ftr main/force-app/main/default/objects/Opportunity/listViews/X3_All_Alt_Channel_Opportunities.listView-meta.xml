@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_All_Alt_Channel_Opportunities</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>RPON_Order__c</columns>
+    <columns>Mgr_Signed_Date__c</columns>
+    <columns>Mrg_Approved__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Net_New_MRR__c</columns>
+    <columns>CPE_NRC__c</columns>
+    <columns>NRC__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner_Role__c</field>
+        <operation>startsWith</operation>
+        <value>B2B - Alt Channel</value>
+    </filters>
+    <filters>
+        <field>Owner_Role__c</field>
+        <operation>startsWith</operation>
+        <value>Federal_Stafford</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>3-All Alt Channel Open Opportunities</label>
+    <sharedTo>
+        <portalRole>FrontierPartnerPortalPartnerUser</portalRole>
+        <role>Global</role>
+        <roleAndSubordinatesInternal>B2B_Alt_Channel</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

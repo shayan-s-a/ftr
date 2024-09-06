@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Disposition__c</fullName>
+    <externalId>false</externalId>
+    <label>Opportunity Disposition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer need changes</fullName>
+                <default>false</default>
+                <label>Customer need changes</label>
+            </value>
+            <value>
+                <fullName>Customer BDT changes</fullName>
+                <default>false</default>
+                <label>Customer BDT changes</label>
+            </value>
+            <value>
+                <fullName>Lack of access to decision makers</fullName>
+                <default>false</default>
+                <label>Lack of access to decision makers</label>
+            </value>
+            <value>
+                <fullName>Entrenched competitor</fullName>
+                <default>false</default>
+                <label>Entrenched competitor</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

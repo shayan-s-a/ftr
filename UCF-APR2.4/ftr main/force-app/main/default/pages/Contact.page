@@ -1,0 +1,10 @@
+<apex:page tabstyle="Contact" standardcontroller="Contact">
+    <apex:outputPanel rendered="{!Contact.CanUserSeeThisRecord__c == false}">
+        <span>
+            You do not have access to this record.
+        </span>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!Contact.CanUserSeeThisRecord__c == true}">
+        <apex:detail relatedlist="true" subject="{!Contact.Id}" inlineEdit="true" />
+    </apex:outputPanel>
+</apex:page>

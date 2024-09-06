@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disconnect_Reason__c</fullName>
+    <description>Disconnect Reason Field for Orders Disconnect Record Type.</description>
+    <externalId>false</externalId>
+    <label>Disconnect Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Closure - Business or Location</fullName>
+                <default>false</default>
+                <label>Closure - Business or Location</label>
+            </value>
+            <value>
+                <fullName>Service No Longer Needed</fullName>
+                <default>false</default>
+                <label>Service No Longer Needed</label>
+            </value>
+            <value>
+                <fullName>Cost Reduction - Customer Initiated</fullName>
+                <default>false</default>
+                <label>Cost Reduction - Customer Initiated</label>
+            </value>
+            <value>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+                <label>Downgrade</label>
+            </value>
+            <value>
+                <fullName>Order Entry Error - Incorrect/Missing S&amp;E</fullName>
+                <default>false</default>
+                <label>Order Entry Error - Incorrect/Missing S&amp;E</label>
+            </value>
+            <value>
+                <fullName>Pricing - Competition</fullName>
+                <default>false</default>
+                <label>Pricing - Competition</label>
+            </value>
+            <value>
+                <fullName>Service Reliability - Repair Issues</fullName>
+                <default>false</default>
+                <label>Service Reliability - Repair Issues</label>
+            </value>
+            <value>
+                <fullName>Technology Not Available</fullName>
+                <default>false</default>
+                <label>Technology Not Available</label>
+            </value>
+            <value>
+                <fullName>Temporary - Seasonal/Vacation Services</fullName>
+                <default>false</default>
+                <label>Temporary - Seasonal/Vacation Services</label>
+            </value>
+            <value>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+                <label>Upgrade</label>
+            </value>
+            <value>
+                <fullName>Collections/Non-Pay</fullName>
+                <default>false</default>
+                <label>Collections/Non-Pay</label>
+            </value>
+            <value>
+                <fullName>Billing Error</fullName>
+                <default>false</default>
+                <label>Billing Error</label>
+            </value>
+            <value>
+                <fullName>Business/Location Closure or Reduction</fullName>
+                <default>false</default>
+                <label>Business/Location Closure or Reduction</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Competition/RFP</fullName>
+                <default>false</default>
+                <label>Competition/RFP</label>
+            </value>
+            <value>
+                <fullName>Customer Experience</fullName>
+                <default>false</default>
+                <label>Customer Experience</label>
+            </value>
+            <value>
+                <fullName>Customer Retained - Product/Solution Migration</fullName>
+                <default>false</default>
+                <label>Customer Retained - Product/Solution Migration</label>
+            </value>
+            <value>
+                <fullName>Service Impairment</fullName>
+                <default>false</default>
+                <label>Service Impairment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

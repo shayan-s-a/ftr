@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Rejection Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account Past Due</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Account Past Due</label>
+            </value>
+            <value>
+                <fullName>Add Products to Existing Acct</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Add Products to Existing Acct</label>
+            </value>
+            <value>
+                <fullName>Already engaged/duplicate</fullName>
+                <default>false</default>
+                <label>Already engaged/duplicate</label>
+            </value>
+            <value>
+                <fullName>Already has Frontier fiber/agreement</fullName>
+                <default>false</default>
+                <label>Already has Frontier fiber/agreement</label>
+            </value>
+            <value>
+                <fullName>Bad Contact Info</fullName>
+                <default>false</default>
+                <label>Bad Contact Info</label>
+            </value>
+            <value>
+                <fullName>Better Contact Identified</fullName>
+                <default>false</default>
+                <label>Better Contact Identified</label>
+            </value>
+            <value>
+                <fullName>Billing Inquiry/Payment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Billing Inquiry/Payment</label>
+            </value>
+            <value>
+                <fullName>Billing - Make a Payment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Billing - Make a Payment</label>
+            </value>
+            <value>
+                <fullName>Billing - Suspend or Restore</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Billing - Suspend or Restore</label>
+            </value>
+            <value>
+                <fullName>Bill Inquiry/Payment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bill Inquiry/Payment</label>
+            </value>
+            <value>
+                <fullName>Cancel/Disconnect Svc</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cancel/Disconnect Svc</label>
+            </value>
+            <value>
+                <fullName>Changing to Competition</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Changing to Competition</label>
+            </value>
+            <value>
+                <fullName>Closed Sales = No Objection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Closed Sales = No Objection</label>
+            </value>
+            <value>
+                <fullName>Covid-19</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Covid-19</label>
+            </value>
+            <value>
+                <fullName>Covid Concerns</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Covid Concerns</label>
+            </value>
+            <value>
+                <fullName>Currently under Contract</fullName>
+                <default>false</default>
+                <label>Currently under Contract</label>
+            </value>
+            <value>
+                <fullName>Current Provider is Faster</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Current Provider is Faster</label>
+            </value>
+            <value>
+                <fullName>Current Provider is Less Expensive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Current Provider is Less Expensive</label>
+            </value>
+            <value>
+                <fullName>Current Provider - Stuck in Contract</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Current Provider - Stuck in Contract</label>
+            </value>
+            <value>
+                <fullName>Cust Concerned with Speed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Concerned with Speed</label>
+            </value>
+            <value>
+                <fullName>Cust Doesn&apos;t Want Downtime</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Doesn&apos;t Want Downtime</label>
+            </value>
+            <value>
+                <fullName>Cust Has Incompatible Hardware</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Has Incompatible Hardware</label>
+            </value>
+            <value>
+                <fullName>Customer Doesn&apos;t Need (only Alarm, Gate, Elevator, etc)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Doesn&apos;t Need (only Alarm, Gate, Elevator, etc)</label>
+            </value>
+            <value>
+                <fullName>Customers BDT changes</fullName>
+                <default>false</default>
+                <label>Customers BDT changes</label>
+            </value>
+            <value>
+                <fullName>Customers Need Changes</fullName>
+                <default>false</default>
+                <label>Customers Need Changes</label>
+            </value>
+            <value>
+                <fullName>Customers need disappears</fullName>
+                <default>false</default>
+                <label>Customers need disappears</label>
+            </value>
+            <value>
+                <fullName>Cust Refuses Tax ID</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Refuses Tax ID</label>
+            </value>
+            <value>
+                <fullName>Cust Refuses TPV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Refuses TPV</label>
+            </value>
+            <value>
+                <fullName>Cust Requested Mid-Tier Product</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Requested Mid-Tier Product</label>
+            </value>
+            <value>
+                <fullName>Cust Requested TV with BB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Requested TV with BB</label>
+            </value>
+            <value>
+                <fullName>Cust Requested VOIP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cust Requested VOIP</label>
+            </value>
+            <value>
+                <fullName>Dead Air</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dead Air</label>
+            </value>
+            <value>
+                <fullName>Dead Air/Test Call</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dead Air/Test Call</label>
+            </value>
+            <value>
+                <fullName>Disconnect Service/Retention</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Disconnect Service/Retention</label>
+            </value>
+            <value>
+                <fullName>Does not meet Sales-ready criteria</fullName>
+                <default>false</default>
+                <label>Does not meet Sales-ready criteria</label>
+            </value>
+            <value>
+                <fullName>Does Not Need Internet (Alarm, Elevator only)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Does Not Need Internet (Alarm, Elevator only)</label>
+            </value>
+            <value>
+                <fullName>Due Dates Too Far</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Due Dates Too Far</label>
+            </value>
+            <value>
+                <fullName>Due Date Too Far Out</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Due Date Too Far Out</label>
+            </value>
+            <value>
+                <fullName>Duplicate Lead</fullName>
+                <default>false</default>
+                <label>Duplicate Lead</label>
+            </value>
+            <value>
+                <fullName>Entrenched competitor</fullName>
+                <default>false</default>
+                <label>Entrenched competitor</label>
+            </value>
+            <value>
+                <fullName>Further Research Needed</fullName>
+                <default>false</default>
+                <label>Further Research Needed</label>
+            </value>
+            <value>
+                <fullName>Happy w/Current Carrier</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Happy w/Current Carrier</label>
+            </value>
+            <value>
+                <fullName>In Contract w/Current Carrier</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In Contract w/Current Carrier</label>
+            </value>
+            <value>
+                <fullName>Just Purchased New System</fullName>
+                <default>false</default>
+                <label>Just Purchased New System</label>
+            </value>
+            <value>
+                <fullName>Lack of access to decision makers</fullName>
+                <default>false</default>
+                <label>Lack of access to decision makers</label>
+            </value>
+            <value>
+                <fullName>Lack of desired product set</fullName>
+                <default>false</default>
+                <label>Lack of desired product set</label>
+            </value>
+            <value>
+                <fullName>Lack of Managed Wifi solution</fullName>
+                <default>false</default>
+                <label>Lack of Managed Wifi solution</label>
+            </value>
+            <value>
+                <fullName>Lost opportunity to Competitor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lost opportunity to Competitor</label>
+            </value>
+            <value>
+                <fullName>Lost to competitor</fullName>
+                <default>false</default>
+                <label>Lost to competitor</label>
+            </value>
+            <value>
+                <fullName>Mid Market / Enterprise</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mid Market / Enterprise</label>
+            </value>
+            <value>
+                <fullName>Mis-assigned</fullName>
+                <default>false</default>
+                <label>Mis-assigned</label>
+            </value>
+            <value>
+                <fullName>Misdirect - All Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Misdirect - All Other</label>
+            </value>
+            <value>
+                <fullName>Misdirect - FTR NW 4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Misdirect - FTR NW 4</label>
+            </value>
+            <value>
+                <fullName>Misdirect - Mid Mkt/Enterprise</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Misdirect - Mid Mkt/Enterprise</label>
+            </value>
+            <value>
+                <fullName>Misdirect - Repair/TSO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Misdirect - Repair/TSO</label>
+            </value>
+            <value>
+                <fullName>Misdirect - Resi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Misdirect - Resi</label>
+            </value>
+            <value>
+                <fullName>Misdirect - Wrong Frontier Company</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Misdirect - Wrong Frontier Company</label>
+            </value>
+            <value>
+                <fullName>Missed bidding window</fullName>
+                <default>false</default>
+                <label>Missed bidding window</label>
+            </value>
+            <value>
+                <fullName>Move Existing Svc</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Move Existing Svc</label>
+            </value>
+            <value>
+                <fullName>Moving Location</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Moving Location</label>
+            </value>
+            <value>
+                <fullName>Need To Think About It</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Need To Think About It</label>
+            </value>
+            <value>
+                <fullName>New Service Request</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Service Request</label>
+            </value>
+            <value>
+                <fullName>No fiber at property</fullName>
+                <default>false</default>
+                <label>No fiber at property</label>
+            </value>
+            <value>
+                <fullName>No Longer Frontier Customer - Port Out</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Longer Frontier Customer - Port Out</label>
+            </value>
+            <value>
+                <fullName>No Need At This Point In Time</fullName>
+                <default>false</default>
+                <label>No Need At This Point In Time</label>
+            </value>
+            <value>
+                <fullName>No Response</fullName>
+                <default>false</default>
+                <label>No Response</label>
+            </value>
+            <value>
+                <fullName>Not a Potential Buyer</fullName>
+                <default>false</default>
+                <label>Not a Potential Buyer</label>
+            </value>
+            <value>
+                <fullName>Not Auth</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Auth</label>
+            </value>
+            <value>
+                <fullName>Not Authorized Decision Maker / Could Not Safeguard</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Authorized Decision Maker / Could Not Safeguard</label>
+            </value>
+            <value>
+                <fullName>Not Auth Party/Not Avail</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Auth Party/Not Avail</label>
+            </value>
+            <value>
+                <fullName>Not in Geo Purchasing Area</fullName>
+                <default>false</default>
+                <label>Not in Geo Purchasing Area</label>
+            </value>
+            <value>
+                <fullName>Not Interested in Frontier</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Interested in Frontier</label>
+            </value>
+            <value>
+                <fullName>Not Ready to Decide/Shopping</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Ready to Decide/Shopping</label>
+            </value>
+            <value>
+                <fullName>Not ready to engage</fullName>
+                <default>false</default>
+                <label>Not ready to engage</label>
+            </value>
+            <value>
+                <fullName>Order New Service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Order New Service</label>
+            </value>
+            <value>
+                <fullName>Order On Hold For Follow-Up</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Order On Hold For Follow-Up</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other - Please Explain</fullName>
+                <default>false</default>
+                <label>Other - Please Explain</label>
+            </value>
+            <value>
+                <fullName>Out of Franchise</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Out of Franchise</label>
+            </value>
+            <value>
+                <fullName>Pending Order Change/Inquiry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending Order Change/Inquiry</label>
+            </value>
+            <value>
+                <fullName>Pending Order - Change Order</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending Order - Change Order</label>
+            </value>
+            <value>
+                <fullName>Pending Order - Check Due Date/Arrival</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending Order - Check Due Date/Arrival</label>
+            </value>
+            <value>
+                <fullName>Price Too High</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Price Too High</label>
+            </value>
+            <value>
+                <fullName>Qualification Incorrect - FIOS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Qualification Incorrect - FIOS</label>
+            </value>
+            <value>
+                <fullName>Qualification Incorrect - HSI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Qualification Incorrect - HSI</label>
+            </value>
+            <value>
+                <fullName>Remove Existing Products</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Remove Existing Products</label>
+            </value>
+            <value>
+                <fullName>Remove Products</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Remove Products</label>
+            </value>
+            <value>
+                <fullName>Requested Product Not Available</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Requested Product Not Available</label>
+            </value>
+            <value>
+                <fullName>RV Park</fullName>
+                <default>false</default>
+                <label>RV Park</label>
+            </value>
+            <value>
+                <fullName>Speed Too Low</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Speed Too Low</label>
+            </value>
+            <value>
+                <fullName>Suspend/Restore Svc</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Suspend/Restore Svc</label>
+            </value>
+            <value>
+                <fullName>Unable to Match Price</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unable to Match Price</label>
+            </value>
+            <value>
+                <fullName>Unable to reach contact</fullName>
+                <default>false</default>
+                <label>Unable to reach contact</label>
+            </value>
+            <value>
+                <fullName>Where&apos;s My Tech</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Where&apos;s My Tech</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

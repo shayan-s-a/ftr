@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Debit_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Debit Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CAP_Request_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reverse Duplicate Credit</fullName>
+                <default>false</default>
+                <label>Reverse Duplicate Credit</label>
+            </value>
+            <value>
+                <fullName>Reverse Credit Error</fullName>
+                <default>false</default>
+                <label>Reverse Credit Error</label>
+            </value>
+            <value>
+                <fullName>Bill for Active Products on Account</fullName>
+                <default>false</default>
+                <label>Bill for Active Products on Account</label>
+            </value>
+            <value>
+                <fullName>Bill for Active Services on Account</fullName>
+                <default>false</default>
+                <label>Bill for Active Services on Account</label>
+            </value>
+            <value>
+                <fullName>Bill for Reserved Numbers Being Ported Out</fullName>
+                <default>false</default>
+                <label>Bill for Reserved Numbers Being Ported Out</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Debit</controllingFieldValue>
+            <valueName>Reverse Duplicate Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit</controllingFieldValue>
+            <valueName>Reverse Credit Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit</controllingFieldValue>
+            <valueName>Bill for Active Products on Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit</controllingFieldValue>
+            <valueName>Bill for Active Services on Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit</controllingFieldValue>
+            <valueName>Bill for Reserved Numbers Being Ported Out</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

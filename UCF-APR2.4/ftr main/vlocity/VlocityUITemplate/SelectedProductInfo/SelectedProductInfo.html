@@ -1,0 +1,18 @@
+<div class="nds-p-bottom_large nds-box" style="width:100%;display:flex; flex-direction:row; justify-content: space-between;">
+	<div class="nds-grid" style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Term</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.Term__c}}</div>
+	</div>
+	<div class="nds-grid"  style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Speed</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.Speed__c}}</div>
+	</div>
+	<div class="nds-grid"  style="width: 23%;flex-direction: column;padding-bottom: 0.5rem;"> 
+		<div class="nds-text-title" >Recurring Charge</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.%vlocity_namespace%__RecurringCharge__c | currency: bpTree.cpqCurrencySymbol }}</div>
+	</div>
+	<div class="nds-grid"  style="width: 23%;flex-direction: column;"> 
+		<div class="nds-text-title" >One Time Charge</div>
+		<div class="nds-text-content">{{bpTree.response.CurrentProduct.%vlocity_namespace%__OneTimeCharge__c | currency: bpTree.cpqCurrencySymbol }}</div>
+	</div>
+</div>

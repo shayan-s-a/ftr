@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Lost_Primary_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>If Lost - Primary Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Services No Longer Needed</fullName>
+                <default>false</default>
+                <label>Services No Longer Needed</label>
+            </value>
+            <value>
+                <fullName>Service or Repair issues</fullName>
+                <default>false</default>
+                <label>Service or Repair issues</label>
+            </value>
+            <value>
+                <fullName>Service Not Available</fullName>
+                <default>false</default>
+                <label>Service Not Available</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

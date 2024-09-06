@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Erate_RHC__c</fullName>
+    <description>Used on the RFP-RFI case requested by Todd Bowser on 1/16/20 case number 00601515 updated to Erate/RHC on 4/30 by Alicia Robinson case 635828</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the appropriate selection regarding this case from the list.</inlineHelpText>
+    <label>ERate/RHC</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Erate</fullName>
+                <default>false</default>
+                <label>ERate</label>
+            </value>
+            <value>
+                <fullName>Rural Health Care</fullName>
+                <default>false</default>
+                <label>Rural Health Care</label>
+            </value>
+            <value>
+                <fullName>Neither</fullName>
+                <default>false</default>
+                <label>Neither</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

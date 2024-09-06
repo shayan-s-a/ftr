@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Escalation__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Escalation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Failed to set the correct expectation for Interval with Customer</fullName>
+                <default>false</default>
+                <label>Failed to set the correct expectation for Interval with Customer</label>
+            </value>
+            <value>
+                <fullName>Failed to get the order submitted in a timely manner for processing</fullName>
+                <default>false</default>
+                <label>Failed to get the order submitted in a timely manner for processing</label>
+            </value>
+            <value>
+                <fullName>Customer is not satisfied with the FOC date given</fullName>
+                <default>false</default>
+                <label>Customer is not satisfied with the FOC date given</label>
+            </value>
+            <value>
+                <fullName>Current order is past due on the FOC Date (Frontier is the cause)</fullName>
+                <default>false</default>
+                <label>Current order is past due on the FOC Date (Frontier is the cause)</label>
+            </value>
+            <value>
+                <fullName>Current order is past due on the FOC date (Customer is the cause)</fullName>
+                <default>false</default>
+                <label>Current order is past due on the FOC date (Customer is the cause)</label>
+            </value>
+            <value>
+                <fullName>TSP Changes/Additions</fullName>
+                <default>false</default>
+                <label>TSP Changes/Additions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

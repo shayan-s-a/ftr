@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grants_Task</fullName>
+    <active>true</active>
+    <description>Grant Administration Related Task</description>
+    <label>Grants Task</label>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Appointment Attended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appointment Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo %28CPE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door Knocks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Proposal Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Contacted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Business Lunch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community feedback incorporated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft Application Shared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finalized plans shared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal presentation to Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Further information Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identify key players in community%2Fmunicipal contacts%2Fbusinesses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outgoing Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record date of vote by Commissioners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales opportunity Referral %E2%80%93 schools%2Flibraries%2Fcounty government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule additional meetings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secure time on meeting agenda %E2%80%93 legal public notice requirements exist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Term Sheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send secure letters of support</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

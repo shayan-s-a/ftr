@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Income_Category__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Average_Income__c = 0, &quot;Unknown&quot;,
+IF(AND(Average_Income__c  &gt; 0, Average_Income__c &lt;= 14499) , &quot;1&quot;,
+IF(AND(Average_Income__c  &gt; 14499, Average_Income__c &lt;= 19000), &quot;2&quot;,  
+IF(AND(Average_Income__c  &gt; 19000, Average_Income__c &lt;= 29999) ,&quot;3&quot;,
+IF(AND(Average_Income__c  &gt; 29999, Average_Income__c &lt;= 39999) ,&quot;4&quot;,
+IF(AND(Average_Income__c  &gt; 39999, Average_Income__c &lt;= 49999) ,&quot;5&quot;,
+IF(AND(Average_Income__c  &gt; 49999, Average_Income__c &lt;= 74999) ,&quot;6&quot;,
+IF(AND(Average_Income__c  &gt; 74999, Average_Income__c &lt;= 99999) ,&quot;7&quot;,
+IF(AND(Average_Income__c  &gt; 99999, Average_Income__c &lt;= 124999) ,&quot;8&quot;,
+IF(AND(Average_Income__c  &gt; 124999, Average_Income__c &lt;= 149999) ,&quot;9&quot;,
+IF(AND(Average_Income__c  &gt; 149999, Average_Income__c &lt;= 174999) ,&quot;10&quot;,
+IF(AND(Average_Income__c  &gt; 174999, Average_Income__c &lt;= 199999) ,&quot;11&quot;,
+IF(AND(Average_Income__c  &gt; 199999, Average_Income__c &lt;= 249999) ,&quot;12&quot;, &quot;13&quot;)             
+))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>0=Unknown
+1=Under 14,499 
+2=15,000-19,000 
+3=20,000-29,999 
+4=30,000-39,999 
+5=40,000-49,999 
+6=50,000-74,999 
+7=75,000-99,999
+8=100,000-124,999 
+9=125,000-149,999 
+10=150,000-174,999 
+11=175,000-199,999 
+12=200,000-249,999
+13=250,000+</inlineHelpText>
+    <label>Income Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

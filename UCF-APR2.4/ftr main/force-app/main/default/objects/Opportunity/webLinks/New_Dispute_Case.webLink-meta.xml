@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Dispute_Case</fullName>
+    <availability>online</availability>
+    <description>Used for AEs to enter disputes to Compensation on Opportunities.
+Created 8/7/2020 for Audit team</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Dispute Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/lightning/o/Case/new?recordTypeId=0120L000000NR2dQAG&amp;
+defaultFieldValues=
+AccountId={!Opportunity.AccountId},
+Opportunity__c={!Opportunity.Id}</url>
+</WebLink>

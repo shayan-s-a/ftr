@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Approval_Completion</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISBLANK(CreatedDate )) &amp;&amp;
+
+(ISPICKVAL( Quote_Line_Item__r.OverallStatus__c, &apos;Pending&apos;) ||
+ISPICKVAL( Quote_Line_Item__r.OverallStatus__c, &apos;&apos;)) &amp;&amp;
+
+ISPICKVAL(Quote_Line_Item__r.DiscountType__c,&apos;ICB&apos;) &amp;&amp;
+
+(OR(RecordTypeId = &apos;012E0000000kLod&apos;,
+RecordTypeId = &apos;012E0000000kLog&apos;,
+RecordTypeId = &apos;012E0000000kLoc&apos;))</errorConditionFormula>
+    <errorMessage>Quote Approvals should be completed before creating this Order.</errorMessage>
+</ValidationRule>

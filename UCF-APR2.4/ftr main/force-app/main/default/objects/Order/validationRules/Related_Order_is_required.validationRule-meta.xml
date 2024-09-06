@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Order_is_required</fullName>
+    <active>true</active>
+    <description>If &quot;Is there a Related Vlocity Order?&quot; field is set to yes then the Related Order# field is required</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Is_there_a_Related_Vlocity_Order__c,&quot;Yes&quot;),
+ISBLANK( Related_Order__c )
+)</errorConditionFormula>
+    <errorMessage>If &quot;Is there a Related Vlocity Order?&quot; field is set to &quot;Yes&quot; then the Related Order# field is required.</errorMessage>
+</ValidationRule>

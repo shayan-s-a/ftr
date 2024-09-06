@@ -1,0 +1,109 @@
+.dummy{
+	color : black;
+}
+
+.section-style {
+    border-top: 1px solid gray;
+    padding: 10px;
+    cursor: pointer;
+}
+.radio-group-row lightning-radio-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-style {
+    width: 600px;
+    height: 10px;
+    background-color: #c9c9c9;
+    display: flex;
+    align-items: center; /* This centers the button vertically */
+    justify-content: flex-start; /* This aligns the button to the start/left */
+    padding-left: 10px; /* This provides some space on the left for the button */
+    border-radius: 6px;
+}
+
+.button-style {
+    margin-bottom: 20px;
+    background-color: #c9c9c9; /* This makes the button background match the div's */
+    color: #000; /* This sets the button text color */
+}
+
+lightning-datepicker {
+    width: 100%;
+}
+
+.slds-modal__container {
+    margin: 0 auto;
+    width: 1200px;
+}
+.button-text{
+    color: rgba(39, 92, 225, 0.79);
+}
+
+.section-style:hover {
+    background-color: #bfb8b8;
+}
+.modal {
+    width: 1200px; /* You can adjust this as needed */
+}
+
+.schedule-row {
+    border-top: 1px solid #d8dde6; /* Light gray border for each time period row */
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.slds-box {
+    padding: 1rem;
+    background: white;
+    border: 1px solid #d8dde6;
+}
+
+/* Example custom styles */
+.slds-table th,
+.slds-table td {
+    text-align: left; /* Align text to the left */
+}
+
+.slds-button-group {
+    border-bottom: 1px solid #dddbda; /* Light gray border under the tabs */
+    background-color: #f3f2f2; /* Grayish background for the tabs */
+}
+
+.slds-button_neutral {
+    background: #f3f2f2; /* Grayish background for the tabs */
+    border: none;
+    border-radius: 0;
+    color: #16325c; /* Salesforce blue color for the tab text */
+    padding: 0.75rem 1rem; /* Padding for tabs */
+    margin-right: 0; /* Remove margin between buttons */
+    border-bottom: 3px solid transparent; /* Transparent border for inactive tabs */
+}
+
+.slds-button_neutral:hover, .slds-button_neutral:focus {
+    background: #ffffff; /* White background on hover and focus */
+    color: #16325c; /* Dark color for text on hover and focus */
+}
+
+.slds-is-active {
+    background: #ffffff; /* White background for active tab */
+    color: #16325c; /* Dark color for active tab text */
+    border-bottom: 3px solid #16325c; /* Blue border for the active tab indicator */
+}
+
+/* If you want to remove the focus outline on active buttons, you can add this */
+.slds-is-active:focus {
+    outline: none;
+}
+
+.custom-tab_buttons{
+    overflow: auto;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.custom-tab_buttons .slds-button{
+    white-space: nowrap;
+    padding: 0px 13px;
+}

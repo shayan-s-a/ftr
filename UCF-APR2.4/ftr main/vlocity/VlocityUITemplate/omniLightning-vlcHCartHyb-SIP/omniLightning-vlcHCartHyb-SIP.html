@@ -1,0 +1,855 @@
+<div class="vlc-slds-cart-container slds-size--1-of-1"
+    ng-class="{'vlc-slds-cart-vdf-bottom-aligned':reRenderAttributesForm}"
+    ng-init="showCurrentSection=false;showCart = false; prodHierLevel = 0; showErrorIcon = false; canOrderCheckout = false;"
+    ng-controller='vlcCartCustomController'>
+
+    <div class="demo-only" style="height:4rem; position: fixed; top: 20px; left: 25%; width: 40%;" ng-if="toast.show">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_{{toast.status}}" role="status">
+                <span class="slds-assistive-text">{{toast.status}}</span>
+                <!-- <span class="slds-icon_container slds-icon-utility-{{toast.status}} slds-m-right_small slds-no-flex slds-align-top" > -->
+                    <!-- <slds-svg-icon aria-hidden="true"
+                        sprite="'utility'"
+                        icon=""
+                        size="'large'"
+                        extra-classes="'slds-button__icon slds-button__icon--large'">
+                    </slds-svg-icon> -->
+                    <slds-svg-icon sprite="'utility'" icon="'error'" size="'medium'" extra-classes=" 'toast-icon'"  ng-if="toast.status == 'error'">
+                    </slds-svg-icon>
+                    <slds-svg-icon sprite="'utility'" icon="'check'" size="'medium'" extra-classes=" 'toast-icon'"  ng-if="toast.status == 'success'">
+                    </slds-svg-icon>
+                <!-- </span> -->
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small ">{{toast.message}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-click="showCart = !showCart; (showCart == false ? reRenderAttributesForm = null : reRenderAttributesForm);"
+        id="{{bpTree.pcId[vlcPC.pcIndex]}}_Top" class="vlc-slds-cart-container-top-panel" vlc-prevent-parent-scroll>
+        <div class='vlc-slds-cart-toggle'></div>
+        <div style="margin-top: auto;margin-bottom: auto;margin-right: auto;display: flex;">
+            <h1
+                class="">{{bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]]['records'].length ? bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]]['records'].length : 0}}
+                {{::customLabels.OmniCpqItemsInCart}} <h1 style="padding-left: 5px; font-size: 0.9rem; padding-top: 5px;"
+                    ng-if="bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]].actions">({{::customLabels.OmniCpqItemsInCartMore}})</h1></h1>
+            <span style="margin-right: 1rem;" ng-show="showErrorIcon">
+                <slds-svg-icon sprite="'utility'" icon="'warning'" extra-classes="'vlc-slds-cart-warning-icon'"
+                    size="'small'"></slds-svg-icon>
+            </span>
+        </div>
+
+        <div style="margin: auto;display: flex;    margin-left: 9rem;">
+            <div class="" style='margin-right: 3rem;'>
+                <h1
+                    class=''>{{bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]+'_Top'][0].records[0].details.records[0]['EffectiveOneTimeTotal__c'] | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}</h1>
+                <span style='font-weight: 300;font-size: 1rem;'>{{::customLabels.OmniOneTime}}</span>
+            </div>
+
+            <div class="" style=''>
+                <h1
+                    class=''>{{bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]+'_Top'][0].records[0].details.records[0]['EffectiveRecurringTotal__c'] | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}</h1>
+                <span style='font-weight: 300;font-size: 1rem;'>{{::customLabels.OmniMonthly}}</span>
+            </div>
+        </div>
+    </div>
+    <div> 
+        <div class="vlc-slds-cart-container-bottom-panel" ng-show="showCart" vlc-prevent-parent-scroll>
+
+            <!-- please upload -->
+            <section class="vlc-slds-hCart-section">
+                <div class="slds-form-element-left_label--text">
+                    <span>{{::vlcPC.label}}</span>
+                </div>
+                <div class="vlc-slds-line-item"
+                    ng-repeat="i in bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]]['records'] | filterProductsItems:{ProvisioningStatus__c:[nsPrefix,'New','Pending','Changed']}"
+                    ng-init="gParentId = i.Id.value">
+                    <div class="vlc-slds-item--name" ng-init='i.isExpanded = false; prodHierLevel = prodHierLevel + 1'
+                        style="min-height: 105px;">
+                        <div class='vlc-slds-cart--button__settings'>
+                            <slds-svg-icon sprite="'utility'" icon="'settings'" extra-classes="'slds-button__icon-cart'"
+                                size="'small'" ng-if="i.attributeCategories" ng-click="openConfigPan(null, null, i, true)">
+                            </slds-svg-icon>
+                        </div>
+
+                        <div
+                            class="vlc-slds-item--details__product_name vlc-slds-cart-hier-level-{{prodHierLevel}} customized-cart" ng-class="{ 'top-shift' : !i.attributeCategories.records && !i.%vlocity_namespace%__ServiceAccountId__r.Name  }">
+                            <div class="vlc-slds-item--details__product_name-group">
+                                <div class="vlc-slds-item--icon-pointer">
+                                    <slds-svg-icon sprite="'utility'" icon="'right'" size="'small'"
+                                        ng-click="i.isExpanded = !i.isExpanded"
+                                        extra-classes="'vlc-slds-item--cart-right-arrow'"
+                                        ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                    </slds-svg-icon>
+                                    <slds-svg-icon sprite="'utility'" icon="'left'" size="'small'"
+                                        ng-click="i.isExpanded = !i.isExpanded"
+                                        extra-classes="'vlc-slds-item--cart-left-arrow'"
+                                        ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                    </slds-svg-icon>
+                                    <slds-svg-icon sprite="'utility'" icon="'down'" size="'small'"
+                                        ng-click="i.isExpanded = !i.isExpanded"
+                                        ng-if="(i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                    </slds-svg-icon>
+                                </div>
+                                <label class="slds-form-element__label"
+                                    ng-class="{'slds-form-element__label_no_child' : i.lineItems == undefined}">{{::(i.PricebookEntry.Product2.Name || i.Product2.Name)}}</label>
+                                <customized-cart {
+                                            width: 68% !important;
+                            customized-cart
+                                } class='vlc-slds-item--details__child_number'
+                                    ng-if='i.lineItems || i.childProducts || i.productGroups'>({{i.lineItems.records.length + i.childProducts.records.length + i.productGroups.records.length}})</span>
+                                <!-- <slds-svg-icon sprite="'utility'" icon="'settings'" extra-classes="'vlc-slds-item--icon-settings'" size="'small'" ng-click="openConfigPan(i, true)"></slds-svg-icon>-->
+                            </div>
+                            <div class='slds-form-element__label selected-attribute-display' ng-if="i.attributeCategories.records || i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                <span class="att-container" ng-if="i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                    <b>Location:</b>{{i.%vlocity_namespace%__ServiceAccountId__r.Name}}
+                                </span>
+                                <span ng-repeat="ac in i.attributeCategories.records">
+                                    <span ng-repeat="a in ac.productAttributes.records" ng-if="a.userValues && !a.hidden">
+                                        <span class="att-container">
+                                            <b>{{a.label}}:</b>{{a.userValues}}
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class='vlc-slds-item--details__errors'>
+                                <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                    ng-init="showErrorIconInCart(i.messages)">
+                                    {{e.message}}
+                                </span>
+                                <span ng-if="i.fieldValidationMessage">
+                                    {{i.fieldValidationMessage}}
+                                </span>
+                            </div>
+                            <div class="vlc-slds-item--details__product_price">
+                                <div class="vlc-slds-item--details__product_price_label">
+                                    <span class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniOneTime}}</span>
+                                    <span class="price">
+                                        {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                    <span class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniMonthly}}</span>
+                                    <span class="price">
+                                        {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='vlc-slds-cart--quantity-box'>
+                            <div class="vlc-slds-item--details" ng-if="i.itemType === 'lineItem'">
+                                <div class="vlc-slds-item--details__product_price">
+                                    <div class="vlc-slds-item--details__product_price_label">
+                                        <span class="price">
+                                            {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}</span>
+                                    </div>
+
+                                    <div
+                                        class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                        <span class="price">
+                                            {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='vlc-slds-cart--quantity-box-quantity'>
+                                <!-- <slds-svg-icon sprite="'utility'" icon="'settings'" extra-classes="'vlc-slds-quantity__settings'" size="'small'" ng-click="openConfigPan(i, true)"></slds-svg-icon> -->
+                                <div class="slds-form-element__control">
+                                    <input type='number' name="quantity" min='0' step="1" pattern="\d*"
+                                        ng-model="i.Quantity.value" class="slds-input vls-slds-input-quantity"
+                                        ng-disabled="(i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems"
+                                        ng-focus="i.oldQty = i.Quantity.value"
+                                        ng-blur="i.oldQty !== i.Quantity.value && updateLineField(null, i)" />
+                                </div>
+                                <slds-svg-icon sprite="'utility'" icon="'up'"
+                                    extra-classes="'vlc-slds-quantity__up_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                    size="'small'" ng-click="updateLineField(null, i, i.Quantity.value+1)"></slds-svg-icon>
+                                <slds-svg-icon sprite="'utility'" icon="'down'"
+                                    extra-classes="'vlc-slds-quantity__down_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                    size="'small'" ng-click="updateLineField(null, i, i.Quantity.value-1)"></slds-svg-icon>
+                                <div class='vlc-slds-cart--button__delete'>
+                                    <slds-svg-icon sprite="'utility'" icon="'delete'"
+                                        extra-classes="'slds-button__icon-cart' + (!i.actions.deleteitem ? ' vlc-slds-cart--button__disabled':'')"
+                                        size="'small'" ng-click="deleteProductFromCart(null, i, $index)"></slds-svg-icon>
+                                </div>
+                                <div class='vlc-slds-cart--button__delete'>
+                                    <slds-svg-icon sprite="'utility'" icon="'copy'"
+                                        extra-classes="'slds-button__icon-cart'  + (!i.actions.cloneitem ? ' vlc-slds-cart--button__disabled':'')"
+                                        size="'small'" ng-click="clone(null, i)"></slds-svg-icon>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class='vlc-slds-item--details__errors_mobile'>
+                            <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                ng-init="showErrorIconInCart(i.messages)">
+                                {{e.message}}
+                            </span>
+                            <span ng-if="i.fieldValidationMessage">
+                                {{i.fieldValidationMessage}}
+                            </span>
+                        </div>
+
+                        <span class='vlc-slds-item--details__hide'
+                            ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                            ng-click="i.isExpanded = !i.isExpanded" ng-show="(!i.isExpanded && i.lineItems !== undefined)">
+                            {{::customLabels.Omnicmtcartshowchild}}
+                        </span>
+                        <span class='vlc-slds-item--details__hide'
+                            ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                            ng-click="i.isExpanded = !i.isExpanded" ng-show="(i.isExpanded && i.lineItems!== undefined)">
+                            {{::customLabels.Omnicmtcarthidechild}}
+                        </span>
+
+
+                    </div>
+
+                    <div ng-show="i.isExpanded" ng-init="initParent(this, i);">
+                        <div class="vlc-slds-line-item " ng-class="{ 'child-item' : i.isExpanded }"
+                            ng-repeat="i in this[this.gParentId+'_' + this.prodHierLevel].childRecords | orderBy: 'sequenceNumber'">
+                            <div class="vlc-slds-item--name"
+                                ng-init='i.isExpanded = false; prodHierLevel = prodHierLevel + 1'>
+
+                                <div class='vlc-slds-cart--button__settings'>
+                                    <slds-svg-icon sprite="'utility'" icon="'settings'"
+                                        extra-classes="'slds-button__icon-cart'" size="'small'"
+                                        ng-if="i.attributeCategories"
+                                        ng-click="openConfigPan(this[this.gParentId+'_' + (this.prodHierLevel-1)], this[this.gParentId+'_' + 1], i, true)">
+                                    </slds-svg-icon>
+                                </div>
+
+                                <div
+                                    class="vlc-slds-item--details__product_name vlc-slds-cart-hier-level-{{prodHierLevel}}" ng-class="{ 'top-shift' : !i.attributeCategories.records && !i.%vlocity_namespace%__ServiceAccountId__r.Name  }">
+                                    <div class="vlc-slds-item--details__product_name-group">
+                                        <div class="vlc-slds-item--icon-pointer">
+                                            <slds-svg-icon sprite="'utility'" icon="'right'" size="'small'"
+                                                ng-click="i.isExpanded = !i.isExpanded"
+                                                extra-classes="'vlc-slds-item--cart-right-arrow'"
+                                                ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                            </slds-svg-icon>
+                                            <slds-svg-icon sprite="'utility'" icon="'left'" size="'small'"
+                                                ng-click="i.isExpanded = !i.isExpanded"
+                                                extra-classes="'vlc-slds-item--cart-left-arrow'"
+                                                ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                            </slds-svg-icon>
+                                            <slds-svg-icon sprite="'utility'" icon="'down'" size="'small'"
+                                                ng-click="i.isExpanded = !i.isExpanded"
+                                                ng-if="(i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                            </slds-svg-icon>
+                                        </div>
+                                        <label class="slds-form-element__label"
+                                            ng-class="{'slds-form-element__label_no_child' : i.lineItems == undefined}">{{::(i.PricebookEntry.Product2.Name || i.Product2.Name)}}</label>
+                                        <span class='vlc-slds-item--details__child_number'
+                                            ng-if='i.lineItems || i.childProducts || i.productGroups'>({{i.lineItems.records.length + i.childProducts.records.length + i.productGroups.records.length}})</span>
+                                    </div>
+                                    <div class='slds-form-element__label selected-attribute-display' ng-if="i.attributeCategories.records || i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                        <span class="att-container" ng-if="i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                            <b>Location:</b>{{i.%vlocity_namespace%__ServiceAccountId__r.Name}}
+                                        </span>
+                                        <span ng-repeat="ac in i.attributeCategories.records">
+                                            <span ng-repeat="a in ac.productAttributes.records" ng-if="a.userValues && !a.hidden">
+                                                <span class="att-container">
+                                                    <b>{{a.label}}:</b>{{a.userValues}}
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class='vlc-slds-item--details__errors'>
+                                        <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                            ng-init="showErrorIconInCart(i.messages)">
+                                            {{e.message}}
+                                        </span>
+                                        <span ng-if="i.fieldValidationMessage">
+                                            {{i.fieldValidationMessage}}
+                                        </span>
+                                    </div>
+                                    <div class="vlc-slds-item--details__product_price" ng-if="i.itemType === 'lineItem'">
+                                        <div class="vlc-slds-item--details__product_price_label">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniOneTime}}</span>
+                                            <span class="price">
+                                                {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}
+                                            </span>
+                                        </div>
+
+                                        <div
+                                            class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniMonthly}}</span>
+                                            <span class="price">
+                                                {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="vlc-slds-item--details__product_price"
+                                        ng-if="i.itemType === 'childProduct'">
+                                        <div
+                                            class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniMonthly}}</span>
+                                            <span class="price"> {{i.UnitPrice.value | currency:bpTree.cpqCurrencySymbol}}
+                                            </span>
+                                        </div>
+
+                                        <div class="vlc-slds-item--details__product_price_label">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniOneTime}}</span>
+                                            <span class="price">
+                                                {{i[nsPrefix + 'RecurringPrice__c'].value | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='vlc-slds-cart--quantity-box' ng-if="i.itemType === 'lineItem'">
+                                    <div class="vlc-slds-item--details">
+                                        <div class="vlc-slds-item--details__product_price">
+                                            <div class="vlc-slds-item--details__product_price_label">
+                                                <span class="price">
+                                                    {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}</span>
+                                            </div>
+
+                                            <div
+                                                class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                                <span class="price">
+                                                    {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class='vlc-slds-cart--quantity-box-quantity'>
+                                        <div class="slds-form-element__control">
+                                            <input type='number' name="quantity" min='0' step="1" pattern="\d*"
+                                                ng-model="i.Quantity.value" class="slds-input vls-slds-input-quantity"
+                                                ng-disabled="(i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems"
+                                                ng-focus="i.oldQty = i.Quantity.value"
+                                                ng-blur="i.oldQty !== i.Quantity.value && updateLineField(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)" />
+                                        </div>
+                                        <slds-svg-icon sprite="'utility'" icon="'up'"
+                                            extra-classes="'vlc-slds-quantity__up_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                            size="'small'"
+                                            ng-click="updateLineField(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, i.Quantity.value+1)">
+                                        </slds-svg-icon>
+                                        <slds-svg-icon sprite="'utility'" icon="'down'"
+                                            extra-classes="'vlc-slds-quantity__down_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                            size="'small'"
+                                            ng-click="updateLineField(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, i.Quantity.value-1)">
+                                        </slds-svg-icon>
+                                        <div class='vlc-slds-cart--button__delete'>
+                                            <slds-svg-icon sprite="'utility'" icon="'delete'"
+                                                extra-classes="'slds-button__icon-cart' + (!i.actions.deleteitem ? ' vlc-slds-cart--button__disabled':'')"
+                                                size="'small'"
+                                                ng-if="i.actions.deleteitem && checkCardinalityForDelete(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                                ng-click="deleteProductFromCart(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, $index,this[this.gParentId+'_' + 1])">
+                                            </slds-svg-icon>
+                                        </div>
+                                        <div class='vlc-slds-cart--button__delete'>
+                                            <slds-svg-icon sprite="'utility'" icon="'copy'"
+                                                extra-classes="'slds-button__icon-cart' + (!i.actions.cloneitem ? ' vlc-slds-cart--button__disabled':'')"
+                                                size="'small'"
+                                                ng-if="i.actions.cloneitem && checkCardinalityForClone(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                                ng-click="clone(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)">
+                                            </slds-svg-icon>
+                                        </div>
+                                        <div class='vlc-slds-cart--button__delete'>
+                                            <slds-svg-icon sprite="'utility'" icon="'add'"
+                                                extra-classes="'slds-button__icon-cart'" size="'small'"
+                                                ng-if="i.actions.addtocart && checkCardinalityForAdd(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                                ng-disabled="i.processingLine || attrs.processingLine == 'true'"
+                                                ng-click="addProductFromCart(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, this[this.gParentId+'_' + 1])">
+                                            </slds-svg-icon>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class='vlc-slds-cart--quantity-box' ng-if="i.itemType === 'childProduct'">
+                                    <div class="vlc-slds-item--details">
+                                        <div class="vlc-slds-item--details__product_price">
+                                            <div class="vlc-slds-item--details__product_price_label">
+                                                <span class="price">
+                                                    {{i.UnitPrice.value | currency:bpTree.cpqCurrencySymbol}} </span>
+                                            </div>
+
+                                            <div
+                                                class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                                <span class="price">
+                                                    {{i[nsPrefix + 'RecurringPrice__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='vlc-slds-cart--quantity-box-quantity vlc-slds-cart--addToCart-button'>
+                                        <div ng-if="i.actions.addtocart && checkCardinalityForAddon(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                            ng-show="!(i.processingLine || attrs.processingLine == 'true')">
+                                            <button class="slds-button slds-button--neutral"
+                                                ng-click="addProductFromCart(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, this[this.gParentId+'_' + 1])">
+                                                {{::customLabels.OmniCpqAddtoCartBtn}}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='vlc-slds-cart--quantity-box' ng-if="i.itemType === 'productGroup'">
+                                    <div class="vlc-slds-item--details">
+                                        <div class="vlc-slds-item--details__product_price">
+                                            <div class="vlc-slds-item--details__product_price_label">
+                                                <span class="price"></span>
+                                            </div>
+
+                                            <div
+                                                class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                                <span class="price"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='vlc-slds-item--details__errors_mobile'>
+                                    <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                        ng-init="showErrorIconInCart(i.messages)">
+                                        {{e.message}}
+                                    </span>
+                                    <span ng-if="i.fieldValidationMessage">
+                                        {{i.fieldValidationMessage}}
+                                    </span>
+                                </div>
+
+                                <span class='vlc-slds-item--details__hide'
+                                    ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                                    ng-click="i.isExpanded = !i.isExpanded"
+                                    ng-show="(!i.isExpanded && i.lineItems !== undefined)">{{::customLabels.Omnicmtcartshowchild}}</span>
+                                <span class='vlc-slds-item--details__hide'
+                                    ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                                    ng-click="i.isExpanded = !i.isExpanded"
+                                    ng-show="(i.isExpanded && i.lineItems!== undefined)">{{::customLabels.Omnicmtcarthidechild}}</span>
+
+                            </div>
+
+                            <div ng-show="i.isExpanded" ng-init="initParent(this, i)">
+                                <div class="vlc-slds-line-item"
+                                    ng-repeat="i in this[this.gParentId+'_' + this.prodHierLevel].childRecords | orderBy: 'sequenceNumber'"
+                                    ng-include="'vlcTopCartChildrensHyb.html'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="vlc-slds-hCart-section">
+                <div class="slds-form-element-left_label--text"
+                    ng-if="(bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]]['records'] | filterProductsItems:{ProvisioningStatus__c:[nsPrefix,'Active','Inactive']}).length > 0"
+                    style='border-top: 1px solid #D8DDE6;'>
+                    <span>{{::customLabels.OmniCurrentSetup}}</span>
+                </div>
+                <div class="vlc-slds-line-item"
+                    ng-repeat="i in bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]]['records'] | filterProductsItems:{ProvisioningStatus__c:[nsPrefix,'Active','Inactive']}"
+                    ng-init="gParentId = i.Id.value">
+                    <div class="vlc-slds-item--name" ng-init='i.isExpanded = false; prodHierLevel = prodHierLevel + 1'
+                        style="min-height: 105px;">
+
+                        <div class='vlc-slds-cart--button__settings'>
+                            <slds-svg-icon sprite="'utility'" icon="'settings'" extra-classes="'slds-button__icon-cart'"
+                                size="'small'" ng-if="i.attributeCategories" ng-click="openConfigPan(null, null, i, true)">
+                            </slds-svg-icon>
+                        </div>
+
+                        <div
+                            class="vlc-slds-item--details__product_name vlc-slds-cart-hier-level-{{prodHierLevel}} customized-cart" ng-class="{ 'top-shift' : !i.attributeCategories.records && !i.%vlocity_namespace%__ServiceAccountId__r.Name  }">
+                            <div class="vlc-slds-item--details__product_name-group">
+                                <div class="vlc-slds-item--icon-pointer">
+                                    <slds-svg-icon sprite="'utility'" icon="'right'" size="'small'"
+                                        ng-click="i.isExpanded = !i.isExpanded"
+                                        extra-classes="'vlc-slds-item--cart-right-arrow'"
+                                        ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                    </slds-svg-icon>
+                                    <slds-svg-icon sprite="'utility'" icon="'left'" size="'small'"
+                                        ng-click="i.isExpanded = !i.isExpanded"
+                                        extra-classes="'vlc-slds-item--cart-left-arrow'"
+                                        ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                    </slds-svg-icon>
+                                    <slds-svg-icon sprite="'utility'" icon="'down'" size="'small'"
+                                        ng-click="i.isExpanded = !i.isExpanded"
+                                        ng-if="(i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                    </slds-svg-icon>
+                                </div>
+                                <label class="slds-form-element__label"
+                                    ng-class="{'slds-form-element__label_no_child' : i.lineItems == undefined}">{{::(i.PricebookEntry.Product2.Name || i.Product2.Name)}}</label>
+                                <span class='vlc-slds-item--details__child_number'
+                                    ng-if='i.lineItems || i.childProducts || i.productGroups'>({{i.lineItems.records.length + i.childProducts.records.length + i.productGroups.records.length}})</span>
+                                <!-- <slds-svg-icon sprite="'utility'" icon="'settings'" extra-classes="'vlc-slds-item--icon-settings'" size="'small'" ng-click="openConfigPan(i, true)"></slds-svg-icon>-->
+                            </div>
+                            <div class='slds-form-element__label selected-attribute-display' ng-if="i.attributeCategories.records || i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                <span class="att-container" ng-if="i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                    <b>Location:</b>{{i.%vlocity_namespace%__ServiceAccountId__r.Name}}
+                                </span>
+                                <span ng-repeat="ac in i.attributeCategories.records">
+                                    <span ng-repeat="a in ac.productAttributes.records" ng-if="a.userValues && !a.hidden">
+                                        <span class="att-container">
+                                            <b>{{a.label}}:</b>{{a.userValues}}
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class='vlc-slds-item--details__errors'>
+                                <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                    ng-init="showErrorIconInCart(i.messages)">
+                                    {{e.message}}
+                                </span>
+                                <span ng-if="i.fieldValidationMessage">
+                                    {{i.fieldValidationMessage}}
+                                </span>
+                            </div>
+                            <div class="vlc-slds-item--details__product_price">
+                                <div class="vlc-slds-item--details__product_price_label">
+                                    <span class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniOneTime}}</span>
+                                    <span class="price">
+                                        {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                    <span class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniMonthly}}</span>
+                                    <span class="price">
+                                        {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='vlc-slds-cart--quantity-box'>
+                            <div class="vlc-slds-item--details" ng-if="i.itemType === 'lineItem'">
+                                <div class="vlc-slds-item--details__product_price">
+                                    <div class="vlc-slds-item--details__product_price_label">
+                                        <span class="price">
+                                            {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}</span>
+                                    </div>
+
+                                    <div
+                                        class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                        <span class="price">
+                                            {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='vlc-slds-cart--quantity-box-quantity'>
+                                <!-- <slds-svg-icon sprite="'utility'" icon="'settings'" extra-classes="'vlc-slds-quantity__settings'" size="'small'" ng-click="openConfigPan(i, true)"></slds-svg-icon> -->
+                                <div class="slds-form-element__control">
+                                    <input type='number' name="quantity" min='0' step="1" pattern="\d*"
+                                        ng-model="i.Quantity.value" class="slds-input vls-slds-input-quantity"
+                                        ng-disabled="(i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems"
+                                        ng-focus="i.oldQty = i.Quantity.value"
+                                        ng-blur="i.oldQty !== i.Quantity.value && updateLineField(null, i)" />
+                                </div>
+                                <slds-svg-icon sprite="'utility'" icon="'up'"
+                                    extra-classes="'vlc-slds-quantity__up_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                    size="'small'" ng-click="updateLineField(null, i, i.Quantity.value+1)"></slds-svg-icon>
+                                <slds-svg-icon sprite="'utility'" icon="'down'"
+                                    extra-classes="'vlc-slds-quantity__down_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                    size="'small'" ng-click="updateLineField(null, i, i.Quantity.value-1)"></slds-svg-icon>
+                                <div class='vlc-slds-cart--button__delete'>
+                                    <slds-svg-icon sprite="'utility'" icon="'delete'"
+                                        extra-classes="'slds-button__icon-cart' + (!i.actions.deleteitem ? ' vlc-slds-cart--button__disabled':'')"
+                                        size="'small'" ng-click="deleteProductFromCart(null, i, $index)"></slds-svg-icon>
+                                </div>
+                                <div class='vlc-slds-cart--button__delete'>
+                                    <slds-svg-icon sprite="'utility'" icon="'copy'"
+                                        extra-classes="'slds-button__icon-cart'  + (!i.actions.cloneitem ? ' vlc-slds-cart--button__disabled':'')"
+                                        size="'small'" ng-click="clone(null, i)"></slds-svg-icon>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class='vlc-slds-item--details__errors_mobile'>
+                            <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                ng-init="showErrorIconInCart(i.messages)">
+                                {{e.message}}
+                            </span>
+                            <span ng-if="i.fieldValidationMessage">
+                                {{i.fieldValidationMessage}}
+                            </span>
+                        </div>
+
+                        <span class='vlc-slds-item--details__hide'
+                            ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                            ng-click="i.isExpanded = !i.isExpanded"
+                            ng-show="(!i.isExpanded && i.lineItems !== undefined)">{{::customLabels.Omnicmtcartshowchild}}</span>
+                        <span class='vlc-slds-item--details__hide'
+                            ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                            ng-click="i.isExpanded = !i.isExpanded"
+                            ng-show="(i.isExpanded && i.lineItems!== undefined)">{{::customLabels.Omnicmtcarthidechild}}</span>
+
+                    </div>
+
+                    <div ng-show="i.isExpanded" ng-init="initParent(this, i);">
+                        <div class="vlc-slds-line-item" ng-class="{ 'child-item' : i.isExpanded }"
+                            ng-repeat="i in this[this.gParentId+'_' + this.prodHierLevel].childRecords | orderBy: 'sequenceNumber'">
+                            <div class="vlc-slds-item--name"
+                                ng-init='i.isExpanded = false; prodHierLevel = prodHierLevel + 1'>
+
+                                <div class='vlc-slds-cart--button__settings'>
+                                    <slds-svg-icon sprite="'utility'" icon="'settings'"
+                                        extra-classes="'slds-button__icon-cart'" size="'small'"
+                                        ng-if="i.attributeCategories"
+                                        ng-click="openConfigPan(this[this.gParentId+'_' + (this.prodHierLevel-1)], this[this.gParentId+'_' + 1], i, true)">
+                                    </slds-svg-icon>
+                                </div>
+
+                                <div
+                                    class="vlc-slds-item--details__product_name vlc-slds-cart-hier-level-{{prodHierLevel}}" ng-class="{ 'top-shift' : !i.attributeCategories.records && !i.%vlocity_namespace%__ServiceAccountId__r.Name  }">
+                                    <div class="vlc-slds-item--details__product_name-group">
+                                        <div class="vlc-slds-item--icon-pointer">
+                                            <slds-svg-icon sprite="'utility'" icon="'right'" size="'small'"
+                                                ng-click="i.isExpanded = !i.isExpanded"
+                                                extra-classes="'vlc-slds-item--cart-right-arrow'"
+                                                ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                            </slds-svg-icon>
+                                            <slds-svg-icon sprite="'utility'" icon="'left'" size="'small'"
+                                                ng-click="i.isExpanded = !i.isExpanded"
+                                                extra-classes="'vlc-slds-item--cart-left-arrow'"
+                                                ng-if="(!i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                            </slds-svg-icon>
+                                            <slds-svg-icon sprite="'utility'" icon="'down'" size="'small'"
+                                                ng-click="i.isExpanded = !i.isExpanded"
+                                                ng-if="(i.isExpanded && (i.lineItems !== undefined || i.childProducts !== undefined || i.productGroups !== undefined))">
+                                            </slds-svg-icon>
+                                        </div>
+                                        <label class="slds-form-element__label"
+                                            ng-class="{'slds-form-element__label_no_child' : i.lineItems == undefined}">{{::(i.PricebookEntry.Product2.Name || i.Product2.Name)}}</label>
+                                        <span class='vlc-slds-item--details__child_number'
+                                            ng-if='i.lineItems || i.childProducts || i.productGroups'>({{i.lineItems.records.length + i.childProducts.records.length + i.productGroups.records.length}})</span>
+                                    </div>
+                                    <div class='slds-form-element__label selected-attribute-display' ng-if="i.attributeCategories.records || i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                        <span class="att-container" ng-if="i.%vlocity_namespace%__ServiceAccountId__r.Name">
+                                            <b>Location:</b>{{i.%vlocity_namespace%__ServiceAccountId__r.Name}}
+                                        </span>
+                                        <span ng-repeat="ac in i.attributeCategories.records">
+                                            <span ng-repeat="a in ac.productAttributes.records"
+                                                ng-if="a.userValues && !a.hidden">
+                                                <span class="att-container">
+                                                    <b>{{a.label}}:</b>{{a.userValues}}
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class='vlc-slds-item--details__errors'>
+                                        <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                            ng-init="showErrorIconInCart(i.messages)">
+                                            {{e.message}}
+                                        </span>
+                                        <span ng-if="i.fieldValidationMessage">
+                                            {{i.fieldValidationMessage}}
+                                        </span>
+                                    </div>
+                                    <div class="vlc-slds-item--details__product_price" ng-if="i.itemType === 'lineItem'">
+                                        <div class="vlc-slds-item--details__product_price_label">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniOneTime}}</span>
+                                            <span class="price">
+                                                {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}
+                                            </span>
+                                        </div>
+
+                                        <div
+                                            class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniMonthly}}</span>
+                                            <span class="price">
+                                                {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="vlc-slds-item--details__product_price"
+                                        ng-if="i.itemType === 'childProduct'">
+                                        <div
+                                            class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniMonthly}}</span>
+                                            <span class="price"> {{i.UnitPrice.value | currency:bpTree.cpqCurrencySymbol}}
+                                            </span>
+                                        </div>
+
+                                        <div class="vlc-slds-item--details__product_price_label">
+                                            <span
+                                                class="vlc-slds-item--price__label_rtl">{{::customLabels.OmniOneTime}}</span>
+                                            <span class="price">
+                                                {{i[nsPrefix + 'RecurringPrice__c'].value | currency:bpTree.cpqCurrencySymbol | numFormatFilter }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='vlc-slds-cart--quantity-box' ng-if="i.itemType === 'lineItem'">
+                                    <div class="vlc-slds-item--details">
+                                        <div class="vlc-slds-item--details__product_price">
+                                            <div class="vlc-slds-item--details__product_price_label">
+                                                <span class="price">
+                                                    {{i[nsPrefix + 'OneTimeCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}</span>
+                                            </div>
+
+                                            <div
+                                                class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                                <span class="price">
+                                                    {{i[nsPrefix + 'RecurringCharge__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class='vlc-slds-cart--quantity-box-quantity'>
+                                        <div class="slds-form-element__control">
+                                            <input type='number' name="quantity" min='0' step="1" pattern="\d*"
+                                                ng-model="i.Quantity.value" class="slds-input vls-slds-input-quantity"
+                                                ng-disabled="(i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems"
+                                                ng-focus="i.oldQty = i.Quantity.value"
+                                                ng-blur="i.oldQty !== i.Quantity.value && updateLineField(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)" />
+                                        </div>
+                                        <slds-svg-icon sprite="'utility'" icon="'up'"
+                                            extra-classes="'vlc-slds-quantity__up_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                            size="'small'"
+                                            ng-click="updateLineField(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, i.Quantity.value+1)">
+                                        </slds-svg-icon>
+                                        <slds-svg-icon sprite="'utility'" icon="'down'"
+                                            extra-classes="'vlc-slds-quantity__down_arrow' + ((i.minQuantity && i.minQuantity === i.maxQuantity) || !i.actions.updateitems ? ' vlc-slds-cart--button__disabled':'')"
+                                            size="'small'"
+                                            ng-click="updateLineField(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, i.Quantity.value-1)">
+                                        </slds-svg-icon>
+                                        <div class='vlc-slds-cart--button__delete'>
+                                            <slds-svg-icon sprite="'utility'" icon="'delete'"
+                                                extra-classes="'slds-button__icon-cart' + (!i.actions.deleteitem ? ' vlc-slds-cart--button__disabled':'')"
+                                                size="'small'"
+                                                ng-if="i.actions.deleteitem && checkCardinalityForDelete(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                                ng-click="deleteProductFromCart(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, $index,this[this.gParentId+'_' + 1])">
+                                            </slds-svg-icon>
+                                        </div>
+                                        <div class='vlc-slds-cart--button__delete'>
+                                            <slds-svg-icon sprite="'utility'" icon="'copy'"
+                                                extra-classes="'slds-button__icon-cart' + (!i.actions.cloneitem ? ' vlc-slds-cart--button__disabled':'')"
+                                                size="'small'"
+                                                ng-if="i.actions.cloneitem && checkCardinalityForClone(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                                ng-click="clone(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)">
+                                            </slds-svg-icon>
+                                        </div>
+                                        <div class='vlc-slds-cart--button__delete'>
+                                            <slds-svg-icon sprite="'utility'" icon="'add'"
+                                                extra-classes="'slds-button__icon-cart'" size="'small'"
+                                                ng-if="i.actions.addtocart && checkCardinalityForAdd(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                                ng-disabled="i.processingLine || attrs.processingLine == 'true'"
+                                                ng-click="addProductFromCart(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, this[this.gParentId+'_' + 1])">
+                                            </slds-svg-icon>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class='vlc-slds-cart--quantity-box' ng-if="i.itemType === 'childProduct'">
+                                    <div class="vlc-slds-item--details">
+                                        <div class="vlc-slds-item--details__product_price">
+                                            <div class="vlc-slds-item--details__product_price_label">
+                                                <span class="price">
+                                                    {{i.UnitPrice.value | currency:bpTree.cpqCurrencySymbol}} </span>
+                                            </div>
+
+                                            <div
+                                                class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                                <span class="price">
+                                                    {{i[nsPrefix + 'RecurringPrice__c'].value | currency:bpTree.cpqCurrencySymbol  | numFormatFilter }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='vlc-slds-cart--quantity-box-quantity vlc-slds-cart--addToCart-button'>
+                                        <div ng-if="i.actions.addtocart && checkCardinalityForAddon(this[this.gParentId+'_' + (this.prodHierLevel-1)], i)"
+                                            ng-show="!(i.processingLine || attrs.processingLine == 'true')">
+                                            <button class="slds-button slds-button--neutral"
+                                                ng-click="addProductFromCart(this[this.gParentId+'_' + (this.prodHierLevel-1)], i, this[this.gParentId+'_' + 1])">
+                                                {{::customLabels.OmniCpqAddtoCartBtn}}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='vlc-slds-cart--quantity-box' ng-if="i.itemType === 'productGroup'">
+                                    <div class="vlc-slds-item--details">
+                                        <div class="vlc-slds-item--details__product_price">
+                                            <div class="vlc-slds-item--details__product_price_label">
+                                                <span class="price"></span>
+                                            </div>
+
+                                            <div
+                                                class="vlc-slds-item--details__product_price_label vlc-slds-item--details__product_price_label_margin">
+                                                <span class="price"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='vlc-slds-item--details__errors_mobile'>
+                                    <span ng-repeat="e in i.messages" ng-if="e.severity === 'ERROR'"
+                                        ng-init="showErrorIconInCart(i.messages)">
+                                        {{e.message}}
+                                    </span>
+                                    <span ng-if="i.fieldValidationMessage">
+                                        {{i.fieldValidationMessage}}
+                                    </span>
+                                </div>
+
+                                <span class='vlc-slds-item--details__hide'
+                                    ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                                    ng-click="i.isExpanded = !i.isExpanded"
+                                    ng-show="(!i.isExpanded && i.lineItems !== undefined)">{{::customLabels.Omnicmtcartshowchild}}</span>
+                                <span class='vlc-slds-item--details__hide'
+                                    ng-class="{'vlc-slds-item--details__hide-childGroup' : i.itemType === 'productGroup'}"
+                                    ng-click="i.isExpanded = !i.isExpanded"
+                                    ng-show="(i.isExpanded && i.lineItems!== undefined)">{{::customLabels.Omnicmtcarthidechild}}</span>
+
+                            </div>
+
+                            <div ng-show="i.isExpanded" ng-init="initParent(this, i)">
+                                <div class="vlc-slds-line-item"
+                                    ng-repeat="i in this[this.gParentId+'_' + this.prodHierLevel].childRecords | orderBy: 'sequenceNumber'"
+                                    ng-include="'vlcTopCartChildrensHyb.html'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <div class='vlc-slds-loadmore-cartItems-link'"
+                ng-if="bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]].actions">
+                <a title="Load More" style="padding: 2rem;"
+                    ng-click="baseCtrl.loadMoreCartItems(bpTree.response.vlcPersistentComponent[bpTree.pcId[vlcPC.pcIndex]].actions, this)">
+                    {{::customLabels.OmniSelItemLoadMore}}
+                </a>
+            </div>
+
+        </div>
+        
+        <div ng-if="reRenderAttributesForm && showCart" class="vlc-slds-vdf-attribute-config">
+            <div class="vlc-slds--vdf-attribute-name">
+                <span>{{configItemObject.Name}}</span>
+            </div>
+            <button class="slds-button vlc-slds-button--vdf-attribute-close" ng-click="closeAttributePanel()">
+                <slds-button-svg-icon sprite="'utility'" size="'large'" icon="'close'"></slds-button-svg-icon>
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            <div class="vlc-slds-vdf-attribute-config__panel" vlc-prevent-parent-scroll>
+                <div ng-if="configAttributeObj && configAttributeObj.length > 0">
+                    <vlocity-dynamic-form name="productconfig" form-on-change="getModifiedAttributes(e, null, true);"
+                        ng-model="configAttributeObj" map-object="{{mapVDFObject()}}" class="slds-form--stacked"
+                        form-auto-save="true">
+                    </vlocity-dynamic-form>
+                </div>
+                <div ng-if="configAttributeObj && configAttributeObj.length === 0"
+                    class="vlc-slds-vdf-attribute-config__noconfigattr-msg">
+                    {{::customLabels.OmniNoConfigAttrMsg}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

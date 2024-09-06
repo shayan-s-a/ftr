@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up__c</fullName>
+    <description>As a current Alert Tracker user, I need to have the ability to select a Follow-Up from a menu so that every case will contact a Follow-Up. Values to include 3 DAYS, 10 DAYS, 20 DAYS, 30 DAYS</description>
+    <externalId>false</externalId>
+    <label>Follow-Up</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3 DAYS</fullName>
+                <default>false</default>
+                <label>3 DAYS</label>
+            </value>
+            <value>
+                <fullName>10 DAYS</fullName>
+                <default>false</default>
+                <label>10 DAYS</label>
+            </value>
+            <value>
+                <fullName>20 DAYS</fullName>
+                <default>false</default>
+                <label>20 DAYS</label>
+            </value>
+            <value>
+                <fullName>30 DAYS</fullName>
+                <default>false</default>
+                <label>30 DAYS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

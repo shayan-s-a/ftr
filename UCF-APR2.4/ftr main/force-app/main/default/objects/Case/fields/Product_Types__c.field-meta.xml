@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Types__c</fullName>
+    <description>Created for Charita Williams/Todd Bowser on case 00675050 as they needed a multi select product picklist and one did not exist in cases.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the product or products referenced for this case.</inlineHelpText>
+    <label>Product Types</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Broadband</fullName>
+                <default>false</default>
+                <label>Broadband</label>
+            </value>
+            <value>
+                <fullName>Cloud Managed</fullName>
+                <default>false</default>
+                <label>Cloud Managed</label>
+            </value>
+            <value>
+                <fullName>E-Reach</fullName>
+                <default>false</default>
+                <label>E-Reach</label>
+            </value>
+            <value>
+                <fullName>Ethernet</fullName>
+                <default>false</default>
+                <label>Ethernet</label>
+            </value>
+            <value>
+                <fullName>FiOS</fullName>
+                <default>false</default>
+                <label>FiberOptic</label>
+            </value>
+            <value>
+                <fullName>ISDN PRI,</fullName>
+                <default>false</default>
+                <label>ISDN PRI,</label>
+            </value>
+            <value>
+                <fullName>OneVoice</fullName>
+                <default>false</default>
+                <label>OneVoice</label>
+            </value>
+            <value>
+                <fullName>Other Voice</fullName>
+                <default>false</default>
+                <label>Other Voice</label>
+            </value>
+            <value>
+                <fullName>SD WAN</fullName>
+                <default>false</default>
+                <label>SD WAN</label>
+            </value>
+            <value>
+                <fullName>UCaaS</fullName>
+                <default>false</default>
+                <label>UCaaS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

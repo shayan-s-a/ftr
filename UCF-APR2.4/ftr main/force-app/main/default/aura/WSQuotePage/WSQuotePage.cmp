@@ -1,0 +1,146 @@
+<aura:component
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"
+                access="global"
+                controller="WSQuoteController"
+                >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="gridColumns" type="List" />
+    <aura:attribute name="gridData" type="Object" />
+    <aura:attribute name="gridExpandedRows" type="List" />   
+    <aura:attribute name="oppaddrlist" type="List" />
+    <aura:attribute name="openCatalog" type="boolean" default="false" />
+    <aura:attribute name="addrname" type="String" />
+    <aura:attribute name="quoteitems" type="List" />
+    <aura:attribute name="addressId" type="Id"/> 
+    <aura:attribute name="activeSections" type="List" />
+    <aura:attribute name="hideAddDetails" type="Boolean" default="false" />
+    
+    
+    <!--  Changes for BSA - Start   -->
+    <!--    <aura:attribute name="fieldsAddress" type="String[]" default="['link_status__c','length_feet__c','Equipment_Cost__c','Fiber_Cost__c','Total_Cost__c']" />  -->
+    <aura:attribute name="fieldsAddress" type="String[]" default="['Collector_BDT__c',
+                                                                  'Collector_Cost__c',
+                                                                  'Collector_Allocation__c',
+                                                                  'AT_T_MRC__c','SPOF__c',
+                                                                  'AT_T_Date__c','SPOF_quantity__c',
+                                                                  'Latency_Even_Side_2way_in_ms__c','SRG__c',
+                                                                  'Latency_Odd_Side_2way_in_ms__c','Estimated_Build_Time__c',
+                                                                  'Direct_Lata_Summary_Total__c','Direct_OSP_Total__c',
+                                                                  'Direct_Split_Lata_Summary__c','Direct_BB_Total__c',
+                                                                  'Direct_Bundled_CS_Cost__c','Direct_TR_Total__c','', 
+                                                                  'Direct_Individual_CS_Cost__c'                                                                                                      
+                                                                  
+                                                                  ]" />     
+    <!-- Changes for BSA - End -->
+    
+    <aura:attribute name="fields1" type="String[]" default="['Name','QuoteType__c','Quote_Number__c']" />    
+    <aura:attribute name="fields" type="String[]" default="['CRT__c','Collector_BDT__c',
+                                                           'CIAC__c','Collector_Cost__c',
+                                                           'NPV_Net_Present_Value__c','Collector_Allocation__c',
+                                                           'IRR_Internal_Rate_of_Return__c','Allocated_Total_Capex__c',
+                                                           'AT_T_MRC__c','SPOF__c',
+                                                           'AT_T_Date__c','SPOF_quantity__c',
+                                                           'Latency_Even_Side_2way_in_ms__c','SRG__c',
+                                                           'Latency_Odd_Side_2way_in_ms__c','Estimated_Build_Time__c',
+                                                           'Direct_Lata_Summary_Total__c','Direct_OSP_Total__c',
+                                                           'Direct_Split_Lata_Summary__c','Direct_BB_Total__c',
+                                                           'Direct_Bundled_CS_Cost__c','Direct_TR_Total__c', '',                                                       
+                                                           'Direct_Individual_CS_Cost__c' ,                                                                                                         
+                                                           
+                                                           
+                                                           ]"/>
+    
+    <div class="c-container">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem padding="around-small" size="12">
+                <lightning:card title="Quote Item Details">
+                    <div class="slds-text-body_small" style="width:98%">
+                        <lightning:accordion 
+                                             allowMultipleSectionsOpen="true"
+                                             activeSectionName="{! v.activeSections }"         >
+                            <aura:iteration items="{!v.oppaddrlist}" var="address">
+                                <div
+                                     class="slds-text-heading_small slds-hyphenate"
+                                     style="margin-bottom:10px;"
+                                     >
+                                    <lightning:accordionSection
+                                                                name="{!address.Id}"
+                                                                label="{!(address.Street_Number__c + ' ' + address.Street_Name__c + ' ' + address.City__c + ', ' + address.State__c + '-' + address.Zip_Code__c  )}"
+                                                                >
+                                        <aura:set attribute="body">  
+                                            <div style="margin-bottom:10px;padding:5px;">
+                                                <lightning:layout>
+                                                    <lightning:layoutItem padding="around-small">
+                                                        <lightning:icon
+                                                                        iconName="standard:address"
+                                                                        alternativeText="address"
+                                                                        size="x-small"
+                                                                        />&nbsp;
+                                                    </lightning:layoutItem>
+                                                    <lightning:layoutItem padding="around-small">
+                                                        <lightning:formattedAddress
+                                                                                    class="slds-text-body_small"
+                                                                                    street="{!address.Street_Number__c + ' ' + address.Street_Name__c + ' '}"
+                                                                                    city="{!address.City__c}"
+                                                                                    country="US"
+                                                                                    province="{!address.State__c}"
+                                                                                    postalCode="{!address.Zip_Code__c}"
+                                                                                    />
+                                                    </lightning:layoutItem>                          
+                                                    <lightning:layoutItem padding="around-small">
+                                                        <lightning:button
+                                                                          variant="brand"
+                                                                          label="Catalog"
+                                                                          title="Product Catalog"
+                                                                          class="slds-m-left_x-small"
+                                                                          onclick="{!c.handleClick}"
+                                                                          value="{!address.Id}"                
+                                                                          ></lightning:button>
+                                                    </lightning:layoutItem>
+                                                </lightning:layout>
+                                            </div>
+                                            <!--/**Wholesale Enhancement Vyshnavi Starts **/ -->
+                                            <aura:if isTrue="{!v.hideAddDetails}">
+                                                <lightning:accordionSection name="Additional Quote Item Information" label="Additional Quote Item Information">
+                                                    <div class="slds-box">                                
+                                                        <lightning:recordForm
+                                                                              recordId="{!address.Id}"
+                                                                              objectApiName="FTRWSAddress__c"
+                                                                              fields="{!v.fieldsAddress}" mode="view" columns="2"/>                          
+                                                    </div>                 
+                                                </lightning:accordionSection> 
+                                            </aura:if>
+                                            <!-- /**Wholesale Enhancement Vyshnavi Ends **/ -->
+                                            
+                                            <c:FTRWSQuoteItems recordId="{!v.recordId}" addressId="{!address.Id}" />                                                
+                                        </aura:set>
+                                    </lightning:accordionSection> <!--                                      
+          <lightning:accordionSection name="Additional Quote Information" label="Additional Quote Information">
+                       <div class="slds-box">                      
+                           
+                           <lightning:recordForm
+                                                 recordId="{!v.recordId}"
+                                                 objectApiName="SterlingQuote__c"
+                                                 fields="{!v.fields}" mode="view" columns="2"/>                            
+                           <lightning:recordForm
+                                                 recordId="{!address.Id}"
+                                                 objectApiName="FTRWSAddress__c"
+                                                 fields="{!v.fieldsAddress}" mode="view" columns="2"/>              
+              </div>                 
+              </lightning:accordionSection> -->
+                                    
+                                </div>
+                            </aura:iteration>
+                        </lightning:accordion>
+                    </div>
+                </lightning:card>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+    
+    <aura:if isTrue="{!v.openCatalog}">
+        <div> <c:FTRWSProductCatalog addressId="{!v.addressId}" quoteId="{!v.recordId}" /> </div>
+    </aura:if>
+</aura:component>

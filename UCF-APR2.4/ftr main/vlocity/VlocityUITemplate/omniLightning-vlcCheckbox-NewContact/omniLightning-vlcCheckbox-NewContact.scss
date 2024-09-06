@@ -1,0 +1,31 @@
+.new-contact {
+    .new-contact-card {
+        width: 100%;
+        padding: 1rem;
+        border: 1px lightgrey solid;
+        margin-bottom: 2rem;
+    }
+    .slds-form-element__legend.slds-form-element__label {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: rgb(73, 115, 156);
+    }
+    .slds-row {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0 !important;
+        .slds-col {
+            padding: 0 1rem 0 0;
+            label {
+                color: rgb(73, 115, 156);
+                font-size: 14.4px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.contact-success-message{
+    font-size: 14px;
+    margin-top: 10px;
+    color: green;
+}

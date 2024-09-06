@@ -1,0 +1,179 @@
+<div class='nds-col_padded nds-size_1-of-1 vlt-radio-button-ftr' ng-controller="ServiceAddressSelectionController" >
+	<fieldset class="slds-form-element">
+		<div class="slds-form-element__control" ng-style="{'margin-bottom': '3em'}" ng-repeat="record in bpTree.response.ServiceAccounts track by $index" ng-init="initTemplate();">
+			<span class="slds-radio">
+				<input
+					ng-model="bpTree.response.SelectServiceLocation.CurrentLocationId"
+					value="{{record.Id}}"
+					type="radio"
+					id="ServiceAddress-{{record.Id}}"
+					name="required"
+				/>
+				<label
+					class="slds-radio__label"
+					for="ServiceAddress-{{record.Id}}"
+				>
+					<span class="slds-radio_faux"></span>
+					<span style="font-size: .9rem;color: #00396b;font-weight: 300;"
+						class="slds-form-element__label " 
+					>
+						{{record.Name}}
+					</span>
+				</label>
+			</span>
+
+			<div class='nds-small-size_12-of-12 '  id="{{record.Id}}" ng-style="{'display':'inline-flex', 'margin':'1rem 1rem 1rem 1rem'}" ng-show="bpTree.response.SelectServiceLocation.CurrentLocationId == record.Id && bpTree.response.ServiceLocationDetails.Select1=='Dropdown'">
+
+				<div class='nds-form-element__control nds-select_container nds-form-element__control-animated-label nds-small-size_6-of-12 '  ng-style="{'height':'2rem', 'margin':'1rem 1rem 1rem 1rem' }" >
+
+						<i ng-if="control.rootIndex == activeIndex"></i>
+
+						<!-- this select control should not be visible to the user -->
+						<select name='loopname'
+							id='{{::control.name}}'
+							ng-disabled='control.ro'
+							ng-required='control.req'
+							chainup="test"
+							ng-model="bpTree.response.DIDSelection" 
+							class='nds-select'
+							vlc-slds-val-checker="response"
+							ng-init="init(this, control);"
+							ng-options="item as item.Name for item in record.DIDLocations track by item.Name"> 
+						</select>
+
+						<label for="{{::control.name}}" class='nds-form-element__label'>
+							Select a DID Location
+							<span class='nds-required'
+								ng-if='control.req'>*
+							</span>
+						</label>
+				</div>
+
+				<div class='nds-form-element__control nds-small-size_6-of-12 ' ng-show="bpTree.response.DIDSelection !== undefined">
+					<button class="nds-button nds-button_brand nds-p-around_xx-small nds-size_1-of-1 nds-medium-size_3-of-12" type="button"  id="ServiceLocationDetails_DIDBtn" vlc-animation-slider="test" aria-hidden="false" ng-click="openDIDNumberView(true)">
+						Generate Report
+					</button>
+				</div>
+			</div>
+
+			<div id="{{record.Id}}" class="nds-form-element__control" ng-style="{'margin-bottom':'2rem', 'margin-left':'1rem'}" ng-show="bpTree.response.SelectServiceLocation.CurrentLocationId == record.Id">
+				<label class="nds-checkbox">
+					<input id="Checkbox2" type="checkbox" name="loopname" ng-disabled="record.disableSameDueDate" ng-model="record.SameDueDate" ng-init="init(this, control)" vlc-slds-check-val-checker="response" ng-change="assingSameDueDateAllDID($index, record.Id); showConfirmButton();" class="ng-valid ng-touched ng-dirty ng-empty" aria-invalid="false">
+					<span class="nds-checkbox_faux"></span>
+					<label class="nds-checkbox__label" vlc-bubble-canceller="test">
+						<span class="nds-form-element__label nds-form-element__control-help ng-binding">Submit all DID Locations with the same Due Date</span>
+						<!-- ngIf: control.propSetMap.help -->
+						<div class="nds-control-action__container"> 
+						</div>
+					</label>
+				</label>
+			</div>
+			<div id="{{record.Id}}-2" class="nds-form-element__control" ng-style="{'margin-bottom':'2rem', 'margin-left':'1rem'}" ng-show="bpTree.response.SelectServiceLocation.CurrentLocationId == record.Id && record.SameDueDate ==true ">
+
+				<label class="nds-checkbox">
+					<input id="Checkbox3" type="checkbox" name="loopname" ng-disabled="record.disableSameDueDate" ng-model="record.DIDValidated" vlc-slds-check-val-checker="response" ng-change="assingValidatedAllDID($index, record.Id); showConfirmButton();" class="ng-valid ng-touched ng-dirty ng-empty" aria-invalid="false">
+					<span class="nds-checkbox_faux"></span>
+					<label class="nds-checkbox__label" vlc-bubble-canceller="test">
+						<span class="nds-form-element__label nds-form-element__control-help ng-binding">DID Numbers Validated and/or Reserved</span>
+						<!-- ngIf: control.propSetMap.help -->
+						<div class="nds-control-action__container"> 
+						</div>
+					</label>
+				</label>
+			</div>
+
+			<div class="nds-grid nds-form--multi-input__container nds-small-size_12-of-12 " ng-style="{'margin-left':'1rem'}" ng-show="record.SameDueDate ==true && bpTree.response.SelectServiceLocation.CurrentLocationId == record.Id">
+
+            	<div class="nds-cont-wrapper nds-form-element__control nds-form-element__control-animated-label nds-small-size_6-of-12">
+
+                	<input id="Date1-{{record.Id}}" name="loopname" ng-disabled="control.ro" ng-required="control.req" type="text" placement="none" ng-change="assingSameDueDateAllDID($index, record.Id); showConfirmButton()" class="nds-input ng-pristine ng-valid-max ng-valid-min ng-valid-date ng-valid-disabled-date ng-empty ng-valid ng-valid-required ng-touched" ng-model="record.DidsDueDate" ng-init="init(this, control)" data-date-format="MM-dd-yyyy" data-max-date="" data-min-date="{{minDueDate}}" date-type="string" model-date-format="yyyy-MM-dd" days-of-week-disabled="" slds-date-picker="" autocomplete="off" vlc-slds-val-checker="response" aria-invalid="false" style="">
+
+                	<label for="Date1" class="nds-form-element__label ng-binding">
+                    	Due Date
+                	</label>
+            	</div>
+				<div class="nds-control-action__container"> 
+				</div>
+        	</div>
+
+			<table id="{{record.Id}}" class="nds-table nds-table_bordered nds-table_cell-buffer" ng-style="{'margin-left':'1rem'}" ng-class="[compareWindowWidth(1024,'vlc-slds-table_stacked'),compareWindowWidth(375,'vertical')]" ng-show="record.SameDueDate == false  && bpTree.response.SelectServiceLocation.CurrentLocationId == record.Id">
+				<thead>
+					<tr class="nds-text-heading_label">
+						<th scope="col" >
+							<div>NAME</div>
+						</th>
+						<th scope="col">
+							Numbers validated/reserved
+						</th>
+						<th scope="col" >
+							
+						</th>
+						<th scope="col" >
+							Is Submitted? 
+						</th>
+					</tr>
+				</thead>
+				<tbody id="table-to-refresh" ng-repeat='acct in record.DIDLocations | orderBy:sort.column:sort.descending' >
+					<tr>
+						<td class="nds-truncate">
+							<label class="nds-truncate">{{acct.Name}}</label>
+						</td>
+						<td class="nds-truncate">
+
+						<div id="select-{{acct.Id}}" class="nds-form-element__control" >
+							<label class="nds-checkbox">
+								<input id="Checkbox-{{acct.Id}}" type="checkbox" name="loopname" ng-disabled="acct.isSubmitted__c" ng-model="acct.isDIDNumberValidated__c" ng-change="showConfirmButton();" vlc-slds-check-val-checker="response" class="ng-valid ng-touched ng-dirty ng-empty" aria-invalid="false">
+
+								<span class="nds-checkbox_faux"></span>
+								
+								<label class="nds-checkbox__label" vlc-bubble-canceller="test">
+									<span class="nds-form-element__label nds-form-element__control-help ng-binding"></span>
+									<!-- ngIf: control.propSetMap.help -->
+									<div class="nds-control-action__container"> 
+
+									</div>
+							</label>
+							</label>	
+						</div>
+						</td>
+						<td>
+							<div class="nds-grid nds-form--multi-input__container nds-small-size_12-of-12 " ng-style="{'margin-top': '1em'}">
+            	<div class="nds-cont-wrapper nds-form-element__control nds-form-element__control-animated-label nds-small-size_6-of-12">
+
+                	<input ng-if="(!acct.DueDate__c && !acct.isSubmitted__c) || (acct.DueDate__c && !acct.isSubmitted__c)" id="Date1-{{acct.Id}}" name="loopname" ng-disabled="acct.isSubmitted__c" ng-required="control.req" type="text" placement="none" class="nds-input ng-pristine ng-valid-max ng-valid-min ng-valid-date ng-valid-disabled-date ng-empty ng-valid ng-valid-required ng-touched" ng-model="acct.DueDate__c" ng-change="showConfirmButton()" ng-init="init(this, control)" data-date-format="MM-dd-yyyy" data-max-date="" data-min-date="{{minDueDate}}" date-type="string" model-date-format="yyyy-MM-dd" days-of-week-disabled="" slds-date-picker="" autocomplete="off" vlc-slds-val-checker="response" aria-invalid="false" style="">
+					<input ng-if="acct.DueDate__c && acct.isSubmitted__c" id="Date1-{{acct.Id}}" name="loopname" ng-disabled="acct.isSubmitted__c" ng-required="control.req" type="text" placement="none" class="nds-input ng-pristine ng-valid-max ng-valid-min ng-valid-date ng-valid-disabled-date ng-empty ng-valid ng-valid-required ng-touched" ng-model="acct.DueDate__c" data-date-format="MM-dd-yyyy" data-min-date="{{minDueDate}}" date-type="string" model-date-format="yyyy-MM-dd" autocomplete="off" vlc-slds-val-checker="response" aria-invalid="false" >
+
+
+                	<label for="Date1" class="nds-form-element__label ng-binding">
+                    	Due Date
+                	</label>
+            	</div>
+				<div class="nds-control-action__container"> 
+				</div>
+        	</div>
+						</td>
+						<td>
+						<div id="select-{{acct.Id}}" class="nds-form-element__control" >
+							<label class="nds-checkbox">
+								<input id="Checkbox-{{acct.Id}}" type="checkbox" name="loopname" ng-disabled="true" ng-model="acct.isSubmitted__c"  vlc-slds-check-val-checker="response" class="ng-valid ng-touched ng-dirty ng-empty" aria-invalid="false">
+
+								<span class="nds-checkbox_faux"></span>
+								
+								<label class="nds-checkbox__label" vlc-bubble-canceller="test">
+									<span class="nds-form-element__label nds-form-element__control-help ng-binding"></span>
+									<!-- ngIf: control.propSetMap.help -->
+									<div class="nds-control-action__container"> 
+
+									</div>
+							</label>
+							</label>	
+						</div>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+			
+		</div>
+	</fieldset>
+</div>

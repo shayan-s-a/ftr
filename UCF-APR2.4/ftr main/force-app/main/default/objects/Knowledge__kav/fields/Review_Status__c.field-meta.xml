@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Status__c</fullName>
+    <description>Used to manage a Knowledge Article review process when it is in a Publication Status = Draft</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to manage a Knowledge Article review process when it is in a Publication Status = Draft</inlineHelpText>
+    <label>Review Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-New</fullName>
+                <default>true</default>
+                <label>1-New</label>
+            </value>
+            <value>
+                <fullName>2-Submitted</fullName>
+                <default>false</default>
+                <label>2-Submitted</label>
+            </value>
+            <value>
+                <fullName>3-Under Review</fullName>
+                <default>false</default>
+                <label>3-Under Review</label>
+            </value>
+            <value>
+                <fullName>8-Rejected</fullName>
+                <default>false</default>
+                <label>8-Rejected</label>
+            </value>
+            <value>
+                <fullName>9-Approved</fullName>
+                <default>false</default>
+                <label>9-Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,298 @@
+{
+    "OrderItems": [
+        {
+            "Attributes": [
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "IP Request Tracking Number",
+                    "required": false,
+                    "type": "text",
+                    "value": "wwwwww",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "IP Address",
+                    "required": false,
+                    "type": "text",
+                    "value": "wwwwffffff",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "Topology",
+                    "required": false,
+                    "type": "select",
+                    "value": "LAN/WAN",
+                    "values": [
+                        {
+                            "displayText": "Flat",
+                            "id": "d26f1b88-4464-5849-de65-afdbf1d2a3f0",
+                            "label": "Flat",
+                            "sequence": 10,
+                            "value": "Flat"
+                        },
+                        {
+                            "displayText": "LAN/WAN",
+                            "id": "1245c6f6-5cdd-bbd6-e716-0d9be60f1df7",
+                            "label": "LAN/WAN",
+                            "sequence": 20,
+                            "value": "LAN/WAN"
+                        },
+                        {
+                            "displayText": "BGP",
+                            "id": "a0b2f04a-30dd-36ef-4bed-108ee9c25ab1",
+                            "label": "BGP",
+                            "sequence": 30,
+                            "value": "BGP"
+                        }
+                    ]
+                }
+            ],
+            "Id": "80219000002l4flAAA",
+            "ProductName": "IP"
+        },
+        {
+            "Attributes": [
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "VLAN Tag Text",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "Physical Medium",
+                    "required": false,
+                    "type": "select",
+                    "value": "Copper RJ45",
+                    "values": [
+                        {
+                            "displayText": "Copper RJ45",
+                            "id": "cd3d6291-1b1e-6a97-3139-9973a3219c3b",
+                            "label": "Copper RJ45",
+                            "sequence": 10,
+                            "value": "Copper RJ45"
+                        },
+                        {
+                            "displayText": "Fiber Single Mode 1310nm",
+                            "id": "965bb435-fa30-4a87-946c-998f74350bb7",
+                            "label": "Fiber Single Mode 1310nm",
+                            "sequence": 20,
+                            "value": "Fiber Single Mode 1310nm"
+                        },
+                        {
+                            "displayText": "Fiber Multi Mode 850nm",
+                            "id": "f699b668-e0a8-b724-1ace-fa122773c63f",
+                            "label": "Fiber Multi Mode 850nm",
+                            "sequence": 30,
+                            "value": "Fiber Multi Mode 850nm"
+                        }
+                    ]
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "Frame Size",
+                    "required": false,
+                    "type": "select",
+                    "value": "<=1600",
+                    "values": [
+                        {
+                            "displayText": "<=1600",
+                            "id": "100426e7-141e-e712-d202-03ac94b15f12",
+                            "label": "<=1600",
+                            "sequence": 10,
+                            "value": "<=1600"
+                        },
+                        {
+                            "displayText": "<=9000",
+                            "id": "684b7c89-9384-fcb6-0e59-355b342cbf52",
+                            "label": "<=9000",
+                            "sequence": 20,
+                            "value": "<=9000"
+                        }
+                    ]
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "VLAN Tag Config",
+                    "required": false,
+                    "type": "select",
+                    "value": "Service Multiplexing",
+                    "values": [
+                        {
+                            "displayText": "Service Multiplexing",
+                            "id": "5617aa92-ef1f-e9eb-48b0-7d2b53a8afab",
+                            "label": "Service Multiplexing",
+                            "sequence": 10,
+                            "value": "Service Multiplexing"
+                        },
+                        {
+                            "displayText": "All-to-one Bundling",
+                            "id": "ac6ee353-a706-bf12-b0f4-05e771f656c2",
+                            "label": "All-to-one Bundling",
+                            "sequence": 20,
+                            "value": "All-to-one Bundling"
+                        },
+                        {
+                            "displayText": "Untagged",
+                            "id": "eb86808f-1b45-623b-b7f2-a266b16db51d",
+                            "label": "Untagged",
+                            "sequence": 30,
+                            "value": "Untagged"
+                        }
+                    ]
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "UNI Mode",
+                    "required": false,
+                    "type": "text",
+                    "value": "Full Duplex",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "UNI Rate Adj Speed",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "UNI Port Speed",
+                    "required": false,
+                    "type": "text",
+                    "value": "10 GBPS",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "New or Existing",
+                    "required": false,
+                    "type": "select",
+                    "value": "New",
+                    "values": [
+                        {
+                            "displayText": "New",
+                            "id": "c4fe3e89-4425-a959-d464-66eed071f541",
+                            "label": "New",
+                            "sequence": 10,
+                            "value": "New"
+                        },
+                        {
+                            "displayText": "Existing",
+                            "id": "4c057bdc-d282-a526-987c-bf0e398ec31b",
+                            "label": "Existing",
+                            "sequence": 20,
+                            "value": "Existing"
+                        }
+                    ]
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "M6 Circuit ID",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "Port Number",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                }
+            ],
+            "Id": "80219000002l4fiAAA",
+            "ProductName": "User to Network Interface (UNI) Port"
+        },
+        {
+            "Attributes": [
+                {
+                    "description": null,
+                    "disabled": true,
+                    "label": "EVC Type",
+                    "required": false,
+                    "type": "text",
+                    "value": "EVPL",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "CE-VLAN Class of Service Preservation",
+                    "required": false,
+                    "type": "checkbox",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "DPI/PE Router Termination CLLI",
+                    "required": false,
+                    "type": "text",
+                    "value": "Z Location",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "CE-VLAN Id - Site 1",
+                    "required": false,
+                    "type": "number",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": true,
+                    "label": "EVC SubType",
+                    "required": false,
+                    "type": "text",
+                    "value": "EVPL",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "CE-VLAN Id Preservation - Site 2",
+                    "required": false,
+                    "type": "checkbox",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "CE-VLAN Id - Site 2",
+                    "required": false,
+                    "type": "number",
+                    "values": null
+                },
+                {
+                    "description": null,
+                    "disabled": false,
+                    "label": "CE-VLAN Id Preservation - Site 1",
+                    "required": false,
+                    "type": "checkbox",
+                    "values": null
+                }
+            ],
+            "Id": "80219000002l4fkAAA",
+            "ProductName": "EVC"
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "ContextId": null,
+    "EVCLocationDetails": {
+        "EVCLocation": {
+            "SIPDetails": {
+                "Bandwidth": null,
+                "CPEPBXManufacturerName": null,
+                "CPEPBXModel": null,
+                "CPEPBXSoftwareRel": null,
+                "CallPaths": null,
+                "EVCType": null,
+                "Jurisdiction": null,
+                "RouteTarget": null,
+                "RouterWaived": null,
+                "SIPId": null,
+                "SpecialRequirements": null
+            },
+            "ServiceAccountIdSIP": null,
+            "ServiceAccountNameSIP": null
+        }
+    },
+    "UNILocationDetails": {
+        "UNILocation": {
+            "HandOff": null,
+            "ServiceAccountId": null,
+            "ServiceAccountName": null,
+            "UNIDetails": {
+                "AnalogAccessoriesKits": {
+                    "AmphenolCable": null,
+                    "x66Block": null,
+                    "x66BlockBracket": null,
+                    "x66BlockCover": null
+                },
+                "AnalogHunting": {
+                    "HuntArrangement": null,
+                    "HuntEnabled": null,
+                    "TelephoneNumberHuntSequence": null
+                },
+                "AnalogTrunkInformation": {
+                    "AnalogStartDialMethod": null,
+                    "NumberOfAnalogHandoffs": null,
+                    "PunchdownInformation": null
+                },
+                "DSATID": null,
+                "EnableInterface": null,
+                "ExistingM6UniCktId": null,
+                "FaultPropagation": null,
+                "IADAccessoriesKits": {
+                    "Cable": null,
+                    "CableQuantity": null
+                },
+                "IADConfiguration": {
+                    "IADConfigNotes": null,
+                    "IADHandoff": null,
+                    "IADRackMountKit": null,
+                    "IADWallMountBracketKit": null,
+                    "InstallCables": null
+                },
+                "IADTrunkInformation": {
+                    "Coding": null,
+                    "Framing": null,
+                    "NumberOfChannels": null,
+                    "NumberOfDigits": null,
+                    "NumberOfHandoffs": null,
+                    "NumberOfT1s": null,
+                    "StartDialMethod": null,
+                    "TrunkType": null,
+                    "UsedChannels": null
+                },
+                "ManagedService": {
+                    "CentralOffice": null,
+                    "City": null,
+                    "Country": null,
+                    "ManagedIAD": null,
+                    "ManagedRouter": null,
+                    "State": null,
+                    "StreetAddress": null,
+                    "TechnicalSupervisorName": null,
+                    "TechnicalSupervisorPhone": null,
+                    "WebRTTicketNumber": null,
+                    "ZipCode": null
+                },
+                "Speed": null,
+                "UNIExtensionId": null,
+                "UNIFrameSize": null,
+                "UNIId": null,
+                "UNIJurisdiction": null,
+                "UNIMode": null,
+                "UNINegotiation": null,
+                "UNIPhysicalMedium": null,
+                "VlanTagConfig": null
+            }
+        }
+    },
+    "timeStamp": null,
+    "userId": null,
+    "userName": null,
+    "userProfile": null,
+    "userTimeZone": null,
+    "vlcPersistentComponent": {
+    },
+    "vlcTimeTracking": {
+        "AutoAddUNI": null,
+        "EVCLocationDetails": null,
+        "GetLineItemsForSIPOrdering": null,
+        "InitializeEVCValues": null,
+        "InitializeValues": null,
+        "NavigateToOrder": null,
+        "SaveEVCDetails": null,
+        "SetValuesForTesting": null,
+        "UNILocationDetails": null,
+        "UpsertUNIs": null
+    }
+}

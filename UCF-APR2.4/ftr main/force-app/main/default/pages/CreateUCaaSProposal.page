@@ -1,0 +1,428 @@
+<apex:page controller="GenerateUCaaSProposalExtension" showHeader="false" sidebar="false" renderAs="pdf">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <style type="text/css" media="print">
+            @page {
+                size: portrait;
+                margin-left: 0.8cm;
+                margin-right: 0.8cm;
+                margin-top: 0.8cm;
+                margin-bottom: 0.8cm;
+            }
+        </style>
+    </head>
+
+    <body style="font-family: arial, verdana, sans-serif;font-size: 11pt;">
+       <!-- <div style="text-align:right;">
+            <img src="{!$Resource.ProposalLogo}" style="width:5%;" />
+        </div>-->
+            <img src="{!$Resource.ProposalHeader2018}" style="position:absolute; width:100%;height:100%;border:0px;" />
+            <div style="position: absolute; width: 100%; padding: 90px 50px 0 90px;">
+                <div style="font-size:14pt;padding-top:100pt;">{!quoteName} Proposal For:</div>
+                <br/>
+                <div Style="font-size:24pt;">{!act.Name}</div>
+                <br/>
+                <div class="Customer" style="font-size:14pt;">
+                    <apex:outputText value="{0,date,MMMM dd yyyy}">
+                        <apex:param value="{!TODAY()}" />
+                    </apex:outputText>
+                    {!qNameStr}
+                    <b>{!quoteNumber}</b>
+                </div>
+                  <br/>
+                <div>
+                    {!currentUser.Name}
+                    <br /> {!currentUser.Title}
+                    <br />
+                    <b>Phone:</b> {!currentUser.Phone}
+                    <br />
+                    <b>Mobile:</b> {!currentUser.MobilePhone}
+                    <br />
+                    <b>Email:</b> {!currentUser.Email}
+                    <br />
+                </div>
+            </div>
+       
+        <div style="padding:50px 50px 50px 90px;position:relative; top:6in;">
+            <div style="font-weight:bold;text-align:right; padding: 44pt 0 23pt 0;">{!qNameStr}{!quoteNumber}</div>
+            
+            <div>
+                <h1 style="color: #FF0037;font-size: 22px; font-weight:bold;">Why you should partner with Frontier</h1>
+                <p style="text-align:justify;">
+                    Frontier (NASDAQ: FYBR) is more than a technology and communications provider &mdash; we’re also your partner. We work closely with you to solve real business problems and enhance the way you operate through resources including:
+                </p>
+                <ul>
+                    <li>Flexible equipment options (premise-based, cloud, managed, or hybrid configurations)</li>
+                    <li>Dedicated enterprise support when you need it most </li>
+                    <li>Reliable state-of-the-art technology to keep the focus on productivity</li>
+                    <li>Cost-effective plans to make the most of every dollar </li>
+                    <li>Secure connections and compliant data storage to protect vital information </li>
+                    <li>Multisite solutions to seamlessly link different locations </li>
+                    <li>Strong partnerships with industry-leading equipment manufacturers and specialty solutions providers </li>
+                    <li>Financing options available to protect your investment against obsolescence, while tailoring your payment scenario to fit your budget </li>
+                </ul>
+                <p>Frontier offers end-to-end data, voice and video solutions to businesses of all sizes. We’re committed to providing next generation technology that’s flexible and reliable &mdash; ready to grow with your business. And you’ll enjoy the
+                    convenience of having one single, responsive source for all your communications needs. You can count on the strength and stability of a Fortune 500 company along with the flexibility to deliver on a personal scale. Frontier Business
+                    will keep your business connected and running strong.</p>
+                <p>Choose from our fully integrated product portfolio that includes:</p>
+                <ul style="float:left; width:45%;">
+                    <li>Ethernet Solutions</li>
+                    <li>Dedicated Internet Access</li>
+                    <li>VoIP (hosted and premise based)</li>
+                    <li>Communications &amp; Network Equipment</li>
+                    <li>Optical Transport Services</li>
+                    <li>Social Media Marketing</li>
+                    <li>Audio, Web &amp; Video Conferencing</li>
+                    <li>Wireless Data Access/Wi-Fi</li>
+                    <li>Business Continuity Solutions</li>
+                    <li>Business High-Speed Internet</li>
+                    <li>Local &amp; Long-Distance Service</li>
+                    <li>Managed Services</li>
+                    <li>Internet &amp; Data Security</li>
+                </ul>
+                <div style="width:45%; float:left;background-color:#EEE; margin-top:14pt;">
+                    <h2 style="margin:0; padding:12pt; background-color:#FF0037; color:white;">Frontier Provides</h2>
+                    <ul style="margin-top:20px; margin-bottom:20px">
+                        <li>State-of-the-art Network</li>
+                        <li>24/7 expert tech support</li>
+                        <li>100% U.S.-based workforce</li>
+                        <li>Global Capabilities</li>
+                        <li>Customized Solutions</li>
+                        <li>Comprehensive Product Portfolio</li>
+                        <li>Dedicated Account Executive</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <p style="text-align:justify; clear:both;">{!$User.FirstName} {!$User.LastName} has created a custom-designed plan based on your needs and budget all backed by our 24/7 expert technical support. Plus, we monitor the Frontier network to ensure that your business communications run without
+                interruption. It's all part of our dedication to helping you succeed.</p>
+            <div style="font-weight:bold;text-align:right;">{!qNameStr}{!quoteNumber}</div>
+
+			<div style="font-size:8pt;border-top: solid 2px black;padding-top:10pt;">
+                <!--border-top: solid 2px black; -->
+                1  © 2022 Frontier Communications Parent, Inc. All Rights Reserved.
+    			<img src="{!$Resource.ProposalFooter}" style="width:20%;height:10%;float:right;"/>
+            </div>
+            
+            <h1 style="color: #FF0037;font-size: 22px; font-weight:bold; text-align:justify; page-break-before:always">Situation Analysis</h1>
+            <p>Your company's current communications capabilities include:
+                <br />
+                <br /> {!proposalCompany}
+                <br />
+                <br /> Based on what we learned from you, your immediate and future communications needs are:
+                <br />
+                <br /> {!proposalFuture}
+            </p>
+            <h1 style="color: #FF0037;font-size: 22px; font-weight:bold; text-align:justify;">Executive Summary</h1>
+            <p style="font-size: 17px;text-align:justify;">
+                Our team of Business Specialists is dedicated to gaining a full understanding of your capabilities and challenges. That way, we can custom-tailor a solution that meets your needs and gives you the confidence to move forward.
+            </p>
+
+            <p>Our recommendations based on the needs defined above include:</p>
+            <div id="quote_products_services" style="margin-top:3%;{!IF(NumSQIs1 > 0, 'display:block', 'display:none')}">
+                <table width="100%" cellspacing="0" border="1" style="border:1px solid black;">
+                    <tr valign="bottom" style="background-color:#FF0037;color:white;font-size:12.5px;text-align:center">
+                        <th width="10%">Quantity</th>
+                        <th width="35%">Services</th>
+                        <th width="10%">Contract Term<br/><font style="font-size:9px;">(in months)</font></th>
+                        <th width="10%">Activation<br/> Fee- NRC</th>
+                        <th width="10%">Monthly <br/> Fee- MRC</th>
+                        <th width="10%">Total NRC</th>
+                        <th width="10%">Total MRC</th>
+                    </tr>
+                    <apex:repeat value="{!strQuoteItemsExtensions1}" var="sqitem">
+                    <tr style="font-size:10.5px;" border="1">
+                         <td width="10%" style="text-align:center">{!sqitem.Quantity}</td>
+                         <td width="35%">{!sqitem.ProductName}</td>
+                         <td width="10%" style="text-align:center">{!sqitem.TermLength}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.AdjustedNRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalMRC}</td> 
+                         <td width="10%" style="text-align:right">{!sqitem.NRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalCharge}</td>
+                    </tr>
+                    </apex:repeat>
+                    <tr style="font-size:10.5px;">
+                         <td width="10%">&nbsp;</td>
+                         <td width="35%" style="font-color:#FF0037;text-align:left">Total Services</td>
+                         <td width="30%" colspan="3"></td>
+                         <td width="10%" style="text-align:right"><b>${!totalNRCValue1}</b></td>
+                         <td width="10%" style="text-align:right"><b>${!totalMRCValue1}</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="quote_products_installation" style="margin-top:3%;{!IF(NumSQIs2 > 0, 'display:block', 'display:none')}">
+                <table width="100%" cellspacing="0" border="1" style="border:1px solid black;">
+                    <tr valign="bottom" style="background-color:#FF0037;color:white;font-size:12.5px;text-align:center">
+                        <th width="10%">Quantity</th>
+                        <th width="35%">Installation</th>
+                        <th width="10%">&nbsp;</th>
+                        <th width="10%">NRC</th>
+                        <th width="10%">&nbsp;</th>
+                        <th width="10%">Total NRC</th>
+                        <th width="10%">&nbsp;</th>
+                    </tr>
+                    <apex:repeat value="{!strQuoteItemsExtensions2}" var="sqitem">
+                    <tr style="font-size:10.5px;" border="1">
+                         <td width="10%" style="text-align:center">{!sqitem.Quantity}</td>
+                         <td width="35%">{!sqitem.ProductName}</td>
+                         <td width="10%" style="text-align:center">&nbsp;</td>
+                         <td width="10%" style="text-align:right">{!sqitem.AdjustedNRC}</td>
+                         <td width="10%" style="text-align:right">&nbsp;</td> 
+                         <td width="10%" style="text-align:right">{!sqitem.NRC}</td>
+                         <td width="10%" style="text-align:right">&nbsp;</td>
+                    </tr>
+                    </apex:repeat>
+                    <tr style="font-size:10.5px;">
+                         <td width="10%">&nbsp;</td>
+                         <td width="35%" style="font-color:#FF0037;text-align:left">Total Installation</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%" style="text-align:right"><b>${!totalNRCValue2}</b></td>
+                         <td width="10%">&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="quote_products_hardware_materials" style="margin-top:3%;{!IF(NumSQIs3 > 0, 'display:block', 'display:none')}">
+                <table width="100%" cellspacing="0" border="1" style="border:1px solid black;">
+                    <tr valign="bottom" style="background-color:#FF0037;color:white;font-size:12.5px;text-align:center">
+                        <th width="10%">Quantity</th>
+                        <th width="35%">Hardware/Materials</th>
+                        <th width="10%">Part #</th>
+                        <th width="10%">Unit Price<br/> NRC</th>
+                        <th width="10%">Monthly <br/> Fee- MRC</th>
+                        <th width="10%">Total NRC</th>
+                        <th width="10%">Total MRC</th>
+                    </tr>
+                    <apex:repeat value="{!strQuoteItemsExtensions3}" var="sqitem">
+                    <tr style="font-size:10.5px;" border="1">
+                         <td width="10%" style="text-align:center">{!sqitem.Quantity}</td>
+                         <td width="35%">{!sqitem.ProductName}</td>
+                         <td width="10%" style="text-align:center">{!sqitem.PartNumber}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.AdjustedNRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalMRC}</td> 
+                         <td width="10%" style="text-align:right">{!sqitem.NRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalCharge}</td>
+                    </tr>
+                    </apex:repeat>
+                    <tr style="font-size:10.5px;">
+                         <td width="10%">&nbsp;</td>
+                         <td width="35%" style="font-color:#FF0037;text-align:left">Total Hardware</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%" style="text-align:right"><b>${!totalNRCValue3}</b></td>
+                         <td width="10%" style="text-align:right"><b>${!totalMRCValue3}</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="quote_products_maintenance" style="margin-top:3%;{!IF(NumSQIs4 > 0, 'display:block', 'display:none')}">
+                <table width="100%" cellspacing="0" border="1" style="border:1px solid black;">
+                    <tr valign="bottom" style="background-color:#FF0037;color:white;font-size:12.5px;text-align:center">
+                        <th width="10%">Quantity</th>
+                        <th width="35%">Phone Power</th>
+                        <th width="10%">Part #</th>
+                        <th width="10%">Unit Price<br/> NRC</th>
+                        <th width="10%">Monthly <br/> Fee- MRC</th>
+                        <th width="10%">Total NRC</th>
+                        <th width="10%">Total MRC</th>
+                    </tr>
+                    <apex:repeat value="{!strQuoteItemsExtensions4}" var="sqitem">
+                    <tr style="font-size:10.5px;" border="1">
+                         <td width="10%" style="text-align:center">{!sqitem.Quantity}</td>
+                         <td width="35%">{!sqitem.ProductName}</td>
+                         <td width="10%" style="text-align:center">{!sqitem.PartNumber}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.AdjustedNRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalMRC}</td> 
+                         <td width="10%" style="text-align:right">{!sqitem.NRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalCharge}</td>
+                    </tr>
+                    </apex:repeat>
+                    <tr style="font-size:10.5px;">
+                         <td width="10%">&nbsp;</td>
+                         <td width="35%" style="font-color:#FF0037;text-align:left">Total Phone Power</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%" style="text-align:right"><b>${!totalUnitPriceNRCValue4}</b></td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%" style="text-align:right"><b>${!totalNRCValue4}</b></td>
+                         <td width="10%">&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="quote_products_write_in_parts" style="margin-top:3%;{!IF(NumSQIs5 > 0, 'display:block', 'display:none')}">
+                <table width="100%" cellspacing="0" border="1" style="border:1px solid black;">
+                    <tr valign="bottom" style="background-color:#FF0037;color:white;font-size:12.5px;text-align:center">
+                        <th width="10%">Quantity</th>
+                        <th width="35%">Write-In Parts</th>
+                        <th width="10%">Part #</th>
+                        <th width="10%">Unit Price<br/> NRC</th>
+                        <th width="10%">Monthly <br/> Fee- MRC</th>
+                        <th width="10%">Total NRC</th>
+                        <th width="10%">Total MRC</th>
+                    </tr>
+                    <apex:repeat value="{!strQuoteItemsExtensions5}" var="sqitem">
+                    <tr style="font-size:10.5px;" border="1">
+                         <td width="10%" style="text-align:center">{!sqitem.Quantity}</td>
+                         <td width="35%">{!sqitem.ProductName}</td>
+                         <td width="10%" style="text-align:center">{!sqitem.PartNumber}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.AdjustedNRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalMRC}</td> 
+                         <td width="10%" style="text-align:right">{!sqitem.NRC}</td>
+                         <td width="10%" style="text-align:right">{!sqitem.TotalCharge}</td>
+                    </tr>
+                    </apex:repeat>
+                    <tr style="font-size:10.5px;">
+                         <td width="10%">&nbsp;</td>
+                         <td width="35%" style="font-color:#FF0037;text-align:left">Total Hardware</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%" style="text-align:right"><b>${!totalNRCValue5}</b></td>
+                         <td width="10%" style="text-align:right"><b>${!totalMRCValue5}</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="quote_products_totals" style="margin-top:3%;">
+                <table width="100%" cellspacing="0" border="1" style="border:1px solid black;">
+                    <tr style="font-size:10.5px;">
+                         <td width="10%">&nbsp;</td>
+                         <td width="35%" style="font-color:#FF0037;text-align:left">Site Total</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%">&nbsp;</td>
+                         <td width="10%" style="text-align:right"><b>${!totalUpfrontCostHardware}</b></td>
+                         <td width="10%" style="text-align:right"><b>${!totalMonthlyRecurringCharge}</b></td>
+                    </tr>
+                </table>
+            </div>
+            <p><b>1. Detail of proposed equipment is provided in the attached Equipment Schedule</b></p>
+            <p><b>2. Payment Terms</b></p>
+            <div id="proposal_cash_payment" style="{!IF(showCashPayment, 'display:block', 'display:none')}">
+
+                <table width="100%">
+                    <tr>
+                        <td width="50%">
+                            <table cellspacing="0" border="1" style="border:1px solid black;">
+                                <tr>
+                                    <td width="66%" style="text-align:center"><u><b>Cash Payment:</b></u></td>
+                                    <td width="34%">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="66%" style="text-align:right">Service:</td>
+                                    <td width="34%" style="text-align:right">${!totalNRCValue1}</td>
+                                </tr>
+                                <tr>
+                                    <td width="66%" style="text-align:right">Hardware/Materials:</td>
+                                    <td width="34%" style="text-align:right">${!totalNRCValue3}</td>
+                                </tr>
+                                <tr>
+                                    <td width="66%" style="text-align:right">Installation:</td>
+                                    <td width="34%" style="text-align:right">${!totalNRCValue2}</td>
+                                </tr>
+                                <tr>
+                                    <td width="66%" style="text-align:right">Phone Power:</td>
+                                    <td width="34%" style="text-align:right">${!totalNRCValue4}</td>
+                                </tr>
+                                <tr>
+                                    <td width="66%" style="text-align:right">Write-In Parts:</td>
+                                    <td width="34%" style="text-align:right">${!totalNRCValue5}</td>
+                                </tr>
+                                <tr>
+                                    <td width="66%" style="text-align:right"><b>Total Upfront:</b></td>
+                                    <td width="34%" style="text-align:right"><b>${!totalUpfrontCostHardware}</b></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="50%">
+                            <table cellspacing="0" border="1" style="border:1px solid black;">
+                                <tr>
+                                    <td width="25%" style="text-align:center"><u><b>Payment Options:</b></u></td>
+                                    <td width="75%">&nbsp;</td>
+                                </tr>
+                                <tr border="1">
+                                    <td width="25%" style="text-align:center">Total &lt;$25,000</td>
+                                    <td width="75%" style="text-align:center">Equipment Payment 100% on Delivery; Services 100% on Frontier Provision of COC</td>
+                                </tr>
+                                <tr border="1">
+                                    <td width="25%" style="text-align:center">Total &gt;=$25000</td>
+                                    <td width="75%" style="text-align:center">Equipment Payment 25% on mutual execution of Schedule, remainder on shipment of Equipment; Services 100% per COC or COA</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="proposal_financing" style="{!IF(showFinancing, 'display:block', 'display:none')}">
+                <p><b>FF&apos;s Cloud payment terms will be through <u>Frontier Financial Solutions</u></b></p>
+                <table width="50%" cellspacing="0" border="1" style="border:1px solid black;">
+                    <tr>
+                        <td width="66%" style="text-align:right"><b>Type</b></td>
+                        <td width="34%" style="text-align:center"><b>Cloud</b></td>
+                    </tr>
+                    <tr>
+                        <td width="66%" style="text-align:right"><b>Term Months</b></td>
+                        <td width="34%" style="text-align:center"><b>36</b></td>
+                    </tr>
+                    <tr>
+                        <td width="66%" style="text-align:right"><b># of Advanced Payments</b></td>
+                        <td width="34%" style="text-align:center"><b>0</b></td>
+                    </tr>
+                    <tr>
+                        <td width="66%" style="text-align:right"><b>Monthly Payment</b></td>
+                        <td width="34%" style="text-align:right"><b>${!monthlyFinancePayment}</b></td>
+                    </tr>
+                    <tr>
+                        <td width="66%" style="text-align:right"><b>Monthly Recurring Change</b></td>
+                        <td width="34%" style="text-align:right"><b>${!totalMonthlyRecurringCharge}</b></td>
+                    </tr>
+                    <tr>
+                        <td width="66%" style="text-align:right"><b>Total Monthly Payment</b></td>
+                        <td width="34%" style="text-align:right"><b>${!totalMonthlyFinancePayment}</b></td>
+                    </tr>
+                    <tr>
+                        <td width="66%" style="text-align:right">&nbsp;</td>
+                        <td width="34%" style="text-align:right"><i>(plus applicable taxes)</i></td>
+                    </tr>
+                </table>
+                <table width="50%">
+                    <tr>
+                        <td style="text-align:center"><b>Warranty, Maintenance and repair is included for FULL TERM of Agreement</b></td>
+                    </tr>
+                </table>
+            </div>
+            <p><b>3. End User Training.</b> Frontier will provide the customer with a link to Feature Teacher.  Feature Teacher provides an interactive web interface to train end users at their convenience.  End users can access the training at any time at no cost, and end users can access the training an unlimited number of times.</p>
+            <p><b>4. Installation.</b> Frontier will furnish all hardware, labor and other items necessary for installation of the AnyWare endpoints and associated equipment.  Frontier will perform the installation in a timely and workmanlike manner, and will be responsible for any restoration or repairs associated with, and of direct control, of Frontier during the installation.  The solution will be installed utilizing in-place cabling.  Should such cabling not be accessable for reuse and system connectivity, it will be the customer responsibility to provide new and adequate cabling, for either in-place or new-location connectivity, unless otherwise specified in the attached Equipment Schedule.  <b>Installation includes after hours cutover of telco services and placement of desktop phones.</b></p>
+            <table width="100%" cellspacing="0" >
+                    <tr>
+                         <td width="50%">Submitted by:___________________________</td>
+                         <td width="50%">Accepted by ____________________________</td>
+                    </tr>
+                    <tr><td width="50%">&nbsp;</td><td width="50%">&nbsp;</td></tr>
+                    <tr>
+                        <td width="50%">Submitter Phone:________________________</td>
+                        <td width="50%">Accepted Date:  _________________________</td>
+                    </tr>
+                    <tr><td width="50%">&nbsp;</td><td width="50%">&nbsp;</td></tr>
+                    <tr>
+                        <td width="50%">Submitter Email:_________________________</td>
+                        <td width="50%">&nbsp;</td>
+                    </tr>
+            </table>
+             <div style="font-size:8pt;border-top: solid 2px black;padding-top:15pt;">
+                <!--border-top: solid 2px black; -->
+                2 © 2022 Frontier Communications Parent, Inc. All Rights Reserved.
+    			<img src="{!$Resource.ProposalFooter}" style="width:20%;height:10%;float:right;padding-top:15pt;"/>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function limitLength(id, len) {
+            var element = document.getElementById(id);
+            element.innerHTML = element.innerHTML(substr(0, len));
+            element.setAttribute("style", "text-align:justify;")
+        }
+    </script>
+</apex:page>

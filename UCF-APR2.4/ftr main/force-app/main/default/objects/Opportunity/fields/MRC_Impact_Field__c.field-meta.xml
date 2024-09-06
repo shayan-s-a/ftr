@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRC_Impact_Field__c</fullName>
+    <description>Contains the amount that a CPE sale is affecting the overall Business revenue with the Customer.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a CPE related Opportunity. You must input the value (in Dollars) that is being Added (+) or Lost (-)  to this customer by this CPE product selection.</inlineHelpText>
+    <label>MRR Impact in Rev.$ (+/-)</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

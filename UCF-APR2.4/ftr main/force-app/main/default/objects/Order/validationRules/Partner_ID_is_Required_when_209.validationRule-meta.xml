@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_ID_is_Required_when_209</fullName>
+    <active>true</active>
+    <description>If Sales Channel value is 209 - Master Agents, then Partner ID is required
+&amp;&amp;
+DATEVALUE(CreatedDate) &gt; DATEVALUE(&quot;2017-09-26&quot;)</description>
+    <errorConditionFormula>AND(ISPICKVAL(Sales_Channel__c , &apos;209 - Referral Agents&apos;),
+ISBLANK(Partner_ID__c),
+OR(DATEVALUE(CreatedDate) &gt; DATEVALUE(&quot;2017-10-11&quot;), ISNEW()))</errorConditionFormula>
+    <errorDisplayField>Partner_ID__c</errorDisplayField>
+    <errorMessage>If Sales Channel value is 209 - Referral Agents, then Partner ID is required</errorMessage>
+</ValidationRule>

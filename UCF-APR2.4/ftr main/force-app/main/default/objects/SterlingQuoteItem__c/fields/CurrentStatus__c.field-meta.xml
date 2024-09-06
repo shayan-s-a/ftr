@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CurrentStatus__c</fullName>
+    <externalId>false</externalId>
+    <label>CurrentStatus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Draft</fullName>
+                <default>false</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Pending - Business Decision Support</fullName>
+                <default>false</default>
+                <label>Pending - Business Decision Support</label>
+            </value>
+            <value>
+                <fullName>Pending - Credit</fullName>
+                <default>false</default>
+                <label>Pending - Credit</label>
+            </value>
+            <value>
+                <fullName>Pending - Engineering</fullName>
+                <default>false</default>
+                <label>Pending - Engineering</label>
+            </value>
+            <value>
+                <fullName>Pending - Engineering Wireless</fullName>
+                <default>false</default>
+                <label>Pending - Engineering Wireless</label>
+            </value>
+            <value>
+                <fullName>Pending - Engineering Wireless Final</fullName>
+                <default>false</default>
+                <label>Pending - Engineering Wireless Final</label>
+            </value>
+            <value>
+                <fullName>Pending - Finance</fullName>
+                <default>false</default>
+                <label>Pending - Finance</label>
+            </value>
+            <value>
+                <fullName>Pending - INA</fullName>
+                <default>false</default>
+                <label>Pending - INA</label>
+            </value>
+            <value>
+                <fullName>Pending - INA Engineering</fullName>
+                <default>false</default>
+                <label>Pending - INA Engineering</label>
+            </value>
+            <value>
+                <fullName>Pending - Post Completion Audit Finance</fullName>
+                <default>false</default>
+                <label>Pending - Post Completion Audit Finance</label>
+            </value>
+            <value>
+                <fullName>Pending - Post Completion Audit Originator</fullName>
+                <default>false</default>
+                <label>Pending - Post Completion Audit Originator</label>
+            </value>
+            <value>
+                <fullName>Pending - Post Engineering Originator</fullName>
+                <default>false</default>
+                <label>Pending - Post Engineering Originator</label>
+            </value>
+            <value>
+                <fullName>Pending - Post Engineering Originator Wireless</fullName>
+                <default>false</default>
+                <label>Pending - Post Engineering Originator Wireless</label>
+            </value>
+            <value>
+                <fullName>Pending - Regional President</fullName>
+                <default>false</default>
+                <label>Pending - Regional President</label>
+            </value>
+            <value>
+                <fullName>Pending - Sales Engineering</fullName>
+                <default>false</default>
+                <label>Pending - Sales Engineering</label>
+            </value>
+            <value>
+                <fullName>Pending - Sales Engineering Manager</fullName>
+                <default>false</default>
+                <label>Pending - Sales Engineering Manager</label>
+            </value>
+            <value>
+                <fullName>Pending - Site Verification</fullName>
+                <default>false</default>
+                <label>Pending - Site Verification</label>
+            </value>
+            <value>
+                <fullName>Pending - State VP</fullName>
+                <default>false</default>
+                <label>Pending - State VP</label>
+            </value>
+            <value>
+                <fullName>Pending - Wireless Management</fullName>
+                <default>false</default>
+                <label>Pending - Wireless Management</label>
+            </value>
+            <value>
+                <fullName>Pending - SVP Approval</fullName>
+                <default>false</default>
+                <label>Pending - SVP Approval</label>
+            </value>
+            <value>
+                <fullName>Pending - RSM Approval</fullName>
+                <default>false</default>
+                <label>Pending - RSM Approval</label>
+            </value>
+            <value>
+                <fullName>Pending Ready for Review</fullName>
+                <default>false</default>
+                <label>Pending Ready for Review</label>
+            </value>
+            <value>
+                <fullName>Pending AE Update</fullName>
+                <default>false</default>
+                <label>Pending AE Update</label>
+            </value>
+            <value>
+                <fullName>Pending - ICB</fullName>
+                <default>false</default>
+                <label>Pending - ICB</label>
+            </value>
+            <value>
+                <fullName>Pending - Pricing</fullName>
+                <default>false</default>
+                <label>Pending - Pricing</label>
+            </value>
+            <value>
+                <fullName>Pending - Product</fullName>
+                <default>false</default>
+                <label>Pending - Product</label>
+            </value>
+            <value>
+                <fullName>Pending Final Update</fullName>
+                <default>false</default>
+                <label>Pending Final Update</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,34 @@
+<messaging:emailTemplate subject="Reply With Quote Template" relatedToType="Case">
+    <messaging:htmlEmailBody >
+        <html style="overflow-y: hidden;">
+            <body>
+            <p>*** DO NOT REPLY TO THIS AUTOMATED EMAIL MESSAGE, CLICK ON THE LINK BELOW ***</P>
+                Thank you for offering Frontier the opportunity to work with you and your customer.<br />
+                <br />
+                I have attached the price quote that you have requested, along with the Agent Order Form (AOF.)<br />
+                <br />
+                When contracts are needed, please follow the below steps:
+                <ul>
+                    <li>Complete attached AOF in its entirety</li>
+                    <li>Return completed AOF direct to the PST group via this existing Status Update webform</li>
+                </ul>
+                Please let us know if you have any questions, we are more than happy to help!!<br />
+                <br />
+                Build Out/Conduit
+                <ul>
+                    <li>Frontier build pricing is structured to the existing Minimum Point of Entry (MPOE) /dmarc or the Right of Way at the edge of Customer&rsquo;s property</li>
+                    <li>Frontier shall NOT build conduit into the property; customer shall be responsible, (at its own expense), to provide conduit into the property for cable placement</li>
+                    <li>Frontier does NOT cover or provide dmarc extensions</li>
+                    <li>Standard install time is 45-120 business days (2-6 months) depending on the build required. &nbsp;Price quotes are valid for 30 days.</li>
+                </ul>
+                <p>Click <a href="https://ftr.tfaforms.net//f/PartnerSupportStatus?CaseID={!relatedTo.Id}" style="text-decoration: underline;font-weight: bold;">HERE</a> to view the status of the case and enter new comments.</p><br />
+                <br />
+                Thanks,
+                <br />
+                Frontier Sales Support
+                <br />
+                <img style="max-width: 140px" src="https://i.ibb.co/KXpX32x/Frontier-Secondary-Logo-RGB-Red-smal1.png" alt="Frontier-Secondary-Logo-RGB-Red-smal1" border="0" />
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

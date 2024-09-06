@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Segment__c</fullName>
+    <description>Updated/Created by Randy Gromlich for D&amp;B/MLR data 3/5/2020</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Segmentation based on Global Employees grouped as: SMB (&lt;30 employees), 30-99, 100-249, 250-499, 500-99, 1,000+. All entities with a Global family carry the same segmentation.</inlineHelpText>
+    <label>Commercial Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SMB</fullName>
+                <default>false</default>
+                <label>SMB</label>
+            </value>
+            <value>
+                <fullName>30-99</fullName>
+                <default>false</default>
+                <label>30-99</label>
+            </value>
+            <value>
+                <fullName>100-249</fullName>
+                <default>false</default>
+                <label>100-249</label>
+            </value>
+            <value>
+                <fullName>250-499</fullName>
+                <default>false</default>
+                <label>250-499</label>
+            </value>
+            <value>
+                <fullName>500-999</fullName>
+                <default>false</default>
+                <label>500-999</label>
+            </value>
+            <value>
+                <fullName>1000+</fullName>
+                <default>false</default>
+                <label>1000+</label>
+            </value>
+            <value>
+                <fullName>Advanced</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Advanced</label>
+            </value>
+            <value>
+                <fullName>Emergent - Complex</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Emergent - Complex</label>
+            </value>
+            <value>
+                <fullName>Emergent - Simple</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Emergent - Simple</label>
+            </value>
+            <value>
+                <fullName>Enterprise</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Enterprise</label>
+            </value>
+            <value>
+                <fullName>Null</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Null</label>
+            </value>
+            <value>
+                <fullName>Small - Complex</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Small - Complex</label>
+            </value>
+            <value>
+                <fullName>Small - Simple</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Small - Simple</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

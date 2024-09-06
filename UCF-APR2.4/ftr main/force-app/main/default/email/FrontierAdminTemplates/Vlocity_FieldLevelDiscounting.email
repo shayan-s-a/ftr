@@ -1,0 +1,16 @@
+A quote has been submitted for approval. 
+
+Please click the link below to navigate to the quote:
+
+Quote Link: {!Quote.Link}
+Approval Request Link: {!ApprovalRequest.Internal_URL}
+
+Below are the Quote related fields:
+
+Quote Name:  {!Quote.Name}
+Quote Number: {!Quote.QuoteNumber}
+Quote Owner: {!Quote.OwnerFullName}
+Quote Approval Status: {!Quote.Approval_Status__c}
+Approval Status Date: {!Quote.Approval_Status_Date__c}
+Effective Recurring Total: {!Quote.vlocity_cmt__EffectiveRecurringTotal__c}
+Effective One Time Total: {!Quote.vlocity_cmt__EffectiveOneTimeTotal__c}

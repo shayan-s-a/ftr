@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SupportedProducts__c</fullName>
+    <externalId>false</externalId>
+    <label>Products workgroup will support</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ethernet</fullName>
+                <default>false</default>
+                <label>Ethernet</label>
+            </value>
+            <value>
+                <fullName>Frontier AnyWare UCaaS</fullName>
+                <default>false</default>
+                <label>Frontier AnyWare UCaaS</label>
+            </value>
+            <value>
+                <fullName>Frontier Anyware Mitel Hosted</fullName>
+                <default>false</default>
+                <label>Frontier Anyware Mitel Hosted</label>
+            </value>
+            <value>
+                <fullName>UCF</fullName>
+                <default>false</default>
+                <label>UCF</label>
+            </value>
+            <value>
+                <fullName>UCaaS/UCF</fullName>
+                <default>false</default>
+                <label>UCaaS/UCF</label>
+            </value>
+            <value>
+                <fullName>Managed Enterprise WiFi</fullName>
+                <default>false</default>
+                <label>Managed Enterprise WiFi</label>
+            </value>
+            <value>
+                <fullName>SDWAN</fullName>
+                <default>false</default>
+                <label>SDWAN</label>
+            </value>
+            <value>
+                <fullName>FOTS</fullName>
+                <default>false</default>
+                <label>FOTS</label>
+            </value>
+            <value>
+                <fullName>EIAE-LAN</fullName>
+                <default>false</default>
+                <label>EIAE-LAN</label>
+            </value>
+            <value>
+                <fullName>E-LAN + EIA</fullName>
+                <default>false</default>
+                <label>E-LAN + EIA</label>
+            </value>
+            <value>
+                <fullName>EVPL</fullName>
+                <default>false</default>
+                <label>EVPL</label>
+            </value>
+            <value>
+                <fullName>Managed Router</fullName>
+                <default>false</default>
+                <label>Managed Router</label>
+            </value>
+            <value>
+                <fullName>SIP</fullName>
+                <default>false</default>
+                <label>SIP</label>
+            </value>
+            <value>
+                <fullName>SIP Trunking</fullName>
+                <default>false</default>
+                <label>SIP Trunking</label>
+            </value>
+            <value>
+                <fullName>IP Connect</fullName>
+                <default>false</default>
+                <label>IP Connect</label>
+            </value>
+            <value>
+                <fullName>E-Reach</fullName>
+                <default>false</default>
+                <label>E-Reach</label>
+            </value>
+            <value>
+                <fullName>Off-Net</fullName>
+                <default>false</default>
+                <label>Off-Net</label>
+            </value>
+            <value>
+                <fullName>IPVPN</fullName>
+                <default>false</default>
+                <label>IPVPN</label>
+            </value>
+            <value>
+                <fullName>SDWAN - E-Reach/Off-Net Ethernet</fullName>
+                <default>false</default>
+                <label>SDWAN - E-Reach/Off-Net Ethernet</label>
+            </value>
+            <value>
+                <fullName>SDWAN - New or Upgrade Ethernet</fullName>
+                <default>false</default>
+                <label>SDWAN - New or Upgrade Ethernet</label>
+            </value>
+            <value>
+                <fullName>EIA</fullName>
+                <default>false</default>
+                <label>EIA</label>
+            </value>
+            <value>
+                <fullName>E-LAN</fullName>
+                <default>false</default>
+                <label>E-LAN</label>
+            </value>
+            <value>
+                <fullName>Off-Net Ethernet</fullName>
+                <default>false</default>
+                <label>Off-Net Ethernet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

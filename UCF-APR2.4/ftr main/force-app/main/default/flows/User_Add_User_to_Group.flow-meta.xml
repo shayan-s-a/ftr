@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <constants>
+        <description>The Developer Name of the Sitetracker Contact record type</description>
+        <name>SitetrackerContactRecordType</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Sitetracker_Contact</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Determines if the User&apos;s Contact is a &quot;Sitetracker Contact&quot;</description>
+        <name>Sitetracker_Contact</name>
+        <label>Sitetracker Contact?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>SitetrackerContact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>SitetrackerContactRecordType</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Public_Group</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Assign a new Sitetracker portal user to their account&apos;s public group for the purpose of facilitating record sharing.</description>
+    <formulas>
+        <description>The Developer Name of the public group</description>
+        <name>GroupDeveloperName</name>
+        <dataType>String</dataType>
+        <expression>&quot;ST&quot;&amp;{!$Record.AccountId}</expression>
+    </formulas>
+    <interviewLabel>User: Add User to Group {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>User: Add User to Group</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Add User to their Account&apos;s public group</description>
+        <name>Add_User_to_Public_Group</name>
+        <label>Add User to Public Group</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <inputAssignments>
+            <field>GroupId</field>
+            <value>
+                <elementReference>Get_Public_Group.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>GroupMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Gets the Public Group associated to the portal user&apos;s Account</description>
+        <name>Get_Public_Group</name>
+        <label>Get Public Group</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Add_User_to_Public_Group</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GroupDeveloperName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Sitetracker_Contact</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>User</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LAM_State_Is_Manadatory_NatCenWes</fullName>
+    <active>false</active>
+    <description>If the RVP is in the Central region user must select a LAM State</description>
+    <errorConditionFormula>AND(
+ OR(
+  $User.RVP__c = &quot;RVP Central&quot;,
+  $User.RVP__c = &quot;RVP West&quot;,
+  $User.RVP__c = &quot;RVP National&quot;
+ ),
+ ISPICKVAL(Local_Area_Market_State__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Local_Area_Market_State__c</errorDisplayField>
+    <errorMessage>You must enter a LAM State and LAM.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hot_Cut_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Hot Cut Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>UCaaS_Cutover_Picklist__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Review</fullName>
+                <default>false</default>
+                <label>Review</label>
+            </value>
+            <value>
+                <fullName>Kickoff Call</fullName>
+                <default>false</default>
+                <label>Kickoff Call</label>
+            </value>
+            <value>
+                <fullName>DPI &amp; TN Provisioning</fullName>
+                <default>false</default>
+                <label>DPI &amp; TN Provisioning</label>
+            </value>
+            <value>
+                <fullName>Internal Review</fullName>
+                <default>false</default>
+                <label>Internal Review</label>
+            </value>
+            <value>
+                <fullName>CXR Touch Point</fullName>
+                <default>false</default>
+                <label>CXR Touch Point</label>
+            </value>
+            <value>
+                <fullName>Porting</fullName>
+                <default>false</default>
+                <label>Porting</label>
+            </value>
+            <value>
+                <fullName>TTU</fullName>
+                <default>false</default>
+                <label>TTU</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>HOTCUT Completed</fullName>
+                <default>false</default>
+                <label>HOTCUT Completed</label>
+            </value>
+            <value>
+                <fullName>Review Order</fullName>
+                <default>false</default>
+                <label>Review Order</label>
+            </value>
+            <value>
+                <fullName>Revised CDC Uploaded</fullName>
+                <default>false</default>
+                <label>Revised CDC Uploaded</label>
+            </value>
+            <value>
+                <fullName>Checklist in Progress</fullName>
+                <default>false</default>
+                <label>Checklist in Progress</label>
+            </value>
+            <value>
+                <fullName>Checklist Completed</fullName>
+                <default>false</default>
+                <label>Checklist Completed</label>
+            </value>
+            <value>
+                <fullName>Schedule Migration Call</fullName>
+                <default>false</default>
+                <label>Schedule Migration Call</label>
+            </value>
+            <value>
+                <fullName>Migration Completed</fullName>
+                <default>false</default>
+                <label>Migration Completed</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>HOTCUT Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Review Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Revised CDC Uploaded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Checklist in Progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Checklist Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Schedule Migration Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Migration Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Kickoff Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>DPI &amp; TN Provisioning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Internal Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>CXR Touch Point</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Porting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>TTU</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

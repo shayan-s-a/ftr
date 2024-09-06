@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Code_Required</fullName>
+    <active>false</active>
+    <description>The Disposition Code is a required field when the Lead Stage is in MQO or SAO and the Lead is being rejected.</description>
+    <errorConditionFormula>AND( 
+
+OR( 
+ispickval(Status, &quot;Rejected - Return to Nurture Stream&quot;), 
+ispickval(Status, &quot;Rejected - Disqualify&quot;) 
+), 
+
+OR( 
+ispickval (Lead_Stage__c, &quot;MQO&quot;), 
+ispickval (Lead_Stage__c, &quot;SAO&quot;) 
+), 
+
+OR( 
+Ispickval( MQO_SAO_Disposition_Code__c , &quot;&quot;) 
+))</errorConditionFormula>
+    <errorDisplayField>MQO_SAO_Disposition_Code__c</errorDisplayField>
+    <errorMessage>Disposition code is required when rejecting a Lead in the MQO or SAO Lead Stage. Please select a dispostion code and save your changes.</errorMessage>
+</ValidationRule>

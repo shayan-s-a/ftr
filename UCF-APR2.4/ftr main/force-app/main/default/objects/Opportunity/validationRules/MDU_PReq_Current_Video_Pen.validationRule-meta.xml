@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_PReq_Current_Video_Pen</fullName>
+    <active>false</active>
+    <description>Controls that this field don´t be empty when changing to Proforma
+Requested Status</description>
+    <errorConditionFormula>AND(RecordType.Name = &quot;Community Connections&quot;,
+ISPICKVAL(StageName ,&quot;Proforma Requested&quot;),
+  ISBLANK(Current_Video_Penetration_1__c),
+OR(ISPICKVAL(Installation_Type__c, &quot;Brownfield has full/partial FTR service&quot;),
+ISPICKVAL(Installation_Type__c, &quot;Expansion - Brownfield has full/partial FTR service&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Current_Video_Penetration__c</errorDisplayField>
+    <errorMessage>Current Video Penetration is missing.</errorMessage>
+</ValidationRule>

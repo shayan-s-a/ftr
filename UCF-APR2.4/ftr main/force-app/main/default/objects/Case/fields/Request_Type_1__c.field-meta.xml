@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type_1__c</fullName>
+    <description>For RFP -RFI</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the type of support requested</inlineHelpText>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RFP/RFQ/RFI_Not</fullName>
+                <default>false</default>
+                <label>RFP/RFQ/RFI (Not E-Rate or RHC)</label>
+            </value>
+            <value>
+                <fullName>E-Rate</fullName>
+                <default>false</default>
+                <label>E-Rate (RFP Only)</label>
+            </value>
+            <value>
+                <fullName>Rural Health Care</fullName>
+                <default>false</default>
+                <label>Rural Health Care (RFP Only)</label>
+            </value>
+            <value>
+                <fullName>Other Support Request</fullName>
+                <default>false</default>
+                <label>Other Support Request</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

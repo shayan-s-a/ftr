@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Quote_CS</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>New</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!URLFOR(&apos;/lightning/o/SterlingQuote__c/new?count=2&amp;nooverride=1&amp;useRecordTypeCheck=1&amp;defaultFieldValues=Status__c=Draft,ExpirationDate__c=&apos;+Text(TODAY()+30)+&apos;,OpportunityId__c=&apos;+Opportunity.Id+&apos;&amp;navigationLocation=RELATED_LIST&amp;uid=162908634366884330&amp;backgroundContext=%2Flightning%2Fr%2FOpportunity%2F&apos;+Opportunity.Id+&apos;%2Fview&amp;recordTypeId=0120h000000MekOAAS&apos;)}</url>
+</WebLink>

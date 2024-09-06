@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDU_Proforma_Internal_Approval_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.Name =&quot;Community Connections&quot;,
+ISPICKVAL(StageName ,&quot;Proforma Sent for Internal Approval&quot;),
+ISBLANK(Loaded_Capital_Costs__c)
+   )</errorConditionFormula>
+    <errorDisplayField>Loaded_Capital_Costs__c</errorDisplayField>
+    <errorMessage>To change to stage &quot;Proforma Sent for Internal Approval&quot; the field &quot;Loaded Capital Costs ($K)&quot; must be filled in</errorMessage>
+</ValidationRule>

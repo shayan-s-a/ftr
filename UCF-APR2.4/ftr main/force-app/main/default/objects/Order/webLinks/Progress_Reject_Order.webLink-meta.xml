@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Progress_Reject_Order</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Progress/Reject Order</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>// accepts format like dd/mm/yyyy
+function parseDate(datestr) {
+  var arr = datestr.match(/(\d+)/g);
+  var y = parseInt(arr[2]);
+  var m = parseInt(arr[1])-1;
+  var d = parseInt(arr[0]);
+  return new Date(y,m,d);
+}
+
+var createdDate = new Date(&apos;{!Order.CreatedDate}&apos;);
+//If the CreatedDate is on or after October 11th, 2017 [note the dd/mm/yyyy format]
+if(createdDate &gt;= parseDate(&apos;11/10/2017&apos;)) {
+alert(&apos;Error: See Approval History, select from Reassign|Approve/Reject to progress this Order&apos;);
+} else {
+window.location.href = &apos;/flow/SF_Order_Initiation?vRecordId={!Order.Id}&amp;vUserId={!User.Id}&amp;retURL=/{!Order.Id}&apos;;
+}</url>
+</WebLink>

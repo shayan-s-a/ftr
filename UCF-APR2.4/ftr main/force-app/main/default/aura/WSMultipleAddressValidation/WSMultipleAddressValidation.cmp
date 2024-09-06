@@ -1,0 +1,27 @@
+<aura:component controller="FTRWSMultipleFileUploader"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+                access="global"> 
+    <aura:attribute name="documentURL1" type="String"/>
+    <aura:attribute name="documentURL2" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <lightning:layout multipleRows="true" class="border">
+            <lightning:layoutItem padding="around-small" size="12">
+                <lightning:formattedUrl 
+                                        value="{!v.documentURL1}"
+                                        label="Click Here to download the Template"
+                                        target="_blank" />
+            </lightning:layoutItem>
+         <lightning:layoutItem padding="around-small" size="12">
+                <lightning:formattedUrl 
+                                        value="{!v.documentURL2}"
+                                        label="Click Here to download Sample Bulk Upload Data"
+                                        target="_blank" />
+            </lightning:layoutItem>
+        
+   <lightning:layoutItem>
+       <c:FTRWSMultipleFileUploader oppId="{!v.recordId}"/>
+         </lightning:layoutItem>
+    
+    
+         </lightning:layout>
+</aura:component>

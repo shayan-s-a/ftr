@@ -1,0 +1,13 @@
+<template>
+    <lightning-card icon-name="standard:insights" title="Open Tasks For Opportunities">
+        <div style="height: 250px;" class = "slds-m-around_medium; slds-scrollable_y">
+            <lightning-datatable key-field="id" 
+                                 data={tskRecords} 
+                                 columns={columns}>
+            </lightning-datatable>
+        </div>
+        <template if:false={loaded}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+    </lightning-card>
+</template>

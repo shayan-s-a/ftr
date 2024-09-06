@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPE_CSA_Sales_Audit_beta</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>RPON_Order__c</columns>
+    <columns>Total_CPE_NRC__c</columns>
+    <columns>Audited_By__c</columns>
+    <columns>Audit_Results__c</columns>
+    <columns>Audit_Finding_Summary__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Ready_for_Sales_Audit__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Ready_for_Sales_Audit__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>3-CPE CSA Sales Audit</label>
+    <sharedTo>
+        <group>Audit_Team</group>
+        <role>Global</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_Connections_Agreement</fullName>
+    <active>true</active>
+    <label>Community Connections - Agreement</label>
+    <picklistValues>
+        <picklist>Easement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exclusive_Wiring_Agreement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interested_in_a_Different_Provider__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MDU_ContractType__c</picklist>
+        <values>
+            <fullName>DIRECTV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMA%2FNEMA%2FBulk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Milestone_Status__c</picklist>
+        <values>
+            <fullName>Construction Complete - Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordinate Site Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design Detailed Work Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excluded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Level Price Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold - Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Property Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Released to Construction - Add</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>AE%2FTM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avantive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avantive NON PH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D2D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drasco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infinity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infinity NON PH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Elect PALS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Approval Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

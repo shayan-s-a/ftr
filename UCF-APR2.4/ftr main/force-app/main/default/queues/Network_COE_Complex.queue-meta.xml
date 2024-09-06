@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Network COE - Complex</name>
+    <queueMembers>
+        <users>
+            <user>audra.peterson@ftr.com.sfa</user>
+            <user>jaryl.northrop@ftr.com</user>
+            <user>lisa.a.cyr@ftr.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Order</sobjectType>
+    </queueSobject>
+</Queue>

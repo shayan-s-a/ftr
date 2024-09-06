@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ERate_Lost_reason_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ RecordType.DeveloperName = &quot;Opportunity_Lightning&quot;,
+
+ISPICKVAL( Reason_Lost__c ,&quot;E-Rate Evaluation&quot;),
+
+ISBLANK(TEXT(  E_Rate_Lost_Reason__c ))
+
+)</errorConditionFormula>
+    <errorMessage>If Reason Lost is &quot;E-Rate Evaluation&quot; then &quot;E-Rate Lost Reason&quot; is required.</errorMessage>
+</ValidationRule>

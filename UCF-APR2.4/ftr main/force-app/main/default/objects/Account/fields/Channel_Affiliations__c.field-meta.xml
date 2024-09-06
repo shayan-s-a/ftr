@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel_Affiliations__c</fullName>
+    <externalId>false</externalId>
+    <label>On-Boarding Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aggregators</fullName>
+                <default>false</default>
+                <label>Aggregators</label>
+            </value>
+            <value>
+                <fullName>Big Box</fullName>
+                <default>false</default>
+                <label>Big Box</label>
+            </value>
+            <value>
+                <fullName>Commercial Agents</fullName>
+                <default>false</default>
+                <label>Commercial Agents</label>
+            </value>
+            <value>
+                <fullName>Community Connections</fullName>
+                <default>false</default>
+                <label>Community Connections</label>
+            </value>
+            <value>
+                <fullName>CROSS SELL</fullName>
+                <default>false</default>
+                <label>CROSS SELL</label>
+            </value>
+            <value>
+                <fullName>Dealer Channel - Commercial</fullName>
+                <default>false</default>
+                <label>Dealer Channel - Commercial</label>
+            </value>
+            <value>
+                <fullName>DIGITAL PAID SEARCH</fullName>
+                <default>false</default>
+                <label>DIGITAL PAID SEARCH</label>
+            </value>
+            <value>
+                <fullName>Door to Door - Residential</fullName>
+                <default>false</default>
+                <label>Door to Door - Residential</label>
+            </value>
+            <value>
+                <fullName>Event Manager</fullName>
+                <default>false</default>
+                <label>Event Manager</label>
+            </value>
+            <value>
+                <fullName>ISP</fullName>
+                <default>false</default>
+                <label>ISP</label>
+            </value>
+            <value>
+                <fullName>Local Engagement</fullName>
+                <default>false</default>
+                <label>Local Engagement</label>
+            </value>
+            <value>
+                <fullName>NON-CHANNEL SUPPORT COMPANY</fullName>
+                <default>false</default>
+                <label>NON-CHANNEL SUPPORT COMPANY</label>
+            </value>
+            <value>
+                <fullName>Premier Retail</fullName>
+                <default>false</default>
+                <label>Premier Retail</label>
+            </value>
+            <value>
+                <fullName>Retail Agent - Residential</fullName>
+                <default>false</default>
+                <label>Retail Agent - Residential</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

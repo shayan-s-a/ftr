@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_same_Day__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(CloseDate =  datevalue(CreatedDate),true,false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Closed same Day</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

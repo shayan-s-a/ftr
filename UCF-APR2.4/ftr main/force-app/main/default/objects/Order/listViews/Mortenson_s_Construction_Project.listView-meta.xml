@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mortenson_s_Construction_Project</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDER.SHIPPING_STREET</columns>
+    <columns>ORDER.SHIPPING_CITY</columns>
+    <columns>ORDER.SHIPPING_STATE_CODE</columns>
+    <columns>Product_Type__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Managed_Services_BTN__c</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>Product__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product__c</field>
+        <operation>equals</operation>
+        <value>EIA</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <filters>
+        <field>ORDER.SHIPPING_STREET</field>
+        <operation>startsWith</operation>
+        <value>1510 East gurler</value>
+    </filters>
+    <label>Mortenson&apos;s Construction Project</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

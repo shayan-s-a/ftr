@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ftr_HBE_requested__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(((Product2.ProductCode = &quot;ENT_ETH_EIA_0002&quot; &amp;&amp; Speed_Mbps__c &gt;= 5000) || (Product2.ProductCode = &quot;ENT_ETH_EVPL_0010&quot; &amp;&amp; Speed_Mbps__c &gt;= 500) || (Product2.ProductCode = &quot;ENT_ETH_EVPL_0020&quot; &amp;&amp; Speed_Mbps__c &gt;= 5000) || (Product2.ProductCode = &quot;ENT_ETH_UNI_0001&quot; &amp;&amp; Speed_Mbps__c &gt;= 5000) || (Product2.ProductCode = &quot;ENT_ETH_EVPL_0002&quot; &amp;&amp; Speed_Mbps__c &gt;= 500)) , true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>HBE Requested</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Broadband_COE_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Network COE Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>UCaaS_Cutover_Picklist__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Review</fullName>
+                <default>false</default>
+                <label>Review</label>
+            </value>
+            <value>
+                <fullName>Process Order</fullName>
+                <default>false</default>
+                <label>Process Order</label>
+            </value>
+            <value>
+                <fullName>Simply BB Completed</fullName>
+                <default>false</default>
+                <label>Simply BB Completed</label>
+            </value>
+            <value>
+                <fullName>Review Order</fullName>
+                <default>false</default>
+                <label>Review Order</label>
+            </value>
+            <value>
+                <fullName>DPI Orders in Progress</fullName>
+                <default>false</default>
+                <label>DPI Orders in Progress</label>
+            </value>
+            <value>
+                <fullName>DPI Order Completed</fullName>
+                <default>false</default>
+                <label>DPI Order Completed</label>
+            </value>
+            <value>
+                <fullName>Pending First Bill Review</fullName>
+                <default>false</default>
+                <label>Pending First Bill Review</label>
+            </value>
+            <value>
+                <fullName>Bill First Reviewed</fullName>
+                <default>false</default>
+                <label>Bill First Reviewed</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Simply BB Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Review Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>DPI Orders in Progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>DPI Order Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Pending First Bill Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>True</controllingFieldValue>
+            <valueName>Bill First Reviewed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>False</controllingFieldValue>
+            <valueName>Process Order</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

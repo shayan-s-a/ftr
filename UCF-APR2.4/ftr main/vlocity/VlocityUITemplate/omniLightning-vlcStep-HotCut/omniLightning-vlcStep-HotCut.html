@@ -1,0 +1,171 @@
+<div class="slds-grid vlc-slds-step--container" vlc-slds-window-scroll="test" ng-controller="vltStepController">
+  <div class="nds-spinner_container" ng-if="bpTree.response.showLoading">
+		<div class="nds-spinner_brand nds-spinner nds-spinner_x-large" id="loader" aria-hidden="false" role="alert">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+				<circle cx="6" cy="50">
+					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
+						repeatCount="indefinite" begin="0.1" />
+				</circle>
+				<circle cy="50">
+					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10"
+						repeatCount="indefinite" begin="0.2" />
+				</circle>
+				<circle cy="50">
+					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+						repeatCount="indefinite" begin="0.3" />
+				</circle>
+			</svg>
+		</div>
+	</div>
+	<section id="{{::child.name}}" ng-show="child.bAccordionActive && child.bAccordionOpen"
+		class="step-step slds-size--1-of-1">
+		<div class="current-location-top-title"
+			ng-if="bpTree.response.SelectServiceLocation.CurrentLocationName != undefined">
+			<h2>Service Location:</h2>
+			<p>{{bpTree.response.SelectServiceLocation.CurrentLocationName}}</p>
+			<div style="display: flex;" ng-if="bpTree.response.SelectServiceLocation.ServiceTerm != undefined">
+				<b style="padding-right: 5px;">Term:</b>
+				<p>{{bpTree.response.SelectServiceLocation.ServiceTerm}}</p>
+			</div>
+		</div>
+		<!-- banner template -->
+		<vlc-slds-banner></vlc-slds-banner>
+
+		<!-- article when embedded in omniscript -->
+		<vlc-slds-embedded-article></vlc-slds-embedded-article>
+
+		<form novalidate role="form" stepForm name="{{::bpTree.sOmniScriptId}}-{{$index}}"
+			id="{{::bpTree.sOmniScriptId}}-{{$index}}" vlc-slds-disable-auto-complete="testing"
+			class="slds-grid slds-wrap">
+			<!-- child controls in the step new comment-->
+			<div class="slds-col--padded slds-size--1-of-1">
+				<div class="slds-grid slds-wrap slds-grid--pull-padded">
+					<child vlc-slds-change-inline-templates="::child.eleArray[0].propSetMap.showInputWidth"
+						class="slds-size--1-of-1 slds-medium-size--{{child.eleArray[0].propSetMap.controlWidth}}-of-12"
+						ng-repeat="child in ::children = child.children" ng-show="::!child.eleArray[0].propSetMap.hide"
+						ng-if='(child.eleArray[0].propSetMap.hide && child.eleArray[0].type!=="Formula")||(!child.eleArray[0].propSetMap.show || evaluateShow(child.eleArray[0], this))'>
+					</child>
+				</div>
+			</div>
+
+			<div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium slds-m-bottom--medium">
+				<div class="slds-grid slds-wrap vlc-slds-button--footer">
+					<div class="vlc-slds--tertiary-container">
+						<div class="vlc-slds-button--tertiary"
+							ng-if="child.bAccordionActive && bpTree.propSetMap.allowCancel != false  && bpTree.userProfile != 'Frontier Partner Portal User'"
+							confirmed-click="cancel()" ng-confirm-click="{{::child.propSetMap.cancelMessage}}">
+							{{::child.propSetMap.cancelLabel}}
+						</div>
+
+						<!-- test -->
+						<div ng-show="!child.bHasNext" class="vlc-slds-button--tertiary"
+							ng-if='bpTree.scriptState == "saveAndResume" && child.bAccordionActive'
+							vlc-animation-slider="test" confirmed-click="completeScript(true)"
+							ng-confirm-click="{{::child.propSetMap.completeMessage}}">
+							{{::child.propSetMap.completeLabel}}
+						</div>
+
+						<div class="vlc-slds-button--tertiary"
+							ng-if='child.propSetMap.allowSaveForLater !== false && bpTree.propSetMap.allowSaveForLater !== false && bpTree.scriptState !== "review" && child.bAccordionActive'
+							confirmed-click="saveForLater(child)" ng-confirm-click="{{::child.propSetMap.saveMessage}}">
+							{{::child.propSetMap.saveLabel}}
+						</div>
+					</div>
+
+					<div class="slds-size--1-of-1 slds-medium-size--6-of-12">
+						<div class="slds-grid slds-wrap slds-grid--pull-padded vlc-slds-small--size-column"
+							style="justify-content:flex-end">
+							<!-- OMNI:2008 -->
+							<div ng-if="child.bHasPrevious"
+								class="slds-size--1-of-1 slds-medium-size--{{::child.propSetMap.previousWidth}}-of-12 vlc-slds-remote-action--button">
+								<div class="slds-form-element__control">
+									<div class="vlc-control-wrapper">
+										<div id="{{::child.name + '_prevBtn'}}" class="slds-box vlc-slds-box--neutral"
+											ng-click="previous(this,child)" aria-hidden="true"
+											vlc-animation-slider="test" reverse="true">
+											<p>
+												{{::child.propSetMap.previousLabel}}
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="slds-size--1-of-1 slds-medium-size--{{::child.propSetMap.nextWidth}}-of-12 vlc-slds-remote-action--button">
+								<div class="slds-form-element__control">
+									<div class="vlc-control-wrapper">
+										<div id="{{::child.name + '_completeBtn'}}" ng-click="navigateToOrder(child)"
+											vlc-animation-slider="test" class="slds-box slds-box vlc-slds-box_neutral">
+											<p>{{::child.propSetMap.completeLabel}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div ng-show="child.bHasNext"
+								class="slds-size--1-of-1 slds-medium-size--{{::child.propSetMap.nextWidth}}-of-12 vlc-slds-remote-action--button">
+								<div class="slds-form-element__control">
+									<div class="vlc-control-wrapper">
+										<div id="{{::child.name + '_nextBtn'}}" ng-click="goNext(child)"
+											ng-disabled='checkValidity(this, child.index, child.indexInParent, "Step", null, true)'
+											vlc-animation-slider="test" class="slds-box">
+											<p>{{::child.propSetMap.nextLabel}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div ng-if="child.name == lastStepName && bpTree.response.SelectServiceLocation.CountOfLocations > 1"
+								class="slds-size--1-of-1 slds-medium-size--{{::child.propSetMap.nextWidth}}-of-12 vlc-slds-remote-action--button">
+								<div class="slds-form-element__control">
+									<div class="vlc-control-wrapper">
+										<div id="{{::child.name + '_nextBtn'}}" ng-click="goNext(child)"
+											ng-disabled='checkValidity(this, child.index, child.indexInParent, "Step", null, true)'
+											vlc-animation-slider="test" class="slds-box">
+											<p>{{::child.propSetMap.nextLabel}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+
+	<!-- Start of Modal -->
+
+	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+		aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open" ng-if="modal.showModal">
+		<div class="slds-modal__container">
+			<header class="slds-modal__header">
+				<h2 id="modal-heading-01" class="slds-modal__title slds-text-heading_small slds-hyphenate"
+					ng-class="{ 'slds-text-color_error' : modal.isError }">
+					{{modal.title}}
+				</h2>
+			</header>
+			<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+				<p ng-repeat="msg in modal.msgs" ng-class="{ 'slds-text-color_error' : modal.isError }">
+					{{msg}}
+				</p>
+			</div>
+			<footer class="slds-modal__footer">
+				<button class="slds-button slds-button_text-destructive" ng-click="hideModal()"
+            ng-class="{ 'slds-button_destructive' : modal.isError, 'slds-button_neutral' : !modal.isError }">
+            {{modal.cancelLabel}}
+        </button>
+				<button class="slds-button slds-button_brand"
+            ng-click="hideModal();nextRepeater(child.nextIndex, child.indexInParent)" ng-if="modal.continueLabel">
+            {{modal.continueLabel}}
+        </button>
+			</footer>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open" ng-if="modal.showModal"></div>
+
+	<!-- End of Modal -->
+
+</div>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_Attribute__c</fullName>
+    <externalId>false</externalId>
+    <label>Location Attribute</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HBE Enabled</fullName>
+                <default>false</default>
+                <label>HBE Enabled</label>
+            </value>
+            <value>
+                <fullName>LIT</fullName>
+                <default>false</default>
+                <label>LIT</label>
+            </value>
+            <value>
+                <fullName>100 Feet</fullName>
+                <default>false</default>
+                <label>100 Feet</label>
+            </value>
+            <value>
+                <fullName>500 Feet</fullName>
+                <default>false</default>
+                <label>500 Feet</label>
+            </value>
+            <value>
+                <fullName>1000 Feet</fullName>
+                <default>false</default>
+                <label>1000 Feet</label>
+            </value>
+            <value>
+                <fullName>2000 Feet</fullName>
+                <default>false</default>
+                <label>2000 Feet</label>
+            </value>
+            <value>
+                <fullName>&gt;2000 Feet</fullName>
+                <default>false</default>
+                <label>&gt;2000 Feet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

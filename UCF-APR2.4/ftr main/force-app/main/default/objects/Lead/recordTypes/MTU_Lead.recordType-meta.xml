@@ -1,0 +1,2534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MTU_Lead</fullName>
+    <active>true</active>
+    <businessProcess>Grant Lead Process</businessProcess>
+    <description>MTU Lead</description>
+    <label>MTU Lead</label>
+    <picklistValues>
+        <picklist>Alt_Ch_SMB_Channel__c</picklist>
+        <values>
+            <fullName>Door to Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Telemarketing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Aware_of_upcoming_Sales_Rep_contact__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BAL_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BB_Speed_Sold__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1g</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2g</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>70</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>700M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BB_Svc_Check__c</picklist>
+        <values>
+            <fullName>Eligible for new BB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing BB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Qual for BB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending BB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BHSI_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Company_Size_of_Employees__c</picklist>
+        <values>
+            <fullName>1-19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20-49</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50-99</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitor_Lost_to__c</picklist>
+        <values>
+            <fullName>Altice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atlantic Broadband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bel Aire Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIRECTV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gigamonster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotwire Comm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Made_with_targeted_account__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Role__c</picklist>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk Billing Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%2FReference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Notice Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement Mgr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement Mgr Coach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasing Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Notice Person 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Notice Person 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Site Technical Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Conversion_Type__c</picklist>
+        <values>
+            <fullName>Cart Submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form fill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Call</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_CPE_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Contract_Expiring_W_in_24_Months__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Ethernet_Any_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_FiOS_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Active%2FLead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winback</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DIAL_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DOZISF__ZoomInfo_Enrich_Status__c</picklist>
+        <values>
+            <fullName>Company Enrich Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enriched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Match</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disposition_Category__c</picklist>
+        <values>
+            <fullName>1st Attempt Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Attempt Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Attempt Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Finalized Record</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outside of FTR footprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sale Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total Refusal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unworkable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disposition__c</picklist>
+        <values>
+            <fullName>Bundle %28FBU%2C FBE or FBM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacted by Vendor or Previous Caller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Frontier Data Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Moving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM %28Decision Maker%29 Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disconnected Telephone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email or Written Document Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax Machine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government Office%2FSchool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Barrier %28Spanish%2FOther%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Live Message w%2F Contact Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Answer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Longer in Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested - Afraid to Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested - Decision Maker Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested - Happy w%2FCurrent Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested - Made Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested - No Presentation %28No Offer%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested - Presentation Made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested - Price%2FToo Expensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a BSC Account %28BPC%2C ESG%2C BRCH%2C RES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outside of FTR footprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending PUC Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled Callback No Presentation %28No Offer%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service%2FBilling Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV %28Dish Network%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Contract %281-3 mo%2E%29%2C %283-6 mo%2E%29%2C %286-12 mo%2E%29%2C %281%2B years%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice %28AccessLines%2C Ala Carte Features%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail - Left Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Number</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feature_Pack_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FiOS_Fiber_Internet_Capable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FiOS_Fiber_TV_Capable_yes_no_unk__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Campaign_Response__c</picklist>
+        <values>
+            <fullName>Ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinars</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GenderIdentity</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nonbinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Good_Creditr__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>INTERLATA_CZN_IND__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>INTRALATA_CZN_IND__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Active Retirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Affluent Professionals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted Living</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Families with Children</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTU - Industrial property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTU - Retail property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skilled Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Young Professionals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Installation_Type__c</picklist>
+        <values>
+            <fullName>Brownfield has full%2Fpartial FTR service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brownfield has no FTR service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expansion - Brownfield has full%2Fpartial FTR service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expansion - Brownfield has no FTR service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expansion - TBD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greenfield</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_this_a_new_construction__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Last_Campaign_Response__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinars</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Costar - MTU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DemandDrive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JumpCrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDU to MTU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTU to MTU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Assigned__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Product_List__c</picklist>
+        <values>
+            <fullName>Cloud IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connect Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Copper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAW UCaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiOS or BHSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managed WiFi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ring Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD-WAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIP Trunking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simply WiFi Secure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Voice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice %28TDM%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Segment__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Stage__c</picklist>
+        <values>
+            <fullName>Closed%2FWon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Known</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MQL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recycled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent To LDR</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Validating</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Type__c</picklist>
+        <values>
+            <fullName>Door to Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lit_Building__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location_Attribute__c</picklist>
+        <values>
+            <fullName>Commercial Lit Ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HBE Enabled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MQO_SAO_Disposition_Code__c</picklist>
+        <values>
+            <fullName>Already engaged%2Fduplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer BDT changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer need changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer need disappears</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not meet Sales-ready criteria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entrenched competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of access to decision makers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mis-assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not in GEO purchasing area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to reach contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MTU_Industry__c</picklist>
+        <values>
+            <fullName>Ag%2FConstruction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTU - Industrial property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTU - Retail property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manuf%2FTrans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof Svcs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Est%2FHealth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market_Segment_Type__c</picklist>
+        <values>
+            <fullName>CO OFF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Large</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paystation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOHO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marketing_Channel__c</picklist>
+        <values>
+            <fullName>Contact Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Sales</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Nationwide_Indicator__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Reliability__c</picklist>
+        <values>
+            <fullName>Not meeting needs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very reliable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Security__c</picklist>
+        <values>
+            <fullName>Not reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very reliable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Speed__c</picklist>
+        <values>
+            <fullName>Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting needs but no growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not meeting needs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Type__c</picklist>
+        <values>
+            <fullName>Copper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fios%2FFiber</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ok_to_Text__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Open_to_receiving_a_call_from_a__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Persona__c</picklist>
+        <values>
+            <fullName>Affordable Alan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owner Owen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue Ralph</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Trish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Phone_System__c</picklist>
+        <values>
+            <fullName>Good system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Old system</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD-WAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total 360</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pronouns</picklist>
+        <values>
+            <fullName>He%2FHim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>He%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FHer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>They%2FThem</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Property_Type__c</picklist>
+        <values>
+            <fullName>Apartments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMMERCIAL - MISCELLANEOUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMMERCIAL - NON-RETAIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMMERCIAL - RETAIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Combo %28MDU%2FMTU%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Condos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDUCATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOVERNMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEAVY INDUSTRIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel%2FMotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSTITUTIONAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MISCELLANEOUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MXU-Mix MTU%2FMDU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mix MDU%2FSFU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OFFICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office %28Neighborhood Center%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RELIGIOUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RESIDENTIAL - MDU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RESIDENTIAL - NON-MDU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail %28Community Center%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail %28Lifestyle Center%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail %28Neighborhood Center%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail %28Power Center%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail %28Regional Mall%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail %28Strip Center%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPORTS %26 ENTERTAINMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Living</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialty</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Q2_Reached_DM__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Q3_Engage_in_DM_dialogue__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Q4_Outcome_with_DM__c</picklist>
+        <values>
+            <fullName>Account Past Due</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cust Concerned with Speed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cust Doesn%27t Want Downtime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cust Has Incompatible Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cust Refuses TPV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cust Refuses Tax ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cust Requested Mid-Tier Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Scheduled Callback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Happy w%2FCurrent Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Contract w%2FCurrent Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification Incorrect - FIOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification Incorrect - HSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Pricing - Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Pricing - Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Product Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Match Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Current Carrier Bill</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Q5_Outcome_with_non_DM__c</picklist>
+        <values>
+            <fullName>DM Unavailable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GK Scheduled Call Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid Appointment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No longer able to reach DM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_For_Call__c</picklist>
+        <values>
+            <fullName>Add Products to Existing Acct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill Inquiry%2FPayment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel%2FDisconnect Svc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dead Air %2F Test Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misdirect - All Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misdirect - Mid Mkt%2FEnterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misdirect - Repair%2FTSO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misdirect - Resi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move Existing Svc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order New Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Order Change%2FInquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove Existing Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspend%2FRestore Svc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Where%27s My Tech</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_engage_in_DM_dialogue__c</picklist>
+        <values>
+            <fullName>Covid - Appointment Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Confirmed - Appt Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hang up - DM Irate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested in Frontier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_made_with_targeted_account__c</picklist>
+        <values>
+            <fullName>Add to DNC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Already with Frontier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Answering Machine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate%2FEnterprise Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disconnected Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax%2FModem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hang Up - Quick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Answer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Info</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Federal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region_s__c</picklist>
+        <values>
+            <fullName>Inside Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rejection_Reason__c</picklist>
+        <values>
+            <fullName>Already engaged%2Fduplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customers BDT changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customers Need Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customers need disappears</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not meet Sales-ready criteria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entrenched competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Just Purchased New System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of access to decision makers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mis-assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Need At This Point In Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a Potential Buyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not in Geo Purchasing Area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other - Please Explain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to reach contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requested_Service__c</picklist>
+        <values>
+            <fullName>Dark Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Edge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Access - Broadband</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Access - EIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Access - Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wavelength Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Residence_Type__c</picklist>
+        <values>
+            <fullName>Garden Style</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Rise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Rise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid Rise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFU</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resident_Segment__c</picklist>
+        <values>
+            <fullName>Active Retirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Affluent Professionals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted Living</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Families with Children</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skilled Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Young Professionals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SMB_D2D_Lead_Sub_Disposition__c</picklist>
+        <values>
+            <fullName>Copper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Reached - Appointment Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Knock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate DUPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knocked 1 - Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knocked 2 - Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knocked 3 - No Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Locked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Untouched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vacant - Out of Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SMB_OTM_Lead_Sub_Disposition__c</picklist>
+        <values>
+            <fullName>Current Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Reached - Appointment Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Unavailable - Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified - Do Not Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Contact - Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Untouched</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State__c</picklist>
+        <values>
+            <fullName>AK-ALASKA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL-ALABAMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR-ARKANSAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZ-ARIZONA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA-CALIFORNIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO-COLORADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT-CONNECTICUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE-DELAWARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL-FLORIDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GA-GEORGIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HI-HAWAII</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IA-IOWA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID-IDAHO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IL-ILLINOIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KS-KANSAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KY-KENTUCKY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA-LOUISIANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA-MASSACHUSETTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD-MARYLAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ME-MAINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MI-MICHIGAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MN-MINNESOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO-MISSOURI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS-MISSISSIPPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT-MONTANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N-INDIANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC-NORTH CAROLINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ND-NORTH DAKOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NE-NEBRASKA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NH-NEW HAMPSHIRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NJ-NEW JERSEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NM-NEW MEXICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV-NEVADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY-NEW YORK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OH-OHIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK-OKLAHOMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OR-OREGON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA-PENNSYLVANIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI-RHODE ISLAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC-SOUTH CAROLINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD-SOUTH DAKOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN-TENNESSEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX-TEXAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UT-UTAH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VA-VIRGINIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VT-VERMONT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA-WASHINGTON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WI-WISCONSIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV-WEST-VIRGINIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WY-WYOMING</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Survey_Status__c</picklist>
+        <values>
+            <fullName>Survey - Responded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey - Selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey - Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>The_authority_of_this_lead__c</picklist>
+        <values>
+            <fullName>BDT Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Decision Maker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_frame__c</picklist>
+        <values>
+            <fullName>%3C30 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>181%2B Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 %E2%80%93 90 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>91 %E2%80%93 180 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immediately</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developer - Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developer - Residential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Agent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VOIP_Capable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VPN_Connection__c</picklist>
+        <values>
+            <fullName>Not reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat reliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very reliable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vendor_Source__c</picklist>
+        <values>
+            <fullName>CoStar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datatree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precisely</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZoomInfo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_type_of_property_do_you_run__c</picklist>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I own%2Foperate multiple properties in multiple states</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixed-Use %28both commercial and residential%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-family residential %28Apartment or Condo%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single-family homeowners association %28HOA%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Who_initiated_contact__c</picklist>
+        <values>
+            <fullName>Customer Initiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frontier Initiated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__Primary__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>vlocity_cmt__ProductInterest__c</picklist>
+        <values>
+            <fullName>GC1000 series</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC3000 series</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC5000 series</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

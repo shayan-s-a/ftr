@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>OrderNumber</field>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Order_Stage__c</field>
+        <field>Order_Created_Date__c</field>
+        <field>Reject_Reason__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_CNP_Quality_Assurance</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Customer_Network_Provisioning</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Customer Network Provisioning</label>
+        <name>Customer_Network_Provisioning</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_to_PSR</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>CNP Quality Assurance Review</label>
+        <name>CNP_Quality_Assurance_Review</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>PSR in Progress</label>
+        <name>PSR_in_Progress</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Create Date &gt; = 01/06/2022
+Order Record Type = Records Only Order,Transfer Ownership Order,Contract Renewal,Disconnect Order, DID Order Request
+
+Product = EVPL,E-LAN,EIA,E-LAN + EIA 
+or 
+Product Type = SDWAN</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(((1 OR (3 AND 4)) AND (5 OR 6)) OR 2) AND 7 AND (8 OR 9)</booleanFilter>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>,Records Only Order,Transfer Ownership Order,Disconnect Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>DID Order Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.RecordType</field>
+            <operation>equals</operation>
+            <value>Contract Renewal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.ERATE_Customer__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SDWAN,Ring Central</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Product__c</field>
+            <operation>equals</operation>
+            <value>EIA,E-LAN,E-LAN + EIA,EVPL,Managed Network Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.CreatedDate</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/5/2022 10:00 PM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Is_this_an_E_Reach_Off_Net_Ethernet__c</field>
+            <operation>notEqual</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order.Is_this_an_Off_Net__c</field>
+            <operation>notEqual</operation>
+            <value>Yes</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Stage_to_Complete</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Order_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Reject_to_AE</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Approval_to_CNP</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Lock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Owner_to_CNP</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>CNP - Other_Orders</label>
+    <processOrder>3</processOrder>
+    <recallActions>
+        <action>
+            <name>Unlock_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

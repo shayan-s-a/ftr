@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support_Team_Request</fullName>
+    <active>true</active>
+    <businessProcess>Standard Support Process</businessProcess>
+    <description>Used by an AE to request action from their assigned Support Team Member (CSA, SSA, CSS).</description>
+    <label>Support Team Request</label>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Account Executive</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>AE Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Assignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Needed - Customer Design Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chronic %E2%80%93Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consolidate Requests into Single CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Could not be reached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Issued %28CAP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Issued %28Emailed Requests%2FWFM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed instructions given</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misquote-Engineer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misquote-Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Repair Commitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Action %28No error%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Found and Applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Not Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Finished %26 Successfully Installed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Info Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Task Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAT w%2FEBD Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAT w%2FEBD and CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule ID %23 Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Won</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Internal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

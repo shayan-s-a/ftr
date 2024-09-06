@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Channel__c</fullName>
+    <externalId>false</externalId>
+    <label>Sales Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>200 – Internal Employee</fullName>
+                <default>false</default>
+                <label>200 – Internal Employee</label>
+            </value>
+            <value>
+                <fullName>201 - Community Connections</fullName>
+                <default>false</default>
+                <label>201 - Community Connections</label>
+            </value>
+            <value>
+                <fullName>202 - Take the Lead</fullName>
+                <default>false</default>
+                <label>202 - Take the Lead</label>
+            </value>
+            <value>
+                <fullName>203 - Telemarketing</fullName>
+                <default>false</default>
+                <label>203 - Telemarketing</label>
+            </value>
+            <value>
+                <fullName>204 - Door to Door</fullName>
+                <default>false</default>
+                <label>204 - Door to Door</label>
+            </value>
+            <value>
+                <fullName>205 - Master Agents</fullName>
+                <default>true</default>
+                <label>205 - Master Agents</label>
+            </value>
+            <value>
+                <fullName>206 - Chamber of Commerce</fullName>
+                <default>false</default>
+                <label>206 - Chamber of Commerce</label>
+            </value>
+            <value>
+                <fullName>207 - Retail Kiosks</fullName>
+                <default>false</default>
+                <label>207 - Retail Kiosks</label>
+            </value>
+            <value>
+                <fullName>209 - Referral Agents</fullName>
+                <default>false</default>
+                <label>209 - Referral Agents</label>
+            </value>
+            <value>
+                <fullName>ABS</fullName>
+                <default>false</default>
+                <label>ABS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

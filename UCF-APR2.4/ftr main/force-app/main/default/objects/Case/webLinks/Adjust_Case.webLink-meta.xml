@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adjust_Case</fullName>
+    <availability>online</availability>
+    <description>This button is created for Audit Team to Adjust case aka close case.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Adjust Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+
+var objCase = new sforce.SObject(&apos;Case&apos;); 
+
+objCase.Id = &apos;{!Case.Id}&apos;; 
+objCase.Status = &apos;Adjusted&apos;;
+
+var result = sforce.connection.update([objCase]); 
+if(result[0].success==&apos;true&apos;){ 
+alert(&apos;This Audit case was Adjusted Successfully&apos;); 
+window.parent.location.href=&quot;/{!Case.Id}&quot;;
+}</url>
+</WebLink>

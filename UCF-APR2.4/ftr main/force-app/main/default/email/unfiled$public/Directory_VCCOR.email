@@ -1,0 +1,13 @@
+<b>Case Number</b> - {!Case.CaseNumber}<BR>
+<b>Account BTN</b> - {!Case.Account_BTN__c}<BR>
+<b>Requester Email</b> - {!Case.Rep_Email__c}<BR>
+<b>Requester Name</b> - {!Case.Rep_Name__c}<BR>
+<b>Customer Name</b> - {!Account.Company_Name__c}<BR>
+<b>Customer Phone</b> - {!Case.Account}<BR>
+<b>Environment</b> - {!Case.00NE0000005zgmF}<BR>
+<b>Request Type</b> - {!Case.Directory_Request_Type__c}<BR>
+<b>Directory Affected</b> - {!Case.Directory_Affected__c}<BR>
+<b>Control Date</b> - {!Case.Control_Date__c}<BR>
+<b>Order Number</b> - {!Case.Orderz__c}<BR>
+<b>Correct Listing</b> - {!Case.Correct_Listing__c}<BR>
+<b>Comments</b> - {!Case.Comments__c}

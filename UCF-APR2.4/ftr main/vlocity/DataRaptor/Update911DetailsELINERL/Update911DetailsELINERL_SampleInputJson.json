@@ -1,0 +1,300 @@
+{
+    "AutoCallFailDestinationNumber": "",
+    "AvailableUNIs": [
+        {
+            "DSATID": "1655695",
+            "FrameSize": "<=1600",
+            "Id": "8020U000001TuDUQA0",
+            "Mode": "Full Duplex",
+            "Name": "User to Network Interface (UNI) Port",
+            "PhysicalMedium": "Copper RJ45",
+            "PortSpeed": "1G"
+        }
+    ],
+    "BTN": "",
+    "CallerIdPresentation": "",
+    "Configure911": {
+        "ELINERL": [
+            {
+                "DIDNumber": "1111111111",
+                "ELINERLAddress-Block": {
+                    "ELINERLAddress": "551 Southwestern Boulevard, Coppell, TX  75019",
+                    "ELINERLCity": "Coppell",
+                    "ELINERLCountry": "United States",
+                    "ELINERLState": "TX",
+                    "ELINERLStreet": "551 Southwestern Boulevard",
+                    "ELINERLZipCode": "75019"
+                },
+                "ELINERLId": "''",
+                "ELINERLName": "DID Location 1"
+            },
+            {
+                "DIDNumber": "2222222222",
+                "ELINERLAddress-Block": {
+                    "ELINERLAddress": "551 Southwestern Boulevard, Coppell, TX  75019",
+                    "ELINERLCity": "Coppell",
+                    "ELINERLCountry": "United States",
+                    "ELINERLState": "TX",
+                    "ELINERLStreet": "551 Southwestern Boulevard",
+                    "ELINERLZipCode": "75019"
+                },
+                "ELINERLId": null,
+                "ELINERLName": "DID Location 2"
+            },
+            {
+                "DIDNumber": "3333333333",
+                "ELINERLAddress-Block": {
+                    "ELINERLAddress": "551 Southwestern Boulevard, Coppell, TX  75019",
+                    "ELINERLCity": "Coppell",
+                    "ELINERLCountry": "United States",
+                    "ELINERLState": "TX",
+                    "ELINERLStreet": "551 Southwestern Boulevard",
+                    "ELINERLZipCode": "75019"
+                },
+                "ELINERLId": null,
+                "ELINERLName": "DID Location 3"
+            },
+            {
+                "DIDNumber": "4444444444",
+                "ELINERLAddress-Block": {
+                    "ELINERLAddress": "551 Southwestern Boulevard, Coppell, TX  75019",
+                    "ELINERLCity": "Coppell",
+                    "ELINERLCountry": "United States",
+                    "ELINERLState": "TX",
+                    "ELINERLStreet": "551 Southwestern Boulevard",
+                    "ELINERLZipCode": "75019"
+                },
+                "ELINERLId": null,
+                "ELINERLName": "DID Location 4"
+            }
+        ],
+        "FTR911Provider": "Yes",
+        "MainDesignatedSection": {
+            "MainDesignatedAddress-Block": {
+                "MainDesignatedAddress": "551 Southwestern Boulevard, Coppell, TX  75019",
+                "MainDesignatedCity": "Coppell",
+                "MainDesignatedCountry": "United States",
+                "MainDesignatedState": "TX",
+                "MainDesignatedStreet": "551 Southwestern Boulevard",
+                "MainDesignatedZipCode": "75019"
+            },
+            "MainDesignatedId": "aH00U00000000LoSAI",
+            "MainDesignatedName": "DID Location Main Des",
+            "MainDesignatedNumber": "9402971288"
+        },
+        "x911Option": "ELIN/ERL"
+    },
+    "ConnectLineIdScreening": "",
+    "ContextId": "8010U000001DZhrQAG",
+    "CurrentDIDLocationCount": 0,
+    "CurrentServiceLocation": {
+        "Address": "1 BIC Way, Shelton, CT  06484",
+        "City": "Shelton",
+        "Country": "United States",
+        "DIDLocations": [
+            {
+                "name": "DID Location",
+                "value": "aH10U00000000O5SAI"
+            },
+            {
+                "name": "DID Location",
+                "value": "aH10U00000000OySAI"
+            },
+            {
+                "name": "DID Location",
+                "value": "aH10U00000000NvSAI"
+            },
+            {
+                "name": "DID Location",
+                "value": "aH10U00000000OKSAY"
+            },
+            {
+                "name": "DID Location",
+                "value": "aH10U00000000NqSAI"
+            },
+            {
+                "name": "DID Location 555",
+                "value": "aH10U00000000O0SAI"
+            },
+            {
+                "name": "DID Location B",
+                "value": "aH10U00000000P8SAI"
+            },
+            {
+                "name": "Testing DID 1",
+                "value": "aH10U00000000P3SAI"
+            }
+        ],
+        "Id": "0010U00001A1GFxQAN",
+        "Name": "1 BIC Way, Shelton, CT  06484",
+        "State": "CT",
+        "Street": "1 BIC Way",
+        "ZipCode": "06484",
+        "currentLocationIndex": 0
+    },
+    "DIDLocationDetails": {
+        "Address-Block": {
+            "Address": "551 Southwestern Boulevard, Coppell, TX  75019",
+            "City": "Coppell",
+            "Country": "United States",
+            "State": "TX",
+            "Street": "551 Southwestern Boulevard",
+            "ZipCode": "75019"
+        },
+        "AutoCallFailDestinationNumber": "9402971288",
+        "BTN": "9402971288",
+        "CallerIdPresentation": "Number Only",
+        "ConnectLineIdScreening": "Ignore PBX Send Main",
+        "DIDLocationId": "aH10U00000000O5SAI",
+        "DIDLocationName": "DID Location",
+        "DIDTestNumber": "9402971288",
+        "DIDUNIAssoc": {
+            "NumberOfUNIs": null,
+            "OrderOfUNI": "Lowest Available"
+        },
+        "DigitsSentToCustomer": "10",
+        "InternationalDialing": "Yes",
+        "InternationalDialingOptions": "Allow both +1 and 011 International",
+        "MDN": null,
+        "NPA": null,
+        "NXX": null,
+        "NumberOfAvailableUNIs": 1,
+        "NumberOfCallPaths": 4,
+        "NumberOfDIDs": null
+    },
+    "DIDLocationId": "",
+    "DIDLocationName": "",
+    "DIDNumbers": "",
+    "DIDTestNumber": "",
+    "Finished": false,
+    "InternationalDialing": "",
+    "InternationalDialingOptions": "",
+    "LoopBackProductCode": "SIP_LOOP_BACK_NUMBER",
+    "NumberOfCallPaths": "",
+    "OrderOfUNI": "Lowest Available",
+    "OrderStage": "CNP Quality Assurance",
+    "Qualification": "",
+    "SelectServiceLocation": {
+        "CountOfLocations": 1,
+        "CurrentLocationId": "0010U00001A1GFxQAN",
+        "CurrentLocationLit": false,
+        "CurrentLocationName": "1 BIC Way, Shelton, CT  06484",
+        "ExistingDIDLocations": "DID Location",
+        "NumberOfDIDLocations": 1,
+        "PrimaryLocationId": null,
+        "SelectNewOrEixstingDID": "Existing",
+        "ServiceLocations": null,
+        "userCanEdit": true
+    },
+    "SelectedDIDLocation": "aH10U00000000O5SAI",
+    "SelectedUNIs": "",
+    "ServiceAccounts": [
+        {
+            "Address": "1 BIC Way, Shelton, CT  06484",
+            "City": "Shelton",
+            "Country": "United States",
+            "DIDLocations": [
+                {
+                    "name": "DID Location",
+                    "value": "aH10U00000000O5SAI"
+                },
+                {
+                    "name": "DID Location",
+                    "value": "aH10U00000000OySAI"
+                },
+                {
+                    "name": "DID Location",
+                    "value": "aH10U00000000NvSAI"
+                },
+                {
+                    "name": "DID Location",
+                    "value": "aH10U00000000OKSAY"
+                },
+                {
+                    "name": "DID Location",
+                    "value": "aH10U00000000NqSAI"
+                },
+                {
+                    "name": "DID Location 555",
+                    "value": "aH10U00000000O0SAI"
+                },
+                {
+                    "name": "DID Location B",
+                    "value": "aH10U00000000P8SAI"
+                },
+                {
+                    "name": "Testing DID 1",
+                    "value": "aH10U00000000P3SAI"
+                }
+            ],
+            "Id": "0010U00001A1GFxQAN",
+            "Name": "1 BIC Way, Shelton, CT  06484",
+            "State": "CT",
+            "Street": "1 BIC Way",
+            "ZipCode": "06484"
+        }
+    ],
+    "VOIPQualifications": [
+        {
+            "AvailableVOIP": "Level 3",
+            "E911Type": "NOMADIC",
+            "Id": "aH60U0000000EaESAU",
+            "IsThirdParty": true,
+            "LATA": "730",
+            "NPA": 818,
+            "NXX": 331,
+            "OCN": "6006",
+            "OCNName": "CELLCO PARTNERSHIP DBA VERIZON WIRELESS - CA",
+            "RateCenter": "BURBANK:BURBANK DA",
+            "ServiceAccountId": "0010U00001A1GFxQAN",
+            "ServiceAccountName": "1 BIC Way, 06484",
+            "State": "CA"
+        },
+        {
+            "AvailableVOIP": "FTR",
+            "E911Type": "STATIC",
+            "Id": "aH60U0000000Eb2SAE",
+            "IsThirdParty": false,
+            "LATA": "552",
+            "NPA": 940,
+            "NXX": 297,
+            "OCN": "4344",
+            "OCNName": "FRONTIER SOUTHWEST INC DBA FRONTIER COMM OF TEXAS",
+            "RateCenter": "DENTON",
+            "ServiceAccountId": "0010U00001A1GFxQAN",
+            "ServiceAccountName": "1 BIC Way, 06484",
+            "State": "TX"
+        },
+        {
+            "AvailableVOIP": "Level 3",
+            "E911Type": "NOMADIC",
+            "Id": "aH60U0000000EaYSAU",
+            "IsThirdParty": true,
+            "LATA": "730",
+            "NPA": 818,
+            "NXX": 333,
+            "OCN": "7453",
+            "OCNName": "US TELEPACIFIC CORP. - CA",
+            "RateCenter": "BURBANK:BURBANK DA",
+            "ServiceAccountId": "0010U00001A1GFxQAN",
+            "ServiceAccountName": "1 BIC Way, 06484",
+            "State": "CA"
+        }
+    ],
+    "VoipQualUpsertResult": "",
+    "contextId": "8010U000001DZhrQAG",
+    "id": "a9p0U0000000C39QAE",
+    "isdtp": "p1",
+    "layout": "lightning",
+    "sfdcIFrameHost": "web",
+    "sfdcIFrameOrigin": "https://ftr--vltdev22--vlocity-cmt.visualforce.com",
+    "timeStamp": "2021-06-10T18:47:25.108Z",
+    "totalDIDNumberRecordCount": 0,
+    "userCurrencyCode": "USD",
+    "userId": "0050h00000IQYfgAAH",
+    "userName": "eric.marcondes@ftr.com.vltdev22",
+    "userProfile": "Frontier System Administrator",
+    "userTimeZone": -420,
+    "vlcPersistentComponent": {
+    }
+}

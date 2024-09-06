@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hunt_Lines_and_sequence_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL( Type_of_Hunt_Sequence__c , &quot;Circular&quot;),
+ISPICKVAL( Type_of_Hunt_Sequence__c , &quot;Linear&quot;)
+),
+OR(
+ISBLANK( Number_of_Lines_in_Hunt__c ),
+ISBLANK( Hunt_Sequence__c )
+)
+)</errorConditionFormula>
+    <errorMessage>If Circular or linear is selected for Type of Hunt Sequence? then Number of Lines in Hunt? and Hunt Sequence? is required.</errorMessage>
+</ValidationRule>

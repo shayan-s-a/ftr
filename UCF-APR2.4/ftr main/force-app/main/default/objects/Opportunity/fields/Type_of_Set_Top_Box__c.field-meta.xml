@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Set_Top_Box__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Set Top Box</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No STB</fullName>
+                <default>false</default>
+                <label>No STB</label>
+            </value>
+            <value>
+                <fullName>Quantum DVR</fullName>
+                <default>false</default>
+                <label>Quantum DVR</label>
+            </value>
+            <value>
+                <fullName>Quantum HD Box</fullName>
+                <default>false</default>
+                <label>Quantum HD Box</label>
+            </value>
+            <value>
+                <fullName>Digital Adapter</fullName>
+                <default>false</default>
+                <label>Digital Adapter</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

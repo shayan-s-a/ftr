@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPE_COE_UCaaS_Orders</fullName>
+    <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>CPE_COE__c</columns>
+    <columns>CPE_COE_Stage__c</columns>
+    <columns>CPE_DCS_Stage__c</columns>
+    <columns>VoIP_Translations_Stage__c</columns>
+    <columns>Broadband_COE_Stage__c</columns>
+    <columns>Hot_Cut_Stage__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Order_Stage__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CPE_COE_Stage__c</field>
+        <operation>equals</operation>
+        <value>CPE COE Completed,Audit Review,NPR Ordering,NBC,Add to WIP</value>
+    </filters>
+    <filters>
+        <field>CPE_COE_Stage__c</field>
+        <operation>equals</operation>
+        <value>Establish DPI Billing Account,On Hold</value>
+    </filters>
+    <filters>
+        <field>Product__c</field>
+        <operation>startsWith</operation>
+        <value>faw UCaaS</value>
+    </filters>
+    <filters>
+        <field>Order_Stage__c</field>
+        <operation>notContain</operation>
+        <value>Complete,Cancelled</value>
+    </filters>
+    <label>CPE COE UCaaS Orders</label>
+    <sharedTo>
+        <group>CPE_COE_Frontier_AnyWare_UCaaS</group>
+    </sharedTo>
+</ListView>

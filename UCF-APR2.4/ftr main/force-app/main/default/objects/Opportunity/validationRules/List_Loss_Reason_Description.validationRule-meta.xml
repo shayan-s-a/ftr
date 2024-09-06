@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_Loss_Reason_Description</fullName>
+    <active>true</active>
+    <description>List Loss Reason Description Required when selecting other.</description>
+    <errorConditionFormula>AND 
+( 
+ISPICKVAL(List_Loss_Reason__c, &apos;Other (explain)&apos;), 
+
+ISBLANK( List_Loss_Reason_Description__c))</errorConditionFormula>
+    <errorMessage>Please Fill Out List Loss Reason Description Field</errorMessage>
+</ValidationRule>

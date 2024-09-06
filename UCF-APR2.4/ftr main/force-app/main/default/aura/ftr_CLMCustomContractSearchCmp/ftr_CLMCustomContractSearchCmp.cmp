@@ -1,0 +1,399 @@
+<aura:component controller="ftr_CLMCustomContractSearchController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="recordTypeMap" type="Map"/>
+    <aura:attribute name="agreementTypeMap" type="Map"/>
+    <aura:attribute name="scheduleMap" type="Map"/>
+    <aura:attribute name="statusMap" type="Map"/>
+    <aura:attribute name="documentStatusMap" type="Map"/>
+    <aura:attribute name="entityTypeMap" type="Map"/>
+    <aura:attribute name="channelMap" type="Map"/>
+    <aura:attribute name="recordTypeSelected" type="String" default="" description="Stores the selected record type selected by the user"/>
+    <aura:attribute name="agreementTypeSelected" type="String" default="" description="Stores the Agreement Type selected by the user"/>
+    <aura:attribute name="scheduleTypeSelected" type="String" default="" description="Stores the Schedule Type selected by the user"/>
+    <aura:attribute name="statusSelected" type="String" default="" description="Stores the Status selected by the user"/>
+    <aura:attribute name="documentStatusSelected" type="String" default="" description="Stores the Document Status selected by the user"/>
+    <aura:attribute name="entityTypeSelected" type="String" default="" description="Stores the Entity Type selected by the user"/>
+    <aura:attribute name="channelSelected" type="String" default="" description="Stores the Channel Affliation selected by the user"/>
+    <aura:attribute name="legalCity" type="String" default="" description="Stores the Legal City entered by the user"/>
+    <aura:attribute name="legalZipCode" type="String" default="" description="Stores the Legal PostalCode entered by the user"/>
+    <aura:attribute name="accountName" type="String" default="" description="Stores the Account entered by the user"/>
+    <aura:attribute name="contractTypeMap" type="Map"/>
+    <aura:attribute name="contractTypeSelected" type="String" default="" description="Stores the Contract Type entered by the user"/>
+    <aura:attribute name="accountLegalStateMap" type="Map"/>
+    <aura:attribute name="legalStateSelected" type="String" default="" description="Stores the Account Legal State entered by the user"/>
+    <aura:attribute name="searchResult" type="List" description="use for store and display Contract list return from server"/>
+    <aura:attribute name="searchText" type="String" default="" description="Perform SOSL search based on user input text"/>
+    <aura:attribute name="documentText" type="String" default=""/>
+    <aura:attribute name="contractList" type="List" access="private"/>
+    <aura:attribute name="agreementList" type="List" access="private"/>
+    <aura:attribute name="primaryACNA" type="String" default="" description="Stores the Primary ACNA for Account" access="private"/>
+    <aura:attribute name="secondaryACNA" type="String" default="" description="Stores the Secondary ACNA for Account" access="private"/>
+    
+    <!-- SHOW LOADING SPINNER--> 
+    <lightning:spinner variant="brand" size="large" aura:id="Id_spinner" class="slds-hide" />
+    <div class="slds-m-around_medium">
+       <!-- SEARCH INPUT AND SEARCH BUTTON--> 
+        <lightning:layout>
+            <!-- Account Name -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="text" aura:id="accountName" label="Account Name" value="{!v.accountName}" class="boldFont"/>
+            </lightning:layoutItem>
+            
+            <!-- Account Primary ACNA -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="text" aura:id="accountPrimaryACNA" label="Primary ACNA" value="{!v.primaryACNA}" class="boldFont" maxlength="4"/>
+            </lightning:layoutItem>
+            
+            <!-- Account Secondary ACNA -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="text" aura:id="accountSecondaryACNA" label="Secondary ACNA" value="{!v.secondaryACNA}" class="boldFont" maxlength="4"/>
+            </lightning:layoutItem>
+            
+            <!-- Contract Type -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:select aura:id="contractTypePicklist" onchange="{!c.handleContractType}" label="Contract Type" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.contractTypeMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            <!-- legal State -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:select aura:id="legalStatePicklist" onchange="{!c.handleLegalState}" label="Account State" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.accountLegalStateMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            <!-- Agreement Type -->
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:select aura:id="agreementTypePicklist" onchange="{!c.handleAgreementTypeChange}" label="Agreement Type" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.agreementTypeMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout>
+            <!-- Schedule Type -->
+            <lightning:layoutItem size="3" padding="around-small">
+                <lightning:select aura:id="scheduleTypePicklist" onchange="{!c.handleScheduleType}" label="Schedule Type" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.scheduleMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            <!-- Entity Type -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:select aura:id="entityTypePicklist" onchange="{!c.handleChangeEntityType}" label="Entity Type" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.entityTypeMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            <!-- Status -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:select aura:id="statusPicklist" onchange="{!c.handleStatusChange}" label="Status" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.statusMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            <!-- Document Status -->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:select aura:id="documentStatusPicklist" onchange="{!c.handleDocumentStatusChange}" label="Document Status" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.documentStatusMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+             <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="text" aura:id="textSearch" label="Content Search" value="{!v.searchText}" class="boldFont"/>
+            </lightning:layoutItem>
+            <!--<lightning:layoutItem size="1" padding="around-small">
+                <lightning:button onclick="{!c.searchContracts}"
+                                  variant="brand"
+                                  label="Search"
+                                  iconName="utility:search"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:button onclick="{!c.clearResult}"
+                                  variant="destructive"
+                                  label="Clear"
+                                  iconName="utility:close"/>
+            </lightning:layoutItem> -->
+            
+            <!-- Channel -->
+            <!--<lightning:layoutItem size="2" padding="around-small">
+                <lightning:select aura:id="channelPicklist" onchange="{!c.handleChannelChange}" label="Channel Affiliation" class="boldFont">
+                	<option value="">Select</option>
+                    <aura:iteration items="{!v.channelMap}" var="i" indexVar="key">
+                        <option text="{!i.value}" value="{!i.key}" />
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:input type="text" aura:id="legalCity" label="Affiliation Approver Name" value="{!v.legalCity}" class="boldFont"/>
+            </lightning:layoutItem> -->
+            
+        </lightning:layout>
+        
+        <lightning:layout>
+           
+            <!--<lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="text" aura:id="documentSearch" label="Document Search" value="{!v.documentText}" class="boldFont"/>
+            </lightning:layoutItem> -->
+        </lightning:layout>
+        
+        <lightning:layout>
+        	<lightning:layoutItem size="1" padding="around-small">
+                <lightning:button onclick="{!c.searchContracts}"
+                                  variant="brand"
+                                  label="Search"
+                                  iconName="utility:search"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1" padding="around-small">
+                <lightning:button onclick="{!c.clearResult}"
+                                  variant="destructive"
+                                  label="Clear"
+                                  iconName="utility:close"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+       
+        <!-- TOTAL RECORDS BADGES--> 
+        <div class="slds-m-around_x-small">
+            <lightning:badge label="{!v.TotalNumberOfRecord}" />
+        </div>
+        
+        <!-- ERROR MESSAGE IF NOT RECORDS FOUND--> 
+        <aura:if isTrue="{!v.Message}">
+            <div class="slds-notify_container slds-is-relative">
+                <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                    <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small">No Records Found...</h2>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+       
+        <!-- TABLE CONTENT--> 
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="S.no">S.no</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Contract Number</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Account Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Type">Opportunity Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Type">Renewal MRR</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Type">Net New MRR</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Type">Total CPE</div>
+                    </th>
+                     <th scope="col">
+                        <div class="slds-truncate" title="Type">NRC</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Industry">Start Date</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Phone">End Date</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody> 
+                <!--### display all records of searchResult attribute by aura:iteration ###-->
+                <aura:iteration items="{!v.searchResult}" var="contractObj" indexVar="count">
+                    <tr>
+                        <td>
+                            <div class="slds-truncate">{!count + 1}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.Id + '/view'}" target="_blank">{!contractObj.ContractNumber}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.Account.Id + '/view'}" target="_blank">{!contractObj.Account.Name}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.Opportunity__r.Id + '/view'}" target="_blank">{!contractObj.Opportunity__r.Name}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.Renewal_MRR__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.Net_New_MRR__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.Total_CPE__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.NRC__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.StartDate}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.EndDate}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+        
+        <!--<lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="text" aura:id="textSearch" label="Content Search" value="{!v.searchText}" class="boldFont"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+        	<lightning:layoutItem size="2" padding="around-small">
+        		<lightning:button onclick="{!c.searchSOSL}"
+                                  variant="brand"
+                                  label="Content Search"
+                                  iconName="utility:search"/>
+       		</lightning:layoutItem>
+       		<lightning:layoutItem size="1" padding="around-small">
+       			<lightning:button onclick="{!c.clearSOSLSearch}"
+                                  variant="destructive"
+                                  label="Clear"
+                                  iconName="utility:close"/>
+       		</lightning:layoutItem>  
+        </lightning:layout>
+        
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="S.no">Sl.No</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Contract Number</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Account Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Opportunity Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Type">Contract Start Date</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Industry">Contract End Date</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody> 
+                <aura:iteration items="{!v.contractList}" var="contractObj" indexVar="count">
+                    <tr>
+                        <td>
+                            <div class="slds-truncate">{!count + 1}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.Id + '/view'}" target="_blank">{!contractObj.ContractNumber}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.AccountId + '/view'}" target="_blank">{!contractObj.Account.Name}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.vlocity_cmt__OpportunityId__r.Id + '/view'}" target="_blank">{!contractObj.vlocity_cmt__OpportunityId__r.Name}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.StartDate}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.EndDate}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table> -->
+        
+        <!--<lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:input type="text" aura:id="documentSearch" label="Document Search" value="{!v.documentText}" class="boldFont"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+        	<lightning:layoutItem size="2" padding="around-small">
+        		<lightning:button onclick="{!c.documentSOSL}"
+                                  variant="brand"
+                                  label="Document Search"
+                                  iconName="utility:search"/>
+       		</lightning:layoutItem>
+       		<lightning:layoutItem size="1" padding="around-small">
+       			<lightning:button onclick="{!c.clearDocumentSearch}"
+                                  variant="destructive"
+                                  label="Clear"
+                                  iconName="utility:close"/>
+       		</lightning:layoutItem>  
+        </lightning:layout>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="S.no">Sl.No</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Agreement Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Contract Number</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Type">Contract Start Date</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Industry">Contract End Date</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody> 
+                <aura:iteration items="{!v.agreementList}" var="contractObj" indexVar="count">
+                    <tr>
+                        <td>
+                            <div class="slds-truncate">{!count + 1}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.Id + '/view'}" target="_blank">{!contractObj.Name}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate"><a href="{!'/one/one.app?#/sObject/'+ contractObj.echosign_dev1__Contract__r.Id + '/view'}" target="_blank">{!contractObj.echosign_dev1__Contract__r.ContractNumber}</a></div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.StartDate}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!contractObj.EndDate}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table> -->
+    </div>
+</aura:component>

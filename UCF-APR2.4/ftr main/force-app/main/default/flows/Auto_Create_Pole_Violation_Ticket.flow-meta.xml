@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Automatically creates a Pole Violation Ticket when a Pole Inspection is completed and the Reading Result indicates a violation.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>The current date/time</description>
+        <name>Now</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <description>Truncated Comments from the Pole Inspection</description>
+        <name>TicketDescription</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.Comments__c}, 255)</expression>
+    </formulas>
+    <interviewLabel>Auto-Create Pole Violation Ticket {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto-Create Pole Violation Ticket</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Creates a Pole Violation Ticket</description>
+        <name>Create_Ticket</name>
+        <label>Create Ticket</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Reported_By__c</field>
+            <value>
+                <elementReference>$Record.Reading_By__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reported_Priority__c</field>
+            <value>
+                <elementReference>$Record.Priority__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reporting_Company__c</field>
+            <value>
+                <elementReference>$Record.Reading_By_Company__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Ticket_Type__c</field>
+            <value>
+                <stringValue>Pole Violation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sitetracker__Customer__c</field>
+            <value>
+                <elementReference>$Record.Pole__r.Custodian__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sitetracker__Description__c</field>
+            <value>
+                <elementReference>TicketDescription</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sitetracker__Priority__c</field>
+            <value>
+                <elementReference>$Record.Priority__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sitetracker__Reported_Date__c</field>
+            <value>
+                <elementReference>Now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sitetracker__Site__c</field>
+            <value>
+                <elementReference>$Record.Pole__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sitetracker__Source__c</field>
+            <value>
+                <stringValue>Pole Inspection</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>sitetracker__Status__c</field>
+            <value>
+                <stringValue>Logged</stringValue>
+            </value>
+        </inputAssignments>
+        <object>sitetracker__Ticket__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Ticket</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Reading_Result__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Reading_Result__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>No Trouble Found</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Reading_Result__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Hazardous - Cleared</stringValue>
+            </value>
+        </filters>
+        <object>Meter_Reading__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

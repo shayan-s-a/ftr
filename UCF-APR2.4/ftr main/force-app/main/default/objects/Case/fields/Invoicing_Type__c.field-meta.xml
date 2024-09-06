@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoicing_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Invoicing Type:</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BEAR</fullName>
+                <default>false</default>
+                <label>BEAR</label>
+            </value>
+            <value>
+                <fullName>HCF</fullName>
+                <default>false</default>
+                <label>HCF</label>
+            </value>
+            <value>
+                <fullName>HCF/CTF</fullName>
+                <default>false</default>
+                <label>HCF/CTF</label>
+            </value>
+            <value>
+                <fullName>SPI</fullName>
+                <default>false</default>
+                <label>SPI</label>
+            </value>
+            <value>
+                <fullName>Telecom</fullName>
+                <default>false</default>
+                <label>Telecom</label>
+            </value>
+            <value>
+                <fullName>Telecom/CTF</fullName>
+                <default>false</default>
+                <label>Telecom/CTF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

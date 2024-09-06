@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acct_owner_cannot_be_changed</fullName>
+    <active>true</active>
+    <description>Master Account&apos;s owner can only be changed by admins.
+&quot;Community Connections - Portfolio Company&quot; or &quot;Community Connections - Property&quot; accounts&apos; owners can be changed by Jack Campbell, Stephanie Kilroy, Stephen (Scott) Buehrle and admins.</description>
+    <errorConditionFormula>AND(
+OR (
+RecordType.DeveloperName = &quot;CC_Property&quot;,
+RecordType.DeveloperName = &quot;CC_PortfolioCompany&quot;
+),
+ISCHANGED(OwnerId), /* Checks if the OwnerId field has changed */
+NOT(
+OR(
+PRIORVALUE(OwnerId) = $User.Id,
+$UserRole.DeveloperName = &apos;Multifamily_Leadership&apos;, /* Jack Campbell and his role */
+$Profile.Id = &quot;00eE000000126tW&quot;, /* Frontier Auditor */
+$Profile.Id = &quot;00e40000000nYck&quot;, /* Frontier System Administrator */
+$Profile.Id = &quot;00e40000000nTsD&quot; /* System Administrator */
+)
+),
+
+OR(
+AND(
+RecordType.DeveloperName = &quot;Master&quot;,
+NOT(
+OR(
+PRIORVALUE(OwnerId) = $User.Id, /* If the prior value of OwnerId is the same as the current user&apos;s ID */
+$Profile.Id = &apos;00eE000000126tW&apos;, /* Frontier Auditor */
+$Profile.Id = &apos;00e40000000nYck&apos;, /* Frontier System Administrator */
+$Profile.Id = &apos;00e40000000nTsD&apos; /* System Administrator */
+)
+)
+),
+
+AND(
+OR(
+RecordType.DeveloperName = &quot;CC_Property&quot;,
+RecordType.DeveloperName = &quot;CC_PortfolioCompany&quot;
+),
+NOT(
+OR(
+$User.Id = &apos;0050h00000IuFZe&apos;, /* Jack Campbell */
+$User.Id = &apos;0058a00000KfCdK&apos;, /* Stephanie Kilroy */
+$User.Id = &apos;0058a00000JdPt2&apos;, /* Stephen (Scott) Buehrle */
+$UserRole.DeveloperName = &apos;Multifamily_Contracts&apos;,
+$UserRole.DeveloperName = &apos;Multifamily_Deployment&apos;,
+$UserRole.DeveloperName = &apos;Multifamily_Sales_and_Business_Operations&apos;,
+$Profile.Id = &apos;00eE000000126tW&apos;, /* Frontier Auditor */
+$Profile.Id = &apos;00e40000000nYck&apos;, /* Frontier System Administrator */
+$Profile.Id = &apos;00e40000000nTsD&apos; /* System Administrator */
+)
+)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>You don&apos;t have permission to change this Account&apos;s Owner.</errorMessage>
+</ValidationRule>

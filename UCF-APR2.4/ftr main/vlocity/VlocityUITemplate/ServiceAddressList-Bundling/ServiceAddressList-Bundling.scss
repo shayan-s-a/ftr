@@ -1,0 +1,50 @@
+.address{
+    text-align: center;
+}
+#AddLocation {
+    margin-left: 52%;
+}
+table{
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    th div{
+        cursor: pointer;
+    }
+}
+
+.sort-true {
+    font-weight: bold;
+}
+.sort-false {
+    font-weight: bold;
+}
+
+.tm_icon_magenta {
+    fill: #1564bf !important;
+    padding: 3px;
+    cursor: pointer;
+}
+.disabled_checkbox {
+	pointer-events: none !important; //This makes it not clickable
+}
+.via-nds .nds-table_bordered {
+    border-collapse: collapse;
+}
+input[type="checkbox"]{
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+}
+.via-nds .nds-button_brand{
+    display: block;
+}
+
+.easy-pass {
+    .address-list-row {
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+}

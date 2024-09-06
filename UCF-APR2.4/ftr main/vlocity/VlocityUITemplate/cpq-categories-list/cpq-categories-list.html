@@ -1,0 +1,22 @@
+<div class="cpq-product-list">
+
+    <!-- CARDS -->
+    <div class="slds-grid cpq-products-list-vertical cpq-products-list-col-stretch"
+        ng-if="!importedScope.$parent.$parent.filters.show">
+        <div class="slds-spinner_container" ng-hide="isLoaded">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--medium" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+        
+        <div ng-if="isLoaded" ng-init="addAllCategory()"></div>
+
+        <vloc-card ng-repeat="card in cards" ng-model="card" data="card" records="records" index="{{$index}}" session-id="{{sessionId}}" ng-init="importedScope.addAllCategory(records)" ng-if="isLoaded">
+        </vloc-card>
+
+        <div class="slds-text-align--center slds-m-vertical--medium cpq-no-products-msg" ng-show="!records && isLoaded">
+            {{::importedScope.customLabels.CPQProductsNotAvailable}}
+        </div>
+    </div>
+</div>

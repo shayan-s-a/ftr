@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>MDU Contract Team Queue</name>
+    <queueMembers>
+        <roles>
+            <role>Multifamily_BDM_Renewal</role>
+            <role>Multifamily_Contracts</role>
+            <role>Multifamily_Leadership</role>
+            <role>Multifamily_Sales_and_Business_Operations</role>
+            <role>Multifamily_Sales_Leadership</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Contract__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

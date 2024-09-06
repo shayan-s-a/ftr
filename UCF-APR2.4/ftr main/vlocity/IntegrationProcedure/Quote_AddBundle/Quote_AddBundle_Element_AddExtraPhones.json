@@ -1,0 +1,64 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "Add Promotion to Cart for MDIA +1",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Quote/AddBundle/Procedure",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__PropertySet__c": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "cartId": "%ContextId%",
+            "items": [
+                {
+                    "attributesToUpdate": {
+                        "ATTR_ADD_ON": "Yes",
+                        "ATTR_CONTRACT_TERM": "%Promotion:Term%"
+                    },
+                    "fieldsToUpdate": {
+                        "%vlocity_namespace%__ServiceAccountId__c": "%Promotion:ServiceAccountId%",
+                        "Quantity": "%Promotion:UCFExecAddOnQty%",
+                        "ftr_isAddonProduct__c": true,
+                        "ftr_isApplyDiscount__c": false
+                    },
+                    "itemId": "%Promotion:UCFPhonePBE%"
+                }
+            ],
+            "methodName": "postCartsItems",
+            "price": false,
+            "validate": false
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": true,
+        "disOnTplt": false,
+        "executionConditionalFormula": "IF(%CheckIfProductExists:Product|1:itemId%,false,true) && %Promotion:BundleType%=='DIA + UCF'",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "ftr_CpqService",
+        "remoteMethod": "invokeCpqAppHandlerMethod",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Remote Action",
+    "Name": "AddExtraPhones",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Quote/AddBundle/Procedure/AddExtraPhones"
+}

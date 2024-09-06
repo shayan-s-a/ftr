@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alt_Channel_Manager_Validation</fullName>
+    <active>false</active>
+    <description>Alt Channel Manager (Craig Fehr) cannot edit opportunities unless its owned by PST profile.</description>
+    <errorConditionFormula>AND( 
+$User.Id = &quot;005E00000060Ssq&quot;,
+Owner.ProfileId &lt;&gt; &quot;00e0L000000Qtux&quot;)</errorConditionFormula>
+    <errorMessage>You cannot edit this Opportunity</errorMessage>
+</ValidationRule>

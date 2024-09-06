@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPE_Product_Replacement__c</fullName>
+    <description>Lists the Products that are being replaced by the installation of CPE equipment.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the product being replaced by the installation of the CPE equipment</inlineHelpText>
+    <label>CPE Product Replacement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Local DT-B1</fullName>
+                <default>false</default>
+                <label>Local DT-B1</label>
+            </value>
+            <value>
+                <fullName>Local DT-Centrex</fullName>
+                <default>false</default>
+                <label>Local DT-Centrex</label>
+            </value>
+            <value>
+                <fullName>ISDN PRI</fullName>
+                <default>false</default>
+                <label>ISDN PRI</label>
+            </value>
+            <value>
+                <fullName>Replaced Existing PBX</fullName>
+                <default>false</default>
+                <label>Replaced Existing PBX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

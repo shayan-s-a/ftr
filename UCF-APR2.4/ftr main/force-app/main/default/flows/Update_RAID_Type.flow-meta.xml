@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Set RAID Type to &apos;Action&apos; if task type is Investment Summary or Investment Summary Change Request</description>
+    <environments>Default</environments>
+    <interviewLabel>Update RAID Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update RAID Type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_RAID_Type</name>
+        <label>Update RAID Type</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>sitetracker__RAID_Type__c</field>
+            <value>
+                <stringValue>Action</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_RAID_Type</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>sitetracker__Task_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Investment Summary</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>sitetracker__Task_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Investment Summary Change Request</stringValue>
+            </value>
+        </filters>
+        <object>sitetracker__Action_Item__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

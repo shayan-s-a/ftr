@@ -1,0 +1,16 @@
+[
+    {
+        "%vlocity_namespace%__Description__c": "Holds the recurring charge before adjustments",
+        "%vlocity_namespace%__DestinationFieldApiName__c": "BaseRecurringCharge__c",
+        "%vlocity_namespace%__DestinationSObjectType__c": "QuoteLineItem",
+        "%vlocity_namespace%__PricingVariableId__c": {
+            "%vlocity_namespace%__Code__c": "CUSTOM_BASE_MNTH_REC_CHRG",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__PricingVariable__c/CUSTOM_BASE_MNTH_REC_CHRG",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__PricingVariable__c"
+        },
+        "Name": "Base Recurring Monthly Charge - QuoteLineItem",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__PricingVariableBinding__c"
+    }
+]

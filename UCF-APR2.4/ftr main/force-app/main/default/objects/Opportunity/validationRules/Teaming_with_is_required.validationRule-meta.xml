@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Teaming_with_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (  Teaming_Opportunity__c  = TRUE, LEN( Teaming_with__c  ) = 0 )</errorConditionFormula>
+    <errorMessage>If the Teaming Opportunity field is checked then the Teaming with field is required.</errorMessage>
+</ValidationRule>

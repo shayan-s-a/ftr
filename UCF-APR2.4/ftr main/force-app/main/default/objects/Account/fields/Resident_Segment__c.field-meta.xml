@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resident_Segment__c</fullName>
+    <externalId>false</externalId>
+    <label>Resident Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Skilled Nursing</fullName>
+                <default>false</default>
+                <label>Skilled Nursing</label>
+            </value>
+            <value>
+                <fullName>Assisted Living</fullName>
+                <default>false</default>
+                <label>Assisted Living</label>
+            </value>
+            <value>
+                <fullName>Active Retirement</fullName>
+                <default>false</default>
+                <label>Active Retirement</label>
+            </value>
+            <value>
+                <fullName>Affluent Professionals</fullName>
+                <default>false</default>
+                <label>Affluent Professionals</label>
+            </value>
+            <value>
+                <fullName>Student Housing</fullName>
+                <default>false</default>
+                <label>Student Housing</label>
+            </value>
+            <value>
+                <fullName>Young Professionals</fullName>
+                <default>false</default>
+                <label>Young Professionals</label>
+            </value>
+            <value>
+                <fullName>Low Income</fullName>
+                <default>false</default>
+                <label>Low Income</label>
+            </value>
+            <value>
+                <fullName>Families with children</fullName>
+                <default>false</default>
+                <label>Families with children</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

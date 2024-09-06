@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products_Quoted__c</fullName>
+    <description>Created for Misty King 07/2021 for E-Rate 470 Task on case 00808001</description>
+    <externalId>false</externalId>
+    <label>Products Quoted</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DSL</fullName>
+                <default>false</default>
+                <label>DSL</label>
+            </value>
+            <value>
+                <fullName>Fiberoptics</fullName>
+                <default>false</default>
+                <label>Fiberoptics</label>
+            </value>
+            <value>
+                <fullName>DIA</fullName>
+                <default>false</default>
+                <label>DIA</label>
+            </value>
+            <value>
+                <fullName>EVPL</fullName>
+                <default>false</default>
+                <label>EVPL</label>
+            </value>
+            <value>
+                <fullName>Elan</fullName>
+                <default>false</default>
+                <label>Elan</label>
+            </value>
+            <value>
+                <fullName>Eline</fullName>
+                <default>false</default>
+                <label>Eline</label>
+            </value>
+            <value>
+                <fullName>FOTS</fullName>
+                <default>false</default>
+                <label>FOTS</label>
+            </value>
+            <value>
+                <fullName>Managed Router</fullName>
+                <default>false</default>
+                <label>Managed Router</label>
+            </value>
+            <value>
+                <fullName>SD-Wan</fullName>
+                <default>false</default>
+                <label>SD-Wan</label>
+            </value>
+            <value>
+                <fullName>Managed Wifi</fullName>
+                <default>false</default>
+                <label>Managed Wifi</label>
+            </value>
+            <value>
+                <fullName>Wireless backup</fullName>
+                <default>false</default>
+                <label>Wireless backup</label>
+            </value>
+            <value>
+                <fullName>Managed Firewall</fullName>
+                <default>false</default>
+                <label>Managed Firewall</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

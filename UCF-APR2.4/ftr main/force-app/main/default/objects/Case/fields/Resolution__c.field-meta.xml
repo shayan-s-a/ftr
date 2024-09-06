@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution__c</fullName>
+    <externalId>false</externalId>
+    <label>Resolution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disconnected (Lost)</fullName>
+                <default>false</default>
+                <label>Disconnected (Lost)</label>
+            </value>
+            <value>
+                <fullName>Partially Disconnected</fullName>
+                <default>false</default>
+                <label>Partially Disconnected</label>
+            </value>
+            <value>
+                <fullName>Partially Renewed</fullName>
+                <default>false</default>
+                <label>Partially Renewed</label>
+            </value>
+            <value>
+                <fullName>Partially Saved</fullName>
+                <default>false</default>
+                <label>Partially Saved</label>
+            </value>
+            <value>
+                <fullName>Renewed</fullName>
+                <default>false</default>
+                <label>Renewed</label>
+            </value>
+            <value>
+                <fullName>Retained (Won)</fullName>
+                <default>false</default>
+                <label>Retained (Won)</label>
+            </value>
+            <value>
+                <fullName>Migrated</fullName>
+                <default>false</default>
+                <label>Migrated</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+            <value>
+                <fullName>No actions needed</fullName>
+                <default>false</default>
+                <label>No actions needed</label>
+            </value>
+            <value>
+                <fullName>Duplicate Case</fullName>
+                <default>false</default>
+                <label>Duplicate Case</label>
+            </value>
+            <value>
+                <fullName>No response from the customer</fullName>
+                <default>false</default>
+                <label>No response from the customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

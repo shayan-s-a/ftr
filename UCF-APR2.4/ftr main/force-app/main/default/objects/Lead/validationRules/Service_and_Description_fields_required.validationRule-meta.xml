@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_and_Description_fields_required</fullName>
+    <active>true</active>
+    <description>SEER Service and Description fields are required when the products listed below are selected.</description>
+    <errorConditionFormula>AND(
+OR (
+RecordTypeId=&quot;01240000000Ht61&quot;),
+
+AND
+(
+$Profile.Id != &quot;00eE0000001A5nM&quot;,
+$Profile.Id != &quot;00eE000000126tW&quot;,
+$Profile.Id != &quot;00eE0000001A9EH&quot;,
+$Profile.Id != &quot;00e0L000000ai4B&quot;,
+$Profile.Id != &quot;00e0L000000Qtux&quot;),
+OR (
+INCLUDES(Lead_Product_List__c, &quot;Cloud IT&quot;),
+INCLUDES(Lead_Product_List__c, &quot;Connect Cloud&quot;),
+INCLUDES(Lead_Product_List__c, &quot;Enterprise WIFI&quot;),
+INCLUDES(Lead_Product_List__c, &quot;Ethernet&quot;),
+INCLUDES(Lead_Product_List__c, &quot;FAW UCaaS&quot;),
+INCLUDES(Lead_Product_List__c, &quot;SD-WAN&quot;),
+INCLUDES(Lead_Product_List__c, &quot;SIP Trunking&quot;)),
+OR (
+ISBLANK(Service_Address_for_SEER__c),
+ISBLANK(Description_for_SEER__c)))</errorConditionFormula>
+    <errorMessage>Service Address for SEER &amp; Description for SEER under the SEER section is required.</errorMessage>
+</ValidationRule>

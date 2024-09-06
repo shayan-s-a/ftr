@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residence_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Residence Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Garden Style</fullName>
+                <default>false</default>
+                <label>Garden Style</label>
+            </value>
+            <value>
+                <fullName>High Rise</fullName>
+                <default>false</default>
+                <label>High Rise</label>
+            </value>
+            <value>
+                <fullName>Mid Rise</fullName>
+                <default>false</default>
+                <label>Mid Rise</label>
+            </value>
+            <value>
+                <fullName>Low Rise</fullName>
+                <default>false</default>
+                <label>Low Rise</label>
+            </value>
+            <value>
+                <fullName>SFU</fullName>
+                <default>false</default>
+                <label>SFU</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

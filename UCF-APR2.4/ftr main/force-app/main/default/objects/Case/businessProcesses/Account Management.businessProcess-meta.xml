@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account Management</fullName>
+    <description>Built for a case: 01177791</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>01-New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>10-In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>80-On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>90-Closed</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

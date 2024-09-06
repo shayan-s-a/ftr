@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Discount_IS_Added_For_Managed_Firewall</fullName>
+     
+        <description>Discount IS Added For Managed Firewall</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>michele.oberholtzer@ftr.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>commercialsalessupport@ftr.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>HTML_Email_Templates/Managed_Firewall_Discount_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_ICB_Inactive</fullName>
+        <description>Email Alert ICB Inactive</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Inactive</template>
+    </alerts>
+    <alerts>
+        <fullName>Final_Rejection_Email_Alert</fullName>
+        <description>Final Rejection Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Finance_Approval</fullName>
+        <ccEmails>tremble.francher@ftr.com</ccEmails>
+        <description>Finance Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Finance_Quote_Item_ICB_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>ICB_Quote_Review_Completed</fullName>
+        <description>ICB Quote Review Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/SterlingRSMSVPApproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Jeopardy_Email_Alert</fullName>
+        <description>Jeopardy Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_In_Jeopardy</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Approved</fullName>
+        <description>Quote Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/SterlingRSMSVPApproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected</fullName>
+        <description>Quote Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FrontierAdminTemplates/SterlingRSMSVPRejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_Credit</fullName>
+        <description>Quote Rejected - Credit</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_Engineering</fullName>
+        <description>Quote Rejected Engineering</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_INA</fullName>
+        <description>Quote Rejected INA</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_Originator</fullName>
+        <description>Quote Rejected - Originator</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_Site_Verification</fullName>
+        <description>Quote Rejected Site Verification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Rejected_Wireless_Management</fullName>
+        <description>Quote Rejected Wireless Management</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejected_Engineering_Wireless_Initial</fullName>
+        <description>Rejected Engineering Wireless Initial</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejected_Finance</fullName>
+        <description>Rejected Finance</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejection_BDS</fullName>
+        <description>Rejection BDS</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejection_Engineering_Wireless</fullName>
+        <description>Rejection Engineering Wireless</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejection_Regional_President</fullName>
+        <description>Rejection Regional President</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejection_State_Vps_GMs</fullName>
+        <description>Rejection State Vps/GMs</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/ICB_Quote_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approved_Business_Decision_Support1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Business Decision Support</literalValue>
+        <name>Approved Business Decision Support</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Credit1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Credit</literalValue>
+        <name>Approved Credit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Engineering1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Engineering</literalValue>
+        <name>Approved Engineering</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Engineering_Wireless1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Engineering Wireless</literalValue>
+        <name>Approved Engineering Wireless</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Engineering_Wireless_Final1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Engineering Wireless Final</literalValue>
+        <name>Approved Engineering Wireless Final</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Finance1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Finance</literalValue>
+        <name>Approved Finance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Finance_Renewals1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Finance</literalValue>
+        <name>Approved Finance Renewals</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_INA1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - INA</literalValue>
+        <name>Approved INA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_INA_Renewals1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - INA Renewals</literalValue>
+        <name>Approved INA Renewals</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Post_Completion_Audit_Finance1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Post Completion Audit Finance</literalValue>
+        <name>Approved Post Completion Audit Finance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Post_Completion_Audit_Originat1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Post Completion Audit Originator</literalValue>
+        <name>Approved Post Completion Audit Originato</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Post_Engineering_Originator1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Post Engineering Originator</literalValue>
+        <name>Approved Post Engineering Originator</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Post_Engineering_Originator_Wi1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Post Engineering Originator Wireless</literalValue>
+        <name>Approved Post Engineering Originator Wir</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Pricing</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Pricing</literalValue>
+        <name>Approved Pricing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Product</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Product</literalValue>
+        <name>Approved Product</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Regional_President1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Regional President</literalValue>
+        <name>Approved Regional President</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Site_Verification1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Site Verification</literalValue>
+        <name>Approved Site Verification</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_State_VP1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - State VP</literalValue>
+        <name>Approved State VP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Wireless_Management1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Wireless Management</literalValue>
+        <name>Approved Wireless Management</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Wireless_Management_Manager1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Approved - Wireless Management Manager</literalValue>
+        <name>Approved Wireless Management Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assigned_Sales_Engineer1</fullName>
+        <field>PriorStatus__c</field>
+        <literalValue>Assigned - Sales Engineer</literalValue>
+        <name>Assigned Sales Engineer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>BlankNxtApprovr</fullName>
+        <field>SetNextApprover__c</field>
+        <literalValue>0</literalValue>
+        <name>BlankNxtApprovr</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Blank_Current_Status1</fullName>
+        <field>CurrentStatus__c</field>
+        <name>Blank Current Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Blank_Prior_Status1</fullName>
+        <field>PriorStatus__c</field>
+        <name>Blank Prior Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CurrentStatus_ICB_Approved</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Approved</literalValue>
+        <name>CurrentStatus ICB Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Current_Status_to_Pending_Final_Update</fullName>
+        <description>Set Current Status to Pending Final Update</description>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending Final Update</literalValue>
+        <name>Current Status to Pending Final Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Approval</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Final Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Approval_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>Today()</formula>
+        <name>Final Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Rejection</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Final Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Rejection_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>Today()</formula>
+        <name>Final Rejection Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Initial_Status_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>Today()</formula>
+        <name>Initial Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Jeopardy_True</fullName>
+        <field>Jeopardy__c</field>
+        <literalValue>1</literalValue>
+        <name>Jeopardy True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Jeopardy_Update</fullName>
+        <field>Jeopardy__c</field>
+        <literalValue>0</literalValue>
+        <name>Jeopardy False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Overall_Quote_Status_Approved</fullName>
+        <field>Overall_Quote_Status__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Overall Quote Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Overall_Quote_Status_Rejected</fullName>
+        <field>Overall_Quote_Status__c</field>
+        <name>Overall Quote Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Overall_Status_Approved</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Overall Status = Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PendingOverallStatus</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Pending</literalValue>
+        <name>PendingOverallStatus</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_AE_Update</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending AE Update</literalValue>
+        <name>Pending AE Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Business_Decision_Support1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Business Decision Support</literalValue>
+        <name>Pending Business Decision Support</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Credit1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Credit</literalValue>
+        <name>Pending Credit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Engineering1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Engineering</literalValue>
+        <name>Pending Engineering</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Engineering_Wireless1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Engineering Wireless</literalValue>
+        <name>Pending Engineering Wireless</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Engineering_Wireless_Final1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Engineering Wireless Final</literalValue>
+        <name>Pending Engineering Wireless Final</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Finance1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Finance</literalValue>
+        <name>Pending Finance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_ICB</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - ICB</literalValue>
+        <name>Pending ICB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_INA1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - INA</literalValue>
+        <name>Pending INA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Post_Completion_Audit1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Post Completion Audit Finance</literalValue>
+        <name>Pending Post Completion Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Post_Completion_Audit_Originato1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Post Completion Audit Originator</literalValue>
+        <name>Pending Post Completion Audit Originator</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Post_Engineering_Originator1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Post Engineering Originator</literalValue>
+        <name>Pending Post Engineering Originator</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Post_Engineering_Originator_Wir1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Post Engineering Originator Wireless</literalValue>
+        <name>Pending Post Engineering Originator Wire</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Pricing</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Pricing</literalValue>
+        <name>Pending Pricing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Product</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Product</literalValue>
+        <name>Pending Product</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_RSM</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - RSM Approval</literalValue>
+        <name>Pending RSM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Regional_President1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Regional President</literalValue>
+        <name>Pending Regional President</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_SVP</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - State VP</literalValue>
+        <name>Pending SVP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Sales_Engineering1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Sales Engineering</literalValue>
+        <name>Pending Sales Engineering</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Sales_Engineering_Manager1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Sales Engineering Manager</literalValue>
+        <name>Pending Sales Engineering Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Site_Verification1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Site Verification</literalValue>
+        <name>Pending Site Verification</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_State_VP1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - State VP</literalValue>
+        <name>Pending State VP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Wireless_Management1</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending - Wireless Management</literalValue>
+        <name>Pending Wireless Management</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recall_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>Today()</formula>
+        <name>Recall Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recall_Status</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Recall Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Restart_Process</fullName>
+        <description>Rejected or recalled at first step</description>
+        <field>CurrentStatus__c</field>
+        <name>Restart Process</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Round_Adjusted_MRC</fullName>
+        <field>AdjustedMRC__c</field>
+        <formula>ROUND (AdjustedMRC__c , 2)</formula>
+        <name>Round Adjusted MRC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Round_Adjusted_NRC</fullName>
+        <field>AdjustedNRC__c</field>
+        <formula>ROUND(AdjustedNRC__c , 2)</formula>
+        <name>Round Adjusted NRC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Round_Standard_MRC</fullName>
+        <field>StandardMRC__c</field>
+        <formula>ROUND (StandardMRC__c , 2)</formula>
+        <name>Round Standard MRC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Round_Standard_NRC</fullName>
+        <field>StandardNRC__c</field>
+        <formula>ROUND (StandardNRC__c , 2)</formula>
+        <name>Round Standard NRC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetNxtApproverFlag</fullName>
+        <field>SetNextApprover__c</field>
+        <literalValue>1</literalValue>
+        <name>SetNxtApproverFlag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Final_Approval_Date</fullName>
+        <field>Final_Approval_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Set Final Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Jeopardy_Off</fullName>
+        <field>Jeopardy__c</field>
+        <literalValue>0</literalValue>
+        <name>Set Jeopardy Off</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>Today()</formula>
+        <name>Set Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Inactive</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Inactive</literalValue>
+        <name>Set Status Inactive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>Today()</formula>
+        <name>Status Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_RSM_Approval</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Sterling RSM Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_RSM_Approval_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Sterling RSM Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_RSM_Reject</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sterling RSM Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_RSM_Reject_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Sterling RSM Reject Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_SVP_Approval</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Sterling SVP Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_SVP_Approval_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Sterling SVP Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_SVP_Reject</fullName>
+        <field>OverallStatus__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sterling SVP Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sterling_SVP_Reject_Date</fullName>
+        <field>Status_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Sterling SVP Reject Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Thursday_Review</fullName>
+        <field>CurrentStatus__c</field>
+        <literalValue>Pending Ready for Review</literalValue>
+        <name>Thursday Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unassign_Sales_Engineer</fullName>
+        <field>SalesEngineer__c</field>
+        <name>Unassign Sales Engineer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Discount Type %3D ICBA or CTRA</fullName>
+        <actions>
+            <name>CurrentStatus_ICB_Approved</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Overall_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SterlingQuoteItem__c.DiscountType__c</field>
+            <operation>equals</operation>
+            <value>ICBA</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Inactive Status Update</fullName>
+        <active>true</active>
+        <description>Change status to inactive if status of approval hasn&apos;t changed in 30 days</description>
+        <formula>And(    ISPICKVAL(OverallStatus__c, &apos;Pending&apos;) ,    Status_Date__c = Today() )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_Alert_ICB_Inactive</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Set_Status_Inactive</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Item in Jeopardy</fullName>
+        <active>true</active>
+        <description>Set true when Status date hasn&apos;t changed in 3 days.</description>
+        <formula>And(     ISPICKVAL( OverallStatus__c , &apos;Pending&apos;),     Status_Date__c = Today()  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Jeopardy_Email_Alert</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Jeopardy_True</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>SterlingQuoteItem__c.Status_Date__c</offsetFromField>
+            <timeLength>3</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Jeopardy Update</fullName>
+        <actions>
+            <name>Jeopardy_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SterlingQuoteItem__c.OverallStatus__c</field>
+            <operation>equals</operation>
+            <value>Abandoned,Accepted,Approved,Rejected,Recalled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SterlingQuoteItem__c.Jeopardy__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Quote Item DSAT field</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>SterlingQuoteItem__c.DSAT_AddressID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Round VAlues</fullName>
+        <actions>
+            <name>Round_Adjusted_MRC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Round_Adjusted_NRC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Round_Standard_MRC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Round_Standard_NRC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR( ISNEW(), ISCHANGED( AdjustedMRC__c ), ISCHANGED( AdjustedNRC__c )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Email For Managed Firewall Discount</fullName>
+        <actions>
+            <name>Discount_IS_Added_For_Managed_Firewall</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SterlingQuoteItem__c.Product_Name_Quote__c</field>
+            <operation>startsWith</operation>
+            <value>MF</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SterlingQuoteItem__c.DiscountAmount__c</field>
+            <operation>lessThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <description>Send Email For Managed Firewall Discount</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

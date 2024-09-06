@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>kevin.tullos@ftr.com</email>
+    <name>Partner Support Team</name>
+    <queueMembers>
+        <roleAndSubordinates>
+            <roleAndSubordinate>B2B_Alt_Channel_PST_Rep</roleAndSubordinate>
+            <roleAndSubordinate>B2B_Alt_Channel_Managers</roleAndSubordinate>
+        </roleAndSubordinates>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

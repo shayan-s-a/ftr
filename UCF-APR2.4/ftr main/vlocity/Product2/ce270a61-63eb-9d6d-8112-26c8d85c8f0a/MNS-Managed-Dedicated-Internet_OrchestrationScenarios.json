@@ -1,0 +1,50 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"ATTR_ELIGBL_PARTNRD\",\"left-side-name\":\"Partnered\",\"left-side-type\":\"attribute\",\"left-side-category\":\"Eligibility Attributes\",\"left-side-datatype\":\"Checkbox\",\"op\":\"=\",\"right-side\":\"true\"}",
+        "%vlocity_namespace%__GlobalKey__c": "3d669080-5eab-6070-d337-f83c534b5804",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "Ereach",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/Ereach",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "ce270a61-63eb-9d6d-8112-26c8d85c8f0a",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/ce270a61-63eb-9d6d-8112-26c8d85c8f0a",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "ce270a61-63eb-9d6d-8112-26c8d85c8f0a",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "MNS Ereach Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/MNS Ereach Scenario/3d669080-5eab-6070-d337-f83c534b5804/Product2/ce270a61-63eb-9d6d-8112-26c8d85c8f0a"
+    },
+    {
+        "%vlocity_namespace%__Action__c": "Add;Modify;Disconnect",
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "918c2726-9e5a-bedd-5462-f6186ff973c0",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "E2E Master Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/E2E Master Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "ce270a61-63eb-9d6d-8112-26c8d85c8f0a",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/ce270a61-63eb-9d6d-8112-26c8d85c8f0a",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "ce270a61-63eb-9d6d-8112-26c8d85c8f0a",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "mDIA Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/mDIA Scenario/918c2726-9e5a-bedd-5462-f6186ff973c0/Product2/ce270a61-63eb-9d6d-8112-26c8d85c8f0a"
+    }
+]

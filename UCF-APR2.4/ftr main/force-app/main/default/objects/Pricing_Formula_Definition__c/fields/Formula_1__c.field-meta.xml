@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formula_1__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    Integer_2__c &lt; Integer_1__c,
+    1000000,
+    IF (
+        AND(
+	    Integer_4__c&lt;=2000,
+	    Integer_1__c = 1000,
+	   String_2__c != &apos;Yes&apos;,
+	    Integer_0__c &gt;=36
+	),
+        CASE(Integer_0__c,
+            60, 870,
+            36, 980,
+            0
+        ),
+        Formula_0__c
+    )
+)</formula>
+    <label>1G Promo</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

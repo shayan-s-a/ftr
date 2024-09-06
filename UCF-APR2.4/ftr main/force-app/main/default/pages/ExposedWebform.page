@@ -1,0 +1,108 @@
+<apex:page controller="UpdateAccountController">
+
+<head>
+<apex:stylesheet value="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"  />
+<apex:includeScript value="https://code.jquery.com/jquery-1.9.1.js" />
+<apex:includeScript value="https://code.jquery.com/ui/1.10.3/jquery-ui.js" />
+<script>
+  $(function() {
+    $('[id$=datepicker]').datepicker({
+           changeMonth: true,
+           changeYear: true,
+           numberOfMonths: 1,
+           dateFormat:"mm/dd/yy",
+           showAnim: "slide"
+    })
+  });
+</script>
+</head>    
+  
+<body>
+
+<apex:pageMessages id="error"/>
+
+<apex:form >
+    <apex:pageBlock >
+    
+    <apex:pageBlockSection >
+        Please fill out the form below and click "Submit".<br/>
+        <b>All fields with a <font color="red">*</font> are MANDATORY.</b>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection >
+    <br/>
+    </apex:pageBlockSection>
+        <table>
+            <tr>
+                <td width="500px">Name:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.name}" html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">Legal Entity Name:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.ename}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">DBA Company Name:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.dbacname}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">Street Address:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.street}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">City:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.city}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">State:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.state}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">Zip:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.zip}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">Type of Entity:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.struct}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px">State Where Entity Filed:</td>
+                <td><apex:inputText disabled="true" value="{!usableAcc.statellc}"  html-readonly="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px"><font color="red">* </font>Date Entity was Formed:</td>
+                <td><apex:inputText label="Date of Formation" value="{!usableAcc.formDate}" id="datepicker" required="true"/></td>
+            </tr>
+            <tr>
+                <td width="500px"><font color="red">* </font>TAX ID Number:</td>
+                <td><apex:inputText maxlength="9" label="Tax ID Number" value="{!usableAcc.taxid}" required="true"/></td>
+            </tr>
+            <!--tr>
+                <td width="500px"><font color="red">* </font>DUNS Number:</td>
+                <td><apex:inputText maxlength="9" label="D U N S Number" value="{!usableAcc.duns}" required="true"/></td>
+            </tr-->
+            <tr>
+                <td width="500px"><font color="red">* </font>Name of Principal:</td>
+                <td><apex:inputText label="Name of Principal" value="{!usableAcc.pname}" required="true"/></td>
+            </tr> 
+            <tr>
+                <td columns="2" align="center"><br/></td>
+            </tr>   
+            <tr>
+                <td columns="2" align="center"><apex:commandButton value="Submit" action="{!doSubmit}"/></td>
+            </tr>                       
+        </table>
+    
+        <!--
+         
+                SSN of Principal: <apex:inputText value="{!usableAcc.pssn}"/>
+                Vendor Profile  Date: <apex:inputText value="{!usableAcc.vpdate}" onfocus="DatePicker.pickDate(false, this , false);"  html-readonly="true"/>
+                Frontier Customer Number: <apex:inputText value="{!usableAcc.ftrno}"/>
+        -->
+        
+
+    </apex:pageBlock>
+</apex:form>
+
+  
+</body>
+</apex:page>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MTU_Company</fullName>
+    <active>true</active>
+    <description>MTU</description>
+    <label>MTU Company</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Branded Paid Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNL Disconnect Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE Maintenance Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ChoiceConvention2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold_Calling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Aggregator%2FList Upload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content_Syndication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer - Alt Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DemandDrive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo Examples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Customer Database %28DPI%2FDynamics%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JumpCrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDU - D2D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDU Traceability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Search Paid Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay_Per_Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect - Alt Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Generated Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Traffic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Take the Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer_from_Small_Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unbranded Paid Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eRate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arts%2C Entertainment %26 Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colleges %26 Universities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy%2C Utilities%2C Oil %26 Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services %26 Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food%2C Beverages %26 Restaurants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government %26 Public Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare%2C Medical %26 Hospitals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality %26 Lodging excl Restaurants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metals %26 Mining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceuticals %26 Life Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation %26 Logistics</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Own</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>De-Bulked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired Contract-Lost To Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired Contract-Retail Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Terminated Contract By Frontier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminated Contract By Property</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

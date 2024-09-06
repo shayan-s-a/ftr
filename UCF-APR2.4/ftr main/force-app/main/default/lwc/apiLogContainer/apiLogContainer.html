@@ -1,0 +1,128 @@
+<template>
+  <div class='slds-p-around_medium slds-box' style="background: whitesmoke;  padding-bottom: 3rem;">
+    <div class="slds-text-heading_large slds-p-bottom_small slds-box slds-grid"
+      style="background-color: white; align-items: center;">
+      <div class="slds-p-right_medium" style="width: 8rem;">
+        <img src={logoImg} title="Frontier Communications"></img>
+      </div>
+      Salesforce API Logs
+    </div>
+    <div class="slds-m-vertical_medium" style="width: 50%;">
+      <div class="slds-grid">
+        <div class="slds-col slds-p-right_small">
+          <lightning-input name='startDate' onchange={saveInputValue} type="date" label="From:" value={startDate}>
+          </lightning-input>
+          <lightning-input name='endDate' onchange={saveInputValue} type="date" label="To:" value={endDate}>
+          </lightning-input>
+        </div>
+        <div class="slds-col slds-p-right_small">
+          <label class="slds-form-element__label" for="systemFilter">System</label>
+          <div class="slds-form-element__control">
+            <div class="slds-select_container">
+              <select name='systemName' class="slds-select" id="systemFilter" onchange={saveInputValue}>
+                <template for:each={systemFilters} for:item="s">
+                  <option key={s.value} value={s.value}>{s.value}</option>
+                </template>
+              </select>
+            </div>
+          </div>
+          <label class="slds-form-element__label" for="statusFilter">Status</label>
+          <div class="slds-form-element__control">
+            <div class="slds-select_container">
+              <select name='status' class="slds-select" id="statusFilter" onchange={saveInputValue}>
+                <template for:each={statusFilters} for:item="s">
+                  <option key={s.value} value={s.value}>{s.value}</option>
+                </template>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="slds-col slds-p-right_small">
+          <label class="slds-form-element__label" for="interfaceFilter">Interface</label>
+          <div class="slds-form-element__control">
+            <div class="slds-select_container">
+              <select name='interfaceName' class="slds-select" id="interfaceFilter" onchange={saveInputValue}>
+                <template for:each={interfaceFilters} for:item="i">
+                  <option key={i.value} value={i.value}>{i.value}</option>
+                </template>
+              </select>
+            </div>
+          </div>
+          <lightning-input name='filterNumber' onchange={saveInputValue} type="text" label="Order/Document Number:"
+            value={filterNumber}></lightning-input>
+        </div>
+        <div class="slds-col slds-p-right_small">
+          <label class="slds-form-element__label" for="pageSize">Page Size</label>
+          <div class="slds-form-element__control">
+            <div class="slds-select_container">
+              <select name='pageSize' class="slds-select" id="pageSize" onchange={saveInputValue}>
+                  <option value='10'>10</option>
+                  <option value='25'>25</option>
+                  <option value='50'>50</option>
+                  <option value='100'>100</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="slds-grid">
+        <div class="slds-col slds-p-right_small"></div>
+        <div class="slds-col slds-p-right_small"></div>
+        <div class="slds-col slds-p-right_small"></div>
+        <div class="slds-col slds-p-right_small"></div>
+      </div> -->
+      <div class="slds-grid" style="margin-top: 0.5rem;">
+        <div class="slds-p-right_small">
+          <lightning-button variant="brand" label="Search" title="Search" onclick={getLogs} disabled={disableSearch}></lightning-button>
+        </div>
+        <div class="slds-p-right_small">
+          <lightning-button variant="text-destructive" label="Reset Filters" title="Reset Filters" onclick={resetFilters}></lightning-button>
+        </div>
+      </div>
+    </div>
+    <table class="log-table">
+      <tr>
+        <th>Log</th>
+        <th>System</th>
+        <th>Interface Name</th>
+        <th>Status</th>
+        <th>Document Number</th>
+        <th>SF Order Number</th>
+        <th>Created Date</th>
+      </tr>
+      <tr key={log.Name} for:each={logs} for:item="log" data-id={log.Id} class={log.rowCSS} onclick={showLogDetails}>
+        <td data-id={log.Id} data-field='Name'>{log.Name}</td>
+        <td data-id={log.Id} data-field='System__c'>{log.System__c}</td>
+        <td data-id={log.Id} data-field='Interface__c'>{log.Interface__c}</td>
+        <td data-id={log.Id} data-field='Status__c'>{log.Status__c}</td>
+        <td data-id={log.Id} data-field='DocumentNumber__c'>{log.DocumentNumber__c}</td>
+        <td data-id={log.Id} data-field='OrderNumber__c'>{log.OrderNumber__c}</td>
+        <td data-id={log.Id} data-field='CreatedDate'>{log.CreatedDateFormatted} </td>
+      </tr>
+    </table>
+    <template if:true={error}>
+      <div style="width: 100%" class="slds-text-color_error table-error">
+        {error}
+      </div>
+    </template>
+
+      <div>
+        <p class="slds-m-vertical_medium content">
+          Displaying {startingRecord} to {endingRecord} of {totalRecordCount} records.
+          <template if:true={pagination}>
+            Page {page} of {totalPage}.
+          </template> 
+        </p>
+        <template if:true={pagination}>
+          <c-paginator onprevious={previousHandler} onnext={nextHandler}></c-paginator>
+        </template>
+      </div>
+
+    <template if:true={showDetails}>
+      <div>
+        <c-api-log-viewer record={log}></c-api-log-viewer>
+      </div>
+    </template>
+
+  </div>
+</template>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_type_of_property_do_you_run__c</fullName>
+    <description>ClearLink What type of property do you run? Field</description>
+    <externalId>false</externalId>
+    <label>What type of property do you run?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Multi-family residential (Apartment or Condo)</fullName>
+                <default>false</default>
+                <label>Multi-family residential (Apartment or Condo)</label>
+            </value>
+            <value>
+                <fullName>Single-family homeowners association (HOA)</fullName>
+                <default>false</default>
+                <label>Single-family homeowners association (HOA)</label>
+            </value>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial</label>
+            </value>
+            <value>
+                <fullName>Mixed-Use (both commercial and residential)</fullName>
+                <default>false</default>
+                <label>Mixed-Use (both commercial and residential)</label>
+            </value>
+            <value>
+                <fullName>I own/operate multiple properties in multiple states</fullName>
+                <default>false</default>
+                <label>I own/operate multiple properties in multiple states</label>
+            </value>
+            <value>
+                <fullName>Property Type</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property Type</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

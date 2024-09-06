@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>if_CPE_is_Yes_than_units_must_be_entered</fullName>
+    <active>false</active>
+    <description>If CPE product is selected than the numebr of CPE affected units is mandatory</description>
+    <errorConditionFormula>AND ( 
+ 
+ISPICKVAL(CPE_Product__c
+, &quot;yes&quot;),  
+ISBLANK(of_replaced_Units__c
+) 
+)</errorConditionFormula>
+    <errorDisplayField>of_replaced_Units__c</errorDisplayField>
+    <errorMessage>This is a CPE related Opportunity. The number of affected units must be entered. Number can = 0.</errorMessage>
+</ValidationRule>

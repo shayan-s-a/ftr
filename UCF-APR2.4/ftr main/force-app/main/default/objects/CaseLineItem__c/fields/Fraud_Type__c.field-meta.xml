@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fraud_Type__c</fullName>
+    <description>As a current Alert Tracker user, I need to have the ability to select from a menu in the Fraud Type field so that each case contains a Fraud Type. Values to include 800 Reorigination Fraud, APL Abuse, Call Attendant, Call Back Scam, Crossed-Wire, Casual 1010x, Employee Abuse, PBX CPE, Remote Call Forward, Subscription Fraud, Scam, VOIP, Voicemail.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select from a menu in the Fraud Type field so that each case contains a Fraud Type</inlineHelpText>
+    <label>Fraud Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>800 Reorigination Fraud</fullName>
+                <default>false</default>
+                <label>800 Reorigination Fraud</label>
+            </value>
+            <value>
+                <fullName>APL Abuse</fullName>
+                <default>false</default>
+                <label>APL Abuse</label>
+            </value>
+            <value>
+                <fullName>Call Attendant</fullName>
+                <default>false</default>
+                <label>Call Attendant</label>
+            </value>
+            <value>
+                <fullName>Call Back Scam</fullName>
+                <default>false</default>
+                <label>Call Back Scam</label>
+            </value>
+            <value>
+                <fullName>Crossed-Wire</fullName>
+                <default>false</default>
+                <label>Crossed-Wire</label>
+            </value>
+            <value>
+                <fullName>Casual 1010x</fullName>
+                <default>false</default>
+                <label>Casual 1010x</label>
+            </value>
+            <value>
+                <fullName>Employee Abuse</fullName>
+                <default>false</default>
+                <label>Employee Abuse</label>
+            </value>
+            <value>
+                <fullName>PBX CPE</fullName>
+                <default>false</default>
+                <label>PBX CPE</label>
+            </value>
+            <value>
+                <fullName>Remote Call Forward</fullName>
+                <default>false</default>
+                <label>Remote Call Forward</label>
+            </value>
+            <value>
+                <fullName>Subscription Fraud</fullName>
+                <default>false</default>
+                <label>Subscription Fraud</label>
+            </value>
+            <value>
+                <fullName>Scam</fullName>
+                <default>false</default>
+                <label>Scam</label>
+            </value>
+            <value>
+                <fullName>VOIP</fullName>
+                <default>false</default>
+                <label>VOIP</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

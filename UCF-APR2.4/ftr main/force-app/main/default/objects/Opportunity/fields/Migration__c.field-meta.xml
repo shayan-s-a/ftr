@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Migration__c</fullName>
+    <externalId>false</externalId>
+    <label>Migration SPIFF Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>Migration plus additional new sales</fullName>
+                <default>false</default>
+                <label>Migration plus additional new sales</label>
+            </value>
+            <value>
+                <fullName>No migration</fullName>
+                <default>false</default>
+                <label>No migration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

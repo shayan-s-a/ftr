@@ -1,0 +1,194 @@
+<aura:component
+  controller="FTRWSAddressController"
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+  access="global">
+    
+    <aura:html tag="style">
+		.slds-modal__container { width : 80% !important; max-width : 80% !important;
+		}
+	</aura:html>
+    
+    <aura:handler event="c:WSAddressEvent" action="{!c.handleAddressEvent}"/>
+  <aura:handler event="aura:waiting" action="{!c.showSpinner}" />
+  <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}" />
+    <aura:registerEvent name="WSDPISaved" type="c:WSDPISaved" />
+    
+    
+    <aura:method name="validateInDSAT" action="{!c.validateInDSAT}" access="PUBLIC"/>
+    
+  <!-- stores FTRWSAddress id -->
+    <!-- Use this when calling from the address validation screen tab-->
+  <aura:attribute name="recordId" type="Id" />
+  
+  <!-- Use this when calling from the address validation screen popup-->
+    <aura:attribute name="addressId" type="Id" />
+    
+    <aura:attribute name="disableValDSATBTN" type = "boolean" default = "true"/>
+  
+    <aura:attribute name="disableDisplayField" type = "boolean" default = "true"/>
+    
+    <aura:attribute name="Spinner" type="boolean" default="false" />
+    
+	<!-- input attributes -->
+  <aura:attribute name="streetNo" type="string" default="" />
+  <aura:attribute name="streetName" type="string" default="" />
+  <aura:attribute name="unit" type="string" default="" />
+  <aura:attribute name="city" type="string" default="" />
+  <aura:attribute name="state" type="string" default="" />
+  <aura:attribute name="street" type="string" default="" />
+  <aura:attribute name="zip" type="string" default="" />
+    <aura:attribute name="latitudeInp" type="string" default="" />
+    <aura:attribute name="longitudeInp" type="string" default="" />
+    <!-- output attributes-->
+        <aura:attribute name="businessName" type="string" default="" />
+    <aura:attribute name="id" type="string" default="" />
+    <aura:attribute name="vfoRecordId" type="string" default="" />
+    <aura:attribute name="m6OrderNumber" type="string" default="" />
+    <aura:attribute name="createdBy" type="string" default="" />
+    <aura:attribute name="creatorEmail" type="string" default="" />
+    <aura:attribute name="createdById" type="string" default="" /> 
+    
+    <aura:attribute name="opened" type="string" default="" />
+    <aura:attribute name="inFootprint" type="boolean" default="" />
+    <aura:attribute name="market" type="string" default="" />
+    <aura:attribute name="level" type="string" default="" />
+    <aura:attribute name="products" type="string" default="" />
+    <aura:attribute name="wireCenterCLLI" type="string" default="" />
+	<aura:attribute name="dsatId" type="string" default="" />    
+
+    <aura:attribute name="siteName" type="string" default="" />
+    <aura:attribute name="wireCenterQoS" type="string" default="" />
+    <aura:attribute name="wireCenterSpeed" type="string" default="" />
+    <aura:attribute name="litBuilding" type="boolean" default="" />
+    <aura:attribute name="fiberDistance" type="string" default="" />
+
+    <aura:attribute name="copperDistance" type="string" default="" />
+    <aura:attribute name="fiberTier" type="string" default="" />
+    <aura:attribute name="copperTier" type="string" default="" />
+    <aura:attribute name="latitude" type="string" default="" />
+    <aura:attribute name="longitude" type="string" default="" />
+    <aura:attribute name="fiberQualification" type="string" default="" />
+    <aura:attribute name="copperQualification" type="string" default="" />
+    
+    <aura:attribute name="dsatRespData" type="FTRWSDSATAddressResponse" />
+  	<aura:attribute name="showDSATResults" type="boolean" default="false" />
+    <aura:attribute name="isDSATValFailed" type="boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+   <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+      <div
+        class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative"
+        role="alert"
+      >
+        <span class="slds-assistive-text">Loading</span>
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+      </div>
+    </div>
+  </aura:if>
+    
+    <lightning:layout multipleRows="true" class="border">
+        <lightning:layoutItem padding="around-small" size="12" class="border2">
+			<div class="slds-text-align_right">        
+        		<!--<lightning:button variant="brand" label="Validate in DSAT" onclick="{! c.validateInDSATClicked}" disabled = "{!v.disableValDSATBTN}"/> -->
+        	</div>
+        </lightning:layoutItem>
+        <aura:if isTrue="{!v.showDSATResults}">
+		<lightning:layoutItem padding="around-small" size="12" class="border2">                        
+            <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                    <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Address Validation">
+                        <span class="strong-text">DSAT Validation Results</span>
+                    </a>
+                </h2>
+            </div>
+            </lightning:layoutItem>
+            
+        <lightning:layoutItem padding="around-small" size="6" class="border2">
+            
+        		<div class="slds-card__body slds-card__body_inner">
+            		<div class="slds-text-align_left">
+                        <!--<p class="font">DSAT Validation Results</p> -->
+            			<lightning:input type="checkbox" label="In Footprint" class="font" name="infootPrint" aura:id="infootPrint" value="{!v.inFootprint}" checked ="{!v.inFootprint}"  disabled="{!v.disableDisplayField}"/>
+            			<lightning:input label="DSAT ID" name="dsatId" class="font" aura:id="dsatId" value="{!v.dsatId}" disabled="{!v.disableDisplayField}"/>
+                        <lightning:input label="Market ID" class="font" name="market" aura:id="market" value="{!v.market}" disabled="{!v.disableDisplayField}" />
+                        <lightning:input label="Level Id" class="font" name="level" aura:id="level" value="{!v.level}" disabled="{!v.disableDisplayField}" />
+                        <lightning:input label="WireCenter QoS" class="font" name="wireCenterQoS" aura:id="wireCenterQoS" value="{!v.wireCenterQoS}" disabled="{!v.disableDisplayField}" />
+                        <lightning:input label="WireCenter CLLI" class="font" name="wireCenterCLLI" aura:id="wireCenterCLLI" value="{!v.wireCenterCLLI}" disabled="{!v.disableDisplayField}" />
+                        <lightning:input label="DSAT Max Speed" class="font" name="wireCenterSpeed" aura:id="wireCenterSpeed" value="{!v.wireCenterSpeed}" disabled="{!v.disableDisplayField}" />
+                        
+                        <lightning:input label="Latitude" name="latitude" class="font" aura:id="latitude" value="{!v.latitude}" disabled="{!v.disableDisplayField}"/>
+	                    <lightning:input label="Longitude" name="longitude" class="font" aura:id="longitude" value="{!v.longitude}" disabled="{!v.disableDisplayField}"/>
+                        
+            			<lightning:input label="DSAT Services" name="products" class="font" aura:id="products" value="{!v.products}" disabled="{!v.disableDisplayField}"/>
+                    
+            		</div>
+        		</div>
+            </lightning:layoutItem>
+        
+                <lightning:layoutItem padding="around-small" size="6" class="border2">
+        		<div class="slds-card__body slds-card__body_inner">
+            		<div class="slds-text-align_left">
+            			<lightning:input type="checkbox" label="Lit Building" class="font" name="litBuilding" aura:id="litBuilding" value="{!v.litBuilding}" checked ="{!v.litBuilding}" disabled="{!v.disableDisplayField}"/>
+                        <lightning:input label="Opened" class="font" name="opened" aura:id="opened" value="{!v.opened}" disabled="{!v.disableDisplayField}" />
+                        <lightning:input label="DSAT Created By" class="font" name="createdBy" aura:id="createdBy" value="{!v.createdBy}" disabled="{!v.disableDisplayField}" />
+
+                        <lightning:input label="Creator Email" name="creatorEmail" class="font" aura:id="creatorEmail" value="{!v.creatorEmail}" disabled="{!v.disableDisplayField}"/>
+            			<lightning:input label="Created By Id" name="createdById" class="font" aura:id="createdById" value="{!v.createdById}" disabled="{!v.disableDisplayField}"/>
+
+            			<!--<lightning:input label="M6 OrderNumber" name="m6OrderNumber" class="font" aura:id="m6OrderNumber" value="{!v.m6OrderNumber}" disabled="{!v.disableDisplayField}"/> -->
+                        
+            			<!--<lightning:input label="VFO RecordId" name="vfoRecordId" class="font" aura:id="vfoRecordId" value="{!v.vfoRecordId}" disabled="{!v.disableDisplayField}"/> -->
+    
+                        <lightning:input label="Fiber Qualification" name="fiberQualification" class="font" aura:id="fiberQualification" value="{!v.fiberQualification}" disabled="{!v.disableDisplayField}"/>
+	            		<!--<lightning:input label="Fiber Tier" name="fiberTier" class="font" aura:id="fiberTier" value="{!v.fiberTier}" disabled="{!v.disableDisplayField}"/> -->
+                        <lightning:input label="Fiber Distance" name="fiberDistance" class="font" aura:id="fiberDistance" value="{!v.fiberDistance}" disabled="{!v.disableDisplayField}"/>
+                        
+                        <lightning:input label="Copper Qualification" name="copperQualification" class="font" aura:id="copperQualification" value="{!v.copperQualification}" disabled="{!v.disableDisplayField}"/>
+            			<!--<lightning:input label="Copper Tier" name="copperTier" class="font" aura:id="copperTier" value="{!v.copperTier}" disabled="{!v.disableDisplayField}"/> -->
+                        
+            			<lightning:input label="Copper Distance" name="copperDistance" class="font" aura:id="copperDistance" value="{!v.copperDistance}" disabled="{!v.disableDisplayField}"/>
+                        
+                    </div>
+        		</div>
+            </lightning:layoutItem> 
+            </aura:if>
+        
+      <aura:if isTrue="{!v.isDSATValFailed}">
+
+          	<lightning:layoutItem padding="around-small" size="12">
+                 <div class="slds-media__body">
+                     <h2 class="slds-card__header-title">
+                             <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Address Validation">
+                                 <span class="strong-text">Not a Valid DSAT Address. Please try another address</span>
+                             </a>
+                         </h2>
+                 </div> 
+          </lightning:layoutItem>
+      </aura:if>
+
+   <lightning:layoutItem padding="around-small" size="12">     
+	<div class="slds-text-align_right">
+     <!-- <footer class="slds-modal__footer"> -->
+<!--lightning:button variant="brand" label="Close" onclick="{!c.closeModal}" /--> 
+<!--lightning:button
+              variant="brand"
+              label="Go To DPI"
+              onclick="{!c.goToDPI}"
+            /-->
+       <!-- <button class="slds-button slds-button_brand" onclick="{!c.closeModal}"
+          >Close</button> -->
+    <!--  </footer> -->
+    </div>
+        </lightning:layoutItem>
+        
+    </lightning:layout>
+    
+
+    <lightning:layout multipleRows="true" class="border">
+    <lightning:layoutItem padding="around-small" size="6" class="border2">
+            	<!--<lightning:button variant="brand" label="Save" onclick="{!c.saveDSATData}"/> -->
+            </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

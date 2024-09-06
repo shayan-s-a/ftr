@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Text_Enabled_Telephone_2_Info_Required</fullName>
+    <active>true</active>
+    <description>If &quot;Text Enabled Telephone 2&quot; is filled out, the user must also fill out the &quot;Frontier Texting Package 2&quot; and &quot;Email address Telephone 2&quot; fields.</description>
+    <errorConditionFormula>AND(
+Text_Enabled_Telephone_2__c != null,
+OR(
+ISPICKVAL(Frontier_Texting_Package_2__c,&apos;&apos;),
+Email_Address_Telephone_2__c = null
+)
+)</errorConditionFormula>
+    <errorDisplayField>Frontier_Texting_Package_2__c</errorDisplayField>
+    <errorMessage>If &quot;Text Enabled Telephone 2&quot; is filled out, you must also fill out the &quot;Frontier Texting Package 2&quot; and &quot;Email address Telephone 2&quot; fields.</errorMessage>
+</ValidationRule>

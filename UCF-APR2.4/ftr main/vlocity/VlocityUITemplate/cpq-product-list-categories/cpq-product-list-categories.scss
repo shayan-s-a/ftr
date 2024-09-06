@@ -1,0 +1,39 @@
+/*** CPQ THEME VARIABLES ***/
+@import "cpq-theme-variables";
+
+/*** MIXINS ***/
+@import "cpq-mixin";
+
+/*** STYLES ***/
+.vlocity {
+    &.via-slds {
+        .cpq-product-list {
+            display:flex;
+            flex: 1;
+            
+            .cpq-next-product {
+                 padding: $cpq-padding-large-vertical;
+                 
+                 .slds-spinner_container {
+                    position: relative;
+                    padding-top: 10px;
+                 }
+            }
+
+            //stretch the flex box irrespective of its contents
+            .cpq-products-list-vertical {
+                &.slds-grid{
+                    flex-direction:column;
+             
+                    &.cpq-products-list-col-stretch{
+                        flex:1 1 100%;
+                    }
+                }
+
+                .cpq-no-products-msg {
+                    margin:auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+<apex:page showHeader="true" sidebar="false" controller="SIPSummaryController" lightningStylesheets="true" docType="html-5.0">
+    <apex:slds />
+    <style>
+        .header {
+            margin: 1rem 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        body .bPageBlock .pbSubheader, .slds-vf-scope .bPageBlock .pbSubheader {
+            margin-top: 1rem;
+        }
+
+        .header .details {
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header .details .fields {
+            display: flex;
+            flex-direction: column;
+        }
+        .header .details .fields div:first-child {
+            margin-right: 1rem;
+        }
+
+        .header .buttons {
+            margin-left: auto;
+        }
+
+        body .bPageBlock .pbSubheader h3,
+        .slds-vf-scope .bPageBlock .pbSubheader h3 {
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            padding: 0.2rem 0;
+        }
+
+        .slds-scope *,
+        .slds-scope *:before,
+        .slds-scope *:after {
+            font-family: "Salesforce Sans", Arial, sans-serif !important;
+            color: rgb(84, 105, 141) !important;
+        }
+
+        body .slds-vf-data-table thead th, body .slds-vf-data-table thead td, .slds-vf-scope .slds-vf-data-table thead th, .slds-vf-scope .slds-vf-data-table thead td {
+            background: white !important;
+            font-weight: 900 !important;
+        }
+
+        body .pbHeader, .slds-vf-scope .pbHeader, body .pbBottomButtons, .slds-vf-scope .pbBottomButtons {
+            display: none !important;
+        }
+
+        .footer {
+            margin: 1rem 0;
+        }
+    </style>
+    <div class="slds-scope">
+        <apex:form id="form">
+                <!-- <div class="header">
+                    <div class="details">
+                        <apex:pageBlockSection title="{!didLocationDetails.Name}" columns="1">
+                            <div style="margin-left: 0.5rem;margin-bottom: 0.5rem;">
+                                <p class="font-size: 1rem;">
+                                    {!didLocationDetails.PremisesId__r.Premise_Detail__c}
+                                </p>
+                            </div>
+                            <apex:dataTable value="{!didLocationDetails}" var="record" id="table" rowClasses="odd,even">
+                                <apex:column >
+                                    <apex:facet name="header">Billing Number (BTN)</apex:facet>
+                                    <apex:outputText value="{!record.BTN__c}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">DID Test Number:</apex:facet>
+                                    <apex:outputText value="{!record.TestNumber__c}" />
+                                </apex:column>
+                                <apex:column >
+                                    <apex:facet name="header">Service Location</apex:facet>
+                                    <apex:outputText value="{!record.ServiceAccountId__r.vlocity_cmt__PremisesId__r.Premise_Detail__c}" />
+                                </apex:column>
+                            </apex:dataTable>
+                        </apex:pageBlockSection>
+                    </div>
+                    <div class="buttons">
+                        <apex:commandButton action="{!generateCSV}" value="Download" rendered="{!allData.size > 0 && showDownload}"/>
+                    </div>
+                </div> -->
+                <div>
+                    <apex:repeat value="{!allData}" var="data" id="iterator">
+                        <apex:pageBlock >
+                            <h1 class="slds-text-heading_medium slds-m-top_large">
+                                {!data.serviceAccount}
+                            </h1>
+                            <!-- Service Account info -->
+                            <!-- <apex:pageBlockSection title="{!data.serviceAccount}" columns="1"> -->
+                                <!-- <apex:outputText style="margin: 2rem 0 2rem 0.5rem; line-height: 3rem;" value="No data found for this service location" rendered="{!data.didDetails.size == 0}"/> -->
+                                <apex:repeat value="{!data.evcDetails}" var="evc" id="evcColumn">
+                                    <apex:pageBlockSection title="EVC" columns="1" rendered="{!data.evcDetails != null}">
+                                        
+                                        <apex:detail subject="{!evc.Id}" relatedList="false" title="false" id="evcDetails"/> 
+                                        
+                                    </apex:pageBlockSection>
+                                </apex:repeat>
+                                <apex:repeat value="{!data.uniDetails}" var="uni" id="uniColumn">
+                                    <apex:pageBlockSection title="UNI" columns="1" rendered="{!data.uniDetails != null}">
+                                        
+                                        <apex:detail subject="{!uni.Id}" relatedList="false" title="false" id="uniDetails"/> 
+                                        
+                                    </apex:pageBlockSection>
+                                </apex:repeat>
+                                <!-- <apex:repeat value="{!data.didDetails}" var="did" id="didColumn">
+                                    <apex:pageBlockSection title="DID Location" columns="1" rendered="{!data.didDetails != null}">
+                                        
+                                        <apex:include pagename="DIDNumberView" /> 
+                                        
+                                    </apex:pageBlockSection>
+                                </apex:repeat> -->
+                            <!-- </apex:pageBlockSection> -->
+                        </apex:pageBlock>
+                    </apex:repeat>
+                </div>
+        </apex:form>
+
+    </div>
+</apex:page>

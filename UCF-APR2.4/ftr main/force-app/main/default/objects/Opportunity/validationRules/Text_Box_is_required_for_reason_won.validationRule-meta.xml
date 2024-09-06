@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Text_Box_is_required_for_reason_won</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ISPICKVAL(Reason_Won__c,&quot;Other&quot;),
+
+ISBLANK(Text_Box_Detail__c)
+)</errorConditionFormula>
+    <errorMessage>If Reason Won is &quot;Other&quot; then &quot;Detail Won Reasons&quot; is required.</errorMessage>
+</ValidationRule>

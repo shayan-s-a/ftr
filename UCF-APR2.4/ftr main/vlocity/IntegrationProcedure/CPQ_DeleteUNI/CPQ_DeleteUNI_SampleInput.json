@@ -1,0 +1,730 @@
+{
+    "OrderId": "8011h000000KpEbAAK",
+    "OrderItems": [
+        {
+            "$$hashKey": "object:362",
+            "Attributes": [
+                {
+                    "code": "ATTR_TECH_2CE_VLAN_ID",
+                    "description": null,
+                    "disabled": false,
+                    "label": "RUID #2 Terminating CE-VLAN ID",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                },
+                {
+                    "code": "ATTR_TECH_CE_VLAN_ID",
+                    "description": null,
+                    "disabled": false,
+                    "label": "RUID #1 Originating CE-VLAN ID",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                }
+            ],
+            "Id": "8021h000000nn6gAAA",
+            "ProductCode": "ENT_ETH_EVPL_0010",
+            "ProductName": "EVPL EVC",
+            "ServiceAccountId": "0011h00000iuqD1AAI"
+        },
+        {
+            "$$hashKey": "object:363",
+            "Attributes": [
+                {
+                    "code": "ATTR_FRAME_SIZE",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Frame Size",
+                    "required": false,
+                    "type": "select",
+                    "value": "<=1600",
+                    "values": [
+                        {
+                            "displayText": "<=1600",
+                            "id": "100426e7-141e-e712-d202-03ac94b15f12",
+                            "label": "<=1600",
+                            "sequence": 10,
+                            "value": "<=1600"
+                        },
+                        {
+                            "displayText": "<=9000",
+                            "id": "684b7c89-9384-fcb6-0e59-355b342cbf52",
+                            "label": "<=9000",
+                            "sequence": 20,
+                            "value": "<=9000"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PHY_MEDIUM",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Physical Medium",
+                    "required": false,
+                    "type": "select",
+                    "value": "Copper RJ45",
+                    "values": [
+                        {
+                            "displayText": "Copper RJ45",
+                            "id": "cd3d6291-1b1e-6a97-3139-9973a3219c3b",
+                            "label": "Copper RJ45",
+                            "sequence": 10,
+                            "value": "Copper RJ45"
+                        },
+                        {
+                            "displayText": "Fiber Single Mode 1310nm",
+                            "id": "965bb435-fa30-4a87-946c-998f74350bb7",
+                            "label": "Fiber Single Mode 1310nm",
+                            "sequence": 20,
+                            "value": "Fiber Single Mode 1310nm"
+                        },
+                        {
+                            "displayText": "Fiber Multi Mode 850nm",
+                            "id": "f699b668-e0a8-b724-1ace-fa122773c63f",
+                            "label": "Fiber Multi Mode 850nm",
+                            "sequence": 30,
+                            "value": "Fiber Multi Mode 850nm"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PORT_SPEED",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Port Speed",
+                    "required": false,
+                    "type": "select",
+                    "value": "1G",
+                    "values": [
+                        {
+                            "displayText": "1G",
+                            "id": "4c6c13ba-a992-2f43-ac06-535eb430dc21",
+                            "label": "1G",
+                            "sequence": 10,
+                            "value": "1G"
+                        },
+                        {
+                            "displayText": "10 GBPS",
+                            "id": "52b0dc97-e975-ec49-639e-884009fa8f94",
+                            "label": "10 GBPS",
+                            "sequence": 20,
+                            "value": "10 GBPS"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_TECH_JURISDICTION",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Jurisdiction",
+                    "required": false,
+                    "type": "select",
+                    "value": "Intrastate",
+                    "values": [
+                        {
+                            "displayText": "Interstate",
+                            "id": "41baec4f-2bd6-e788-da02-00fa0b85253b",
+                            "label": "Interstate",
+                            "sequence": 10,
+                            "value": "Interstate"
+                        },
+                        {
+                            "displayText": "Intrastate",
+                            "id": "a3aa8c06-69da-5379-9dea-a4c1b1d51d04",
+                            "label": "Intrastate",
+                            "sequence": 20,
+                            "value": "Intrastate"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_VLAN_TAG",
+                    "description": null,
+                    "disabled": false,
+                    "label": "VLAN Tag Config",
+                    "required": false,
+                    "type": "select",
+                    "value": "Untagged",
+                    "values": [
+                        {
+                            "displayText": "Service Multiplexing",
+                            "id": "5617aa92-ef1f-e9eb-48b0-7d2b53a8afab",
+                            "label": "Service Multiplexing",
+                            "sequence": 10,
+                            "value": "Service Multiplexing"
+                        },
+                        {
+                            "displayText": "All-to-one Bundling",
+                            "id": "ac6ee353-a706-bf12-b0f4-05e771f656c2",
+                            "label": "All-to-one Bundling",
+                            "sequence": 20,
+                            "value": "All-to-one Bundling"
+                        },
+                        {
+                            "displayText": "Untagged",
+                            "id": "eb86808f-1b45-623b-b7f2-a266b16db51d",
+                            "label": "Untagged",
+                            "sequence": 30,
+                            "value": "Untagged"
+                        }
+                    ]
+                }
+            ],
+            "Id": "8021h000000nn72AAA",
+            "ProductCode": "ENT_ETH_UNI_0001",
+            "ProductName": "User to Network Interface (UNI) Port - A1",
+            "ServiceAccountId": "0011h00000iuqD1AAI"
+        },
+        {
+            "$$hashKey": "object:375",
+            "Attributes": [
+                {
+                    "code": "ATTR_TECH_CE_VLAN_ID",
+                    "description": null,
+                    "disabled": false,
+                    "label": "RUID #1 Originating CE-VLAN ID",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                }
+            ],
+            "Id": "8021h000000nn6dAAA",
+            "ProductCode": "ENT_ETH_EIA_0002",
+            "ProductName": "EIA  (Ethernet Internet Access)",
+            "ServiceAccountId": "0011h00000iv3tEAAQ"
+        },
+        {
+            "$$hashKey": "object:376",
+            "Attributes": [
+                {
+                    "code": "ATTR_IPADD",
+                    "description": null,
+                    "disabled": false,
+                    "label": "IP Address",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                },
+                {
+                    "code": "ATTR_IPREQTR",
+                    "description": null,
+                    "disabled": false,
+                    "label": "IP Request Tracking Number",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                },
+                {
+                    "code": "ATTR_TOPO",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Topology",
+                    "required": false,
+                    "type": "select",
+                    "values": [
+                        {
+                            "displayText": "Flat",
+                            "id": "d26f1b88-4464-5849-de65-afdbf1d2a3f0",
+                            "label": "Flat",
+                            "sequence": 10,
+                            "value": "Flat"
+                        },
+                        {
+                            "displayText": "LAN/WAN",
+                            "id": "1245c6f6-5cdd-bbd6-e716-0d9be60f1df7",
+                            "label": "LAN/WAN",
+                            "sequence": 20,
+                            "value": "LAN/WAN"
+                        },
+                        {
+                            "displayText": "BGP",
+                            "id": "a0b2f04a-30dd-36ef-4bed-108ee9c25ab1",
+                            "label": "BGP",
+                            "sequence": 30,
+                            "value": "BGP"
+                        }
+                    ]
+                }
+            ],
+            "Id": "8021h000000nn6eAAA",
+            "ProductCode": "ENT_ETH_IP_0002",
+            "ProductName": "IP",
+            "ServiceAccountId": "0011h00000iv3tEAAQ"
+        },
+        {
+            "$$hashKey": "object:377",
+            "Attributes": [
+                {
+                    "code": "ATTR_FRAME_SIZE",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Frame Size",
+                    "required": false,
+                    "type": "select",
+                    "value": "<=1600",
+                    "values": [
+                        {
+                            "displayText": "<=1600",
+                            "id": "100426e7-141e-e712-d202-03ac94b15f12",
+                            "label": "<=1600",
+                            "sequence": 10,
+                            "value": "<=1600"
+                        },
+                        {
+                            "displayText": "<=9000",
+                            "id": "684b7c89-9384-fcb6-0e59-355b342cbf52",
+                            "label": "<=9000",
+                            "sequence": 20,
+                            "value": "<=9000"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PHY_MEDIUM",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Physical Medium",
+                    "required": false,
+                    "type": "select",
+                    "value": "Copper RJ45",
+                    "values": [
+                        {
+                            "displayText": "Copper RJ45",
+                            "id": "cd3d6291-1b1e-6a97-3139-9973a3219c3b",
+                            "label": "Copper RJ45",
+                            "sequence": 10,
+                            "value": "Copper RJ45"
+                        },
+                        {
+                            "displayText": "Fiber Single Mode 1310nm",
+                            "id": "965bb435-fa30-4a87-946c-998f74350bb7",
+                            "label": "Fiber Single Mode 1310nm",
+                            "sequence": 20,
+                            "value": "Fiber Single Mode 1310nm"
+                        },
+                        {
+                            "displayText": "Fiber Multi Mode 850nm",
+                            "id": "f699b668-e0a8-b724-1ace-fa122773c63f",
+                            "label": "Fiber Multi Mode 850nm",
+                            "sequence": 30,
+                            "value": "Fiber Multi Mode 850nm"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PORT_SPEED",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Port Speed",
+                    "required": false,
+                    "type": "select",
+                    "value": "1G",
+                    "values": [
+                        {
+                            "displayText": "1G",
+                            "id": "4c6c13ba-a992-2f43-ac06-535eb430dc21",
+                            "label": "1G",
+                            "sequence": 10,
+                            "value": "1G"
+                        },
+                        {
+                            "displayText": "10 GBPS",
+                            "id": "52b0dc97-e975-ec49-639e-884009fa8f94",
+                            "label": "10 GBPS",
+                            "sequence": 20,
+                            "value": "10 GBPS"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_TECH_JURISDICTION",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Jurisdiction",
+                    "required": false,
+                    "type": "select",
+                    "value": "Interstate",
+                    "values": [
+                        {
+                            "displayText": "Interstate",
+                            "id": "41baec4f-2bd6-e788-da02-00fa0b85253b",
+                            "label": "Interstate",
+                            "sequence": 10,
+                            "value": "Interstate"
+                        },
+                        {
+                            "displayText": "Intrastate",
+                            "id": "a3aa8c06-69da-5379-9dea-a4c1b1d51d04",
+                            "label": "Intrastate",
+                            "sequence": 20,
+                            "value": "Intrastate"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_VLAN_TAG",
+                    "description": null,
+                    "disabled": false,
+                    "label": "VLAN Tag Config",
+                    "required": false,
+                    "type": "select",
+                    "value": "Service Multiplexing",
+                    "values": [
+                        {
+                            "displayText": "Service Multiplexing",
+                            "id": "5617aa92-ef1f-e9eb-48b0-7d2b53a8afab",
+                            "label": "Service Multiplexing",
+                            "sequence": 10,
+                            "value": "Service Multiplexing"
+                        },
+                        {
+                            "displayText": "All-to-one Bundling",
+                            "id": "ac6ee353-a706-bf12-b0f4-05e771f656c2",
+                            "label": "All-to-one Bundling",
+                            "sequence": 20,
+                            "value": "All-to-one Bundling"
+                        },
+                        {
+                            "displayText": "Untagged",
+                            "id": "eb86808f-1b45-623b-b7f2-a266b16db51d",
+                            "label": "Untagged",
+                            "sequence": 30,
+                            "value": "Untagged"
+                        }
+                    ]
+                }
+            ],
+            "Id": "8021h000000nn77AAA",
+            "ProductCode": "ENT_ETH_UNI_0001",
+            "ProductName": "User to Network Interface (UNI) Port - A2",
+            "ServiceAccountId": "0011h00000iv3tEAAQ"
+        },
+        {
+            "$$hashKey": "object:393",
+            "Attributes": [
+                {
+                    "code": "ATTR_TECH_2CE_VLAN_ID",
+                    "description": null,
+                    "disabled": false,
+                    "label": "RUID #2 Terminating CE-VLAN ID",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                },
+                {
+                    "code": "ATTR_TECH_CE_VLAN_ID",
+                    "description": null,
+                    "disabled": false,
+                    "label": "RUID #1 Originating CE-VLAN ID",
+                    "required": false,
+                    "type": "text",
+                    "values": null
+                }
+            ],
+            "Id": "8021h000000nn6hAAA",
+            "ProductCode": "ENT_ETH_EVPL_0010",
+            "ProductName": "EVPL EVC",
+            "ServiceAccountId": "0011h00000j7JyJAAU"
+        },
+        {
+            "$$hashKey": "object:394",
+            "Attributes": [
+                {
+                    "code": "ATTR_FRAME_SIZE",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Frame Size",
+                    "required": false,
+                    "type": "select",
+                    "value": "<=1600",
+                    "values": [
+                        {
+                            "displayText": "<=1600",
+                            "id": "100426e7-141e-e712-d202-03ac94b15f12",
+                            "label": "<=1600",
+                            "sequence": 10,
+                            "value": "<=1600"
+                        },
+                        {
+                            "displayText": "<=9000",
+                            "id": "684b7c89-9384-fcb6-0e59-355b342cbf52",
+                            "label": "<=9000",
+                            "sequence": 20,
+                            "value": "<=9000"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PHY_MEDIUM",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Physical Medium",
+                    "required": false,
+                    "type": "select",
+                    "value": "Copper RJ45",
+                    "values": [
+                        {
+                            "displayText": "Copper RJ45",
+                            "id": "cd3d6291-1b1e-6a97-3139-9973a3219c3b",
+                            "label": "Copper RJ45",
+                            "sequence": 10,
+                            "value": "Copper RJ45"
+                        },
+                        {
+                            "displayText": "Fiber Single Mode 1310nm",
+                            "id": "965bb435-fa30-4a87-946c-998f74350bb7",
+                            "label": "Fiber Single Mode 1310nm",
+                            "sequence": 20,
+                            "value": "Fiber Single Mode 1310nm"
+                        },
+                        {
+                            "displayText": "Fiber Multi Mode 850nm",
+                            "id": "f699b668-e0a8-b724-1ace-fa122773c63f",
+                            "label": "Fiber Multi Mode 850nm",
+                            "sequence": 30,
+                            "value": "Fiber Multi Mode 850nm"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PORT_SPEED",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Port Speed",
+                    "required": false,
+                    "type": "select",
+                    "value": "1G",
+                    "values": [
+                        {
+                            "displayText": "1G",
+                            "id": "4c6c13ba-a992-2f43-ac06-535eb430dc21",
+                            "label": "1G",
+                            "sequence": 10,
+                            "value": "1G"
+                        },
+                        {
+                            "displayText": "10 GBPS",
+                            "id": "52b0dc97-e975-ec49-639e-884009fa8f94",
+                            "label": "10 GBPS",
+                            "sequence": 20,
+                            "value": "10 GBPS"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_TECH_JURISDICTION",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Jurisdiction",
+                    "required": false,
+                    "type": "select",
+                    "value": "Interstate",
+                    "values": [
+                        {
+                            "displayText": "Interstate",
+                            "id": "41baec4f-2bd6-e788-da02-00fa0b85253b",
+                            "label": "Interstate",
+                            "sequence": 10,
+                            "value": "Interstate"
+                        },
+                        {
+                            "displayText": "Intrastate",
+                            "id": "a3aa8c06-69da-5379-9dea-a4c1b1d51d04",
+                            "label": "Intrastate",
+                            "sequence": 20,
+                            "value": "Intrastate"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_VLAN_TAG",
+                    "description": null,
+                    "disabled": false,
+                    "label": "VLAN Tag Config",
+                    "required": false,
+                    "type": "select",
+                    "value": "Service Multiplexing",
+                    "values": [
+                        {
+                            "displayText": "Service Multiplexing",
+                            "id": "5617aa92-ef1f-e9eb-48b0-7d2b53a8afab",
+                            "label": "Service Multiplexing",
+                            "sequence": 10,
+                            "value": "Service Multiplexing"
+                        },
+                        {
+                            "displayText": "All-to-one Bundling",
+                            "id": "ac6ee353-a706-bf12-b0f4-05e771f656c2",
+                            "label": "All-to-one Bundling",
+                            "sequence": 20,
+                            "value": "All-to-one Bundling"
+                        },
+                        {
+                            "displayText": "Untagged",
+                            "id": "eb86808f-1b45-623b-b7f2-a266b16db51d",
+                            "label": "Untagged",
+                            "sequence": 30,
+                            "value": "Untagged"
+                        }
+                    ]
+                }
+            ],
+            "Id": "8021h000000nn7CAAQ",
+            "ProductCode": "ENT_ETH_UNI_0001",
+            "ProductName": "User to Network Interface (UNI) Port - A3",
+            "ServiceAccountId": "0011h00000j7JyJAAU"
+        }
+    ],
+    "selectedUNIs": [
+        {
+            "$$hashKey": "object:305",
+            "Attributes": [
+                {
+                    "code": "ATTR_FRAME_SIZE",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Frame Size",
+                    "required": false,
+                    "type": "select",
+                    "value": "<=1600",
+                    "values": [
+                        {
+                            "displayText": "<=1600",
+                            "id": "100426e7-141e-e712-d202-03ac94b15f12",
+                            "label": "<=1600",
+                            "sequence": 10,
+                            "value": "<=1600"
+                        },
+                        {
+                            "displayText": "<=9000",
+                            "id": "684b7c89-9384-fcb6-0e59-355b342cbf52",
+                            "label": "<=9000",
+                            "sequence": 20,
+                            "value": "<=9000"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PHY_MEDIUM",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Physical Medium",
+                    "required": false,
+                    "type": "select",
+                    "value": "Copper RJ45",
+                    "values": [
+                        {
+                            "displayText": "Copper RJ45",
+                            "id": "cd3d6291-1b1e-6a97-3139-9973a3219c3b",
+                            "label": "Copper RJ45",
+                            "sequence": 10,
+                            "value": "Copper RJ45"
+                        },
+                        {
+                            "displayText": "Fiber Single Mode 1310nm",
+                            "id": "965bb435-fa30-4a87-946c-998f74350bb7",
+                            "label": "Fiber Single Mode 1310nm",
+                            "sequence": 20,
+                            "value": "Fiber Single Mode 1310nm"
+                        },
+                        {
+                            "displayText": "Fiber Multi Mode 850nm",
+                            "id": "f699b668-e0a8-b724-1ace-fa122773c63f",
+                            "label": "Fiber Multi Mode 850nm",
+                            "sequence": 30,
+                            "value": "Fiber Multi Mode 850nm"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_PORT_SPEED",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Port Speed",
+                    "required": false,
+                    "type": "select",
+                    "value": "1G",
+                    "values": [
+                        {
+                            "displayText": "1G",
+                            "id": "4c6c13ba-a992-2f43-ac06-535eb430dc21",
+                            "label": "1G",
+                            "sequence": 10,
+                            "value": "1G"
+                        },
+                        {
+                            "displayText": "10 GBPS",
+                            "id": "52b0dc97-e975-ec49-639e-884009fa8f94",
+                            "label": "10 GBPS",
+                            "sequence": 20,
+                            "value": "10 GBPS"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_TECH_JURISDICTION",
+                    "description": null,
+                    "disabled": false,
+                    "label": "Jurisdiction",
+                    "required": false,
+                    "type": "select",
+                    "value": "Interstate",
+                    "values": [
+                        {
+                            "displayText": "Interstate",
+                            "id": "41baec4f-2bd6-e788-da02-00fa0b85253b",
+                            "label": "Interstate",
+                            "sequence": 10,
+                            "value": "Interstate"
+                        },
+                        {
+                            "displayText": "Intrastate",
+                            "id": "a3aa8c06-69da-5379-9dea-a4c1b1d51d04",
+                            "label": "Intrastate",
+                            "sequence": 20,
+                            "value": "Intrastate"
+                        }
+                    ]
+                },
+                {
+                    "code": "ATTR_VLAN_TAG",
+                    "description": null,
+                    "disabled": false,
+                    "label": "VLAN Tag Config",
+                    "required": false,
+                    "type": "select",
+                    "value": "Service Multiplexing",
+                    "values": [
+                        {
+                            "displayText": "Service Multiplexing",
+                            "id": "5617aa92-ef1f-e9eb-48b0-7d2b53a8afab",
+                            "label": "Service Multiplexing",
+                            "sequence": 10,
+                            "value": "Service Multiplexing"
+                        },
+                        {
+                            "displayText": "All-to-one Bundling",
+                            "id": "ac6ee353-a706-bf12-b0f4-05e771f656c2",
+                            "label": "All-to-one Bundling",
+                            "sequence": 20,
+                            "value": "All-to-one Bundling"
+                        },
+                        {
+                            "displayText": "Untagged",
+                            "id": "eb86808f-1b45-623b-b7f2-a266b16db51d",
+                            "label": "Untagged",
+                            "sequence": 30,
+                            "value": "Untagged"
+                        }
+                    ]
+                }
+            ],
+            "Id": "8021h000000nq89AAA",
+            "ProductCode": "ENT_ETH_UNI_0001",
+            "ProductName": "User to Network Interface (UNI) Port - B1",
+            "ServiceAccountId": "0011h00000iuqD1AAI",
+            "selected": true
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+<aura:component implements="force:lightningQuickAction,lightning:availableForFlowActions" controller="ftr_NavigateToRecordController">
+   <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="quoteId" type="String" />
+    <aura:attribute name="checkFlow" type="Boolean" />/>
+    <aura:attribute name="redirectToQuote" type="Boolean" />    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+</aura:component>

@@ -1,0 +1,202 @@
+<div class='nds-col_padded nds-size_1-of-1 customer-info-table'>
+	<div
+		style="display:flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin: 1rem 0;">
+		<h1 class="nds-element_text-font">Service Locations</h1>
+		<!-- <button class="nds-button nds-button--neutral" ng-click="showTypeAheadBlock()">Add New Location</button> -->
+	</div>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<table class="nds-table nds-table_bordered nds-table_cell-buffer"
+		ng-class="[compareWindowWidth(1024,'vlc-slds-table_stacked'),compareWindowWidth(375,'vertical')]">
+		<thead>
+			<tr class="nds-text-heading_label">
+				<th width="20px" />
+				<th scope="col" ng-model="colm" ng-click='sortColumn("ShippingStreet")'>
+					<div>Address</div>
+				</th>
+				<th scope="col" ng-class="selectedCls('ShippingCity')" ng-click='sortColumn("ShippingCity")'>
+					<div class="nds-truncate">City</div>
+				</th>
+				<th scope="col" ng-class="selectedCls('ShippingState')" ng-click='sortColumn("ShippingState")'>
+					<div class="nds-truncate">State</div>
+				</th>
+				<th scope="col" ng-class="selectedCls('ShippingPostalCode')"
+					ng-click='sortColumn("ShippingPostalCode")'>
+					<div class="nds-truncate">Zip</div>
+				</th>
+				<th scope="col" ng-class="selectedCls('ShippingDevices')" ng-click='sortColumn("ShippingDevices")'>
+					<div class="nds-truncate">Devices</div>
+				</th>
+				<th scope="col" ng-class="selectedCls('ShippingMethod')" ng-click='sortColumn("ShippingMethod")'>
+					<div class="nds-truncate">Shipping Method</div>
+				</th>
+				<th scope="col" ng-class="selectedCls('ShippingMethod')" ng-click='sortColumn("ShippingMethod")'>
+					<div class="nds-truncate" style="text-align : center">Actions</div>
+				</th>
+				<!-- <th scope="col" ng-class="selectedCls('Premises.TicketNo')" ng-click='sortColumn("Premises.TicketNo")'>
+					<div class="nds-truncate">TICKET#</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.Fiber_Tier__c')" ng-click='sortColumn("Premises.Fiber_Tier__c")' >
+					<div class="nds-truncate">FIBER TIER</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.Copper_Tier__c')" ng-click='sortColumn("Premises.Copper_Tier__c")'>
+					<div class="nds-truncate">COPPER TIER</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.WC_QOS__c')" ng-click='sortColumn("Premises.WC_QOS__c")' >
+					<div class="nds-truncate">WC QOS</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.WC_Speed__c')" ng-click='sortColumn("Premises.WC_Speed__c")' >
+					<div class="nds-truncate">WC SPEED</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.ftr_LinkStatus__c')" ng-click='sortColumn("Premises.ftr_LinkStatus__c")' >
+					<div class="nds-truncate">LINK STATUS</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.ftr_LengthFeet__c')" ng-click='sortColumn("Premises.ftr_LengthFeet__c")' >
+					<div class="nds-truncate">LENGTH FEET</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.ftr_FiberCost__c')" ng-click='sortColumn("Premises.ftr_FiberCost__c")' >
+					<div class="nds-truncate">FIBER COST</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.ftr_EquipmentCost__c')" ng-click='sortColumn("Premises.ftr_EquipmentCost__c")' >
+					<div class="nds-truncate">EQUIPMENT COST</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.ftr_TotalCost__c')" ng-click='sortColumn("Premises.ftr_TotalCost__c")' >
+					<div class="nds-truncate">TOTAL COST</div>
+				</th> -->
+				<!-- <th scope="col" ng-class="selectedCls('Premises.Last_DSAT_Check__c')" ng-click='sortColumn("Premises.Last_DSAT_Check__c")' >
+					<div class="nds-truncate">LAST DSAT CHECK</div>
+				</th> -->
+			</tr>
+		</thead>
+		<tbody id="table-to-refresh">
+			<!-- <tr ng-repeat='acct in locationsTableArray | orderBy:sort.column:sort.descending'
+				ng-class="{ 'vlc-selectableitem-selected' : acct.vlcSelected }"> -->
+
+
+			<tr ng-repeat='p in bpTree.response.ShippingInformationDetails'
+				ng-class="{ 'vlc-selectableitem-selected' : p.vlcSelected }">
+				<td>
+					<div ng-controller="customerInfoController">
+						<button class="chevron-button" ng-click='showLocationInfo(p, $index)'>
+							<svg ng-if="bpTree.response.locationOpenId == p.Id" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+  								<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+							</svg>
+							<svg ng-if="bpTree.response.locationOpenId != p.Id" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  								<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+							</svg>
+
+						</button>
+					</div>
+				</td>
+				<td class="nds-cell-shrink" data-label='Select'>
+					<!-- <span>
+                        <input 
+							type="checkbox" ng-model='selectedRecord' ng-change='onSelectItem(acct,selectedRecord)' id="{{acct.Id}}" 
+							ng-checked="acct.locationChecked" ng-click="toggleSelection(acct)"/>
+                        <span class="nds-checkbox_faux"></span>
+					&nbsp;
+					<label >{{acct.ShippingStreet}}</label>
+					</span> -->
+					{{p.Address}}
+				</td>
+				<td>
+					<label class="nds-truncate">{{p.City}}</label>
+				</td>
+				<td>
+					<label class="nds-truncate">{{p.State}}</label>
+				</td>
+				<td>
+					<label class="nds-truncate">{{p.ZipCode}}</label>
+				</td>
+				<td>
+					<label class="nds-truncate">{{p.Devices}}</label>
+				</td>
+				<td>
+					<label class="nds-truncate">{{p.ShippingMethod}}</label>
+				</td>
+				<td>
+					<div ng-controller="customerInfoController" style="text-align : center">
+						<i class="fas fa-trash delete-icon" ng-click='toggleDeleteMode(p)'></i>
+						<!-- <button ng-click='toggleDeleteMode(p)'>Delete</button> -->
+					</div>
+				</td>
+				<!-- <td>
+					<label class="nds-truncate">{{acct.Premises.TicketNo}}</label>
+				</td> -->
+				<!-- <td >
+					<label class="nds-truncate">{{acct.Premises.Fiber_Tier__c}}</label>
+				</td> -->
+				<!-- <td >
+					<label class="nds-truncate">{{acct.Premises.Copper_Tier__c}}</label>
+				</td> -->
+				<!-- <td >
+					<div class="nds-truncate">{{acct.Premises.WC_QOS__c}}</div>
+				</td> -->
+				<!-- <td >
+					<div class="nds-truncate">{{acct.Premises.WC_Speed__c}}</div>
+				</td> -->
+				<!-- <td >
+					<label class="nds-truncate">{{acct.Premises.ftr_LinkStatus__c}}</label>
+				</td> -->
+				<!-- <td >
+					<label class="nds-truncate">{{acct.Premises.ftr_LengthFeet__c}}</label>
+				</td> -->
+				<!-- <td >
+					<label class="nds-truncate">{{acct.Premises.ftr_FiberCost__c}}</label>
+				</td> -->
+				<!-- <td >
+					<label class="nds-truncate">{{acct.Premises.ftr_EquipmentCost__c}}</label>
+				</td> -->
+				<!-- <td >
+					<label class="nds-truncate">{{acct.Premises.ftr_TotalCost__c}}</label>
+				</td> -->
+				<!-- <td>
+					<span title='Refresh DSAT'>
+						<slds-svg-icon aria-hidden="true" sprite="'utility'" icon="'retweet'" size="'small'" class="tm_icon_magenta" ng-click="iconclick(acct)"></slds-svg-icon>
+						&nbsp;
+						<span class="nds-truncate">{{acct.Premises.Last_DSAT_Check__c}}</span>
+					</span>
+				</td> -->
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+
+	<!-- <div class="tm-load slds-spinner_container" ng-if="isLoading">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+    </div> -->
+	<div class="nds-spinner_container" ng-if="isLoading">
+		<div class="nds-spinner_brand nds-spinner nds-spinner_x-large" id="loader" aria-hidden="false" role="alert">
+
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+				<circle cx="6" cy="50">
+
+					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
+						repeatCount="indefinite" begin="0.1" />
+
+				</circle>
+
+				<circle cy="50">
+
+					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10"
+						repeatCount="indefinite" begin="0.2" />
+
+				</circle>
+
+				<circle cy="50">
+
+					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+						repeatCount="indefinite" begin="0.3" />
+
+				</circle>
+
+			</svg>
+
+		</div>
+	</div>
+</div>

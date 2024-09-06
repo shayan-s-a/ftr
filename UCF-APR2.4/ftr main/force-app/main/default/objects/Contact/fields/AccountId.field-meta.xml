@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountId</fullName>
+    <inlineHelpText>You cannot create a contact for an inactive account or an account you do not own.</inlineHelpText>
+    <lookupFilter>
+        <active>false</active>
+        <booleanFilter>(1 AND 2 AND 3)</booleanFilter>
+        <errorMessage>You cannot create a contact for an inactive account or an account you do not own.</errorMessage>
+        <filterItems>
+            <field>Account.Inactive_Company__c</field>
+            <operation>equals</operation>
+            <value>FALSE</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.OwnerId</field>
+            <operation>equals</operation>
+            <valueField>$User.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>notEqual</operation>
+            <value>Frontier System Administrator, System Administrator</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

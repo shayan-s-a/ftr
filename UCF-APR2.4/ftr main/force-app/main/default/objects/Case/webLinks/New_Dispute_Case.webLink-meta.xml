@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Dispute_Case</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Dispute Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/500/e?CF00NE0000005npNB={!Opportunity.Name}&amp;
+CF00NE0000005npNB_lkid={!Opportunity.Id}&amp;
+RecordType=0120L000000NR2d&amp;
+def_account_id={!Account.Id}&amp;
+00N0L000006Tfsj=0&amp;
+00N0L000006Tfsk=0&amp;
+00N0L000006Tfsl=0&amp;
+00N0L000006Tfsm=0</url>
+</WebLink>

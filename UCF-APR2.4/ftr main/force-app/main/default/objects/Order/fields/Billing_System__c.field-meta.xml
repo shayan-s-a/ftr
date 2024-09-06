@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_System__c</fullName>
+    <externalId>false</externalId>
+    <label>Billing System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BEST</fullName>
+                <default>false</default>
+                <label>BEST</label>
+            </value>
+            <value>
+                <fullName>CABS</fullName>
+                <default>false</default>
+                <label>CABS</label>
+            </value>
+            <value>
+                <fullName>DPI</fullName>
+                <default>false</default>
+                <label>DPI</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>TigerPaw</fullName>
+                <default>false</default>
+                <label>TigerPaw</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

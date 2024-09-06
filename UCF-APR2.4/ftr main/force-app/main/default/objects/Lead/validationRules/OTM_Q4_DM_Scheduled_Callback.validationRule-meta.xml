@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OTM_Q4_DM_Scheduled_Callback</fullName>
+    <active>true</active>
+    <description>Q4 = DM Scheduled Callback or SMB OTM Lead-Sub Disposition = DM Reached - Appointment Set either field would trigger the following two fields must be populated given the validation rule. Those fields are Follow Up Appt Date &amp; Follow Up Appt Time</description>
+    <errorConditionFormula>AND(
+(OR(
+
+ISPICKVAL( Q4_Outcome_with_DM__c , &quot;DM Scheduled Callback&quot;),
+ISPICKVAL( Q5_Outcome_with_non_DM__c , &quot;GK Scheduled Call Back&quot;),
+ ISPICKVAL( SMB_OTM_Lead_Sub_Disposition__c , &quot;DM Reached - Appointment Set&quot;))),
+
+(AND(
+ISBLANK(Follow_Up_Appt_Date__c),  
+ISBLANK(Follow_Up_Appt_Time__c) 
+))
+
+)</errorConditionFormula>
+    <errorMessage>Must insert value in Follow Up Appt Date &amp; Follow Up Appt Time</errorMessage>
+</ValidationRule>

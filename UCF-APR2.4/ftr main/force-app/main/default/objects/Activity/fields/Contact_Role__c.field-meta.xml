@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Role__c</fullName>
+    <description>Created for Britt for Lit Buildings task 11/2020</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Role of the contact you are speaking with.</inlineHelpText>
+    <label>Contact Role</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client/Reference</fullName>
+                <default>false</default>
+                <label>Client/Reference</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Legal Notice Person 1</fullName>
+                <default>false</default>
+                <label>Legal Notice Person 1</label>
+            </value>
+            <value>
+                <fullName>Legal Notice Person 2</fullName>
+                <default>false</default>
+                <label>Legal Notice Person 2</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Signor</fullName>
+                <default>false</default>
+                <label>Signor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

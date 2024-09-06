@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Frontier_Email_Templates</letterhead>
+    <name>Wholesale - Dealdesk Quote Rejected HTML</name>
+    <style>formalLetter</style>
+    <subject>Wholesale Dealdesk Approval for {!SterlingQuote__c.Name}</subject>
+    <textOnly>A Quote has been submitted for approval. Please review Quote Line Item pricing prior to approving the quote.
+
+Please click the link below to navigate to the quote:
+
+Quote Link: {!SterlingQuote__c.Link}
+Approval Request Link: {!ApprovalRequest.Internal_URL}
+
+Below are the Quote related fields:
+
+Quote Name: {!SterlingQuote__c.Name}
+Quote Number: {!SterlingQuote__c.WS_Quote_Number__c}
+Quote Owner: {!SterlingQuote__c.OwnerFullName}
+Quote Approval Status: {!SterlingQuote__c.Status__c}
+Effective Recurring Total: {!SterlingQuote__c.Net_New_MRR__c}
+Effective One Time Total: {!SterlingQuote__c.NRC__c}
+Quote Company Name: {!SterlingQuote__c.Company_Name__c}
+
+
+
+Quote Name   :  {!SterlingQuote__c.Name}
+Quote Number   :  {!SterlingQuote__c.WS_Quote_Number__c}
+Quote Owner  :  {!SterlingQuote__c.OwnerFullName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

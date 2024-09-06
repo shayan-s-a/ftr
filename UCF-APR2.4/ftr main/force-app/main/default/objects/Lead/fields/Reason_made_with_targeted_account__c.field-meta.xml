@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_made_with_targeted_account__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason made with targeted account</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Contact_Made_with_targeted_account__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+                <label>No Answer</label>
+            </value>
+            <value>
+                <fullName>Hang Up - Quick</fullName>
+                <default>false</default>
+                <label>Hang Up - Quick</label>
+            </value>
+            <value>
+                <fullName>Busy</fullName>
+                <default>false</default>
+                <label>Busy</label>
+            </value>
+            <value>
+                <fullName>Answering Machine</fullName>
+                <default>false</default>
+                <label>Answering Machine</label>
+            </value>
+            <value>
+                <fullName>Already with Frontier</fullName>
+                <default>false</default>
+                <label>Already with Frontier</label>
+            </value>
+            <value>
+                <fullName>Residential Account</fullName>
+                <default>false</default>
+                <label>Residential Account</label>
+            </value>
+            <value>
+                <fullName>Add to DNC</fullName>
+                <default>false</default>
+                <label>Add to DNC</label>
+            </value>
+            <value>
+                <fullName>Wrong Info</fullName>
+                <default>false</default>
+                <label>Wrong Info</label>
+            </value>
+            <value>
+                <fullName>Fax/Modem</fullName>
+                <default>false</default>
+                <label>Fax/Modem</label>
+            </value>
+            <value>
+                <fullName>Disconnected Line</fullName>
+                <default>false</default>
+                <label>Disconnected Line</label>
+            </value>
+            <value>
+                <fullName>Language Barrier</fullName>
+                <default>false</default>
+                <label>Language Barrier</label>
+            </value>
+            <value>
+                <fullName>Corporate/Enterprise Account</fullName>
+                <default>false</default>
+                <label>Corporate/Enterprise Account</label>
+            </value>
+            <value>
+                <fullName>Government Account</fullName>
+                <default>false</default>
+                <label>Government Account</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>No Answer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Hang Up - Quick</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Busy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Answering Machine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Already with Frontier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Residential Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Add to DNC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Wrong Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Fax/Modem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Disconnected Line</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Language Barrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Corporate/Enterprise Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Government Account</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

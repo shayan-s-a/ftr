@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expiration_of_Competitor_Agreement_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>Expiration_of_Competitor_Agreement__c &lt;  TODAY()+179</errorConditionFormula>
+    <errorDisplayField>Expiration_of_Competitor_Agreement__c</errorDisplayField>
+    <errorMessage>Date should be greater than 180 days from today</errorMessage>
+</ValidationRule>

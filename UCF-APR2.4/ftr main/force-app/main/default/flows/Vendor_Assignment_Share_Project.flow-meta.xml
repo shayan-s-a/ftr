@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <description>Adds the Budget Share to the collection to be created</description>
+        <name>Add_Budget_Share_to_Collection</name>
+        <label>Add Budget Share to Collection</label>
+        <locationX>264</locationX>
+        <locationY>935</locationY>
+        <assignmentItems>
+            <assignToReference>BudgetShares</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>BudgetShare</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Through_Budgets</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the values for the Budget Share</description>
+        <name>Set_Values_for_Budget_Share</name>
+        <label>Set Values for Budget Share</label>
+        <locationX>264</locationX>
+        <locationY>815</locationY>
+        <assignmentItems>
+            <assignToReference>BudgetShare.AccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>BudgetShare.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Through_Budgets.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>BudgetShare.UserOrGroupId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Public_Group.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_Budget_Share_to_Collection</targetReference>
+        </connector>
+    </assignments>
+    <description>Shares the Project specified by the Vendor Assignment (as well as the Budgets related to the Project) with the vendor&apos;s Public Group</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>The Developer Name of the Public Group</description>
+        <name>GroupDeveloperName</name>
+        <dataType>String</dataType>
+        <expression>&quot;ST&quot;&amp;{!$Record.Vendor__c}</expression>
+    </formulas>
+    <interviewLabel>Vendor Assignment: Share Project {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Vendor Assignment: Share Project and Budgets</label>
+    <loops>
+        <description>Loop through Budgets related to the Project that the vendor is assigned to</description>
+        <name>Loop_Through_Budgets</name>
+        <label>Loop Through Budgets</label>
+        <locationX>176</locationX>
+        <locationY>695</locationY>
+        <collectionReference>Get_Budgets</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Set_Values_for_Budget_Share</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Share_Budget_With_Public_Group</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Shares the Budgets related to the Project specified by the Vendor Assignment with the vendor&apos;s Public Group</description>
+        <name>Share_Budget_With_Public_Group</name>
+        <label>Share Budget With Public Group</label>
+        <locationX>176</locationX>
+        <locationY>1151</locationY>
+        <inputReference>BudgetShares</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <description>Shares the Project specified by the Vendor Assignment with the vendor&apos;s Public Group</description>
+        <name>Share_Project_With_Public_Group</name>
+        <label>Share Project With Public Group</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Get_Budgets</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccessLevel</field>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>Get_Public_Group.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>sitetracker__Project__Share</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Get Budgets related to the Project that the vendor is assigned to</description>
+        <name>Get_Budgets</name>
+        <label>Get Budgets</label>
+        <locationX>176</locationX>
+        <locationY>575</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Through_Budgets</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Budget__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the Public Group for the Vendor specified by the Vendor Assignment</description>
+        <name>Get_Public_Group</name>
+        <label>Get Public Group</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Share_Project_With_Public_Group</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GroupDeveloperName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Public_Group</targetReference>
+        </connector>
+        <object>Vendor_Assignment__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Budget Share to be added to the collection</description>
+        <name>BudgetShare</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Budget__Share</objectType>
+    </variables>
+    <variables>
+        <description>Collection of Budget Shares to be created</description>
+        <name>BudgetShares</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Budget__Share</objectType>
+    </variables>
+</Flow>

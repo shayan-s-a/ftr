@@ -1,0 +1,12 @@
+Hello Carissa,<br/><br/>
+
+
+Quote is created for Managed Firewall with Discount. <br/>
+Account Name : <b>{!SterlingQuoteItem__c.Account_Name__c}</b> <br/>
+AE Name : <b>{!SterlingQuoteItem__c.OwnerFullName}</b><br/>
+Opportunity ID : <b>{!SterlingQuoteItem__c.OpportunityId__c}</b> <br/>
+Quote ID: <b>{!SterlingQuoteItem__c.SterlingQuoteId__c}</b> <br/><br/>
+
+
+Please click below link to open Quote.<br/>
+	{!SterlingQuoteItem__c.Link}

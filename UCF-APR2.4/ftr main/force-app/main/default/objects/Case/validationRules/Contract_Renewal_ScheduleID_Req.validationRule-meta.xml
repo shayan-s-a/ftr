@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Renewal_ScheduleID_Req</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ NOT(ISNEW()),
+ ispickval(Resolution__c, &apos;Renewed&apos;),
+ RecordType.DeveloperName = &apos;Contract_Renewal&apos;,
+ NOT(REGEX( Schedule_ID_auto__c , &quot;S-[0-9]{10}&quot; ))
+)</errorConditionFormula>
+    <errorMessage>If the resolution is renewed, please update the schedule ID in the following format - S-123456789.</errorMessage>
+</ValidationRule>

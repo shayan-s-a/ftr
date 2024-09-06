@@ -1,0 +1,18 @@
+global class GooglePlaceDetailsTestMock  implements HttpCalloutMock {
+
+
+    String placeDetailsResp = '{ "html_attributions": [], "result":{"address_components":[{"long_name": "1401", "short_name": "1401", "types": ["street_number"] },{"long_name": "South Macarthur Boulevard", "short_name": "S MacArthur Blvd", "types": ["route"] },{"long_name": "Irving", "short_name": "Irving", "types":["locality", "political"] },{"long_name": "Dallas County", "short_name": "Dallas County", "types":["administrative_area_level_2", "political"] },{"long_name": "Texas", "short_name": "TX", "types":["administrative_area_level_1", "political"] },{"long_name": "United States", "short_name": "US", "types":["country", "political"] },{"long_name": "75060", "short_name": "75060", "types": ["postal_code"] },{"long_name": "5848", "short_name": "5848", "types": ["postal_code_suffix"] }],"formatted_address": "1401 S MacArthur Blvd, Irving, TX 75060, USA","geometry":{"location":{"lat": 32.7999746, "lng": -96.9600006},"viewport":{"northeast":{"lat": 32.8013304802915, "lng": -96.95846011970849}, "southwest":{"lat": 32.7986325197085, "lng": -96.9611580802915}}},"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png","name": "1401 S MacArthur Blvd","place_id": "ChIJt2EXx36DToYRW6Am0ycK0BI","reference": "ChIJt2EXx36DToYRW6Am0ycK0BI","types": ["premise"],"url": "https://maps.google.com/?q=1401+S+MacArthur+Blvd,+Irving,+TX+75060,+USA&ftid=0x864e837ec71761b7:0x12d00a27d326a05b","utc_offset": -300,"vicinity": "Irving" }, "status": "OK" }';
+        
+        //'{ "html_attributions": [], "result":{"address_components":[{"long_name": "1401", "short_name": "1401", "types": ["street_number"] },{"long_name": "South Macarthur Boulevard", "short_name": "S MacArthur Blvd", "types": ["route"] },{"long_name": "Irving", "short_name": "Irving", "types":["locality", "political"] },{"long_name": "Dallas County", "short_name": "Dallas County", "types":["administrative_area_level_2", "political"] },{"long_name": "Texas", "short_name": "TX", "types":["administrative_area_level_1", "political"] },{"long_name": "United States", "short_name": "US", "types":["country", "political"] },{"long_name": "75060", "short_name": "75060", "types": ["postal_code"] },{"long_name": "5848", "short_name": "5848", "types": ["postal_code_suffix"] }],"adr_address": "<span class=\"street-address\">1401 S MacArthur Blvd<\/span>, <span class=\"locality\">Irving<\/span>, <span class=\"region\">TX<\/span> <span class=\"postal-code\">75060-5848<\/span>, <span class=\"country-name\">USA<\/span>","formatted_address": "1401 S MacArthur Blvd, Irving, TX 75060, USA","geometry":{"location":{"lat": 32.7999746, "lng": -96.9600006},"viewport":{"northeast":{"lat": 32.8013304802915, "lng": -96.95846011970849}, "southwest":{"lat": 32.7986325197085, "lng": -96.9611580802915}}},"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png","name": "1401 S MacArthur Blvd","place_id": "ChIJt2EXx36DToYRW6Am0ycK0BI","reference": "ChIJt2EXx36DToYRW6Am0ycK0BI","types": ["premise"],"url": "https://maps.google.com/?q=1401+S+MacArthur+Blvd,+Irving,+TX+75060,+USA&ftid=0x864e837ec71761b7:0x12d00a27d326a05b","utc_offset": -300,"vicinity": "Irving" }, "status": "OK" }';
+    global HttpResponse respond(HTTPRequest request) {
+        // Mock response
+        
+        HttpResponse response = new HttpResponse();
+        response.setHeader('Content-Type', 'application/json');
+        //response.setHeader('apikey', 'i.ApiKey_Header__c');
+        //response.setHeader('SIFT-Token', reqbearer);
+        response.setBody('{ '+ placeDetailsResp +'\' }');
+        response.setStatusCode(200);
+        return response;  
+    }
+}

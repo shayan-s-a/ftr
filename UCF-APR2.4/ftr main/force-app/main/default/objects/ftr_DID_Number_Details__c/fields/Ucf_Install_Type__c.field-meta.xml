@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ucf_Install_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Install Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New DID Range</fullName>
+                <default>false</default>
+                <label>New DID Range</label>
+            </value>
+            <value>
+                <fullName>Port-In</fullName>
+                <default>false</default>
+                <label>Port-In</label>
+            </value>
+            <value>
+                <fullName>Winback</fullName>
+                <default>false</default>
+                <label>Winback</label>
+            </value>
+            <value>
+                <fullName>Existing # (Regrade)</fullName>
+                <default>false</default>
+                <label>Existing # (Regrade)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

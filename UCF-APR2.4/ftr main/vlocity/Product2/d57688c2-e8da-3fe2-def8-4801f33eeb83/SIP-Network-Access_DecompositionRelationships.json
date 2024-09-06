@@ -1,0 +1,33 @@
+[
+    {
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__DestinationDefaultQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMaxQuantity__c": 1,
+        "%vlocity_namespace%__DestinationMinQuantity__c": 1,
+        "%vlocity_namespace%__DestinationProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "57c3ab17-4caf-923c-6365-4deff94c9945",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "Product2/57c3ab17-4caf-923c-6365-4deff94c9945",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__GlobalKey__c": "2f121583-e106-60c0-8cab-c8994048e7bd",
+        "%vlocity_namespace%__MappingsData__c": "[{\"source_type\":\"Attribute\",\"source_attr_name\":\"EVC Speed\",\"source_attr_code\":\"ATTR_EVC_SPEED\",\"mapping_type\":\"ad-verbatim\",\"destination_attr_name\":\"EVC Speed\",\"destination_attr_code\":\"ATTR_EVC_SPEED\"},{\"source_type\":\"Attribute\",\"source_attr_name\":\"Transport Layer\",\"source_attr_code\":\"ATTR_TRANSPORT_LAYER\",\"mapping_type\":\"ad-verbatim\",\"destination_attr_name\":\"Transport Layer\",\"destination_attr_code\":\"ATTR_TRANSPORT_LAYER\"},{\"source_type\":\"Attribute\",\"source_attr_name\":\"Class of Service\",\"source_attr_code\":\"ATTR_CoS\",\"mapping_type\":\"ad-verbatim\",\"destination_attr_name\":\"PSR_Class of Service\",\"destination_attr_code\":\"Class of Service\"}]",
+        "%vlocity_namespace%__Priority__c": "",
+        "%vlocity_namespace%__RequireReservation__c": false,
+        "%vlocity_namespace%__SourceDefaultQuantity__c": 1,
+        "%vlocity_namespace%__SourceMaxQuantity__c": "",
+        "%vlocity_namespace%__SourceMinQuantity__c": 0,
+        "%vlocity_namespace%__SourceProductId__c": {
+            "%vlocity_namespace%__GlobalKey__c": "d57688c2-e8da-3fe2-def8-4801f33eeb83",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/d57688c2-e8da-3fe2-def8-4801f33eeb83",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__SourceProductId__r.%vlocity_namespace%__GlobalKey__c": "d57688c2-e8da-3fe2-def8-4801f33eeb83",
+        "%vlocity_namespace%__XORGroup__c": "",
+        "Name": "SIP NA To SIP CFS",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DecompositionRelationship__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__DecompositionRelationship__c/SIP NA To SIP CFS/Product2/d57688c2-e8da-3fe2-def8-4801f33eeb83"
+    }
+]

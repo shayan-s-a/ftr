@@ -1,0 +1,29 @@
+<messaging:emailTemplate subject="Reply with Contracts Template" relatedToType="Case">
+    <messaging:htmlEmailBody >
+        <html>
+            <body>
+            <p>*** DO NOT REPLY TO THIS AUTOMATED EMAIL MESSAGE, CLICK ON THE LINK BELOW ***</p>
+                Along with your contracts, attached is our new TSF (Technical Selection Form) and CCCEA (Customer Conduit Cable Extension Agreement)<br />
+                <br />
+                Please return the following direct to the PST via this WFM
+                <ul>
+                    <li>Signed Contracts</li>
+                    <li>Signed CCCEA</li>
+                    <li>Signed/Completed TSF (Customer Technical Form)</li>
+                </ul>
+                <br />
+                Complete Section ______<br />
+                <br />
+                ***Verify with your customer the proper Static IP structure (WAN/LAN or FLAT LAN) and &nbsp;handoff method we should be providing (Copper RJ-45, Single Mode Fiber, or Multi Mode Fiber)? &nbsp;If either of these options provided to us are incorrect, they cannot be changed while the order is in flight and will require a change order post-install, which can take up to 30 days to make the requested change.<br />
+                <br />
+                Please have your client sign and then return all documents via this WFM email string, direct to the PST group. &nbsp;Thank you for your business and congrats on the sale!<br />
+                <br />
+                <p>Click <a href="https://ftr.tfaforms.net//f/PartnerSupportStatus?CaseID={!relatedTo.Id}" style="text-decoration: underline;font-weight: bold;">HERE</a> to view the status of the case and enter new comments.</p><br />
+                <br />
+                Thanks,<br />
+                Frontier Sales Support<br/>
+                <img style="max-width: 140px" src="https://i.ibb.co/KXpX32x/Frontier-Secondary-Logo-RGB-Red-smal1.png" alt="Frontier-Secondary-Logo-RGB-Red-smal1" border="0" />
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

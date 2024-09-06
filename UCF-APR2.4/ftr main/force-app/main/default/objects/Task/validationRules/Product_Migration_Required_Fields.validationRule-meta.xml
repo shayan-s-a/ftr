@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Migration_Required_Fields</fullName>
+    <active>true</active>
+    <description>Fields required to close the Product Migration Task.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Product_Migration&quot;,
+ISPICKVAL(Status, &quot;Completed&quot;),
+
+OR(
+   
+    ISBLANK(Description),
+    ISPICKVAL(Customer_Response__c ,&quot;&quot;),
+    ISPICKVAL(Lead_Disposition__c,&quot;&quot;),
+    ISBLANK( Subject)
+    
+
+))</errorConditionFormula>
+    <errorMessage>Subject, Customer Response, Comments and Lead Disposition are required to close the task.</errorMessage>
+</ValidationRule>

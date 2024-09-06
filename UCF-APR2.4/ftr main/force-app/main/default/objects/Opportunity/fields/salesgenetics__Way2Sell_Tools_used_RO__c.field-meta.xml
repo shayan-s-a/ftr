@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>salesgenetics__Way2Sell_Tools_used_RO__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>if( salesgenetics__Way2Sell_Opportunity_Background__c ,1,0)
++if( salesgenetics__Way2Sell_Opportunity_Qualification__c ,1,0)
++if( salesgenetics__Way2Sell_Buying_Center__c  ,1,0)
++if( salesgenetics__Way2Sell_Individual_Needs_Analysis__c ,1,0)
++if(  salesgenetics__Way2Sell_Competitive_Analysis__c  ,1,0)
++if(  salesgenetics__Way2Sell_Competitive_Tactics__c  ,1,0)
++if( salesgenetics__Way2Sell_Value_Proposition_Design__c  ,1,0)
++if( salesgenetics__Way2Sell_Questions__c ,1,0)
++if( salesgenetics__Way2Sell_Winning_Pitch__c  ,1,0)
++if( salesgenetics__Way2Sell_Growing_Pitch__c  ,1,0)
++if(  salesgenetics__Way2Sell_Cross_Upselling_Pitch__c  ,1,0)
++if(  salesgenetics__Way2Sell_Business_Pitch__c  ,1,0)
++if(  salesgenetics__Way2Sell_Collaborative_Action_Plan__c  ,1,0)
++if(  salesgenetics__Way2Sell_Conclusions__c  ,1,0)
++if(  salesgenetics__Way2Sell_Task_Plan__c  ,1,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Way2Sell Tools Used</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

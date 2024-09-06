@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Frontier_Email_Templates</letterhead>
+    <name>Vology Email Notification</name>
+    <style>formalLetter</style>
+    <subject>Vology Scoping Request {!Outbound_Message__c.Opportunity_ID__c}, {!Outbound_Message__c.Customer_Name__c}</subject>
+    <textOnly>From: {!Outbound_Message__c.SE_User_Id_Name__c}, {!Outbound_Message__c.SE_Email_Address__c} 
+To: Vology Team
+
+
+Subject:  Vology Scoping Request {!Outbound_Message__c.Opportunity_ID__c}, {!Outbound_Message__c.Customer_Name__c}
+
+Request a Vology Architect to be assigned &amp; assist in scoping of the below Opportunity.
+
+Opportunity ID:  {!Outbound_Message__c.Opportunity_ID__c}
+Opportunity Name: {!Outbound_Message__c.Opportunity_Name__c}
+Customer Name:  {!Outbound_Message__c.Customer_Name__c}
+Customer Service Address:  {!Outbound_Message__c.Customer_Service_Address__c}
+Description of customer needs:  {!Outbound_Message__c.Description_of_Customer_Needs__c}
+Lead Product List: {!Outbound_Message__c.Lead_Product_List__c}
+
+
+Thank you.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

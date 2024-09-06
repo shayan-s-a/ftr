@@ -1,0 +1,10 @@
+<aura:component controller="FTRWSMultipleFileUploader" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	
+    
+    <aura:attribute name="AddressList" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init }"/>
+     <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <!-- Other component markup here -->
+    <center><ui:spinner aura:id="spinner"/></center>
+    
+</aura:component>

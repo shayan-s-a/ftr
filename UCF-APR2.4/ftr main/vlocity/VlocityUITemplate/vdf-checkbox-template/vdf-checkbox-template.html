@@ -1,0 +1,27 @@
+<div class="nds-form-element nds-size_1-of-1 nds-p-around_small nds-input__tooltip nds-medium-size_6-of-12" ng-class="{'nds-has-error': [[vdf-form-field-name]].$invalid && [[vdf-form-field-name]].$touched, 'is-required': required}" vdf-element-container="true">
+    <div class="nds-form-element__control">
+        <div class="nds-form-element__icon">
+            <a href="javascript:void(0);" 
+                    nds-popover 
+                    data-container="{{attrs.tooltipContainer ? attrs.tooltipContainer : '.via-nds'}}"  
+                    nubbin-direction="bottom-left" 
+                    tooltip="true" 
+                    data-title="{{::field.description}}">
+                <nds-svg-icon sprite="'utility'" size="'x-small'" icon="'info'" extra-classes="'nds-icon-text-default'"></nds-svg-icon>
+                <span class="nds-assistive-text">{{::$root.vlocity.getCustomLabel('VDFHelp', 'Help')}}</span>
+                <label class="nds-checkbox">
+                    <abbr class="nds-required" title="required" ng-if="::field.required">*</abbr>
+                    <input type="checkbox" name="options" vdf-input="true"/>
+                    <span class="nds-checkbox--faux"></span>
+                    <label class="nds-checkbox__label">
+                        <span class="nds-form-element__label nds-form-element__control-help"> {{:: translate && field.label ? $root.vlocity.getCustomLabel(field.label, field.label) : field.label}}</span>
+                    </label>
+                </label>
+            </a>
+        </div>
+    </div>
+    <!-- Standard Error Messages -->
+    <div ng-messages="[[vdf-form-field-name]].$error" ng-if="[[vdf-form-field-name]].$touched" role="alert">
+        <div class="nds-form-element__help" ng-message="required">{{::$root.vlocity.getCustomLabel('VDFFieldIsRequired','This field is required.')}}</div>
+    </div>
+</div>

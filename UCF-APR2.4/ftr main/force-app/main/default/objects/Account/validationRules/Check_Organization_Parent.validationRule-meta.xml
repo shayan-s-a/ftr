@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Organization_Parent</fullName>
+    <active>true</active>
+    <description>Organization Accounts must have a Parent Account with a record type of Global Account.</description>
+    <errorConditionFormula>AND (
+RecordType.Name = &apos;Organization&apos;,
+NOT (Parent.RecordType.Name = &apos;Global&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>Organization Accounts must have a Parent Account with a record type of Global Account. Please reach out to your Salesforce Admin for Assistance.</errorMessage>
+</ValidationRule>

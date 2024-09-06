@@ -1,0 +1,142 @@
+{
+    "%vlocity_namespace%__ApplicableObject__c": "",
+    "%vlocity_namespace%__CalculationProcedureId__c": {
+        "Name": "AttributePricingProcedure",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedure__c"
+    },
+    "%vlocity_namespace%__CalculationProcedureId__r.Name": "AttributePricingProcedure",
+    "%vlocity_namespace%__CalculationProcedureStep__c": "AttributePricingProcedure_Version_Steps.json",
+    "%vlocity_namespace%__CalculationProcedureVariable__c": "AttributePricingProcedure_Version_Variables.json",
+    "%vlocity_namespace%__Constants__c": [
+        {
+            "alias": "AT&T",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "AT&T",
+            "precision": "",
+            "userDefined": true,
+            "value": "'AT&T'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "Lumen",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "Lumen",
+            "precision": "",
+            "userDefined": true,
+            "value": "'Lumen'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "Verizon",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "Verizon",
+            "precision": "",
+            "userDefined": true,
+            "value": "'Verizon'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "'",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "Zayo",
+            "precision": "",
+            "userDefined": true,
+            "value": "'Zayo'",
+            "valuePlaceHolder": "Enter a Value"
+        },
+        {
+            "alias": "Spectrum",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "Spectrum",
+            "precision": "",
+            "userDefined": true,
+            "value": "'Spectrum'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "Uniti",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "Uniti",
+            "precision": "",
+            "userDefined": true,
+            "value": "'Uniti'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "Windstream",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "Windstream",
+            "precision": "",
+            "userDefined": true,
+            "value": "'Windstream'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "Crown_Castle",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "Crown_Castle",
+            "precision": "",
+            "userDefined": true,
+            "value": "'CrownCastle'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "Frontier_MarkUP",
+            "dataType": "Percent",
+            "isEditable": false,
+            "name": "Frontier_MarkUP",
+            "precision": "",
+            "userDefined": true,
+            "value": "15",
+            "valuePlaceHolder": "Enter a Value"
+        },
+        {
+            "alias": "TRUE",
+            "dataType": "Text",
+            "isEditable": false,
+            "name": "TRUE",
+            "precision": "",
+            "userDefined": true,
+            "value": "'true'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        },
+        {
+            "alias": "Everstream",
+            "dataType": "Text",
+            "isEditable": true,
+            "name": "Everstream",
+            "precision": "",
+            "userDefined": true,
+            "value": "'Everstream'",
+            "valuePlaceHolder": "Enter text inside single quotes"
+        }
+    ],
+    "%vlocity_namespace%__CurrentStatus__c": "Active",
+    "%vlocity_namespace%__EnableLooping__c": false,
+    "%vlocity_namespace%__EndDateTime__c": "",
+    "%vlocity_namespace%__GlobalKey__c": "e23f8f65-7bb7-c2e8-bea9-2a9b3076e3ec",
+    "%vlocity_namespace%__InputBundleId__c": "",
+    "%vlocity_namespace%__LastSimulationInput__c": "{\"Source Product Code\":\"ENT_ETH_EIA_0002\",\"Source Product Name\":\"DIA (Dedicated Internet Access)\",\"Characteristic Name\":\"Partner;Partner Tier;Term;Speed\",\"Characteristic Value\":\"AT&T;Tier 1;12 Months;40 Mbps\",\"TRUE\":\"\"}",
+    "%vlocity_namespace%__LoopingSpecification__c": "",
+    "%vlocity_namespace%__OutputBundleId__c": "",
+    "%vlocity_namespace%__PostProcessorClass__c": "",
+    "%vlocity_namespace%__PreProcessorClass__c": "",
+    "%vlocity_namespace%__Priority__c": 30,
+    "%vlocity_namespace%__StartDateTime__c": "2020-04-28T00:20:00.000Z",
+    "%vlocity_namespace%__Variables__c": "",
+    "%vlocity_namespace%__VersionNumber__c": 3,
+    "Name": "AttributePricingProcedure v3",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__CalculationProcedureVersion__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__CalculationProcedureVersion__c/3/%vlocity_namespace%__CalculationProcedure__c/AttributePricingProcedure"
+}
