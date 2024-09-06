@@ -1,0 +1,29 @@
+{
+    "%vlocity_namespace%__DependencyItemDefinitionId__c": {
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name": "UCF DPI Main Directory Number",
+        "Name": "UCF MDNWaitForInitiateDIDLeadOrder",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationItemDefinition__c/UCF MDNWaitForInitiateDIDLeadOrder/%vlocity_namespace%__OrchestrationPlanDefinition__c/UCF DPI Main Directory Number",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationItemDefinition__c"
+    },
+    "%vlocity_namespace%__DependencyPlanDefinitionId__c": {
+        "Name": "UCF DPI Main Directory Number",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/UCF DPI Main Directory Number",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+    },
+    "%vlocity_namespace%__DependencyType__c": "Depends On",
+    "%vlocity_namespace%__GlobalKey__c": "87f27f70-db34-e016-489b-800564ba98d3",
+    "%vlocity_namespace%__OrchestrationItemDefinitionId__c": {
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name": "UCF DPI Main Directory Number",
+        "Name": "UCF MDNSubmitDIDLeadGroupOrder",
+        "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+        "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationItemDefinition__c/UCF MDNSubmitDIDLeadGroupOrder/%vlocity_namespace%__OrchestrationPlanDefinition__c/UCF DPI Main Directory Number",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationItemDefinition__c"
+    },
+    "%vlocity_namespace%__Scope__c": "Swimlane",
+    "Name": "UCFMDNWaitForInitiateDIDLeadOrder To UCF MDNSubmitDIDLeadGroupOrder",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationDependencyDefinition__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationDependencyDefinition__c/87f27f70-db34-e016-489b-800564ba98d3"
+}

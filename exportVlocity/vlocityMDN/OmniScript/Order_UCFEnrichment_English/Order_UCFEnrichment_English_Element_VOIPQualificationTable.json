@@ -1,0 +1,102 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "UCF Enrichment OS",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "UCF Enrichment OS",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "DIDLocationDetails",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English/DIDLocationDetails",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "DIDLocationDetails",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "SelectableItem-DataTable",
+        "accessibleInFutureSteps": false,
+        "columns": [
+            {
+                "apiName": "NPA",
+                "label": "NPA"
+            },
+            {
+                "apiName": "NXX",
+                "label": "NXX"
+            },
+            {
+                "apiName": "OCN",
+                "label": "OCN"
+            },
+            {
+                "apiName": "LATA",
+                "label": "LATA"
+            },
+            {
+                "apiName": "State",
+                "label": "State"
+            },
+            {
+                "apiName": "RateCenter",
+                "label": "Rate Center"
+            },
+            {
+                "apiName": "AvailableVOIP",
+                "label": "Available VOIP"
+            },
+            {
+                "apiName": "E911Type",
+                "label": "E911 Type"
+            },
+            {
+                "apiName": "IsThirdParty",
+                "label": "Third Party?"
+            }
+        ],
+        "data": "VOIPQualifications",
+        "dataJSON": false,
+        "disOnTplt": false,
+        "itemsKey": "recSet",
+        "label": "Qualified NPA/NXX",
+        "maxCompareSize": 4,
+        "modalConfigurationSetting": {
+            "modalController": "ModalProductCtrl",
+            "modalHTMLTemplateId": "vlcProductConfig.html",
+            "modalSize": "lg"
+        },
+        "modalController": "ModalInstanceCtrl",
+        "modalHTMLTemplateId": "vlcModalContent.html",
+        "modalSize": "",
+        "path": "Qualification",
+        "postTransformBundle": "",
+        "preTransformBundle": "",
+        "remoteClass": "",
+        "remoteMethod": "",
+        "remoteOptions": {
+            "postTransformBundle": "",
+            "preTransformBundle": ""
+        },
+        "remoteTimeout": 30000,
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "selectMode": "Single",
+        "selectable": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Selectable Items",
+    "Name": "VOIPQualificationTable",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English/VOIPQualificationTable"
+}

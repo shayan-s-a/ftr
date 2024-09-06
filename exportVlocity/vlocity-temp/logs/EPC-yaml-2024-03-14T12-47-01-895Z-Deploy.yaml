@@ -1,0 +1,28 @@
+Org: shayan.shahid@nespon.com.ftr.dmymarmjr
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity2
+TotalTime: 5m 58s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - |-
+    PriceList/FTR_ENT_PL -- DataPack >> Enterprise -- Error Message -- %vlocity_namespace%.PricingElement: execution of BeforeUpdate
+
+    caused by: %vlocity_namespace%.PricingElementTriggerHandler.PricingElementTriggerHandlerException: Script-thrown exception
+
+    (System Code)
+  - OrchestrationDependencyDefinition/dd500759-03fe-3fc6-253f-acc737141305 -- DataPack >> DC Status Event To Wait To Assetize -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyPlanDefinitionId__c - Name=DPI DC Billing Plan (System Code)
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 15
+  Error: 2
+id: !<tag:yaml.org,2002:js/undefined> ''

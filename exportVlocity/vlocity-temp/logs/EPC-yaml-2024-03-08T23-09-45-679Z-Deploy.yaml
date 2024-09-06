@@ -1,0 +1,31 @@
+Org: shayan.shahid@nespon.com.ftr.dmymarmjr
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity2
+TotalTime: 4m 7s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - Product2/1556a173-b97c-f551-5f15-0f4488a6153b -- DataPack >> UCF DPI DID MDN Billing RFS -- Error Message -- No match found for %vlocity_namespace%__AttributeAssignment__c.%vlocity_namespace%__AttributeId__c - %vlocity_namespace%__Code__c=Attr_ItemId (System Code)
+  - |-
+    PriceList/FTR_ENT_PL -- DataPack >> Enterprise -- Error Message -- %vlocity_namespace%.PricingElement: execution of BeforeUpdate
+
+    caused by: %vlocity_namespace%.PricingElementTriggerHandler.PricingElementTriggerHandlerException: Script-thrown exception
+
+    (System Code)
+  - Product2/457c586a-b359-ed00-cfa1-9fd94686cc68 -- DataPack >> DPI UCF Lead Bulk Billing -- Error Message -- No match found for %vlocity_namespace%__AttributeAssignment__c.%vlocity_namespace%__AttributeId__c - %vlocity_namespace%__Code__c=Attr_ItemId (System Code)
+  - Product2/56b8dd11-c948-40a5-2237-cb77b4b2b93d -- DataPack >> UCF DID DPI Services -- Error Message -- This DataPack has a reference to another object which was not found -- Product2/457c586a-b359-ed00-cfa1-9fd94686cc68
+  - Product2/7b072b22-d985-8c27-dff2-1cf94d7fe937 -- DataPack >> UCF DC 711 -- Error Message -- This DataPack has a reference to another object which was not found -- Product2/1556a173-b97c-f551-5f15-0f4488a6153b
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 84
+  Error: 5
+id: !<tag:yaml.org,2002:js/undefined> ''

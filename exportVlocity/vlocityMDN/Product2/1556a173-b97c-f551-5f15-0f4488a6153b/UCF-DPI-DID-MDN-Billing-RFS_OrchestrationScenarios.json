@@ -1,0 +1,26 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "f9c1030b-8e79-d013-3b11-f6c8bc67911f",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "DPI UCF DID MDN Order Billing Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/DPI UCF DID MDN Order Billing Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "1556a173-b97c-f551-5f15-0f4488a6153b",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/1556a173-b97c-f551-5f15-0f4488a6153b",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "1556a173-b97c-f551-5f15-0f4488a6153b",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "MDN Billing RFS",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/MDN Billing RFS/f9c1030b-8e79-d013-3b11-f6c8bc67911f/Product2/1556a173-b97c-f551-5f15-0f4488a6153b"
+    }
+]

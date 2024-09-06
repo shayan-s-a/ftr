@@ -1,0 +1,22 @@
+Org: shayan.shahid@nespon.com.qaucfv2
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity1
+TotalTime: 2m 6s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - Product2/56b8dd11-c948-40a5-2237-cb77b4b2b93d -- DataPack >> UCF DID DPI Services -- Error Message -- This DataPack has a reference to another object which was not found -- vlocity_cmt__ObjectClass__c/39c39d7108338eb927b4331c08a21ebb
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 1
+  Error: 1
+id: !<tag:yaml.org,2002:js/undefined> ''

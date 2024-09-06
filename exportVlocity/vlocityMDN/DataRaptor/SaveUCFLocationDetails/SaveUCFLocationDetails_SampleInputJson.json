@@ -1,0 +1,1332 @@
+{
+    "AddLoopBackNumberResult": {
+        "AddProductResult": [
+            {
+                "AddProduct": {
+                    "messages": [
+                        {
+                            "code": "150",
+                            "message": "Successfully added.",
+                            "severity": "INFO"
+                        }
+                    ],
+                    "records": [
+                        {
+                            "%vlocity_namespace%__Action__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "PICKLIST",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__Action__c",
+                                "hidden": false,
+                                "label": "Action",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "Add"
+                            },
+                            "%vlocity_namespace%__AssetReferenceId__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "STRING",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__AssetReferenceId__c",
+                                "hidden": false,
+                                "label": "Asset Reference Id",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "bee01110-b77d-e6cd-5aa9-00a16432cbdd"
+                            },
+                            "%vlocity_namespace%__BillingAccountId__c": {
+                                "actions": {
+                                    "availablesites": {
+                                        "client": {
+                                            "params": {
+                                            },
+                                            "records": [
+                                            ]
+                                        },
+                                        "remote": {
+                                            "params": {
+                                                "cartId": "8010U000001DZhrQAG",
+                                                "id": "8020U000001TuDtQAK",
+                                                "lookupField": "%vlocity_namespace%__billingaccountid__c",
+                                                "methodName": "getAvailableSites"
+                                            }
+                                        },
+                                        "rest": {
+                                            "link": null,
+                                            "method": null,
+                                            "params": {
+                                            }
+                                        }
+                                    }
+                                },
+                                "alternateValues": null,
+                                "dataType": "REFERENCE",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__BillingAccountId__c",
+                                "hidden": false,
+                                "label": "Billing Account",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "0010U000018j9yJQAQ"
+                            },
+                            "%vlocity_namespace%__BillingAccountId__r": {
+                                "Id": "0010U000018j9yJQAQ",
+                                "Name": "Sravya Test",
+                                "RecordTypeId": "012E0000000fDc3IAE",
+                                "attributes": {
+                                    "type": "Account",
+                                    "url": "/services/data/v52.0/sobjects/Account/0010U000018j9yJQAQ"
+                                }
+                            },
+                            "%vlocity_namespace%__CpqCardinalityMessage__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "TEXTAREA",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__CpqCardinalityMessage__c",
+                                "hidden": false,
+                                "label": "Cpq Cardinality Message",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__CpqMessageData__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "TEXTAREA",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__CpqMessageData__c",
+                                "hidden": true,
+                                "label": "Cpq Message Data",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__CpqPricingMessage__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "TEXTAREA",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__CpqPricingMessage__c",
+                                "hidden": false,
+                                "label": "Cpq Pricing Message",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__CurrencyPaymentMode__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "PICKLIST",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__CurrencyPaymentMode__c",
+                                "hidden": true,
+                                "label": "Currency Payment Mode",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "Currency"
+                            },
+                            "%vlocity_namespace%__EffectiveOneTimeTotal__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__EffectiveOneTimeTotal__c",
+                                "hidden": false,
+                                "label": "Effective One Time Total",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__EffectiveRecurringTotal__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__EffectiveRecurringTotal__c",
+                                "hidden": false,
+                                "label": "Effective Recurring Total",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__InCartQuantityMap__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "TEXTAREA",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__InCartQuantityMap__c",
+                                "hidden": true,
+                                "label": "InCartQuantityMap",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__ItemName__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "STRING",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__ItemName__c",
+                                "hidden": false,
+                                "label": "Item Name",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__LineNumber__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "STRING",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__LineNumber__c",
+                                "hidden": true,
+                                "label": "LineNumber",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "0006"
+                            },
+                            "%vlocity_namespace%__OneTimeCalculatedPrice__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__OneTimeCalculatedPrice__c",
+                                "hidden": true,
+                                "label": "One Time Calculated Price",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__OneTimeCharge__c": {
+                                "actions": {
+                                },
+                                "alternateValues": {
+                                },
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__OneTimeCharge__c",
+                                "hidden": true,
+                                "label": "One Time Charge",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__OneTimeManualDiscount__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "PERCENT",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__OneTimeManualDiscount__c",
+                                "hidden": false,
+                                "label": "One Time Manual Discount",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__OneTimeTotal__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__OneTimeTotal__c",
+                                "hidden": false,
+                                "label": "One Time Total",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__ParentItemId__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "STRING",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__ParentItemId__c",
+                                "hidden": true,
+                                "label": "ParentItemId",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__ProductHierarchyPath__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "STRING",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__ProductHierarchyPath__c",
+                                "hidden": true,
+                                "label": "Product Hierarchy Path",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "01t0U0000050OnsQAE"
+                            },
+                            "%vlocity_namespace%__ProvisioningStatus__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "STRING",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__ProvisioningStatus__c",
+                                "hidden": true,
+                                "label": "Provisioning Status",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "New"
+                            },
+                            "%vlocity_namespace%__RecurringCalculatedPrice__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__RecurringCalculatedPrice__c",
+                                "hidden": true,
+                                "label": "Recurring Calculated Price",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__RecurringCharge__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__RecurringCharge__c",
+                                "hidden": true,
+                                "label": "Recurring Charge",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__RecurringDiscountPrice__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__RecurringDiscountPrice__c",
+                                "hidden": true,
+                                "label": "Recurring Discount Price",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__RecurringManualDiscount__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "PERCENT",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__RecurringManualDiscount__c",
+                                "hidden": false,
+                                "label": "Recurring Manual Discount",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__RecurringTotal__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__RecurringTotal__c",
+                                "hidden": false,
+                                "label": "Recurring Total",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "%vlocity_namespace%__RootItemId__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "STRING",
+                                "editable": false,
+                                "fieldName": "%vlocity_namespace%__RootItemId__c",
+                                "hidden": true,
+                                "label": "RootItemId",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "8020U000001TuDtQAK"
+                            },
+                            "%vlocity_namespace%__ServiceAccountId__c": {
+                                "actions": {
+                                    "availablesites": {
+                                        "client": {
+                                            "params": {
+                                            },
+                                            "records": [
+                                            ]
+                                        },
+                                        "remote": {
+                                            "params": {
+                                                "cartId": "8010U000001DZhrQAG",
+                                                "id": "8020U000001TuDtQAK",
+                                                "lookupField": "%vlocity_namespace%__serviceaccountid__c",
+                                                "methodName": "getAvailableSites"
+                                            }
+                                        },
+                                        "rest": {
+                                            "link": null,
+                                            "method": null,
+                                            "params": {
+                                            }
+                                        }
+                                    }
+                                },
+                                "alternateValues": null,
+                                "dataType": "REFERENCE",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__ServiceAccountId__c",
+                                "hidden": false,
+                                "label": "Service Account",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "0010U00001A1GFxQAN"
+                            },
+                            "%vlocity_namespace%__ServiceAccountId__r": {
+                                "Id": "0010U00001A1GFxQAN",
+                                "Name": "1 BIC Way, 06484",
+                                "RecordTypeId": "0120h000000cc3dAAA",
+                                "attributes": {
+                                    "type": "Account",
+                                    "url": "/services/data/v52.0/sobjects/Account/0010U00001A1GFxQAN"
+                                }
+                            },
+                            "%vlocity_namespace%__SubAction__c": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "PICKLIST",
+                                "editable": true,
+                                "fieldName": "%vlocity_namespace%__SubAction__c",
+                                "hidden": false,
+                                "label": "Sub Action",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": null
+                            },
+                            "Id": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "ID",
+                                "editable": false,
+                                "fieldName": "Id",
+                                "hidden": false,
+                                "label": "Order Product ID",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "8020U000001TuDtQAK"
+                            },
+                            "IsActive": true,
+                            "ListPrice": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "ListPrice",
+                                "hidden": true,
+                                "label": "List Price",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": 0
+                            },
+                            "Name": "SIP Loop Back Number",
+                            "Pricebook2Id": "01s4000000062UCAAY",
+                            "PricebookEntry": {
+                                "Id": "01u0U000004IwIuQAK",
+                                "Pricebook2Id": "01s4000000062UCAAY",
+                                "Product2": {
+                                    "%vlocity_namespace%__IsConfigurable__c": true,
+                                    "%vlocity_namespace%__JSONAttribute__c": {
+                                        "FTR_ENT_PRI_ATTCAT": [
+                                            {
+                                                "$$AttributeDefinitionEnd$$": null,
+                                                "$$AttributeDefinitionStart$$": null,
+                                                "attributeRunTimeInfo": {
+                                                    "dataType": "Picklist",
+                                                    "default": [
+                                                    ],
+                                                    "uiDisplayType": "Dropdown",
+                                                    "values": [
+                                                        {
+                                                            "displayText": "12 Months",
+                                                            "id": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                                                            "sequence": 10,
+                                                            "value": "12 Months"
+                                                        },
+                                                        {
+                                                            "displayText": "24 Months",
+                                                            "id": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                                                            "sequence": 20,
+                                                            "value": "24 Months"
+                                                        },
+                                                        {
+                                                            "displayText": "36 Months",
+                                                            "id": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                                                            "sequence": 30,
+                                                            "value": "36 Months"
+                                                        },
+                                                        {
+                                                            "displayText": "60 Months",
+                                                            "id": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                                                            "sequence": 40,
+                                                            "value": "60 Months"
+                                                        }
+                                                    ]
+                                                },
+                                                "attributecategoryid__c": "a7a55000000CjzsAAC",
+                                                "attributecloneable__c": true,
+                                                "attributeconfigurable__c": true,
+                                                "attributedisplayname__c": "Term",
+                                                "attributedisplaysequence__c": "20",
+                                                "attributefilterable__c": false,
+                                                "attributegrouptype__c": null,
+                                                "attributeid__c": "a7b55000000CnQLAA0",
+                                                "attributeuniquecode__c": "ATTR_CONTRACT_TERM",
+                                                "categorycode__c": "FTR_ENT_PRI_ATTCAT",
+                                                "categorydisplaysequence__c": 10,
+                                                "categoryname__c": "Pricing Attributes",
+                                                "customconfiguitemplate__c": null,
+                                                "displaysequence__c": "null",
+                                                "formatmask__c": null,
+                                                "hasrule__c": false,
+                                                "id": "a7Y0U0000008kcIUAQ",
+                                                "isactive__c": true,
+                                                "isconfigurable__c": true,
+                                                "ishidden__c": true,
+                                                "isnottranslatable__c": false,
+                                                "isquerydriven__c": false,
+                                                "isreadonly__c": false,
+                                                "isrequired__c": true,
+                                                "objectid__c": "01t0U0000050OnsQAE",
+                                                "objecttype__c": "Product2",
+                                                "querycode__c": null,
+                                                "querylabel__c": null,
+                                                "rulemessage__c": null,
+                                                "uidisplaytype__c": "Dropdown",
+                                                "value__c": null,
+                                                "valuedatatype__c": "Picklist",
+                                                "valuedescription__c": null,
+                                                "valueinnumber__c": null
+                                            }
+                                        ],
+                                        "FTR_ENT_TECH_ATTCAT": [
+                                            {
+                                                "$$AttributeDefinitionEnd$$": null,
+                                                "$$AttributeDefinitionStart$$": null,
+                                                "attributeRunTimeInfo": {
+                                                    "dataType": "Text",
+                                                    "uiDisplayType": "Text"
+                                                },
+                                                "attributecategoryid__c": "a7a55000000CjzyAAC",
+                                                "attributecloneable__c": true,
+                                                "attributeconfigurable__c": true,
+                                                "attributedisplayname__c": "Loop Back Number",
+                                                "attributedisplaysequence__c": "1",
+                                                "attributefilterable__c": false,
+                                                "attributegrouptype__c": null,
+                                                "attributeid__c": "a7b0U0000008YQOQA2",
+                                                "attributeuniquecode__c": "ATTR_LB_NUMBER",
+                                                "categorycode__c": "FTR_ENT_TECH_ATTCAT",
+                                                "categorydisplaysequence__c": 20,
+                                                "categoryname__c": "Technical Attributes",
+                                                "customconfiguitemplate__c": null,
+                                                "displaysequence__c": "null",
+                                                "formatmask__c": null,
+                                                "hasrule__c": false,
+                                                "id": "a7Y0U0000008kt7UAA",
+                                                "isactive__c": true,
+                                                "isconfigurable__c": false,
+                                                "ishidden__c": false,
+                                                "isnottranslatable__c": false,
+                                                "isquerydriven__c": false,
+                                                "isreadonly__c": false,
+                                                "isrequired__c": false,
+                                                "objectid__c": "01t0U0000050OnsQAE",
+                                                "objecttype__c": "Product2",
+                                                "querycode__c": null,
+                                                "querylabel__c": null,
+                                                "rulemessage__c": null,
+                                                "uidisplaytype__c": "Text",
+                                                "value__c": null,
+                                                "valuedatatype__c": "Text",
+                                                "valuedescription__c": null,
+                                                "valueinnumber__c": null
+                                            }
+                                        ]
+                                    },
+                                    "%vlocity_namespace%__Type__c": "Add On",
+                                    "Id": "01t0U0000050OnsQAE",
+                                    "Name": "SIP Loop Back Number",
+                                    "ProductCode": "SIP_LOOP_BACK_NUMBER",
+                                    "RecordTypeId": "0120h000000cc4TAAQ",
+                                    "attributes": {
+                                        "type": "Product2",
+                                        "url": "/services/data/v52.0/sobjects/Product2/01t0U0000050OnsQAE"
+                                    }
+                                },
+                                "Product2Id": "01t0U0000050OnsQAE",
+                                "attributes": {
+                                    "type": "PricebookEntry",
+                                    "url": "/services/data/v52.0/sobjects/PricebookEntry/01u0U000004IwIuQAK"
+                                }
+                            },
+                            "PricebookEntryId": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "REFERENCE",
+                                "editable": false,
+                                "fieldName": "PricebookEntryId",
+                                "hidden": false,
+                                "label": "Price Book Entry ID",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": "01u0U000004IwIuQAK"
+                            },
+                            "Product2": {
+                                "%vlocity_namespace%__IsConfigurable__c": true,
+                                "%vlocity_namespace%__JSONAttribute__c": null,
+                                "%vlocity_namespace%__SubType__c": "DID Number",
+                                "%vlocity_namespace%__Type__c": "Add On",
+                                "Id": "01t0U0000050OnsQAE",
+                                "Name": "SIP Loop Back Number",
+                                "RecordTypeId": "0120h000000cc4TAAQ",
+                                "attributes": {
+                                    "type": "Product2",
+                                    "url": "/services/data/v52.0/sobjects/Product2/01t0U0000050OnsQAE"
+                                }
+                            },
+                            "Product2Id": "01t0U0000050OnsQAE",
+                            "ProductCode": "SIP_LOOP_BACK_NUMBER",
+                            "Quantity": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "DOUBLE",
+                                "editable": true,
+                                "fieldName": "Quantity",
+                                "hidden": false,
+                                "label": "Quantity",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": 1
+                            },
+                            "SellingPeriod": "Present",
+                            "UnitPrice": {
+                                "actions": {
+                                },
+                                "alternateValues": null,
+                                "dataType": "CURRENCY",
+                                "editable": false,
+                                "fieldName": "UnitPrice",
+                                "hidden": true,
+                                "label": "Unit Price",
+                                "messages": [
+                                ],
+                                "originalValue": null,
+                                "previousValue": null,
+                                "value": 0
+                            },
+                            "action": "Add",
+                            "actions": {
+                                "addtocart": {
+                                    "client": {
+                                        "params": {
+                                        }
+                                    },
+                                    "remote": {
+                                        "params": {
+                                            "cartId": "8010U000001DZhrQAG",
+                                            "hierarchy": -1,
+                                            "includeAttachment": false,
+                                            "items": [
+                                                {
+                                                    "itemId": "01u0U000004IwIuQAK",
+                                                    "parentId": "8020U000001TuDtQAK",
+                                                    "quantity": 1
+                                                }
+                                            ],
+                                            "lastRecordId": null,
+                                            "methodName": "postCartsItems",
+                                            "pagesize": 20,
+                                            "price": true,
+                                            "query": null,
+                                            "validate": true
+                                        }
+                                    },
+                                    "rest": {
+                                        "link": null,
+                                        "method": null,
+                                        "params": {
+                                        }
+                                    }
+                                },
+                                "cloneitem": {
+                                    "client": {
+                                        "params": {
+                                        }
+                                    },
+                                    "remote": {
+                                        "params": {
+                                            "cartId": "8010U000001DZhrQAG",
+                                            "id": "8020U000001TuDtQAK",
+                                            "items": [
+                                                {
+                                                    "itemId": "8020U000001TuDtQAK"
+                                                }
+                                            ],
+                                            "methodName": "cloneItems"
+                                        }
+                                    },
+                                    "rest": {
+                                        "link": null,
+                                        "method": null,
+                                        "params": {
+                                        }
+                                    }
+                                },
+                                "configdelete": {
+                                    "client": {
+                                        "params": {
+                                        }
+                                    },
+                                    "remote": {
+                                        "params": {
+                                            "cartId": "8010U000001DZhrQAG",
+                                            "id": "8020U000001TuDtQAK",
+                                            "methodName": "configDeleteItem"
+                                        }
+                                    },
+                                    "rest": {
+                                        "link": null,
+                                        "method": null,
+                                        "params": {
+                                        }
+                                    }
+                                },
+                                "deleteitem": {
+                                    "client": {
+                                        "params": {
+                                        }
+                                    },
+                                    "remote": {
+                                        "params": {
+                                            "cartId": "8010U000001DZhrQAG",
+                                            "fields": null,
+                                            "filters": null,
+                                            "hierarchy": -1,
+                                            "id": "8020U000001TuDtQAK",
+                                            "includeAttachment": false,
+                                            "lastRecordId": null,
+                                            "methodName": "deleteCartsItems",
+                                            "pagesize": 20,
+                                            "price": true,
+                                            "query": null,
+                                            "validate": true
+                                        }
+                                    },
+                                    "rest": {
+                                        "link": null,
+                                        "method": null,
+                                        "params": {
+                                        }
+                                    }
+                                },
+                                "modifyattributes": {
+                                    "client": {
+                                        "params": {
+                                        }
+                                    },
+                                    "remote": {
+                                        "params": {
+                                            "cartId": "8010U000001DZhrQAG",
+                                            "filters": null,
+                                            "id": "8020U000001TuDtQAK",
+                                            "itemId": "8020U000001TuDtQAK",
+                                            "items": [
+                                                {
+                                                    "itemId": "8020U000001TuDtQAK"
+                                                }
+                                            ],
+                                            "methodName": "putItemAttributes"
+                                        }
+                                    },
+                                    "rest": {
+                                        "link": null,
+                                        "method": null,
+                                        "params": {
+                                        }
+                                    }
+                                },
+                                "updateitems": {
+                                    "client": {
+                                        "params": {
+                                        }
+                                    },
+                                    "remote": {
+                                        "params": {
+                                            "cartId": "8010U000001DZhrQAG",
+                                            "fields": null,
+                                            "filters": null,
+                                            "hierarchy": -1,
+                                            "includeAttachment": false,
+                                            "items": [
+                                                {
+                                                    "itemId": "8020U000001TuDtQAK"
+                                                }
+                                            ],
+                                            "lastRecordId": null,
+                                            "methodName": "putCartsItems",
+                                            "pagesize": 20,
+                                            "price": true,
+                                            "query": null,
+                                            "validate": true
+                                        }
+                                    },
+                                    "rest": {
+                                        "link": null,
+                                        "method": null,
+                                        "params": {
+                                        }
+                                    }
+                                }
+                            },
+                            "attributeCategories": {
+                                "messages": [
+                                ],
+                                "records": [
+                                    {
+                                        "Code__c": "FTR_ENT_PRI_ATTCAT",
+                                        "Name": "Pricing Attributes",
+                                        "displaySequence": 10,
+                                        "id": "a7a55000000CjzsAAC",
+                                        "messages": [
+                                        ],
+                                        "productAttributes": {
+                                            "messages": [
+                                            ],
+                                            "records": [
+                                                {
+                                                    "attributeId": "a7b55000000CnQLAA0",
+                                                    "cloneable": true,
+                                                    "code": "ATTR_CONTRACT_TERM",
+                                                    "dataType": "text",
+                                                    "disabled": false,
+                                                    "displaySequence": 20,
+                                                    "filterable": false,
+                                                    "hasRules": false,
+                                                    "hidden": true,
+                                                    "inputType": "dropdown",
+                                                    "isNotTranslatable": false,
+                                                    "label": "Term",
+                                                    "messages": [
+                                                    ],
+                                                    "multiselect": false,
+                                                    "readonly": false,
+                                                    "required": true,
+                                                    "userValues": null,
+                                                    "values": [
+                                                        {
+                                                            "defaultSelected": false,
+                                                            "disabled": false,
+                                                            "displaySequence": 10,
+                                                            "id": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                                                            "label": "12 Months",
+                                                            "name": "acf430f3-5767-4418-ae26-7ec4b80dbc8d",
+                                                            "readonly": false,
+                                                            "value": "12 Months"
+                                                        },
+                                                        {
+                                                            "defaultSelected": false,
+                                                            "disabled": false,
+                                                            "displaySequence": 20,
+                                                            "id": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                                                            "label": "24 Months",
+                                                            "name": "7fca7a0e-1452-c879-31f2-baa9553ba1a9",
+                                                            "readonly": false,
+                                                            "value": "24 Months"
+                                                        },
+                                                        {
+                                                            "defaultSelected": false,
+                                                            "disabled": false,
+                                                            "displaySequence": 30,
+                                                            "id": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                                                            "label": "36 Months",
+                                                            "name": "3ce165f6-d467-6a31-f2bf-edbbcad82725",
+                                                            "readonly": false,
+                                                            "value": "36 Months"
+                                                        },
+                                                        {
+                                                            "defaultSelected": false,
+                                                            "disabled": false,
+                                                            "displaySequence": 40,
+                                                            "id": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                                                            "label": "60 Months",
+                                                            "name": "8782756f-f4d6-5b3a-951d-037e55539c20",
+                                                            "readonly": false,
+                                                            "value": "60 Months"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "totalSize": 1
+                                        }
+                                    },
+                                    {
+                                        "Code__c": "FTR_ENT_TECH_ATTCAT",
+                                        "Name": "Technical Attributes",
+                                        "displaySequence": 20,
+                                        "id": "a7a55000000CjzyAAC",
+                                        "messages": [
+                                        ],
+                                        "productAttributes": {
+                                            "messages": [
+                                            ],
+                                            "records": [
+                                                {
+                                                    "attributeId": "a7b0U0000008YQOQA2",
+                                                    "cloneable": true,
+                                                    "code": "ATTR_LB_NUMBER",
+                                                    "dataType": "text",
+                                                    "disabled": false,
+                                                    "displaySequence": 1,
+                                                    "filterable": false,
+                                                    "hasRules": false,
+                                                    "hidden": false,
+                                                    "inputType": "text",
+                                                    "isNotTranslatable": false,
+                                                    "label": "Loop Back Number",
+                                                    "messages": [
+                                                    ],
+                                                    "multiselect": false,
+                                                    "readonly": false,
+                                                    "required": false,
+                                                    "userValues": null,
+                                                    "values": [
+                                                        {
+                                                            "disabled": false,
+                                                            "readonly": false
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "totalSize": 1
+                                        }
+                                    }
+                                ],
+                                "totalSize": 2
+                            },
+                            "defaultQuantity": 1,
+                            "displaySequence": -1,
+                            "groupMaxQuantity": 99999,
+                            "groupMinQuantity": 0,
+                            "hasChildren": false,
+                            "isVirtualItem": false,
+                            "itemType": "lineItem",
+                            "maxQuantity": 99999,
+                            "messages": [
+                            ],
+                            "minQuantity": 0,
+                            "name": "SIP Loop Back Number",
+                            "productCategories": {
+                                "messages": [
+                                ],
+                                "totalSize": 0
+                            },
+                            "productChildItemDefinition": {
+                                "%vlocity_namespace%__ChildLineNumber__c": "1",
+                                "%vlocity_namespace%__CollapseHierarchy__c": false,
+                                "%vlocity_namespace%__IsOverride__c": false,
+                                "%vlocity_namespace%__IsRootProductChildItem__c": true,
+                                "%vlocity_namespace%__IsVirtualItem__c": false,
+                                "%vlocity_namespace%__MaxQuantity__c": 99999,
+                                "%vlocity_namespace%__MaximumChildItemQuantity__c": 99999,
+                                "%vlocity_namespace%__MinQuantity__c": 0,
+                                "%vlocity_namespace%__MinimumChildItemQuantity__c": 0,
+                                "%vlocity_namespace%__ParentProductId__c": "01t0U0000050OnsQAE",
+                                "%vlocity_namespace%__ParentProductId__r": {
+                                    "Id": "01t0U0000050OnsQAE",
+                                    "Name": "SIP Loop Back Number",
+                                    "RecordTypeId": "0120h000000cc4TAAQ",
+                                    "attributes": {
+                                        "type": "Product2",
+                                        "url": "/services/data/v52.0/sobjects/Product2/01t0U0000050OnsQAE"
+                                    }
+                                },
+                                "%vlocity_namespace%__Quantity__c": 1,
+                                "%vlocity_namespace%__SeqNumber__c": 1,
+                                "Name": "Root PCI",
+                                "attributes": {
+                                    "type": "%vlocity_namespace%__ProductChildItem__c"
+                                }
+                            },
+                            "productHierarchyPath": "01t0U0000050OnsQAE",
+                            "productId": "01t0U0000050OnsQAE",
+                            "sequenceNumber": 1
+                        }
+                    ],
+                    "totalSize": 1
+                },
+                "AddProductStatus": true,
+                "LoopBlockIterationIndex": 1,
+                "LoopBlockIterationStatus": true
+            }
+        ]
+    },
+    "AvailableUNIs": [
+        {
+            "DSATID": "1655695",
+            "FrameSize": "<=1600",
+            "Id": "8020U000001TuDUQA0",
+            "Mode": "Full Duplex",
+            "Name": "User to Network Interface (UNI) Port",
+            "PhysicalMedium": "Copper RJ45",
+            "PortSpeed": "1G"
+        }
+    ],
+    "Configure911": {
+        "ELINERL": {
+            "DIDNumber": null,
+            "ELINERLAddress-Block": {
+                "ELINERLAddress": null,
+                "ELINERLCity": null,
+                "ELINERLCountry": "United States",
+                "ELINERLState": null,
+                "ELINERLStreet": null,
+                "ELINERLZipCode": null
+            },
+            "ELINERLId": null,
+            "ELINERLName": null
+        },
+        "FTR911Provider": null,
+        "MainDesignatedSection": {
+            "MainDesignatedAddress-Block": {
+                "MainDesignatedAddress": null,
+                "MainDesignatedCity": null,
+                "MainDesignatedCountry": "United States",
+                "MainDesignatedState": null,
+                "MainDesignatedStreet": null,
+                "MainDesignatedZipCode": null
+            },
+            "MainDesignatedId": null,
+            "MainDesignatedName": null,
+            "MainDesignatedNumber": null
+        },
+        "x911Option": "Select 911 Option"
+    },
+    "ContextId": "8010U000001DZhrQAG",
+    "CurrentDIDLocationCount": 0,
+    "CurrentServiceLocation": {
+        "Address": "1 BIC Way, Shelton, CT  06484",
+        "City": "Shelton",
+        "Country": "United States",
+        "DIDLocations": [
+            {
+                "name": "123",
+                "value": "aH10U00000000MTSAY"
+            },
+            {
+                "name": "DID Location A",
+                "value": "aH10U00000000KNSAY"
+            },
+            {
+                "name": "ELIN ERL Location",
+                "value": "aH10U00000000L1SAI"
+            },
+            {
+                "name": "MAIN DES",
+                "value": "aH10U00000000LBSAY"
+            },
+            {
+                "name": "New DID 122PM",
+                "value": "aH10U00000000KXSAY"
+            },
+            {
+                "name": "PS ALI 2",
+                "value": "aH10U00000000LLSAY"
+            },
+            {
+                "name": "PS ALI Location",
+                "value": "aH10U00000000LGSAY"
+            },
+            {
+                "name": "test",
+                "value": "aH10U00000000LfSAI"
+            },
+            {
+                "name": "test 1",
+                "value": "aH10U00000000MdSAI"
+            },
+            {
+                "name": "Test 2",
+                "value": "aH10U00000000KSSAY"
+            },
+            {
+                "name": "test 2",
+                "value": "aH10U00000000MZSAY"
+            },
+            {
+                "name": "test 3",
+                "value": "aH10U00000000MiSAI"
+            }
+        ],
+        "Id": "0010U00001A1GFxQAN",
+        "Name": "1 BIC Way, Shelton, CT  06484",
+        "State": "CT",
+        "Street": "1 BIC Way",
+        "ZipCode": "06484",
+        "currentLocationIndex": 0
+    },
+    "DIDLocationDetails": {
+        "Address-Block": {
+            "Address": "1 BIC Way, Shelton, CT  06484",
+            "City": "Shelton",
+            "Country": "United States",
+            "State": "CT",
+            "Street": "1 BIC Way",
+            "ZipCode": "06484"
+        },
+        "AutoCallFailDestinationNumber": "1231231231",
+        "BTN": "8183316006",
+        "CallerIdPresentation": "Name and Number",
+        "ConnectLineIdScreening": null,
+        "DIDLocationId": "aH10U00000000MTSAY",
+        "DIDLocationName": "123",
+        "DIDTestNumber": "8183316006",
+        "DIDUNIAssoc": null,
+        "DigitsSentToCustomer": "7",
+        "InternationalDialing": null,
+        "InternationalDialingOptions": null,
+        "LoopbackId": "8020U000001TuDtQAK",
+        "LoopbackNumber": "1111111111",
+        "NPA": null,
+        "NXX": null,
+        "NumberOfAvailableUNIs": 1,
+        "NumberOfCallPaths": 8
+    },
+    "DIDNumbers": [
+        {
+            "DIDLocationId": "aH10U00000000MTSAY",
+            "DIDNumber": "1231231231",
+            "Feature": "N/A",
+            "Id": "aH20U00000000DGSAY",
+            "RateCenter": "123123123123",
+            "Status": "Unassigned",
+            "ThirdParty": "No"
+        }
+    ],
+    "Finished": false,
+    "LoopBackProductCode": "SIP_LOOP_BACK_NUMBER",
+    "Qualification": "",
+    "SelectServiceLocation": {
+        "CountOfLocations": 1,
+        "CurrentLocationId": "0010U00001A1GFxQAN",
+        "CurrentLocationLit": false,
+        "CurrentLocationName": "1 BIC Way, Shelton, CT  06484",
+        "ExistingDIDLocations": "123",
+        "NumberOfDIDLocations": 1,
+        "PrimaryLocationId": null,
+        "SelectNewOrEixstingDID": "Existing",
+        "ServiceLocations": null
+    },
+    "SelectedDIDLocation": "aH10U00000000MTSAY",
+    "SelectedUNIs": "",
+    "ServiceAccounts": [
+        {
+            "Address": "1 BIC Way, Shelton, CT  06484",
+            "City": "Shelton",
+            "Country": "United States",
+            "DIDLocations": [
+                {
+                    "name": "123",
+                    "value": "aH10U00000000MTSAY"
+                },
+                {
+                    "name": "DID Location A",
+                    "value": "aH10U00000000KNSAY"
+                },
+                {
+                    "name": "ELIN ERL Location",
+                    "value": "aH10U00000000L1SAI"
+                },
+                {
+                    "name": "MAIN DES",
+                    "value": "aH10U00000000LBSAY"
+                },
+                {
+                    "name": "New DID 122PM",
+                    "value": "aH10U00000000KXSAY"
+                },
+                {
+                    "name": "PS ALI 2",
+                    "value": "aH10U00000000LLSAY"
+                },
+                {
+                    "name": "PS ALI Location",
+                    "value": "aH10U00000000LGSAY"
+                },
+                {
+                    "name": "test",
+                    "value": "aH10U00000000LfSAI"
+                },
+                {
+                    "name": "test 1",
+                    "value": "aH10U00000000MdSAI"
+                },
+                {
+                    "name": "Test 2",
+                    "value": "aH10U00000000KSSAY"
+                },
+                {
+                    "name": "test 2",
+                    "value": "aH10U00000000MZSAY"
+                },
+                {
+                    "name": "test 3",
+                    "value": "aH10U00000000MiSAI"
+                }
+            ],
+            "Id": "0010U00001A1GFxQAN",
+            "Name": "1 BIC Way, Shelton, CT  06484",
+            "State": "CT",
+            "Street": "1 BIC Way",
+            "ZipCode": "06484",
+            "currentLocationIndex": 0
+        }
+    ],
+    "VOIPQualifications": [
+        {
+            "AvailableVOIP": "Level 3",
+            "E911Type": "NOMADIC",
+            "Id": "aH60U0000000EaESAU",
+            "IsThirdParty": true,
+            "LATA": "730",
+            "NPA": 818,
+            "NXX": 331,
+            "OCN": "6006",
+            "OCNName": "CELLCO PARTNERSHIP DBA VERIZON WIRELESS - CA",
+            "RateCenter": "BURBANK:BURBANK DA",
+            "ServiceAccountId": "0010U00001A1GFxQAN",
+            "ServiceAccountName": "1 BIC Way, 06484",
+            "State": "CA"
+        },
+        {
+            "AvailableVOIP": "Level 3",
+            "E911Type": "NOMADIC",
+            "Id": "aH60U0000000EaYSAU",
+            "IsThirdParty": true,
+            "LATA": "730",
+            "NPA": 818,
+            "NXX": 333,
+            "OCN": "7453",
+            "OCNName": "US TELEPACIFIC CORP. - CA",
+            "RateCenter": "BURBANK:BURBANK DA",
+            "ServiceAccountId": "0010U00001A1GFxQAN",
+            "ServiceAccountName": "1 BIC Way, 06484",
+            "State": "CA"
+        }
+    ],
+    "VoipQualUpsertResult": "",
+    "contextId": "8010U000001DZhrQAG",
+    "id": "a9p0U0000000BdBQAU",
+    "isdtp": "p1",
+    "layout": "lightning",
+    "sfdcIFrameHost": "web",
+    "sfdcIFrameOrigin": "https://ftr--vltdev22--vlocity-cmt.visualforce.com",
+    "timeStamp": "2021-06-02T15:42:30.834Z",
+    "totalDIDNumberRecordCount": 1,
+    "userCurrencyCode": "USD",
+    "userId": "0050h00000IQYfgAAH",
+    "userIsProvisioner": true,
+    "userName": "eric.marcondes@ftr.com.vltdev22",
+    "userProfile": "Frontier System Administrator",
+    "userTimeZone": -420,
+    "vlcPersistentComponent": {
+    }
+}

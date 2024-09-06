@@ -1,0 +1,22 @@
+Org: shayan.shahid@nespon.com.qaucfv2
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity1
+TotalTime: 3m 40s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - OrchestrationDependencyDefinition/87f27f70-db34-e016-489b-800564ba98d3 -- DataPack >> UCFMDNWaitForInitiateDIDLeadOrder To UCF MDNSubmitDIDLeadGroupOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF MDNWaitForInitiateDIDLeadOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=UCF DPI Main Directory Number (System Code)
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 49
+  Error: 1
+id: !<tag:yaml.org,2002:js/undefined> ''

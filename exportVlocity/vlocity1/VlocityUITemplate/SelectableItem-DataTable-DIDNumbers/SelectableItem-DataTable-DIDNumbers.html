@@ -1,0 +1,252 @@
+<div class='slds-col_padded slds-size_1-of-1 customer-info-table' ng-controller="customTableControllerDID" ng-hide="child.eleArray[0].propSetMap.hide">
+	<label ng-hide="child.eleArray[0].propSetMap.osName == 'UCF Enrichment'" class="slds-form-element__label vlc-slds-selItem__label" style="margin-right: auto;">
+		Automated bulk reservation coming soon...
+	</label>
+	<div style="margin-bottom: 1rem; margin-top: 1rem;" class="slds-grid">
+		<div class="slds-medium-size--1-of-2" style="flex-direction: row; display: flex;margin-right: auto;" >
+			<div class="slds-size--1-of-1 slds-medium-size--3-of-12 vlc-slds-remote-action--button"  style="width:min-content;">
+				<label class="slds-truncate" for="search-DIDNumber-table">
+					Search:
+				</label>
+				<input ng-model="table.q" type="text" class="slds-input" id="search-DIDNumber-table" />
+			</div>
+			<div style="    margin-top: auto;" class="slds-size--1-of-1 slds-medium-size--3-of-12 vlc-slds-remote-action--button" title='Search' ng-click="getData()">
+				<div class="slds-form-element__control">
+					<div class="vlc-control-wrapper">
+					
+						<div class="slds-box " role="button" tabindex="0">
+							<p class="ng-binding">Search</p>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slds-medium-size--1-of-2" style="align-self: flex-end; display: flex; flex-direction: row;">
+			<div class="slds-size--1-of-1 slds-medium-size--3-of-12 vlc-slds-remote-action--button" style="margin: auto 0 0 auto;" title='Download Template' ng-if="child.eleArray[0].propSetMap.donwloadTemplate" ng-click="downloadTemplate()" >
+				<div class="slds-form-element__control">
+					<div class="vlc-control-wrapper">
+					
+						<div class="slds-box " role="button" tabindex="0">
+							<p class="ng-binding">Download Template</p>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+			<div ng-if="uploadResult.msg" class="slds-col" ng-class="{ 'slds-text-color_error' : uploadResult.error, 'slds-text-color_success' : !uploadResult.error }" style="margin-right: 1rem;margin-top: 0.4rem;text-align: right;"> 
+				{{uploadResult.msg}}
+			</div>
+			<div class="slds-size--1-of-1 slds-medium-size--3-of-12 vlc-slds-remote-action--button" style="margin: auto 0 0 1rem;" title='{{table.columns}}' >
+				<label for="csvUpload" ng-if="(bpTree.response.SelectServiceLocation.userCanEdit == true || bpTree.response.userCanEdit == true)">
+				<div class="slds-form-element__control">
+					<div class="vlc-control-wrapper">
+					
+						<div class="slds-box" role="button" tabindex="0">
+							<p class="ng-binding">Upload CSV</p>
+						</div>
+					
+					</div>
+				</div>
+				</label>
+			</div>
+			<input id="csvUpload" accept=".csv" style="display:none;" type="file" file-reader="fileContent" />
+			<div class="slds-size--1-of-1 slds-medium-size--3-of-12 vlc-slds-remote-action--button" style="margin: auto 0 0 1rem;" title='Generate Report' ng-if="!child.eleArray[0].propSetMap.isUCF" ng-click="openDIDNumberView(true)">
+				<div class="slds-form-element__control">
+					<div class="vlc-control-wrapper">
+					
+						<div class="slds-box " role="button" tabindex="0">
+							<p class="ng-binding">Generate Report</p>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<table class="slds-card slds-table slds-table_bordered slds-table_cell-buffer">
+		<thead>
+			<tr  class="slds-text-heading_small list-row">
+				<th class="slds-cell-shrink" ng-if="child.eleArray[0].propSetMap.selectable  && (bpTree.response.SelectServiceLocation.userCanEdit == true || bpTree.response.userCanEdit == true)">
+					<span class="slds-checkbox">
+						<input ng-click="toggleAll($event)" ng-model="table.isAllSelected" type="checkbox" id="table-data-header" />
+						<label for="table-data-header" class="slds-checkbox__label" >
+							<span class="slds-checkbox_faux"></span>
+						</label>
+					</span>
+				</th>
+				<th ng-repeat="col in child.eleArray[0].propSetMap.columns" scope="col" class="list-row" ng-click='sortColumn(col.apiName)'>
+					<div class="slds-truncate">{{col.label}}</div>
+				</th>
+				<th scope="col" class="list-row" ng-click='sortColumn(col.apiName)' style="text-align: center;">
+					<div class="slds-truncate">Actions</div>
+				</th>
+				<!-- <th style="    text-align: center;"> -->
+					<!-- <slds-svg-icon aria-hidden="true"
+						sprite="'utility'"
+						icon="'refresh'"
+						title="Refresh Table"
+						size="'small'"
+						ng-click="refreshTable()"
+						extra-classes="'slds-button__icon slds-button__icon--small'">
+					</slds-svg-icon> -->
+				<!-- </th> -->
+			</tr>
+		</thead>
+		<tbody id="table-to-refresh">
+			<tr ng-repeat='record in table.data | orderBy:sort.column:sort.descending | limitTo:table.pageSize' class="list-row">
+				<td class="slds-cell-shrink" ng-if="child.eleArray[0].propSetMap.selectable && (bpTree.response.SelectServiceLocation.userCanEdit == true || bpTree.response.userCanEdit == true)">
+					<span class="slds-checkbox">
+						<input ng-model="record.selected" ng-change="optionToggled()" type="checkbox" id="table-data-{{record.Id}}-{{$index}}" />
+						<label for="table-data-{{record.Id}}-{{$index}}" class="slds-checkbox__label" >
+							<span class="slds-checkbox_faux"></span>
+						</label>
+					</span>
+				</td>
+				<td ng-repeat='col in child.eleArray[0].propSetMap.columns' ng-if="!record.editMode">
+					<label class="slds-truncate" ng-if="col.type != 'phone'">{{record[col.apiName]}}</label>
+					<label class="slds-truncate" ng-if="col.type == 'phone' ">{{ record[col.apiName] | tel }}</label>
+				</td>
+				<td ng-repeat='col in child.eleArray[0].propSetMap.columns' ng-if="record.editMode">
+
+					<!-- Text Input box -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'text'">
+						<input  ng-model="record[col.apiName]" type="text" class="slds-input"  />
+					</label>
+					<div>
+
+						<!-- Text Input box -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'number'">
+						<input  ng-model="record[col.apiName]" type="number" class="slds-input"  />
+					</label>
+					<div>
+					
+					<!-- Phone Input box -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'phone'">
+						<input  ng-model="record[col.apiName]" type="tel" ui-mask="(999) 999-9999" class="slds-input"  />
+					</label>
+					<div>
+					
+					<!-- Checkbox Input -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'checkbox'">
+						<span class="slds-checkbox">
+							<input  ng-model="record[col.apiName]" type="checkbox" id="table-data-{{record[col.apiName]}}-{{$index}}" ng-true-value="'Yes'" ng-false-value="'No'" />
+							<label for="table-data-{{record[col.apiName]}}-{{$index}}" class="slds-checkbox__label" >
+								<span class="slds-checkbox_faux"></span>
+							</label>
+						</span>
+					</label>
+					<div>
+
+					<!-- Dropdown Input -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'dropdown'">
+							<select  ng-model="record[col.apiName]" class="slds-select slds-input">
+								<option ng-repeat="option in col.options" value="{{option}}">{{option}}</option>
+							</select>
+					</label>
+					</div>
+				</td>
+				<td>
+					<button style="padding: 0 1rem;" class="slds-button" ng-click="toggleEditMode(record)" ng-if="(bpTree.response.SelectServiceLocation.userCanEdit == true || bpTree.response.userCanEdit == true)">
+						<p ng-if="!record.editMode">Edit</p>
+						<p ng-if="record.editMode">Save</p>
+					</button>
+				</td>
+			</tr>
+
+			<!-- New Record -->
+			<tr class="list-row" ng-init="resetNewRecord()" style="line-height: 3rem; background: whitesmoke;" ng-if="(bpTree.response.SelectServiceLocation.userCanEdit == true || bpTree.response.userCanEdit == true)">
+				<td title='Clear' class="slds-cell-shrink" ng-if="child.eleArray[0].propSetMap.selectable">
+					<span ng-click="resetNewRecord();" id="clear-btn">X</span>
+				</td>
+
+				<td ng-repeat='col in child.eleArray[0].propSetMap.columns' ng-if="newRecord.editMode">
+
+					<!-- Text Input box -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'text'">
+						<input ng-model="newRecord[col.apiName]" type="text" class="slds-input"  />
+					</label>
+					<div>
+
+					<!-- Number Input box -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'number'">
+						<input ng-model="newRecord[col.apiName]" type="number" class="slds-input"  />
+					</label>
+					<div>
+					
+					<!-- Phone Input box -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'phone'">
+						<input ng-model="newRecord[col.apiName]" type="tel" ui-mask="(999) 999-9999" class="slds-input"  />
+					</label>
+					<div>
+					
+					<!-- Checkbox Input -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'checkbox'">
+						<span class="slds-checkbox">
+							<input ng-model="newRecord[col.apiName]" type="checkbox" id="table-data-{{newRecord[col.apiName]}}-{{$index}}" ng-true-value="'Yes'" ng-false-value="'No'" />
+							<label for="table-data-{{newRecord[col.apiName]}}-{{$index}}" class="slds-checkbox__label" >
+								<span class="slds-checkbox_faux"></span>
+							</label>
+						</span>
+					</label>
+					<div>
+
+					<!-- Dropdown Input -->
+					<div>
+					<label class="slds-truncate" ng-if="col.type == 'dropdown'">
+						<select  ng-model="newRecord[col.apiName]" class="slds-select slds-input">
+							<option ng-repeat="option in col.options" value="{{option}}">{{option}}</option>
+						</select>
+					</label>
+					</div>
+				</td>
+				<td>
+					<button style="padding: 0 1rem;" class="slds-button" ng-click="addRecord(newRecord); ">
+						<p ng-if="newRecord.editMode">Add</p>
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div ng-if="addErrorMsg" class="slds-text-color_error" style="font-size: 0.9rem; padding: 0.5rem;"> 
+		{{addErrorMsg}}
+	</div>
+	<div class="slds-grid slds-m-top_medium slds-m-bottom_large"> 
+		<div class="slds-medium-size--2-of-12 vlc-slds-remote-action--button" >
+			<div class="slds-form-element__control" ng-click="deleteSelectedRecords()">
+				<div class="vlc-control-wrapper" ng-if="table.data.length > 0 && table.isAnySelected()">
+				
+					<div class="slds-box" style="background: rgb(186, 5, 23)" role="button" tabindex="0">
+						<p class="ng-binding">Delete DID #s</p>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		<div class="slds-grid pagination" ng-if="table.totalRecordCount > table.pageSize && table.data.length > 0">
+			<p class="content" style="width:100%;">
+				Page {{table.currentPage+1}} of {{numberOfPages()}}. </p>
+			<div class="slds-grid" style="width:100%;place-content: flex-end;">
+				<div style="padding:0.5rem;">
+					<button class="slds-button slds-button_icon slds-button_icon-border" title="Previous" ng-click="previousHandler()" ng-disabled="table.currentPage == 0">
+						<span class="arrow left"></span>
+					</button>
+				</div>
+				<div style="padding:0.5rem;">
+					<button class="slds-button slds-button_icon slds-button_icon-border" title="Next" ng-click="nextHandler()" ng-disabled="table.currentPage >= table.totalRecordCount/table.pageSize - 1">
+						<span class="arrow right"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>

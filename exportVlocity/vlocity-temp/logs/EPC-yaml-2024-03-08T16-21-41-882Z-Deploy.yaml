@@ -1,0 +1,40 @@
+Org: shayan.shahid@nespon.com.ftr.dmymarmjr
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity2
+TotalTime: 9m 17s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - OrchestrationItemDefinition/UCF MDN WaitDPIOrderStatusEvent_DPI UCF DID MDN Order Billing Plan -- DataPack >> UCF MDN WaitDPIOrderStatusEvent -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - Product2/1556a173-b97c-f551-5f15-0f4488a6153b -- DataPack >> UCF DPI DID MDN Billing RFS -- Error Message -- No match found for %vlocity_namespace%__AttributeAssignment__c.%vlocity_namespace%__AttributeId__c - %vlocity_namespace%__Code__c=ATTR_DIDType (System Code)
+  - |-
+    PriceList/FTR_ENT_PL -- DataPack >> Enterprise -- Error Message -- %vlocity_namespace%.PricingElement: execution of BeforeUpdate
+
+    caused by: %vlocity_namespace%.PricingElementTriggerHandler.PricingElementTriggerHandlerException: Script-thrown exception
+
+    (System Code)
+  - OrchestrationItemDefinition/UCF PushLeadOrder_DPI UCF DID MDN Order Billing Plan -- DataPack >> UCF PushLeadOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/68a0d68b-bbed-4491-3d73-d852024a2cc8 -- DataPack >> Start Order To UCF WaitForInitiateDIDMDNOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF WaitToInitiateMDNOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationItemDefinition/UCF Create DPI MDN ServiceOrder_DPI UCF DID MDN Order Billing Plan -- DataPack >> UCF Create DPI MDN ServiceOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/8d72e232-dd18-e166-7373-fccc0bb4d6ed -- DataPack >> UCF MDNRetrieveCustomerFacilities To UCF SubmitMDNGroupOrderMember -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF MDNRetrieveCustomerFacilities AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/124ee080-a36d-83a1-cbac-5e4c179bd17c -- DataPack >> UCF PushLeadOrder To UCF MDN WaitDPIOrderStatusEvent -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF PushLeadOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/74418964-455d-a35c-d547-fecbd1eb526b -- DataPack >> UCF MDN WaitDPIOrderStatusEvent To Wait To Assetize -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF MDN WaitDPIOrderStatusEvent AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/f6a486d6-6d94-d1cc-7911-70a1ddd7f87d -- DataPack >> UCF Create DPI MDN ServiceOrder To UCF PushLeadOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF PushLeadOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/7a0c92d1-58d0-3437-7a60-758defc3d54b -- DataPack >> UCF MDN PublishGrpOrderStatusUpdate To UCF PushLeadOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF PushLeadOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/87f27f70-db34-e016-489b-800564ba98d3 -- DataPack >> UCFMDNWaitForInitiateDIDLeadOrder To UCF MDNSubmitDIDLeadGroupOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF MDNWaitForInitiateDIDLeadOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=UCF DPI Main Directory Number (System Code)
+  - OrchestrationDependencyDefinition/96701055-1586-9c4f-5815-891832e9711e -- DataPack >> UCF SubmitMDNGroupOrderMember To UCF Create DPI MDN ServiceOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF Create DPI MDN ServiceOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - Product2/7b072b22-d985-8c27-dff2-1cf94d7fe937 -- DataPack >> UCF DC 711 -- Error Message -- This DataPack has a reference to another object which was not found -- Product2/1556a173-b97c-f551-5f15-0f4488a6153b
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 34
+  Error: 14
+id: !<tag:yaml.org,2002:js/undefined> ''

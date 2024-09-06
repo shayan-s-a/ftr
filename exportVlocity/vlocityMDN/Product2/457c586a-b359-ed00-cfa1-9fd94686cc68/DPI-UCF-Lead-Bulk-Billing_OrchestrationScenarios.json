@@ -1,0 +1,50 @@
+[
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "",
+        "%vlocity_namespace%__GlobalKey__c": "54dd2941-8d03-5410-8e4f-61a3661143db",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "DPI UCF DID Lead Order Billing Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/DPI UCF DID Lead Order Billing Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "457c586a-b359-ed00-cfa1-9fd94686cc68",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/457c586a-b359-ed00-cfa1-9fd94686cc68",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "457c586a-b359-ed00-cfa1-9fd94686cc68",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "UCF DID Lead Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/UCF DID Lead Scenario/54dd2941-8d03-5410-8e4f-61a3661143db/Product2/457c586a-b359-ed00-cfa1-9fd94686cc68"
+    },
+    {
+        "%vlocity_namespace%__Action__c": "Add",
+        "%vlocity_namespace%__ConditionData__c": "{\"type\":\"SIMPLE\",\"left-side\":\"ATTR_DIDCount\",\"left-side-type\":\"attribute\",\"left-side-datatype\":\"Text\",\"op\":\">=\",\"right-side\":\"2\",\"left-side-name\":\"UCF DID Count\",\"left-side-category\":\"Decomposition Attributes\"}",
+        "%vlocity_namespace%__GlobalKey__c": "bd151f21-c0f0-5781-2ed7-85b96e1af810",
+        "%vlocity_namespace%__OrchestrationPlanDefinitionId__c": {
+            "Name": "DPI UCF DID Bulk Order Billing Plan",
+            "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
+            "VlocityLookupRecordSourceKey": "%vlocity_namespace%__OrchestrationPlanDefinition__c/DPI UCF DID Bulk Order Billing Plan",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        "%vlocity_namespace%__OrchestrationPlanId__c": "",
+        "%vlocity_namespace%__Product2Id__c": {
+            "%vlocity_namespace%__GlobalKey__c": "457c586a-b359-ed00-cfa1-9fd94686cc68",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "Product2/457c586a-b359-ed00-cfa1-9fd94686cc68",
+            "VlocityRecordSObjectType": "Product2"
+        },
+        "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "457c586a-b359-ed00-cfa1-9fd94686cc68",
+        "%vlocity_namespace%__SubAction__c": "",
+        "Name": "UCF DID Bulk Scenario",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OrchestrationScenario__c",
+        "VlocityRecordSourceKey": "%vlocity_namespace%__OrchestrationScenario__c/UCF DID Bulk Scenario/bd151f21-c0f0-5781-2ed7-85b96e1af810/Product2/457c586a-b359-ed00-cfa1-9fd94686cc68"
+    }
+]

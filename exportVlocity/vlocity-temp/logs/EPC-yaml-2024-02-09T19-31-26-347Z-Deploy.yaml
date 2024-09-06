@@ -1,0 +1,25 @@
+Org: touqeer.khan@nespon.com.dmyfeboc1
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity1
+TotalTime: 2m 7s
+Count:
+  Error: {}
+Errors:
+  - |-
+    PriceList/FTR_ENT_PL -- DataPack >> Enterprise -- Error Message -- %vlocity_namespace%.PricingElement: execution of BeforeInsert
+
+    caused by: %vlocity_namespace%.PricingElementTriggerHandler.PricingElementTriggerHandlerException: Script-thrown exception
+
+    (System Code)
+Status:
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 0
+  Error: 1
+id: !<tag:yaml.org,2002:js/undefined> ''

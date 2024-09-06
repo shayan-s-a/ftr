@@ -1,0 +1,51 @@
+{
+    "%vlocity_namespace%__Active__c": true,
+    "%vlocity_namespace%__OmniScriptId__c": {
+        "Name": "UCF Enrichment OS",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+    },
+    "%vlocity_namespace%__ParentElementId__c": {
+        "%vlocity_namespace%__OmniScriptId__c": {
+            "Name": "UCF Enrichment OS",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+        },
+        "Name": "DIDLocationDetails",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English/DIDLocationDetails",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
+    },
+    "%vlocity_namespace%__ParentElementName__c": "DIDLocationDetails",
+    "%vlocity_namespace%__ParentElementType__c": "Step",
+    "%vlocity_namespace%__PropertySet__c": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "disOnTplt": false,
+        "label": "VOIP Qualification Response",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "Qualification:success"
+                    }
+                ]
+            }
+        },
+        "text": "<h2 style=\"padding: 1rem 0px;\">VOIP Qualification Details</h2>\n<p></p>\n<table>\n<tbody>\n<tr style=\"height: 16px;\">\n<td style=\"padding: .5rem 0; width: 118px; height: 16px;\">\n<div>\n<div><strong>NPA</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 427px; height: 16px;\">%Qualification:NPA%</td>\n<td style=\"padding: .5rem 0; width: 184px; height: 16px;\"><strong>NXX</strong></td>\n<td style=\"padding: .5rem 0; width: 447px; height: 16px;\">%Qualification:NXX%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"padding: .5rem 0; width: 118px; height: 16px;\">\n<div>\n<div><strong>OCN</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 427px; height: 16px;\">%Qualification:OCN%</td>\n<td style=\"padding: .5rem 0; width: 184px; height: 16px;\">\n<div>\n<div><strong>OCNName</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 447px; height: 16px;\">%Qualification:OCNName%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"padding: .5rem 0; width: 118px; height: 16px;\">\n<div>\n<div><strong>LATA</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 427px; height: 16px;\">%Qualification:LATA%</td>\n<td style=\"padding: .5rem 0; width: 184px; height: 16px;\">\n<div>\n<div><strong>State</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 447px; height: 16px;\">%Qualification:State%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"padding: .5rem 0; width: 118px; height: 16px;\">\n<div>\n<div><strong>RateCenter</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 427px; height: 16px;\">&nbsp;%Qualification:RateCenter%</td>\n<td style=\"padding: .5rem 0; width: 184px; height: 16px;\">\n<div>\n<div><strong>AvailableVOIP</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 447px; height: 16px;\">%Qualification:AvailableVOIP%</td>\n</tr>\n<tr style=\"height: 16px;\">\n<td style=\"padding: .5rem 0; width: 118px; height: 16px;\">\n<div>\n<div><strong>E911Type</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 427px; height: 16px;\">%Qualification:E911Type%</td>\n<td style=\"padding: .5rem 0; width: 184px; height: 16px;\">\n<div>\n<div><strong>IsThirdParty</strong></div>\n</div>\n</td>\n<td style=\"padding: .5rem 0; width: 447px; height: 16px;\">%Qualification:IsThirdParty%</td>\n</tr>\n</tbody>\n</table>\n<div id=\"insext\"></div>",
+        "textKey": ""
+    },
+    "%vlocity_namespace%__ReusableOmniScript__c": false,
+    "%vlocity_namespace%__Type__c": "Text Block",
+    "Name": "VOIPQualificationResponse",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/Order/UCFEnrichment/English/VOIPQualificationResponse"
+}

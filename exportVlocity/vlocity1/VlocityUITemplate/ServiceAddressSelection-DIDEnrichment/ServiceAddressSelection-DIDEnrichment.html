@@ -1,0 +1,41 @@
+<div class='nds-col_padded nds-size_1-of-1 vlt-radio-button-ftr' ng-controller="ServiceAddressSelectionController">
+	<fieldset class="slds-form-element">
+		<div class="slds-form-element__control" ng-repeat="record in bpTree.response.ServiceAccounts">
+			<span class="slds-radio">
+				<input
+					ng-model="bpTree.response.SelectServiceLocation.CurrentLocationId"
+					value="{{record.Id}}"
+					type="radio"
+					id="ServiceAddress-{{record.Id}}"
+					name="required"
+				/>
+				<label
+					class="slds-radio__label"
+					for="ServiceAddress-{{record.Id}}"
+				>
+					<span class="slds-radio_faux"></span>
+					<span style="font-size: .9rem;color: #00396b;font-weight: 300;"
+						class="slds-form-element__label " 
+					>
+						{{record.Name}}
+					</span>
+				</label>
+			</span>
+			<!-- <span ng-show="bpTree.response.SelectServiceLocation.CurrentLocationId == record.Id">
+				<div class="slds-form-element" style="padding-left: 2rem;">
+					<div class="slds-form-element__control">
+						<label class="slds-form-element__label" for="review-{{option.DIDLocationDetails.DIDLocation}}">
+							<span class="slds-form-element__label" style="font-size: 14px;">Review an existing DID Location?</span>
+						</label>
+						<select  ng-model="DIDSelection" class="slds-select slds-input" id="review-{{option.DIDLocationDetails.DIDLocation}}">
+							<option ng-repeat="option in bpTree.response.DIDLocations" ng-value="{{option}}">{{option.Qualification.NPA}} {{option.Qualification.NXX}}: {{option.DIDLocationDetails.DIDLocationName}}</option>
+						</select>
+					</div>
+				</div>
+				<span class="nds-checkbox_faux"></span>
+			</span>
+		</div> -->
+		<!-- <div style="margin-bottom: 1rem;"> -->
+		</div>
+	</fieldset>
+</div>

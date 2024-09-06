@@ -1,0 +1,27 @@
+{
+    "%vlocity_namespace%__CustomJavaScript__c": "Order_UCFAutoAddProduct_SampleInput.json",
+    "%vlocity_namespace%__DisableMetadataCache__c": false,
+    "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "%vlocity_namespace%__Element__c": [
+        "Order_UCFAutoAddProduct_Element_UCFfindProductToAdd.json",
+        "Order_UCFAutoAddProduct_Element_GetUCFProductToAddByProductCode.json",
+        "Order_UCFAutoAddProduct_Element_LoopOnLocation.json",
+        "Order_UCFAutoAddProduct_Element_AddProduct.json",
+        "Order_UCFAutoAddProduct_Element_UpdateSNEs.json",
+        "Order_UCFAutoAddProduct_Element_ResponseAction1.json"
+    ],
+    "%vlocity_namespace%__IsLwcEnabled__c": false,
+    "%vlocity_namespace%__IsProcedure__c": true,
+    "%vlocity_namespace%__IsReusable__c": false,
+    "%vlocity_namespace%__IsTest__c": false,
+    "%vlocity_namespace%__Language__c": "Procedure",
+    "%vlocity_namespace%__OmniProcessType__c": "Integration Procedure",
+    "%vlocity_namespace%__ProcedureKey__c": "Order_UCFAutoAddProduct",
+    "%vlocity_namespace%__PropertySet__c": "Order_UCFAutoAddProduct_PropertySet.json",
+    "%vlocity_namespace%__SubType__c": "UCFAutoAddProduct",
+    "%vlocity_namespace%__Type__c": "Order",
+    "Name": "UCF Add product for each Service Account",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+    "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/Order/UCFAutoAddProduct/Procedure"
+}

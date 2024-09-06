@@ -1,0 +1,22 @@
+Org: shayan.shahid@nespon.com.ftr.dmymarmjr
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity2
+TotalTime: 3m 21s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - OrchestrationDependencyDefinition/dd500759-03fe-3fc6-253f-acc737141305 -- DataPack >> DC Status Event To Wait To Assetize -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=Wait to DPI DC Order Status Event AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI DC Billing Plan (System Code)
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 16
+  Error: 1
+id: !<tag:yaml.org,2002:js/undefined> ''

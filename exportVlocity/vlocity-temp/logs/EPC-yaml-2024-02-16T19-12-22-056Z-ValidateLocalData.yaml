@@ -1,0 +1,29 @@
+Org: shayan.shahid@nespon.com.qaucfv2
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: ValidateLocalData
+ProjectPath: vlocity1
+TotalTime: 0m 25s
+Count:
+  Remaining: {}
+Errors:
+  - AttributeCategory/FTR_ENT_CUSTOMERORDER_ATTCAT - Attribute__c - SIP_MR_RecurringCharge - Duplicate Global Key - cb41507f-5c42-9504-e6cc-aa5c8f8c29fe
+  - AttributeCategory/FTR_ENT_CUSTOMERORDER_ATTCAT - Attribute__c - SIP_NA_Term - Duplicate Global Key - 1036bcf9-b93a-b1cd-cbcb-f32df1e6496d
+  - AttributeCategory/FTR_ENT_FULFILMENT_ATTCAT - Attribute__c - No Of Location - Duplicate Global Key - c0f88879-442c-4b67-6c1d-650817722053
+  - "AttributeCategory/FTR_ENT_TECH_ATTCAT - Attribute__c - MANAGED\_DEVICE\_KIT - Duplicate Global Key - dfefe119-5869-f9ee-9f53-4641c347a98f"
+  - "AttributeCategory/FTR_ENT_TECH_ATTCAT - Attribute__c - PSR_MANAGED\_DEVICE\_HANDOFF - Duplicate Global Key - b21c829c-9776-48c1-f381-2add6b650d3e"
+  - AttributeCategory/FTR_ENT_TECH_ATTCAT - Attribute__c - NNI/UNI Code - Duplicate Global Key - e437322a-b4d4-c372-a88c-09ecbe6badb3
+  - AttributeCategory/FTR_ENT_TECH_ATTCAT - Attribute__c - No Of SIP Trunks - Duplicate Global Key - fbe181b3-c3a3-4898-3c95-85fbc70bd976
+  - AttributeCategory/FTR_ENT_USERDATA_ATTCAT - Attribute__c - PSR_ENTR_DOMAIN_ID - Duplicate Global Key - 40ff4a5f-875f-2617-c400-a0077db8bb14
+  - "AttributeCategory/FTR_ENT_USERDATA_ATTCAT - Attribute__c - PSR_HIGH\_AVAILABILITY - Duplicate Global Key - 245c0cee-9b45-99a8-b2b9-1ea8ebc544bf"
+  - AttributeCategory/FTR_ENT_USERDATA_ATTCAT - Attribute__c - PSR_NSG_TYPE - Duplicate Global Key - 7af5370b-1cde-e274-2083-e921e7620ff0
+Status:
+  Remaining: {}
+StatusCount:
+  Remaining: 208
+  Success: 0
+  Error: 0
+id: !<tag:yaml.org,2002:js/undefined> ''

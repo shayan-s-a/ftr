@@ -1,0 +1,50 @@
+Org: shayan.shahid@nespon.com.ftr.dmymarmjr
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity2
+TotalTime: 7m 8s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - OrchestrationItemDefinition/UCF WaitForDIDLeadOrderStatusEvent_DPI UCF DID Lead Order Billing Plan -- DataPack >> UCF WaitForDIDLeadOrderStatusEvent -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID Lead Order Billing Plan (System Code)
+  - Product2/1556a173-b97c-f551-5f15-0f4488a6153b -- DataPack >> UCF DPI DID MDN Billing RFS -- Error Message -- No match found for %vlocity_namespace%__AttributeAssignment__c.%vlocity_namespace%__AttributeId__c - %vlocity_namespace%__Code__c=ATTR_DIDType (System Code)
+  - |-
+    PriceList/FTR_ENT_PL -- DataPack >> Enterprise -- Error Message -- %vlocity_namespace%.PricingElement: execution of BeforeUpdate
+
+    caused by: %vlocity_namespace%.PricingElementTriggerHandler.PricingElementTriggerHandlerException: Script-thrown exception
+
+    (System Code)
+  - OrchestrationItemDefinition/UCF WaitForDIDBulkOrderStatusEvent_DPI UCF DID Bulk Order Billing Plan -- DataPack >> UCF WaitForDIDBulkOrderStatusEvent -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/0c16887e-a613-ced1-ef36-149af8a7dee6 -- DataPack >> UCF RetrieveCustomerFacilities To  UCF SubmitDIDLeadGroupOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF RetrieveCustomerFacilities AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Lead Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/9f89f746-5363-b6a5-3721-fb78598fadd8 -- DataPack >> UCFWaitForInitiateLeadOrder To UCF FulFillLeadBulkOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF WaitForInitiateDIDLeadOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Lead Order Billing Plan (System Code)
+  - OrchestrationItemDefinition/UCF WaitForLeadDIDOrder_DPI UCF DID Bulk Order Billing Plan -- DataPack >> UCF WaitForLeadDIDOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - Product2/457c586a-b359-ed00-cfa1-9fd94686cc68 -- DataPack >> DPI UCF Lead Bulk Billing -- Error Message -- No match found for %vlocity_namespace%__AttributeAssignment__c.%vlocity_namespace%__AttributeId__c - %vlocity_namespace%__Code__c=ATTR_DIDCount (System Code)
+  - OrchestrationDependencyDefinition/8d72e232-dd18-e166-7373-fccc0bb4d6ed -- DataPack >> UCF MDNRetrieveCustomerFacilities To UCF SubmitMDNGroupOrderMember -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF MDNRetrieveCustomerFacilities AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationItemDefinition/UCF PublishDIDBulkGroupOrderStatusUpdate_DPI UCF DID Bulk Order Billing Plan -- DataPack >> UCF PublishDIDBulkGroupOrderStatusUpdate -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/a37bbae9-0ed8-a00b-183b-7177a05ab175 -- DataPack >> UCF MDN FulFillLeadBulkOrder To UCF MDNRetrieveCustomerFacilities -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF MDNRetrieveCustomerFacilities AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID MDN Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/3fca0315-f28f-a2ec-9189-ddd3f0cfe154 -- DataPack >> UCF FulFillLeadBulkOrder To UCF RetrieveCustomerFacilities -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF RetrieveCustomerFacilities AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Lead Order Billing Plan (System Code)
+  - OrchestrationItemDefinition/UCFCreateBulkServiceOrder_DPI UCF DID Bulk Order Billing Plan -- DataPack >> UCFCreateBulkServiceOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationItemDefinition__c.%vlocity_namespace%__OrchestrationPlanDefinitionId__c - Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/dd74b6c8-93d2-3e4a-6d82-1878e42cac56 -- DataPack >> UCF WaitForDIDLeadOrderStatusEvent To  UCF InitiateDIDBulkOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF WaitForDIDLeadOrderStatusEvent AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Lead Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/5d2bddcf-25c0-7797-e21e-c0a6055d8c5f -- DataPack >> UCF CreateDPILeadServiceOrder To  UCF WaitForDIDLeadOrderStatusEvent -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF WaitForDIDLeadOrderStatusEvent AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Lead Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/b9e0f4a6-e176-d6eb-8ba6-8be35b26cd03 -- DataPack >> UCF SubmitDIDLeadGroupOrder To UCF Create DPI Lead Service Order -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF SubmitDIDLeadGroupOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Lead Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/56f38070-9205-47d9-ce12-654d258e6fab -- DataPack >> UCF WaitForLeadDIDOrder To UCF SubmitDIDBulkGroupOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF WaitForLeadDIDOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - Product2/56b8dd11-c948-40a5-2237-cb77b4b2b93d -- DataPack >> UCF DID DPI Services -- Error Message -- This DataPack has a reference to another object which was not found -- vlocity_cmt__ObjectClass__c/39c39d7108338eb927b4331c08a21ebb
+  - OrchestrationDependencyDefinition/11b2c279-36a5-f2ee-58b3-d4419449f95e -- DataPack >> UCFCreateBulkServiceOrder To UCF WaitForDIDBulkOrderStatusEvent -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCFCreateBulkServiceOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - Product2/7b072b22-d985-8c27-dff2-1cf94d7fe937 -- DataPack >> UCF DC 711 -- Error Message -- This DataPack has a reference to another object which was not found -- Product2/1556a173-b97c-f551-5f15-0f4488a6153b
+  - OrchestrationDependencyDefinition/1d157770-7128-df32-70a1-4c27fc5b7291 -- DataPack >> UCF PublishDIDBulkGroupOrderStatusUpdate To UCF WaitForDIDBulkOrderStatusEvent -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF PublishDIDBulkGroupOrderStatusUpdate AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/5be20a5b-baa2-6baf-0a38-62784c7110eb -- DataPack >> UCF SubmitDIDBulkGroupOrder To UCFCreateBulkServiceOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCFCreateBulkServiceOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/d48d6872-1010-cd30-0ce2-2acaab39545b -- DataPack >> UCF SubmitDIDBulkGroupOrder To UCF PublishDIDBulkGroupOrderStatusUpdate -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF PublishDIDBulkGroupOrderStatusUpdate AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+  - OrchestrationDependencyDefinition/e513dd6c-c6b7-c4fc-2a87-cddf4b837b2a -- DataPack >> Start Order To UCF WaitForLeadDIDOrder -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__OrchestrationItemDefinitionId__c - Name=UCF WaitForLeadDIDOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=DPI UCF DID Bulk Order Billing Plan (System Code)
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 61
+  Error: 24
+id: !<tag:yaml.org,2002:js/undefined> ''

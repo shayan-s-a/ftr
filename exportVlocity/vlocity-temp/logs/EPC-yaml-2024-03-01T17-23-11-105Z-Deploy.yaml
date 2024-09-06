@@ -1,0 +1,22 @@
+Org: shayan.shahid@nespon.com.qaucfv2
+Version: 1.17.4
+Node: v16.13.1
+PackageVersion: '900.456'
+Namespace: vlocity_cmt
+Job: VDX
+Action: Deploy
+ProjectPath: vlocity1
+TotalTime: 3m 40s
+Count:
+  Success: {}
+  Error: {}
+Errors:
+  - OrchestrationDependencyDefinition/ed9bc2ed-91c8-a5a1-5276-6f76ae4afd7a -- DataPack >> UCF MDNSubmitDIDLeadGroupOrder To UCF Create DPI Lead Service Order -- Error Message -- No match found for %vlocity_namespace%__OrchestrationDependencyDefinition__c.%vlocity_namespace%__DependencyItemDefinitionId__c - Name=UCF MDNSubmitDIDLeadGroupOrder AND %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name=UCF DPI Main Directory Number (System Code)
+Status:
+  Success: {}
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 47
+  Error: 1
+id: !<tag:yaml.org,2002:js/undefined> ''
