@@ -1,0 +1,115 @@
+<template>
+
+    <lightning-card class="slds-var-p-around_medium">
+        <div style="position: relative;">
+
+            <template if:false={showApprovedTimesheet}>
+                <div class="header_div_timeentry">
+                    <strong class="strong_class_blueline">Employee List:</strong> Timesheet Approval
+                </div>
+
+                <div style="border: 2px solid black" class="slds-var-m-top_small slds-var-m-bottom_small"></div>
+
+                <!-- CONTROLS START -->
+
+                <div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                            <lightning-input name="employeeOrPositionId" value={employeeOrPositionId}
+                                label="Name or Position ID" placeholder="Search Employee..."></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                            <lightning-combobox name="divisionaloffice" value={divisionaloffice}
+                                options={divisionoptions} label="Divisional Office"
+                                onchange={handleChange}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                            <lightning-combobox name="timeOption" value={timeOption} options={timeOptions}
+                                label="Pay Period" onchange={handleChange}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                            <lightning-input type="date" variant="standard" name="dateFrom" label="Date From"
+                                placeholder="Date From" onchange={handleChange} value={dateFrom}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                            <lightning-input type="date" variant="standard" name="dateTo" label="Date To"
+                                placeholder="Date To" onchange={handleChange} value={dateTo}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                            <lightning-combobox name="statusOption" value={statusOption} options={statusOptions}
+                                label="Timsheet Status" onchange={handleChange}></lightning-combobox>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- * TIMESHEET List view START * -->
+                <template if:true={timesheetEmpListRes}>
+                    <div class="slds-scrollable" style="max-width:100%;">
+                        <table
+                            class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                            <thead>
+                                <tr>
+
+                                    <th class="th_tableheader_css"><b>Position ID</b></th>
+                                    <th class="th_tableheader_css"><b>Employee Name</b></th>
+                                    <th class="th_tableheader_css"><b>Divisional Office</b></th>
+                                    <th class="th_tableheader_css"><b>Designation</b></th>
+                                    <th class="th_tableheader_css"><b>Pay Period</b></th>
+                                    <th class="th_tableheader_css"><b>Timesheet Status</b></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={timesheetEmpListRes} for:item="timesheetEmp">
+                                    <tr key={timesheetEmp.Id} data-row-id={timesheetEmp.contactId}
+                                        onclick={handleRowClick} style="cursor: pointer;">
+                                        <td>
+                                            {timesheetEmp.reqPositionId}
+                                        </td>
+                                        <td>
+                                            {timesheetEmp.userName}
+                                        </td>
+                                        <td>
+                                            {timesheetEmp.divisionalOffice}
+                                        </td>
+                                        <td>
+                                            {timesheetEmp.reqDateFrom} - {timesheetEmp.reqDateTo}
+                                        </td>
+
+
+                                    </tr>
+                                </template>
+                            </tbody>
+
+
+                        </table>
+                    </div>
+                </template>
+            </template>
+
+            <template if:true={showUnlockTimesheet}>
+                <div>
+                    <!-- <c-timesheet-Approval-Bilal employee-id={empId} date-from={dateFrom}
+                    ontimesheetclose={handleTimesheetClose} is-nespon-manager={isNesponManager} date-to={dateTo} time-option={timeOption} record-id={recordId}></c-timesheet-Approval-Bilal> -->
+                </div>
+            </template>
+            <!-- LOADER -->
+            <template if:true={spinLoader}>
+                <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </template>
+
+
+
+
+        </div>
+
+    </lightning-card>
+
+</template>

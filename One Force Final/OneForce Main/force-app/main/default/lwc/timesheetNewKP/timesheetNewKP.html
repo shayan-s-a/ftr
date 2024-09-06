@@ -1,0 +1,136 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card class="slds-var-p-around_medium">
+
+        <div style="position: relative;">
+            <!-- * HEADER START * -->
+            <template if:true={userExist}>
+                <div class="header_div_timeentry">
+                    <strong class="strong_class_blueline">My Time Entry: </strong>{userDetails.FullName} ({userDetails.PositionId})</div>
+                
+                <br>
+            
+                  <div class="slds-grid slds-wrap slds-var-p-around_medium"
+                    style="background-color: rgb(237, 232, 232); color: black">
+                    <div class="slds-col slds-size_4-of-12">
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-4">
+                                <div class="circle"><b></b>{userDetails.NameInitials}</b></div>
+                            </div>
+                            <div class="slds-col slds-size_3-of-4">
+                                <div class="slds-text-heading_medium">{userDetails.FullName}</div>
+                                <div><b>Designation: </b> {userDetails.Designation}</div>
+                                <div><b>Divisional Office: </b> {userDetails.DivisionalOffice}</div>
+                                <div><b>Functional Area: </b> {userDetails.FunctionalArea}</div>
+                                <div><b>Reports To: </b> {userDetails.ReportsTo}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_8-of-12 slds-text-align_right">
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_8-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12"><b>Tax ID:</b></div>
+                            <div class="slds-col slds-size_2-of-12">{userDetails.TaxId}</div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_8-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12"><b>Position ID:</b></div>
+                            <div class="slds-col slds-size_2-of-12">{userDetails.PositionId}</div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div style="border: 2px solid rgb(192, 255, 147)" class="slds-var-m-top_small slds-var-m-bottom_small"></div>
+
+            <!-- * CONTROLS START * -->
+            <div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-combobox name="timeOption" value={timeOption} options={timeOptions}
+                            label="Pay Period" onchange={handleChange}></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-input type="date" variant="standard" name="dateFrom" label="Date From"
+                            placeholder="Date From" onchange={handleChange} value={dateFrom}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-input type="date" variant="standard" name="dateTo" label="Date To"
+                            placeholder="Date To" onchange={handleChange} value={dateTo}></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-var-p-around_small" style="margin-top: 23px;">
+                        <lightning-button-group>
+                            <lightning-button variant="brand" label="Save" icon-name="utility:save" onclick={handleSave}
+                                disabled={isSheetNotUpdated}></lightning-button>
+                            &nbsp;
+                            <lightning-button variant="success" icon-name="utility:success" label="Submit"
+                                onclick={handleSubmit} if:true={showSubmitButton}></lightning-button>
+                            &nbsp;
+                            <lightning-button variant="brand-outline" icon-name="action:recall" label="Request To Edit"
+                                onclick={handleRecall} if:true={showRecallButton}></lightning-button>
+                        </lightning-button-group>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- * TIMESHEET START * -->
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-12 custom_css_timesheet">
+                    <div class="slds-text-heading_medium">
+                        <!-- <lightning-icon icon-name="utility:picklist_type" class="timsheetHeadingicon"></lightning-icon> -->
+                        Timesheet
+                    </div>
+                </div>
+            </div>
+            <div class="slds-scrollable" style="max-width:100%;">
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <!-- <th></th>
+                            <th><b>Day/Date</b></th>
+                            <th><b>Pay Code</b></th>
+                            <th><b>Project</b></th>
+                            <th><b>Role</b></th>
+                            <th><b>Hours</b></th>
+                            <th><b>Divisional Office</b></th>
+                            <th><b>Regular Hours</b></th>
+                            <th><b>Overtime</b></th>
+                            <th><b>Total Hours</b></th> -->
+
+                            <th></th>
+                            <th class="th_tableheader_css"><b>Day/Date</b></th>
+                            <th class="th_tableheader_css"><b>Pay Code</b></th>
+                            <th class="th_tableheader_css"><b>Project</b></th>
+                            <th class="th_tableheader_css"><b>Role</b></th>
+                            <th class="th_tableheader_css"><b>Hours</b></th>
+                            <th class="th_tableheader_css"><b>Divisional Office</b></th>
+                            <th class="th_tableheader_css"><b>Regular Hours</b></th>
+                            <th class="th_tableheader_css"><b>Overtime</b></th>
+                            <th class="th_tableheader_css"><b>Total Hours</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                            <c-timesheet-row key={timesheet.id} timesheet={timesheet} onrowedit={handleRowEdit}
+                                onrowupdate={handleRowUpdate} onrowrefresh={handleRowRefresh} onrowadd={handleAddRow}
+                                onrowdelete={handleRowDelete}></c-timesheet-row>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <!-- * LOADER * -->
+            <template if:true={spinLoader}>
+                <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,143 @@
+<template>
+
+    <div style="position: relative;">
+
+        <!-- HEADER START -->
+        <!-- <div class="slds-text-heading_large"><b><u>Employee Timesheet Update Requests</u></b></div>
+            <br>
+            <div style="border: 2px solid black" class="slds-var-m-top_small slds-var-m-bottom_small"></div> -->
+        <c-user-details user-details={userDetails} image-u-r-l={imageUrl}></c-user-details>
+
+        <!-- CONTROLS START -->
+        <div>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                    <lightning-combobox name="timeOption" value={timeOption} options={timeOptions} label="Pay Period"
+                        onchange={handleChange}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                    <lightning-input type="date" variant="standard" name="dateFrom" label="Date From"
+                        placeholder="Date From" onchange={handleChange} value={dateFrom}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                    <lightning-input type="date" variant="standard" name="dateTo" label="Date To"
+                        placeholder="Date To" onchange={handleChange} value={dateTo}></lightning-input>
+                </div>
+
+                <div class="slds-col slds-size_4-of-12 slds-var-p-around_small" style="margin-top: 23px; width: 50%;">
+                    <lightning-button-group style="float: right;">
+                        <lightning-button class="lb-unlock-customcss" variant="brand" label="Unlock" icon-name="utility:unlock"
+                            onclick={handleUnlock} disabled={noRowSelected}></lightning-button>
+                        &nbsp;
+                        <lightning-button class="lb-backToList-customcss" variant="info" label="Back To List" icon-name="utility:close"
+                            onclick={handleTimesheetClose}></lightning-button>
+                    </lightning-button-group>
+                </div>
+            </div>
+        </div>
+
+        <!-- TIMSHEET START -->
+        <div class="slds-grid">
+            <div class="slds-col slds-size_2-of-12 custom_css_timesheet">
+                <div class="slds-text-heading_medium">
+                    <!-- <lightning-icon icon-name="utility:picklist_type" class="timsheetHeadingicon"></lightning-icon> -->
+                    Timesheet
+                </div>
+            </div>
+        </div>
+        <template if:false={timeSheetData.length}>
+            <div class="slds-text-heading_medium slds-text-align_center" style="color: red;">No time entry found
+                for unlocking.</div>
+        </template>
+        <template if:true={timeSheetData.length}>
+            <div class="slds-scrollable" style="max-width:100%;">
+                <!--OLD CODE-->
+                <!-- <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <th class="th_tableheader_css">
+                                <div class="slds-text-align_center">
+                                    <span>Unlock All</span>
+                                    <lightning-input type="checkbox" variant="label-hidden"
+                                        onchange={handleSelectAll}></lightning-input>
+                                </div>
+                            </th>
+                            <th class="th_tableheader_css"><b> </b></th>
+                            <th class="th_tableheader_css"><b>Name</b></th>
+                            <th class="th_tableheader_css"><b>Day/Date</b></th>
+                            <th class="th_tableheader_css"><b>Pay Code</b></th>
+                            <th class="th_tableheader_css"><b>Project</b></th>
+                            <th class="th_tableheader_css"><b>Role</b></th>
+                            <th class="th_tableheader_css"><b>Hours</b></th>
+                            <th class="th_tableheader_css"><b>Divisional Office</b></th>
+                            <th class="th_tableheader_css"><b>Regular Hours</b></th>
+                            <th class="th_tableheader_css"><b>Overtime</b></th>
+                            <th class="th_tableheader_css"><b>Total Hours</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                            <c-timesheet-row key={timesheet.id} timesheet={timesheet}
+                                is-nespon-manager={isNesponManager} is-divisional-head={isDivisionalHead}
+                                is-h-r-practitioner={isHRPractitioner}
+                                onrowchecked={handleRowChecked}></c-timesheet-row>
+                        </template>
+                    </tbody>
+                </table> -->
+                <!--Asir new code for bi weekly view-->
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <th class="th_tableheader_css">
+                                <div class="slds-text-align_center">
+                                    <span>Unlock All</span>
+                                    <lightning-input type="checkbox" checked={unlockVal} variant="label-hidden"
+                                        name="unlockAll" onchange={handleSelectAll}></lightning-input>
+                                </div> 
+
+                            </th>
+                            
+                            <th class="th_tableheader_css"><b>Status</b></th>
+                            <th class="th_tableheader_css"><b>Name</b></th>
+                            <th class="th_tableheader_css"><b>Day/Date</b></th>
+                            <th class="th_tableheader_css"><b>Pay Code</b></th>
+                            <th class="th_tableheader_css"><b>Project</b></th>
+                            <th class="th_tableheader_css"><b>Role</b></th>
+                            <th class="th_tableheader_css"><b>Hours</b></th>
+                            <th class="th_tableheader_css"><b>Divisional Office</b></th>
+                            <th class="th_tableheader_css"><b>Regular Hours</b></th>
+                            <th class="th_tableheader_css"><b>Overtime</b></th>
+                            <th class="th_tableheader_css"><b>Total Hours</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                            <!-- <c-timesheet-row-a-s key={timesheet.id} change-weekly-row-colspan="true"
+                                timesheet={timesheet} is-nespon-manager={isNesponManager}
+                                onrowchecked={handleRowChecked}></c-timesheet-row-a-s> -->
+                                <c-timesheet-row-a-b key={timesheet.id} timesheet={timesheet}
+                                is-nespon-manager={isNesponManager} is-divisional-head={isDivisionalHead}
+                                is-h-r-practitioner={isHRPractitioner}
+                                onrowchecked={handleRowChecked} change-weekly-row-colspan="true" onrowedit={handleRowEdit}
+                                onrowupdate={handleRowUpdate} onrowrefresh={handleRowRefresh} onrowadd={handleAddRow}
+                                onrowdelete={handleRowDelete}></c-timesheet-row-a-b>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+
+        <!-- LOADER -->
+        <template if:true={spinLoader}>
+            <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

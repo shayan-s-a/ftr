@@ -1,0 +1,143 @@
+<template>
+    <!-- <lightning-card class="slds-var-p-around_large"> -->
+
+    <div style="position: relative;">
+
+        <!-- * HEADER START -->
+        <c-user-details user-details={userDetails} image-u-r-l={imageUrl}></c-user-details>
+
+        <!--<div style="border: 2px solid black" class="slds-var-m-top_small slds-var-m-bottom_small"></div> -->
+
+        <!-- * CONTROLS START -->
+        <div>
+            <div class="slds-grid tym_prd_wrap">
+                <div class="slds-col slds-size_2-of-12 slds-var-p-around_small customcss-timeoption-responsive">
+                    <lightning-combobox name="timeOption" value={timeOption} options={timeOptions} label="Pay Period"
+                        onchange={handleChange}> </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-var-p-around_small customcss-datefrom-responsive">
+                    <lightning-input type="date" variant="standard" name="dateFrom" label="Date From"
+                        placeholder="Date From" onchange={handleChange} value={dateFrom}
+                        disabled="true"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-var-p-around_small customcss-dateto-responsive">
+                    <lightning-input type="date" variant="standard" name="dateTo" label="Date To" placeholder="Date To"
+                        onchange={handleChange} value={dateTo} disabled="true"></lightning-input>
+                </div>
+
+                <!-- <template if:true={isNesponManager} >  -->
+
+                <div class="slds-col slds-size_4-of-12 slds-var-p-around_small btn_wrap_main"
+                    style="width:50%; margin-top: 23px;">
+                    <!-- <lightning-button-group> -->
+                    <div class="lbg-customcss">
+                        <lightning-button class="lb-approve-customcss" variant="brand" label="Save"
+                                icon-name="utility:save" onclick={handleSave}
+                                if:true={isDeleted}></lightning-button>
+                        <template if:true={showSubmitButton}>
+                            <lightning-button class="lb-approve-customcss" variant="brand" label="Save"
+                                icon-name="utility:save" onclick={handleSave}
+                                disabled={isSheetNotUpdated} if:false={isDeleted}></lightning-button>
+                        </template>
+                        <lightning-button variant="brand" class="lb-approve-customcss" label="Approve"
+                            icon-name="utility:approval" onclick={handleApprove}
+                            disabled={noRowSelected}></lightning-button>
+                        <lightning-button variant="brand" class="lb-rejectapp-customcss" label="Reject"
+                            icon-name="action:reject" onclick={handleReject}
+                            disabled={noRowSelected}></lightning-button>
+                        <lightning-button class="lb-backToList-customcss" variant="info" label="Back To List"
+                            icon-name="utility:close" onclick={handleTimesheetClose}></lightning-button>
+                        <!-- </lightning-button-group> -->
+                    </div>
+
+                </div>
+                <!-- </template> -->
+
+
+            </div>
+        </div>
+
+
+
+
+        <!-- TIMSHEET START -->
+        <div class="slds-grid">
+            <div class="slds-col slds-size_2-of-12 custom_css_timesheet">
+                <div class="slds-text-heading_medium">
+                    <!-- <lightning-icon icon-name="utility:picklist_type" class="timsheetHeadingicon"></lightning-icon> -->
+                    Timesheet
+                </div>
+            </div>
+        </div>
+        <template if:false={timeSheetData.length}>
+            <div class="slds-text-heading_medium slds-text-align_center" style="color: red;">No time entry found
+                between the selected dates for approval.</div>
+        </template>
+        <template if:true={timeSheetData.length}>
+            <div class="slds-scrollable" style="max-width:100%;">
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <th class="th_tableheader_css"> </th>
+                            <th class="th_tableheader_css">
+                                <div class="slds-text-align_center">
+                                    <!-- <span style="float: right;
+                                    margin-top: 1px;">Select All</span> -->
+                                    <lightning-input style="margin-left:10px;" title="Select All"
+                                        disabled={selectAllDisabled} type="checkbox" checked={unlockVal}
+                                        variant="label-hidden" onchange={handleSelectAll}></lightning-input>
+                                </div>
+                            </th>
+                            <th class="th_tableheader_css"><b>Status</b></th>
+                            <th class="th_tableheader_css"><b>Name</b></th>
+                            <th class="th_tableheader_css"><b>Day/Date</b></th>
+                            <!-- <th class="th_tableheader_css"><b>Pay Code</b></th> -->
+                            <th class="th_tableheader_css"><b>Project/Pay Code</b></th>
+                            <!-- <th class="th_tableheader_css"><b>Role</b></th> -->
+                            <th class="th_tableheader_css"><b>Hours</b></th>
+                            <!-- <th class="th_tableheader_css"><b>Divisional Office</b></th>
+                            <th class="th_tableheader_css"><b>Regular Hours</b></th> -->
+                            <th class="th_tableheader_css"><b>Overtime</b></th>
+                            <th class="th_tableheader_css"><b>Total Hours</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                            <c-timesheet-row key={timesheet.id} timesheet={timesheet}
+                                is-nespon-manager={isNesponManager} is-h-r-practitioner={isHRPractitioner} is-line-manager={isLineManager}
+                                onrowchecked={handleRowChecked} onrowedit={handleRowEdit}
+                                onrowupdate={handleRowUpdate} onrowrefresh={handleRowRefresh} onrowadd={handleAddRow}
+                                onrowdelete={handleRowDelete} onrowcopyoption={handleRowCopyOption} 
+                                onrowpasteoption={handleRowPasteOption} onrowdeleteoption={handleRowDeleteOption} paste-disabled={checkPaste} 
+                                screen-approval="true"  change-weekly-row-colspan="true" onrefreshtimesheet={handleRefreshTimesheet}></c-timesheet-row>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+        <!-- MODAL -->
+        <template if:true={showRejectModal}>
+            <c-modal heading={rejectHeading} message={rejectMessage} onsave={handleRejectSave}
+                oncancel={handleRejectCancel}></c-modal>
+        </template>
+
+        <!-- WARNING MODAL -->
+        <template if:true={showWarningModal}>
+            <c-modal-s-a heading={requestHeading} message={requestMessage} onproceed={handleSave}
+                    oncancel={handleCancel} warning-modal={showWarningModal}></c-modal-s-a>
+        </template>
+
+        <!-- LOADER -->
+        <template if:true={spinLoader}>
+            <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </template>
+    </div>
+    <!-- </lightning-card> -->
+</template>

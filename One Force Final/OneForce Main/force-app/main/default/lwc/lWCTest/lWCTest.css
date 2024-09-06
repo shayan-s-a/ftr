@@ -1,0 +1,25 @@
+.circle {
+    background: gold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: blue;
+}
+
+.timsheetHeadingicon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: white;
+}
+
+.clockIcon {
+    --lwc-colorTextIconDefault: orange;
+}

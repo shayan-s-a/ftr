@@ -1,0 +1,54 @@
+<template>
+
+    <div >
+        <div class="slds-grid">
+
+            <div class="slds-col slds-theme_shade slds-box custom-hover-effect slds-size_1-of-2  list-item slds-align_absolute-center divWithoutHover"
+                style="padding: 50px;" data-name="navigate" onclick={handleOnClick}>
+                <h1 data-name="navigate" style="opacity: 1.0;">Time Entry</h1>
+            </div>
+            <!-- <div class="slds-grid slds-col slds-gutters slds-box slds-theme_shade slds-box custom-hover-effect slds-size_1-of-2 slds-m-right_large list-item divWithoutHover"
+                style="padding: 50px;">
+                <h1 class="slds-align_absolute-center text">Reports</h1>
+            </div> -->
+
+        </div>
+
+        <!-- <div class="slds-grid" style="margin-top: 67px;">
+
+            <div class="slds-col slds-theme_shade slds-box custom-hover-effect slds-size_1-of-2 slds-m-right_large list-item divWithoutHover"
+                style="padding: 50px;">
+                <h1 class="slds-align_absolute-center text">Time-Off Requests</h1>
+            </div>
+            <div class="slds-grid slds-col slds-gutters slds-box slds-theme_shade slds-box custom-hover-effect slds-size_1-of-2 slds-m-right_large list-item divWithoutHover"
+                style="padding: 50px;">
+                <h1 class="slds-align_absolute-center text">Reminders</h1>
+            </div>
+
+        </div> -->
+
+        
+        <!-- <div class="slds-grid divWithoutHover">
+
+            <div class="slds-col slds-theme_shade slds-box custom-hover-effect slds-size_1-of-2 expandable-list divWithoutHover"
+                style="padding: 50px; cursor: pointer;" onclick={handleOnClick} data-name="dropDownRequest">
+
+                <div class="list-item " data-name="dropDownRequest">
+                    <h1 class="item-title slds-align_absolute-center divWithoutHover" data-name="dropDownRequest">{itemTitle}Time
+                        Sheet</h1>
+
+                </div>
+                <div class="item-content" if:true={itemExpanded}>
+                    <ul class="sub-list slds-col custom-hover-effect">
+                        <template for:each={subItems} for:item="subItem">
+                            <li key={subItem.id} onclick={handleItemClick} data-item-id={subItem.id}
+                                class="sub-list slds-col slds-theme_shade slds-box custom-hover-effect">
+                                {subItem.title}</li>
+                        </template>
+                    </ul>
+                </div>
+
+            </div>
+        </div> -->
+    </div>
+</template>

@@ -1,0 +1,180 @@
+<template>
+    <template if:false={timesheet.summaryRow}>
+        <template if:false={timesheet.weeklySumRow}>
+            <td class={columnClass}>
+                <template if:false={readOnly}>
+                    <template if:false={timesheet.combineRow}>
+                        <template if:true={timesheet.isEditable}>
+                            <lightning-icon if:true={timesheet.showOptions} icon-name="utility:add" size="x-small"
+                                style="cursor: pointer;" class="icon" onclick={handleAddRow} data-id={timesheet.id}
+                                data-dayname={timesheet.dayName} data-daydate={timesheet.dayDate}
+                                data-emptyrownumber={timesheet.emptyRowNumber} title="Add Row"></lightning-icon>
+                            &nbsp;&nbsp;
+                            <lightning-icon if:true={timesheet.showOptions} title="More Options"
+                                icon-name="utility:switch" size="x-small" style="cursor: pointer;"
+                                class="icon"></lightning-icon>
+                        </template>
+                    </template>
+                    <template if:true={timesheet.inEditMode}>
+                        <template if:false={timesheet.delible}>
+                            <lightning-button-icon if:true={timesheet.showOptions} variant="base" size="x-small"
+                                icon-name="action:refresh" onclick={handleRowRefresh} data-id={timesheet.id}
+                                data-dayname={timesheet.dayName} data-daydate={timesheet.dayDate}
+                                data-emptyrownumber={timesheet.emptyRowNumber}
+                                alternative-text="Refresh"></lightning-button-icon>
+                        </template>
+                        <template if:true={timesheet.delible}>
+                            <lightning-button-icon if:true={timesheet.showOptions} class="deleteIcon" size="x-small"
+                                icon-name="action:delete" onclick={handleRowDelete} data-id={timesheet.id}
+                                data-dayname={timesheet.dayName} data-daydate={timesheet.dayDate}
+                                data-emptyrownumber={timesheet.emptyRowNumber}
+                                alternative-text="Delete"></lightning-button-icon>
+                        </template>
+                    </template>
+                </template>
+                <template if:true={isNesponManager}>
+                    <lightning-input type="checkbox" value={timesheet.checked} variant="label-hidden" name="checked"
+                        onchange={handleRowChecked} data-id={timesheet.id} data-dayname={timesheet.dayName}
+                        data-daydate={timesheet.dayDate}></lightning-input>
+                </template>
+            </td>
+            <template if:true={isManager}>
+                <td class={columnClass}>
+                    <template if:false={timesheet.combineRow}>
+                        {timesheet.userName}
+                    </template>
+                </td>
+            </template>
+            <td class={columnClass}>
+                <div class="slds-grid">
+                    <template if:false={timesheet.combineRow}>
+                        <div class="slds-col slds-size_1-of_4">
+                            <template if:true={timesheet.approved}>
+                                <lightning-icon title="Apprvoved" icon-name="standard:task2"
+                                    size="small"></lightning-icon>
+                            </template>
+                            <template if:true={timesheet.submitted}>
+                                <lightning-icon title="Submitted and waiting for Approval" icon-name="utility:clock"
+                                    size="small" class="clockIcon"></lightning-icon>
+                            </template>
+                            <template if:true={timesheet.timsheetSaved}>
+                                <lightning-icon title="Saved but not submitted" icon-name="utility:save" size="small"
+                                    class="saveIcon"></lightning-icon>
+                            </template>
+                            <template if:true={timesheet.recall}>
+                                <lightning-icon title="Request To Edit sent to manager" icon-name="action:recall"
+                                    size="xx-small" class="recallIcon"></lightning-icon>
+                            </template>
+                            <template if:true={timesheet.rejected}>
+                                <lightning-icon title="Timehseet Rejected. Please fix and submit again."
+                                    icon-name="action:reject" size="xx-small" class="rejectIcon"></lightning-icon>
+                            </template>
+
+                        </div>
+                    </template>
+                   </div>
+                    </td>
+                    <td class={columnClass}>
+                        <div class="slds-col slds-size_3-of_4 slds-var-p-left_small">
+                            {timesheet.dayName}, {timesheet.dayDate}
+                        </div>
+                   
+              
+            </td>
+                 
+            <td class={columnClass} onclick={handleRowEdit} data-id={timesheet.id} data-dayname={timesheet.dayName}
+                data-daydate={timesheet.dayDate} data-emptyrownumber={timesheet.emptyRowNumber}>
+                <template if:false={timesheet.inEditMode}>
+                    {timesheet.payCode}
+                </template>
+                <template if:true={timesheet.inEditMode}>
+                    <lightning-combobox value={timesheet.payCode} data-id={timesheet.id}
+                        data-emptyrownumber={timesheet.emptyRowNumber} data-name="payCode" placeholder="Select Pay Code"
+                        options={timesheet.payCodes} onchange={handleRowChange}></lightning-combobox>
+                </template>
+            </td>
+            <td class={columnClass} onclick={handleRowEdit} data-id={timesheet.id} data-dayname={timesheet.dayName}
+                data-daydate={timesheet.dayDate} data-emptyrownumber={timesheet.emptyRowNumber}>
+                <template if:false={timesheet.inEditMode}>
+                    {timesheet.projectName}
+                </template>
+                <template if:true={timesheet.inEditMode}>
+                    <lightning-combobox value={timesheet.project} data-id={timesheet.id}
+                        data-emptyrownumber={timesheet.emptyRowNumber} data-name="project" placeholder="Select Project"
+                        options={timesheet.projects} onchange={handleRowChange}></lightning-combobox>
+                </template>
+            </td>
+            <td class={columnClass} onclick={handleRowEdit} data-id={timesheet.id} data-dayname={timesheet.dayName}
+                data-daydate={timesheet.dayDate} data-emptyrownumber={timesheet.emptyRowNumber}>
+                <!-- <template if:false={timesheet.inEditMode}> -->
+                {timesheet.projectParticipantRole}
+                <!-- </template> -->
+                <!-- <template if:true={timesheet.inEditMode}>
+                <lightning-input value={timesheet.rate} type="number" variant="standard"
+                    data-id={timesheet.id} data-emptyrownumber={timesheet.emptyRowNumber}
+                    data-name="rate" placeholder="Enter Rate" style="width:100px"
+                    onchange={handleRowChange}></lightning-input>
+            </template> -->
+            </td>
+           
+            <td class={columnClass} onclick={handleRowEdit} data-id={timesheet.id} data-dayname={timesheet.dayName}
+                data-daydate={timesheet.dayDate} data-emptyrownumber={timesheet.emptyRowNumber}>
+                <template if:false={timesheet.inEditMode}>
+                    {timesheet.hours}
+                </template>
+                <template if:true={timesheet.inEditMode}>
+                    <lightning-input value={timesheet.hours} step=".01" min="0.5" max="15" type="number"
+                        variant="standard" data-id={timesheet.id} data-emptyrownumber={timesheet.emptyRowNumber}
+                        placeholder="Enter Hours" style="width:100px" data-name="hours" onchange={handleRowChange}
+                        message-when-range-overflow="You can enter maximum of 15 hours"
+                        message-when-range-underflow="You can enter minimum of 0.5 hour" required
+                        onblur={handleBlur}></lightning-input>
+                </template>
+            </td>
+            <td class={columnClass}>
+                {timesheet.divisionalOffice}
+            </td>
+            <td class={columnClass}>
+                {timesheet.regularHours}
+            </td>
+            <td class={columnClass}>
+                {timesheet.overTime}
+            </td>
+            <td class={columnClass}>
+                <!-- <template if:false={timesheet.totalRowsInDay}> -->
+                <template if:true={timesheet.showEachRowTotal}>
+                    <b>{timesheet.totalHours}</b>
+                </template>
+            </td>
+        </template>
+    </template>
+
+    <!-- ******************* SUMMARY ROW ******************* -->
+    <template if:true={timesheet.summaryRow}>
+        <td style="border-bottom: 1px solid black;"></td>
+        <td colspan={rowColumnsWidth} style="text-align: right; border-bottom: 1px solid black; ">
+            <b>Total {timesheet.dayName} Hours:</b>
+        </td>
+        <td style="border-bottom: 1px solid black; ">
+            <b>{timesheet.totalhoursInDay}</b>
+        </td>
+    </template>
+
+    <!-- ******************* WEEKLY SUM ROW ******************* -->
+  
+<template if:true={timesheet.weeklySumRow}>
+    <!-- <td colspan="7" style="background-color:rgb(125, 125, 125)"></td> -->
+    <td colspan="10" style="text-align: right;  color: white; background-color:rgb(125, 125, 125)">
+        <div class="slds-text-heading_small" >
+            <!-- <b>WEEK {timesheet.weekNumber} TOTAL HOURS</b> -->
+            <b>Week Total Hours</b>
+        </div>
+    </td>
+    <td style="background-color:rgba(226,251,255,255); color: black;  ">
+        <div class="slds-text-heading_small">
+            <b style="font-weight: 800;">{timesheet.totalHours} Hrs</b>
+        </div>
+    </td>
+
+</template>
+</template>

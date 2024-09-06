@@ -1,0 +1,52 @@
+<template>
+    <lightning-modal-header label="Extra Hours"></lightning-modal-header>
+    <!-- <lightning-modal-body> Content: {timesheetSubmittedData}</lightning-modal-body> -->
+    <lightning-modal-body>
+
+                <div >
+            <span class="strongText">Date: </span><span>{evtDataset.daydate}</span>
+        </div>
+
+      
+
+
+        <div>
+            <span class="customlabel">Type of Extra Hour: </span>
+            <span>
+                <lightning-combobox options={typeOfOvertimes} onchange={handleChange} name="typeOfOvertime" value={evtDataset.overtimetype} required="True"></lightning-combobox>
+            </span>
+        </div>
+        <div>
+            <span class="customlabel">Start Time: </span>
+            <span>
+                <lightning-input type="time" class="slds-timepicker" value={getOvertimeStartTime} onchange={handleChange} name="overtimeStartTime" required="True"></lightning-input>
+            </span>
+        </div>
+        <div>
+            <span class="customlabel">End Time: </span>
+            <span>
+                <lightning-input type="time" class="slds-timepicker" value={getOvertimeEndTime} onchange={handleChange} name="overtimeEndTime" required="True"></lightning-input>
+            </span>
+        </div>
+        <div>
+            <span class="customlabel">Description: </span>
+            <span>
+                <lightning-textarea onchange={handleChange} id="overtimeDescriptionTextarea" name="overtimeDescription" value={evtDataset.overtimedescription} required="True"></lightning-textarea>
+            </span>
+        </div>
+        <!-- * LOADER * -->
+        <template if:true={spinLoader}>
+            <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </template>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button if:true={isEdit} variant="destructive-text" label="Remove Overtime" onclick={handleRemove}></lightning-button>
+        <lightning-button label="Save" onclick={handleOkay} disabled={disableSaveBtn}></lightning-button>
+    </lightning-modal-footer>
+</template>

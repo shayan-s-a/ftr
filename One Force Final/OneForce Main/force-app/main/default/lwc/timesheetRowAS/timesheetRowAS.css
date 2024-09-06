@@ -1,0 +1,66 @@
+:host {
+    display: table-row;
+}
+
+.icon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: blue;
+}
+
+.timsheetHeadingicon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: white;
+}
+
+.clockIcon {
+    --lwc-colorTextIconDefault: orange;
+}
+
+.saveIcon {
+    --lwc-colorTextIconDefault: rgb(36, 115, 225);
+}
+
+.notEditable {
+    background-color: white;
+}
+
+.deleteIcon {
+    --lwc-colorTextIconDefault: red;
+}
+
+.recallIcon {
+    --lwc-colorTextIconDefault: #4a698d;
+}
+
+.noTopBorder{ 
+    border-top: none;
+}
+
+.rejectIcon {
+    --slds-c-icon-color-background: red;
+}
+
+.table_div_totalhours{
+    border: 1px solid black;
+    width: 140px;
+    float: right;
+    height: 24px;
+    text-align: center;
+    background-color: rgba(226,251,255,255);
+}
+.strong_class_weektotal{
+    margin-left: 725px;
+    padding: 3px;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+}
+.table_div_weektotal{
+    color: black;
+    background-color: rgba(125,125,125,255);
+    height: 24px;
+    width: 855px;
+    float: left;
+}

@@ -1,0 +1,75 @@
+<template>
+    <section lwc:if={warningModal} role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Cancel and close</span>
+          </button>
+          <div class="slds-modal__header">
+            <h1 id="modal-heading-01w" class="slds-modal__title slds-hyphenate">Rows Overwritten/Deleted</h1>
+          </div>
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1w">
+            <p>Existing timesheet row(s) has been overwritten.delete. If you click on Proceed, all the entries related to the rows will be deleted. Otherwise if you don't want to continue, please click Cancel and then refresh your page</p>
+          </div>
+          <div class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleCancel}>Cancel</button>
+            <button class="slds-button slds-button_brand" onclick={handleSave}>Proceed</button>
+          </div>
+        </div>
+      </section>
+
+      <template if:false={warningModal}>
+        <section  role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <button onclick={handleCancel}
+                    class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Cancel and close</span>
+                </button>
+                <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{heading}</h1>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    {message}
+                </div>
+                <div class="slds-scrollable slds-modal__content" style="max-width:100%;">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                        <thead>
+                            <tr>
+                                <th class="th_tableheader_css">
+
+                                </th>
+                                <th class="th_tableheader_css"><b>Day/Date</b></th>
+                                <th class="th_tableheader_css"><b>Pay Code</b></th>
+                                <th class="th_tableheader_css"><b>Project</b></th>
+                                <th class="th_tableheader_css"><b>Hours</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                                <c-timesheet-row-s-a key={timesheet.id} timesheet={timesheet} is-modal={isModal}
+                                    onrowchecked={handleRowChecked}></c-timesheet-row-s-a>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-input variant="standard" name="name"
+                        onchange={handleChange} placeholder="Type in the reason for editing..."></lightning-input>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" aria-label="Cancel and close"
+                        onclick={handleCancel}>Discard</button>
+                    <button class="slds-button slds-button_brand" onclick={handleSave} >Save</button>
+                </div>
+            </div>
+        </section>
+      </template>
+    
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

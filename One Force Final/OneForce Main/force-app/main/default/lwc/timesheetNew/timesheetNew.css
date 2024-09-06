@@ -1,0 +1,225 @@
+.circle {
+    background: gold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.icon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: blue;
+}
+
+.timsheetHeadingicon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: white;
+}
+
+.clockIcon {
+    --lwc-colorTextIconDefault: orange;
+}
+.row_wrap{
+    margin-top: 5px;
+}
+.custom_css_timesheet{
+    background-color: rgba(44,114,185,255);
+    color: white;
+    padding: 8px;
+    text-align: center;
+    width: 198px;
+    font-family: inherit;
+}
+.header_div_timeentry{
+    color: black;
+    background-color: rgba(156,201,244,255);
+    margin-top: -16px;
+    height: 24px;
+    padding: 5px 0px 28px;
+}
+.strong_class_blueline{
+    margin-left: 3%;
+    font-weight: 800;
+}
+.th_tableheader_css{
+    background-color: rgba(156,201,244,255);
+    color: black;
+    text-align: center;
+}
+.c-timesheetnew_timesheetnew{
+    width: 500px;    
+}
+strong{
+    font-size:15px;
+    font-family: Malgun Gothic;
+
+}
+.userdetails_paddingsettings{
+    padding-top: 5px;
+    font-size: 16px;
+    font-family: unset;
+    font-weight: 400;
+    width: 500px;
+}
+
+.btn_css_submit{
+    margin-left: 10px;
+}
+.btn-group-custom-css{
+    float: right;
+}
+/* lighning button css */
+.lb-save-customcss{
+    margin-right: 10px;
+    font-weight: 900;
+    font-size: 14px;
+    font-family: Malgun Gothic;
+    --slds-c-button-brand-color-border: lightgray;
+    --slds-c-button-shadow: 3px 5px 5px -2px rgba(0, 0, 0, 0.3);
+    --slds-c-button-brand-color-background: white;
+    --slds-c-button-brand-color-background-hover: transparent;
+    --slds-c-button-brand-text-color-hover: black;
+    --slds-c-button-brand-color-background-hover:#E1EAF3;
+    --slds-c-button-brand-text-color: #2C72B9;
+    --slds-c-button-brand-color-background-active:rgba(44,114,185,255);
+}
+.lb-submit-customcss{
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Malgun Gothic;
+    --slds-c-button-brand-color-border: #2C72B9;
+    --slds-c-button-shadow: 3px 5px 5px -2px rgba(0, 0, 0, 0.3);
+    --slds-c-button-brand-color-background: #2C72B9;
+    --slds-c-button-brand-color-background-hover: transparent;
+    --slds-c-button-brand-text-color-hover: black;
+    --slds-c-button-brand-color-background-hover:#E1EAF3;
+    --slds-c-button-brand-text-color: white;
+    --slds-c-button-brand-color-background-active:rgba(44,114,185,255);
+}
+
+.lb-requestToEdit-customcss{
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Malgun Gothic;
+    --slds-c-button-brand-color-border: #2C72B9;
+    --slds-c-button-shadow:3px 5px 5px -2px rgba(0, 0, 0, 0.3);
+    --slds-c-button-brand-color-background: #2C72B9;
+    --slds-c-button-brand-color-background-hover: transparent;
+    --slds-c-button-brand-text-color-hover: black;
+    --slds-c-button-brand-color-background-hover:#E1EAF3;
+    --slds-c-button-brand-text-color: white;
+    --slds-c-button-brand-color-background-active:rgba(44,114,185,255);
+}
+.label-wrap{
+    width: auto;
+    font-size: 16px;
+    font-family: Malgun Gothic;
+}
+
+.image_URL{
+    height:84px;
+    margin-left:8px;
+    margin-top: 29%;
+}
+
+/*Responsive CSS by Furqan */
+
+@media (max-width: 767px) {
+    .image_URL{
+        height: 84px;
+        margin-left: -6px;
+        margin-top: 14%;
+    }
+    .tym_prd_wrap {
+        flex-flow: wrap;
+    }
+    
+    .tym_prd_wrap .input_wrap {
+        width: 33.33%;
+    }
+
+    .tym_prd_wrap .btn_wrap .btn_wrap_main {
+        font-size: 9.5px;
+    }
+
+    .tym_prd_wrap .btn_wrap .btn_wrap_main .slds-button {
+        padding: 0 12px;
+    }
+
+    .header_div_timeentry{
+        font-size: 10px;
+    }
+    .strong_class_blueline{
+        font-size: 13px;
+    }
+    .my-div {
+        text-align: left;
+    }
+    .my-div .label-wrap {
+        width: auto;
+        margin-right: 5px;
+        font-size: 15px;
+        font-family: Malgun Gothic;
+    }
+    
+    .my-div .label-value {
+        width: auto;
+    }
+    
+    .hidden-xs {
+        display: none;
+    }
+    
+    .user-detail-info {
+        width: 85%;
+    }
+    
+    .lable-div {
+        width: 15%;
+    }
+    
+    .info-box {
+        margin-bottom: 15px;
+    }
+    
+    .info-box-main-wrap {
+        width: 100%;
+    }
+    
+    .user-details {
+        width: 95% !important;  /*changed from auto to 95%*/
+        overflow: auto;
+    }
+    
+    .user-other-details {
+        width: 100%;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+    
+    .my-div {
+        width: 75%;
+        margin: 0 0 0 auto;
+    }
+
+    .my-div .row_wrap {
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-family: Malgun Gothic;
+    }
+        
+    }
+
+/* Styles for screens with a maximum width of 480px */
+/* @media (max-width: 480px) {
+    .customcss_timesheetcard {
+        color: green;
+    }
+} */

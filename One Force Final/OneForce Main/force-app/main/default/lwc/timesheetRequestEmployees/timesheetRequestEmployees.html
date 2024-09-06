@@ -1,0 +1,381 @@
+<template>
+    <lightning-card class="slds-var-p-around_large">
+
+        <div style="position: relative;">
+
+            <template if:false={showChildComponent}>
+                <!-- HEADER START -->
+                <template if:true={isApprovalScreen}>
+                    <div class="header_div_timeentry">
+                        <strong class="strong_class_blueline">Employee List: </strong><span>Timesheet Approval</span>
+                    </div>
+
+                </template>
+                <template if:true={isUnlockScreen}>
+                    <div class="header_div_timeentry">
+                        <strong class="strong_class_blueline">Employee List: </strong><span>Timesheet Unlock
+                            Request</span>
+                    </div>
+
+                </template>
+                <template if:true={isViewScreen}>
+                    <div class="header_div_timeentry">
+                        <strong class="strong_class_blueline">Employee List For View Only</strong>
+                    </div>
+
+                </template>
+                <br>
+
+
+                <!-- CONTROLS START -->
+                <template if:true={isViewScreen}>
+                    <div class="slds-grid control_wrap">
+                        <div class="slds-col slds-size_1-of-2 frst_wrap">
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_1-of-3 slds-var-p-around_xx-small">
+                                    <lightning-input type="search" onchange={handleSearchChange} name="employeeId"
+                                        value={employeeId} label="Name" placeholder="Employee Name..."></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-3 slds-var-p-around_xx-small">
+                                    <lightning-input style="margin-left:3px;" type="search" onchange={handleSearchChange} name="positionId"
+                                        value={positionId} label="Position ID"
+                                        placeholder="Position ID..."></lightning-input>
+                                </div>
+                             
+                                <template if:true={showProjectDropDown}>
+                                    <div class="slds-col slds-size_1-of-3 slds-var-p-around_xx-small">
+                                        <lightning-combobox onchange={handleSearchChange} name="project" value={project}
+                                            options={projects} label="Projects"></lightning-combobox>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 custommargin" >
+                            <div class="slds-grid">
+                                <!-- <template if:true={showDates}> -->
+                                <div class="slds-col slds-size_1-of-3 slds-var-p-around_xx-small">
+                                    <lightning-combobox onchange={handleChange} name="timeOption" value={timeOption}
+                                        options={timeOptions} label="Pay Period"></lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_1-of-3 slds-var-p-around_xx-small">
+                                    <lightning-input onchange={handleChange} type="date" variant="standard"
+                                        name="dateFrom" label="Date From" placeholder="Date From"
+                                        value={dateFromLocaleStr} disabled="true"></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-3 slds-var-p-around_xx-small">
+                                    <lightning-input onchange={handleChange} type="date" variant="standard"
+                                        name="dateTo" label="Date To" placeholder="Date To" value={dateToLocaleStr}
+                                        disabled="true"></lightning-input>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                </template>
+                <template if:false={isViewScreen}>
+                    <div class="slds-grid control_wrap">
+                        <div class="slds-col slds-size_1-of-2 frst_wrap">
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                    <lightning-input type="search" onchange={handleSearchChange} name="employeeId"
+                                        value={employeeId} label="Name" placeholder="Employee Name..."></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                    <lightning-input style="margin-left:3px;" type="search" onchange={handleSearchChange} name="positionId"
+                                        value={positionId} label="Position ID"
+                                        placeholder="Position ID..."></lightning-input>
+                                </div>
+                                <template if:true={showDivisionalDropDown}>
+                                    <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                        <lightning-combobox onchange={handleSearchChange} name="divisionalOffice"
+                                            value={divisionalOffice} options={divisionalOfficesVals}
+                                            label="Divisional Office"></lightning-combobox>
+                                    </div>
+                                </template>
+                                <template if:true={showProjectDropDown}>
+                                    <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                        <lightning-combobox onchange={handleSearchChange} name="project" value={project}
+                                            options={projects} label="Projects"></lightning-combobox>
+                                    </div>
+                                </template>
+                                <template if:true={isApprovalScreen}>
+                                    <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                        <lightning-combobox onchange={handleSearchChange} name="approvalStatus"
+                                            value={approvalStatus} options={approvalStatuses}
+                                            label="Timesheet Status"></lightning-combobox>
+                                    </div>
+                                </template>
+                                <template if:true={isUnlockScreen}>
+                                    <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                        <lightning-combobox disabled="true" onchange={handleSearchChange} name="approvalStatus"
+                                            placeholder="Locked"
+                                            label="Timesheet Status"></lightning-combobox>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 custommargin" >
+                            <div class="slds-grid">
+                                <!-- <template if:true={showDates}> -->
+                                <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                    <lightning-combobox onchange={handleChange} name="timeOption" value={timeOption}
+                                        options={timeOptions} label="Pay Period"></lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                    <lightning-input onchange={handleChange} type="date" variant="standard"
+                                        name="dateFrom" label="Date From" placeholder="Date From"
+                                        value={dateFromLocaleStr} disabled="true"></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small">
+                                    <lightning-input onchange={handleChange} type="date" variant="standard"
+                                        name="dateTo" label="Date To" placeholder="Date To" value={dateToLocaleStr}
+                                        disabled="true"></lightning-input>
+                                </div>
+                                <!-- </template> -->
+                                <!-- <template if:true={showFilterButton}> -->
+                                <!-- <div class="slds-col slds-size_1-of-4 slds-var-p-around_xx-small" style="margin-top: 23px;">
+                                    <lightning-button-group>
+                                        <lightning-button onclick={filterRecs} variant="brand" label="Filter"
+                                            icon-name="utility:filterList">
+                                        </lightning-button>
+                                    </lightning-button-group>
+                                </div> -->
+                                <!-- </template> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </template>
+
+                <!-- testing -->
+                <!--  <template if:false={timeSheetData.length}>
+                    <div class="slds-text-heading_medium slds-text-align_center" style="color: red;">Employee Not Found </div>
+                </template> -->
+
+                <!-- testing -->
+                <template if:true={timesheetEmpListRes.length}>
+                    <div class="slds-scrollable" style="max-width:100%;">
+                        <table
+                            class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="th_tableheader_css" style="cursor: pointer;" data-id="reqPositionId"
+                                        onclick={handleSort}><b>Position ID</b><lightning-icon icon-name="utility:sort"
+                                            size="x-small"></lightning-icon>
+                                    </th>
+                                    <th class="th_tableheader_css" style="cursor: pointer;" data-id="userName"
+                                        onclick={handleSort}><b>Employee Name</b><lightning-icon
+                                            icon-name="utility:sort" size="x-small"></lightning-icon>
+                                    </th>
+                                    <template if:true={isViewScreen}>
+                                        <th class="th_tableheader_css" style="cursor: pointer;" onclick={handleSort}
+                                            data-id="projectName">
+                                            <b>Project</b><lightning-icon icon-name="utility:sort"
+                                                size="x-small"></lightning-icon>
+                                        </th>
+                                    </template>
+                                    <th class="th_tableheader_css" style="cursor: pointer;" data-id="divisionalOffice"
+                                        onclick={handleSort}><b>Divisional
+                                            Office</b><lightning-icon icon-name="utility:sort"
+                                            size="x-small"></lightning-icon>
+                                    </th>
+                                    <template if:true={isApprovalScreen}>
+                                        <th class="th_tableheader_css" style="cursor: pointer;" data-id="Designation"
+                                            onclick={handleSort}><b>Designation</b><lightning-icon
+                                                icon-name="utility:sort" size="x-small"></lightning-icon>
+                                        </th>
+                                    </template>
+                                    <template if:false={isViewScreen}>
+                                        <th class="th_tableheader_css" style="cursor: pointer;" data-id="reqDateFrom"
+                                            onclick={handleSort}><b>Pay Period</b><lightning-icon
+                                                icon-name="utility:sort" size="x-small"></lightning-icon>
+                                        </th>
+                                        <template if:true={isApprovalScreen}>
+                                            <th class="th_tableheader_css" onclick={handleSort} style="cursor: pointer;"
+                                                data-id="approvalStatus">
+                                                <b>Timesheet Status</b><lightning-icon icon-name="utility:sort"
+                                                    size="x-small"></lightning-icon>
+                                            </th>
+                                        </template>
+                                        <template if:false={isApprovalScreen}>
+                                            <th class="th_tableheader_css"><b>Timesheet Status</b>
+                                            </th>
+                                        </template>
+                                    </template>
+                                    <template if:true={isUnlockScreen}>
+                                        <th class="th_tableheader_css" style="cursor: pointer;" data-id="reqEditReason"
+                                            onclick={handleSort}><b>Employee
+                                                Comments</b><lightning-icon icon-name="utility:sort"
+                                                size="x-small"></lightning-icon>
+                                        </th>
+                                    </template>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template if:false={showFilteredData}>
+                                    <template for:each={timesheetEmpListRes} for:item="timesheetEmp">
+                                        <tr key={timesheetEmp.Id} data-row-id={timesheetEmp.contactId}
+                                            onclick={handleRowClick} style="cursor: pointer;">
+                                            <td>
+                                                {timesheetEmp.reqPositionId}
+                                            </td>
+                                            <td>
+                                                {timesheetEmp.userName}
+                                            </td>
+                                            <template if:true={isViewScreen}>
+                                                <td>{timesheetEmp.projectName}</td>
+                                            </template>
+                                            <td>
+                                                {timesheetEmp.divisionalOffice}
+                                            </td>
+                                            <template if:true={isApprovalScreen}>
+                                                <td>{timesheetEmp.Designation}</td>
+                                            </template>
+                                            <template if:false={isViewScreen}>
+                                                <td>
+                                                    {timesheetEmp.reqDateFrom} - {timesheetEmp.reqDateTo}
+                                                </td>
+                                            </template>
+                                            <template if:true={isUnlockScreen}>
+                                                <td>
+                                                    Locked
+                                                </td>
+                                            </template>
+                                            <template if:true={isUnlockScreen}>
+                                                <td>
+                                                    {timesheetEmp.reqEditReason}
+                                                </td>
+                                            </template>
+                                            <template if:true={isApprovalScreen}>
+                                                <td>{timesheetEmp.approvalStatus}</td>
+                                            </template>
+                                        </tr>
+                                    </template>
+                                </template>
+                                <template if:true={showFilteredData}>
+                                    <template if:true={getterFilteredData} for:each={filteredData}
+                                        for:item="timesheetEmp">
+                                        <tr key={timesheetEmp.Id} data-row-id={timesheetEmp.contactId}
+                                            data-tmp={timesheetEmp.reqDateTo} data-tmp2={timesheetEmp.reqDateFrom}
+                                            onclick={handleRowClick} style="cursor: pointer;">
+                                            <td>
+                                                {timesheetEmp.reqPositionId}
+                                            </td>
+                                            <td>
+                                                {timesheetEmp.userName}
+                                            </td>
+                                            <template if:true={isViewScreen}>
+                                                <td>{timesheetEmp.projectName}</td>
+                                            </template>
+                                            <td>
+                                                {timesheetEmp.divisionalOffice}
+                                            </td>
+                                            <template if:true={isApprovalScreen}>
+                                                <td>{timesheetEmp.Designation}</td>
+                                            </template>
+                                            <template if:false={isViewScreen}>
+                                                <td>
+                                                    {timesheetEmp.reqDateFrom} - {timesheetEmp.reqDateTo}
+                                                </td>
+                                            </template>
+                                            <template if:true={isUnlockScreen}>
+                                                <td>
+                                                    Locked
+                                                </td>
+                                            </template>
+                                            <template if:true={isUnlockScreen}>
+                                                <td>
+                                                    {timesheetEmp.reqEditReason}
+                                                </td>
+                                            </template>
+                                            <template if:true={isApprovalScreen}>
+                                                <td>{timesheetEmp.approvalStatus}</td>
+                                            </template>
+                                            <!-- <td>
+                                                {timesheetEmp.reqPositionId}
+                                            </td>
+                                            <td>
+                                                {timesheetEmp.userName}
+                                            </td>
+                                            <td>
+                                                {timesheetEmp.divisionalOffice}
+                                            </td>
+                                            <template if:true={isApprovalScreen}>
+                                                <td>{timesheetEmp.Designation}</td>
+                                            </template>
+                                            <td>
+                                                {timesheetEmp.reqDateFrom} - {timesheetEmp.reqDateTo}
+                                            </td>
+                                            <template if:true={isUnlockScreen}>
+                                                <td>
+                                                    Locked
+                                                </td>
+                                            </template>
+                                            <template if:true={isUnlockScreen}>
+                                                <td>
+                                                    {timesheetEmp.reqEditReason}
+                                                </td>
+                                            </template>
+                                            <template if:true={isApprovalScreen}>
+                                                <td>{timesheetEmp.approvalStatus}</td>
+                                            </template> -->
+                                        </tr>
+                                    </template>
+                                </template>
+                            </tbody>
+                        </table>
+                        <template if:true={showFilteredData}>
+                            <template if:false={getterFilteredData}>
+                                <div class="slds-text-heading_medium slds-text-align_center" style="color: red;">No
+                                    employee found</div>
+                            </template>
+                        </template>
+                    </div>
+                </template>
+            </template>
+
+            <template if:true={showChildComponent}>
+                <div>
+                    <template if:true={isApprovalScreen}>
+                        <c-timesheet-approval employee-id={empId} record-id={recordId}
+                            is-nespon-manager={isNesponManager} is-h-r-practitioner={isHRPractitioner}
+                            is-divisional-head={isDivisionalHead} is-line-manager={isLineManager} date-from={dateFrom}
+                            date-to={dateTo} ontimesheetclose={handleTimesheetClose}
+                            time-option={timeOption}></c-timesheet-approval>
+                    </template>
+                    <template if:true={isUnlockScreen}>
+                        <c-timesheet-requests employee-id={empId} record-id={recordId}
+                            is-nespon-manager={isNesponManager} is-divisional-head={isDivisionalHead}
+                            is-h-r-practitioner={isHRPractitioner} date-to={dateTo} date-from={dateFrom}
+                            ontimesheetclose={handleTimesheetClose} time-option={timeOption}></c-timesheet-requests>
+
+
+                        <!-- <c-timesheet-requests-a-s employee-id={empId} date-from={dateFrom}
+                            ontimesheetclose={handleTimesheetClose} is-nespon-manager={isNesponManager}
+                            is-h-r-practitioner={isHRPractitioner} is-divisional-head={isDivisionalHead}
+                            is-line-manager={isLineManager} date-to={dateTo} time-option={timeOption}
+                            record-id={recordId}></c-timesheet-requests-a-s> -->
+                    </template>
+                    <template if:true={isViewScreen}>
+                        <c-timesheet-view-only employee-id={empId} date-from={dateFrom} record-id={recordId}
+                            date-to={dateTo} ontimesheetclose={handleTimesheetClose}
+                            time-option={timeOption}></c-timesheet-view-only>
+                    </template>
+                </div>
+            </template>
+
+
+            <!-- LOADER -->
+            <template if:true={spinLoader}>
+                <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

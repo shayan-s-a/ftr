@@ -1,0 +1,152 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card class="slds-var-p-around_medium">
+
+        <div style="position: relative;">
+            <!-- * HEADER START * -->
+            <!--Asir added new property in user details-->
+            <c-user-details user-details={userDetails} image-u-r-l={imageUrl} show-my-time-entry=true></c-user-details>
+
+            <!-- * CONTROLS START * -->
+            <div>
+                <div class="slds-grid tym_prd_wrap">
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small input_wrap">
+                        <lightning-combobox name="timeOption" value={timeOption} options={timeOptions}
+                            label="Pay Period" onchange={handleChange}></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small input_wrap">
+                        <lightning-input type="date" variant="standard" name="dateFrom" label="Date From"
+                            placeholder="Date From" onchange={handleChange} value={dateFrom}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small input_wrap">
+                        <lightning-input type="date" variant="standard" name="dateTo" label="Date To"
+                            placeholder="Date To" onchange={handleChange} value={dateTo}></lightning-input>
+                    </div>
+
+                    <!-- Kauser -->
+                    <!-- lightning buttons -->
+                    <div class="slds-col slds-var-p-around_small btn_wrap" style="margin-top: 23px;">
+                        <!-- <lightning-button-group class="btn-group-custom-css"> -->
+                        <div class="btn-group-custom-css">
+                            <lightning-button class="lb-save-customcss btn_wrap_main" variant="brand" label="Save"
+                                icon-name="utility:save" onclick={handleSave}
+                                if:true={isDeleted}></lightning-button>
+                            <lightning-button class="lb-save-customcss btn_wrap_main" variant="brand" label="Save"
+                                icon-name="utility:save" onclick={handleSave}
+                                disabled={isSheetNotUpdated} if:false={isDeleted}></lightning-button>
+                            <!-- &nbsp; -->
+                            <lightning-button class="lb-submit-customcss btn_wrap_main" variant="brand"
+                                icon-name="utility:success" label="Submit" onclick={handleSubmit}
+                                if:true={showSubmitButton}></lightning-button>
+                            <!-- &nbsp; -->
+                            <lightning-button class="lb-requestToEdit-customcss btn_wrap_main" variant="brand"
+                                icon-name="action:recall" label="Request to edit" onclick={handleRecall}
+                                if:true={showRecallButton}></lightning-button>
+                        </div>
+                        <!-- </lightning-button-group> -->
+                    </div>
+                    <!-- lightning buttons -->
+
+                </div>
+            </div>
+
+            <!-- * TIMESHEET START * -->
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-12 custom_css_timesheet">
+                    <div class="slds-text-heading_medium">
+                        <!-- <lightning-icon icon-name="utility:picklist_type" class="timsheetHeadingicon"></lightning-icon> -->
+                        Timesheet
+                    </div>
+                </div>
+            </div>
+            <div class="slds-scrollable" style="max-width:100%;">
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <!-- <th></th>
+                            <th><b>Day/Date</b></th>
+                            <th><b>Pay Code</b></th>
+                            <th><b>Project</b></th>
+                            <th><b>Role</b></th>
+                            <th><b>Hours</b></th>
+                            <th><b>Divisional Office</b></th>
+                            <th><b>Regular Hours</b></th>
+                            <th><b>Overtime</b></th>
+                            <th><b>Total Hours</b></th> -->
+
+                            <th class="th_tableheader_css"> </th>
+                            <th class="th_tableheader_css"> <b>Status</b></th>
+                            <th class="th_tableheader_css"><b>Day/Date</b></th>
+                            <!-- <th class="th_tableheader_css"><b>Pay Code</b></th> -->
+                            <th class="th_tableheader_css"><b>Project/Pay Code</b></th>
+                            <!-- <th class="th_tableheader_css"><b>Role</b></th> -->
+                            <th class="th_tableheader_css"><b>Hours</b></th>
+                            <!-- <th class="th_tableheader_css"><b>Divisional Office</b></th> -->
+                            <!-- <th class="th_tableheader_css"><b>Regular Hours</b></th> -->
+                            <th class="th_tableheader_css"><b>Overtime</b></th>
+                            <th class="th_tableheader_css"><b>Total Hours</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                            <c-timesheet-row key={timesheet.id} timesheet={timesheet} onrowedit={handleRowEdit}
+                                onrowupdate={handleRowUpdate} onrowrefresh={handleRowRefresh} onrowadd={handleAddRow}
+                                onrowdelete={handleRowDelete} onrowcopyoption={handleRowCopyOption} 
+                                onrowpasteoption={handleRowPasteOption} onrowdeleteoption={handleRowDeleteOption} paste-disabled={checkPaste} onrefreshtimesheet={handleRefreshTimesheet}></c-timesheet-row>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- MODAL -->
+            <template if:true={showrequestModal}>
+                <!-- <c-modal heading={requestHeading} message={requestMessage} onsave={handlerequestSave}
+                    oncancel={handlerequestCancel}></c-modal> -->
+                <c-modal-s-a heading={requestHeading} message={requestMessage} onsave={handlerequestSave}
+                    oncancel={handlerequestCancel} date-from={dateFrom} date-to={dateTo}
+                    time-sheet-data={timeSheetData}></c-modal-s-a>
+            </template>
+
+            <!-- WARNING MODAL -->
+            <template if:true={showWarningModal}>
+                <c-modal-s-a heading={requestHeading} message={requestMessage} onproceed={handleSave}
+                    oncancel={handlerequestCancel} warning-modal={showWarningModal}></c-modal-s-a>
+                <!-- <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                      <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                        <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Cancel and close</span>
+                      </button>
+                      <div class="slds-modal__header">
+                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Rows Previously Deleted</h1>
+                      </div>
+                      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>Timesheet row(s) has been delete. If you click on Proceed, all the entries related to the rows will be deleted. Refresh your page if you want to revert the changes.</p>
+                      </div>
+                      <div class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handlerequestCancel}>Cancel</button>
+                        <button class="slds-button slds-button_brand" onclick={handleSave}>Proceed</button>
+                      </div>
+                    </div>
+                  </section>
+                  <div class="slds-backdrop slds-backdrop_open" role="presentation"></div> -->
+            </template>
+
+
+            <!-- * LOADER * -->
+            <template if:true={spinLoader}>
+                <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

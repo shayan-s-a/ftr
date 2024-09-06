@@ -1,0 +1,175 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card class="slds-var-p-around_medium">
+       
+        <div class="header_div_timeentry"><strong class="strong_class_blueline">My Time Entry: </strong>Syed, Bushra (15546884681)</div>
+        <div class="slds-col slds-size_3-of-4">
+            <div class="userdetails_paddingsettings"><strong>Name: </strong> Furqan </div>
+            <div class="userdetails_paddingsettings"><strong>Designation: </strong>Software Engineer </div>
+            <div class="userdetails_paddingsettings"><strong>Divisional Office: </strong>Nespon</div>
+            <div class="userdetails_paddingsettings"><strong>Functional Area: </strong>Backend Developer </div>
+            <div class="userdetails_paddingsettings"><strong>Reports To: </strong>Nauman Mehboob </div>
+        </div>
+
+        <div style="position: relative;">
+            <!-- * HEADER START * -->
+            <div class="slds-text-heading_large"><b><u>My Timecard</u></b></div>
+            <br>
+            <template if:true={userExist}>
+                <div class="slds-grid slds-wrap slds-var-p-around_medium"
+                    style="background-color: rgb(210 210 210); color: black">
+                    <div class="slds-col slds-size_4-of-12">
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-4">
+                                <div class="circle"><b></b>{userDetails.NameInitials}</b></div>
+                            </div>
+                            <div class="slds-col slds-size_3-of-4">
+                                <div class="userdetails_paddingsettings"><strong>Name: </strong>Furqan {userDetails.FullName}</div>
+                                <div class="userdetails_paddingsettings"><strong>Designation: </strong>Software Engineer {userDetails.Designation}</div>
+                                <div class="userdetails_paddingsettings"><strong>Divisional Office: </strong>Nespon {userDetails.DivisionalOffice}</div>
+                                <div class="userdetails_paddingsettings"><strong>Functional Area: </strong>Backend Developer {userDetails.FunctionalArea}</div>
+                                <div class="userdetails_paddingsettings"><strong>Reports To: </strong>Nauman Mehboob {userDetails.ReportsTo}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_8-of-12 slds-text-align_right">
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_8-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12"><b>Position ID:</b></div>
+                            <div class="slds-col slds-size_2-of-12">{userDetails.PositionId}</div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_8-of-12"></div>
+                            <div class="slds-col slds-size_2-of-12"><b>Tax ID:</b></div>
+                            <div class="slds-col slds-size_2-of-12">{userDetails.TaxId}</div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div style="border: 2px solid black" class="slds-var-m-top_small slds-var-m-bottom_small"></div>
+
+            <!-- * CONTROLS START * -->
+            <div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-combobox name="timeOption" value={timeOption} options={timeOptions}
+                             onchange={handleChange}></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-input type="date" variant="standard" name="dateFrom" 
+                            placeholder="Date From" onchange={handleChange} value={dateFrom}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-input type="date" variant="standard" name="dateTo"
+                            placeholder="Date To" onchange={handleChange} value={dateTo}></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-var-p-around_small" style="margin-top: 18px; margin-left: 29px;">
+                        <!-- <template></template> -->
+                        <button class="icon-button custoncss_saveBtn">
+                            <div>
+                                <img class="saveBtnImage_customcss" src={SaveBtnIcon} alt="Button Icon" />
+                                Save
+                            </div>
+                        </button>
+                        <button style={disabledStringBtn} class="icon-button custoncss_submitBtn">
+                            <img class="customcss_SubmitBtnImage" src={GreeneBtnIcon} alt="Button Icon" />
+                            Submit
+                        </button>
+                        <!-- <lightning-button
+                            icon-name="utility:save"
+                                variant="outline-brand"
+                                label="Save"
+                                title="Save"
+                                onclick={handleClick}
+                            >
+                            </lightning-button>
+
+                            <lightning-button class="btn_css_submit"
+                            icon-name="action:approval"
+                                variant="outline-brand"
+                                label="Submit"
+                                title="Submit"
+                                onclick={handleClick}
+                            >
+                            </lightning-button> -->
+                        <lightning-button-group>
+                            <!-- <lightning-button variant="brand" label="Save" icon-name="utility:save" onclick={handleSave}
+                                disabled={isSheetNotUpdated}></lightning-button> -->
+                        
+                            &nbsp;
+                            <lightning-button variant="success" icon-name="utility:success" label="Submit"
+                                onclick={handleSubmit} if:true={showSubmitButton}></lightning-button>
+                            &nbsp;
+                            <lightning-button variant="brand-outline" icon-name="action:recall" label="Request To Edit"
+                                onclick={handleRecall} if:true={showRecallButton}></lightning-button>
+                        </lightning-button-group>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- * TIMESHEET START * -->
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-12 custom_css_timesheet">
+                    <div class="slds-text-heading_medium">
+                        <!-- <lightning-icon icon-name="utility:picklist_type" class="timsheetHeadingicon"></lightning-icon> -->
+                        Timesheet
+                    </div>
+                </div>
+            </div>
+            <div class="slds-scrollable" style="max-width:100%;">
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <!-- <th></th>
+                            <th><b>Day/Date</b></th>
+                            <th><b>Pay Code</b></th>
+                            <th><b>Project</b></th>
+                            <th><b>Role</b></th>
+                            <th><b>Hours</b></th>
+                            <th><b>Divisional Office</b></th>
+                            <th><b>Regular Hours</b></th>
+                            <th><b>Overtime</b></th>
+                            <th><b>Total Hours</b></th> -->
+
+                            <th></th>
+                            <th class="th_tableheader_css"><b>Day/Date</b></th>
+                            <th class="th_tableheader_css"><b>Pay Code</b></th>
+                            <th class="th_tableheader_css"><b>Project</b></th>
+                            <th class="th_tableheader_css"><b>Role</b></th>
+                            <th class="th_tableheader_css"><b>Hours</b></th>
+                            <th class="th_tableheader_css"><b>Divisional Office</b></th>
+                            <th class="th_tableheader_css"><b>Regular Hours</b></th>
+                            <th class="th_tableheader_css"><b>Overtime</b></th>
+                            <th class="th_tableheader_css"><b>Total Hours</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                            <c-timesheet-row key={timesheet.id} timesheet={timesheet} onrowedit={handleRowEdit}
+                                onrowupddate={handleRowUpdate} onrowrefresh={handleRowRefresh} onrowadd={handleAddRow}
+                                onrowdelete={handleRowDelete}></c-timesheet-row>
+                        </template>
+                        
+                    </tbody>
+                </table>
+            <!-- <div class="table_div_weektotal"><strong class="strong_class_weektotal">Week Total Hours </strong></div>
+            <div class="table_div_totalhours"><strong>80.00 Hrs</strong></div> -->
+
+            </div>
+            <!-- * LOADER * -->
+            <template if:true={spinLoader}>
+                <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

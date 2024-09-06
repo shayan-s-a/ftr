@@ -1,0 +1,100 @@
+import { LightningElement, api } from 'lwc';
+
+export default class TimesheetRowAB extends LightningElement {
+    @api timesheet;
+    @api isNesponManager = false;
+    @api isDivisionalHead = false;
+    @api isHRPractitioner = false;
+    @api isLineManager = false;
+    //Asir added property to handle timesheet view
+    @api changeWeeklyRowColspan = false;
+
+    get readOnly() {
+        return this.isLineManager && !this.showCheckbox;
+    }
+
+    get isManager() {
+        return (this.isNesponManager || this.isLineManager || this.isHRPractitioner);
+    }
+
+    get showCheckbox() {
+        return (this.isNesponManager || this.isDivisionalHead || this.isHRPractitioner);
+    }
+
+    get columnClass() {
+        let finalClasses = !this.timesheet.isEditable ? 'notEditable ' : ''
+        finalClasses += this.timesheet.combineRow ? 'noTopBorder' : '';
+        return finalClasses;
+    }
+
+    // get summaryRowClass() {
+    //     return 'border'
+    // }
+
+    get rowColumnsWidth() {
+        return this.isManager ? 9 : 8;
+    }
+
+    handleRowRefresh(evt) {
+        console.log('REFRESH : ');
+        if (this.timesheet.inEditMode && !this.readOnly) {
+            this.dispatchEvent(new CustomEvent('rowrefresh', { detail: evt.target.dataset }));
+        }
+    }
+
+    handleRowEdit(evt) {
+        console.log('ROW EDIT : ');
+        console.log("this.timesheet.inEditMode"+!this.timesheet.inEditMode);
+        console.log("this.timesheet.isEditable"+this.timesheet.isEditable);
+        console.log("!this.readOnly"+!this.readOnly);
+        if (!this.timesheet.inEditMode && this.timesheet.isEditable && !this.readOnly) {
+            this.dispatchEvent(new CustomEvent('rowedit', { detail: evt.target.dataset }));
+        }
+    }
+
+    handleRowChange(evt) {
+        let { id, emptyrownumber, name } = evt.target.dataset;
+        let finalData = { id, emptyrownumber, name, value: evt.target.value };
+        console.log('ROW CHANGE : ', finalData);
+        if (this.timesheet.inEditMode && !this.readOnly) {
+            this.dispatchEvent(new CustomEvent('rowupdate', { detail: finalData }));
+        }
+    }
+
+    handleAddRow(evt) {
+        if (!this.readOnly) {
+            this.dispatchEvent(new CustomEvent('rowadd', { detail: evt.target.dataset }));
+        }
+    }
+
+    handleRowDelete(evt) {
+        if (!this.readOnly) {
+            this.dispatchEvent(new CustomEvent('rowdelete', { detail: evt.target.dataset }));
+        }
+    }
+
+    // For Approval
+    handleRowChecked(evt) {
+        console.log('::::: ROW => CHECKED' + JSON.stringify(evt.target.dataset));
+        if (!this.readOnly && this.showCheckbox) {
+            console.log(':::: INSIDE');
+            this.dispatchEvent(new CustomEvent('rowchecked', { detail: evt.target.dataset }));
+        }
+    }
+
+    handleBlur() {
+        const allValid = [
+            ...this.template.querySelectorAll('lightning-input'),
+        ].reduce((validSoFar, inputCmp) => {
+            inputCmp.reportValidity();
+            return validSoFar && inputCmp.checkValidity();
+        }, true);
+        if (allValid) {
+            this.dispatchEvent(new CustomEvent('validrow', { detail: true }));
+            console.log('VALID');
+        } else {
+            this.dispatchEvent(new CustomEvent('invalidrow', { detail: false }));
+            console.log('INVALID');
+        }
+    }
+}

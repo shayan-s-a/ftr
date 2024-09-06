@@ -1,0 +1,19 @@
+<template>
+			<lightning-card title ="Contacts" icon-name ="standard:contact">
+				<div class="slds-m-around-medium">
+						<template if:true={contact.data}>
+								<lightning-datatable 
+																		 key-field="Id"
+																		 data={contact.data}
+																		 columns={columns}>
+								</lightning-datatable>
+						</template>						
+					</div>
+			</lightning-card>
+		<lightning-card title ="Contacts Chart" icon-name ="standard:report">
+				<div class="slds-m-around-medium">
+						<canvas class="dount" lwc:dom="manual"></canvas>
+										
+					</div>
+			</lightning-card>
+</template>

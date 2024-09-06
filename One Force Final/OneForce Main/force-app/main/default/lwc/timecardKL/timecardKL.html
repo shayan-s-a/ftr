@@ -1,0 +1,43 @@
+<template>
+    <lightning-card variant="Narrow" icon-name="standard:contact">
+
+        <lightning-tabset>
+            <!-- <lightning-tab label="My Profile">
+                <template if:true={userExist}>
+                    <b>{userDetails.FullName}</b>
+                </template>
+            </lightning-tab> -->
+            <lightning-tab label="My Timecard Kauser">
+                <template if:true={userExist}>
+                    <c-timesheet-new-k-l user-details={userDetails} date-from={userDetails.dateFrom}
+                        date-to={userDetails.dateTo} record-id={userDetails.Id}></c-timesheet-new-k-l>
+                </template>
+            </lightning-tab>
+            <template if:true={isNesponManager}>
+                <lightning-tab label="Employee Timesheets">
+                    <template if:true={userExist}>
+                        <c-timesheet-approval-k-l record-id={userDetails.Id} is-nespon-manager={isNesponManager}
+                            date-from={userDetails.dateFrom} date-to={userDetails.dateTo}></c-timesheet-approval-k-l>
+                    </template>
+                </lightning-tab>
+                <template if:true={requestFound}>
+                    <lightning-tab label="Employee Requests to Update Timesheet">
+                        <c-timesheet-requests-k-l record-id={userDetails.Id} is-nespon-manager={isNesponManager}
+                            date-from={userDetails.dateFrom} date-to={userDetails.dateTo}></c-timesheet-requests-k-l>
+                    </lightning-tab>
+                </template>
+            </template>
+            <!-- Kauser -->
+          
+            <template if:true={isLineManager}>
+                <lightning-tab label="Employee Timesheets To View">
+                    <template if:true={userExist}>
+                        <c-timesheet-view-only-k-l record-id={userDetails.Id} is-line-manager={isLineManager}
+                            date-from={userDetails.dateFrom} date-to={userDetails.dateTo}></c-timesheet-view-only-k-l>
+                    </template>
+                </lightning-tab>
+            </template>
+        </lightning-tabset>
+
+    </lightning-card>
+</template>

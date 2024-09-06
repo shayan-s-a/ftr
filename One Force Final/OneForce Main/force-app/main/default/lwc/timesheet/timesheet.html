@@ -1,0 +1,228 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card class="slds-var-p-around_large">
+
+        <div style="position: relative;">
+
+            <!-- HEADER START -->
+            <div class="slds-text-heading_large"><b><u>My Timecard</u></b></div>
+            <br>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_1-of-4">
+                            <!-- <div
+                            style="width:50px; height:50px; border-radius:50%; background-color:grey; text-align: center;">
+                            <p style="margin-top:10px">
+                                <b>{nameInitials}</b>
+                            </p>
+                        </div> -->
+                            <div class="circle"><b></b>{nameInitials}</b></div>
+                        </div>
+                        <div class="slds-col slds-size_3-of-4">
+                            <div class="slds-text-heading_medium">{fullName}</div>
+                            <div style="color: grey;">{role}</div>
+                            <div style="color: grey;">{rigionalOffice}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-text-align_right">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_8-of-12"></div>
+                        <div class="slds-col slds-size_2-of-12">Tax ID:</div>
+                        <div class="slds-col slds-size_2-of-12">{taxId}</div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_8-of-12"></div>
+                        <div class="slds-col slds-size_2-of-12">Position ID:</div>
+                        <div class="slds-col slds-size_2-of-12">{positionId}</div>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 2px solid black" class="slds-var-m-top_small slds-var-m-bottom_small"></div>
+
+            <!-- CONTROLS START -->
+            <div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-combobox name="timeOption" value={timeOption} options={timeOptions}
+                            label="Search Type" onchange={handleChange}></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-input type="date" variant="standard" name="dateFrom" label="Date From"
+                            placeholder="Date From" onchange={handleChange} value={dateFrom}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+                        <lightning-input type="date" variant="standard" name="dateTo" label="Date To"
+                            placeholder="Date To" onchange={handleChange} value={dateTo}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12 slds-var-p-around_small" style="margin-top: 23px;">
+                        <lightning-button variant="neutral" label="Find" icon-name="utility:search"
+                            onclick={handleFind}></lightning-button> &nbsp;
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-var-p-around_small" style="margin-top: 23px;">
+                        <lightning-button-group>
+                            <lightning-button variant="brand" label="Save" icon-name="utility:save" onclick={handleSave}
+                                disabled={isSheetNotUpdated}></lightning-button>
+                            <!-- &nbsp;
+                            <lightning-button variant="success" icon-name="utility:success" label="Submit"
+                                onclick={handleSubmit}></lightning-button> -->
+                        </lightning-button-group>
+                    </div>
+                    <!-- <div class="slds-col slds-size_3-of-12 slds-text-align_right slds-var-p-around_small"
+                        style="margin-top: 23px;">
+                        <lightning-icon icon-name="standard:task2" size="small"></lightning-icon>
+                        &nbsp;Supervisor Approved
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- TIMESHEET START -->
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-12" style="background-color: rgb(113, 113, 237); color: white;">
+                    <div class="slds-text-heading_medium">
+                        <lightning-icon icon-name="utility:picklist_type" class="timsheetHeadingicon"></lightning-icon>
+                        &nbsp;Time Sheet
+                    </div>
+                </div>
+            </div>
+            <div class="slds-scrollable" style="max-width:100%;">
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Day/Date</th>
+                            <th>Pay Code</th>
+                            <th>Project</th>
+                            <th>Role</th>
+                            <th>Hours</th>
+                            <th>Divisional Office</th>
+                            <th>Regular Hours</th>
+                            <th>Overtime</th>
+                            <th>Total Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template if:true={timeSheetData.length} for:each={timeSheetData} for:item="timesheet">
+                            <tr key={timesheet.id}>
+                                <td>
+                                    <template if:false={timesheet.combineRow}>
+                                        <lightning-icon icon-name="utility:add" size="x-small" style="cursor: pointer;"
+                                            class="icon"></lightning-icon>
+                                        &nbsp;&nbsp;
+                                        <lightning-icon icon-name="utility:switch" size="x-small"
+                                            style="cursor: pointer;" class="icon"></lightning-icon>
+                                        &nbsp;&nbsp;
+                                        <template if:false={timesheet.inEditMode}>
+                                            <lightning-button-icon variant="base" size="x-small" icon-name="action:edit"
+                                                onclick={handleRowEdit} data-id={timesheet.id}
+                                                data-dayname={timesheet.dayName} data-daydate={timesheet.dayDate}
+                                                data-emptyrownumber={timesheet.emptyRowNumber}
+                                                alternative-text="Edit"></lightning-button-icon>
+                                        </template>
+                                        <template if:true={timesheet.inEditMode}>
+                                            <lightning-button-icon variant="base" size="x-small"
+                                                icon-name="action:refresh" onclick={handleRowRefresh}
+                                                data-id={timesheet.id} data-dayname={timesheet.dayName}
+                                                data-daydate={timesheet.dayDate}
+                                                data-emptyrownumber={timesheet.emptyRowNumber}
+                                                alternative-text="Refresh"></lightning-button-icon>
+                                        </template>
+                                    </template>
+                                </td>
+                                <td>
+                                    <div class="slds-grid">
+                                        <template if:false={timesheet.combineRow}>
+                                            <div class="slds-col slds-size_1-of_4">
+                                                <template if:true={timesheet.checked}>
+                                                    <lightning-icon icon-name="standard:task2"
+                                                        size="small"></lightning-icon>
+                                                </template>
+                                                <template if:false={timesheet.checked}>
+                                                    <lightning-icon icon-name="utility:clock" size="small"
+                                                        class="clockIcon"></lightning-icon>
+                                                </template>
+                                            </div>
+                                            <div class="slds-col slds-size_3-of_4 slds-var-p-left_small">
+
+                                                {timesheet.dayName}, {timesheet.dayDate}
+                                            </div>
+                                        </template>
+                                    </div>
+                                </td>
+                                <td>
+                                    <template if:false={timesheet.inEditMode}>
+                                        {timesheet.payCode}
+                                    </template>
+                                    <template if:true={timesheet.inEditMode}>
+                                        <lightning-combobox value={timesheet.payCode} data-id={timesheet.id}
+                                            data-emptyrownumber={timesheet.emptyRowNumber} data-name="payCode"
+                                            placeholder="Select Pay Code" options={timesheet.payCodes}
+                                            onchange={handleRowUpdate}></lightning-combobox>
+                                    </template>
+                                </td>
+                                <td>
+                                    <template if:false={timesheet.inEditMode}>
+                                        {timesheet.projectName}
+                                    </template>
+                                    <template if:true={timesheet.inEditMode}>
+                                        <lightning-combobox value={timesheet.project} data-id={timesheet.id}
+                                            data-emptyrownumber={timesheet.emptyRowNumber} data-name="project"
+                                            placeholder="Select Project" options={timesheet.projects}
+                                            onchange={handleRowUpdate}></lightning-combobox>
+                                    </template>
+                                </td>
+                                <td>
+                                    <template if:false={timesheet.inEditMode}>
+                                        {timesheet.rate}
+                                    </template>
+                                    <!-- <template if:true={timesheet.inEditMode}>
+                                        <lightning-input value={timesheet.rate} type="number" variant="standard"
+                                            data-id={timesheet.id} data-emptyrownumber={timesheet.emptyRowNumber}
+                                            data-name="rate" placeholder="Enter Rate" style="width:100px"
+                                            onchange={handleRowUpdate}></lightning-input>
+                                    </template> -->
+                                </td>
+                                <td>
+                                    <template if:false={timesheet.inEditMode}>
+                                        {timesheet.hours}
+                                    </template>
+                                    <template if:true={timesheet.inEditMode}>
+                                        <lightning-input value={timesheet.hours} type="number" variant="standard"
+                                            data-id={timesheet.id} data-emptyrownumber={timesheet.emptyRowNumber}
+                                            placeholder="Enter Hours" style="width:100px" data-name="hours"
+                                            onchange={handleRowUpdate}></lightning-input>
+                                    </template>
+                                </td>
+                                <td>
+                                    {timesheet.regularOffice}
+                                </td>
+                                <td>
+                                    {timesheet.regularHours}
+                                </td>
+                                <td>
+                                    {timesheet.overTime}
+                                </td>
+                                <td>
+                                    {timesheet.totalHours}
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <!-- * LOADER * -->
+            <template if:true={spinLoader}>
+                <div class="slds-spinner_container" style="position:absolute; z-index: 999;">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

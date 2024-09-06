@@ -1,0 +1,43 @@
+<template>
+    <br>
+    <div class="header_div_timeentry">
+        <strong class="strong_class_blueline">My Time Entry: </strong>{userDetails.FullName}
+        ({userDetails.PositionId})
+    </div>
+
+    <div class="slds-grid slds-wrap slds-var-p-around_medium"
+        style="background-color: rgb(237, 232, 232); color: black">
+        <div class="slds-col slds-size_4-of-12">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-4">
+                    <div class="circle"><b></b>{userDetails.NameInitials}</b></div>
+                </div>
+                <div class="slds-col slds-size_2-of-3">
+                    <div class="userdetails_paddingsettings"><strong>Name: </strong> {userDetails.FullName}
+                    </div>
+                    <div class="userdetails_paddingsettings"><strong>Designation:
+                        </strong>{userDetails.Designation}</div>
+                    <div class="userdetails_paddingsettings"><strong>Divisional Office:
+                        </strong>{userDetails.DivisionalOffice}</div>
+                    <div class="userdetails_paddingsettings"><strong>Functional Area:
+                        </strong>{userDetails.FunctionalArea} </div>
+                    <div class="userdetails_paddingsettings"><strong>Reports To:
+                        </strong>{userDetails.ReportsTo} </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_8-of-12 slds-text-align_right">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_8-of-12"></div>
+                <div class="slds-col slds-size_2-of-12"><b>Tax ID:</b></div>
+                <div class="slds-col slds-size_2-of-12">{userDetails.TaxId}</div>
+            </div>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_8-of-12"></div>
+                <div class="slds-col slds-size_2-of-12"><b>Position ID:</b></div>
+                <div class="slds-col slds-size_2-of-12">{userDetails.PositionId}</div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,43 @@
+:host {
+    display: table-row;
+}
+
+.icon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: blue;
+}
+
+.timsheetHeadingicon {
+    /* --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-background: blue; */
+    --lwc-colorTextIconDefault: white;
+}
+
+.clockIcon {
+    --lwc-colorTextIconDefault: orange;
+}
+
+.saveIcon {
+    --lwc-colorTextIconDefault: rgb(36, 115, 225);
+}
+
+.notEditable {
+    background-color: white;
+}
+
+.deleteIcon {
+    --lwc-colorTextIconDefault: red;
+}
+
+.recallIcon {
+    --lwc-colorTextIconDefault: #4a698d;
+}
+
+.noTopBorder {
+    border-top: none;
+}
+
+.rejectIcon {
+    --slds-c-icon-color-background: red;
+}

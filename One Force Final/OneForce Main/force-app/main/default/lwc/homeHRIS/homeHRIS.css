@@ -1,0 +1,69 @@
+.slds-gutters .slds-col {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.slds-col .slds-grid>div:not(.slds-col) {
+    display: inline-flex;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background: content-box rgb(84, 105, 141);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+    border-radius: 0px;
+}
+
+.divWithoutHover{
+    transition: 1s;
+}
+
+.custom-hover-effect:hover {
+    background-color: #b8b6b6;
+    border: 1px solid #b8b6b6;
+    opacity: 1;
+}
+
+.expandable-list {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.item-title {
+    flex-grow: 1;
+}
+
+.item-icon {
+    padding: 4px;
+}
+
+.item-content {
+    padding: 8px;
+    border-top: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+/* .container {
+    background-image: url('/NesponHRIS/resource/1684874238000/HRISBackground'); 
+    height: 500px;
+    width: 1500px;
+    background-size: cover;
+    background-position: center;
+} */
+h1 {
+    top: 50%;
+    left: 50%;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    opacity: 1.0;
+}

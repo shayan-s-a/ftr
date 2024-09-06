@@ -1,0 +1,51 @@
+<template>  
+    <lightning-card variant="Narrow" icon-name="standard:contact">
+        <lightning-tabset>
+
+            <lightning-tab label="My Timecard Azeem">
+                <template if:true={userExist}>
+                    <c-timesheet-new user-details={userDetails} date-from={userDetails.dateFrom}
+                        date-to={userDetails.dateTo} record-id={userDetails.Id}></c-timesheet-new>
+                </template>
+            </lightning-tab>
+            <template if:true={showApprovalAndUnlockTab}>
+                <lightning-tab label="Employees' Timesheet Approval">
+                    <template if:true={userExist}>
+                        <!-- <c-timesheet-approval record-id={userDetails.Id} is-nespon-manager={isNesponManager}
+                            date-from={userDetails.dateFrom} date-to={userDetails.dateTo}></c-timesheet-approval> -->
+                        <c-timesheet-request-employees record-id={userDetails.Id} is-nespon-manager={isNesponManager}
+                            is-h-r-practitioner={IsHRPractitioner} is-divisional-head={IsDivisionalHead}
+                            is-line-manager={isLineManager} date-from={userDetails.dateFrom}
+                            date-to={userDetails.dateTo} screen-type="Approval"></c-timesheet-request-employees>
+                    </template>
+                </lightning-tab>
+                <!-- <template if:true={requestFound}> -->
+                    <template if:true={userExist}>
+                        <lightning-tab label="Employees' Timesheet Unlock Requests ">
+                            <!-- <c-timesheet-requests record-id={userDetails.Id} is-nespon-manager={isNesponManager}
+                                date-from={userDetails.dateFrom} date-to={userDetails.dateTo}></c-timesheet-requests> -->
+                            <c-timesheet-request-employees-a-b record-id={userDetails.Id}
+                                is-nespon-manager={isNesponManager} is-h-r-practitioner={IsHRPractitioner}
+                                is-divisional-head={IsDivisionalHead} is-line-manager={isLineManager}
+                                date-from={userDetails.dateFrom} date-to={userDetails.dateTo}
+                                screen-type="Unlock"></c-timesheet-request-employees-a-b>
+                        </lightning-tab>
+                    </template>
+                <!-- </template> -->
+            </template>
+            <template if:true={isLineManager}>
+                <lightning-tab label="Employees' Timesheet Review">
+                    <template if:true={userExist}>
+                        <!-- <c-timesheet-view-only record-id={userDetails.Id} is-line-manager={isLineManager}
+                            date-from={userDetails.dateFrom} date-to={userDetails.dateTo}></c-timesheet-view-only> -->
+                        <c-timesheet-request-employees record-id={userDetails.Id} is-nespon-manager={isNesponManager}
+                            is-h-r-practitioner={isHRPractitioner} is-divisional-head={isDivisionalHead}
+                            is-line-manager={isLineManager} date-from={userDetails.dateFrom}
+                            date-to={userDetails.dateTo} screen-type="View"></c-timesheet-request-employees>
+                    </template>
+                </lightning-tab>
+            </template>
+        </lightning-tabset>
+
+    </lightning-card>
+</template>
